@@ -16,5 +16,20 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
         }
+
+        private void EX_Orders_Cat_new_Click(object sender, EventArgs e)
+        {
+            EX_Orders_Cat_add.Enabled = true;
+        }
+
+        private void EX_Orders_Cat_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void EX_Orders_Cat_add_Click(object sender, EventArgs e)
+        {
+            EX_Orders_Cat_add.Enabled = false;
+        }
     }
 }

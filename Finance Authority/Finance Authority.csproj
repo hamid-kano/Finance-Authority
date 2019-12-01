@@ -55,7 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
+    <Compile Include="DAL\DATA_ACCESS_LAYER.cs" />
     <Compile Include="PL\MAIN_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +145,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
   </ItemGroup>

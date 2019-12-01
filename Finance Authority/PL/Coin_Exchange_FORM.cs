@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Form5 : MetroFramework.Forms.MetroForm
+    public partial class Coin_Exchange_FORM : MetroFramework.Forms.MetroForm
     {
-        public Form5()
+        public Coin_Exchange_FORM()
         {
             InitializeComponent();
         }

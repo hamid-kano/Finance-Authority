@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Form3 : MetroFramework.Forms.MetroForm
+    public partial class Authority_FORM : MetroFramework.Forms.MetroForm
     {
-        public Form3()
+        public Authority_FORM()
         {
             InitializeComponent();
         }

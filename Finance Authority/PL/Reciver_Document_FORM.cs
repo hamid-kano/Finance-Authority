@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Form2 : MetroFramework.Forms.MetroForm
+    public partial class Reciver_Document_FORM : MetroFramework.Forms.MetroForm
     {
-        public Form2()
+        public Reciver_Document_FORM()
         {
             InitializeComponent();
         }

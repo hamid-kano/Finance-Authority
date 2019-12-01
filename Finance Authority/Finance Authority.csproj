@@ -57,6 +57,60 @@
   <ItemGroup>
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
     <Compile Include="DAL\DATA_ACCESS_LAYER.cs" />
+    <Compile Include="PL\Budget_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Budget_FORM.Designer.cs">
+      <DependentUpon>Budget_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Coin_Exchange_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Coin_Exchange_FORM.Designer.cs">
+      <DependentUpon>Coin_Exchange_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Contracts_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Contracts_FORM.Designer.cs">
+      <DependentUpon>Contracts_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Document_Category_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Document_Category_FORM.Designer.cs">
+      <DependentUpon>Document_Category_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Document_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Document_FORM.Designer.cs">
+      <DependentUpon>Document_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Description_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Description_FORM.Designer.cs">
+      <DependentUpon>Employee_Description_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Salaries_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Salaries_FORM.Designer.cs">
+      <DependentUpon>Employee_Salaries_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Leoan_Payments_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Leoan_Payments_FORM.Designer.cs">
+      <DependentUpon>Leoan_Payments_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Loans_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Loans_FORM.Designer.cs">
+      <DependentUpon>Loans_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\MAIN_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,41 +123,53 @@
     <Compile Include="PL\EX_Order_FORM.Designer.cs">
       <DependentUpon>EX_Order_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form2.cs">
+    <Compile Include="PL\Authority_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="PL\Authority_FORM.Designer.cs">
+      <DependentUpon>Authority_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form3.cs">
+    <Compile Include="PL\Office_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="PL\Office_FORM.Designer.cs">
+      <DependentUpon>Office_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form4.cs">
+    <Compile Include="PL\Department_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="PL\Department_FORM.Designer.cs">
+      <DependentUpon>Department_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form5.cs">
+    <Compile Include="PL\Employee_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="PL\Employee_FORM.Designer.cs">
+      <DependentUpon>Employee_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form6.cs">
+    <Compile Include="PL\Payment_Document_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="PL\Payment_Document_FORM.Designer.cs">
+      <DependentUpon>Payment_Document_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form7.cs">
+    <Compile Include="PL\Reciver_Document_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="PL\Reciver_Document_FORM.Designer.cs">
+      <DependentUpon>Reciver_Document_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Role_Functional_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Role_Functional_FORM.Designer.cs">
+      <DependentUpon>Role_Functional_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Emission_Salaries_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Emission_Salaries_FORM.Designer.cs">
+      <DependentUpon>Emission_Salaries_FORM.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\EX_Orders_Cat_FORM.cs">
       <SubType>Form</SubType>
@@ -113,11 +179,59 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\Authority_FORM.resx">
+      <DependentUpon>Authority_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Budget_FORM.resx">
+      <DependentUpon>Budget_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Coin_Exchange_FORM.resx">
+      <DependentUpon>Coin_Exchange_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Contracts_FORM.resx">
+      <DependentUpon>Contracts_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Document_Category_FORM.resx">
+      <DependentUpon>Document_Category_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Document_FORM.resx">
+      <DependentUpon>Document_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_Description_FORM.resx">
+      <DependentUpon>Employee_Description_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_Salaries_FORM.resx">
+      <DependentUpon>Employee_Salaries_FORM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\EX_Orders_Cat_FORM.resx">
       <DependentUpon>EX_Orders_Cat_FORM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Department_FORM.resx">
+      <DependentUpon>Department_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_FORM.resx">
+      <DependentUpon>Employee_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Leoan_Payments_FORM.resx">
+      <DependentUpon>Leoan_Payments_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Loans_FORM.resx">
+      <DependentUpon>Loans_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Payment_Document_FORM.resx">
+      <DependentUpon>Payment_Document_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Reciver_Document_FORM.resx">
+      <DependentUpon>Reciver_Document_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Role_Functional_FORM.resx">
+      <DependentUpon>Role_Functional_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Office_FORM.resx">
+      <DependentUpon>Office_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Emission_Salaries_FORM.resx">
+      <DependentUpon>Emission_Salaries_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\MAIN_FORM.resx">
       <DependentUpon>MAIN_FORM.cs</DependentUpon>

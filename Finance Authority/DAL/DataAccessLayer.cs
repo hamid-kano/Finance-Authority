@@ -13,7 +13,7 @@ namespace FastFoodDemo.DAL
         SqlConnection sqlconnection;
         public DataAccessLayer()
         {
-            sqlconnection = new SqlConnection(@"Server = 192.168.50.51; DataBase=SilahWarehouse; Integrated Security= false; USER ID =qwer;PASSWORD =1234");
+            sqlconnection = new SqlConnection(@"Server = 192.168.50.51; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =qwer;PASSWORD =1234");
         }
 
         public void open()

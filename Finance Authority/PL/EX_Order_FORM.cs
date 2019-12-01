@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
-namespace Finance_Authority
+namespace Finance_Authority.PL
 {
-    public partial class Form1 :MetroForm
+    public partial class EX_Order_FORM : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public EX_Order_FORM()
         {
             InitializeComponent();
         }

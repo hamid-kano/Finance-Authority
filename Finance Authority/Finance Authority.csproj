@@ -57,17 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataAccessLayer.cs" />
-    <Compile Include="PL\Form.cs">
+    <Compile Include="PL\MAIN_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form.Designer.cs">
-      <DependentUpon>Form.cs</DependentUpon>
+    <Compile Include="PL\MAIN_FORM.Designer.cs">
+      <DependentUpon>MAIN_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form1.cs">
+    <Compile Include="PL\EX_Order_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PL\EX_Order_FORM.Designer.cs">
+      <DependentUpon>EX_Order_FORM.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Form2.cs">
       <SubType>Form</SubType>
@@ -105,16 +105,19 @@
     <Compile Include="PL\Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Form8.cs">
+    <Compile Include="PL\EX_Orders_Cat_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="PL\EX_Orders_Cat_FORM.Designer.cs">
+      <DependentUpon>EX_Orders_Cat_FORM.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PL\Form.resx">
-      <DependentUpon>Form.cs</DependentUpon>
+    <EmbeddedResource Include="PL\EX_Orders_Cat_FORM.resx">
+      <DependentUpon>EX_Orders_Cat_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MAIN_FORM.resx">
+      <DependentUpon>MAIN_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

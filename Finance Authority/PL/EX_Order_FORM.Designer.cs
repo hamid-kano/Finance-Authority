@@ -1,6 +1,6 @@
 ﻿namespace Finance_Authority.PL
 {
-    partial class Form1
+    partial class EX_Order_FORM
     {
         /// <summary>
         /// Required designer variable.

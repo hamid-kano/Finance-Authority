@@ -55,7 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Authority.cs" />
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
+    <Compile Include="BL\CLS_Exchange_Order.cs" />
     <Compile Include="DAL\DATA_ACCESS_LAYER.cs" />
     <Compile Include="PL\Budget_FORM.cs">
       <SubType>Form</SubType>
@@ -211,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Employee_FORM.resx">
       <DependentUpon>Employee_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\EX_Order_FORM.resx">
+      <DependentUpon>EX_Order_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Leoan_Payments_FORM.resx">
       <DependentUpon>Leoan_Payments_FORM.cs</DependentUpon>

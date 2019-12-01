@@ -10,6 +10,9 @@ namespace Finance_Authority
     {
         /// <summary>
         /// The main entry point for the application.
+        public static int Category_id;
+        public static int Exchange_Order_id;
+        public static int Authority_ID;
         /// </summary>
         [STAThread]
         static void Main()

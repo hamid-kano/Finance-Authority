@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EX_Orders_Cat_dataGrid = new System.Windows.Forms.DataGridView();
             this.EX_Orders_Cat_add = new System.Windows.Forms.Button();
             this.EX_Orders_Cat_update = new System.Windows.Forms.Button();
             this.EX_Orders_Cat_delete = new System.Windows.Forms.Button();
@@ -38,23 +37,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EX_Orders_Cat_new = new System.Windows.Forms.Button();
+            this.EX_Orders_Cat_dataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.EX_Orders_Cat_dataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // EX_Orders_Cat_dataGrid
-            // 
-            this.EX_Orders_Cat_dataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EX_Orders_Cat_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(23, 99);
-            this.EX_Orders_Cat_dataGrid.Name = "EX_Orders_Cat_dataGrid";
-            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(547, 237);
-            this.EX_Orders_Cat_dataGrid.TabIndex = 0;
             // 
             // EX_Orders_Cat_add
             // 
             this.EX_Orders_Cat_add.Enabled = false;
             this.EX_Orders_Cat_add.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_Orders_Cat_add.Location = new System.Drawing.Point(135, 393);
+            this.EX_Orders_Cat_add.Location = new System.Drawing.Point(132, 393);
             this.EX_Orders_Cat_add.Name = "EX_Orders_Cat_add";
             this.EX_Orders_Cat_add.Size = new System.Drawing.Size(91, 42);
             this.EX_Orders_Cat_add.TabIndex = 6;
@@ -72,6 +63,7 @@
             this.EX_Orders_Cat_update.TabIndex = 7;
             this.EX_Orders_Cat_update.Text = "تعديل";
             this.EX_Orders_Cat_update.UseVisualStyleBackColor = true;
+            this.EX_Orders_Cat_update.Click += new System.EventHandler(this.EX_Orders_Cat_update_Click);
             // 
             // EX_Orders_Cat_delete
             // 
@@ -83,6 +75,7 @@
             this.EX_Orders_Cat_delete.TabIndex = 8;
             this.EX_Orders_Cat_delete.Text = "حذف";
             this.EX_Orders_Cat_delete.UseVisualStyleBackColor = true;
+            this.EX_Orders_Cat_delete.Click += new System.EventHandler(this.EX_Orders_Cat_delete_Click);
             // 
             // EX_Orders_Cat_exit
             // 
@@ -97,17 +90,20 @@
             // 
             // EX_Orders_Cat_text1
             // 
-            this.EX_Orders_Cat_text1.Location = new System.Drawing.Point(156, 358);
+            this.EX_Orders_Cat_text1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EX_Orders_Cat_text1.Location = new System.Drawing.Point(156, 351);
             this.EX_Orders_Cat_text1.Name = "EX_Orders_Cat_text1";
-            this.EX_Orders_Cat_text1.Size = new System.Drawing.Size(350, 20);
+            this.EX_Orders_Cat_text1.Size = new System.Drawing.Size(350, 23);
             this.EX_Orders_Cat_text1.TabIndex = 10;
             // 
             // EX_Orders_Cat_textsearch
             // 
+            this.EX_Orders_Cat_textsearch.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EX_Orders_Cat_textsearch.Location = new System.Drawing.Point(156, 63);
             this.EX_Orders_Cat_textsearch.Name = "EX_Orders_Cat_textsearch";
-            this.EX_Orders_Cat_textsearch.Size = new System.Drawing.Size(350, 20);
+            this.EX_Orders_Cat_textsearch.Size = new System.Drawing.Size(350, 23);
             this.EX_Orders_Cat_textsearch.TabIndex = 11;
+            this.EX_Orders_Cat_textsearch.TextChanged += new System.EventHandler(this.EX_Orders_Cat_textsearch_TextChanged);
             // 
             // label1
             // 
@@ -140,6 +136,23 @@
             this.EX_Orders_Cat_new.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_new.Click += new System.EventHandler(this.EX_Orders_Cat_new_Click);
             // 
+            // EX_Orders_Cat_dataGrid
+            // 
+            this.EX_Orders_Cat_dataGrid.AllowUserToAddRows = false;
+            this.EX_Orders_Cat_dataGrid.AllowUserToDeleteRows = false;
+            this.EX_Orders_Cat_dataGrid.AllowUserToResizeColumns = false;
+            this.EX_Orders_Cat_dataGrid.AllowUserToResizeRows = false;
+            this.EX_Orders_Cat_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EX_Orders_Cat_dataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EX_Orders_Cat_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(23, 99);
+            this.EX_Orders_Cat_dataGrid.Name = "EX_Orders_Cat_dataGrid";
+            this.EX_Orders_Cat_dataGrid.ReadOnly = true;
+            this.EX_Orders_Cat_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(547, 237);
+            this.EX_Orders_Cat_dataGrid.TabIndex = 0;
+            this.EX_Orders_Cat_dataGrid.Click += new System.EventHandler(this.EX_Orders_Cat_dataGrid_Click);
+            // 
             // EX_Orders_Cat_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,8 +179,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView EX_Orders_Cat_dataGrid;
         private System.Windows.Forms.Button EX_Orders_Cat_add;
         private System.Windows.Forms.Button EX_Orders_Cat_update;
         private System.Windows.Forms.Button EX_Orders_Cat_delete;
@@ -177,5 +188,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button EX_Orders_Cat_new;
+        private System.Windows.Forms.DataGridView EX_Orders_Cat_dataGrid;
     }
 }

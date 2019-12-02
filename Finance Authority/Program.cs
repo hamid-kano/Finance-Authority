@@ -13,6 +13,7 @@ namespace Finance_Authority
         public static int Category_id;
         public static int Exchange_Order_id;
         public static int Authority_ID;
+        public static int Office_ID;
         /// </summary>
         [STAThread]
         static void Main()

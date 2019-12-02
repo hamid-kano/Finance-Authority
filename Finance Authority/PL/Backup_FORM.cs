@@ -14,7 +14,7 @@ namespace Finance_Authority.PL
 {
     public partial class Backup_FORM : MetroFramework.Forms.MetroForm
     {
-        SqlConnection cn = new SqlConnection(@"Server = 192.168.50.50; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa ;PASSWORD =123");
+        SqlConnection cn = new SqlConnection(@"Server =192.168.50.50 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
         SqlCommand cmd;
 
         public Backup_FORM()

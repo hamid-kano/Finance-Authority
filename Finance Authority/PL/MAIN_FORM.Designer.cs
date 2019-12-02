@@ -49,16 +49,16 @@
             this.Document_Category_BTN = new MetroFramework.Controls.MetroButton();
             this.Document_BTN = new MetroFramework.Controls.MetroButton();
             this.Panel_Buttons = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Languages_Button = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Users_Button = new System.Windows.Forms.Button();
+            this.Backup_Button = new System.Windows.Forms.Button();
+            this.Main_Button = new System.Windows.Forms.Button();
+            this.Who_us_Button = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.Activities_Button = new System.Windows.Forms.Button();
+            this.Profile_Button = new System.Windows.Forms.Button();
+            this.Restor_Backup_Button = new System.Windows.Forms.Button();
             this.BTN_OPERATIONS = new System.Windows.Forms.Button();
             this.Panel_Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -277,38 +277,38 @@
             // Panel_Buttons
             // 
             this.Panel_Buttons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.Panel_Buttons.Controls.Add(this.button3);
+            this.Panel_Buttons.Controls.Add(this.Languages_Button);
             this.Panel_Buttons.Controls.Add(this.pictureBox2);
-            this.Panel_Buttons.Controls.Add(this.button4);
-            this.Panel_Buttons.Controls.Add(this.button5);
-            this.Panel_Buttons.Controls.Add(this.button7);
-            this.Panel_Buttons.Controls.Add(this.button8);
+            this.Panel_Buttons.Controls.Add(this.Users_Button);
+            this.Panel_Buttons.Controls.Add(this.Backup_Button);
+            this.Panel_Buttons.Controls.Add(this.Main_Button);
+            this.Panel_Buttons.Controls.Add(this.Who_us_Button);
             this.Panel_Buttons.Controls.Add(this.panel5);
-            this.Panel_Buttons.Controls.Add(this.button11);
-            this.Panel_Buttons.Controls.Add(this.button13);
-            this.Panel_Buttons.Controls.Add(this.button14);
+            this.Panel_Buttons.Controls.Add(this.Activities_Button);
+            this.Panel_Buttons.Controls.Add(this.Profile_Button);
+            this.Panel_Buttons.Controls.Add(this.Restor_Backup_Button);
             this.Panel_Buttons.Controls.Add(this.BTN_OPERATIONS);
             this.Panel_Buttons.Location = new System.Drawing.Point(2, 6);
             this.Panel_Buttons.Name = "Panel_Buttons";
             this.Panel_Buttons.Size = new System.Drawing.Size(279, 619);
             this.Panel_Buttons.TabIndex = 56;
             // 
-            // button3
+            // Languages_Button
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Finance_Authority.Properties.Resources.اللغة;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(19, 555);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 54);
-            this.button3.TabIndex = 11;
-            this.button3.Text = " Kurdi";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Languages_Button.FlatAppearance.BorderSize = 0;
+            this.Languages_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Languages_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Languages_Button.ForeColor = System.Drawing.Color.Black;
+            this.Languages_Button.Image = global::Finance_Authority.Properties.Resources.اللغة;
+            this.Languages_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Languages_Button.Location = new System.Drawing.Point(19, 555);
+            this.Languages_Button.Name = "Languages_Button";
+            this.Languages_Button.Size = new System.Drawing.Size(247, 54);
+            this.Languages_Button.TabIndex = 11;
+            this.Languages_Button.Text = " Kurdi";
+            this.Languages_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Languages_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Languages_Button.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -323,74 +323,75 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // button4
+            // Users_Button
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Finance_Authority.Properties.Resources.إدارة_المستخدمين;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(18, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(248, 54);
-            this.button4.TabIndex = 6;
-            this.button4.Text = " المستخدمون";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Users_Button.FlatAppearance.BorderSize = 0;
+            this.Users_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Users_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Users_Button.ForeColor = System.Drawing.Color.Black;
+            this.Users_Button.Image = global::Finance_Authority.Properties.Resources.إدارة_المستخدمين;
+            this.Users_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Users_Button.Location = new System.Drawing.Point(18, 315);
+            this.Users_Button.Name = "Users_Button";
+            this.Users_Button.Size = new System.Drawing.Size(248, 54);
+            this.Users_Button.TabIndex = 6;
+            this.Users_Button.Text = " المستخدمون";
+            this.Users_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Users_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Users_Button.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Backup_Button
             // 
-            this.button5.Enabled = false;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::Finance_Authority.Properties.Resources.نسخ_احتياطي;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(18, 197);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(248, 54);
-            this.button5.TabIndex = 4;
-            this.button5.Text = " نسخ احتياطي";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.Backup_Button.Enabled = false;
+            this.Backup_Button.FlatAppearance.BorderSize = 0;
+            this.Backup_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Backup_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Backup_Button.ForeColor = System.Drawing.Color.Black;
+            this.Backup_Button.Image = global::Finance_Authority.Properties.Resources.نسخ_احتياطي;
+            this.Backup_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Backup_Button.Location = new System.Drawing.Point(18, 197);
+            this.Backup_Button.Name = "Backup_Button";
+            this.Backup_Button.Size = new System.Drawing.Size(248, 54);
+            this.Backup_Button.TabIndex = 4;
+            this.Backup_Button.Text = " نسخ احتياطي";
+            this.Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Backup_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Backup_Button.UseVisualStyleBackColor = true;
+            this.Backup_Button.Click += new System.EventHandler(this.Backup_Button_Click);
             // 
-            // button7
+            // Main_Button
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Image = global::Finance_Authority.Properties.Resources.الرئيسية;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button7.Location = new System.Drawing.Point(18, 77);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(248, 54);
-            this.button7.TabIndex = 0;
-            this.button7.Text = " الرئيسية";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.Main_Button.FlatAppearance.BorderSize = 0;
+            this.Main_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Main_Button.ForeColor = System.Drawing.Color.Black;
+            this.Main_Button.Image = global::Finance_Authority.Properties.Resources.الرئيسية;
+            this.Main_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Main_Button.Location = new System.Drawing.Point(18, 77);
+            this.Main_Button.Name = "Main_Button";
+            this.Main_Button.Size = new System.Drawing.Size(248, 54);
+            this.Main_Button.TabIndex = 0;
+            this.Main_Button.Text = " الرئيسية";
+            this.Main_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Main_Button.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // Who_us_Button
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Image = global::Finance_Authority.Properties.Resources.الدعم_الفني;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(18, 495);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(248, 54);
-            this.button8.TabIndex = 9;
-            this.button8.Text = " من نحن";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = true;
+            this.Who_us_Button.FlatAppearance.BorderSize = 0;
+            this.Who_us_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Who_us_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Who_us_Button.ForeColor = System.Drawing.Color.Black;
+            this.Who_us_Button.Image = global::Finance_Authority.Properties.Resources.الدعم_الفني;
+            this.Who_us_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Who_us_Button.Location = new System.Drawing.Point(18, 495);
+            this.Who_us_Button.Name = "Who_us_Button";
+            this.Who_us_Button.Size = new System.Drawing.Size(248, 54);
+            this.Who_us_Button.TabIndex = 9;
+            this.Who_us_Button.Text = " من نحن";
+            this.Who_us_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Who_us_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Who_us_Button.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -401,59 +402,59 @@
             this.panel5.Size = new System.Drawing.Size(9, 54);
             this.panel5.TabIndex = 4;
             // 
-            // button11
+            // Activities_Button
             // 
-            this.button11.Enabled = false;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = global::Finance_Authority.Properties.Resources.نشاطات_المستخدمين;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button11.Location = new System.Drawing.Point(18, 435);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(248, 54);
-            this.button11.TabIndex = 8;
-            this.button11.Text = " نشاطات المستخدمين";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = true;
+            this.Activities_Button.Enabled = false;
+            this.Activities_Button.FlatAppearance.BorderSize = 0;
+            this.Activities_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Activities_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Activities_Button.ForeColor = System.Drawing.Color.Black;
+            this.Activities_Button.Image = global::Finance_Authority.Properties.Resources.نشاطات_المستخدمين;
+            this.Activities_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Activities_Button.Location = new System.Drawing.Point(18, 435);
+            this.Activities_Button.Name = "Activities_Button";
+            this.Activities_Button.Size = new System.Drawing.Size(248, 54);
+            this.Activities_Button.TabIndex = 8;
+            this.Activities_Button.Text = " نشاطات المستخدمين";
+            this.Activities_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Activities_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Activities_Button.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // Profile_Button
             // 
-            this.button13.Enabled = false;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Image = global::Finance_Authority.Properties.Resources.حسابي;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button13.Location = new System.Drawing.Point(18, 375);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(248, 54);
-            this.button13.TabIndex = 7;
-            this.button13.Text = " الملف الشخصي";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = true;
+            this.Profile_Button.Enabled = false;
+            this.Profile_Button.FlatAppearance.BorderSize = 0;
+            this.Profile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Profile_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Profile_Button.ForeColor = System.Drawing.Color.Black;
+            this.Profile_Button.Image = global::Finance_Authority.Properties.Resources.حسابي;
+            this.Profile_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Profile_Button.Location = new System.Drawing.Point(18, 375);
+            this.Profile_Button.Name = "Profile_Button";
+            this.Profile_Button.Size = new System.Drawing.Size(248, 54);
+            this.Profile_Button.TabIndex = 7;
+            this.Profile_Button.Text = " الملف الشخصي";
+            this.Profile_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Profile_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Profile_Button.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // Restor_Backup_Button
             // 
-            this.button14.Enabled = false;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Image = global::Finance_Authority.Properties.Resources.استعادة_النسخ_الاحتياطي;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(19, 257);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(247, 54);
-            this.button14.TabIndex = 5;
-            this.button14.Text = " استعادة نسخة احتياطي";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = true;
+            this.Restor_Backup_Button.Enabled = false;
+            this.Restor_Backup_Button.FlatAppearance.BorderSize = 0;
+            this.Restor_Backup_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Restor_Backup_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Restor_Backup_Button.ForeColor = System.Drawing.Color.Black;
+            this.Restor_Backup_Button.Image = global::Finance_Authority.Properties.Resources.استعادة_النسخ_الاحتياطي;
+            this.Restor_Backup_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Restor_Backup_Button.Location = new System.Drawing.Point(19, 257);
+            this.Restor_Backup_Button.Name = "Restor_Backup_Button";
+            this.Restor_Backup_Button.Size = new System.Drawing.Size(247, 54);
+            this.Restor_Backup_Button.TabIndex = 5;
+            this.Restor_Backup_Button.Text = " استعادة نسخة احتياطي";
+            this.Restor_Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Restor_Backup_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Restor_Backup_Button.UseVisualStyleBackColor = true;
             // 
             // BTN_OPERATIONS
             // 
@@ -529,16 +530,16 @@
         private MetroFramework.Controls.MetroButton Document_Category_BTN;
         private MetroFramework.Controls.MetroButton Document_BTN;
         public System.Windows.Forms.Panel Panel_Buttons;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button Languages_Button;
         public System.Windows.Forms.PictureBox pictureBox2;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button7;
-        public System.Windows.Forms.Button button8;
+        public System.Windows.Forms.Button Users_Button;
+        public System.Windows.Forms.Button Backup_Button;
+        public System.Windows.Forms.Button Main_Button;
+        public System.Windows.Forms.Button Who_us_Button;
         public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Button button11;
-        public System.Windows.Forms.Button button13;
-        public System.Windows.Forms.Button button14;
+        public System.Windows.Forms.Button Activities_Button;
+        public System.Windows.Forms.Button Profile_Button;
+        public System.Windows.Forms.Button Restor_Backup_Button;
         public System.Windows.Forms.Button BTN_OPERATIONS;
     }
 }

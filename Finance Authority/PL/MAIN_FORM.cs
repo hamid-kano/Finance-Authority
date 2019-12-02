@@ -131,5 +131,11 @@ namespace Finance_Authority
             PL.Document_FORM FRM = new PL.Document_FORM();
             FRM.ShowDialog();
         }
+
+        private void Backup_Button_Click(object sender, EventArgs e)
+        {
+            PL.Backup_FORM FRM = new PL.Backup_FORM();
+            FRM.ShowDialog();
+        }
     }
 }

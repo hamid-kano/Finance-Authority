@@ -278,7 +278,7 @@
             // 
             // Panel_Buttons
             // 
-            this.Panel_Buttons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_Buttons.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Panel_Buttons.Controls.Add(this.Languages_Button);
             this.Panel_Buttons.Controls.Add(this.pictureBox2);
             this.Panel_Buttons.Controls.Add(this.Users_Button);

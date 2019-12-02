@@ -113,6 +113,7 @@
             this.Office_Gridview.AllowUserToResizeRows = false;
             this.Office_Gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Office_Gridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Office_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Office_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Office_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -135,7 +136,7 @@
             this.Office_Gridview.EnableHeadersVisualStyles = false;
             this.Office_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Office_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Office_Gridview.Location = new System.Drawing.Point(286, 87);
+            this.Office_Gridview.Location = new System.Drawing.Point(267, 87);
             this.Office_Gridview.Name = "Office_Gridview";
             this.Office_Gridview.ReadOnly = true;
             this.Office_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -149,7 +150,7 @@
             this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Office_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Office_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Office_Gridview.Size = new System.Drawing.Size(472, 253);
+            this.Office_Gridview.Size = new System.Drawing.Size(540, 270);
             this.Office_Gridview.TabIndex = 52;
             this.Office_Gridview.Click += new System.EventHandler(this.Office_Gridview_Click);
             // 
@@ -166,7 +167,7 @@
             // Office_Notes
             // 
             this.Office_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Office_Notes.Location = new System.Drawing.Point(88, 178);
+            this.Office_Notes.Location = new System.Drawing.Point(88, 186);
             this.Office_Notes.Name = "Office_Notes";
             this.Office_Notes.Size = new System.Drawing.Size(163, 23);
             this.Office_Notes.TabIndex = 50;
@@ -175,7 +176,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 118);
+            this.label2.Location = new System.Drawing.Point(7, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 49;
@@ -203,7 +204,7 @@
             // Office_Name
             // 
             this.Office_Name.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Office_Name.Location = new System.Drawing.Point(88, 111);
+            this.Office_Name.Location = new System.Drawing.Point(88, 131);
             this.Office_Name.Name = "Office_Name";
             this.Office_Name.Size = new System.Drawing.Size(163, 23);
             this.Office_Name.TabIndex = 46;
@@ -212,7 +213,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 235);
+            this.label4.Location = new System.Drawing.Point(7, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 16);
             this.label4.TabIndex = 58;
@@ -223,7 +224,7 @@
             this.Office_CombAuthontic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Office_CombAuthontic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Office_CombAuthontic.FormattingEnabled = true;
-            this.Office_CombAuthontic.Location = new System.Drawing.Point(88, 232);
+            this.Office_CombAuthontic.Location = new System.Drawing.Point(88, 233);
             this.Office_CombAuthontic.Name = "Office_CombAuthontic";
             this.Office_CombAuthontic.Size = new System.Drawing.Size(163, 24);
             this.Office_CombAuthontic.TabIndex = 59;

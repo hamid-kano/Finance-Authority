@@ -17,6 +17,7 @@ namespace Finance_Authority
         public static int Department_ID;
         public static int Role_Functional_id;
         public static int  Budget_Id;
+        public static int Coin_Exchange_id;
         /// </summary>
         [STAThread]
         static void Main()

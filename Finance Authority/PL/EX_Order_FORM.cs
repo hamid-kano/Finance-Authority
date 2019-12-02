@@ -63,7 +63,7 @@ namespace Finance_Authority.PL
             EX_Orders_tosorce.Text = "";
             EX_Orders_Body_order.Text = "";
             EX_Orders_Notes.Text = "";
-            EX_Orders_CombCategorise.Text = "";
+            
         }
 
         private void EX_Orders_dataGrid_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace Finance_Authority.PL
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";
                 EX_Orders_Notes.Text = "";
-                EX_Orders_CombCategorise.Text = "";
+              
                 EX_Orders_update.Enabled = false;
                 EX_Orders_delete.Enabled = false;
             }
@@ -127,7 +127,7 @@ namespace Finance_Authority.PL
             EX_Orders_tosorce.Text = "";
             EX_Orders_Body_order.Text = "";
             EX_Orders_Notes.Text = "";
-            EX_Orders_CombCategorise.Text = "";
+            
             EX_Orders_update.Enabled = false;
             EX_Orders_delete.Enabled = false;
         }

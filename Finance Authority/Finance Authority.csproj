@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Authority.cs" />
+    <Compile Include="BL\CLS_Budget.cs" />
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
     <Compile Include="BL\CLS_Exchange_Order.cs" />
     <Compile Include="BL\CLS_Role_Functional.cs" />

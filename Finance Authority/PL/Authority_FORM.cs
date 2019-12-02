@@ -77,6 +77,12 @@ namespace Finance_Authority.PL
 
         private void Authority_update_Click(object sender, EventArgs e)
         {
+            if (Authority_Name.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = Auth.Authority_Cheack(Authority_Name.Text);
             if (Dt.Rows.Count == 0 || Authority_Name.Text == this.Authority_Gridview.CurrentRow.Cells[1].Value.ToString())

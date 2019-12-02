@@ -58,6 +58,7 @@
     <Compile Include="BL\Authority.cs" />
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
     <Compile Include="BL\CLS_Exchange_Order.cs" />
+    <Compile Include="BL\Department.cs" />
     <Compile Include="BL\Office.cs" />
     <Compile Include="DAL\DATA_ACCESS_LAYER.cs" />
     <Compile Include="PL\Backup_FORM.cs">

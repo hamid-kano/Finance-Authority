@@ -60,6 +60,8 @@
             this.Profile_Button = new System.Windows.Forms.Button();
             this.Restor_Backup_Button = new System.Windows.Forms.Button();
             this.BTN_OPERATIONS = new System.Windows.Forms.Button();
+            this.Objects_Button = new MetroFramework.Controls.MetroButton();
+            this.Bills_Button = new MetroFramework.Controls.MetroButton();
             this.Panel_Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -156,7 +158,7 @@
             // Employee_BTN
             // 
             this.Employee_BTN.Highlight = true;
-            this.Employee_BTN.Location = new System.Drawing.Point(811, 479);
+            this.Employee_BTN.Location = new System.Drawing.Point(1023, 479);
             this.Employee_BTN.Name = "Employee_BTN";
             this.Employee_BTN.Size = new System.Drawing.Size(185, 40);
             this.Employee_BTN.TabIndex = 8;
@@ -469,11 +471,35 @@
             this.BTN_OPERATIONS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTN_OPERATIONS.UseVisualStyleBackColor = true;
             // 
+            // Objects_Button
+            // 
+            this.Objects_Button.Highlight = true;
+            this.Objects_Button.Location = new System.Drawing.Point(598, 479);
+            this.Objects_Button.Name = "Objects_Button";
+            this.Objects_Button.Size = new System.Drawing.Size(185, 40);
+            this.Objects_Button.TabIndex = 57;
+            this.Objects_Button.Text = "المواد";
+            this.Objects_Button.UseSelectable = true;
+            this.Objects_Button.Click += new System.EventHandler(this.Objects_Button_Click);
+            // 
+            // Bills_Button
+            // 
+            this.Bills_Button.Highlight = true;
+            this.Bills_Button.Location = new System.Drawing.Point(811, 479);
+            this.Bills_Button.Name = "Bills_Button";
+            this.Bills_Button.Size = new System.Drawing.Size(185, 40);
+            this.Bills_Button.TabIndex = 58;
+            this.Bills_Button.Text = "الفواتير";
+            this.Bills_Button.UseSelectable = true;
+            this.Bills_Button.Click += new System.EventHandler(this.Bills_Button_Click);
+            // 
             // MAIN_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 626);
+            this.Controls.Add(this.Bills_Button);
+            this.Controls.Add(this.Objects_Button);
             this.Controls.Add(this.Panel_Buttons);
             this.Controls.Add(this.Document_BTN);
             this.Controls.Add(this.Document_Category_BTN);
@@ -536,6 +562,8 @@
         public System.Windows.Forms.Button Profile_Button;
         public System.Windows.Forms.Button Restor_Backup_Button;
         public System.Windows.Forms.Button BTN_OPERATIONS;
+        private MetroFramework.Controls.MetroButton Objects_Button;
+        private MetroFramework.Controls.MetroButton Bills_Button;
     }
 }
 

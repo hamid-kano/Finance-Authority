@@ -67,6 +67,12 @@
     <Compile Include="PL\Backup_FORM.Designer.cs">
       <DependentUpon>Backup_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Bills_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Bills_FORM.Designer.cs">
+      <DependentUpon>Bills_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Budget_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="PL\Authority_FORM.Designer.cs">
       <DependentUpon>Authority_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Objects_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Objects_FORM.Designer.cs">
+      <DependentUpon>Objects_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Office_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +207,9 @@
     <EmbeddedResource Include="PL\Backup_FORM.resx">
       <DependentUpon>Backup_FORM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Bills_FORM.resx">
+      <DependentUpon>Bills_FORM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Budget_FORM.resx">
       <DependentUpon>Budget_FORM.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Loans_FORM.resx">
       <DependentUpon>Loans_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Objects_FORM.resx">
+      <DependentUpon>Objects_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Payment_Document_FORM.resx">
       <DependentUpon>Payment_Document_FORM.cs</DependentUpon>

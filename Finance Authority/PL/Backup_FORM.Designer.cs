@@ -70,8 +70,7 @@
             this.Backup_Path_TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Backup_Path_TextBox.CustomButton.UseSelectable = true;
             this.Backup_Path_TextBox.CustomButton.Visible = false;
-            this.Backup_Path_TextBox.Lines = new string[] {
-        "Backup_TextBox"};
+            this.Backup_Path_TextBox.Lines = new string[0];
             this.Backup_Path_TextBox.Location = new System.Drawing.Point(260, 137);
             this.Backup_Path_TextBox.MaxLength = 32767;
             this.Backup_Path_TextBox.Multiline = true;
@@ -84,7 +83,6 @@
             this.Backup_Path_TextBox.ShortcutsEnabled = true;
             this.Backup_Path_TextBox.Size = new System.Drawing.Size(198, 23);
             this.Backup_Path_TextBox.TabIndex = 2;
-            this.Backup_Path_TextBox.Text = "Backup_TextBox";
             this.Backup_Path_TextBox.UseSelectable = true;
             this.Backup_Path_TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Backup_Path_TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

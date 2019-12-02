@@ -137,5 +137,17 @@ namespace Finance_Authority
             PL.Backup_FORM FRM = new PL.Backup_FORM();
             FRM.ShowDialog();
         }
+
+        private void Objects_Button_Click(object sender, EventArgs e)
+        {
+            PL.Objects_FORM FRM = new PL.Objects_FORM();
+            FRM.ShowDialog();
+        }
+
+        private void Bills_Button_Click(object sender, EventArgs e)
+        {
+            PL.Bills_FORM FRM = new PL.Bills_FORM();
+            FRM.ShowDialog();
+        }
     }
 }

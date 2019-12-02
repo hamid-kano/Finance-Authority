@@ -60,6 +60,12 @@
     <Compile Include="BL\CLS_Exchange_Order.cs" />
     <Compile Include="BL\Office.cs" />
     <Compile Include="DAL\DATA_ACCESS_LAYER.cs" />
+    <Compile Include="PL\Backup_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Backup_FORM.Designer.cs">
+      <DependentUpon>Backup_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Budget_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\Authority_FORM.resx">
       <DependentUpon>Authority_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Backup_FORM.resx">
+      <DependentUpon>Backup_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Budget_FORM.resx">
       <DependentUpon>Budget_FORM.cs</DependentUpon>

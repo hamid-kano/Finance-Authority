@@ -86,13 +86,13 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
-        public DataTable Coin_Exchange_Search_Date_Budget(DateTime Date_Budget)
+        public DataTable Coin_Exchange_Search_Date_Budget(int Date_Budget)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
             DAL.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Date_Budget ", SqlDbType.DateTime);
+            param[0] = new SqlParameter("@Date_Budget ", SqlDbType.Int);
             param[0].Value = Date_Budget;
             Dt = DAL.selectdata("Coin_Exchange_Search_Date_Budget", param);
             DAL.close();

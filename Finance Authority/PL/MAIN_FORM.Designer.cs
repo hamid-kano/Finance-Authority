@@ -278,9 +278,7 @@
             // 
             // Panel_Buttons
             // 
-            this.Panel_Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Panel_Buttons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(248)))), ((int)(((byte)(245)))));
+            this.Panel_Buttons.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Panel_Buttons.Controls.Add(this.Languages_Button);
             this.Panel_Buttons.Controls.Add(this.pictureBox2);
             this.Panel_Buttons.Controls.Add(this.Users_Button);
@@ -455,7 +453,6 @@
             this.Restor_Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restor_Backup_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Restor_Backup_Button.UseVisualStyleBackColor = true;
-            this.Restor_Backup_Button.Click += new System.EventHandler(this.Restor_Backup_Button_Click);
             // 
             // BTN_OPERATIONS
             // 

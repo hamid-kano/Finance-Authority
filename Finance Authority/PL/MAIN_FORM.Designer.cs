@@ -297,7 +297,7 @@
             // 
             this.Languages_Button.FlatAppearance.BorderSize = 0;
             this.Languages_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Languages_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Languages_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Languages_Button.ForeColor = System.Drawing.Color.Black;
             this.Languages_Button.Image = global::Finance_Authority.Properties.Resources.اللغة;
             this.Languages_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -327,7 +327,7 @@
             // 
             this.Users_Button.FlatAppearance.BorderSize = 0;
             this.Users_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Users_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Users_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Users_Button.ForeColor = System.Drawing.Color.Black;
             this.Users_Button.Image = global::Finance_Authority.Properties.Resources.إدارة_المستخدمين;
             this.Users_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -342,10 +342,9 @@
             // 
             // Backup_Button
             // 
-            this.Backup_Button.Enabled = false;
             this.Backup_Button.FlatAppearance.BorderSize = 0;
             this.Backup_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Backup_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Backup_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Backup_Button.ForeColor = System.Drawing.Color.Black;
             this.Backup_Button.Image = global::Finance_Authority.Properties.Resources.نسخ_احتياطي;
             this.Backup_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -363,7 +362,7 @@
             // 
             this.Main_Button.FlatAppearance.BorderSize = 0;
             this.Main_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Main_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Main_Button.ForeColor = System.Drawing.Color.Black;
             this.Main_Button.Image = global::Finance_Authority.Properties.Resources.الرئيسية;
             this.Main_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -380,7 +379,7 @@
             // 
             this.Who_us_Button.FlatAppearance.BorderSize = 0;
             this.Who_us_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Who_us_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Who_us_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Who_us_Button.ForeColor = System.Drawing.Color.Black;
             this.Who_us_Button.Image = global::Finance_Authority.Properties.Resources.الدعم_الفني;
             this.Who_us_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,10 +403,9 @@
             // 
             // Activities_Button
             // 
-            this.Activities_Button.Enabled = false;
             this.Activities_Button.FlatAppearance.BorderSize = 0;
             this.Activities_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Activities_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Activities_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Activities_Button.ForeColor = System.Drawing.Color.Black;
             this.Activities_Button.Image = global::Finance_Authority.Properties.Resources.نشاطات_المستخدمين;
             this.Activities_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -422,10 +420,9 @@
             // 
             // Profile_Button
             // 
-            this.Profile_Button.Enabled = false;
             this.Profile_Button.FlatAppearance.BorderSize = 0;
             this.Profile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Profile_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Profile_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Profile_Button.ForeColor = System.Drawing.Color.Black;
             this.Profile_Button.Image = global::Finance_Authority.Properties.Resources.حسابي;
             this.Profile_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -440,10 +437,9 @@
             // 
             // Restor_Backup_Button
             // 
-            this.Restor_Backup_Button.Enabled = false;
             this.Restor_Backup_Button.FlatAppearance.BorderSize = 0;
             this.Restor_Backup_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Restor_Backup_Button.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Restor_Backup_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Restor_Backup_Button.ForeColor = System.Drawing.Color.Black;
             this.Restor_Backup_Button.Image = global::Finance_Authority.Properties.Resources.استعادة_النسخ_الاحتياطي;
             this.Restor_Backup_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,10 +454,9 @@
             // 
             // BTN_OPERATIONS
             // 
-            this.BTN_OPERATIONS.Enabled = false;
             this.BTN_OPERATIONS.FlatAppearance.BorderSize = 0;
             this.BTN_OPERATIONS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_OPERATIONS.Font = new System.Drawing.Font("Al-Jazeera-Arabic-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BTN_OPERATIONS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BTN_OPERATIONS.ForeColor = System.Drawing.Color.Black;
             this.BTN_OPERATIONS.Image = global::Finance_Authority.Properties.Resources.العمليات;
             this.BTN_OPERATIONS.ImageAlign = System.Drawing.ContentAlignment.TopLeft;

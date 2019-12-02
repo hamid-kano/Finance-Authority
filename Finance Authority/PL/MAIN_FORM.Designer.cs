@@ -453,6 +453,7 @@
             this.Restor_Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Restor_Backup_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Restor_Backup_Button.UseVisualStyleBackColor = true;
+            this.Restor_Backup_Button.Click += new System.EventHandler(this.Restor_Backup_Button_Click_1);
             // 
             // BTN_OPERATIONS
             // 

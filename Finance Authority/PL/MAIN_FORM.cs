@@ -155,5 +155,11 @@ namespace Finance_Authority
             PL.Backup_Restor_FORM FRM = new PL.Backup_Restor_FORM();
             FRM.ShowDialog();
         }
+
+        private void Restor_Backup_Button_Click_1(object sender, EventArgs e)
+        {
+            PL.Backup_Restor_FORM FRM = new PL.Backup_Restor_FORM();
+            FRM.ShowDialog();
+        }
     }
 }

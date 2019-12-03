@@ -19,6 +19,7 @@ namespace Finance_Authority
         public static int  Budget_Id;
         public static int Coin_Exchange_id;
         public static int Category_id_id;
+        public static int Reciver_Document_id;
         /// </summary>
         [STAThread]
         static void Main()

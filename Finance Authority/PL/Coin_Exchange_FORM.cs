@@ -19,9 +19,6 @@ namespace Finance_Authority.PL
             Coin_Exchange_CombSerach.DataSource = Coin.Coin_Exchange_CombBudg();
             Coin_Exchange_CombSerach.DisplayMember = "Date";
             Coin_Exchange_CombSerach.ValueMember = "Budget_Id";
-            comboBox1.DataSource = Coin.Coin_Exchange_CombBudg();
-            comboBox1.DisplayMember = "Date";
-            comboBox1.ValueMember = "Budget_Id";
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Coin_Exchange_CombBudge.DataSource = Coin.Coin_Exchange_CombBudg();

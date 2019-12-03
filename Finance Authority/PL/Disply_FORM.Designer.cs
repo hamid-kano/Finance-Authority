@@ -1,6 +1,6 @@
 ﻿namespace Finance_Authority.PL
 {
-    partial class Loans_FORM
+    partial class Disply_FORM
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = null;
-            // 
-            // Loans_FORM
+            // Disply_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Loans_FORM";
+            this.Name = "Disply_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
-            this.Text = "القروض";
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

@@ -70,28 +70,30 @@
             // Payment_Document_Date_last
             // 
             this.Payment_Document_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_last.Location = new System.Drawing.Point(799, 63);
+            this.Payment_Document_Date_last.Location = new System.Drawing.Point(790, 72);
             this.Payment_Document_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_last.Name = "Payment_Document_Date_last";
             this.Payment_Document_Date_last.RightToLeftLayout = true;
             this.Payment_Document_Date_last.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Date_last.TabIndex = 154;
+            this.Payment_Document_Date_last.ValueChanged += new System.EventHandler(this.Payment_Document_Date_last_ValueChanged);
             // 
             // Payment_Document_Date_first
             // 
             this.Payment_Document_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_first.Location = new System.Drawing.Point(799, 20);
+            this.Payment_Document_Date_first.Location = new System.Drawing.Point(790, 29);
             this.Payment_Document_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_first.Name = "Payment_Document_Date_first";
             this.Payment_Document_Date_first.RightToLeftLayout = true;
             this.Payment_Document_Date_first.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Date_first.TabIndex = 153;
+            this.Payment_Document_Date_first.ValueChanged += new System.EventHandler(this.Payment_Document_Date_first_ValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(737, 46);
+            this.label12.Location = new System.Drawing.Point(728, 55);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 16);
             this.label12.TabIndex = 152;
@@ -101,25 +103,26 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(396, 63);
+            this.label8.Location = new System.Drawing.Point(365, 60);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 16);
+            this.label8.Size = new System.Drawing.Size(151, 16);
             this.label8.TabIndex = 151;
-            this.label8.Text = "بحث حسب رقم السند";
+            this.label8.Text = "بحث حسب رقم أمر الصرف";
             // 
             // Payment_Document_Search
             // 
             this.Payment_Document_Search.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_Search.Location = new System.Drawing.Point(534, 56);
+            this.Payment_Document_Search.Location = new System.Drawing.Point(522, 57);
             this.Payment_Document_Search.Name = "Payment_Document_Search";
             this.Payment_Document_Search.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_Search.TabIndex = 150;
+            this.Payment_Document_Search.TextChanged += new System.EventHandler(this.Payment_Document_Search_TextChanged);
             // 
             // Payment_Document_Comb_Cate
             // 
             this.Payment_Document_Comb_Cate.FormattingEnabled = true;
             this.Payment_Document_Comb_Cate.ItemHeight = 23;
-            this.Payment_Document_Comb_Cate.Location = new System.Drawing.Point(154, 492);
+            this.Payment_Document_Comb_Cate.Location = new System.Drawing.Point(125, 493);
             this.Payment_Document_Comb_Cate.Name = "Payment_Document_Comb_Cate";
             this.Payment_Document_Comb_Cate.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Comb_Cate.TabIndex = 149;
@@ -129,7 +132,7 @@
             // 
             this.Payment_Document_Comb_Date.FormattingEnabled = true;
             this.Payment_Document_Comb_Date.ItemHeight = 23;
-            this.Payment_Document_Comb_Date.Location = new System.Drawing.Point(154, 449);
+            this.Payment_Document_Comb_Date.Location = new System.Drawing.Point(125, 450);
             this.Payment_Document_Comb_Date.Name = "Payment_Document_Comb_Date";
             this.Payment_Document_Comb_Date.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Comb_Date.TabIndex = 148;
@@ -165,7 +168,7 @@
             this.Payment_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Payment_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Payment_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Payment_Document_dataGrid.Location = new System.Drawing.Point(361, 106);
+            this.Payment_Document_dataGrid.Location = new System.Drawing.Point(319, 106);
             this.Payment_Document_dataGrid.Name = "Payment_Document_dataGrid";
             this.Payment_Document_dataGrid.ReadOnly = true;
             this.Payment_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -179,14 +182,14 @@
             this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Payment_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Payment_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Payment_Document_dataGrid.Size = new System.Drawing.Size(655, 399);
+            this.Payment_Document_dataGrid.Size = new System.Drawing.Size(697, 399);
             this.Payment_Document_dataGrid.TabIndex = 147;
             this.Payment_Document_dataGrid.Click += new System.EventHandler(this.Payment_Document_dataGrid_Click);
             // 
             // Payment_Document_exit
             // 
             this.Payment_Document_exit.Highlight = true;
-            this.Payment_Document_exit.Location = new System.Drawing.Point(878, 522);
+            this.Payment_Document_exit.Location = new System.Drawing.Point(817, 518);
             this.Payment_Document_exit.Name = "Payment_Document_exit";
             this.Payment_Document_exit.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_exit.TabIndex = 146;
@@ -198,39 +201,42 @@
             // 
             this.Payment_Document_delete.Enabled = false;
             this.Payment_Document_delete.Highlight = true;
-            this.Payment_Document_delete.Location = new System.Drawing.Point(767, 522);
+            this.Payment_Document_delete.Location = new System.Drawing.Point(706, 518);
             this.Payment_Document_delete.Name = "Payment_Document_delete";
             this.Payment_Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_delete.TabIndex = 145;
             this.Payment_Document_delete.Text = "حذف";
             this.Payment_Document_delete.UseSelectable = true;
+            this.Payment_Document_delete.Click += new System.EventHandler(this.Payment_Document_delete_Click);
             // 
             // Payment_Document_update
             // 
             this.Payment_Document_update.Enabled = false;
             this.Payment_Document_update.Highlight = true;
-            this.Payment_Document_update.Location = new System.Drawing.Point(660, 522);
+            this.Payment_Document_update.Location = new System.Drawing.Point(599, 518);
             this.Payment_Document_update.Name = "Payment_Document_update";
             this.Payment_Document_update.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_update.TabIndex = 144;
             this.Payment_Document_update.Text = "تعديل";
             this.Payment_Document_update.UseSelectable = true;
+            this.Payment_Document_update.Click += new System.EventHandler(this.Payment_Document_update_Click);
             // 
             // Payment_Document_add
             // 
             this.Payment_Document_add.Enabled = false;
             this.Payment_Document_add.Highlight = true;
-            this.Payment_Document_add.Location = new System.Drawing.Point(541, 522);
+            this.Payment_Document_add.Location = new System.Drawing.Point(480, 518);
             this.Payment_Document_add.Name = "Payment_Document_add";
             this.Payment_Document_add.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_add.TabIndex = 143;
             this.Payment_Document_add.Text = "أضافة";
             this.Payment_Document_add.UseSelectable = true;
+            this.Payment_Document_add.Click += new System.EventHandler(this.Payment_Document_add_Click);
             // 
             // Payment_Document_new
             // 
             this.Payment_Document_new.Highlight = true;
-            this.Payment_Document_new.Location = new System.Drawing.Point(429, 522);
+            this.Payment_Document_new.Location = new System.Drawing.Point(368, 518);
             this.Payment_Document_new.Name = "Payment_Document_new";
             this.Payment_Document_new.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_new.TabIndex = 142;
@@ -241,7 +247,7 @@
             // Payment_Document_DateTime
             // 
             this.Payment_Document_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_DateTime.Location = new System.Drawing.Point(154, 369);
+            this.Payment_Document_DateTime.Location = new System.Drawing.Point(125, 370);
             this.Payment_Document_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_DateTime.Name = "Payment_Document_DateTime";
             this.Payment_Document_DateTime.RightToLeftLayout = true;
@@ -261,7 +267,7 @@
             // Payment_Document_Notes
             // 
             this.Payment_Document_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_Notes.Location = new System.Drawing.Point(154, 412);
+            this.Payment_Document_Notes.Location = new System.Drawing.Point(125, 413);
             this.Payment_Document_Notes.Name = "Payment_Document_Notes";
             this.Payment_Document_Notes.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_Notes.TabIndex = 139;
@@ -289,7 +295,7 @@
             // Payment_Document_Reason
             // 
             this.Payment_Document_Reason.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_Reason.Location = new System.Drawing.Point(154, 295);
+            this.Payment_Document_Reason.Location = new System.Drawing.Point(125, 296);
             this.Payment_Document_Reason.Name = "Payment_Document_Reason";
             this.Payment_Document_Reason.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_Reason.TabIndex = 136;
@@ -327,7 +333,7 @@
             // Payment_Document_Receve
             // 
             this.Payment_Document_Receve.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_Receve.Location = new System.Drawing.Point(154, 332);
+            this.Payment_Document_Receve.Location = new System.Drawing.Point(125, 333);
             this.Payment_Document_Receve.Name = "Payment_Document_Receve";
             this.Payment_Document_Receve.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_Receve.TabIndex = 132;
@@ -345,7 +351,7 @@
             // Payment_Document_sy
             // 
             this.Payment_Document_sy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_sy.Location = new System.Drawing.Point(154, 110);
+            this.Payment_Document_sy.Location = new System.Drawing.Point(125, 111);
             this.Payment_Document_sy.Name = "Payment_Document_sy";
             this.Payment_Document_sy.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_sy.TabIndex = 130;
@@ -363,7 +369,7 @@
             // Payment_Document_no
             // 
             this.Payment_Document_no.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_no.Location = new System.Drawing.Point(154, 221);
+            this.Payment_Document_no.Location = new System.Drawing.Point(125, 222);
             this.Payment_Document_no.Name = "Payment_Document_no";
             this.Payment_Document_no.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_no.TabIndex = 128;
@@ -381,7 +387,7 @@
             // Payment_Document_rate
             // 
             this.Payment_Document_rate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_rate.Location = new System.Drawing.Point(154, 184);
+            this.Payment_Document_rate.Location = new System.Drawing.Point(125, 185);
             this.Payment_Document_rate.Name = "Payment_Document_rate";
             this.Payment_Document_rate.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_rate.TabIndex = 126;
@@ -399,7 +405,7 @@
             // Payment_Document_Dollar
             // 
             this.Payment_Document_Dollar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_Dollar.Location = new System.Drawing.Point(154, 147);
+            this.Payment_Document_Dollar.Location = new System.Drawing.Point(125, 148);
             this.Payment_Document_Dollar.Name = "Payment_Document_Dollar";
             this.Payment_Document_Dollar.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_Dollar.TabIndex = 124;
@@ -410,14 +416,14 @@
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(25, 266);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 16);
+            this.label13.Size = new System.Drawing.Size(83, 16);
             this.label13.TabIndex = 156;
-            this.label13.Text = "رقم الصرف";
+            this.label13.Text = "رقم امر الصرف";
             // 
             // Payment_Document_No_Order
             // 
             this.Payment_Document_No_Order.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_Document_No_Order.Location = new System.Drawing.Point(154, 258);
+            this.Payment_Document_No_Order.Location = new System.Drawing.Point(125, 259);
             this.Payment_Document_No_Order.Name = "Payment_Document_No_Order";
             this.Payment_Document_No_Order.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_No_Order.TabIndex = 155;

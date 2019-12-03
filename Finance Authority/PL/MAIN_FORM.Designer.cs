@@ -62,6 +62,7 @@
             this.BTN_OPERATIONS = new System.Windows.Forms.Button();
             this.Objects_Button = new MetroFramework.Controls.MetroButton();
             this.Bills_Button = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.Panel_Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -494,11 +495,23 @@
             this.Bills_Button.UseSelectable = true;
             this.Bills_Button.Click += new System.EventHandler(this.Bills_Button_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Highlight = true;
+            this.metroButton1.Location = new System.Drawing.Point(394, 126);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(185, 40);
+            this.metroButton1.TabIndex = 59;
+            this.metroButton1.Text = "TEST";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.MetroButton1_Click);
+            // 
             // MAIN_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 626);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.Bills_Button);
             this.Controls.Add(this.Objects_Button);
             this.Controls.Add(this.Panel_Buttons);
@@ -565,6 +578,7 @@
         public System.Windows.Forms.Button BTN_OPERATIONS;
         private MetroFramework.Controls.MetroButton Objects_Button;
         private MetroFramework.Controls.MetroButton Bills_Button;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 

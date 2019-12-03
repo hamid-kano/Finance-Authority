@@ -129,6 +129,12 @@
     <Compile Include="PL\Employee_Salaries_FORM.Designer.cs">
       <DependentUpon>Employee_Salaries_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Finance_Authority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Finance_Authority.Designer.cs">
+      <DependentUpon>Finance_Authority.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Leoan_Payments_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\EX_Order_FORM.resx">
       <DependentUpon>EX_Order_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Finance_Authority.resx">
+      <DependentUpon>Finance_Authority.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Leoan_Payments_FORM.resx">
       <DependentUpon>Leoan_Payments_FORM.cs</DependentUpon>

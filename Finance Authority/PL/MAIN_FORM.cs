@@ -161,5 +161,11 @@ namespace Finance_Authority
             PL.Backup_Restor_FORM FRM = new PL.Backup_Restor_FORM();
             FRM.ShowDialog();
         }
+
+        private void MetroButton1_Click(object sender, EventArgs e)
+        {
+            PL.Finance_Authority FRM = new PL.Finance_Authority();
+            FRM.ShowDialog();
+        }
     }
 }

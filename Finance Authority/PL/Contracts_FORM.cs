@@ -71,7 +71,9 @@ namespace Finance_Authority.PL
                 //MessageBox.Show(id_EmployeeDES.ToString());
                 bool Functunal_status = Contracts_end.Checked ? true : false;
                 cont.Contracts_add(Contracts_Type.Text , Contracts_Date_Start.Value , Contracts_Date_end.Value, Functunal_status
-                     , Contracts_Notes.Text, id_EmployeeDES);
+                     , Contracts_Notes.Text, id_EmployeeDES );
+                this.Contracts_Gridview.DataSource = cont.Contracts_View();
+                Contracts_Gridview.Columns[0].Visible = false;
                 Contracts_Type.Text = "";
                 Contracts_Notes.Text = "";
                 Contracts_add.Enabled = false;
@@ -86,10 +88,33 @@ namespace Finance_Authority.PL
             {
                 Program.Contracts_id = Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[0].Value.ToString());
                 Contracts_Type.Text = this.Contracts_Gridview.CurrentRow.Cells[1].Value.ToString();
+                Contracts_Date_Start.Text = this.Contracts_Gridview.CurrentRow.Cells[2].Value.ToString();
+                Contracts_Date_end.Text = this.Contracts_Gridview.CurrentRow.Cells[3].Value.ToString();
+                Contracts_Comb_Employee.Text = this.Contracts_Gridview.CurrentRow.Cells[6].Value.ToString();
+                Contracts_Comb_Department.Text = this.Contracts_Gridview.CurrentRow.Cells[7].Value.ToString();
                 Contracts_Notes.Text = this.Contracts_Gridview.CurrentRow.Cells[5].Value.ToString();
+                Contracts_end.Checked = Convert.ToBoolean(this.Contracts_Gridview.CurrentRow.Cells[4].Value) ? true : false;
+                Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
                 Contracts_update.Enabled = true;
                 Contracts_delete.Enabled = true;
             }
+        }
+
+        private void Contracts_update_Click(object sender, EventArgs e)
+        {
+            //cont.Contracts_add(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_end.Checked
+            //        , Contracts_Notes.Text, id_EmployeeDES , Program.Contracts_id);
+        }
+
+        private void Contracts_delete_Click(object sender, EventArgs e)
+        {
+            cont.Contracts_Delete(Program.Contracts_id);
+            this.Contracts_Gridview.DataSource = cont.Contracts_View();
+            Contracts_Gridview.Columns[0].Visible = false;
+            Contracts_Type.Text = "";
+            Contracts_Notes.Text = "";
+            Contracts_update.Enabled = false;
+            Contracts_delete.Enabled = false;
         }
     }
 }

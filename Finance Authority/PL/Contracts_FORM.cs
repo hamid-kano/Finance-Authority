@@ -102,8 +102,24 @@ namespace Finance_Authority.PL
 
         private void Contracts_update_Click(object sender, EventArgs e)
         {
-            //cont.Contracts_add(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_end.Checked
-            //        , Contracts_Notes.Text, id_EmployeeDES , Program.Contracts_id);
+            int idDepartment = Convert.ToInt32(Contracts_Comb_Department.SelectedValue);
+            int idemployee = Convert.ToInt32(Contracts_Comb_Employee.SelectedValue);
+            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
+            if (DT.Rows.Count > 0)
+            {
+                DataRow row = DT.Rows[0];
+                int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
+                //MessageBox.Show(id_EmployeeDES.ToString());
+               // bool Functunal_status = Contracts_end.Checked ? true : false;
+                cont.Contracts_update(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_end.Checked
+                     , Contracts_Notes.Text, id_EmployeeDES, Program.Contracts_id);
+                this.Contracts_Gridview.DataSource = cont.Contracts_View();
+                Contracts_Gridview.Columns[0].Visible = false;
+                Contracts_Type.Text = "";
+                Contracts_Notes.Text = "";
+                Contracts_add.Enabled = false;
+            }
+            
         }
 
         private void Contracts_delete_Click(object sender, EventArgs e)

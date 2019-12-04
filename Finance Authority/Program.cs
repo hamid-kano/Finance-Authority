@@ -25,6 +25,10 @@ namespace Finance_Authority
         public static int Employee_Description_id;
         public static int Contracts_id;
         /// </summary>
+        /// 
+        public static int theme;
+        public static int style;
+
         [STAThread]
         static void Main()
         {
@@ -32,5 +36,48 @@ namespace Finance_Authority
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MAIN_FORM());
         }
+
+
+        public static MetroFramework.Components.MetroStyleManager theme_style(MetroFramework.Forms.MetroForm frm)
+        {
+            MetroFramework.Components.MetroStyleManager metroStyleManager = new MetroFramework.Components.MetroStyleManager();
+            metroStyleManager.Owner = frm;
+            if (theme==0)
+                metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            else
+                metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+           
+            //// style
+
+            switch (style)
+            {
+                case 0:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Red;
+                    break;
+                case 1:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Orange;
+                    break;
+                case 2:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Pink;
+                    break;
+                case 3:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Magenta;
+                    break;
+                case 4:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Purple;
+                    break;
+                case 5:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Yellow;
+                    break;
+                default:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Brown;
+                    break;
+            }
+
+            return metroStyleManager;
+
+        }
+
+
     }
 }

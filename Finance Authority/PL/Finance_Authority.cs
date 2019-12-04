@@ -13,56 +13,6 @@ namespace Finance_Authority.PL
 {
     public partial class Finance_Authority : MetroFramework.Forms.MetroForm
     {
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        //int LX, LY, SW, SH;
-        private void AbrirFormInPanel(object formHijo,MetroFramework.Controls.MetroPanel panel)
-        {
-            if (panel.Controls.Count > 0)
-                panel.Controls.RemoveAt(0);
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;
-            panel.Controls.Add(fh);
-            panel.Tag = fh;
-            fh.Show();
-        }
-        private void mostrarlogo()
-        {
-            AbrirFormInPanel(new PL.Disply_FORM(), null);
-        }
-        private void mostrarlogoAlCerrarForm(object sender, FormClosedEventArgs e)
-        {
-            mostrarlogo();
-        }
-
-        protected override void WndProc(ref Message msj)
-        {
-            const int CoordenadaWFP = 0x84; //ibicacion de la parte derecha inferior del form
-            const int DesIzquierda = 16;
-            const int DesDerecha = 17;
-            if (msj.Msg == CoordenadaWFP)
-            {
-                int x = (int)(msj.LParam.ToInt64() & 0xFFFF);
-                int y = (int)((msj.LParam.ToInt64() & 0xFFFF0000) >> 16);
-                Point CoordenadaArea = PointToClient(new Point(x, y));
-                Size TamañoAreaForm = ClientSize;
-                if (CoordenadaArea.X >= TamañoAreaForm.Width - 16 && CoordenadaArea.Y >= TamañoAreaForm.Height - 16 && TamañoAreaForm.Height >= 16)
-                {
-                    msj.Result = (IntPtr)(IsMirrored ? DesIzquierda : DesDerecha);
-                    return;
-                }
-            }
-            base.WndProc(ref msj);
-        }
-
-
-
-
         public Finance_Authority()
         {
             InitializeComponent();
@@ -82,9 +32,16 @@ namespace Finance_Authority.PL
         private void MetroToggle1_CheckedChanged(object sender, EventArgs e)
         {
             if (metroStyleManager1.Theme == MetroFramework.MetroThemeStyle.Light)
+            {
                 metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+                Program.theme = 0;
+            }
             else
+            { 
                 metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
+                Program.theme = 1;
+
+            }
         }
 
         private void MetroTrackBar1_ValueChanged(object sender, EventArgs e)
@@ -93,24 +50,30 @@ namespace Finance_Authority.PL
             {
                 case 0:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Red;
+                    Program.style = 0;
                     break;
                 case 1:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Orange;
+                    Program.style = 1;
                     break;
                 case 2:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Pink;
+                    Program.style = 2;
                     break;
                 case 3:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Magenta;
+                    Program.style = 3;
                     break;
                 case 4:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Purple;
+                    Program.style = 4;
                     break;
                 case 5:
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Yellow;
+                    Program.style = 5;
                     break;
                 default:
-                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Blue;
                     break;
             }
         }

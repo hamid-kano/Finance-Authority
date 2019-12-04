@@ -15,6 +15,7 @@ namespace Finance_Authority.PL
         public Document_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
         }
     }
 }

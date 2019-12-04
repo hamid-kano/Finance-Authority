@@ -22,6 +22,8 @@ namespace Finance_Authority
         public static int Reciver_Document_id;
         public static int Payment_Document_id;
         public static int Employee_id;
+        public static int Employee_Description_id;
+        public static int Contracts_id;
         /// </summary>
         [STAThread]
         static void Main()

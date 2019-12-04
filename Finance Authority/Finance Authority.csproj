@@ -61,6 +61,7 @@
     <Compile Include="BL\Authority.cs" />
     <Compile Include="BL\CLS_Budget.cs" />
     <Compile Include="BL\CLS_Coin_Exchange.cs" />
+    <Compile Include="BL\CLS_Contracts.cs" />
     <Compile Include="BL\CLS_Document_Category.cs" />
     <Compile Include="BL\CLS_Employee.cs" />
     <Compile Include="BL\CLS_Employee_Description.cs" />

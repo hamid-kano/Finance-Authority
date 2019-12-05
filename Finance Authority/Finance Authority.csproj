@@ -59,14 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Authority.cs" />
+    <Compile Include="BL\CLS_Bill.cs" />
     <Compile Include="BL\CLS_Budget.cs" />
     <Compile Include="BL\CLS_Coin_Exchange.cs" />
     <Compile Include="BL\CLS_Contracts.cs" />
     <Compile Include="BL\CLS_Document_Category.cs" />
+    <Compile Include="BL\CLS_Emission_Salaries.cs" />
     <Compile Include="BL\CLS_Employee.cs" />
     <Compile Include="BL\CLS_Employee_Description.cs" />
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
     <Compile Include="BL\CLS_Exchange_Order.cs" />
+    <Compile Include="BL\CLS_Loan.cs" />
     <Compile Include="BL\CLS_Payment_Document.cs" />
     <Compile Include="BL\CLS_Reciver_Document.cs" />
     <Compile Include="BL\CLS_Role_Functional.cs" />

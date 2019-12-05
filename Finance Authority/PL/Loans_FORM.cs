@@ -16,5 +16,10 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
         }
+
+        private void Loans_FORM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

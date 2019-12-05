@@ -24,6 +24,8 @@ namespace Finance_Authority
         public static int Employee_id;
         public static int Employee_Description_id;
         public static int Contracts_id;
+        public static int Emission_Salaries_id;
+        public static int Bill_id;
         /// </summary>
         /// 
         public static int theme;

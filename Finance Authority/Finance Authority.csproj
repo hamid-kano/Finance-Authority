@@ -339,10 +339,17 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\الصندوق المالي.png" />
+    <None Include="Resources\تحويل مالي.png" />
+    <None Include="Resources\حسابي.png" />
+    <None Include="Resources\سند قبض.png" />
+    <None Include="Resources\تسليم الرواتب.png" />
+    <None Include="Resources\سند دفع.png" />
+    <None Include="Resources\العاملين.png" />
+    <None Include="Resources\الفواتير.png" />
     <None Include="Resources\استعادة النسخ الاحتياطي.png" />
     <None Include="Resources\نشاطات المستخدمين.png" />
     <None Include="Resources\نسخ احتياطي.png" />
-    <None Include="Resources\حسابي.png" />
     <None Include="Resources\اللغة.png" />
     <None Include="Resources\الرئيسية.png" />
     <None Include="Resources\الدعم الفني.png" />

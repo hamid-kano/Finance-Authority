@@ -29,128 +29,143 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.Authority_exit = new MetroFramework.Controls.MetroButton();
-            this.Authority_delete = new MetroFramework.Controls.MetroButton();
-            this.Authority_update = new MetroFramework.Controls.MetroButton();
-            this.Authority_add = new MetroFramework.Controls.MetroButton();
-            this.Authority_new = new MetroFramework.Controls.MetroButton();
-            this.Authority_Gridview = new MetroFramework.Controls.MetroGrid();
+            this.Loans_Fexit = new MetroFramework.Controls.MetroButton();
+            this.Loans_delete = new MetroFramework.Controls.MetroButton();
+            this.Loans_update = new MetroFramework.Controls.MetroButton();
+            this.Loans_add = new MetroFramework.Controls.MetroButton();
+            this.Loans_new = new MetroFramework.Controls.MetroButton();
+            this.Loans_Gridview = new MetroFramework.Controls.MetroGrid();
             this.label3 = new System.Windows.Forms.Label();
-            this.Authority_Notes = new System.Windows.Forms.TextBox();
+            this.Loans_Notes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Authority_Name = new System.Windows.Forms.TextBox();
+            this.Loans_Amont = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Loans_Date = new MetroFramework.Controls.MetroDateTime();
+            this.Loans_Date_Start = new MetroFramework.Controls.MetroDateTime();
+            this.Loans_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Loans_Comb_Department = new MetroFramework.Controls.MetroComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Loans_Comb_Employ = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authority_Gridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
             // 
-            // Authority_exit
+            // Loans_Fexit
             // 
-            this.Authority_exit.Highlight = true;
-            this.Authority_exit.Location = new System.Drawing.Point(818, 479);
-            this.Authority_exit.Name = "Authority_exit";
-            this.Authority_exit.Size = new System.Drawing.Size(87, 37);
-            this.Authority_exit.TabIndex = 55;
-            this.Authority_exit.Text = "خروج";
-            this.Authority_exit.UseSelectable = true;
+            this.Loans_Fexit.Highlight = true;
+            this.Loans_Fexit.Location = new System.Drawing.Point(818, 479);
+            this.Loans_Fexit.Name = "Loans_Fexit";
+            this.Loans_Fexit.Size = new System.Drawing.Size(87, 37);
+            this.Loans_Fexit.TabIndex = 55;
+            this.Loans_Fexit.Text = "خروج";
+            this.Loans_Fexit.UseSelectable = true;
+            this.Loans_Fexit.Click += new System.EventHandler(this.Loans_Fexit_Click);
             // 
-            // Authority_delete
+            // Loans_delete
             // 
-            this.Authority_delete.Enabled = false;
-            this.Authority_delete.Highlight = true;
-            this.Authority_delete.Location = new System.Drawing.Point(706, 479);
-            this.Authority_delete.Name = "Authority_delete";
-            this.Authority_delete.Size = new System.Drawing.Size(87, 37);
-            this.Authority_delete.TabIndex = 54;
-            this.Authority_delete.Text = "حذف";
-            this.Authority_delete.UseSelectable = true;
+            this.Loans_delete.Enabled = false;
+            this.Loans_delete.Highlight = true;
+            this.Loans_delete.Location = new System.Drawing.Point(706, 479);
+            this.Loans_delete.Name = "Loans_delete";
+            this.Loans_delete.Size = new System.Drawing.Size(87, 37);
+            this.Loans_delete.TabIndex = 54;
+            this.Loans_delete.Text = "حذف";
+            this.Loans_delete.UseSelectable = true;
+            this.Loans_delete.Click += new System.EventHandler(this.Loans_delete_Click);
             // 
-            // Authority_update
+            // Loans_update
             // 
-            this.Authority_update.Enabled = false;
-            this.Authority_update.Highlight = true;
-            this.Authority_update.Location = new System.Drawing.Point(594, 479);
-            this.Authority_update.Name = "Authority_update";
-            this.Authority_update.Size = new System.Drawing.Size(87, 37);
-            this.Authority_update.TabIndex = 53;
-            this.Authority_update.Text = "تعديل";
-            this.Authority_update.UseSelectable = true;
+            this.Loans_update.Enabled = false;
+            this.Loans_update.Highlight = true;
+            this.Loans_update.Location = new System.Drawing.Point(594, 479);
+            this.Loans_update.Name = "Loans_update";
+            this.Loans_update.Size = new System.Drawing.Size(87, 37);
+            this.Loans_update.TabIndex = 53;
+            this.Loans_update.Text = "تعديل";
+            this.Loans_update.UseSelectable = true;
+            this.Loans_update.Click += new System.EventHandler(this.Loans_update_Click);
             // 
-            // Authority_add
+            // Loans_add
             // 
-            this.Authority_add.Enabled = false;
-            this.Authority_add.Highlight = true;
-            this.Authority_add.Location = new System.Drawing.Point(482, 479);
-            this.Authority_add.Name = "Authority_add";
-            this.Authority_add.Size = new System.Drawing.Size(87, 37);
-            this.Authority_add.TabIndex = 52;
-            this.Authority_add.Text = "أضافة";
-            this.Authority_add.UseSelectable = true;
+            this.Loans_add.Enabled = false;
+            this.Loans_add.Highlight = true;
+            this.Loans_add.Location = new System.Drawing.Point(482, 479);
+            this.Loans_add.Name = "Loans_add";
+            this.Loans_add.Size = new System.Drawing.Size(87, 37);
+            this.Loans_add.TabIndex = 52;
+            this.Loans_add.Text = "أضافة";
+            this.Loans_add.UseSelectable = true;
+            this.Loans_add.Click += new System.EventHandler(this.Loans_add_Click);
             // 
-            // Authority_new
+            // Loans_new
             // 
-            this.Authority_new.Highlight = true;
-            this.Authority_new.Location = new System.Drawing.Point(370, 479);
-            this.Authority_new.Name = "Authority_new";
-            this.Authority_new.Size = new System.Drawing.Size(87, 37);
-            this.Authority_new.TabIndex = 51;
-            this.Authority_new.Text = "جديد";
-            this.Authority_new.UseSelectable = true;
+            this.Loans_new.Highlight = true;
+            this.Loans_new.Location = new System.Drawing.Point(370, 479);
+            this.Loans_new.Name = "Loans_new";
+            this.Loans_new.Size = new System.Drawing.Size(87, 37);
+            this.Loans_new.TabIndex = 51;
+            this.Loans_new.Text = "جديد";
+            this.Loans_new.UseSelectable = true;
+            this.Loans_new.Click += new System.EventHandler(this.Loans_new_Click);
             // 
-            // Authority_Gridview
+            // Loans_Gridview
             // 
-            this.Authority_Gridview.AllowUserToAddRows = false;
-            this.Authority_Gridview.AllowUserToDeleteRows = false;
-            this.Authority_Gridview.AllowUserToResizeRows = false;
-            this.Authority_Gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Authority_Gridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Authority_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.Authority_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Authority_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.Authority_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Authority_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Authority_Gridview.EnableHeadersVisualStyles = false;
-            this.Authority_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Authority_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Authority_Gridview.Location = new System.Drawing.Point(324, 63);
-            this.Authority_Gridview.Name = "Authority_Gridview";
-            this.Authority_Gridview.ReadOnly = true;
-            this.Authority_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Authority_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.Authority_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.Authority_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Authority_Gridview.Size = new System.Drawing.Size(624, 404);
-            this.Authority_Gridview.TabIndex = 50;
+            this.Loans_Gridview.AllowUserToAddRows = false;
+            this.Loans_Gridview.AllowUserToDeleteRows = false;
+            this.Loans_Gridview.AllowUserToResizeRows = false;
+            this.Loans_Gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Loans_Gridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Loans_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Loans_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Loans_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Loans_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Loans_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Loans_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Loans_Gridview.EnableHeadersVisualStyles = false;
+            this.Loans_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Loans_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Loans_Gridview.Location = new System.Drawing.Point(324, 63);
+            this.Loans_Gridview.Name = "Loans_Gridview";
+            this.Loans_Gridview.ReadOnly = true;
+            this.Loans_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Loans_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Loans_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Loans_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Loans_Gridview.Size = new System.Drawing.Size(624, 404);
+            this.Loans_Gridview.TabIndex = 50;
+            this.Loans_Gridview.Click += new System.EventHandler(this.Loans_Gridview_Click);
             // 
             // label3
             // 
@@ -162,13 +177,13 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "الملاحظات";
             // 
-            // Authority_Notes
+            // Loans_Notes
             // 
-            this.Authority_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Authority_Notes.Location = new System.Drawing.Point(83, 135);
-            this.Authority_Notes.Name = "Authority_Notes";
-            this.Authority_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Authority_Notes.TabIndex = 48;
+            this.Loans_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loans_Notes.Location = new System.Drawing.Point(127, 135);
+            this.Loans_Notes.Name = "Loans_Notes";
+            this.Loans_Notes.Size = new System.Drawing.Size(163, 23);
+            this.Loans_Notes.TabIndex = 48;
             // 
             // label2
             // 
@@ -180,13 +195,13 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "المبلغ";
             // 
-            // Authority_Name
+            // Loans_Amont
             // 
-            this.Authority_Name.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Authority_Name.Location = new System.Drawing.Point(83, 90);
-            this.Authority_Name.Name = "Authority_Name";
-            this.Authority_Name.Size = new System.Drawing.Size(163, 23);
-            this.Authority_Name.TabIndex = 46;
+            this.Loans_Amont.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loans_Amont.Location = new System.Drawing.Point(127, 90);
+            this.Loans_Amont.Name = "Loans_Amont";
+            this.Loans_Amont.Size = new System.Drawing.Size(163, 23);
+            this.Loans_Amont.TabIndex = 46;
             // 
             // label1
             // 
@@ -202,29 +217,117 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 230);
+            this.label4.Location = new System.Drawing.Point(9, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 16);
             this.label4.TabIndex = 57;
             this.label4.Text = "تاريخ بداية الحساب";
+            // 
+            // Loans_Date
+            // 
+            this.Loans_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Loans_Date.Location = new System.Drawing.Point(127, 184);
+            this.Loans_Date.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Loans_Date.Name = "Loans_Date";
+            this.Loans_Date.Size = new System.Drawing.Size(163, 29);
+            this.Loans_Date.TabIndex = 58;
+            // 
+            // Loans_Date_Start
+            // 
+            this.Loans_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Loans_Date_Start.Location = new System.Drawing.Point(127, 230);
+            this.Loans_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Loans_Date_Start.Name = "Loans_Date_Start";
+            this.Loans_Date_Start.Size = new System.Drawing.Size(163, 29);
+            this.Loans_Date_Start.TabIndex = 59;
+            // 
+            // Loans_Comb_Budget
+            // 
+            this.Loans_Comb_Budget.FormattingEnabled = true;
+            this.Loans_Comb_Budget.ItemHeight = 23;
+            this.Loans_Comb_Budget.Location = new System.Drawing.Point(127, 279);
+            this.Loans_Comb_Budget.Name = "Loans_Comb_Budget";
+            this.Loans_Comb_Budget.Size = new System.Drawing.Size(163, 29);
+            this.Loans_Comb_Budget.TabIndex = 60;
+            this.Loans_Comb_Budget.UseSelectable = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 292);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "تاريخ الميزانية";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 344);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 16);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "الأقسام";
+            // 
+            // Loans_Comb_Department
+            // 
+            this.Loans_Comb_Department.FormattingEnabled = true;
+            this.Loans_Comb_Department.ItemHeight = 23;
+            this.Loans_Comb_Department.Location = new System.Drawing.Point(127, 331);
+            this.Loans_Comb_Department.Name = "Loans_Comb_Department";
+            this.Loans_Comb_Department.Size = new System.Drawing.Size(163, 29);
+            this.Loans_Comb_Department.TabIndex = 62;
+            this.Loans_Comb_Department.UseSelectable = true;
+           
+            this.Loans_Comb_Department.SelectedValueChanged += new System.EventHandler(this.Loans_Comb_Department_SelectedValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 391);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 16);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "الموظفين";
+            // 
+            // Loans_Comb_Employ
+            // 
+            this.Loans_Comb_Employ.FormattingEnabled = true;
+            this.Loans_Comb_Employ.ItemHeight = 23;
+            this.Loans_Comb_Employ.Location = new System.Drawing.Point(127, 378);
+            this.Loans_Comb_Employ.Name = "Loans_Comb_Employ";
+            this.Loans_Comb_Employ.Size = new System.Drawing.Size(163, 29);
+            this.Loans_Comb_Employ.TabIndex = 64;
+            this.Loans_Comb_Employ.UseSelectable = true;
             // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 539);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Loans_Comb_Employ);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Loans_Comb_Department);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Loans_Comb_Budget);
+            this.Controls.Add(this.Loans_Date_Start);
+            this.Controls.Add(this.Loans_Date);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Authority_exit);
-            this.Controls.Add(this.Authority_delete);
-            this.Controls.Add(this.Authority_update);
-            this.Controls.Add(this.Authority_add);
-            this.Controls.Add(this.Authority_new);
-            this.Controls.Add(this.Authority_Gridview);
+            this.Controls.Add(this.Loans_Fexit);
+            this.Controls.Add(this.Loans_delete);
+            this.Controls.Add(this.Loans_update);
+            this.Controls.Add(this.Loans_add);
+            this.Controls.Add(this.Loans_new);
+            this.Controls.Add(this.Loans_Gridview);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Authority_Notes);
+            this.Controls.Add(this.Loans_Notes);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Authority_Name);
+            this.Controls.Add(this.Loans_Amont);
             this.Name = "Loans_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -232,7 +335,7 @@
             this.Text = "القروض";
             this.Load += new System.EventHandler(this.Loans_FORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authority_Gridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,17 +344,25 @@
         #endregion
 
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
-        private MetroFramework.Controls.MetroButton Authority_exit;
-        private MetroFramework.Controls.MetroButton Authority_delete;
-        private MetroFramework.Controls.MetroButton Authority_update;
-        private MetroFramework.Controls.MetroButton Authority_add;
-        private MetroFramework.Controls.MetroButton Authority_new;
-        private MetroFramework.Controls.MetroGrid Authority_Gridview;
+        private MetroFramework.Controls.MetroButton Loans_Fexit;
+        private MetroFramework.Controls.MetroButton Loans_delete;
+        private MetroFramework.Controls.MetroButton Loans_update;
+        private MetroFramework.Controls.MetroButton Loans_add;
+        private MetroFramework.Controls.MetroButton Loans_new;
+        private MetroFramework.Controls.MetroGrid Loans_Gridview;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Authority_Notes;
+        private System.Windows.Forms.TextBox Loans_Notes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Authority_Name;
+        private System.Windows.Forms.TextBox Loans_Amont;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroDateTime Loans_Date;
+        private MetroFramework.Controls.MetroDateTime Loans_Date_Start;
+        private MetroFramework.Controls.MetroComboBox Loans_Comb_Budget;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroComboBox Loans_Comb_Department;
+        private System.Windows.Forms.Label label7;
+        private MetroFramework.Controls.MetroComboBox Loans_Comb_Employ;
     }
 }

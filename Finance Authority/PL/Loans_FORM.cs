@@ -12,14 +12,133 @@ namespace Finance_Authority.PL
 {
     public partial class Loans_FORM : MetroFramework.Forms.MetroForm
     {
+        BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
+        BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
+        BL.CLS_Loan Loa = new BL.CLS_Loan();
+        BL.CLS_Contracts cont = new BL.CLS_Contracts();
         public Loans_FORM()
         {
             InitializeComponent();
+            this.Loans_Gridview.DataSource = Loa.Loans_View();
+            Loans_Gridview.Columns[0].Visible = false;
+            Loans_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
+            Loans_Comb_Department.DisplayMember = "Department_Name";
+            Loans_Comb_Department.ValueMember = "Department_ID";
+            Loans_Comb_Budget.DataSource = Coin.Coin_Exchange_CombBudg();
+            Loans_Comb_Budget.DisplayMember = "Date";
+            Loans_Comb_Budget.ValueMember = "Budget_Id";
         }
 
         private void Loans_FORM_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void Loans_Comb_Department_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Loans_Comb_Employ.DataSource = cont.Contracts_Comb_Employee(idDepartment);
+                Loans_Comb_Employ.DisplayMember = "fullName";
+                Loans_Comb_Employ.ValueMember = "Emp_id";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+      
+        private void Loans_new_Click(object sender, EventArgs e)
+        {
+            Loans_add.Enabled = true;
+            Loans_Amont.Text = "";
+            Loans_Notes.Text = "";
+            Loans_update.Enabled = false;
+            Loans_delete.Enabled = false;
+        }
+
+        private void Loans_add_Click(object sender, EventArgs e)
+        {
+            int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
+            int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
+            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
+            if (DT.Rows.Count > 0)
+            {
+                DataRow row = DT.Rows[0];
+                int id_EmployeeDEsS = Convert.ToInt32(row["Employee_Des_ID"]);
+                //MessageBox.Show(id_EmployeeDES.ToString());
+                //   bool Functunal_status = Contracts_end.Checked ? true : false;
+                Loa.Loans_add(Loans_Amont.Text , Loans_Notes.Text , Loans_Date.Value , Loans_Date_Start.Value , Convert.ToInt32(Loans_Comb_Budget.SelectedValue) , id_EmployeeDEsS);
+                this.Loans_Gridview.DataSource = Loa.Loans_View();
+                Loans_Gridview.Columns[0].Visible = false;
+                Loans_Amont.Text = "";
+                Loans_Notes.Text = "";
+                Loans_update.Enabled = false;
+                Loans_delete.Enabled = false;
+
+            }
+
+        }
+
+        private void Loans_Gridview_Click(object sender, EventArgs e)
+        {
+            if (Loans_Gridview.CurrentRow != null)
+            {
+                Program.Loan_id = Convert.ToInt32(this.Loans_Gridview.CurrentRow.Cells[0].Value.ToString());
+                Loans_Amont.Text = this.Loans_Gridview.CurrentRow.Cells[1].Value.ToString();
+                Loans_Notes.Text = this.Loans_Gridview.CurrentRow.Cells[2].Value.ToString();
+                Loans_Date.Text = this.Loans_Gridview.CurrentRow.Cells[3].Value.ToString();
+                Loans_Date_Start.Text = this.Loans_Gridview.CurrentRow.Cells[4].Value.ToString();
+                Loans_Comb_Department.Text = this.Loans_Gridview.CurrentRow.Cells[7].Value.ToString();
+                Loans_Comb_Employ.Text = this.Loans_Gridview.CurrentRow.Cells[6].Value.ToString();
+                Loans_update.Enabled = true;
+                Loans_delete.Enabled = true;
+            }
+        }
+
+        private void Loans_update_Click(object sender, EventArgs e)
+        {
+            int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
+            int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
+            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
+            if (DT.Rows.Count > 0)
+            {
+                DataRow row = DT.Rows[0];
+                int id_EmployeeDEsS = Convert.ToInt32(row["Employee_Des_ID"]);
+                //MessageBox.Show(id_EmployeeDES.ToString());
+                //   bool Functunal_status = Contracts_end.Checked ? true : false;
+                Loa.Loans_update(Loans_Amont.Text, Loans_Notes.Text, Loans_Date.Value, Loans_Date_Start.Value, Convert.ToInt32(Loans_Comb_Budget.SelectedValue), id_EmployeeDEsS , Program.Loan_id);
+                this.Loans_Gridview.DataSource = Loa.Loans_View();
+                Loans_Gridview.Columns[0].Visible = false;
+                Loans_Amont.Text = "";
+                Loans_Notes.Text = "";
+                Loans_update.Enabled = false;
+                Loans_delete.Enabled = false;
+
+            }
+        }
+
+        private void Loans_Fexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Loans_delete_Click(object sender, EventArgs e)
+        {
+            Loa.Loans_Delete(Program.Loan_id);
+            this.Loans_Gridview.DataSource = Loa.Loans_View();
+            Loans_Gridview.Columns[0].Visible = false;
+            Loans_Amont.Text = "";
+            Loans_Notes.Text = "";
+            Loans_update.Enabled = false;
+            Loans_delete.Enabled = false;
+        }
+
+       
     }
 }

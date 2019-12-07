@@ -22,7 +22,9 @@ namespace Finance_Authority.PL
             Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Contracts_Comb_Department.DisplayMember = "Department_Name";
             Contracts_Comb_Department.ValueMember = "Department_ID";
-          
+            Contracts_Comb_Contract_statue.SelectedIndex = 0;
+
+
         }
 
         private void Contracts_new_Click(object sender, EventArgs e)
@@ -69,8 +71,8 @@ namespace Finance_Authority.PL
                 DataRow row = DT.Rows[0];
                 int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
                 //MessageBox.Show(id_EmployeeDES.ToString());
-                bool Functunal_status = Contracts_end.Checked ? true : false;
-                cont.Contracts_add(Contracts_Type.Text , Contracts_Date_Start.Value , Contracts_Date_end.Value, Functunal_status
+             //   bool Functunal_status = Contracts_end.Checked ? true : false;
+                cont.Contracts_add(Contracts_Type.Text , Contracts_Date_Start.Value , Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
                      , Contracts_Notes.Text, id_EmployeeDES );
                 this.Contracts_Gridview.DataSource = cont.Contracts_View();
                 Contracts_Gridview.Columns[0].Visible = false;
@@ -93,8 +95,9 @@ namespace Finance_Authority.PL
                 Contracts_Comb_Employee.Text = this.Contracts_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Contracts_Comb_Department.Text = this.Contracts_Gridview.CurrentRow.Cells[7].Value.ToString();
                 Contracts_Notes.Text = this.Contracts_Gridview.CurrentRow.Cells[5].Value.ToString();
-                Contracts_end.Checked = Convert.ToBoolean(this.Contracts_Gridview.CurrentRow.Cells[4].Value) ? true : false;
-                Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
+                Contracts_Comb_Contract_statue.Text= this.Contracts_Gridview.CurrentRow.Cells[4].Value.ToString();
+                //Contracts_end.Checked = Convert.ToBoolean(this.Contracts_Gridview.CurrentRow.Cells[4].Value) ? true : false;
+                //Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
                 Contracts_update.Enabled = true;
                 Contracts_delete.Enabled = true;
             }
@@ -111,7 +114,7 @@ namespace Finance_Authority.PL
                 int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
                 //MessageBox.Show(id_EmployeeDES.ToString());
                // bool Functunal_status = Contracts_end.Checked ? true : false;
-                cont.Contracts_update(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_end.Checked
+                cont.Contracts_update(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
                      , Contracts_Notes.Text, id_EmployeeDES, Program.Contracts_id);
                 this.Contracts_Gridview.DataSource = cont.Contracts_View();
                 Contracts_Gridview.Columns[0].Visible = false;

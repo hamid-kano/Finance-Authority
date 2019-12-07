@@ -82,6 +82,22 @@ namespace Finance_Authority
 
         }
 
+        public static void Add_Message()
+        {
+            MessageBox.Show("تمت عملية الاضافة بنجاح", "الاضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static void Update_Message()
+        {
+            MessageBox.Show("تمت عملية التعديل بنجاح", "التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static void Delete_Message() 
+        {
+            MessageBox.Show("تمت عملية الحذف بنجاح", "الحذف", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static DialogResult Delete_Confirm_Message()
+        {
+            return MessageBox.Show("هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+        }
 
     }
 }

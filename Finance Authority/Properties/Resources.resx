@@ -130,14 +130,35 @@
   <data name="الرئيسية" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الرئيسية.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="الصندوق_المالي" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الصندوق المالي.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="العاملين" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\العاملين.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="العمليات" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\العمليات.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="الفواتير" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الفواتير.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="اللغة" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\اللغة.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="تحويل_مالي" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\تحويل مالي.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="تسليم_الرواتب" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\تسليم الرواتب.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="حسابي" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\حسابي.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="سند_دفع" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\سند دفع.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="سند_قبض" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\سند قبض.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="نسخ_احتياطي" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\نسخ احتياطي.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

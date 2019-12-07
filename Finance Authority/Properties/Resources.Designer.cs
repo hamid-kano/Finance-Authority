@@ -103,9 +103,39 @@ namespace Finance_Authority.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap الصندوق_المالي {
+            get {
+                object obj = ResourceManager.GetObject("الصندوق_المالي", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap العاملين {
+            get {
+                object obj = ResourceManager.GetObject("العاملين", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap العمليات {
             get {
                 object obj = ResourceManager.GetObject("العمليات", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الفواتير {
+            get {
+                object obj = ResourceManager.GetObject("الفواتير", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,49 @@ namespace Finance_Authority.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap تحويل_مالي {
+            get {
+                object obj = ResourceManager.GetObject("تحويل_مالي", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap تسليم_الرواتب {
+            get {
+                object obj = ResourceManager.GetObject("تسليم_الرواتب", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap حسابي {
             get {
                 object obj = ResourceManager.GetObject("حسابي", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap سند_دفع {
+            get {
+                object obj = ResourceManager.GetObject("سند_دفع", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap سند_قبض {
+            get {
+                object obj = ResourceManager.GetObject("سند_قبض", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

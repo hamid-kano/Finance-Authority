@@ -41,9 +41,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 Doc.Document_Category_add(Document_Category_Name.Text);
-                MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
                 this.Document_Category_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Document_Category_add.Enabled = false;
                 Document_Category_Name.Text = "";
             }
@@ -69,9 +69,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || Document_Category_Name.Text == this.Document_Category_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Doc.Document_Category_update(Program.Category_id_id, Document_Category_Name.Text);
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
                 this.Document_Category_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Document_Category_Name.Text = "";
                 Document_Category_update.Enabled = false;
                 Document_Category_delete.Enabled = false;

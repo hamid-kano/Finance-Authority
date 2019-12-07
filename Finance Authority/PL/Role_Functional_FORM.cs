@@ -47,9 +47,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 Role.Role_Functional_add(Role_Functional_Name.Text, Role_Functional_Notes.Text);
-                MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
                 Role_Functional_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Role_Functional_Name.Text = "";
                 Role_Functional_Notes.Text = "";
                 Role_Functional_add.Enabled = false;
@@ -88,9 +88,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || Role_Functional_Name.Text== this.Role_Functional_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Role.Role_Functional_update(Program.Role_Functional_id, Role_Functional_Name.Text, Role_Functional_Notes.Text);
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
                 Role_Functional_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Role_Functional_Name.Text = "";
                 Role_Functional_Notes.Text = "";
                 Role_Functional_update.Enabled = false;

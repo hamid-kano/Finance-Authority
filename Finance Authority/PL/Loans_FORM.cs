@@ -76,6 +76,7 @@ namespace Finance_Authority.PL
                 Loa.Loans_add(Loans_Amont.Text , Loans_Notes.Text , Loans_Date.Value , Loans_Date_Start.Value , Convert.ToInt32(Loans_Comb_Budget.SelectedValue) , id_EmployeeDEsS);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
@@ -115,6 +116,7 @@ namespace Finance_Authority.PL
                 Loa.Loans_update(Loans_Amont.Text, Loans_Notes.Text, Loans_Date.Value, Loans_Date_Start.Value, Convert.ToInt32(Loans_Comb_Budget.SelectedValue), id_EmployeeDEsS , Program.Loan_id);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;

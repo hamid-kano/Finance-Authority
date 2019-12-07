@@ -44,6 +44,7 @@ namespace Finance_Authority.PL
             Emiss.Emission_Salaries_add(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue) , Emission_Salaries_Date.Value , Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue));
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
+            Program.Add_Message();
             Emission_Salaries_add.Enabled = false;
         }
 
@@ -52,6 +53,7 @@ namespace Finance_Authority.PL
             Emiss.Emission_Salaries_update(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue), Program.Emission_Salaries_id);
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
+            Program.Update_Message();
             Emission_Salaries_update.Enabled = false;
             Emission_Salaries_delete.Enabled = false;
         }

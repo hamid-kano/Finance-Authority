@@ -47,12 +47,12 @@ namespace Finance_Authority.PL
             Dt = cat.EX_Orders_Cat_Cheack(EX_Orders_Cat_text1.Text);
             if (Dt.Rows.Count == 0)
             {
-                cat.EX_Orders_Cat_add(EX_Orders_Cat_text1.Text);
+                cat.EX_Orders_Cat_add(EX_Orders_Cat_text1.Text);  
+                this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
+                EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EX_Orders_Cat_text1.Text = "";
                 EX_Orders_Cat_add.Enabled = false;
-                this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
-                EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
             }
             else
             {
@@ -82,10 +82,10 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || EX_Orders_Cat_text1.Text==this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[1].Value.ToString())
             {
                 cat.EX_Orders_Cat_update(Program.Category_id, EX_Orders_Cat_text1.Text);
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                EX_Orders_Cat_text1.Text = "";
                 this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
                 EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
+                Program.Update_Message();
+                EX_Orders_Cat_text1.Text = "";
             }
             else
             {

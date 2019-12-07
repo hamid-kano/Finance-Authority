@@ -71,6 +71,7 @@ namespace Finance_Authority.PL
                Bill_Total.Text , Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text ,Convert.ToInt32(Bills_Comb_Budget.SelectedValue) , Convert.ToInt32(Bills_Comb_Department.SelectedValue));
             this.Bills_dataGrid.DataSource = Bil.Bill_View();
             Bills_dataGrid.Columns[0].Visible = false;
+            Program.Add_Message();
             Bills_add.Enabled = false;
             Bills_Buyer_Name.Text = "";
             Bills_Coin_Type.Text = "";
@@ -87,6 +88,7 @@ namespace Finance_Authority.PL
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , Program.Bill_id);
             this.Bills_dataGrid.DataSource = Bil.Bill_View();
             Bills_dataGrid.Columns[0].Visible = false;
+            Program.Update_Message();
             Bills_update.Enabled = false;
             Bills_delete.Enabled = false;
             Bills_Buyer_Name.Text = "";

@@ -76,6 +76,7 @@ namespace Finance_Authority.PL
                      , Contracts_Notes.Text, id_EmployeeDES );
                 this.Contracts_Gridview.DataSource = cont.Contracts_View();
                 Contracts_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Contracts_Type.Text = "";
                 Contracts_Notes.Text = "";
                 Contracts_add.Enabled = false;
@@ -118,6 +119,7 @@ namespace Finance_Authority.PL
                      , Contracts_Notes.Text, id_EmployeeDES, Program.Contracts_id);
                 this.Contracts_Gridview.DataSource = cont.Contracts_View();
                 Contracts_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Contracts_Type.Text = "";
                 Contracts_Notes.Text = "";
                 Contracts_add.Enabled = false;

@@ -66,6 +66,7 @@ namespace Finance_Authority.PL
             Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text , Coin_Exchange_rate.Text , Coin_Exchange_Date.Value , Coin_Exchange_Notes.Text,Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue));
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
+            Program.Add_Message();
             Coin_Exchange_Sy.Text = "";
             Coin_Exchange_Dollar.Text = "";
             Coin_Exchange_rate.Text = "";
@@ -78,6 +79,7 @@ namespace Finance_Authority.PL
             Coin.Coin_Exchange_update(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue), Program.Coin_Exchange_id);
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
+            Program.Update_Message();
             Coin_Exchange_Sy.Text = "";
             Coin_Exchange_Dollar.Text = "";
             Coin_Exchange_rate.Text = "";

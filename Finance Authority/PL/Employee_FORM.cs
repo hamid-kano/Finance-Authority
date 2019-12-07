@@ -52,9 +52,9 @@ namespace Finance_Authority.PL
                 , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                 , Employee_No_Financial.Text, Employee_No_Affairs.Text , Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
                 , Employee_Marital_status.Text, Employee_Pr_Service_Years.Text);
-            MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Employee_dataGrid.DataSource = Emp.Employee_View();
             Employee_dataGrid.Columns[0].Visible = false;
+            Program.Add_Message();
             Employee_First_Name.Text = "";
             Employee_Father_Name.Text = "";
             Employee_Last_Name.Text = "";
@@ -78,9 +78,9 @@ namespace Finance_Authority.PL
                , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
                , Employee_Marital_status.Text, Employee_Pr_Service_Years.Text, Program.Employee_id);
-            MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Employee_dataGrid.DataSource = Emp.Employee_View();
             Employee_dataGrid.Columns[0].Visible = false;
+            Program.Update_Message();
             Employee_First_Name.Text = "";
             Employee_Father_Name.Text = "";
             Employee_Last_Name.Text = "";

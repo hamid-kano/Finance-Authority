@@ -47,9 +47,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 Auth.Authority_add(Authority_Name.Text, Authority_Notes.Text);
-                MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Authority_Gridview.DataSource = Auth.Authority_view();
                 Authority_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Authority_Name.Text = "";
                 Authority_Notes.Text = "";
                 Authority_add.Enabled = false;
@@ -88,9 +88,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || Authority_Name.Text == this.Authority_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Auth.Authority_update(Program.Authority_ID, Authority_Name.Text, Authority_Notes.Text);
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Authority_Gridview.DataSource = Auth.Authority_view();
                 Authority_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Authority_Name.Text = "";
                 Authority_Notes.Text = "";
                 Authority_update.Enabled = false;
@@ -121,6 +121,11 @@ namespace Finance_Authority.PL
         {
             this.Authority_Gridview.DataSource = Auth.Authority_Search_Name(Authority_textsearch.Text);
             Authority_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Authority_FORM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

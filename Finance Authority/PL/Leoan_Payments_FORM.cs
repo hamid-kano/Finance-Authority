@@ -93,6 +93,7 @@ namespace Finance_Authority.PL
                 pay_Leo.Leoan_Payments_add(idLoans_ID,Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text , Leoan_Payments_Date.Value , Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue));
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
@@ -118,6 +119,7 @@ namespace Finance_Authority.PL
                 pay_Leo.Leoan_Payments_update(idLoans_ID, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;

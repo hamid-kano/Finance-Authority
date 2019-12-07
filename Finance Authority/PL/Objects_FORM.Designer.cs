@@ -59,6 +59,7 @@
             this.EX_Orders_dataGrid.AllowUserToResizeRows = false;
             this.EX_Orders_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EX_Orders_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EX_Orders_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EX_Orders_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EX_Orders_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -140,6 +141,7 @@
             this.EX_Orders_add.TabIndex = 43;
             this.EX_Orders_add.Text = "أضافة";
             this.EX_Orders_add.UseSelectable = true;
+            this.EX_Orders_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
             // 
             // EX_Orders_new
             // 

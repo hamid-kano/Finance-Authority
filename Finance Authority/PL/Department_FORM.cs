@@ -45,9 +45,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 Dep.Department_add(Department_Name.Text, Department_Notes.Text, Convert.ToInt32(Department_CombOffice.SelectedValue));
-                MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Department_Gridview.DataSource = Dep.Department_View();
                 this.Department_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
                 Department_add.Enabled = false;
@@ -79,9 +79,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || Department_Name.Text == this.Department_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Dep.Department_update(Convert.ToInt32(Department_CombOffice.SelectedValue), Department_Name.Text, Department_Notes.Text, Program.Department_ID);
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Department_Gridview.DataSource = Dep.Department_View();
                 this.Department_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
                 Department_update.Enabled = false;

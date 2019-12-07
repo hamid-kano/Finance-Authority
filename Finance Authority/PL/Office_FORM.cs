@@ -58,9 +58,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0 || Office_Name.Text== this.Office_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Offic.Office_update(Program.Office_ID, Office_Name.Text, Office_Notes.Text, Convert.ToInt32(Office_CombAuthontic.SelectedValue));
-                MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Office_Gridview.DataSource = Offic.Office_View();
                 this.Office_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
                 Office_Name.Text = "";
@@ -100,9 +100,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 Offic.Office_add(Office_Name.Text, Office_Notes.Text, Convert.ToInt32(Office_CombAuthontic.SelectedValue));
-                MessageBox.Show("تم الأضافة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Office_Gridview.DataSource = Offic.Office_View();
                 this.Office_Gridview.Columns[0].Visible = false;
+                Program.Add_Message();
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
                 Office_Name.Text = "";

@@ -77,6 +77,7 @@ namespace Finance_Authority.PL
                 Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32( Payment_Document_Comb_Cate.SelectedValue));
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+            Program.Add_Message();
             Payment_Document_sy.Text = "";
             Payment_Document_Dollar.Text = "";
             Payment_Document_rate.Text = "";
@@ -96,6 +97,7 @@ namespace Finance_Authority.PL
                Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue) , Program.Payment_Document_id);
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+            Program.Update_Message();
             Payment_Document_sy.Text = "";
             Payment_Document_Dollar.Text = "";
             Payment_Document_rate.Text = "";

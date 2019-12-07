@@ -59,9 +59,25 @@ namespace Finance_Authority.PL
                     , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
                     , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
                     , Empl_Sala_Insurances.Text , Empl_Sala_Files1.Text, Empl_Sala_Files2.Text,Convert.ToInt32(Empl_Sala_Comb_Date_Emiss.SelectedValue), id_EmployeeDES);
-                Program.Add_Message();
                 this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
                 Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                Program.Add_Message();
+                Empl_Sala_Dayes.Text = "";
+                Empl_Sala_Rem_cons.Text = "";
+                Empl_Sala_Absences.Text = "";
+                Empl_Sala_va_out_sal.Text = "";
+                Empl_Sala_Exam.Text = "";
+                Empl_Sala_Punishments.Text = "";
+                Empl_Sala_Loans.Text = "";
+                Empl_Sala_Taskes.Text = "";
+                Empl_Sala_Reparations.Text = "";
+                Empl_Sala_Years_Seniority.Text = "";
+                Empl_Sala_Total.Text = "";
+                Empl_Sala_after_Reb.Text = "";
+                Empl_Sala_Notes.Text = "";
+                Empl_Sala_Insurances.Text = "";
+                Empl_Sala_Files1.Text = "";
+                Empl_Sala_Files2.Text = "";
                 Employee_Salaries_add.Enabled = false;
 
             }
@@ -71,6 +87,22 @@ namespace Finance_Authority.PL
         private void Employee_Salaries_new_Click(object sender, EventArgs e)
         {
             Employee_Salaries_add.Enabled = true;
+            Empl_Sala_Dayes.Text = "";
+            Empl_Sala_Rem_cons.Text = "";
+            Empl_Sala_Absences.Text = "";
+            Empl_Sala_va_out_sal.Text = "";
+            Empl_Sala_Exam.Text = "";
+            Empl_Sala_Punishments.Text = "";
+            Empl_Sala_Loans.Text = "";
+            Empl_Sala_Taskes.Text = "";
+            Empl_Sala_Reparations.Text = "";
+            Empl_Sala_Years_Seniority.Text = "";
+            Empl_Sala_Total.Text = "";
+            Empl_Sala_after_Reb.Text = "";
+            Empl_Sala_Notes.Text = "";
+            Empl_Sala_Insurances.Text = "";
+            Empl_Sala_Files1.Text = "";
+            Empl_Sala_Files2.Text = "";
         }
 
         private void Employee_Salaries_update_Click(object sender, EventArgs e)
@@ -86,9 +118,25 @@ namespace Finance_Authority.PL
                     , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
                     , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
                     , Empl_Sala_Insurances.Text, Empl_Sala_Files1.Text, Empl_Sala_Files2.Text, Convert.ToInt32(Empl_Sala_Comb_Date_Emiss.SelectedValue), id_EmployeeDES, Program.Employee_Salaries_id);
-                Program.Add_Message();
                 this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
                 Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                Program.Update_Message();
+                Empl_Sala_Dayes.Text = "";
+                Empl_Sala_Rem_cons.Text = "";
+                Empl_Sala_Absences.Text = "";
+                Empl_Sala_va_out_sal.Text = "";
+                Empl_Sala_Exam.Text = "";
+                Empl_Sala_Punishments.Text = "";
+                Empl_Sala_Loans.Text = "";
+                Empl_Sala_Taskes.Text = "";
+                Empl_Sala_Reparations.Text = "";
+                Empl_Sala_Years_Seniority.Text = "";
+                Empl_Sala_Total.Text = "";
+                Empl_Sala_after_Reb.Text = "";
+                Empl_Sala_Notes.Text = "";
+                Empl_Sala_Insurances.Text = "";
+                Empl_Sala_Files1.Text = "";
+                Empl_Sala_Files2.Text = "";
                 Employee_Salaries_add.Enabled = false;
                 Employee_Salaries_update.Enabled = false;
                 Employee_Salaries_delete.Enabled = false;
@@ -129,8 +177,29 @@ namespace Finance_Authority.PL
             Empl_Sala.Employee_Salaries_Delete(Program.Employee_Salaries_id);
             this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            Empl_Sala_Dayes.Text = "";
+            Empl_Sala_Rem_cons.Text = "";
+            Empl_Sala_Absences.Text = "";
+            Empl_Sala_va_out_sal.Text = "";
+            Empl_Sala_Exam.Text = "";
+            Empl_Sala_Punishments.Text = "";
+            Empl_Sala_Loans.Text = "";
+            Empl_Sala_Taskes.Text = "";
+            Empl_Sala_Reparations.Text = "";
+            Empl_Sala_Years_Seniority.Text = "";
+            Empl_Sala_Total.Text = "";
+            Empl_Sala_after_Reb.Text = "";
+            Empl_Sala_Notes.Text = "";
+            Empl_Sala_Insurances.Text = "";
+            Empl_Sala_Files1.Text = "";
+            Empl_Sala_Files2.Text = "";
             Employee_Salaries_update.Enabled = false;
             Employee_Salaries_delete.Enabled = false;
+        }
+
+        private void Employee_Salaries_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

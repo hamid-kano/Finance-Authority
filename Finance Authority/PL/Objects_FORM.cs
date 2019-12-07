@@ -16,5 +16,10 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
         }
+
+        private void EX_Orders_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

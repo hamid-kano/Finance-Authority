@@ -37,9 +37,9 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 order.Exchange_Order_add(EX_Orders_order.Text, EX_Orders_DateTime.Value, EX_Orders_tosorce.Text, EX_Orders_Body_order.Text, EX_Orders_Notes.Text, Convert.ToInt32(EX_Orders_CombCategorise.SelectedValue));
-                MessageBox.Show("تم الأضافة", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
+                Program.Add_Message();
                 EX_Orders_order.Text = "";
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";
@@ -97,9 +97,9 @@ namespace Finance_Authority.PL
                
                
                order.Exchange_Order_update(Program.Exchange_Order_id, EX_Orders_order.Text, EX_Orders_DateTime.Value, EX_Orders_tosorce.Text, EX_Orders_Body_order.Text, EX_Orders_Notes.Text, Convert.ToInt32(EX_Orders_CombCategorise.SelectedValue));
-                MessageBox.Show("تم التحديث", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
+                Program.Update_Message();
                 EX_Orders_order.Text = "";
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";

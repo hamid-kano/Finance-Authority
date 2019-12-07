@@ -28,6 +28,7 @@ namespace Finance_Authority.PL
             Employee_Description_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Employee_Description_Comb_Department.DisplayMember = "Department_Name";
             Employee_Description_Comb_Department.ValueMember = "Department_ID";
+            Employee_Description_Comb_Satutes.SelectedIndex = 0;
         }
 
         private void Employee_Description_new_Click(object sender, EventArgs e)
@@ -46,9 +47,9 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_add_Click(object sender, EventArgs e)
         {
-            bool Functunal_status = Employee_Description_Allowes.Checked ? true : false;
+            //bool Functunal_status = Employee_Description_Allowes.Checked ? true : false;
             bool Role_status = Employee_Description_Now.Checked ? true : false;
-            Empl_Des.Employee_Description_add(Functunal_status , Role_status , Employee_Description_DateTime.Value , Employee_Description_N0_Book.Text , Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue) , Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue));
+            Empl_Des.Employee_Description_add(Employee_Description_Comb_Satutes.Text, Role_status , Employee_Description_DateTime.Value , Employee_Description_N0_Book.Text , Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue) , Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue));
             MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
             Employee_Description_dataGrid.Columns[0].Visible = false;
@@ -60,7 +61,7 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_update_Click(object sender, EventArgs e)
         {
-         Empl_Des.Employee_Description_update(Employee_Description_Allowes.Checked, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue), Program.Employee_Description_id);
+         Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue), Program.Employee_Description_id);
             MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
             Employee_Description_dataGrid.Columns[0].Visible = false;
@@ -90,8 +91,9 @@ namespace Finance_Authority.PL
                 Employee_Description_Comb_Department.Text = this.Employee_Description_dataGrid.CurrentRow.Cells[6].Value.ToString();
                 Employee_Description_Comb_Role .Text= this.Employee_Description_dataGrid.CurrentRow.Cells[7].Value.ToString();
                 Employee_Description_Comb_employ.Text = this.Employee_Description_dataGrid.CurrentRow.Cells[9].Value.ToString();
-                Employee_Description_Allowes.Checked = Convert.ToBoolean(this.Employee_Description_dataGrid.CurrentRow.Cells[1].Value) ? true : false;
-                Employee_Description_makt.Checked = Employee_Description_Allowes.Checked ? false : true;
+                //Employee_Description_Allowes.Checked = Convert.ToBoolean(this.Employee_Description_dataGrid.CurrentRow.Cells[1].Value) ? true : false;
+                //Employee_Description_makt.Checked = Employee_Description_Allowes.Checked ? false : true;
+                Employee_Description_Comb_Satutes.Text= this.Employee_Description_dataGrid.CurrentRow.Cells[1].Value.ToString();
                 Employee_Description_Now.Checked = Convert.ToBoolean(this.Employee_Description_dataGrid.CurrentRow.Cells[2].Value) ? true : false;
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
                 Employee_Description_update.Enabled = true;

@@ -44,7 +44,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Contracts_add(string Contract_Type, DateTime Contract_Start , DateTime Contract_End , bool Contract_Status , string Notes , int Employee_Des_ID)
+        public DataTable Contracts_add(string Contract_Type, DateTime Contract_Start , DateTime Contract_End , string Contract_Status , string Notes , int Employee_Des_ID)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
@@ -56,7 +56,7 @@ namespace Finance_Authority.BL
             param[1].Value = Contract_Start;
             param[2] = new SqlParameter("@Contract_End", SqlDbType.DateTime);
             param[2].Value = Contract_End;
-            param[3] = new SqlParameter("@Contract_Status", SqlDbType.Bit);
+            param[3] = new SqlParameter("@Contract_Status", SqlDbType.NVarChar);
             param[3].Value = Contract_Status;
             param[4] = new SqlParameter("@Notes", SqlDbType.NVarChar);
             param[4].Value = Notes;
@@ -66,7 +66,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Contracts_update(string Contract_Type, DateTime Contract_Start, DateTime Contract_End, bool Contract_Status, string Notes, int Employee_Des_ID, int id)
+        public DataTable Contracts_update(string Contract_Type, DateTime Contract_Start, DateTime Contract_End, string Contract_Status, string Notes, int Employee_Des_ID, int id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
@@ -78,7 +78,7 @@ namespace Finance_Authority.BL
             param[1].Value = Contract_Start;
             param[2] = new SqlParameter("@Contract_End", SqlDbType.DateTime);
             param[2].Value = Contract_End;
-            param[3] = new SqlParameter("@Contract_Status", SqlDbType.Bit);
+            param[3] = new SqlParameter("@Contract_Status", SqlDbType.NVarChar);
             param[3].Value = Contract_Status;
             param[4] = new SqlParameter("@Notes", SqlDbType.NVarChar);
             param[4].Value = Notes;

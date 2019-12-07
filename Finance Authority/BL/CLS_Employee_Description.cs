@@ -46,13 +46,13 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Employee_Description_add(bool Func_Status, bool Role_Status, DateTime Date , string Book_Number, string Salary, int Department_ID, int Role_Functional_id, int Employee_id)
+        public DataTable Employee_Description_add(string Func_Status, bool Role_Status, DateTime Date , string Book_Number, string Salary, int Department_ID, int Role_Functional_id, int Employee_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
             SqlParameter[] param = new SqlParameter[8];
-            param[0] = new SqlParameter("@Func_Status", SqlDbType.Bit);
+            param[0] = new SqlParameter("@Func_Status", SqlDbType.NVarChar);
             param[0].Value = Func_Status;
             param[1] = new SqlParameter("@Role_Status", SqlDbType.Bit);
             param[1].Value = Role_Status;
@@ -72,13 +72,13 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Employee_Description_update(bool Func_Status, bool Role_Status, DateTime Date, string Book_Number, string Salary, int Department_ID, int Role_Functional_id, int Employee_id , int Employee_Des_ID)
+        public DataTable Employee_Description_update(string Func_Status, bool Role_Status, DateTime Date, string Book_Number, string Salary, int Department_ID, int Role_Functional_id, int Employee_id , int Employee_Des_ID)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
             SqlParameter[] param = new SqlParameter[9];
-            param[0] = new SqlParameter("@Func_Status", SqlDbType.Bit);
+            param[0] = new SqlParameter("@Func_Status", SqlDbType.NVarChar);
             param[0].Value = Func_Status;
             param[1] = new SqlParameter("@Role_Status", SqlDbType.Bit);
             param[1].Value = Role_Status;

@@ -67,6 +67,7 @@
     <Compile Include="BL\CLS_Emission_Salaries.cs" />
     <Compile Include="BL\CLS_Employee.cs" />
     <Compile Include="BL\CLS_Employee_Description.cs" />
+    <Compile Include="BL\CLS_Employee_Salaries.cs" />
     <Compile Include="BL\CLS_Exchange_Orders_Category.cs" />
     <Compile Include="BL\CLS_Exchange_Order.cs" />
     <Compile Include="BL\CLS_Leoan_Payments.cs" />

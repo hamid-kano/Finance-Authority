@@ -33,7 +33,7 @@ namespace Finance_Authority
         public static int object_id;
         /// </summary>
         /// 
-        public static int theme;
+        public static int theme=1;
         public static int style;
 
         [STAThread]
@@ -77,7 +77,7 @@ namespace Finance_Authority
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Yellow;
                     break;
                 default:
-                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Brown;
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Blue;
                     break;
             }
 

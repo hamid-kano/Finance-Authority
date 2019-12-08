@@ -8,18 +8,27 @@ using System.Data.SqlClient;
 
 namespace Finance_Authority.BL
 {
-    class CLS_Object
+    class CLS_Bills
     {
-        public DataTable Object_View()
+        public DataTable Bills_View()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
-            Dt = DAL.selectdata("Object_View", null);
+            Dt = DAL.selectdata("Bill_View", null);
             DAL.close();
             return Dt;
         }
-        public DataTable Object_Comb_Bill()
+        public DataTable Bill_Max_ID()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Bill_Max_ID", null);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Bills_Comb_Bill()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -28,7 +37,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Object_add(string object_Name, string object_Quantity ,string object_Unit_Price ,string object_Total_price ,int Bill_id)
+        public DataTable Bills_add(string object_Name, string object_Quantity ,string object_Unit_Price ,string object_Total_price ,int Bill_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -48,7 +57,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Object_update(string object_Name, string object_Quantity, string object_Unit_Price, string object_Total_price, int Bill_id ,int id)
+        public DataTable Bills_update(string object_Name, string object_Quantity, string object_Unit_Price, string object_Total_price, int Bill_id ,int id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -70,7 +79,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public void Object_Delete(int id)
+        public void Bills_Delete(int id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();

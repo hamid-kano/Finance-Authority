@@ -16,7 +16,7 @@ namespace Finance_Authority
         public MAIN_FORM()
         {
             InitializeComponent();
-            this.StyleManager = Program.theme_style(this);
+            //this.StyleManager = Program.theme_style(this);
 
         }
 
@@ -142,13 +142,13 @@ namespace Finance_Authority
 
         private void Objects_Button_Click(object sender, EventArgs e)
         {
-            PL.Objects_FORM FRM = new PL.Objects_FORM();
+            PL.Bills_FORM FRM = new PL.Bills_FORM();
             FRM.ShowDialog();
         }
 
         private void Bills_Button_Click(object sender, EventArgs e)
         {
-            PL.Bills_FORM FRM = new PL.Bills_FORM();
+            PL.Bills_Details_FORM FRM = new PL.Bills_Details_FORM(-1);
             FRM.ShowDialog();
         }
 

@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace Finance_Authority.BL
 {
-    class CLS_Bill
+    class CLS_Bills_Details
     {
-        public DataTable Bill_View()
+        public DataTable Bills_Details_De_View()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -19,7 +19,31 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Bill_add(int NO_Bill, string Buyer_Name, string Coin_Type, string Exchange_rate ,string Bill_Type , string Bill_Total_Amount, 
+        public DataTable Bill_View__ByID(int Bill_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Bill_ID", SqlDbType.Int);
+            param[0].Value = Bill_ID;
+            Dt = DAL.selectdata("Bill_View__ByID", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Objects_View_By_Bill_ID(int Bill_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Bill_ID", SqlDbType.Int);
+            param[0].Value = Bill_ID;
+            Dt = DAL.selectdata("Objects_View_By_Bill_ID", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Bills_Details_add(int NO_Bill, string Buyer_Name, string Coin_Type, string Exchange_rate ,string Bill_Type , string Bill_Total_Amount, 
             DateTime Date ,bool Paid_or_Not , string Notes, int Budget_Id,int Department_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -48,11 +72,11 @@ namespace Finance_Authority.BL
             param[9].Value = Budget_Id;
             param[10] = new SqlParameter("@Department_id", SqlDbType.Int);
             param[10].Value = Department_id;
-            Dt = DAL.selectdata("Bill_add", param);
+            Dt = DAL.selectdata("Bills_Details_add", param);
             DAL.close();
             return Dt;
         }
-        public DataTable Bill_update(int NO_Bill, string Buyer_Name, string Coin_Type, string Exchange_rate, string Bill_Type, string Bill_Total_Amount,
+        public DataTable Bills_Details_update(int NO_Bill, string Buyer_Name, string Coin_Type, string Exchange_rate, string Bill_Type, string Bill_Total_Amount,
            DateTime Date, bool Paid_or_Not, string Notes, int Budget_Id, int Department_id , int Bill_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -87,7 +111,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public void Bill_Delete(int Bill_id)
+        public void Bills_Details_Delete(int Bill_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();

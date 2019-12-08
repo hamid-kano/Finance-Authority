@@ -174,27 +174,31 @@ namespace Finance_Authority.PL
 
         private void Employee_Salaries_delete_Click(object sender, EventArgs e)
         {
-            Empl_Sala.Employee_Salaries_Delete(Program.Employee_Salaries_id);
-            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-            Employee_Salaries_dataGrid.Columns[0].Visible = false;
-            Empl_Sala_Dayes.Text = "";
-            Empl_Sala_Rem_cons.Text = "";
-            Empl_Sala_Absences.Text = "";
-            Empl_Sala_va_out_sal.Text = "";
-            Empl_Sala_Exam.Text = "";
-            Empl_Sala_Punishments.Text = "";
-            Empl_Sala_Loans.Text = "";
-            Empl_Sala_Taskes.Text = "";
-            Empl_Sala_Reparations.Text = "";
-            Empl_Sala_Years_Seniority.Text = "";
-            Empl_Sala_Total.Text = "";
-            Empl_Sala_after_Reb.Text = "";
-            Empl_Sala_Notes.Text = "";
-            Empl_Sala_Insurances.Text = "";
-            Empl_Sala_Files1.Text = "";
-            Empl_Sala_Files2.Text = "";
-            Employee_Salaries_update.Enabled = false;
-            Employee_Salaries_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Empl_Sala.Employee_Salaries_Delete(Program.Employee_Salaries_id);
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Empl_Sala_Dayes.Text = "";
+                Empl_Sala_Rem_cons.Text = "";
+                Empl_Sala_Absences.Text = "";
+                Empl_Sala_va_out_sal.Text = "";
+                Empl_Sala_Exam.Text = "";
+                Empl_Sala_Punishments.Text = "";
+                Empl_Sala_Loans.Text = "";
+                Empl_Sala_Taskes.Text = "";
+                Empl_Sala_Reparations.Text = "";
+                Empl_Sala_Years_Seniority.Text = "";
+                Empl_Sala_Total.Text = "";
+                Empl_Sala_after_Reb.Text = "";
+                Empl_Sala_Notes.Text = "";
+                Empl_Sala_Insurances.Text = "";
+                Empl_Sala_Files1.Text = "";
+                Empl_Sala_Files2.Text = "";
+                Employee_Salaries_update.Enabled = false;
+                Employee_Salaries_delete.Enabled = false;
+            }
         }
 
         private void Employee_Salaries_exit_Click(object sender, EventArgs e)

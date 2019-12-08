@@ -90,18 +90,21 @@ namespace Finance_Authority.PL
 
         private void Document_delete_Click(object sender, EventArgs e)
         {
-            Doc.Document_Delete(Program.Document_id);
-            this.Document_Gridview.DataSource = Doc.Document_View();
-            this.Document_Gridview.Columns[0].Visible = false;
-            Program.Delete_Confirm_Message();
-            Document_update.Enabled = false;
-            Document_delete.Enabled = false;
-            Document_Name.Text = "";
-            Document_Type.Text = "";
-            Document_URL.Text = "";
-            Document_Location.Text = "";
-            Document_Extend.Text = "";
-            Document_Notes.Text = "";
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Doc.Document_Delete(Program.Document_id);
+                this.Document_Gridview.DataSource = Doc.Document_View();
+                this.Document_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Document_update.Enabled = false;
+                Document_delete.Enabled = false;
+                Document_Name.Text = "";
+                Document_Type.Text = "";
+                Document_URL.Text = "";
+                Document_Location.Text = "";
+                Document_Extend.Text = "";
+                Document_Notes.Text = "";
+            }
         }
 
         private void Document_View_Click(object sender, EventArgs e)

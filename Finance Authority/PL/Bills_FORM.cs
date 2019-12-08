@@ -58,6 +58,7 @@ namespace Finance_Authority.PL
                 Bill_Total.Text = this.Bills_dataGrid.CurrentRow.Cells[6].Value.ToString();
                 Bills_Date.Text = this.Bills_dataGrid.CurrentRow.Cells[7].Value.ToString();
                 Bills_Paid.Checked = Convert.ToBoolean(this.Bills_dataGrid.CurrentRow.Cells[8].Value) ? true : false;
+                Bills_Not.Checked = Bills_Paid.Checked? false : true;
                 Bills_Notes.Text = this.Bills_dataGrid.CurrentRow.Cells[9].Value.ToString();
                 Bills_Comb_Department.Text= this.Bills_dataGrid.CurrentRow.Cells[11].Value.ToString();
                 Bills_update.Enabled = true;
@@ -102,18 +103,22 @@ namespace Finance_Authority.PL
 
         private void Bills_delete_Click(object sender, EventArgs e)
         {
-            Bil.Bill_Delete(Program.Bill_id);
-            this.Bills_dataGrid.DataSource = Bil.Bill_View();
-            Bills_dataGrid.Columns[0].Visible = false;
-            Bills_update.Enabled = false;
-            Bills_delete.Enabled = false;
-            Bills_Buyer_Name.Text = "";
-            Bills_Coin_Type.Text = "";
-            Bills_Exchange_rate.Text = "";
-            Bill_Type.Text = "";
-            Bill_Total.Text = "";
-            Bills_Notes.Text = "";
-            Bills_NO_Bill.Text = "";
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Bil.Bill_Delete(Program.Bill_id);
+                this.Bills_dataGrid.DataSource = Bil.Bill_View();
+                Bills_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Bills_update.Enabled = false;
+                Bills_delete.Enabled = false;
+                Bills_Buyer_Name.Text = "";
+                Bills_Coin_Type.Text = "";
+                Bills_Exchange_rate.Text = "";
+                Bill_Type.Text = "";
+                Bill_Total.Text = "";
+                Bills_Notes.Text = "";
+                Bills_NO_Bill.Text = "";
+            }
         }
     }
 }

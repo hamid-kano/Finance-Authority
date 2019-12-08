@@ -104,18 +104,22 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_delete_Click(object sender, EventArgs e)
         {
-            Reciv.Reciver_Document_Delete(Program.Reciver_Document_id);
-            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
-            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
-            Reciver_Document_sy.Text = "";
-            Reciver_Document_Dollar.Text = "";
-            Reciver_Document_rate.Text = "";
-            Reciver_Document_no.Text = "";
-            Reciver_Document_Reason.Text = "";
-            Reciver_Document_Receve.Text = "";
-            Reciver_Document_Notes.Text = "";
-            Reciver_Document_update.Enabled = false;
-            Reciver_Document_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Reciv.Reciver_Document_Delete(Program.Reciver_Document_id);
+                this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
+                this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reciver_Document_sy.Text = "";
+                Reciver_Document_Dollar.Text = "";
+                Reciver_Document_rate.Text = "";
+                Reciver_Document_no.Text = "";
+                Reciver_Document_Reason.Text = "";
+                Reciver_Document_Receve.Text = "";
+                Reciver_Document_Notes.Text = "";
+                Reciver_Document_update.Enabled = false;
+                Reciver_Document_delete.Enabled = false;
+            }
         }
 
         private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)

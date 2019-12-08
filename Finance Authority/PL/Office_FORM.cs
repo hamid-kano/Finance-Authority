@@ -77,14 +77,17 @@ namespace Finance_Authority.PL
 
         private void Office_delete_Click(object sender, EventArgs e)
         {
-            Offic.Office_Delete(Program.Office_ID);
-            MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Office_Gridview.DataSource = Offic.Office_View();
-            this.Office_Gridview.Columns[0].Visible = false;
-            Office_update.Enabled = false;
-            Office_delete.Enabled = false;
-            Office_Name.Text = "";
-            Office_Notes.Text = "";
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Offic.Office_Delete(Program.Office_ID);
+                this.Office_Gridview.DataSource = Offic.Office_View();
+                this.Office_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Office_update.Enabled = false;
+                Office_delete.Enabled = false;
+                Office_Name.Text = "";
+                Office_Notes.Text = "";
+            }
         }
 
         private void Office_add_Click_1(object sender, EventArgs e)

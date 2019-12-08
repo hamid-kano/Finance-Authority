@@ -146,13 +146,17 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_delete_Click(object sender, EventArgs e)
         {
-            pay_Leo.Leoan_Payments_Delete(Program.Leoan_Payments_id);
-            this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
-            Leoan_Payments_Gridview.Columns[0].Visible = false;
-            Leoan_Payments_Amont.Text = "";
-            Leoan_Payments_Notes.Text = "";
-            Leoan_Payments_update.Enabled = false;
-            Leoan_Payments_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                pay_Leo.Leoan_Payments_Delete(Program.Leoan_Payments_id);
+                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
+                Leoan_Payments_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Leoan_Payments_Amont.Text = "";
+                Leoan_Payments_Notes.Text = "";
+                Leoan_Payments_update.Enabled = false;
+                Leoan_Payments_delete.Enabled = false;
+            }
         }
     }
 }

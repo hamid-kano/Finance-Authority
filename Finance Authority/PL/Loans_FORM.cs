@@ -132,13 +132,17 @@ namespace Finance_Authority.PL
 
         private void Loans_delete_Click(object sender, EventArgs e)
         {
-            Loa.Loans_Delete(Program.Loan_id);
-            this.Loans_Gridview.DataSource = Loa.Loans_View();
-            Loans_Gridview.Columns[0].Visible = false;
-            Loans_Amont.Text = "";
-            Loans_Notes.Text = "";
-            Loans_update.Enabled = false;
-            Loans_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Loa.Loans_Delete(Program.Loan_id);
+                this.Loans_Gridview.DataSource = Loa.Loans_View();
+                Loans_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Loans_Amont.Text = "";
+                Loans_Notes.Text = "";
+                Loans_update.Enabled = false;
+                Loans_delete.Enabled = false;
+            }
         }
 
        

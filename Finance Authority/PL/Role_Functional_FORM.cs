@@ -107,14 +107,17 @@ namespace Finance_Authority.PL
 
         private void Role_Functional_delete_Click(object sender, EventArgs e)
         {
-            Role.Role_Functional_Delete(Program.Role_Functional_id);
-            MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
-            Role_Functional_Gridview.Columns[0].Visible = false;
-            Role_Functional_Name.Text = "";
-            Role_Functional_Notes.Text = "";
-            Role_Functional_update.Enabled = false;
-            Role_Functional_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Role.Role_Functional_Delete(Program.Role_Functional_id);
+                this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
+                Role_Functional_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Role_Functional_Name.Text = "";
+                Role_Functional_Notes.Text = "";
+                Role_Functional_update.Enabled = false;
+                Role_Functional_delete.Enabled = false;
+            }
         }
 
         private void Role_Functional_textsearch_TextChanged(object sender, EventArgs e)

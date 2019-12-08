@@ -21,5 +21,16 @@ namespace Finance_Authority.PL
         {
 
         }
+
+        private void Objects_new_Click(object sender, EventArgs e)
+        {
+            Objects_add.Enabled = true;
+            Objects_Object.Text = "";
+            Object_Amonts.Text = "";
+            Object_Price.Text = "";
+            Object_Total.Text = "";
+            Objects_update.Enabled = false;
+            Objects_delete.Enabled = false;
+        }
     }
 }

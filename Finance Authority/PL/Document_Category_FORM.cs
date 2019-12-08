@@ -98,13 +98,17 @@ namespace Finance_Authority.PL
 
         private void Document_Category_delete_Click(object sender, EventArgs e)
         {
-            Doc.Document_Category_Delete(Program.Category_id_id);
-            MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
-            this.Document_Category_Gridview.Columns[0].Visible = false;
-            Document_Category_Name.Text = "";
-            Document_Category_update.Enabled = false;
-            Document_Category_delete.Enabled = false;
+
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Doc.Document_Category_Delete(Program.Category_id_id);
+                this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
+                this.Document_Category_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Document_Category_Name.Text = "";
+                Document_Category_update.Enabled = false;
+                Document_Category_delete.Enabled = false;
+            }
         }
 
         private void Document_Category_exit_Click(object sender, EventArgs e)

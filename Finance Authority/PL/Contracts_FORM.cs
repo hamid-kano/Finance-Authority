@@ -129,13 +129,17 @@ namespace Finance_Authority.PL
 
         private void Contracts_delete_Click(object sender, EventArgs e)
         {
-            cont.Contracts_Delete(Program.Contracts_id);
-            this.Contracts_Gridview.DataSource = cont.Contracts_View();
-            Contracts_Gridview.Columns[0].Visible = false;
-            Contracts_Type.Text = "";
-            Contracts_Notes.Text = "";
-            Contracts_update.Enabled = false;
-            Contracts_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cont.Contracts_Delete(Program.Contracts_id);
+                this.Contracts_Gridview.DataSource = cont.Contracts_View();
+                Contracts_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Contracts_Type.Text = "";
+                Contracts_Notes.Text = "";
+                Contracts_update.Enabled = false;
+                Contracts_delete.Enabled = false;
+            }
         }
     }
 }

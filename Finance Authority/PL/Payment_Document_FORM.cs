@@ -112,19 +112,23 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_delete_Click(object sender, EventArgs e)
         {
-            pay.Payment_Document_Delete(Program.Payment_Document_id);
-            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
-            this.Payment_Document_dataGrid.Columns[0].Visible = false;
-            Payment_Document_sy.Text = "";
-            Payment_Document_Dollar.Text = "";
-            Payment_Document_rate.Text = "";
-            Payment_Document_no.Text = "";
-            Payment_Document_No_Order.Text = "";
-            Payment_Document_Reason.Text = "";
-            Payment_Document_Receve.Text = "";
-            Payment_Document_Notes.Text = "";
-            Payment_Document_update.Enabled = false;
-            Payment_Document_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                pay.Payment_Document_Delete(Program.Payment_Document_id);
+                this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
+                this.Payment_Document_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Payment_Document_sy.Text = "";
+                Payment_Document_Dollar.Text = "";
+                Payment_Document_rate.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
+                Payment_Document_Reason.Text = "";
+                Payment_Document_Receve.Text = "";
+                Payment_Document_Notes.Text = "";
+                Payment_Document_update.Enabled = false;
+                Payment_Document_delete.Enabled = false;
+            }
         }
 
         private void Payment_Document_Search_TextChanged(object sender, EventArgs e)

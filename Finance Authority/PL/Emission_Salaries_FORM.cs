@@ -73,11 +73,20 @@ namespace Finance_Authority.PL
 
         private void Emission_Salaries_delete_Click(object sender, EventArgs e)
         {
-            Emiss.Emission_Salaries_Delete(Program.Emission_Salaries_id);
-            this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
-            Emission_Salaries_dataGrid.Columns[0].Visible = false;
-            Emission_Salaries_update.Enabled = false;
-            Emission_Salaries_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Emiss.Emission_Salaries_Delete(Program.Emission_Salaries_id);
+                this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
+                Emission_Salaries_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Emission_Salaries_update.Enabled = false;
+                Emission_Salaries_delete.Enabled = false;
+            }
+        }
+
+        private void Emission_Salaries_FORM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

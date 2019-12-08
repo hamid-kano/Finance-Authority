@@ -126,25 +126,29 @@ namespace Finance_Authority.PL
 
         private void Employee_delete_Click(object sender, EventArgs e)
         {
-            Emp.Employee_Delete(Program.Employee_id);
-            this.Employee_dataGrid.DataSource = Emp.Employee_View();
-            Employee_dataGrid.Columns[0].Visible = false;
-            Employee_First_Name.Text = "";
-            Employee_Father_Name.Text = "";
-            Employee_Last_Name.Text = "";
-            Employee_Mother_Name.Text = "";
-            Employee_Mobail.Text = "";
-            Employee_Scie_Level.Text = "";
-            Employee_Scie_Specialization.Text = "";
-            Employee_No_Financial.Text = "";
-            Employee_No_Affairs.Text = "";
-            Employee_No_File.Text = "";
-            Employee_No_Card.Text = "";
-            Employee_Gender.Text = "";
-            Employee_Marital_status.Text = "";
-            Employee_Pr_Service_Years.Text = "";
-            Employee_update.Enabled = false;
-            Employee_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Emp.Employee_Delete(Program.Employee_id);
+                this.Employee_dataGrid.DataSource = Emp.Employee_View();
+                Employee_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Employee_First_Name.Text = "";
+                Employee_Father_Name.Text = "";
+                Employee_Last_Name.Text = "";
+                Employee_Mother_Name.Text = "";
+                Employee_Mobail.Text = "";
+                Employee_Scie_Level.Text = "";
+                Employee_Scie_Specialization.Text = "";
+                Employee_No_Financial.Text = "";
+                Employee_No_Affairs.Text = "";
+                Employee_No_File.Text = "";
+                Employee_No_Card.Text = "";
+                Employee_Gender.Text = "";
+                Employee_Marital_status.Text = "";
+                Employee_Pr_Service_Years.Text = "";
+                Employee_update.Enabled = false;
+                Employee_delete.Enabled = false;
+            }
         }
 
         private void Employee_Search_Name_TextChanged(object sender, EventArgs e)

@@ -107,14 +107,17 @@ namespace Finance_Authority.PL
 
         private void Authority_delete_Click(object sender, EventArgs e)
         {
-            Auth.Authority_Delete(Program.Authority_ID);
-            MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Authority_Gridview.DataSource = Auth.Authority_view();
-            Authority_Gridview.Columns[0].Visible = false;
-            Authority_Name.Text = "";
-            Authority_Notes.Text = "";
-            Authority_update.Enabled = false;
-            Authority_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Auth.Authority_Delete(Program.Authority_ID);
+                this.Authority_Gridview.DataSource = Auth.Authority_view();
+                Authority_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Authority_Name.Text = "";
+                Authority_Notes.Text = "";
+                Authority_update.Enabled = false;
+                Authority_delete.Enabled = false;
+            }
         }
 
         private void Authority_textsearch_TextChanged(object sender, EventArgs e)

@@ -90,17 +90,21 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_delete_Click(object sender, EventArgs e)
         {
-            Coin.Coin_Exchange_Delete(Program.Coin_Exchange_id);
-            this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
-            Coin_Exchange_Gridview.Columns[0].Visible = false;
-            Coin_Exchange_Sy.Text = "";
-            Coin_Exchange_Dollar.Text = "";
-            Coin_Exchange_rate.Text = "";
-            Coin_Exchange_Notes.Text = "";
-            Coin_Exchange_update.Enabled = false;
-            Coin_Exchange_delete.Enabled = false;}
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Coin.Coin_Exchange_Delete(Program.Coin_Exchange_id);
+                this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
+                Coin_Exchange_Gridview.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Coin_Exchange_Sy.Text = "";
+                Coin_Exchange_Dollar.Text = "";
+                Coin_Exchange_rate.Text = "";
+                Coin_Exchange_Notes.Text = "";
+                Coin_Exchange_update.Enabled = false;
+                Coin_Exchange_delete.Enabled = false;
+            }
 
-      
+        }
 
         private void Coin_Exchange_CombSerach_SelectedValueChanged(object sender, EventArgs e)
         {

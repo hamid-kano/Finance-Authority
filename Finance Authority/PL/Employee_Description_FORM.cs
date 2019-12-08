@@ -74,11 +74,18 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_delete_Click(object sender, EventArgs e)
         {
-            Empl_Des.Employee_Description_Delete(Program.Employee_Description_id);
-            Employee_Description_N0_Book.Text = "";
-            Employee_Description_Salery.Text = "";
-            Employee_Description_update.Enabled = false;
-            Employee_Description_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Empl_Des.Employee_Description_Delete(Program.Employee_Description_id);
+                this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
+                Employee_Description_dataGrid.Columns[0].Visible = false;
+                Employee_Description_dataGrid.Columns[8].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Employee_Description_N0_Book.Text = "";
+                Employee_Description_Salery.Text = "";
+                Employee_Description_update.Enabled = false;
+                Employee_Description_delete.Enabled = false;
+            }
         }
 
         private void Employee_Description_dataGrid_Click(object sender, EventArgs e)

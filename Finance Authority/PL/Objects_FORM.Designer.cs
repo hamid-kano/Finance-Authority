@@ -28,130 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.EX_Orders_dataGrid = new MetroFramework.Controls.MetroGrid();
-            this.EX_Orders_exit = new MetroFramework.Controls.MetroButton();
-            this.EX_Orders_delete = new MetroFramework.Controls.MetroButton();
-            this.EX_Orders_update = new MetroFramework.Controls.MetroButton();
-            this.EX_Orders_add = new MetroFramework.Controls.MetroButton();
-            this.EX_Orders_new = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Objects_dataGrid = new MetroFramework.Controls.MetroGrid();
+            this.Objects_exit = new MetroFramework.Controls.MetroButton();
+            this.Objects_delete = new MetroFramework.Controls.MetroButton();
+            this.Objects_update = new MetroFramework.Controls.MetroButton();
+            this.Objects_add = new MetroFramework.Controls.MetroButton();
+            this.Objects_new = new MetroFramework.Controls.MetroButton();
             this.label8 = new System.Windows.Forms.Label();
             this.Objects_search_All = new System.Windows.Forms.TextBox();
-            this.EX_Orders_CombCategorise = new System.Windows.Forms.ComboBox();
+            this.Object_Comb_Bill = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.EX_Orders_Notes = new System.Windows.Forms.TextBox();
+            this.Object_Total = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.EX_Orders_Body_order = new System.Windows.Forms.TextBox();
+            this.Object_Price = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.EX_Orders_tosorce = new System.Windows.Forms.TextBox();
+            this.Object_Amonts = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.EX_Orders_dataGrid)).BeginInit();
+            this.Objects_Object = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Objects_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // EX_Orders_dataGrid
+            // Objects_dataGrid
             // 
-            this.EX_Orders_dataGrid.AllowUserToAddRows = false;
-            this.EX_Orders_dataGrid.AllowUserToDeleteRows = false;
-            this.EX_Orders_dataGrid.AllowUserToResizeRows = false;
-            this.EX_Orders_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EX_Orders_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EX_Orders_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.EX_Orders_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.EX_Orders_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EX_Orders_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.EX_Orders_dataGrid.EnableHeadersVisualStyles = false;
-            this.EX_Orders_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.EX_Orders_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_dataGrid.Location = new System.Drawing.Point(318, 101);
-            this.EX_Orders_dataGrid.Name = "EX_Orders_dataGrid";
-            this.EX_Orders_dataGrid.ReadOnly = true;
-            this.EX_Orders_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.EX_Orders_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.EX_Orders_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EX_Orders_dataGrid.Size = new System.Drawing.Size(536, 275);
-            this.EX_Orders_dataGrid.TabIndex = 47;
+            this.Objects_dataGrid.AllowUserToAddRows = false;
+            this.Objects_dataGrid.AllowUserToDeleteRows = false;
+            this.Objects_dataGrid.AllowUserToResizeRows = false;
+            this.Objects_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Objects_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Objects_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Objects_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Objects_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Objects_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Objects_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Objects_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Objects_dataGrid.EnableHeadersVisualStyles = false;
+            this.Objects_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Objects_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Objects_dataGrid.Location = new System.Drawing.Point(318, 101);
+            this.Objects_dataGrid.Name = "Objects_dataGrid";
+            this.Objects_dataGrid.ReadOnly = true;
+            this.Objects_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.Objects_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Objects_dataGrid.Size = new System.Drawing.Size(536, 275);
+            this.Objects_dataGrid.TabIndex = 47;
             // 
-            // EX_Orders_exit
+            // Objects_exit
             // 
-            this.EX_Orders_exit.Highlight = true;
-            this.EX_Orders_exit.Location = new System.Drawing.Point(767, 393);
-            this.EX_Orders_exit.Name = "EX_Orders_exit";
-            this.EX_Orders_exit.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_exit.TabIndex = 46;
-            this.EX_Orders_exit.Text = "خروج";
-            this.EX_Orders_exit.UseSelectable = true;
+            this.Objects_exit.Highlight = true;
+            this.Objects_exit.Location = new System.Drawing.Point(767, 393);
+            this.Objects_exit.Name = "Objects_exit";
+            this.Objects_exit.Size = new System.Drawing.Size(87, 37);
+            this.Objects_exit.TabIndex = 46;
+            this.Objects_exit.Text = "خروج";
+            this.Objects_exit.UseSelectable = true;
             // 
-            // EX_Orders_delete
+            // Objects_delete
             // 
-            this.EX_Orders_delete.Enabled = false;
-            this.EX_Orders_delete.Highlight = true;
-            this.EX_Orders_delete.Location = new System.Drawing.Point(656, 393);
-            this.EX_Orders_delete.Name = "EX_Orders_delete";
-            this.EX_Orders_delete.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_delete.TabIndex = 45;
-            this.EX_Orders_delete.Text = "حذف";
-            this.EX_Orders_delete.UseSelectable = true;
+            this.Objects_delete.Enabled = false;
+            this.Objects_delete.Highlight = true;
+            this.Objects_delete.Location = new System.Drawing.Point(656, 393);
+            this.Objects_delete.Name = "Objects_delete";
+            this.Objects_delete.Size = new System.Drawing.Size(87, 37);
+            this.Objects_delete.TabIndex = 45;
+            this.Objects_delete.Text = "حذف";
+            this.Objects_delete.UseSelectable = true;
             // 
-            // EX_Orders_update
+            // Objects_update
             // 
-            this.EX_Orders_update.Enabled = false;
-            this.EX_Orders_update.Highlight = true;
-            this.EX_Orders_update.Location = new System.Drawing.Point(549, 393);
-            this.EX_Orders_update.Name = "EX_Orders_update";
-            this.EX_Orders_update.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_update.TabIndex = 44;
-            this.EX_Orders_update.Text = "تعديل";
-            this.EX_Orders_update.UseSelectable = true;
+            this.Objects_update.Enabled = false;
+            this.Objects_update.Highlight = true;
+            this.Objects_update.Location = new System.Drawing.Point(549, 393);
+            this.Objects_update.Name = "Objects_update";
+            this.Objects_update.Size = new System.Drawing.Size(87, 37);
+            this.Objects_update.TabIndex = 44;
+            this.Objects_update.Text = "تعديل";
+            this.Objects_update.UseSelectable = true;
             // 
-            // EX_Orders_add
+            // Objects_add
             // 
-            this.EX_Orders_add.Enabled = false;
-            this.EX_Orders_add.Highlight = true;
-            this.EX_Orders_add.Location = new System.Drawing.Point(430, 393);
-            this.EX_Orders_add.Name = "EX_Orders_add";
-            this.EX_Orders_add.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_add.TabIndex = 43;
-            this.EX_Orders_add.Text = "أضافة";
-            this.EX_Orders_add.UseSelectable = true;
-            this.EX_Orders_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
+            this.Objects_add.Enabled = false;
+            this.Objects_add.Highlight = true;
+            this.Objects_add.Location = new System.Drawing.Point(430, 393);
+            this.Objects_add.Name = "Objects_add";
+            this.Objects_add.Size = new System.Drawing.Size(87, 37);
+            this.Objects_add.TabIndex = 43;
+            this.Objects_add.Text = "أضافة";
+            this.Objects_add.UseSelectable = true;
+            this.Objects_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
             // 
-            // EX_Orders_new
+            // Objects_new
             // 
-            this.EX_Orders_new.Highlight = true;
-            this.EX_Orders_new.Location = new System.Drawing.Point(318, 393);
-            this.EX_Orders_new.Name = "EX_Orders_new";
-            this.EX_Orders_new.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_new.TabIndex = 42;
-            this.EX_Orders_new.Text = "جديد";
-            this.EX_Orders_new.UseSelectable = true;
+            this.Objects_new.Highlight = true;
+            this.Objects_new.Location = new System.Drawing.Point(318, 393);
+            this.Objects_new.Name = "Objects_new";
+            this.Objects_new.Size = new System.Drawing.Size(87, 37);
+            this.Objects_new.TabIndex = 42;
+            this.Objects_new.Text = "جديد";
+            this.Objects_new.UseSelectable = true;
+            this.Objects_new.Click += new System.EventHandler(this.Objects_new_Click);
             // 
             // label8
             // 
@@ -171,15 +172,15 @@
             this.Objects_search_All.Size = new System.Drawing.Size(326, 23);
             this.Objects_search_All.TabIndex = 48;
             // 
-            // EX_Orders_CombCategorise
+            // Object_Comb_Bill
             // 
-            this.EX_Orders_CombCategorise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.EX_Orders_CombCategorise.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_Orders_CombCategorise.FormattingEnabled = true;
-            this.EX_Orders_CombCategorise.Location = new System.Drawing.Point(115, 303);
-            this.EX_Orders_CombCategorise.Name = "EX_Orders_CombCategorise";
-            this.EX_Orders_CombCategorise.Size = new System.Drawing.Size(188, 24);
-            this.EX_Orders_CombCategorise.TabIndex = 57;
+            this.Object_Comb_Bill.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Object_Comb_Bill.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Object_Comb_Bill.FormattingEnabled = true;
+            this.Object_Comb_Bill.Location = new System.Drawing.Point(115, 303);
+            this.Object_Comb_Bill.Name = "Object_Comb_Bill";
+            this.Object_Comb_Bill.Size = new System.Drawing.Size(188, 24);
+            this.Object_Comb_Bill.TabIndex = 57;
             // 
             // label7
             // 
@@ -201,13 +202,13 @@
             this.label6.TabIndex = 55;
             this.label6.Text = "السعر الكلي";
             // 
-            // EX_Orders_Notes
+            // Object_Total
             // 
-            this.EX_Orders_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_Orders_Notes.Location = new System.Drawing.Point(115, 258);
-            this.EX_Orders_Notes.Name = "EX_Orders_Notes";
-            this.EX_Orders_Notes.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_Notes.TabIndex = 54;
+            this.Object_Total.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Object_Total.Location = new System.Drawing.Point(115, 258);
+            this.Object_Total.Name = "Object_Total";
+            this.Object_Total.Size = new System.Drawing.Size(188, 23);
+            this.Object_Total.TabIndex = 54;
             // 
             // label5
             // 
@@ -219,13 +220,13 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "سعر المادة";
             // 
-            // EX_Orders_Body_order
+            // Object_Price
             // 
-            this.EX_Orders_Body_order.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_Orders_Body_order.Location = new System.Drawing.Point(115, 213);
-            this.EX_Orders_Body_order.Name = "EX_Orders_Body_order";
-            this.EX_Orders_Body_order.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_Body_order.TabIndex = 52;
+            this.Object_Price.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Object_Price.Location = new System.Drawing.Point(115, 213);
+            this.Object_Price.Name = "Object_Price";
+            this.Object_Price.Size = new System.Drawing.Size(188, 23);
+            this.Object_Price.TabIndex = 52;
             // 
             // label4
             // 
@@ -237,13 +238,13 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "كمية المادة";
             // 
-            // EX_Orders_tosorce
+            // Object_Amonts
             // 
-            this.EX_Orders_tosorce.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EX_Orders_tosorce.Location = new System.Drawing.Point(115, 168);
-            this.EX_Orders_tosorce.Name = "EX_Orders_tosorce";
-            this.EX_Orders_tosorce.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_tosorce.TabIndex = 50;
+            this.Object_Amonts.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Object_Amonts.Location = new System.Drawing.Point(115, 168);
+            this.Object_Amonts.Name = "Object_Amonts";
+            this.Object_Amonts.Size = new System.Drawing.Size(188, 23);
+            this.Object_Amonts.TabIndex = 50;
             // 
             // label1
             // 
@@ -255,13 +256,13 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "أسم المادة";
             // 
-            // textBox1
+            // Objects_Object
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(115, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 23);
-            this.textBox1.TabIndex = 58;
+            this.Objects_Object.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Objects_Object.Location = new System.Drawing.Point(115, 124);
+            this.Objects_Object.Name = "Objects_Object";
+            this.Objects_Object.Size = new System.Drawing.Size(188, 23);
+            this.Objects_Object.TabIndex = 58;
             // 
             // Objects_FORM
             // 
@@ -269,28 +270,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.EX_Orders_CombCategorise);
+            this.Controls.Add(this.Objects_Object);
+            this.Controls.Add(this.Object_Comb_Bill);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.EX_Orders_Notes);
+            this.Controls.Add(this.Object_Total);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.EX_Orders_Body_order);
+            this.Controls.Add(this.Object_Price);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.EX_Orders_tosorce);
+            this.Controls.Add(this.Object_Amonts);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Objects_search_All);
-            this.Controls.Add(this.EX_Orders_dataGrid);
-            this.Controls.Add(this.EX_Orders_exit);
-            this.Controls.Add(this.EX_Orders_delete);
-            this.Controls.Add(this.EX_Orders_update);
-            this.Controls.Add(this.EX_Orders_add);
-            this.Controls.Add(this.EX_Orders_new);
+            this.Controls.Add(this.Objects_dataGrid);
+            this.Controls.Add(this.Objects_exit);
+            this.Controls.Add(this.Objects_delete);
+            this.Controls.Add(this.Objects_update);
+            this.Controls.Add(this.Objects_add);
+            this.Controls.Add(this.Objects_new);
             this.Name = "Objects_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "المواد";
-            ((System.ComponentModel.ISupportInitialize)(this.EX_Orders_dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Objects_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,23 +299,23 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroGrid EX_Orders_dataGrid;
-        private MetroFramework.Controls.MetroButton EX_Orders_exit;
-        private MetroFramework.Controls.MetroButton EX_Orders_delete;
-        private MetroFramework.Controls.MetroButton EX_Orders_update;
-        private MetroFramework.Controls.MetroButton EX_Orders_add;
-        private MetroFramework.Controls.MetroButton EX_Orders_new;
+        private MetroFramework.Controls.MetroGrid Objects_dataGrid;
+        private MetroFramework.Controls.MetroButton Objects_exit;
+        private MetroFramework.Controls.MetroButton Objects_delete;
+        private MetroFramework.Controls.MetroButton Objects_update;
+        private MetroFramework.Controls.MetroButton Objects_add;
+        private MetroFramework.Controls.MetroButton Objects_new;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Objects_search_All;
-        private System.Windows.Forms.ComboBox EX_Orders_CombCategorise;
+        private System.Windows.Forms.ComboBox Object_Comb_Bill;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox EX_Orders_Notes;
+        private System.Windows.Forms.TextBox Object_Total;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox EX_Orders_Body_order;
+        private System.Windows.Forms.TextBox Object_Price;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox EX_Orders_tosorce;
+        private System.Windows.Forms.TextBox Object_Amonts;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Objects_Object;
     }
 }

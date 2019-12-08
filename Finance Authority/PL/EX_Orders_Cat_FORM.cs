@@ -71,7 +71,8 @@ namespace Finance_Authority.PL
                 EX_Orders_Cat_delete.Enabled = true;
                Program.Category_id= Convert.ToInt32(this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[0].Value.ToString());
                 EX_Orders_Cat_text1.Text = this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[1].Value.ToString();
-                EX_Orders_Cat_add.Enabled = false;
+                EX_Orders_Cat_update.Enabled = true;
+                EX_Orders_Cat_delete.Enabled = true;
             }
         }
 
@@ -86,6 +87,8 @@ namespace Finance_Authority.PL
                 EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
                 Program.Update_Message();
                 EX_Orders_Cat_text1.Text = "";
+                EX_Orders_Cat_update.Enabled = false;
+                EX_Orders_Cat_delete.Enabled = false;
             }
             else
             {
@@ -98,11 +101,16 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_Cat_delete_Click(object sender, EventArgs e)
         {
-            cat.EX_Orders_Cat_Delete(Program.Category_id);
-            MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            EX_Orders_Cat_text1.Text = "";
-            this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
-            EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cat.EX_Orders_Cat_Delete(Program.Category_id);
+                this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
+                EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EX_Orders_Cat_text1.Text = "";
+                EX_Orders_Cat_update.Enabled = false;
+                EX_Orders_Cat_delete.Enabled = false;
+            }
         }
 
         private void EX_Orders_Cat_textsearch_TextChanged(object sender, EventArgs e)

@@ -120,16 +120,19 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_delete_Click(object sender, EventArgs e)
         {
-            order.Exchange_Order_Delete(Program.Exchange_Order_id);
-            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
-            this.EX_Orders_dataGrid.Columns[0].Visible = false;
-            EX_Orders_order.Text = "";
-            EX_Orders_tosorce.Text = "";
-            EX_Orders_Body_order.Text = "";
-            EX_Orders_Notes.Text = "";
-            
-            EX_Orders_update.Enabled = false;
-            EX_Orders_delete.Enabled = false;
+            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                order.Exchange_Order_Delete(Program.Exchange_Order_id);
+                this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
+                this.EX_Orders_dataGrid.Columns[0].Visible = false;
+                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EX_Orders_order.Text = "";
+                EX_Orders_tosorce.Text = "";
+                EX_Orders_Body_order.Text = "";
+                EX_Orders_Notes.Text = "";
+                EX_Orders_update.Enabled = false;
+                EX_Orders_delete.Enabled = false;
+            }
         }
 
         private void EX_Orders_search_All_TextChanged(object sender, EventArgs e)

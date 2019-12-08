@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         {
             
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
             EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
         }

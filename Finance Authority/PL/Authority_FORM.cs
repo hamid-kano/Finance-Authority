@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Authority_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Authority_Gridview.DataSource = Auth.Authority_view();
             Authority_Gridview.Columns[0].Visible = false;
         }

@@ -16,7 +16,8 @@ namespace Finance_Authority.PL
         public Office_FORM()
         {
             InitializeComponent();
-           this.Office_Gridview.DataSource=Offic.Office_View();
+            this.StyleManager = Program.theme_style(this);
+            this.Office_Gridview.DataSource=Offic.Office_View();
             this.Office_Gridview.Columns[0].Visible = false;
             Office_CombAuthontic.DataSource = Offic.Office_Comb_Authontic();
             Office_CombAuthontic.DisplayMember = "Authority_Name";

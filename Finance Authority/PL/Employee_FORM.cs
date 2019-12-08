@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Employee_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Employee_dataGrid.DataSource = Emp.Employee_View();
             Employee_dataGrid.Columns[0].Visible = false;
         }

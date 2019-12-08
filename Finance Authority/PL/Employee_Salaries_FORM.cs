@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         public Employee_Salaries_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             Employee_Salaries_dataGrid.Columns[0].Visible = false;
             Empl_Sala_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();

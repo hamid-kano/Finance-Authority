@@ -23,12 +23,6 @@ namespace Finance_Authority.PL
         {
         }
 
-        private void Management_Loan_Click(object sender, EventArgs e)
-        {
-            //PL.Loans_FORM frm = new PL.Loans_FORM();
-            //frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
-            //AbrirFormInPanel(frm,this.Panel_Loan_MANAG);
-        }
         private void MetroToggle1_CheckedChanged(object sender, EventArgs e)
         {
             if (metroStyleManager1.Theme == MetroFramework.MetroThemeStyle.Light)

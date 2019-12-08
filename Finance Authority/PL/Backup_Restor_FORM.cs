@@ -20,6 +20,7 @@ namespace Finance_Authority.PL
         public Backup_Restor_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
         }
 
         private void Brows_Button_Click(object sender, EventArgs e)

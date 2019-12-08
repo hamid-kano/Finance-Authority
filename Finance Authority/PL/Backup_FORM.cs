@@ -20,6 +20,7 @@ namespace Finance_Authority.PL
         public Backup_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
         }
 
         private void Close_Button_Click(object sender, EventArgs e)

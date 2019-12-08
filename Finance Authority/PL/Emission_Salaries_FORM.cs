@@ -17,6 +17,7 @@ namespace Finance_Authority.PL
         public Emission_Salaries_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
             Emission_Salaries_Comb_Budget.DataSource = Emiss.Emission_Salaries_Comb_Budget();

@@ -19,7 +19,8 @@ namespace Finance_Authority.PL
         public Reciver_Document_FORM()
         {
             InitializeComponent();
-           this.Reciver_Document_dataGrid.DataSource= Reciv.Reciver_Document_View();
+            this.StyleManager = Program.theme_style(this);
+            this.Reciver_Document_dataGrid.DataSource= Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
             Reciver_Document_Comb_Date.DataSource = Coin.Coin_Exchange_CombBudg();
             Reciver_Document_Comb_Date.DisplayMember = "Date";

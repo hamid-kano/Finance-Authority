@@ -98,6 +98,7 @@
             this.Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Objects_dataGrid.Size = new System.Drawing.Size(536, 275);
             this.Objects_dataGrid.TabIndex = 47;
+            this.Objects_dataGrid.Click += new System.EventHandler(this.Objects_dataGrid_Click);
             // 
             // Objects_exit
             // 
@@ -108,6 +109,7 @@
             this.Objects_exit.TabIndex = 46;
             this.Objects_exit.Text = "خروج";
             this.Objects_exit.UseSelectable = true;
+            this.Objects_exit.Click += new System.EventHandler(this.Objects_exit_Click);
             // 
             // Objects_delete
             // 
@@ -119,6 +121,7 @@
             this.Objects_delete.TabIndex = 45;
             this.Objects_delete.Text = "حذف";
             this.Objects_delete.UseSelectable = true;
+            this.Objects_delete.Click += new System.EventHandler(this.Objects_delete_Click);
             // 
             // Objects_update
             // 
@@ -130,6 +133,7 @@
             this.Objects_update.TabIndex = 44;
             this.Objects_update.Text = "تعديل";
             this.Objects_update.UseSelectable = true;
+            this.Objects_update.Click += new System.EventHandler(this.Objects_update_Click);
             // 
             // Objects_add
             // 
@@ -141,7 +145,7 @@
             this.Objects_add.TabIndex = 43;
             this.Objects_add.Text = "أضافة";
             this.Objects_add.UseSelectable = true;
-            this.Objects_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
+            this.Objects_add.Click += new System.EventHandler(this.Objects_add_Click);
             // 
             // Objects_new
             // 
@@ -290,7 +294,7 @@
             this.Name = "Objects_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "المواد";
+            this.Text = "تفاصيل الفاتورة";
             ((System.ComponentModel.ISupportInitialize)(this.Objects_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

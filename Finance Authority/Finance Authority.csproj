@@ -73,6 +73,7 @@
     <Compile Include="BL\CLS_Exchange_Order.cs" />
     <Compile Include="BL\CLS_Leoan_Payments.cs" />
     <Compile Include="BL\CLS_Loan.cs" />
+    <Compile Include="BL\CLS_Object.cs" />
     <Compile Include="BL\CLS_Payment_Document.cs" />
     <Compile Include="BL\CLS_Reciver_Document.cs" />
     <Compile Include="BL\CLS_Role_Functional.cs" />

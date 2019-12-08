@@ -19,6 +19,7 @@ namespace Finance_Authority.PL
         public Loans_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
             Loans_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();

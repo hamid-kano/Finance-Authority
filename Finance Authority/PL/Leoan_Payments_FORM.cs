@@ -19,6 +19,7 @@ namespace Finance_Authority.PL
         public Leoan_Payments_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
             Leoan_Payments_Gridview.Columns[0].Visible = false;
             Leoan_Payments_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();

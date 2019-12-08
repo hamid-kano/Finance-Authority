@@ -16,6 +16,8 @@ namespace Finance_Authority
         public MAIN_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
+
         }
 
         private void EX_Orders_Cat_BTN_Click(object sender, EventArgs e)

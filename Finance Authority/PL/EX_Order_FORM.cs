@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public EX_Order_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
             EX_Orders_CombCategorise.DataSource = order.EX_Orders_CombCategorise();
             EX_Orders_CombCategorise.DisplayMember = "Exchange_Order_Type";

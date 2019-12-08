@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         public Payment_Document_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
             Payment_Document_Comb_Date.DataSource = Coin.Coin_Exchange_CombBudg();

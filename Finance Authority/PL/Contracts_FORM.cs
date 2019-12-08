@@ -17,6 +17,7 @@ namespace Finance_Authority.PL
         public Contracts_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Contracts_Gridview.DataSource = cont.Contracts_View();
             Contracts_Gridview.Columns[0].Visible = false;
             Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();

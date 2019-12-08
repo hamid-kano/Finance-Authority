@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Coin_Exchange_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             Coin_Exchange_CombSerach.DataSource = Coin.Coin_Exchange_CombBudg();
             Coin_Exchange_CombSerach.DisplayMember = "Date";
             Coin_Exchange_CombSerach.ValueMember = "Budget_Id";

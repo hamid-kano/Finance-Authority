@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Role_Functional_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
             Role_Functional_Gridview.Columns[0].Visible = false;
         }

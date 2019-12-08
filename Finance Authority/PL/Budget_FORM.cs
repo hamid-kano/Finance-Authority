@@ -15,6 +15,7 @@ namespace Finance_Authority.PL
         public Budget_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Budget_dataGrid.DataSource = Bud.Budget_view();
             this.Budget_dataGrid.Columns[0].Visible = false;
         }

@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Document_Category_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
             this.Document_Category_Gridview.Columns[0].Visible = false;
         }

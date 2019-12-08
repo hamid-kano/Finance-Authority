@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         public Bills_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Bills_dataGrid.DataSource = Bil.Bill_View();
             Bills_dataGrid.Columns[0].Visible = false;
             Bills_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();

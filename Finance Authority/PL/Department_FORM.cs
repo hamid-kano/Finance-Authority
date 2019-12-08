@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         public Department_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             this.Department_Gridview.DataSource = Dep.Department_View();
             this.Department_Gridview.Columns[0].Visible = false;
             Department_CombOffice.DataSource = Dep.Department_CombOffice();

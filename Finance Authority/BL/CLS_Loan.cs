@@ -91,5 +91,29 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
+        public DataTable Loans_Search_All(String textchange)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@textchange", SqlDbType.NVarChar);
+            param[0].Value = textchange;
+            Dt = DAL.selectdata("Loans_Search_All", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Loans_Search_Budget_Date(int Budget_Id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Budget_Id", SqlDbType.Int);
+            param[0].Value = Budget_Id;
+            Dt = DAL.selectdata("Loans_Search_Budget_Date", param);
+            DAL.close();
+            return Dt;
+        }
     }
 }

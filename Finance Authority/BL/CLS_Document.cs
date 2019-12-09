@@ -77,5 +77,17 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
+        public DataTable Document_Search_All(string textchange)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@textchange", SqlDbType.NVarChar);
+            param[0].Value = textchange;
+            Dt = DAL.selectdata("Document_Search_All", param);
+            DAL.close();
+            return Dt;
+        }
     }
 }

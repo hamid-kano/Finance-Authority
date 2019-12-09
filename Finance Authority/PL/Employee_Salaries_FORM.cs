@@ -18,6 +18,12 @@ namespace Finance_Authority.PL
         public Employee_Salaries_FORM()
         {
             InitializeComponent();
+            Employee_Salaries_Saliery.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
+            Employee_Salaries_Saliery.DisplayMember = "Date";
+            Employee_Salaries_Saliery.ValueMember = "Emission_Salaries_id";
+            Employee_Salaries_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
+            Employee_Salaries_Department.DisplayMember = "Department_Name";
+            Employee_Salaries_Department.ValueMember = "Department_ID";
             this.StyleManager = Program.theme_style(this);
             this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             Employee_Salaries_dataGrid.Columns[0].Visible = false;
@@ -205,6 +211,59 @@ namespace Finance_Authority.PL
         private void Employee_Salaries_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Employee_Salaries_Department_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idDepartment = Convert.ToInt32(Employee_Salaries_Department.SelectedValue);
+                Employee_Salaries_Employment.DataSource = cont.Contracts_Comb_Employee(idDepartment);
+                Employee_Salaries_Employment.DisplayMember = "fullName";
+                Employee_Salaries_Employment.ValueMember = "Emp_id";
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Department(idDepartment);
+                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        private void Employee_Salaries_Saliery_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idDepartment = Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue);
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(idDepartment);
+                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+            
+        }
+
+       
+        private void Employee_Salaries_Employment_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idDepartment = Convert.ToInt32(Employee_Salaries_Department.SelectedValue);
+                int idemployee = Convert.ToInt32(Employee_Salaries_Employment.SelectedValue);
+                DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
+                if (DT.Rows.Count > 0)
+                {
+                    DataRow row = DT.Rows[0];
+                    int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
+                    this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Employee_Department(id_EmployeeDES);
+                    Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                }
+            }
+            catch { }
         }
     }
 }

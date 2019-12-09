@@ -85,5 +85,23 @@ namespace Finance_Authority.PL
 
                 }
         }
+
+        private void Bills_Search_All_TextChanged(object sender, EventArgs e)
+        {
+            Bills_dataGrid.DataSource = bill.Bills_Search_All(Bills_Search_All.Text);
+            this.Bills_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Bills_Date_first_ValueChanged(object sender, EventArgs e)
+        {
+            Bills_dataGrid.DataSource = bill.Bills_Search_Between_Date(Bills_Date_first.Value , Bills_Date_last.Value);
+            this.Bills_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Bills_Date_last_ValueChanged(object sender, EventArgs e)
+        {
+            Bills_dataGrid.DataSource = bill.Bills_Search_Between_Date(Bills_Date_first.Value, Bills_Date_last.Value);
+            this.Bills_dataGrid.Columns[0].Visible = false;
+        }
     }
 }

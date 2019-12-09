@@ -103,6 +103,31 @@ namespace Finance_Authority.BL
             DAL.excutecommand("Object_Delete_By_Bill_ID", param);
             DAL.close();
         }
-
+        public DataTable Bills_Search_All(String textchange)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@textchange", SqlDbType.NVarChar);
+            param[0].Value = textchange;
+            Dt = DAL.selectdata("Bills_Search_All", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Bills_Search_Between_Date(DateTime Bills_Date_first, DateTime Bills_Date_last)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@Bills_Date_first", SqlDbType.DateTime);
+            param[0].Value = Bills_Date_first;
+            param[1] = new SqlParameter("@Bills_Date_last", SqlDbType.DateTime);
+            param[1].Value = Bills_Date_last;
+            Dt = DAL.selectdata("Bills_Search_Between_Date", param);
+            DAL.close();
+            return Dt;
+        }
     }
 }

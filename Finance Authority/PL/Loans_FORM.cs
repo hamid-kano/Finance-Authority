@@ -19,6 +19,9 @@ namespace Finance_Authority.PL
         public Loans_FORM()
         {
             InitializeComponent();
+            Loans_Search_Budget.DataSource = Coin.Coin_Exchange_CombBudg();
+            Loans_Search_Budget.DisplayMember = "Date";
+            Loans_Search_Budget.ValueMember = "Budget_Id";
             this.StyleManager = Program.theme_style(this);
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
@@ -146,6 +149,20 @@ namespace Finance_Authority.PL
             }
         }
 
-       
+        private void Loans_Search_All_TextChanged(object sender, EventArgs e)
+        {
+            this.Loans_Gridview.DataSource = Loa.Loans_Search_All(Loans_Search_All.Text);
+            Loans_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Loans_Search_Budget_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Loans_Gridview.DataSource = Loa.Loans_Search_Budget_Date(Convert.ToInt32(Loans_Search_Budget.SelectedValue));
+                Loans_Gridview.Columns[0].Visible = false;
+            }
+            catch { return; }
+        }
     }
 }

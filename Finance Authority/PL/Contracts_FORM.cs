@@ -142,5 +142,23 @@ namespace Finance_Authority.PL
                 Contracts_delete.Enabled = false;
             }
         }
+
+        private void Contracts_Search_All_TextChanged(object sender, EventArgs e)
+        {
+            this.Contracts_Gridview.DataSource = cont.Contracts_Search_All(Contracts_Search_All.Text);
+            Contracts_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Contracts_Date_first_ValueChanged(object sender, EventArgs e)
+        {
+            this.Contracts_Gridview.DataSource = cont.Contracts_Search_Between_Date(Contracts_Date_first.Value , Contracts_Date_last.Value);
+            Contracts_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Contracts_Date_last_ValueChanged(object sender, EventArgs e)
+        {
+            this.Contracts_Gridview.DataSource = cont.Contracts_Search_Between_Date(Contracts_Date_first.Value, Contracts_Date_last.Value);
+            Contracts_Gridview.Columns[0].Visible = false;
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Finance_Authority.PL
             Coin_Exchange_CombBudge.DataSource = Coin.Coin_Exchange_CombBudg();
             Coin_Exchange_CombBudge.DisplayMember = "Date";
             Coin_Exchange_CombBudge.ValueMember = "Budget_Id";
-            
+
 
         }
 
@@ -38,7 +38,7 @@ namespace Finance_Authority.PL
             Coin_Exchange_Dollar.Text = "";
             Coin_Exchange_rate.Text = "";
             Coin_Exchange_Notes.Text = "";
-           
+
         }
 
         private void Coin_Exchange_exit_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_add_Click(object sender, EventArgs e)
         {
-            Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text , Coin_Exchange_rate.Text , Coin_Exchange_Date.Value , Coin_Exchange_Notes.Text,Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue));
+            Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue));
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Program.Add_Message();
@@ -109,8 +109,13 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_CombSerach_SelectedValueChanged(object sender, EventArgs e)
         {
-            //int Datet = Convert.ToInt32(Coin_Exchange_CombSerach.SelectedValue);
-            //this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_Search_Date_Budget(Datet);
+            try
+            {
+                int Datet = Convert.ToInt32(Coin_Exchange_CombSerach.SelectedValue);
+                this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_Search_Date_Budget(Datet);
+                Coin_Exchange_Gridview.Columns[0].Visible = false;
+            }
+            catch { return; }
         }
     }
 }

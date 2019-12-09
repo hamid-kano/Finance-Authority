@@ -123,7 +123,7 @@ namespace Finance_Authority.PL
 
         private void Role_Functional_textsearch_TextChanged(object sender, EventArgs e)
         {
-            this.Role_Functional_Gridview.DataSource = Role.Role_Functional_Search(Role_Functional_Name.Text);
+            this.Role_Functional_Gridview.DataSource = Role.Role_Functional_Search(Role_Functional_textsearch.Text);
             Role_Functional_Gridview.Columns[0].Visible = false;
         }
     }

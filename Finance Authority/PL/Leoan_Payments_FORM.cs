@@ -20,6 +20,9 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
+            Leoan_Payments_CombSerach.DataSource = Coin.Coin_Exchange_CombBudg();
+            Leoan_Payments_CombSerach.DisplayMember = "Date";
+            Leoan_Payments_CombSerach.ValueMember = "Budget_Id";
             this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
             Leoan_Payments_Gridview.Columns[0].Visible = false;
             Leoan_Payments_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
@@ -158,6 +161,22 @@ namespace Finance_Authority.PL
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
             }
+        }
+
+        private void Leoan_Payments_Search_All_TextChanged(object sender, EventArgs e)
+        {
+            this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_Search_All(Leoan_Payments_Search_All.Text);
+            Leoan_Payments_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Leoan_Payments_CombSerach_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_Budget_Date(Convert.ToInt32(Leoan_Payments_CombSerach.SelectedValue));
+                Leoan_Payments_Gridview.Columns[0].Visible = false;
+            }
+            catch { return; }
         }
     }
 }

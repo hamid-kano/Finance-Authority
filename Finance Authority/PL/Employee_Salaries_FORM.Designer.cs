@@ -75,6 +75,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.Empl_Sala_va_out_sal = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Employee_Salaries_Department = new MetroFramework.Controls.MetroComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Employee_Salaries_Employment = new MetroFramework.Controls.MetroComboBox();
+            this.Employee_Salaries_Saliery = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -370,7 +376,7 @@
             this.Employee_Salaries_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Salaries_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Salaries_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Employee_Salaries_dataGrid.Location = new System.Drawing.Point(230, 81);
+            this.Employee_Salaries_dataGrid.Location = new System.Drawing.Point(230, 109);
             this.Employee_Salaries_dataGrid.Name = "Employee_Salaries_dataGrid";
             this.Employee_Salaries_dataGrid.ReadOnly = true;
             this.Employee_Salaries_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -384,7 +390,7 @@
             this.Employee_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1102, 585);
+            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1102, 557);
             this.Employee_Salaries_dataGrid.TabIndex = 196;
             this.Employee_Salaries_dataGrid.Click += new System.EventHandler(this.Employee_Salaries_dataGrid_Click);
             // 
@@ -470,9 +476,9 @@
             this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(5, 627);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 16);
+            this.label17.Size = new System.Drawing.Size(71, 16);
             this.label17.TabIndex = 229;
-            this.label17.Text = "تاريخ الراتب";
+            this.label17.Text = "اصدار الراتب";
             // 
             // Empl_Sala_Comb_Date_Emiss
             // 
@@ -533,11 +539,81 @@
             this.Empl_Sala_va_out_sal.Size = new System.Drawing.Size(113, 23);
             this.Empl_Sala_va_out_sal.TabIndex = 238;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(685, 73);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 16);
+            this.label20.TabIndex = 242;
+            this.label20.Text = "القسم";
+            // 
+            // Employee_Salaries_Department
+            // 
+            this.Employee_Salaries_Department.FormattingEnabled = true;
+            this.Employee_Salaries_Department.ItemHeight = 23;
+            this.Employee_Salaries_Department.Location = new System.Drawing.Point(746, 62);
+            this.Employee_Salaries_Department.Name = "Employee_Salaries_Department";
+            this.Employee_Salaries_Department.Size = new System.Drawing.Size(163, 29);
+            this.Employee_Salaries_Department.TabIndex = 241;
+            this.Employee_Salaries_Department.UseSelectable = true;
+            this.Employee_Salaries_Department.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Department_SelectedValueChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(405, 76);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(71, 16);
+            this.label21.TabIndex = 240;
+            this.label21.Text = "اصدار الراتب";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(990, 74);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 16);
+            this.label22.TabIndex = 244;
+            this.label22.Text = "الموظفين";
+            // 
+            // Employee_Salaries_Employment
+            // 
+            this.Employee_Salaries_Employment.FormattingEnabled = true;
+            this.Employee_Salaries_Employment.ItemHeight = 23;
+            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1056, 61);
+            this.Employee_Salaries_Employment.Name = "Employee_Salaries_Employment";
+            this.Employee_Salaries_Employment.Size = new System.Drawing.Size(163, 29);
+            this.Employee_Salaries_Employment.TabIndex = 243;
+            this.Employee_Salaries_Employment.UseSelectable = true;
+            this.Employee_Salaries_Employment.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Employment_SelectedValueChanged);
+           
+            // 
+            // Employee_Salaries_Saliery
+            // 
+            this.Employee_Salaries_Saliery.FormattingEnabled = true;
+            this.Employee_Salaries_Saliery.ItemHeight = 23;
+            this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(484, 63);
+            this.Employee_Salaries_Saliery.Name = "Employee_Salaries_Saliery";
+            this.Employee_Salaries_Saliery.Size = new System.Drawing.Size(163, 29);
+            this.Employee_Salaries_Saliery.TabIndex = 245;
+            this.Employee_Salaries_Saliery.UseSelectable = true;
+            this.Employee_Salaries_Saliery.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Saliery_SelectedValueChanged);
+            // 
             // Employee_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 736);
+            this.Controls.Add(this.Employee_Salaries_Saliery);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.Employee_Salaries_Employment);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.Employee_Salaries_Department);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.Empl_Sala_va_out_sal);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -638,5 +714,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Empl_Sala_va_out_sal;
+        private System.Windows.Forms.Label label20;
+        private MetroFramework.Controls.MetroComboBox Employee_Salaries_Department;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private MetroFramework.Controls.MetroComboBox Employee_Salaries_Employment;
+        private MetroFramework.Controls.MetroComboBox Employee_Salaries_Saliery;
     }
 }

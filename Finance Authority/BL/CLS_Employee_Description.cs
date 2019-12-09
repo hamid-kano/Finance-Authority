@@ -112,5 +112,29 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
+        public DataTable Employee_Description_Search_Department(String Department_Name)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Department_Name", SqlDbType.NVarChar);
+            param[0].Value = Department_Name;
+            Dt = DAL.selectdata("Employee_Description_Search_Department", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_Description_Search_All(String text_change)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@text_change", SqlDbType.NVarChar);
+            param[0].Value = text_change;
+            Dt = DAL.selectdata("Employee_Description_Search_All", param);
+            DAL.close();
+            return Dt;
+        }
     }
 }

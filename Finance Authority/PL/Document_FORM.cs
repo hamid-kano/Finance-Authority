@@ -114,5 +114,11 @@ namespace Finance_Authority.PL
             Document_Name.Text = Path.GetFileName(dlg.FileName);
             Document_Type.Text = Path.GetExtension(dlg.FileName);
         }
+
+        private void Document_Search_All_TextChanged(object sender, EventArgs e)
+        {
+            this.Document_Gridview.DataSource = Doc.Document_Search_All(Document_Search_All.Text);
+            this.Document_Gridview.Columns[0].Visible = false;
+        }
     }
 }

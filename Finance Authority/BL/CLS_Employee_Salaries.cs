@@ -138,5 +138,41 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
+        public DataTable Employee_Salaries_Search_Department(int Department_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Department_ID", SqlDbType.Int);
+            param[0].Value = Department_ID;
+            Dt = DAL.selectdata("Employee_Salaries_Search_Department", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_Salaries_Search_Emission_Salaries(int Emission_Salaries)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Emission_Salaries", SqlDbType.Int);
+            param[0].Value = Emission_Salaries;
+            Dt = DAL.selectdata("Employee_Salaries_Search_Emission_Salaries", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_Salaries_Search_Employee_Department(int Employee_Des_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_Des_ID", SqlDbType.Int);
+            param[0].Value = Employee_Des_ID;
+            Dt = DAL.selectdata("Employee_Salaries_Search_Employee_Department", param);
+            DAL.close();
+            return Dt;
+        }
     }
 }

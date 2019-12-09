@@ -17,6 +17,9 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
+            Employee_Description_Comb_Search.DataSource = Empl_Des.Employee_Description_Comb_Department();
+            Employee_Description_Comb_Search.DisplayMember = "Department_Name";
+            Employee_Description_Comb_Search.ValueMember = "Department_ID";
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[8].Visible = false;
@@ -30,6 +33,7 @@ namespace Finance_Authority.PL
             Employee_Description_Comb_Department.DisplayMember = "Department_Name";
             Employee_Description_Comb_Department.ValueMember = "Department_ID";
             Employee_Description_Comb_Satutes.SelectedIndex = 0;
+            
         }
 
         private void Employee_Description_new_Click(object sender, EventArgs e)
@@ -107,6 +111,20 @@ namespace Finance_Authority.PL
                 Employee_Description_update.Enabled = true;
                 Employee_Description_delete.Enabled = true;
             }
+        }
+
+        private void Employee_Description_Comb_Search_SelectedValueChanged(object sender, EventArgs e)
+        {
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_Search_Department(Employee_Description_Comb_Search.Text);
+            Employee_Description_dataGrid.Columns[0].Visible = false;
+            Employee_Description_dataGrid.Columns[8].Visible = false;
+        }
+
+        private void Employee_Description_Search_all_TextChanged(object sender, EventArgs e)
+        {
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_Search_All(Employee_Description_Search_all.Text);
+            Employee_Description_dataGrid.Columns[0].Visible = false;
+            Employee_Description_dataGrid.Columns[8].Visible = false;
         }
     }
 }

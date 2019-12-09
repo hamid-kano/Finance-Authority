@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Contracts_exit = new MetroFramework.Controls.MetroButton();
             this.Contracts_delete = new MetroFramework.Controls.MetroButton();
             this.Contracts_update = new MetroFramework.Controls.MetroButton();
@@ -51,6 +51,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Contracts_Comb_Contract_statue = new MetroFramework.Controls.MetroComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Contracts_Search_All = new MetroFramework.Controls.MetroTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Contracts_Date_last = new MetroFramework.Controls.MetroDateTime();
+            this.Contracts_Date_first = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.Contracts_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,23 +128,23 @@
             this.Contracts_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Contracts_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Contracts_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Contracts_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle8;
             this.Contracts_Gridview.EnableHeadersVisualStyles = false;
             this.Contracts_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Contracts_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -146,14 +152,14 @@
             this.Contracts_Gridview.Name = "Contracts_Gridview";
             this.Contracts_Gridview.ReadOnly = true;
             this.Contracts_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Contracts_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Contracts_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Contracts_Gridview.Size = new System.Drawing.Size(669, 383);
@@ -301,11 +307,100 @@
             this.label6.TabIndex = 185;
             this.label6.Text = "حالة العقود";
             // 
+            // Contracts_Search_All
+            // 
+            // 
+            // 
+            // 
+            this.Contracts_Search_All.CustomButton.Image = null;
+            this.Contracts_Search_All.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.Contracts_Search_All.CustomButton.Name = "";
+            this.Contracts_Search_All.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Contracts_Search_All.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Contracts_Search_All.CustomButton.TabIndex = 1;
+            this.Contracts_Search_All.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Contracts_Search_All.CustomButton.UseSelectable = true;
+            this.Contracts_Search_All.CustomButton.Visible = false;
+            this.Contracts_Search_All.Lines = new string[0];
+            this.Contracts_Search_All.Location = new System.Drawing.Point(406, 63);
+            this.Contracts_Search_All.MaxLength = 32767;
+            this.Contracts_Search_All.Name = "Contracts_Search_All";
+            this.Contracts_Search_All.PasswordChar = '\0';
+            this.Contracts_Search_All.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Contracts_Search_All.SelectedText = "";
+            this.Contracts_Search_All.SelectionLength = 0;
+            this.Contracts_Search_All.SelectionStart = 0;
+            this.Contracts_Search_All.ShortcutsEnabled = true;
+            this.Contracts_Search_All.Size = new System.Drawing.Size(158, 23);
+            this.Contracts_Search_All.TabIndex = 186;
+            this.Contracts_Search_All.UseSelectable = true;
+            this.Contracts_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Contracts_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Contracts_Search_All.TextChanged += new System.EventHandler(this.Contracts_Search_All_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(343, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 16);
+            this.label8.TabIndex = 187;
+            this.label8.Text = "بحث عام";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(660, 78);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.TabIndex = 191;
+            this.label9.Text = "تاريخ النهاية";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(661, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 16);
+            this.label10.TabIndex = 190;
+            this.label10.Text = "تاريخ البداية";
+            // 
+            // Contracts_Date_last
+            // 
+            this.Contracts_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Contracts_Date_last.Location = new System.Drawing.Point(744, 70);
+            this.Contracts_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Contracts_Date_last.Name = "Contracts_Date_last";
+            this.Contracts_Date_last.RightToLeftLayout = true;
+            this.Contracts_Date_last.Size = new System.Drawing.Size(163, 29);
+            this.Contracts_Date_last.TabIndex = 189;
+            this.Contracts_Date_last.ValueChanged += new System.EventHandler(this.Contracts_Date_last_ValueChanged);
+            // 
+            // Contracts_Date_first
+            // 
+            this.Contracts_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Contracts_Date_first.Location = new System.Drawing.Point(744, 24);
+            this.Contracts_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Contracts_Date_first.Name = "Contracts_Date_first";
+            this.Contracts_Date_first.RightToLeftLayout = true;
+            this.Contracts_Date_first.Size = new System.Drawing.Size(163, 29);
+            this.Contracts_Date_first.TabIndex = 188;
+            this.Contracts_Date_first.ValueChanged += new System.EventHandler(this.Contracts_Date_first_ValueChanged);
+            // 
             // Contracts_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 556);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Contracts_Date_last);
+            this.Controls.Add(this.Contracts_Date_first);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Contracts_Search_All);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Contracts_Comb_Contract_statue);
             this.Controls.Add(this.Contracts_Comb_Employee);
@@ -358,5 +453,11 @@
         private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroComboBox Contracts_Comb_Contract_statue;
         private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroTextBox Contracts_Search_All;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private MetroFramework.Controls.MetroDateTime Contracts_Date_last;
+        private MetroFramework.Controls.MetroDateTime Contracts_Date_first;
     }
 }

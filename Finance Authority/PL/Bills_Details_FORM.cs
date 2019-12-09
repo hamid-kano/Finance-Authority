@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         BL.CLS_Bills_Details Bill = new BL.CLS_Bills_Details();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
+        int _Bill_ID;
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace Finance_Authority.PL
             Bills_Comb_Budget.ValueMember = "Budget_Id";
             if (Bills_ID != -1)
             {
+                _Bill_ID = Bills_ID;
                 DataTable dt = new DataTable();
                 dt = Bill.Bill_View__ByID(Bills_ID);
                 Bills_NO_Bill.Text = dt.Rows[0][1].ToString();
@@ -48,7 +50,10 @@ namespace Finance_Authority.PL
             }
             else 
             {
-               Program.Bill_id=Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0])+1;
+               this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
+               this.Bill_Objects_dataGrid.Columns[0].Visible = false;
+               this.Bill_Objects_dataGrid.Columns[5].Visible = false;
+               Bills_add.Enabled = true;
             }
 
         }
@@ -63,10 +68,9 @@ namespace Finance_Authority.PL
             Bill_Total.Text = "";
             Bills_Notes.Text = "";
             Bills_NO_Bill.Text = "";
-            for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
-            {
-                Bill_Objects_dataGrid.Rows.Remove(Bill_Objects_dataGrid.Rows[i]);
-            }
+            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
+            this.Bill_Objects_dataGrid.Columns[0].Visible = false;
+            this.Bill_Objects_dataGrid.Columns[5].Visible = false;
         }
 
         private void Bills_exit_Click(object sender, EventArgs e)
@@ -85,15 +89,21 @@ namespace Finance_Authority.PL
 
         private void Bills_add_Click(object sender, EventArgs e)
         {
-            //Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
-            //Bill_Total.Text , Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text ,Convert.ToInt32(Bills_Comb_Budget.SelectedValue) , Convert.ToInt32(Bills_Comb_Department.SelectedValue));
+            Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
+            Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
+            _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
             for (int i = 0; i < Bill_Objects_dataGrid.RowCount-1; i++)
             {
-                obj.Bills_add(Bill_Objects_dataGrid.Rows[i].Cells[1].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[2].Value.ToString(),
+                obj.Bills_Object_add(Bill_Objects_dataGrid.Rows[i].Cells[1].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[2].Value.ToString(),
                     Bill_Objects_dataGrid.Rows[i].Cells[3].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[4].Value.ToString(),
-                    Program.Bill_id);
+                    _Bill_ID);
             }
 
+            Bills_FORM frm= Bills_FORM.getMainForm;
+            frm.Bills_dataGrid.DataSource = obj.Bills_View();
+            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
+            this.Bill_Objects_dataGrid.Columns[0].Visible = false;
+            this.Bill_Objects_dataGrid.Columns[5].Visible = false;
             Program.Add_Message();
             Bills_add.Enabled = false;
             Bills_Buyer_Name.Text = "";
@@ -107,34 +117,36 @@ namespace Finance_Authority.PL
 
         private void Bills_update_Click(object sender, EventArgs e)
         {
-            Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
-             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , Program.Bill_id);
-            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(Program.Bill_id);
+             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
+             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
+             obj.Bills_Object_Delete_ByBill_Id(_Bill_ID);
+            for (int i = 0; i < Bill_Objects_dataGrid.RowCount - 1; i++)
+            {
+                obj.Bills_Object_add(Bill_Objects_dataGrid.Rows[i].Cells[1].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[2].Value.ToString(),
+                    Bill_Objects_dataGrid.Rows[i].Cells[3].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[4].Value.ToString(),
+                    _Bill_ID);
+            }
+            Bills_FORM frm = Bills_FORM.getMainForm;
+            frm.Bills_dataGrid.DataSource = obj.Bills_View();
+            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;
-
             Program.Update_Message();
-            Bills_update.Enabled = false;
-            Bills_delete.Enabled = false;
-            Bills_Buyer_Name.Text = "";
-            Bills_Coin_Type.Text = "";
-            Bills_Exchange_rate.Text = "";
-            Bill_Type.Text = "";
-            Bill_Total.Text = "";
-            Bills_Notes.Text = "";
-            Bills_NO_Bill.Text = "";
+
         }
 
         private void Bills_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (Program.Delete_Confirm_Message() == DialogResult.OK)
             {
-                Bill.Bills_Details_Delete(Program.Bill_id);
-                this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(Program.Bill_id);
+                Bill.Bills_Details_Delete(_Bill_ID);
+                this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;
 
-                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Bills_FORM frm = Bills_FORM.getMainForm;
+                frm.Bills_dataGrid.DataSource = obj.Bills_View();
+                Program.Delete_Message();
                 Bills_update.Enabled = false;
                 Bills_delete.Enabled = false;
                 Bills_Buyer_Name.Text = "";
@@ -146,5 +158,6 @@ namespace Finance_Authority.PL
                 Bills_NO_Bill.Text = "";
             }
         }
+
     }
 }

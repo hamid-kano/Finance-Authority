@@ -37,7 +37,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Bills_add(string object_Name, string object_Quantity ,string object_Unit_Price ,string object_Total_price ,int Bill_id)
+        public DataTable Bills_Object_add(string object_Name, string object_Quantity ,string object_Unit_Price ,string object_Total_price ,int Bill_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -57,7 +57,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Bills_update(string object_Name, string object_Quantity, string object_Unit_Price, string object_Total_price, int Bill_id ,int id)
+        public DataTable Bills_Object_update(string object_Name, string object_Quantity, string object_Unit_Price, string object_Total_price, int Bill_id ,int id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -79,7 +79,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public void Bills_Delete(int id)
+        public void Bills_Object_Delete(int id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
@@ -90,6 +90,18 @@ namespace Finance_Authority.BL
             DAL.excutecommand("Object_Delete", param);
             DAL.close();
 
+        }
+
+        public void Bills_Object_Delete_ByBill_Id(int id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Bill_ID", SqlDbType.Int);
+            param[0].Value = id;
+            DAL.excutecommand("Object_Delete_By_Bill_ID", param);
+            DAL.close();
         }
 
     }

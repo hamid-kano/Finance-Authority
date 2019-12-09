@@ -10,15 +10,6 @@ namespace Finance_Authority.BL
 {
     class CLS_Bills_Details
     {
-        public DataTable Bills_Details_De_View()
-        {
-            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
-            DAL.open();
-            DataTable Dt = new DataTable();
-            Dt = DAL.selectdata("Bill_View", null);
-            DAL.close();
-            return Dt;
-        }
         public DataTable Bill_View__ByID(int Bill_ID)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

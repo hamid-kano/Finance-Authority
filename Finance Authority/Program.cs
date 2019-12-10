@@ -29,6 +29,7 @@ namespace Finance_Authority
         public static int Leoan_Payments_id;
         public static int Employee_Salaries_id;
         public static int Document_id;
+        public static int Bill_Id;
         /// </summary>
         /// 
         public static int theme=1;

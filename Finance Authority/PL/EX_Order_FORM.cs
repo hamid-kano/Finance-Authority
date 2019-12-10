@@ -159,5 +159,21 @@ namespace Finance_Authority.PL
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_Between_Date(EX_Orders_first.Value, EX_Orders_last.Value);
             this.EX_Orders_dataGrid.Columns[0].Visible = false;
         }
+
+        private void EX_Order_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_EX_Orderrpt Art = new REPT.Crystal_EX_Orderrpt();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (EX_Orders_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(EX_Orders_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

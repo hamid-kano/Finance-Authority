@@ -160,5 +160,21 @@ namespace Finance_Authority.PL
             this.Contracts_Gridview.DataSource = cont.Contracts_Search_Between_Date(Contracts_Date_first.Value, Contracts_Date_last.Value);
             Contracts_Gridview.Columns[0].Visible = false;
         }
+
+        private void Contracts_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Contracts Art = new REPT.Crystal_Contracts();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Contracts_Gridview.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Contracts_Gridview.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

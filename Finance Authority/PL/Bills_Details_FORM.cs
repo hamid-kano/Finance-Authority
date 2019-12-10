@@ -159,5 +159,14 @@ namespace Finance_Authority.PL
             }
         }
 
+        private void Bills_Details_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Bills_Details Report = new REPT.Crystal_Bills_Details();
+            REPT.FRM_Report myfprm = new REPT.FRM_Report();
+            Report.SetParameterValue("@Bill_iid", Program.Bill_Id);
+            // Report.Refresh();
+            myfprm.crystalReportViewer1.ReportSource = Report;
+            myfprm.ShowDialog();
+        }
     }
 }

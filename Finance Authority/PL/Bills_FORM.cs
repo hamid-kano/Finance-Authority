@@ -50,7 +50,7 @@ namespace Finance_Authority.PL
             {
                 Bills_Details.Enabled = true;
                 Bills_delete.Enabled = true;
-
+                Program.Bill_Id = Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value);
             }
         }
 

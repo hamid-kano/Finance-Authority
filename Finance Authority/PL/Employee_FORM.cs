@@ -163,5 +163,21 @@ namespace Finance_Authority.PL
             this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
             Employee_dataGrid.Columns[0].Visible = false;
         }
+
+        private void Employee_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Employee Art = new REPT.Crystal_Employee();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Employee_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Employee_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

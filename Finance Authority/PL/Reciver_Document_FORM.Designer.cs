@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Reciver_Document_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.label10 = new System.Windows.Forms.Label();
             this.Reciver_Document_Notes = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.Reciver_Document_DateTime.Name = "Reciver_Document_DateTime";
             this.Reciver_Document_DateTime.RightToLeftLayout = true;
             this.Reciver_Document_DateTime.Size = new System.Drawing.Size(188, 29);
-            this.Reciver_Document_DateTime.TabIndex = 110;
+            this.Reciver_Document_DateTime.TabIndex = 6;
             // 
             // label10
             // 
@@ -92,7 +92,7 @@
             this.Reciver_Document_Notes.Location = new System.Drawing.Point(157, 424);
             this.Reciver_Document_Notes.Name = "Reciver_Document_Notes";
             this.Reciver_Document_Notes.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_Notes.TabIndex = 108;
+            this.Reciver_Document_Notes.TabIndex = 7;
             // 
             // label11
             // 
@@ -120,7 +120,7 @@
             this.Reciver_Document_Reason.Location = new System.Drawing.Point(157, 292);
             this.Reciver_Document_Reason.Name = "Reciver_Document_Reason";
             this.Reciver_Document_Reason.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_Reason.TabIndex = 105;
+            this.Reciver_Document_Reason.TabIndex = 4;
             // 
             // label3
             // 
@@ -158,7 +158,7 @@
             this.Reciver_Document_Receve.Location = new System.Drawing.Point(157, 334);
             this.Reciver_Document_Receve.Name = "Reciver_Document_Receve";
             this.Reciver_Document_Receve.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_Receve.TabIndex = 99;
+            this.Reciver_Document_Receve.TabIndex = 5;
             // 
             // label1
             // 
@@ -176,7 +176,8 @@
             this.Reciver_Document_sy.Location = new System.Drawing.Point(157, 124);
             this.Reciver_Document_sy.Name = "Reciver_Document_sy";
             this.Reciver_Document_sy.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_sy.TabIndex = 97;
+            this.Reciver_Document_sy.TabIndex = 0;
+            this.Reciver_Document_sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Reciver_Document_sy_KeyPress);
             // 
             // label6
             // 
@@ -194,7 +195,8 @@
             this.Reciver_Document_no.Location = new System.Drawing.Point(157, 250);
             this.Reciver_Document_no.Name = "Reciver_Document_no";
             this.Reciver_Document_no.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_no.TabIndex = 95;
+            this.Reciver_Document_no.TabIndex = 3;
+            this.Reciver_Document_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Reciver_Document_no_KeyPress);
             // 
             // label5
             // 
@@ -212,7 +214,8 @@
             this.Reciver_Document_rate.Location = new System.Drawing.Point(157, 208);
             this.Reciver_Document_rate.Name = "Reciver_Document_rate";
             this.Reciver_Document_rate.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_rate.TabIndex = 93;
+            this.Reciver_Document_rate.TabIndex = 2;
+            this.Reciver_Document_rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Reciver_Document_rate_KeyPress);
             // 
             // label4
             // 
@@ -230,7 +233,8 @@
             this.Reciver_Document_Dollar.Location = new System.Drawing.Point(157, 166);
             this.Reciver_Document_Dollar.Name = "Reciver_Document_Dollar";
             this.Reciver_Document_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_Dollar.TabIndex = 91;
+            this.Reciver_Document_Dollar.TabIndex = 1;
+            this.Reciver_Document_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Reciver_Document_Dollar_KeyPress);
             // 
             // Reciver_Document_dataGrid
             // 
@@ -242,23 +246,23 @@
             this.Reciver_Document_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Reciver_Document_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Reciver_Document_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Reciver_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Reciver_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Reciver_Document_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Reciver_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Reciver_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Reciver_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Reciver_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Reciver_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -266,14 +270,14 @@
             this.Reciver_Document_dataGrid.Name = "Reciver_Document_dataGrid";
             this.Reciver_Document_dataGrid.ReadOnly = true;
             this.Reciver_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Reciver_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Reciver_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Reciver_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Reciver_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Reciver_Document_dataGrid.Size = new System.Drawing.Size(655, 399);
@@ -286,7 +290,7 @@
             this.Reciver_Document_xit.Location = new System.Drawing.Point(923, 537);
             this.Reciver_Document_xit.Name = "Reciver_Document_xit";
             this.Reciver_Document_xit.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_xit.TabIndex = 115;
+            this.Reciver_Document_xit.TabIndex = 15;
             this.Reciver_Document_xit.Text = "خروج";
             this.Reciver_Document_xit.UseSelectable = true;
             this.Reciver_Document_xit.Click += new System.EventHandler(this.Reciver_Document_xit_Click);
@@ -298,7 +302,7 @@
             this.Reciver_Document_delete.Location = new System.Drawing.Point(708, 537);
             this.Reciver_Document_delete.Name = "Reciver_Document_delete";
             this.Reciver_Document_delete.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_delete.TabIndex = 114;
+            this.Reciver_Document_delete.TabIndex = 13;
             this.Reciver_Document_delete.Text = "حذف";
             this.Reciver_Document_delete.UseSelectable = true;
             this.Reciver_Document_delete.Click += new System.EventHandler(this.Reciver_Document_delete_Click);
@@ -310,7 +314,7 @@
             this.Reciver_Document_update.Location = new System.Drawing.Point(601, 537);
             this.Reciver_Document_update.Name = "Reciver_Document_update";
             this.Reciver_Document_update.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_update.TabIndex = 113;
+            this.Reciver_Document_update.TabIndex = 12;
             this.Reciver_Document_update.Text = "تعديل";
             this.Reciver_Document_update.UseSelectable = true;
             this.Reciver_Document_update.Click += new System.EventHandler(this.Reciver_Document_update_Click);
@@ -322,7 +326,7 @@
             this.Reciver_Document_add.Location = new System.Drawing.Point(482, 537);
             this.Reciver_Document_add.Name = "Reciver_Document_add";
             this.Reciver_Document_add.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_add.TabIndex = 112;
+            this.Reciver_Document_add.TabIndex = 11;
             this.Reciver_Document_add.Text = "أضافة";
             this.Reciver_Document_add.UseSelectable = true;
             this.Reciver_Document_add.Click += new System.EventHandler(this.Reciver_Document_add_Click);
@@ -333,7 +337,7 @@
             this.Reciver_Document_new.Location = new System.Drawing.Point(370, 537);
             this.Reciver_Document_new.Name = "Reciver_Document_new";
             this.Reciver_Document_new.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_new.TabIndex = 111;
+            this.Reciver_Document_new.TabIndex = 10;
             this.Reciver_Document_new.Text = "جديد";
             this.Reciver_Document_new.UseSelectable = true;
             this.Reciver_Document_new.Click += new System.EventHandler(this.Reciver_Document_new_Click);
@@ -345,7 +349,7 @@
             this.Reciver_Document_Comb_Date.Location = new System.Drawing.Point(157, 466);
             this.Reciver_Document_Comb_Date.Name = "Reciver_Document_Comb_Date";
             this.Reciver_Document_Comb_Date.Size = new System.Drawing.Size(188, 29);
-            this.Reciver_Document_Comb_Date.TabIndex = 117;
+            this.Reciver_Document_Comb_Date.TabIndex = 8;
             this.Reciver_Document_Comb_Date.UseSelectable = true;
             // 
             // Reciver_Document_Comb_Cate
@@ -355,7 +359,7 @@
             this.Reciver_Document_Comb_Cate.Location = new System.Drawing.Point(157, 514);
             this.Reciver_Document_Comb_Cate.Name = "Reciver_Document_Comb_Cate";
             this.Reciver_Document_Comb_Cate.Size = new System.Drawing.Size(188, 29);
-            this.Reciver_Document_Comb_Cate.TabIndex = 118;
+            this.Reciver_Document_Comb_Cate.TabIndex = 9;
             this.Reciver_Document_Comb_Cate.UseSelectable = true;
             // 
             // label8
@@ -374,8 +378,9 @@
             this.Reciver_Document_Search.Location = new System.Drawing.Point(537, 70);
             this.Reciver_Document_Search.Name = "Reciver_Document_Search";
             this.Reciver_Document_Search.Size = new System.Drawing.Size(188, 23);
-            this.Reciver_Document_Search.TabIndex = 119;
+            this.Reciver_Document_Search.TabIndex = 16;
             this.Reciver_Document_Search.TextChanged += new System.EventHandler(this.Reciver_Document_Search_TextChanged);
+            this.Reciver_Document_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Reciver_Document_Search_KeyPress);
             // 
             // Reciver_Document_Date_first
             // 
@@ -385,7 +390,7 @@
             this.Reciver_Document_Date_first.Name = "Reciver_Document_Date_first";
             this.Reciver_Document_Date_first.RightToLeftLayout = true;
             this.Reciver_Document_Date_first.Size = new System.Drawing.Size(188, 29);
-            this.Reciver_Document_Date_first.TabIndex = 122;
+            this.Reciver_Document_Date_first.TabIndex = 17;
             this.Reciver_Document_Date_first.ValueChanged += new System.EventHandler(this.Reciver_Document_Date_first_ValueChanged);
             // 
             // label12
@@ -406,7 +411,7 @@
             this.Reciver_Document_Date_last.Name = "Reciver_Document_Date_last";
             this.Reciver_Document_Date_last.RightToLeftLayout = true;
             this.Reciver_Document_Date_last.Size = new System.Drawing.Size(188, 29);
-            this.Reciver_Document_Date_last.TabIndex = 123;
+            this.Reciver_Document_Date_last.TabIndex = 18;
             this.Reciver_Document_Date_last.ValueChanged += new System.EventHandler(this.Reciver_Document_Date_last_ValueChanged);
             // 
             // Reciver_Document_Print
@@ -415,7 +420,7 @@
             this.Reciver_Document_Print.Location = new System.Drawing.Point(815, 537);
             this.Reciver_Document_Print.Name = "Reciver_Document_Print";
             this.Reciver_Document_Print.Size = new System.Drawing.Size(87, 37);
-            this.Reciver_Document_Print.TabIndex = 124;
+            this.Reciver_Document_Print.TabIndex = 14;
             this.Reciver_Document_Print.Text = "طباعة";
             this.Reciver_Document_Print.UseSelectable = true;
             this.Reciver_Document_Print.Click += new System.EventHandler(this.Reciver_Document_Print_Click);

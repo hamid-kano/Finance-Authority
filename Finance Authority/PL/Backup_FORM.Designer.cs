@@ -93,7 +93,7 @@
             this.Close_Button.Location = new System.Drawing.Point(351, 195);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(87, 37);
-            this.Close_Button.TabIndex = 3;
+            this.Close_Button.TabIndex = 2;
             this.Close_Button.Text = "خروج";
             this.Close_Button.UseSelectable = true;
             this.Close_Button.Click += new System.EventHandler(this.Close_Button_Click);

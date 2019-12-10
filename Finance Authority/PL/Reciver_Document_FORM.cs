@@ -156,5 +156,30 @@ namespace Finance_Authority.PL
                 FRPT.ShowDialog();
             }
         }
+
+        private void Reciver_Document_sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Reciver_Document_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Reciver_Document_rate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Reciver_Document_no_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Reciver_Document_Search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

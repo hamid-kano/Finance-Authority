@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Budget_amount_sy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,7 +79,8 @@
             this.Budget_amount_sy.Location = new System.Drawing.Point(150, 80);
             this.Budget_amount_sy.Name = "Budget_amount_sy";
             this.Budget_amount_sy.Size = new System.Drawing.Size(188, 23);
-            this.Budget_amount_sy.TabIndex = 76;
+            this.Budget_amount_sy.TabIndex = 0;
+            this.Budget_amount_sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_amount_sy_KeyPress);
             // 
             // label6
             // 
@@ -94,10 +95,11 @@
             // Budget_import_Dollar
             // 
             this.Budget_import_Dollar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_import_Dollar.Location = new System.Drawing.Point(150, 209);
+            this.Budget_import_Dollar.Location = new System.Drawing.Point(150, 206);
             this.Budget_import_Dollar.Name = "Budget_import_Dollar";
             this.Budget_import_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Budget_import_Dollar.TabIndex = 72;
+            this.Budget_import_Dollar.TabIndex = 3;
+            this.Budget_import_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_import_Dollar_KeyPress);
             // 
             // label5
             // 
@@ -112,10 +114,11 @@
             // Budget_import_sy
             // 
             this.Budget_import_sy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_import_sy.Location = new System.Drawing.Point(150, 166);
+            this.Budget_import_sy.Location = new System.Drawing.Point(150, 164);
             this.Budget_import_sy.Name = "Budget_import_sy";
             this.Budget_import_sy.Size = new System.Drawing.Size(188, 23);
-            this.Budget_import_sy.TabIndex = 70;
+            this.Budget_import_sy.TabIndex = 2;
+            this.Budget_import_sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_import_sy_KeyPress);
             // 
             // label4
             // 
@@ -130,10 +133,11 @@
             // Budget_amount_Dollar
             // 
             this.Budget_amount_Dollar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_amount_Dollar.Location = new System.Drawing.Point(150, 123);
+            this.Budget_amount_Dollar.Location = new System.Drawing.Point(150, 122);
             this.Budget_amount_Dollar.Name = "Budget_amount_Dollar";
             this.Budget_amount_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Budget_amount_Dollar.TabIndex = 68;
+            this.Budget_amount_Dollar.TabIndex = 1;
+            this.Budget_amount_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_amount_Dollar_KeyPress);
             // 
             // label8
             // 
@@ -155,23 +159,23 @@
             this.Budget_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Budget_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Budget_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Budget_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Budget_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Budget_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Budget_dataGrid.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Budget_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Budget_dataGrid.EnableHeadersVisualStyles = false;
             this.Budget_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Budget_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -179,14 +183,14 @@
             this.Budget_dataGrid.Name = "Budget_dataGrid";
             this.Budget_dataGrid.ReadOnly = true;
             this.Budget_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Budget_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Budget_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Budget_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Budget_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Budget_dataGrid.Size = new System.Drawing.Size(655, 399);
@@ -199,7 +203,7 @@
             this.Budget_xit.Location = new System.Drawing.Point(878, 501);
             this.Budget_xit.Name = "Budget_xit";
             this.Budget_xit.Size = new System.Drawing.Size(87, 37);
-            this.Budget_xit.TabIndex = 64;
+            this.Budget_xit.TabIndex = 14;
             this.Budget_xit.Text = "خروج";
             this.Budget_xit.UseSelectable = true;
             this.Budget_xit.Click += new System.EventHandler(this.Budget_xit_Click);
@@ -211,7 +215,7 @@
             this.Budget_delete.Location = new System.Drawing.Point(767, 501);
             this.Budget_delete.Name = "Budget_delete";
             this.Budget_delete.Size = new System.Drawing.Size(87, 37);
-            this.Budget_delete.TabIndex = 63;
+            this.Budget_delete.TabIndex = 13;
             this.Budget_delete.Text = "حذف";
             this.Budget_delete.UseSelectable = true;
             this.Budget_delete.Click += new System.EventHandler(this.Budget_delete_Click);
@@ -223,7 +227,7 @@
             this.Budget_update.Location = new System.Drawing.Point(660, 501);
             this.Budget_update.Name = "Budget_update";
             this.Budget_update.Size = new System.Drawing.Size(87, 37);
-            this.Budget_update.TabIndex = 62;
+            this.Budget_update.TabIndex = 12;
             this.Budget_update.Text = "تعديل";
             this.Budget_update.UseSelectable = true;
             this.Budget_update.Click += new System.EventHandler(this.Budget_update_Click);
@@ -235,7 +239,7 @@
             this.Budget_add.Location = new System.Drawing.Point(541, 501);
             this.Budget_add.Name = "Budget_add";
             this.Budget_add.Size = new System.Drawing.Size(87, 37);
-            this.Budget_add.TabIndex = 61;
+            this.Budget_add.TabIndex = 11;
             this.Budget_add.Text = "أضافة";
             this.Budget_add.UseSelectable = true;
             this.Budget_add.Click += new System.EventHandler(this.Budget_add_Click);
@@ -246,7 +250,7 @@
             this.Budget_new.Location = new System.Drawing.Point(429, 501);
             this.Budget_new.Name = "Budget_new";
             this.Budget_new.Size = new System.Drawing.Size(87, 37);
-            this.Budget_new.TabIndex = 60;
+            this.Budget_new.TabIndex = 10;
             this.Budget_new.Text = "جديد";
             this.Budget_new.UseSelectable = true;
             this.Budget_new.Click += new System.EventHandler(this.Budget_new_Click);
@@ -264,10 +268,11 @@
             // Budget_Recycle_Sy
             // 
             this.Budget_Recycle_Sy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_Recycle_Sy.Location = new System.Drawing.Point(150, 252);
+            this.Budget_Recycle_Sy.Location = new System.Drawing.Point(150, 248);
             this.Budget_Recycle_Sy.Name = "Budget_Recycle_Sy";
             this.Budget_Recycle_Sy.Size = new System.Drawing.Size(188, 23);
-            this.Budget_Recycle_Sy.TabIndex = 84;
+            this.Budget_Recycle_Sy.TabIndex = 4;
+            this.Budget_Recycle_Sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_Recycle_Sy_KeyPress);
             // 
             // label3
             // 
@@ -282,10 +287,11 @@
             // Budget_spicified_Dollar
             // 
             this.Budget_spicified_Dollar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_spicified_Dollar.Location = new System.Drawing.Point(150, 381);
+            this.Budget_spicified_Dollar.Location = new System.Drawing.Point(150, 374);
             this.Budget_spicified_Dollar.Name = "Budget_spicified_Dollar";
             this.Budget_spicified_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Budget_spicified_Dollar.TabIndex = 82;
+            this.Budget_spicified_Dollar.TabIndex = 7;
+            this.Budget_spicified_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_spicified_Dollar_KeyPress);
             // 
             // label7
             // 
@@ -300,10 +306,11 @@
             // Budget_spicified_Sy
             // 
             this.Budget_spicified_Sy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_spicified_Sy.Location = new System.Drawing.Point(150, 338);
+            this.Budget_spicified_Sy.Location = new System.Drawing.Point(150, 332);
             this.Budget_spicified_Sy.Name = "Budget_spicified_Sy";
             this.Budget_spicified_Sy.Size = new System.Drawing.Size(188, 23);
-            this.Budget_spicified_Sy.TabIndex = 80;
+            this.Budget_spicified_Sy.TabIndex = 6;
+            this.Budget_spicified_Sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_spicified_Sy_KeyPress);
             // 
             // label9
             // 
@@ -318,10 +325,11 @@
             // Budget_Recycle_Dollar
             // 
             this.Budget_Recycle_Dollar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_Recycle_Dollar.Location = new System.Drawing.Point(150, 295);
+            this.Budget_Recycle_Dollar.Location = new System.Drawing.Point(150, 290);
             this.Budget_Recycle_Dollar.Name = "Budget_Recycle_Dollar";
             this.Budget_Recycle_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Budget_Recycle_Dollar.TabIndex = 78;
+            this.Budget_Recycle_Dollar.TabIndex = 5;
+            this.Budget_Recycle_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Budget_Recycle_Dollar_KeyPress);
             // 
             // label10
             // 
@@ -336,10 +344,10 @@
             // Budget_Notes
             // 
             this.Budget_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Budget_Notes.Location = new System.Drawing.Point(150, 467);
+            this.Budget_Notes.Location = new System.Drawing.Point(150, 464);
             this.Budget_Notes.Name = "Budget_Notes";
             this.Budget_Notes.Size = new System.Drawing.Size(188, 23);
-            this.Budget_Notes.TabIndex = 88;
+            this.Budget_Notes.TabIndex = 9;
             // 
             // label11
             // 
@@ -354,12 +362,12 @@
             // Budget_DateTime
             // 
             this.Budget_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Budget_DateTime.Location = new System.Drawing.Point(150, 425);
+            this.Budget_DateTime.Location = new System.Drawing.Point(150, 416);
             this.Budget_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Budget_DateTime.Name = "Budget_DateTime";
             this.Budget_DateTime.RightToLeftLayout = true;
             this.Budget_DateTime.Size = new System.Drawing.Size(188, 29);
-            this.Budget_DateTime.TabIndex = 90;
+            this.Budget_DateTime.TabIndex = 8;
             // 
             // Budget_Date_first
             // 
@@ -369,7 +377,7 @@
             this.Budget_Date_first.Name = "Budget_Date_first";
             this.Budget_Date_first.RightToLeftLayout = true;
             this.Budget_Date_first.Size = new System.Drawing.Size(188, 29);
-            this.Budget_Date_first.TabIndex = 91;
+            this.Budget_Date_first.TabIndex = 15;
             this.Budget_Date_first.ValueChanged += new System.EventHandler(this.Budget_Date_first_ValueChanged_1);
             // 
             // Budget_Date_last
@@ -380,7 +388,7 @@
             this.Budget_Date_last.Name = "Budget_Date_last";
             this.Budget_Date_last.RightToLeftLayout = true;
             this.Budget_Date_last.Size = new System.Drawing.Size(188, 29);
-            this.Budget_Date_last.TabIndex = 92;
+            this.Budget_Date_last.TabIndex = 16;
             this.Budget_Date_last.ValueChanged += new System.EventHandler(this.Budget_Date_last_ValueChanged_1);
             // 
             // Budget_FORM

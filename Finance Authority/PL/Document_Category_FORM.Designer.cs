@@ -50,7 +50,7 @@
             this.Document_Category_exit.Location = new System.Drawing.Point(538, 397);
             this.Document_Category_exit.Name = "Document_Category_exit";
             this.Document_Category_exit.Size = new System.Drawing.Size(87, 37);
-            this.Document_Category_exit.TabIndex = 57;
+            this.Document_Category_exit.TabIndex = 5;
             this.Document_Category_exit.Text = "خروج";
             this.Document_Category_exit.UseSelectable = true;
             this.Document_Category_exit.Click += new System.EventHandler(this.Document_Category_exit_Click);
@@ -62,7 +62,7 @@
             this.Document_Category_delete.Location = new System.Drawing.Point(426, 397);
             this.Document_Category_delete.Name = "Document_Category_delete";
             this.Document_Category_delete.Size = new System.Drawing.Size(87, 37);
-            this.Document_Category_delete.TabIndex = 56;
+            this.Document_Category_delete.TabIndex = 4;
             this.Document_Category_delete.Text = "حذف";
             this.Document_Category_delete.UseSelectable = true;
             this.Document_Category_delete.Click += new System.EventHandler(this.Document_Category_delete_Click);
@@ -74,7 +74,7 @@
             this.Document_Category_update.Location = new System.Drawing.Point(314, 397);
             this.Document_Category_update.Name = "Document_Category_update";
             this.Document_Category_update.Size = new System.Drawing.Size(87, 37);
-            this.Document_Category_update.TabIndex = 55;
+            this.Document_Category_update.TabIndex = 3;
             this.Document_Category_update.Text = "تعديل";
             this.Document_Category_update.UseSelectable = true;
             this.Document_Category_update.Click += new System.EventHandler(this.Document_Category_update_Click);
@@ -86,7 +86,7 @@
             this.Document_Category_add.Location = new System.Drawing.Point(202, 397);
             this.Document_Category_add.Name = "Document_Category_add";
             this.Document_Category_add.Size = new System.Drawing.Size(87, 37);
-            this.Document_Category_add.TabIndex = 54;
+            this.Document_Category_add.TabIndex = 2;
             this.Document_Category_add.Text = "أضافة";
             this.Document_Category_add.UseSelectable = true;
             this.Document_Category_add.Click += new System.EventHandler(this.Document_Category_add_Click);
@@ -97,7 +97,7 @@
             this.Document_Category_new.Location = new System.Drawing.Point(90, 397);
             this.Document_Category_new.Name = "Document_Category_new";
             this.Document_Category_new.Size = new System.Drawing.Size(87, 37);
-            this.Document_Category_new.TabIndex = 53;
+            this.Document_Category_new.TabIndex = 1;
             this.Document_Category_new.Text = "جديد";
             this.Document_Category_new.UseSelectable = true;
             this.Document_Category_new.Click += new System.EventHandler(this.Document_Category_new_Click);
@@ -176,7 +176,7 @@
             this.Document_Category_textsearch.Location = new System.Drawing.Point(211, 54);
             this.Document_Category_textsearch.Name = "Document_Category_textsearch";
             this.Document_Category_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_textsearch.TabIndex = 47;
+            this.Document_Category_textsearch.TabIndex = 6;
             this.Document_Category_textsearch.TextChanged += new System.EventHandler(this.Document_Category_textsearch_TextChanged);
             // 
             // Document_Category_Name
@@ -185,7 +185,7 @@
             this.Document_Category_Name.Location = new System.Drawing.Point(211, 356);
             this.Document_Category_Name.Name = "Document_Category_Name";
             this.Document_Category_Name.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_Name.TabIndex = 46;
+            this.Document_Category_Name.TabIndex = 0;
             // 
             // Document_Category_FORM
             // 

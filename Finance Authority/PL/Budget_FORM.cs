@@ -131,5 +131,45 @@ namespace Finance_Authority.PL
             this.Budget_dataGrid.DataSource = Bud.Budget_Date_Between(Budget_Date_first.Value, Budget_Date_last.Value);
             this.Budget_dataGrid.Columns[0].Visible = false;
         }
+
+        private void Budget_amount_sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_amount_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_import_sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_import_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_Recycle_Sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_Recycle_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_spicified_Sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Budget_spicified_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

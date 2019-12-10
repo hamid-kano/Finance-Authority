@@ -281,5 +281,15 @@ namespace Finance_Authority.PL
                 FRPT.ShowDialog();
             }
         }
+
+        private void Empl_Sala_after_Reb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Empl_Sala_Total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

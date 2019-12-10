@@ -52,7 +52,7 @@
             this.Role_Functional_exit.Location = new System.Drawing.Point(527, 385);
             this.Role_Functional_exit.Name = "Role_Functional_exit";
             this.Role_Functional_exit.Size = new System.Drawing.Size(87, 37);
-            this.Role_Functional_exit.TabIndex = 57;
+            this.Role_Functional_exit.TabIndex = 7;
             this.Role_Functional_exit.Text = "خروج";
             this.Role_Functional_exit.UseSelectable = true;
             this.Role_Functional_exit.Click += new System.EventHandler(this.Role_Functional_exit_Click);
@@ -64,7 +64,7 @@
             this.Role_Functional_delete.Location = new System.Drawing.Point(415, 385);
             this.Role_Functional_delete.Name = "Role_Functional_delete";
             this.Role_Functional_delete.Size = new System.Drawing.Size(87, 37);
-            this.Role_Functional_delete.TabIndex = 56;
+            this.Role_Functional_delete.TabIndex = 6;
             this.Role_Functional_delete.Text = "حذف";
             this.Role_Functional_delete.UseSelectable = true;
             this.Role_Functional_delete.Click += new System.EventHandler(this.Role_Functional_delete_Click);
@@ -76,7 +76,7 @@
             this.Role_Functional_update.Location = new System.Drawing.Point(303, 385);
             this.Role_Functional_update.Name = "Role_Functional_update";
             this.Role_Functional_update.Size = new System.Drawing.Size(87, 37);
-            this.Role_Functional_update.TabIndex = 55;
+            this.Role_Functional_update.TabIndex = 5;
             this.Role_Functional_update.Text = "تعديل";
             this.Role_Functional_update.UseSelectable = true;
             this.Role_Functional_update.Click += new System.EventHandler(this.Role_Functional_update_Click);
@@ -88,7 +88,7 @@
             this.Role_Functional_add.Location = new System.Drawing.Point(191, 385);
             this.Role_Functional_add.Name = "Role_Functional_add";
             this.Role_Functional_add.Size = new System.Drawing.Size(87, 37);
-            this.Role_Functional_add.TabIndex = 54;
+            this.Role_Functional_add.TabIndex = 4;
             this.Role_Functional_add.Text = "أضافة";
             this.Role_Functional_add.UseSelectable = true;
             this.Role_Functional_add.Click += new System.EventHandler(this.Role_Functional_add_Click);
@@ -99,7 +99,7 @@
             this.Role_Functional_new.Location = new System.Drawing.Point(79, 385);
             this.Role_Functional_new.Name = "Role_Functional_new";
             this.Role_Functional_new.Size = new System.Drawing.Size(87, 37);
-            this.Role_Functional_new.TabIndex = 53;
+            this.Role_Functional_new.TabIndex = 3;
             this.Role_Functional_new.Text = "جديد";
             this.Role_Functional_new.UseSelectable = true;
             this.Role_Functional_new.Click += new System.EventHandler(this.Role_Functional_new_Click);
@@ -168,7 +168,7 @@
             this.Role_Functional_Notes.Location = new System.Drawing.Point(429, 340);
             this.Role_Functional_Notes.Name = "Role_Functional_Notes";
             this.Role_Functional_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Role_Functional_Notes.TabIndex = 50;
+            this.Role_Functional_Notes.TabIndex = 1;
             // 
             // label2
             // 
@@ -196,7 +196,7 @@
             this.Role_Functional_textsearch.Location = new System.Drawing.Point(200, 42);
             this.Role_Functional_textsearch.Name = "Role_Functional_textsearch";
             this.Role_Functional_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Role_Functional_textsearch.TabIndex = 47;
+            this.Role_Functional_textsearch.TabIndex = 8;
             this.Role_Functional_textsearch.TextChanged += new System.EventHandler(this.Role_Functional_textsearch_TextChanged);
             // 
             // Role_Functional_Name
@@ -205,7 +205,7 @@
             this.Role_Functional_Name.Location = new System.Drawing.Point(178, 340);
             this.Role_Functional_Name.Name = "Role_Functional_Name";
             this.Role_Functional_Name.Size = new System.Drawing.Size(163, 23);
-            this.Role_Functional_Name.TabIndex = 46;
+            this.Role_Functional_Name.TabIndex = 0;
             // 
             // Role_Functional_FORM
             // 

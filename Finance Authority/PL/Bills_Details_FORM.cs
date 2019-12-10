@@ -168,5 +168,30 @@ namespace Finance_Authority.PL
             myfprm.crystalReportViewer1.ReportSource = Report;
             myfprm.ShowDialog();
         }
+
+        private void Bills_NO_Bill_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Bills_Coin_Type_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Bills_Exchange_rate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Bill_Type_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Bill_Total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

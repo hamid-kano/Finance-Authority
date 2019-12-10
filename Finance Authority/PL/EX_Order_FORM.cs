@@ -175,5 +175,15 @@ namespace Finance_Authority.PL
                 FRPT.ShowDialog();
             }
         }
+
+        private void EX_Orders_order_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void EX_Orders_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

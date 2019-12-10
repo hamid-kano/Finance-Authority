@@ -54,7 +54,7 @@
             this.Office_exit.Location = new System.Drawing.Point(698, 377);
             this.Office_exit.Name = "Office_exit";
             this.Office_exit.Size = new System.Drawing.Size(87, 37);
-            this.Office_exit.TabIndex = 57;
+            this.Office_exit.TabIndex = 7;
             this.Office_exit.Text = "خروج";
             this.Office_exit.UseSelectable = true;
             this.Office_exit.Click += new System.EventHandler(this.Office_exit_Click);
@@ -66,7 +66,7 @@
             this.Office_delete.Location = new System.Drawing.Point(586, 377);
             this.Office_delete.Name = "Office_delete";
             this.Office_delete.Size = new System.Drawing.Size(87, 37);
-            this.Office_delete.TabIndex = 56;
+            this.Office_delete.TabIndex = 6;
             this.Office_delete.Text = "حذف";
             this.Office_delete.UseSelectable = true;
             this.Office_delete.Click += new System.EventHandler(this.Office_delete_Click);
@@ -78,7 +78,7 @@
             this.Office_update.Location = new System.Drawing.Point(474, 377);
             this.Office_update.Name = "Office_update";
             this.Office_update.Size = new System.Drawing.Size(87, 37);
-            this.Office_update.TabIndex = 55;
+            this.Office_update.TabIndex = 5;
             this.Office_update.Text = "تعديل";
             this.Office_update.UseSelectable = true;
             this.Office_update.Click += new System.EventHandler(this.Office_update_Click);
@@ -90,7 +90,7 @@
             this.Office_add.Location = new System.Drawing.Point(362, 377);
             this.Office_add.Name = "Office_add";
             this.Office_add.Size = new System.Drawing.Size(87, 37);
-            this.Office_add.TabIndex = 54;
+            this.Office_add.TabIndex = 4;
             this.Office_add.Text = "أضافة";
             this.Office_add.UseSelectable = true;
             this.Office_add.Click += new System.EventHandler(this.Office_add_Click_1);
@@ -101,7 +101,7 @@
             this.Office_new.Location = new System.Drawing.Point(250, 377);
             this.Office_new.Name = "Office_new";
             this.Office_new.Size = new System.Drawing.Size(87, 37);
-            this.Office_new.TabIndex = 53;
+            this.Office_new.TabIndex = 3;
             this.Office_new.Text = "جديد";
             this.Office_new.UseSelectable = true;
             this.Office_new.Click += new System.EventHandler(this.Office_new_Click);
@@ -170,7 +170,7 @@
             this.Office_Notes.Location = new System.Drawing.Point(88, 186);
             this.Office_Notes.Name = "Office_Notes";
             this.Office_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Office_Notes.TabIndex = 50;
+            this.Office_Notes.TabIndex = 1;
             // 
             // label2
             // 
@@ -198,7 +198,7 @@
             this.Office_textsearch.Location = new System.Drawing.Point(363, 51);
             this.Office_textsearch.Name = "Office_textsearch";
             this.Office_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Office_textsearch.TabIndex = 47;
+            this.Office_textsearch.TabIndex = 8;
             this.Office_textsearch.TextChanged += new System.EventHandler(this.Office_textsearch_TextChanged);
             // 
             // Office_Name
@@ -207,7 +207,7 @@
             this.Office_Name.Location = new System.Drawing.Point(88, 131);
             this.Office_Name.Name = "Office_Name";
             this.Office_Name.Size = new System.Drawing.Size(163, 23);
-            this.Office_Name.TabIndex = 46;
+            this.Office_Name.TabIndex = 0;
             // 
             // label4
             // 
@@ -227,7 +227,7 @@
             this.Office_CombAuthontic.Location = new System.Drawing.Point(88, 233);
             this.Office_CombAuthontic.Name = "Office_CombAuthontic";
             this.Office_CombAuthontic.Size = new System.Drawing.Size(163, 24);
-            this.Office_CombAuthontic.TabIndex = 59;
+            this.Office_CombAuthontic.TabIndex = 2;
             // 
             // Office_FORM
             // 

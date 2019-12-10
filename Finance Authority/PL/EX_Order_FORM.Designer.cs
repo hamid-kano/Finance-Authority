@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EX_Orders_search = new System.Windows.Forms.TextBox();
@@ -86,8 +86,9 @@
             this.EX_Orders_search.Location = new System.Drawing.Point(497, 63);
             this.EX_Orders_search.Name = "EX_Orders_search";
             this.EX_Orders_search.Size = new System.Drawing.Size(111, 23);
-            this.EX_Orders_search.TabIndex = 21;
+            this.EX_Orders_search.TabIndex = 12;
             this.EX_Orders_search.TextChanged += new System.EventHandler(this.EX_Orders_search_TextChanged);
+            this.EX_Orders_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EX_Orders_search_KeyPress);
             // 
             // EX_Orders_order
             // 
@@ -95,7 +96,8 @@
             this.EX_Orders_order.Location = new System.Drawing.Point(113, 112);
             this.EX_Orders_order.Name = "EX_Orders_order";
             this.EX_Orders_order.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_order.TabIndex = 20;
+            this.EX_Orders_order.TabIndex = 0;
+            this.EX_Orders_order.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EX_Orders_order_KeyPress);
             // 
             // label3
             // 
@@ -123,7 +125,7 @@
             this.EX_Orders_tosorce.Location = new System.Drawing.Point(113, 208);
             this.EX_Orders_tosorce.Name = "EX_Orders_tosorce";
             this.EX_Orders_tosorce.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_tosorce.TabIndex = 27;
+            this.EX_Orders_tosorce.TabIndex = 2;
             // 
             // label5
             // 
@@ -141,7 +143,7 @@
             this.EX_Orders_Body_order.Location = new System.Drawing.Point(113, 253);
             this.EX_Orders_Body_order.Name = "EX_Orders_Body_order";
             this.EX_Orders_Body_order.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_Body_order.TabIndex = 29;
+            this.EX_Orders_Body_order.TabIndex = 3;
             // 
             // label6
             // 
@@ -159,7 +161,7 @@
             this.EX_Orders_Notes.Location = new System.Drawing.Point(113, 298);
             this.EX_Orders_Notes.Name = "EX_Orders_Notes";
             this.EX_Orders_Notes.Size = new System.Drawing.Size(188, 23);
-            this.EX_Orders_Notes.TabIndex = 31;
+            this.EX_Orders_Notes.TabIndex = 4;
             // 
             // label7
             // 
@@ -179,7 +181,7 @@
             this.EX_Orders_CombCategorise.Location = new System.Drawing.Point(113, 343);
             this.EX_Orders_CombCategorise.Name = "EX_Orders_CombCategorise";
             this.EX_Orders_CombCategorise.Size = new System.Drawing.Size(188, 24);
-            this.EX_Orders_CombCategorise.TabIndex = 34;
+            this.EX_Orders_CombCategorise.TabIndex = 5;
             // 
             // EX_Orders_DateTime
             // 
@@ -189,7 +191,7 @@
             this.EX_Orders_DateTime.Name = "EX_Orders_DateTime";
             this.EX_Orders_DateTime.RightToLeftLayout = true;
             this.EX_Orders_DateTime.Size = new System.Drawing.Size(188, 29);
-            this.EX_Orders_DateTime.TabIndex = 35;
+            this.EX_Orders_DateTime.TabIndex = 1;
             // 
             // EX_Orders_new
             // 
@@ -197,7 +199,7 @@
             this.EX_Orders_new.Location = new System.Drawing.Point(227, 393);
             this.EX_Orders_new.Name = "EX_Orders_new";
             this.EX_Orders_new.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_new.TabIndex = 36;
+            this.EX_Orders_new.TabIndex = 6;
             this.EX_Orders_new.Text = "جديد";
             this.EX_Orders_new.UseSelectable = true;
             this.EX_Orders_new.Click += new System.EventHandler(this.EX_Orders_new_Click);
@@ -209,7 +211,7 @@
             this.EX_Orders_add.Location = new System.Drawing.Point(339, 393);
             this.EX_Orders_add.Name = "EX_Orders_add";
             this.EX_Orders_add.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_add.TabIndex = 37;
+            this.EX_Orders_add.TabIndex = 7;
             this.EX_Orders_add.Text = "أضافة";
             this.EX_Orders_add.UseSelectable = true;
             this.EX_Orders_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
@@ -221,7 +223,7 @@
             this.EX_Orders_update.Location = new System.Drawing.Point(451, 393);
             this.EX_Orders_update.Name = "EX_Orders_update";
             this.EX_Orders_update.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_update.TabIndex = 38;
+            this.EX_Orders_update.TabIndex = 8;
             this.EX_Orders_update.Text = "تعديل";
             this.EX_Orders_update.UseSelectable = true;
             this.EX_Orders_update.Click += new System.EventHandler(this.EX_Orders_update_Click);
@@ -233,7 +235,7 @@
             this.EX_Orders_delete.Location = new System.Drawing.Point(563, 393);
             this.EX_Orders_delete.Name = "EX_Orders_delete";
             this.EX_Orders_delete.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_delete.TabIndex = 39;
+            this.EX_Orders_delete.TabIndex = 9;
             this.EX_Orders_delete.Text = "حذف";
             this.EX_Orders_delete.UseSelectable = true;
             this.EX_Orders_delete.Click += new System.EventHandler(this.EX_Orders_delete_Click);
@@ -244,7 +246,7 @@
             this.EX_Orders_exit.Location = new System.Drawing.Point(787, 393);
             this.EX_Orders_exit.Name = "EX_Orders_exit";
             this.EX_Orders_exit.Size = new System.Drawing.Size(87, 37);
-            this.EX_Orders_exit.TabIndex = 40;
+            this.EX_Orders_exit.TabIndex = 11;
             this.EX_Orders_exit.Text = "خروج";
             this.EX_Orders_exit.UseSelectable = true;
             this.EX_Orders_exit.Click += new System.EventHandler(this.EX_Orders_exit_Click);
@@ -259,23 +261,23 @@
             this.EX_Orders_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EX_Orders_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EX_Orders_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.EX_Orders_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EX_Orders_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EX_Orders_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.EX_Orders_dataGrid.EnableHeadersVisualStyles = false;
             this.EX_Orders_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EX_Orders_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -283,14 +285,14 @@
             this.EX_Orders_dataGrid.Name = "EX_Orders_dataGrid";
             this.EX_Orders_dataGrid.ReadOnly = true;
             this.EX_Orders_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.EX_Orders_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EX_Orders_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EX_Orders_dataGrid.Size = new System.Drawing.Size(536, 275);
@@ -313,7 +315,7 @@
             this.EX_Orders_search_All.Location = new System.Drawing.Point(708, 63);
             this.EX_Orders_search_All.Name = "EX_Orders_search_All";
             this.EX_Orders_search_All.Size = new System.Drawing.Size(111, 23);
-            this.EX_Orders_search_All.TabIndex = 42;
+            this.EX_Orders_search_All.TabIndex = 13;
             this.EX_Orders_search_All.TextChanged += new System.EventHandler(this.EX_Orders_search_All_TextChanged);
             // 
             // EX_Orders_last
@@ -324,7 +326,7 @@
             this.EX_Orders_last.Name = "EX_Orders_last";
             this.EX_Orders_last.RightToLeftLayout = true;
             this.EX_Orders_last.Size = new System.Drawing.Size(128, 29);
-            this.EX_Orders_last.TabIndex = 44;
+            this.EX_Orders_last.TabIndex = 15;
             this.EX_Orders_last.ValueChanged += new System.EventHandler(this.EX_Orders_last_ValueChanged);
             // 
             // EX_Orders_first
@@ -335,7 +337,7 @@
             this.EX_Orders_first.Name = "EX_Orders_first";
             this.EX_Orders_first.RightToLeftLayout = true;
             this.EX_Orders_first.Size = new System.Drawing.Size(128, 29);
-            this.EX_Orders_first.TabIndex = 45;
+            this.EX_Orders_first.TabIndex = 14;
             this.EX_Orders_first.ValueChanged += new System.EventHandler(this.EX_Orders_first_ValueChanged);
             // 
             // label9
@@ -354,7 +356,7 @@
             this.EX_Order_Print.Location = new System.Drawing.Point(675, 393);
             this.EX_Order_Print.Name = "EX_Order_Print";
             this.EX_Order_Print.Size = new System.Drawing.Size(87, 37);
-            this.EX_Order_Print.TabIndex = 249;
+            this.EX_Order_Print.TabIndex = 10;
             this.EX_Order_Print.Text = "طباعة";
             this.EX_Order_Print.UseSelectable = true;
             this.EX_Order_Print.Click += new System.EventHandler(this.EX_Order_Print_Click);

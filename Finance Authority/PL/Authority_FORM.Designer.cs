@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Authority_textsearch = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.Authority_textsearch.Location = new System.Drawing.Point(197, 47);
             this.Authority_textsearch.Name = "Authority_textsearch";
             this.Authority_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Authority_textsearch.TabIndex = 21;
+            this.Authority_textsearch.TabIndex = 8;
             this.Authority_textsearch.TextChanged += new System.EventHandler(this.Authority_textsearch_TextChanged);
             // 
             // Authority_Name
@@ -81,7 +81,7 @@
             this.Authority_Name.Location = new System.Drawing.Point(175, 345);
             this.Authority_Name.Name = "Authority_Name";
             this.Authority_Name.Size = new System.Drawing.Size(163, 23);
-            this.Authority_Name.TabIndex = 20;
+            this.Authority_Name.TabIndex = 0;
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.Authority_Notes.Location = new System.Drawing.Point(426, 345);
             this.Authority_Notes.Name = "Authority_Notes";
             this.Authority_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Authority_Notes.TabIndex = 25;
+            this.Authority_Notes.TabIndex = 1;
             // 
             // Authority_Gridview
             // 
@@ -111,23 +111,23 @@
             this.Authority_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Authority_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Authority_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Authority_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Authority_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Authority_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Authority_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Authority_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Authority_Gridview.EnableHeadersVisualStyles = false;
             this.Authority_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Authority_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -135,14 +135,14 @@
             this.Authority_Gridview.Name = "Authority_Gridview";
             this.Authority_Gridview.ReadOnly = true;
             this.Authority_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Authority_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Authority_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Authority_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Authority_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Authority_Gridview.Size = new System.Drawing.Size(624, 253);
@@ -155,7 +155,7 @@
             this.Authority_exit.Location = new System.Drawing.Point(524, 390);
             this.Authority_exit.Name = "Authority_exit";
             this.Authority_exit.Size = new System.Drawing.Size(87, 37);
-            this.Authority_exit.TabIndex = 45;
+            this.Authority_exit.TabIndex = 7;
             this.Authority_exit.Text = "خروج";
             this.Authority_exit.UseSelectable = true;
             this.Authority_exit.Click += new System.EventHandler(this.Authority_exit_Click);
@@ -167,7 +167,7 @@
             this.Authority_delete.Location = new System.Drawing.Point(412, 390);
             this.Authority_delete.Name = "Authority_delete";
             this.Authority_delete.Size = new System.Drawing.Size(87, 37);
-            this.Authority_delete.TabIndex = 44;
+            this.Authority_delete.TabIndex = 6;
             this.Authority_delete.Text = "حذف";
             this.Authority_delete.UseSelectable = true;
             this.Authority_delete.Click += new System.EventHandler(this.Authority_delete_Click);
@@ -179,7 +179,7 @@
             this.Authority_update.Location = new System.Drawing.Point(300, 390);
             this.Authority_update.Name = "Authority_update";
             this.Authority_update.Size = new System.Drawing.Size(87, 37);
-            this.Authority_update.TabIndex = 43;
+            this.Authority_update.TabIndex = 5;
             this.Authority_update.Text = "تعديل";
             this.Authority_update.UseSelectable = true;
             this.Authority_update.Click += new System.EventHandler(this.Authority_update_Click);
@@ -191,7 +191,7 @@
             this.Authority_add.Location = new System.Drawing.Point(188, 390);
             this.Authority_add.Name = "Authority_add";
             this.Authority_add.Size = new System.Drawing.Size(87, 37);
-            this.Authority_add.TabIndex = 42;
+            this.Authority_add.TabIndex = 4;
             this.Authority_add.Text = "أضافة";
             this.Authority_add.UseSelectable = true;
             this.Authority_add.Click += new System.EventHandler(this.Authority_add_Click);
@@ -202,7 +202,7 @@
             this.Authority_new.Location = new System.Drawing.Point(76, 390);
             this.Authority_new.Name = "Authority_new";
             this.Authority_new.Size = new System.Drawing.Size(87, 37);
-            this.Authority_new.TabIndex = 41;
+            this.Authority_new.TabIndex = 3;
             this.Authority_new.Text = "جديد";
             this.Authority_new.UseSelectable = true;
             this.Authority_new.Click += new System.EventHandler(this.Authority_new_Click);

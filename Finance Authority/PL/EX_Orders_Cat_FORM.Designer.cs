@@ -48,7 +48,7 @@
             this.EX_Orders_Cat_add.Location = new System.Drawing.Point(132, 393);
             this.EX_Orders_Cat_add.Name = "EX_Orders_Cat_add";
             this.EX_Orders_Cat_add.Size = new System.Drawing.Size(91, 42);
-            this.EX_Orders_Cat_add.TabIndex = 6;
+            this.EX_Orders_Cat_add.TabIndex = 2;
             this.EX_Orders_Cat_add.Text = "أضافة";
             this.EX_Orders_Cat_add.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_add.Click += new System.EventHandler(this.EX_Orders_Cat_add_Click);
@@ -60,7 +60,7 @@
             this.EX_Orders_Cat_update.Location = new System.Drawing.Point(247, 393);
             this.EX_Orders_Cat_update.Name = "EX_Orders_Cat_update";
             this.EX_Orders_Cat_update.Size = new System.Drawing.Size(91, 42);
-            this.EX_Orders_Cat_update.TabIndex = 7;
+            this.EX_Orders_Cat_update.TabIndex = 3;
             this.EX_Orders_Cat_update.Text = "تعديل";
             this.EX_Orders_Cat_update.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_update.Click += new System.EventHandler(this.EX_Orders_Cat_update_Click);
@@ -72,7 +72,7 @@
             this.EX_Orders_Cat_delete.Location = new System.Drawing.Point(358, 393);
             this.EX_Orders_Cat_delete.Name = "EX_Orders_Cat_delete";
             this.EX_Orders_Cat_delete.Size = new System.Drawing.Size(91, 42);
-            this.EX_Orders_Cat_delete.TabIndex = 8;
+            this.EX_Orders_Cat_delete.TabIndex = 4;
             this.EX_Orders_Cat_delete.Text = "حذف";
             this.EX_Orders_Cat_delete.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_delete.Click += new System.EventHandler(this.EX_Orders_Cat_delete_Click);
@@ -83,7 +83,7 @@
             this.EX_Orders_Cat_exit.Location = new System.Drawing.Point(469, 393);
             this.EX_Orders_Cat_exit.Name = "EX_Orders_Cat_exit";
             this.EX_Orders_Cat_exit.Size = new System.Drawing.Size(91, 42);
-            this.EX_Orders_Cat_exit.TabIndex = 9;
+            this.EX_Orders_Cat_exit.TabIndex = 5;
             this.EX_Orders_Cat_exit.Text = "خروج";
             this.EX_Orders_Cat_exit.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_exit.Click += new System.EventHandler(this.EX_Orders_Cat_exit_Click);
@@ -94,7 +94,7 @@
             this.EX_Orders_Cat_text1.Location = new System.Drawing.Point(156, 351);
             this.EX_Orders_Cat_text1.Name = "EX_Orders_Cat_text1";
             this.EX_Orders_Cat_text1.Size = new System.Drawing.Size(350, 23);
-            this.EX_Orders_Cat_text1.TabIndex = 10;
+            this.EX_Orders_Cat_text1.TabIndex = 0;
             // 
             // EX_Orders_Cat_textsearch
             // 
@@ -102,7 +102,7 @@
             this.EX_Orders_Cat_textsearch.Location = new System.Drawing.Point(156, 63);
             this.EX_Orders_Cat_textsearch.Name = "EX_Orders_Cat_textsearch";
             this.EX_Orders_Cat_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.EX_Orders_Cat_textsearch.TabIndex = 11;
+            this.EX_Orders_Cat_textsearch.TabIndex = 6;
             this.EX_Orders_Cat_textsearch.TextChanged += new System.EventHandler(this.EX_Orders_Cat_textsearch_TextChanged);
             // 
             // label1
@@ -131,7 +131,7 @@
             this.EX_Orders_Cat_new.Location = new System.Drawing.Point(23, 393);
             this.EX_Orders_Cat_new.Name = "EX_Orders_Cat_new";
             this.EX_Orders_Cat_new.Size = new System.Drawing.Size(91, 42);
-            this.EX_Orders_Cat_new.TabIndex = 14;
+            this.EX_Orders_Cat_new.TabIndex = 1;
             this.EX_Orders_Cat_new.Text = "جديد";
             this.EX_Orders_Cat_new.UseVisualStyleBackColor = true;
             this.EX_Orders_Cat_new.Click += new System.EventHandler(this.EX_Orders_Cat_new_Click);

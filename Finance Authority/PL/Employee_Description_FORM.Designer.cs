@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Employee_Description_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Description_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_Description_delete = new MetroFramework.Controls.MetroButton();
@@ -73,23 +73,23 @@
             this.Employee_Description_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_Description_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_Description_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Employee_Description_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Employee_Description_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Description_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Description_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -97,14 +97,14 @@
             this.Employee_Description_dataGrid.Name = "Employee_Description_dataGrid";
             this.Employee_Description_dataGrid.ReadOnly = true;
             this.Employee_Description_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Description_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Description_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Employee_Description_dataGrid.Size = new System.Drawing.Size(811, 399);
@@ -117,7 +117,7 @@
             this.Employee_Description_exit.Location = new System.Drawing.Point(951, 499);
             this.Employee_Description_exit.Name = "Employee_Description_exit";
             this.Employee_Description_exit.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_exit.TabIndex = 152;
+            this.Employee_Description_exit.TabIndex = 14;
             this.Employee_Description_exit.Text = "خروج";
             this.Employee_Description_exit.UseSelectable = true;
             this.Employee_Description_exit.Click += new System.EventHandler(this.Employee_Description_exit_Click);
@@ -129,7 +129,7 @@
             this.Employee_Description_delete.Location = new System.Drawing.Point(725, 499);
             this.Employee_Description_delete.Name = "Employee_Description_delete";
             this.Employee_Description_delete.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_delete.TabIndex = 151;
+            this.Employee_Description_delete.TabIndex = 12;
             this.Employee_Description_delete.Text = "حذف";
             this.Employee_Description_delete.UseSelectable = true;
             this.Employee_Description_delete.Click += new System.EventHandler(this.Employee_Description_delete_Click);
@@ -141,7 +141,7 @@
             this.Employee_Description_update.Location = new System.Drawing.Point(612, 499);
             this.Employee_Description_update.Name = "Employee_Description_update";
             this.Employee_Description_update.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_update.TabIndex = 150;
+            this.Employee_Description_update.TabIndex = 11;
             this.Employee_Description_update.Text = "تعديل";
             this.Employee_Description_update.UseSelectable = true;
             this.Employee_Description_update.Click += new System.EventHandler(this.Employee_Description_update_Click);
@@ -153,7 +153,7 @@
             this.Employee_Description_add.Location = new System.Drawing.Point(499, 499);
             this.Employee_Description_add.Name = "Employee_Description_add";
             this.Employee_Description_add.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_add.TabIndex = 149;
+            this.Employee_Description_add.TabIndex = 10;
             this.Employee_Description_add.Text = "أضافة";
             this.Employee_Description_add.UseSelectable = true;
             this.Employee_Description_add.Click += new System.EventHandler(this.Employee_Description_add_Click);
@@ -164,7 +164,7 @@
             this.Employee_Description_new.Location = new System.Drawing.Point(386, 499);
             this.Employee_Description_new.Name = "Employee_Description_new";
             this.Employee_Description_new.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_new.TabIndex = 148;
+            this.Employee_Description_new.TabIndex = 9;
             this.Employee_Description_new.Text = "جديد";
             this.Employee_Description_new.UseSelectable = true;
             this.Employee_Description_new.Click += new System.EventHandler(this.Employee_Description_new_Click);
@@ -185,7 +185,8 @@
             this.Employee_Description_Salery.Location = new System.Drawing.Point(114, 308);
             this.Employee_Description_Salery.Name = "Employee_Description_Salery";
             this.Employee_Description_Salery.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Description_Salery.TabIndex = 158;
+            this.Employee_Description_Salery.TabIndex = 5;
+            this.Employee_Description_Salery.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Employee_Description_Salery_KeyPress);
             // 
             // label5
             // 
@@ -203,7 +204,7 @@
             this.Employee_Description_N0_Book.Location = new System.Drawing.Point(114, 271);
             this.Employee_Description_N0_Book.Name = "Employee_Description_N0_Book";
             this.Employee_Description_N0_Book.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Description_N0_Book.TabIndex = 156;
+            this.Employee_Description_N0_Book.TabIndex = 4;
             // 
             // Employee_Description_DateTime
             // 
@@ -213,7 +214,7 @@
             this.Employee_Description_DateTime.Name = "Employee_Description_DateTime";
             this.Employee_Description_DateTime.RightToLeftLayout = true;
             this.Employee_Description_DateTime.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_DateTime.TabIndex = 163;
+            this.Employee_Description_DateTime.TabIndex = 3;
             // 
             // label11
             // 
@@ -232,7 +233,7 @@
             this.Employee_Description_Comb_Role.Location = new System.Drawing.Point(114, 389);
             this.Employee_Description_Comb_Role.Name = "Employee_Description_Comb_Role";
             this.Employee_Description_Comb_Role.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_Comb_Role.TabIndex = 167;
+            this.Employee_Description_Comb_Role.TabIndex = 7;
             this.Employee_Description_Comb_Role.UseSelectable = true;
             // 
             // Employee_Description_Comb_Department
@@ -242,7 +243,7 @@
             this.Employee_Description_Comb_Department.Location = new System.Drawing.Point(114, 346);
             this.Employee_Description_Comb_Department.Name = "Employee_Description_Comb_Department";
             this.Employee_Description_Comb_Department.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_Comb_Department.TabIndex = 166;
+            this.Employee_Description_Comb_Department.TabIndex = 6;
             this.Employee_Description_Comb_Department.UseSelectable = true;
             // 
             // label3
@@ -272,7 +273,7 @@
             this.Employee_Description_Comb_employ.Location = new System.Drawing.Point(114, 440);
             this.Employee_Description_Comb_employ.Name = "Employee_Description_Comb_employ";
             this.Employee_Description_Comb_employ.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_Comb_employ.TabIndex = 169;
+            this.Employee_Description_Comb_employ.TabIndex = 8;
             this.Employee_Description_Comb_employ.UseSelectable = true;
             // 
             // label2
@@ -291,7 +292,7 @@
             this.Employee_Description_lift.Location = new System.Drawing.Point(33, 22);
             this.Employee_Description_lift.Name = "Employee_Description_lift";
             this.Employee_Description_lift.Size = new System.Drawing.Size(59, 20);
-            this.Employee_Description_lift.TabIndex = 177;
+            this.Employee_Description_lift.TabIndex = 1;
             this.Employee_Description_lift.Text = "سابق";
             this.Employee_Description_lift.UseVisualStyleBackColor = true;
             // 
@@ -302,7 +303,7 @@
             this.Employee_Description_Now.Location = new System.Drawing.Point(141, 27);
             this.Employee_Description_Now.Name = "Employee_Description_Now";
             this.Employee_Description_Now.Size = new System.Drawing.Size(52, 20);
-            this.Employee_Description_Now.TabIndex = 176;
+            this.Employee_Description_Now.TabIndex = 0;
             this.Employee_Description_Now.TabStop = true;
             this.Employee_Description_Now.Text = "حالياً";
             this.Employee_Description_Now.UseVisualStyleBackColor = true;
@@ -348,7 +349,7 @@
             this.Employee_Description_Comb_Satutes.Location = new System.Drawing.Point(114, 184);
             this.Employee_Description_Comb_Satutes.Name = "Employee_Description_Comb_Satutes";
             this.Employee_Description_Comb_Satutes.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_Comb_Satutes.TabIndex = 180;
+            this.Employee_Description_Comb_Satutes.TabIndex = 2;
             this.Employee_Description_Comb_Satutes.UseSelectable = true;
             // 
             // label1
@@ -368,7 +369,7 @@
             this.Employee_Description_Comb_Search.Location = new System.Drawing.Point(570, 52);
             this.Employee_Description_Comb_Search.Name = "Employee_Description_Comb_Search";
             this.Employee_Description_Comb_Search.Size = new System.Drawing.Size(188, 29);
-            this.Employee_Description_Comb_Search.TabIndex = 183;
+            this.Employee_Description_Comb_Search.TabIndex = 15;
             this.Employee_Description_Comb_Search.UseSelectable = true;
             this.Employee_Description_Comb_Search.SelectedValueChanged += new System.EventHandler(this.Employee_Description_Comb_Search_SelectedValueChanged);
             // 
@@ -407,7 +408,7 @@
             this.Employee_Description_Search_all.SelectionStart = 0;
             this.Employee_Description_Search_all.ShortcutsEnabled = true;
             this.Employee_Description_Search_all.Size = new System.Drawing.Size(180, 23);
-            this.Employee_Description_Search_all.TabIndex = 184;
+            this.Employee_Description_Search_all.TabIndex = 16;
             this.Employee_Description_Search_all.UseSelectable = true;
             this.Employee_Description_Search_all.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Employee_Description_Search_all.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -429,7 +430,7 @@
             this.Employee_Description_Print.Location = new System.Drawing.Point(838, 499);
             this.Employee_Description_Print.Name = "Employee_Description_Print";
             this.Employee_Description_Print.Size = new System.Drawing.Size(87, 38);
-            this.Employee_Description_Print.TabIndex = 211;
+            this.Employee_Description_Print.TabIndex = 13;
             this.Employee_Description_Print.Text = "طباعة";
             this.Employee_Description_Print.UseSelectable = true;
             this.Employee_Description_Print.Click += new System.EventHandler(this.Employee_Description_Print_Click);

@@ -70,7 +70,7 @@
             this.Coin_Exchange_exit.Location = new System.Drawing.Point(700, 390);
             this.Coin_Exchange_exit.Name = "Coin_Exchange_exit";
             this.Coin_Exchange_exit.Size = new System.Drawing.Size(87, 37);
-            this.Coin_Exchange_exit.TabIndex = 71;
+            this.Coin_Exchange_exit.TabIndex = 10;
             this.Coin_Exchange_exit.Text = "خروج";
             this.Coin_Exchange_exit.UseSelectable = true;
             this.Coin_Exchange_exit.Click += new System.EventHandler(this.Coin_Exchange_exit_Click);
@@ -82,7 +82,7 @@
             this.Coin_Exchange_delete.Location = new System.Drawing.Point(588, 390);
             this.Coin_Exchange_delete.Name = "Coin_Exchange_delete";
             this.Coin_Exchange_delete.Size = new System.Drawing.Size(87, 37);
-            this.Coin_Exchange_delete.TabIndex = 70;
+            this.Coin_Exchange_delete.TabIndex = 9;
             this.Coin_Exchange_delete.Text = "حذف";
             this.Coin_Exchange_delete.UseSelectable = true;
             this.Coin_Exchange_delete.Click += new System.EventHandler(this.Coin_Exchange_delete_Click);
@@ -94,7 +94,7 @@
             this.Coin_Exchange_update.Location = new System.Drawing.Point(476, 390);
             this.Coin_Exchange_update.Name = "Coin_Exchange_update";
             this.Coin_Exchange_update.Size = new System.Drawing.Size(87, 37);
-            this.Coin_Exchange_update.TabIndex = 69;
+            this.Coin_Exchange_update.TabIndex = 8;
             this.Coin_Exchange_update.Text = "تعديل";
             this.Coin_Exchange_update.UseSelectable = true;
             this.Coin_Exchange_update.Click += new System.EventHandler(this.Coin_Exchange_update_Click);
@@ -106,7 +106,7 @@
             this.Coin_Exchange_add.Location = new System.Drawing.Point(364, 390);
             this.Coin_Exchange_add.Name = "Coin_Exchange_add";
             this.Coin_Exchange_add.Size = new System.Drawing.Size(87, 37);
-            this.Coin_Exchange_add.TabIndex = 68;
+            this.Coin_Exchange_add.TabIndex = 7;
             this.Coin_Exchange_add.Text = "أضافة";
             this.Coin_Exchange_add.UseSelectable = true;
             this.Coin_Exchange_add.Click += new System.EventHandler(this.Coin_Exchange_add_Click);
@@ -117,7 +117,7 @@
             this.Coin_Exchange_new.Location = new System.Drawing.Point(252, 390);
             this.Coin_Exchange_new.Name = "Coin_Exchange_new";
             this.Coin_Exchange_new.Size = new System.Drawing.Size(87, 37);
-            this.Coin_Exchange_new.TabIndex = 67;
+            this.Coin_Exchange_new.TabIndex = 6;
             this.Coin_Exchange_new.Text = "جديد";
             this.Coin_Exchange_new.UseSelectable = true;
             this.Coin_Exchange_new.Click += new System.EventHandler(this.Coin_Exchange_new_Click);
@@ -186,7 +186,8 @@
             this.Coin_Exchange_Dollar.Location = new System.Drawing.Point(103, 133);
             this.Coin_Exchange_Dollar.Name = "Coin_Exchange_Dollar";
             this.Coin_Exchange_Dollar.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Dollar.TabIndex = 64;
+            this.Coin_Exchange_Dollar.TabIndex = 1;
+            this.Coin_Exchange_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Dollar_KeyPress);
             // 
             // label2
             // 
@@ -214,7 +215,8 @@
             this.Coin_Exchange_Sy.Location = new System.Drawing.Point(103, 85);
             this.Coin_Exchange_Sy.Name = "Coin_Exchange_Sy";
             this.Coin_Exchange_Sy.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Sy.TabIndex = 60;
+            this.Coin_Exchange_Sy.TabIndex = 0;
+            this.Coin_Exchange_Sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Sy_KeyPress);
             // 
             // label6
             // 
@@ -232,7 +234,8 @@
             this.Coin_Exchange_rate.Location = new System.Drawing.Point(103, 181);
             this.Coin_Exchange_rate.Name = "Coin_Exchange_rate";
             this.Coin_Exchange_rate.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_rate.TabIndex = 74;
+            this.Coin_Exchange_rate.TabIndex = 2;
+            this.Coin_Exchange_rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_rate_KeyPress);
             // 
             // label7
             // 
@@ -250,7 +253,7 @@
             this.Coin_Exchange_Notes.Location = new System.Drawing.Point(103, 283);
             this.Coin_Exchange_Notes.Name = "Coin_Exchange_Notes";
             this.Coin_Exchange_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Notes.TabIndex = 80;
+            this.Coin_Exchange_Notes.TabIndex = 4;
             // 
             // label8
             // 
@@ -270,7 +273,7 @@
             this.Coin_Exchange_Date.Name = "Coin_Exchange_Date";
             this.Coin_Exchange_Date.RightToLeftLayout = true;
             this.Coin_Exchange_Date.Size = new System.Drawing.Size(163, 29);
-            this.Coin_Exchange_Date.TabIndex = 82;
+            this.Coin_Exchange_Date.TabIndex = 3;
             // 
             // Coin_Exchange_CombBudge
             // 
@@ -280,7 +283,7 @@
             this.Coin_Exchange_CombBudge.Name = "Coin_Exchange_CombBudge";
             this.Coin_Exchange_CombBudge.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Coin_Exchange_CombBudge.Size = new System.Drawing.Size(163, 29);
-            this.Coin_Exchange_CombBudge.TabIndex = 83;
+            this.Coin_Exchange_CombBudge.TabIndex = 5;
             this.Coin_Exchange_CombBudge.UseSelectable = true;
             // 
             // Coin_Exchange_CombSerach
@@ -291,7 +294,7 @@
             this.Coin_Exchange_CombSerach.Name = "Coin_Exchange_CombSerach";
             this.Coin_Exchange_CombSerach.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Coin_Exchange_CombSerach.Size = new System.Drawing.Size(195, 29);
-            this.Coin_Exchange_CombSerach.TabIndex = 84;
+            this.Coin_Exchange_CombSerach.TabIndex = 11;
             this.Coin_Exchange_CombSerach.UseSelectable = true;
             this.Coin_Exchange_CombSerach.SelectedValueChanged += new System.EventHandler(this.Coin_Exchange_CombSerach_SelectedValueChanged);
             // 

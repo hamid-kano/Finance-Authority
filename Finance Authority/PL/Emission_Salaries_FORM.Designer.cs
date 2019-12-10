@@ -100,7 +100,7 @@
             this.Emission_Salaries_exit.Location = new System.Drawing.Point(662, 508);
             this.Emission_Salaries_exit.Name = "Emission_Salaries_exit";
             this.Emission_Salaries_exit.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_exit.TabIndex = 58;
+            this.Emission_Salaries_exit.TabIndex = 7;
             this.Emission_Salaries_exit.Text = "خروج";
             this.Emission_Salaries_exit.UseSelectable = true;
             this.Emission_Salaries_exit.Click += new System.EventHandler(this.Emission_Salaries_exit_Click);
@@ -112,7 +112,7 @@
             this.Emission_Salaries_delete.Location = new System.Drawing.Point(551, 508);
             this.Emission_Salaries_delete.Name = "Emission_Salaries_delete";
             this.Emission_Salaries_delete.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_delete.TabIndex = 57;
+            this.Emission_Salaries_delete.TabIndex = 6;
             this.Emission_Salaries_delete.Text = "حذف";
             this.Emission_Salaries_delete.UseSelectable = true;
             this.Emission_Salaries_delete.Click += new System.EventHandler(this.Emission_Salaries_delete_Click);
@@ -124,7 +124,7 @@
             this.Emission_Salaries_update.Location = new System.Drawing.Point(444, 508);
             this.Emission_Salaries_update.Name = "Emission_Salaries_update";
             this.Emission_Salaries_update.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_update.TabIndex = 56;
+            this.Emission_Salaries_update.TabIndex = 5;
             this.Emission_Salaries_update.Text = "تعديل";
             this.Emission_Salaries_update.UseSelectable = true;
             this.Emission_Salaries_update.Click += new System.EventHandler(this.Emission_Salaries_update_Click);
@@ -136,7 +136,7 @@
             this.Emission_Salaries_add.Location = new System.Drawing.Point(325, 508);
             this.Emission_Salaries_add.Name = "Emission_Salaries_add";
             this.Emission_Salaries_add.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_add.TabIndex = 55;
+            this.Emission_Salaries_add.TabIndex = 4;
             this.Emission_Salaries_add.Text = "أضافة";
             this.Emission_Salaries_add.UseSelectable = true;
             this.Emission_Salaries_add.Click += new System.EventHandler(this.Emission_Salaries_add_Click);
@@ -147,7 +147,7 @@
             this.Emission_Salaries_new.Location = new System.Drawing.Point(213, 508);
             this.Emission_Salaries_new.Name = "Emission_Salaries_new";
             this.Emission_Salaries_new.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_new.TabIndex = 54;
+            this.Emission_Salaries_new.TabIndex = 3;
             this.Emission_Salaries_new.Text = "جديد";
             this.Emission_Salaries_new.UseSelectable = true;
             this.Emission_Salaries_new.Click += new System.EventHandler(this.Emission_Salaries_new_Click);
@@ -189,7 +189,7 @@
             this.Emission_Salaries_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Emission_Salaries_Date.Name = "Emission_Salaries_Date";
             this.Emission_Salaries_Date.Size = new System.Drawing.Size(151, 29);
-            this.Emission_Salaries_Date.TabIndex = 63;
+            this.Emission_Salaries_Date.TabIndex = 1;
             // 
             // Emission_Salaries_Comb_Budget
             // 
@@ -198,7 +198,7 @@
             this.Emission_Salaries_Comb_Budget.Location = new System.Drawing.Point(692, 455);
             this.Emission_Salaries_Comb_Budget.Name = "Emission_Salaries_Comb_Budget";
             this.Emission_Salaries_Comb_Budget.Size = new System.Drawing.Size(149, 29);
-            this.Emission_Salaries_Comb_Budget.TabIndex = 64;
+            this.Emission_Salaries_Comb_Budget.TabIndex = 2;
             this.Emission_Salaries_Comb_Budget.UseSelectable = true;
             // 
             // Emission_Salaries_Name_office
@@ -208,7 +208,7 @@
             this.Emission_Salaries_Name_office.Location = new System.Drawing.Point(165, 460);
             this.Emission_Salaries_Name_office.Name = "Emission_Salaries_Name_office";
             this.Emission_Salaries_Name_office.Size = new System.Drawing.Size(149, 29);
-            this.Emission_Salaries_Name_office.TabIndex = 65;
+            this.Emission_Salaries_Name_office.TabIndex = 0;
             this.Emission_Salaries_Name_office.UseSelectable = true;
             // 
             // Emission_Salaries_FORM

@@ -40,7 +40,7 @@
             this.Close_Button.Location = new System.Drawing.Point(351, 180);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(87, 37);
-            this.Close_Button.TabIndex = 7;
+            this.Close_Button.TabIndex = 2;
             this.Close_Button.Text = "خروج";
             this.Close_Button.UseSelectable = true;
             this.Close_Button.Click += new System.EventHandler(this.Close_Button_Click);
@@ -82,7 +82,7 @@
             this.Backup_Restor_Button.Location = new System.Drawing.Point(239, 180);
             this.Backup_Restor_Button.Name = "Backup_Restor_Button";
             this.Backup_Restor_Button.Size = new System.Drawing.Size(87, 37);
-            this.Backup_Restor_Button.TabIndex = 5;
+            this.Backup_Restor_Button.TabIndex = 1;
             this.Backup_Restor_Button.Text = "استعادة النسخة";
             this.Backup_Restor_Button.UseSelectable = true;
             this.Backup_Restor_Button.Click += new System.EventHandler(this.Backup_Restor_Button_Click);
@@ -93,7 +93,7 @@
             this.Brows_Button.Location = new System.Drawing.Point(109, 110);
             this.Brows_Button.Name = "Brows_Button";
             this.Brows_Button.Size = new System.Drawing.Size(87, 37);
-            this.Brows_Button.TabIndex = 4;
+            this.Brows_Button.TabIndex = 0;
             this.Brows_Button.Text = "مسار النسخة";
             this.Brows_Button.UseSelectable = true;
             this.Brows_Button.Click += new System.EventHandler(this.Brows_Button_Click);

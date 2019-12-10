@@ -117,5 +117,20 @@ namespace Finance_Authority.PL
             }
             catch { return; }
         }
+
+        private void Coin_Exchange_Sy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Coin_Exchange_Dollar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Coin_Exchange_rate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

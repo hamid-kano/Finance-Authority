@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Bills_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Bills_exit = new MetroFramework.Controls.MetroButton();
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
@@ -56,23 +56,23 @@
             this.Bills_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Bills_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Bills_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Bills_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Bills_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Bills_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Bills_dataGrid.EnableHeadersVisualStyles = false;
             this.Bills_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Bills_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -80,14 +80,14 @@
             this.Bills_dataGrid.Name = "Bills_dataGrid";
             this.Bills_dataGrid.ReadOnly = true;
             this.Bills_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bills_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bills_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Bills_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Bills_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Bills_dataGrid.Size = new System.Drawing.Size(848, 335);
@@ -100,7 +100,7 @@
             this.Bills_exit.Location = new System.Drawing.Point(644, 443);
             this.Bills_exit.Name = "Bills_exit";
             this.Bills_exit.Size = new System.Drawing.Size(87, 37);
-            this.Bills_exit.TabIndex = 46;
+            this.Bills_exit.TabIndex = 4;
             this.Bills_exit.Text = "خروج";
             this.Bills_exit.UseSelectable = true;
             this.Bills_exit.Click += new System.EventHandler(this.Bills_exit_Click);
@@ -112,7 +112,7 @@
             this.Bills_delete.Location = new System.Drawing.Point(420, 443);
             this.Bills_delete.Name = "Bills_delete";
             this.Bills_delete.Size = new System.Drawing.Size(87, 37);
-            this.Bills_delete.TabIndex = 45;
+            this.Bills_delete.TabIndex = 2;
             this.Bills_delete.Text = "حذف";
             this.Bills_delete.UseSelectable = true;
             this.Bills_delete.Click += new System.EventHandler(this.Bills_delete_Click);
@@ -124,7 +124,7 @@
             this.Bills_Details.Location = new System.Drawing.Point(308, 443);
             this.Bills_Details.Name = "Bills_Details";
             this.Bills_Details.Size = new System.Drawing.Size(87, 37);
-            this.Bills_Details.TabIndex = 44;
+            this.Bills_Details.TabIndex = 1;
             this.Bills_Details.Text = "تفاصيل";
             this.Bills_Details.UseSelectable = true;
             this.Bills_Details.Click += new System.EventHandler(this.Bills_Details_Click);
@@ -135,7 +135,7 @@
             this.Bills_add.Location = new System.Drawing.Point(196, 443);
             this.Bills_add.Name = "Bills_add";
             this.Bills_add.Size = new System.Drawing.Size(87, 37);
-            this.Bills_add.TabIndex = 43;
+            this.Bills_add.TabIndex = 0;
             this.Bills_add.Text = "اضافة";
             this.Bills_add.UseSelectable = true;
             this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
@@ -175,7 +175,7 @@
             this.Bills_Search_All.SelectionStart = 0;
             this.Bills_Search_All.ShortcutsEnabled = true;
             this.Bills_Search_All.Size = new System.Drawing.Size(124, 23);
-            this.Bills_Search_All.TabIndex = 50;
+            this.Bills_Search_All.TabIndex = 5;
             this.Bills_Search_All.UseSelectable = true;
             this.Bills_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Bills_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -209,7 +209,7 @@
             this.Bills_Date_last.Name = "Bills_Date_last";
             this.Bills_Date_last.RightToLeftLayout = true;
             this.Bills_Date_last.Size = new System.Drawing.Size(163, 29);
-            this.Bills_Date_last.TabIndex = 199;
+            this.Bills_Date_last.TabIndex = 7;
             this.Bills_Date_last.ValueChanged += new System.EventHandler(this.Bills_Date_last_ValueChanged);
             // 
             // Bills_Date_first
@@ -220,7 +220,7 @@
             this.Bills_Date_first.Name = "Bills_Date_first";
             this.Bills_Date_first.RightToLeftLayout = true;
             this.Bills_Date_first.Size = new System.Drawing.Size(163, 29);
-            this.Bills_Date_first.TabIndex = 198;
+            this.Bills_Date_first.TabIndex = 6;
             this.Bills_Date_first.ValueChanged += new System.EventHandler(this.Bills_Date_first_ValueChanged);
             // 
             // Bills_Print
@@ -229,7 +229,7 @@
             this.Bills_Print.Location = new System.Drawing.Point(532, 443);
             this.Bills_Print.Name = "Bills_Print";
             this.Bills_Print.Size = new System.Drawing.Size(87, 37);
-            this.Bills_Print.TabIndex = 202;
+            this.Bills_Print.TabIndex = 3;
             this.Bills_Print.Text = "طباعة";
             this.Bills_Print.UseSelectable = true;
             this.Bills_Print.Click += new System.EventHandler(this.Bills_Print_Click);

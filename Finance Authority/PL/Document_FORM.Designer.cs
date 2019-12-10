@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Document_exit = new MetroFramework.Controls.MetroButton();
             this.Document_delete = new MetroFramework.Controls.MetroButton();
             this.Document_update = new MetroFramework.Controls.MetroButton();
@@ -61,7 +61,7 @@
             this.Document_exit.Location = new System.Drawing.Point(762, 499);
             this.Document_exit.Name = "Document_exit";
             this.Document_exit.Size = new System.Drawing.Size(87, 37);
-            this.Document_exit.TabIndex = 55;
+            this.Document_exit.TabIndex = 12;
             this.Document_exit.Text = "خروج";
             this.Document_exit.UseSelectable = true;
             this.Document_exit.Click += new System.EventHandler(this.Document_exit_Click);
@@ -73,7 +73,7 @@
             this.Document_delete.Location = new System.Drawing.Point(650, 499);
             this.Document_delete.Name = "Document_delete";
             this.Document_delete.Size = new System.Drawing.Size(87, 37);
-            this.Document_delete.TabIndex = 54;
+            this.Document_delete.TabIndex = 10;
             this.Document_delete.Text = "حذف";
             this.Document_delete.UseSelectable = true;
             this.Document_delete.Click += new System.EventHandler(this.Document_delete_Click);
@@ -85,7 +85,7 @@
             this.Document_update.Location = new System.Drawing.Point(538, 499);
             this.Document_update.Name = "Document_update";
             this.Document_update.Size = new System.Drawing.Size(87, 37);
-            this.Document_update.TabIndex = 53;
+            this.Document_update.TabIndex = 9;
             this.Document_update.Text = "تعديل";
             this.Document_update.UseSelectable = true;
             this.Document_update.Click += new System.EventHandler(this.Document_update_Click);
@@ -97,7 +97,7 @@
             this.Document_add.Location = new System.Drawing.Point(426, 499);
             this.Document_add.Name = "Document_add";
             this.Document_add.Size = new System.Drawing.Size(87, 37);
-            this.Document_add.TabIndex = 52;
+            this.Document_add.TabIndex = 8;
             this.Document_add.Text = "أضافة";
             this.Document_add.UseSelectable = true;
             this.Document_add.Click += new System.EventHandler(this.Document_add_Click);
@@ -108,7 +108,7 @@
             this.Document_new.Location = new System.Drawing.Point(314, 499);
             this.Document_new.Name = "Document_new";
             this.Document_new.Size = new System.Drawing.Size(87, 37);
-            this.Document_new.TabIndex = 51;
+            this.Document_new.TabIndex = 7;
             this.Document_new.Text = "جديد";
             this.Document_new.UseSelectable = true;
             this.Document_new.Click += new System.EventHandler(this.Document_new_Click);
@@ -123,23 +123,23 @@
             this.Document_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Document_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Document_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Document_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Document_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Document_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.Document_Gridview.EnableHeadersVisualStyles = false;
             this.Document_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Document_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -147,14 +147,14 @@
             this.Document_Gridview.Name = "Document_Gridview";
             this.Document_Gridview.ReadOnly = true;
             this.Document_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Document_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Document_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Document_Gridview.Size = new System.Drawing.Size(782, 386);
@@ -177,7 +177,7 @@
             this.Document_Type.Location = new System.Drawing.Point(80, 194);
             this.Document_Type.Name = "Document_Type";
             this.Document_Type.Size = new System.Drawing.Size(118, 23);
-            this.Document_Type.TabIndex = 48;
+            this.Document_Type.TabIndex = 1;
             // 
             // label2
             // 
@@ -195,7 +195,7 @@
             this.Document_Name.Location = new System.Drawing.Point(80, 151);
             this.Document_Name.Name = "Document_Name";
             this.Document_Name.Size = new System.Drawing.Size(118, 23);
-            this.Document_Name.TabIndex = 46;
+            this.Document_Name.TabIndex = 0;
             // 
             // label1
             // 
@@ -213,7 +213,7 @@
             this.Document_Location.Location = new System.Drawing.Point(80, 285);
             this.Document_Location.Name = "Document_Location";
             this.Document_Location.Size = new System.Drawing.Size(118, 23);
-            this.Document_Location.TabIndex = 58;
+            this.Document_Location.TabIndex = 3;
             // 
             // label4
             // 
@@ -231,7 +231,7 @@
             this.Document_URL.Location = new System.Drawing.Point(80, 242);
             this.Document_URL.Name = "Document_URL";
             this.Document_URL.Size = new System.Drawing.Size(118, 23);
-            this.Document_URL.TabIndex = 56;
+            this.Document_URL.TabIndex = 2;
             // 
             // label5
             // 
@@ -249,7 +249,7 @@
             this.Document_Notes.Location = new System.Drawing.Point(80, 367);
             this.Document_Notes.Name = "Document_Notes";
             this.Document_Notes.Size = new System.Drawing.Size(118, 23);
-            this.Document_Notes.TabIndex = 62;
+            this.Document_Notes.TabIndex = 5;
             // 
             // label6
             // 
@@ -267,7 +267,7 @@
             this.Document_Extend.Location = new System.Drawing.Point(80, 324);
             this.Document_Extend.Name = "Document_Extend";
             this.Document_Extend.Size = new System.Drawing.Size(118, 23);
-            this.Document_Extend.TabIndex = 60;
+            this.Document_Extend.TabIndex = 4;
             // 
             // Document_View
             // 
@@ -275,7 +275,7 @@
             this.Document_View.Location = new System.Drawing.Point(204, 499);
             this.Document_View.Name = "Document_View";
             this.Document_View.Size = new System.Drawing.Size(87, 37);
-            this.Document_View.TabIndex = 64;
+            this.Document_View.TabIndex = 6;
             this.Document_View.Text = "أستعراض";
             this.Document_View.UseSelectable = true;
             this.Document_View.Click += new System.EventHandler(this.Document_View_Click);
@@ -315,7 +315,7 @@
             this.Document_Search_All.SelectionStart = 0;
             this.Document_Search_All.ShortcutsEnabled = true;
             this.Document_Search_All.Size = new System.Drawing.Size(311, 23);
-            this.Document_Search_All.TabIndex = 194;
+            this.Document_Search_All.TabIndex = 13;
             this.Document_Search_All.UseSelectable = true;
             this.Document_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

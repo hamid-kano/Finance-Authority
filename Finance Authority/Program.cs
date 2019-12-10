@@ -101,5 +101,18 @@ namespace Finance_Authority
             return MessageBox.Show("هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
         }
 
+
+         public static bool DenyChar(KeyPressEventArgs e) 
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+         }
+
     }
 }

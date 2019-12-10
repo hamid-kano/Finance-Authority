@@ -67,7 +67,7 @@
             this.Contracts_exit.Location = new System.Drawing.Point(829, 509);
             this.Contracts_exit.Name = "Contracts_exit";
             this.Contracts_exit.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_exit.TabIndex = 55;
+            this.Contracts_exit.TabIndex = 12;
             this.Contracts_exit.Text = "خروج";
             this.Contracts_exit.UseSelectable = true;
             this.Contracts_exit.Click += new System.EventHandler(this.Contracts_exit_Click);
@@ -79,7 +79,7 @@
             this.Contracts_delete.Location = new System.Drawing.Point(613, 509);
             this.Contracts_delete.Name = "Contracts_delete";
             this.Contracts_delete.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_delete.TabIndex = 54;
+            this.Contracts_delete.TabIndex = 10;
             this.Contracts_delete.Text = "حذف";
             this.Contracts_delete.UseSelectable = true;
             this.Contracts_delete.Click += new System.EventHandler(this.Contracts_delete_Click);
@@ -91,7 +91,7 @@
             this.Contracts_update.Location = new System.Drawing.Point(505, 509);
             this.Contracts_update.Name = "Contracts_update";
             this.Contracts_update.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_update.TabIndex = 53;
+            this.Contracts_update.TabIndex = 9;
             this.Contracts_update.Text = "تعديل";
             this.Contracts_update.UseSelectable = true;
             this.Contracts_update.Click += new System.EventHandler(this.Contracts_update_Click);
@@ -103,7 +103,7 @@
             this.Contracts_add.Location = new System.Drawing.Point(397, 509);
             this.Contracts_add.Name = "Contracts_add";
             this.Contracts_add.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_add.TabIndex = 52;
+            this.Contracts_add.TabIndex = 8;
             this.Contracts_add.Text = "أضافة";
             this.Contracts_add.UseSelectable = true;
             this.Contracts_add.Click += new System.EventHandler(this.Contracts_add_Click);
@@ -114,7 +114,7 @@
             this.Contracts_new.Location = new System.Drawing.Point(289, 509);
             this.Contracts_new.Name = "Contracts_new";
             this.Contracts_new.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_new.TabIndex = 51;
+            this.Contracts_new.TabIndex = 7;
             this.Contracts_new.Text = "جديد";
             this.Contracts_new.UseSelectable = true;
             this.Contracts_new.Click += new System.EventHandler(this.Contracts_new_Click);
@@ -183,7 +183,7 @@
             this.Contracts_Notes.Location = new System.Drawing.Point(99, 359);
             this.Contracts_Notes.Name = "Contracts_Notes";
             this.Contracts_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Contracts_Notes.TabIndex = 48;
+            this.Contracts_Notes.TabIndex = 4;
             // 
             // label2
             // 
@@ -201,7 +201,8 @@
             this.Contracts_Type.Location = new System.Drawing.Point(99, 139);
             this.Contracts_Type.Name = "Contracts_Type";
             this.Contracts_Type.Size = new System.Drawing.Size(163, 23);
-            this.Contracts_Type.TabIndex = 46;
+            this.Contracts_Type.TabIndex = 0;
+            this.Contracts_Type.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Contracts_Type_KeyPress);
             // 
             // Contracts_Date_Start
             // 
@@ -211,7 +212,7 @@
             this.Contracts_Date_Start.Name = "Contracts_Date_Start";
             this.Contracts_Date_Start.RightToLeftLayout = true;
             this.Contracts_Date_Start.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Date_Start.TabIndex = 56;
+            this.Contracts_Date_Start.TabIndex = 1;
             // 
             // Contracts_Date_end
             // 
@@ -221,7 +222,7 @@
             this.Contracts_Date_end.Name = "Contracts_Date_end";
             this.Contracts_Date_end.RightToLeftLayout = true;
             this.Contracts_Date_end.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Date_end.TabIndex = 57;
+            this.Contracts_Date_end.TabIndex = 2;
             // 
             // label1
             // 
@@ -251,7 +252,7 @@
             this.Contracts_Comb_Department.Location = new System.Drawing.Point(99, 405);
             this.Contracts_Comb_Department.Name = "Contracts_Comb_Department";
             this.Contracts_Comb_Department.Size = new System.Drawing.Size(163, 24);
-            this.Contracts_Comb_Department.TabIndex = 181;
+            this.Contracts_Comb_Department.TabIndex = 5;
             this.Contracts_Comb_Department.SelectedValueChanged += new System.EventHandler(this.Contracts_Comb_Department_SelectedValueChanged);
             // 
             // label7
@@ -272,7 +273,7 @@
             this.Contracts_Comb_Employee.Location = new System.Drawing.Point(99, 452);
             this.Contracts_Comb_Employee.Name = "Contracts_Comb_Employee";
             this.Contracts_Comb_Employee.Size = new System.Drawing.Size(163, 24);
-            this.Contracts_Comb_Employee.TabIndex = 183;
+            this.Contracts_Comb_Employee.TabIndex = 6;
             // 
             // label5
             // 
@@ -295,7 +296,7 @@
             this.Contracts_Comb_Contract_statue.Location = new System.Drawing.Point(99, 288);
             this.Contracts_Comb_Contract_statue.Name = "Contracts_Comb_Contract_statue";
             this.Contracts_Comb_Contract_statue.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Comb_Contract_statue.TabIndex = 184;
+            this.Contracts_Comb_Contract_statue.TabIndex = 3;
             this.Contracts_Comb_Contract_statue.UseSelectable = true;
             // 
             // label6
@@ -333,7 +334,7 @@
             this.Contracts_Search_All.SelectionStart = 0;
             this.Contracts_Search_All.ShortcutsEnabled = true;
             this.Contracts_Search_All.Size = new System.Drawing.Size(158, 23);
-            this.Contracts_Search_All.TabIndex = 186;
+            this.Contracts_Search_All.TabIndex = 13;
             this.Contracts_Search_All.UseSelectable = true;
             this.Contracts_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Contracts_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -377,7 +378,7 @@
             this.Contracts_Date_last.Name = "Contracts_Date_last";
             this.Contracts_Date_last.RightToLeftLayout = true;
             this.Contracts_Date_last.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Date_last.TabIndex = 189;
+            this.Contracts_Date_last.TabIndex = 15;
             this.Contracts_Date_last.ValueChanged += new System.EventHandler(this.Contracts_Date_last_ValueChanged);
             // 
             // Contracts_Date_first
@@ -388,7 +389,7 @@
             this.Contracts_Date_first.Name = "Contracts_Date_first";
             this.Contracts_Date_first.RightToLeftLayout = true;
             this.Contracts_Date_first.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Date_first.TabIndex = 188;
+            this.Contracts_Date_first.TabIndex = 14;
             this.Contracts_Date_first.ValueChanged += new System.EventHandler(this.Contracts_Date_first_ValueChanged);
             // 
             // Contracts_Print
@@ -397,7 +398,7 @@
             this.Contracts_Print.Location = new System.Drawing.Point(721, 509);
             this.Contracts_Print.Name = "Contracts_Print";
             this.Contracts_Print.Size = new System.Drawing.Size(87, 37);
-            this.Contracts_Print.TabIndex = 247;
+            this.Contracts_Print.TabIndex = 11;
             this.Contracts_Print.Text = "طباعة";
             this.Contracts_Print.UseSelectable = true;
             this.Contracts_Print.Click += new System.EventHandler(this.Contracts_Print_Click);

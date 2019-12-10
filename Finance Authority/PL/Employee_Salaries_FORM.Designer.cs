@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.Empl_Sala_Insurances = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@
             this.Empl_Sala_Insurances.Location = new System.Drawing.Point(111, 517);
             this.Empl_Sala_Insurances.Name = "Empl_Sala_Insurances";
             this.Empl_Sala_Insurances.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Insurances.TabIndex = 225;
+            this.Empl_Sala_Insurances.TabIndex = 13;
             // 
             // label7
             // 
@@ -119,7 +119,7 @@
             this.Empl_Sala_Files1.Location = new System.Drawing.Point(111, 551);
             this.Empl_Sala_Files1.Name = "Empl_Sala_Files1";
             this.Empl_Sala_Files1.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files1.TabIndex = 223;
+            this.Empl_Sala_Files1.TabIndex = 14;
             // 
             // label8
             // 
@@ -137,7 +137,7 @@
             this.Empl_Sala_Years_Seniority.Location = new System.Drawing.Point(111, 381);
             this.Empl_Sala_Years_Seniority.Name = "Empl_Sala_Years_Seniority";
             this.Empl_Sala_Years_Seniority.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Years_Seniority.TabIndex = 221;
+            this.Empl_Sala_Years_Seniority.TabIndex = 9;
             // 
             // label12
             // 
@@ -155,7 +155,7 @@
             this.Empl_Sala_Notes.Location = new System.Drawing.Point(111, 483);
             this.Empl_Sala_Notes.Name = "Empl_Sala_Notes";
             this.Empl_Sala_Notes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Notes.TabIndex = 219;
+            this.Empl_Sala_Notes.TabIndex = 12;
             // 
             // label14
             // 
@@ -173,7 +173,8 @@
             this.Empl_Sala_after_Reb.Location = new System.Drawing.Point(111, 449);
             this.Empl_Sala_after_Reb.Name = "Empl_Sala_after_Reb";
             this.Empl_Sala_after_Reb.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_after_Reb.TabIndex = 217;
+            this.Empl_Sala_after_Reb.TabIndex = 11;
+            this.Empl_Sala_after_Reb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Empl_Sala_after_Reb_KeyPress);
             // 
             // label15
             // 
@@ -191,7 +192,8 @@
             this.Empl_Sala_Total.Location = new System.Drawing.Point(111, 415);
             this.Empl_Sala_Total.Name = "Empl_Sala_Total";
             this.Empl_Sala_Total.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Total.TabIndex = 215;
+            this.Empl_Sala_Total.TabIndex = 10;
+            this.Empl_Sala_Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Empl_Sala_Total_KeyPress);
             // 
             // label13
             // 
@@ -209,7 +211,7 @@
             this.Empl_Sala_Punishments.Location = new System.Drawing.Point(111, 245);
             this.Empl_Sala_Punishments.Name = "Empl_Sala_Punishments";
             this.Empl_Sala_Punishments.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Punishments.TabIndex = 213;
+            this.Empl_Sala_Punishments.TabIndex = 5;
             // 
             // label10
             // 
@@ -227,7 +229,7 @@
             this.Empl_Sala_Reparations.Location = new System.Drawing.Point(111, 347);
             this.Empl_Sala_Reparations.Name = "Empl_Sala_Reparations";
             this.Empl_Sala_Reparations.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Reparations.TabIndex = 210;
+            this.Empl_Sala_Reparations.TabIndex = 8;
             // 
             // label11
             // 
@@ -255,7 +257,7 @@
             this.Empl_Sala_Loans.Location = new System.Drawing.Point(111, 279);
             this.Empl_Sala_Loans.Name = "Empl_Sala_Loans";
             this.Empl_Sala_Loans.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Loans.TabIndex = 207;
+            this.Empl_Sala_Loans.TabIndex = 6;
             // 
             // label9
             // 
@@ -273,7 +275,7 @@
             this.Empl_Sala_Taskes.Location = new System.Drawing.Point(111, 313);
             this.Empl_Sala_Taskes.Name = "Empl_Sala_Taskes";
             this.Empl_Sala_Taskes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Taskes.TabIndex = 205;
+            this.Empl_Sala_Taskes.TabIndex = 7;
             // 
             // label1
             // 
@@ -291,7 +293,7 @@
             this.Empl_Sala_Dayes.Location = new System.Drawing.Point(111, 75);
             this.Empl_Sala_Dayes.Name = "Empl_Sala_Dayes";
             this.Empl_Sala_Dayes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Dayes.TabIndex = 203;
+            this.Empl_Sala_Dayes.TabIndex = 0;
             // 
             // label6
             // 
@@ -309,7 +311,7 @@
             this.Empl_Sala_Exam.Location = new System.Drawing.Point(111, 211);
             this.Empl_Sala_Exam.Name = "Empl_Sala_Exam";
             this.Empl_Sala_Exam.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Exam.TabIndex = 201;
+            this.Empl_Sala_Exam.TabIndex = 4;
             // 
             // label5
             // 
@@ -327,7 +329,7 @@
             this.Empl_Sala_Absences.Location = new System.Drawing.Point(111, 143);
             this.Empl_Sala_Absences.Name = "Empl_Sala_Absences";
             this.Empl_Sala_Absences.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Absences.TabIndex = 199;
+            this.Empl_Sala_Absences.TabIndex = 2;
             // 
             // label4
             // 
@@ -345,7 +347,7 @@
             this.Empl_Sala_Rem_cons.Location = new System.Drawing.Point(111, 109);
             this.Empl_Sala_Rem_cons.Name = "Empl_Sala_Rem_cons";
             this.Empl_Sala_Rem_cons.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Rem_cons.TabIndex = 197;
+            this.Empl_Sala_Rem_cons.TabIndex = 1;
             // 
             // Employee_Salaries_dataGrid
             // 
@@ -357,23 +359,23 @@
             this.Employee_Salaries_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_Salaries_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_Salaries_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Salaries_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Salaries_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Employee_Salaries_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_Salaries_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_Salaries_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Employee_Salaries_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Salaries_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Salaries_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -381,14 +383,14 @@
             this.Employee_Salaries_dataGrid.Name = "Employee_Salaries_dataGrid";
             this.Employee_Salaries_dataGrid.ReadOnly = true;
             this.Employee_Salaries_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1102, 557);
@@ -401,7 +403,7 @@
             this.Employee_Salaries_exit.Location = new System.Drawing.Point(1046, 679);
             this.Employee_Salaries_exit.Name = "Employee_Salaries_exit";
             this.Employee_Salaries_exit.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_exit.TabIndex = 195;
+            this.Employee_Salaries_exit.TabIndex = 24;
             this.Employee_Salaries_exit.Text = "خروج";
             this.Employee_Salaries_exit.UseSelectable = true;
             this.Employee_Salaries_exit.Click += new System.EventHandler(this.Employee_Salaries_exit_Click);
@@ -413,7 +415,7 @@
             this.Employee_Salaries_delete.Location = new System.Drawing.Point(822, 679);
             this.Employee_Salaries_delete.Name = "Employee_Salaries_delete";
             this.Employee_Salaries_delete.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_delete.TabIndex = 194;
+            this.Employee_Salaries_delete.TabIndex = 22;
             this.Employee_Salaries_delete.Text = "حذف";
             this.Employee_Salaries_delete.UseSelectable = true;
             this.Employee_Salaries_delete.Click += new System.EventHandler(this.Employee_Salaries_delete_Click);
@@ -425,7 +427,7 @@
             this.Employee_Salaries_update.Location = new System.Drawing.Point(710, 679);
             this.Employee_Salaries_update.Name = "Employee_Salaries_update";
             this.Employee_Salaries_update.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_update.TabIndex = 193;
+            this.Employee_Salaries_update.TabIndex = 21;
             this.Employee_Salaries_update.Text = "تعديل";
             this.Employee_Salaries_update.UseSelectable = true;
             this.Employee_Salaries_update.Click += new System.EventHandler(this.Employee_Salaries_update_Click);
@@ -437,7 +439,7 @@
             this.Employee_Salaries_add.Location = new System.Drawing.Point(598, 679);
             this.Employee_Salaries_add.Name = "Employee_Salaries_add";
             this.Employee_Salaries_add.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_add.TabIndex = 192;
+            this.Employee_Salaries_add.TabIndex = 20;
             this.Employee_Salaries_add.Text = "أضافة";
             this.Employee_Salaries_add.UseSelectable = true;
             this.Employee_Salaries_add.Click += new System.EventHandler(this.Employee_Salaries_add_Click);
@@ -448,7 +450,7 @@
             this.Employee_Salaries_new.Location = new System.Drawing.Point(486, 679);
             this.Employee_Salaries_new.Name = "Employee_Salaries_new";
             this.Employee_Salaries_new.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_new.TabIndex = 191;
+            this.Employee_Salaries_new.TabIndex = 19;
             this.Employee_Salaries_new.Text = "جديد";
             this.Employee_Salaries_new.UseSelectable = true;
             this.Employee_Salaries_new.Click += new System.EventHandler(this.Employee_Salaries_new_Click);
@@ -469,7 +471,7 @@
             this.Empl_Sala_Files2.Location = new System.Drawing.Point(111, 585);
             this.Empl_Sala_Files2.Name = "Empl_Sala_Files2";
             this.Empl_Sala_Files2.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files2.TabIndex = 227;
+            this.Empl_Sala_Files2.TabIndex = 15;
             // 
             // label17
             // 
@@ -488,7 +490,7 @@
             this.Empl_Sala_Comb_Date_Emiss.Location = new System.Drawing.Point(111, 614);
             this.Empl_Sala_Comb_Date_Emiss.Name = "Empl_Sala_Comb_Date_Emiss";
             this.Empl_Sala_Comb_Date_Emiss.Size = new System.Drawing.Size(113, 29);
-            this.Empl_Sala_Comb_Date_Emiss.TabIndex = 233;
+            this.Empl_Sala_Comb_Date_Emiss.TabIndex = 16;
             this.Empl_Sala_Comb_Date_Emiss.UseSelectable = true;
             // 
             // Empl_Sala_Comb_Department
@@ -498,7 +500,7 @@
             this.Empl_Sala_Comb_Department.Location = new System.Drawing.Point(111, 649);
             this.Empl_Sala_Comb_Department.Name = "Empl_Sala_Comb_Department";
             this.Empl_Sala_Comb_Department.Size = new System.Drawing.Size(113, 29);
-            this.Empl_Sala_Comb_Department.TabIndex = 235;
+            this.Empl_Sala_Comb_Department.TabIndex = 17;
             this.Empl_Sala_Comb_Department.UseSelectable = true;
             this.Empl_Sala_Comb_Department.SelectedValueChanged += new System.EventHandler(this.Empl_Sala_Comb_Department_SelectedValueChanged);
             // 
@@ -509,7 +511,7 @@
             this.Empl_Sala_Comb_Emplyment.Location = new System.Drawing.Point(111, 684);
             this.Empl_Sala_Comb_Emplyment.Name = "Empl_Sala_Comb_Emplyment";
             this.Empl_Sala_Comb_Emplyment.Size = new System.Drawing.Size(113, 29);
-            this.Empl_Sala_Comb_Emplyment.TabIndex = 234;
+            this.Empl_Sala_Comb_Emplyment.TabIndex = 18;
             this.Empl_Sala_Comb_Emplyment.UseSelectable = true;
             // 
             // label18
@@ -538,7 +540,7 @@
             this.Empl_Sala_va_out_sal.Location = new System.Drawing.Point(111, 177);
             this.Empl_Sala_va_out_sal.Name = "Empl_Sala_va_out_sal";
             this.Empl_Sala_va_out_sal.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_va_out_sal.TabIndex = 238;
+            this.Empl_Sala_va_out_sal.TabIndex = 3;
             // 
             // label20
             // 
@@ -557,7 +559,7 @@
             this.Employee_Salaries_Department.Location = new System.Drawing.Point(746, 62);
             this.Employee_Salaries_Department.Name = "Employee_Salaries_Department";
             this.Employee_Salaries_Department.Size = new System.Drawing.Size(163, 29);
-            this.Employee_Salaries_Department.TabIndex = 241;
+            this.Employee_Salaries_Department.TabIndex = 26;
             this.Employee_Salaries_Department.UseSelectable = true;
             this.Employee_Salaries_Department.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Department_SelectedValueChanged);
             // 
@@ -588,7 +590,7 @@
             this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1056, 61);
             this.Employee_Salaries_Employment.Name = "Employee_Salaries_Employment";
             this.Employee_Salaries_Employment.Size = new System.Drawing.Size(163, 29);
-            this.Employee_Salaries_Employment.TabIndex = 243;
+            this.Employee_Salaries_Employment.TabIndex = 27;
             this.Employee_Salaries_Employment.UseSelectable = true;
             this.Employee_Salaries_Employment.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Employment_SelectedValueChanged);
             // 
@@ -599,7 +601,7 @@
             this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(484, 63);
             this.Employee_Salaries_Saliery.Name = "Employee_Salaries_Saliery";
             this.Employee_Salaries_Saliery.Size = new System.Drawing.Size(163, 29);
-            this.Employee_Salaries_Saliery.TabIndex = 245;
+            this.Employee_Salaries_Saliery.TabIndex = 25;
             this.Employee_Salaries_Saliery.UseSelectable = true;
             this.Employee_Salaries_Saliery.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Saliery_SelectedValueChanged);
             // 
@@ -609,7 +611,7 @@
             this.Employee_Salaries_Print.Location = new System.Drawing.Point(934, 679);
             this.Employee_Salaries_Print.Name = "Employee_Salaries_Print";
             this.Employee_Salaries_Print.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_Print.TabIndex = 246;
+            this.Employee_Salaries_Print.TabIndex = 23;
             this.Employee_Salaries_Print.Text = "طباعة";
             this.Employee_Salaries_Print.UseSelectable = true;
             this.Employee_Salaries_Print.Click += new System.EventHandler(this.Employee_Salaries_Print_Click);

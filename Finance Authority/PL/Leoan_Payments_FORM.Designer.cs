@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.Leoan_Payments_Comb_Employ = new MetroFramework.Controls.MetroComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.Leoan_Payments_Comb_Employ.Location = new System.Drawing.Point(85, 372);
             this.Leoan_Payments_Comb_Employ.Name = "Leoan_Payments_Comb_Employ";
             this.Leoan_Payments_Comb_Employ.Size = new System.Drawing.Size(163, 29);
-            this.Leoan_Payments_Comb_Employ.TabIndex = 84;
+            this.Leoan_Payments_Comb_Employ.TabIndex = 5;
             this.Leoan_Payments_Comb_Employ.UseSelectable = true;
             this.Leoan_Payments_Comb_Employ.SelectedValueChanged += new System.EventHandler(this.Leoan_Payments_Comb_Employ_SelectedValueChanged);
             // 
@@ -97,7 +97,7 @@
             this.Leoan_Payments_Comb_Department.Location = new System.Drawing.Point(85, 325);
             this.Leoan_Payments_Comb_Department.Name = "Leoan_Payments_Comb_Department";
             this.Leoan_Payments_Comb_Department.Size = new System.Drawing.Size(163, 29);
-            this.Leoan_Payments_Comb_Department.TabIndex = 82;
+            this.Leoan_Payments_Comb_Department.TabIndex = 4;
             this.Leoan_Payments_Comb_Department.UseSelectable = true;
             this.Leoan_Payments_Comb_Department.SelectedValueChanged += new System.EventHandler(this.Leoan_Payments_Comb_Department_SelectedValueChanged);
             // 
@@ -118,7 +118,7 @@
             this.Leoan_Payments_Comb_Budget.Location = new System.Drawing.Point(85, 278);
             this.Leoan_Payments_Comb_Budget.Name = "Leoan_Payments_Comb_Budget";
             this.Leoan_Payments_Comb_Budget.Size = new System.Drawing.Size(163, 29);
-            this.Leoan_Payments_Comb_Budget.TabIndex = 80;
+            this.Leoan_Payments_Comb_Budget.TabIndex = 3;
             this.Leoan_Payments_Comb_Budget.UseSelectable = true;
             // 
             // Leoan_Payments_Date
@@ -128,7 +128,7 @@
             this.Leoan_Payments_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Leoan_Payments_Date.Name = "Leoan_Payments_Date";
             this.Leoan_Payments_Date.Size = new System.Drawing.Size(163, 29);
-            this.Leoan_Payments_Date.TabIndex = 78;
+            this.Leoan_Payments_Date.TabIndex = 2;
             // 
             // label1
             // 
@@ -147,7 +147,7 @@
             this.Leoan_Payments_exit.Location = new System.Drawing.Point(856, 514);
             this.Leoan_Payments_exit.Name = "Leoan_Payments_exit";
             this.Leoan_Payments_exit.Size = new System.Drawing.Size(87, 37);
-            this.Leoan_Payments_exit.TabIndex = 75;
+            this.Leoan_Payments_exit.TabIndex = 12;
             this.Leoan_Payments_exit.Text = "خروج";
             this.Leoan_Payments_exit.UseSelectable = true;
             this.Leoan_Payments_exit.Click += new System.EventHandler(this.Leoan_Payments_exit_Click);
@@ -159,7 +159,7 @@
             this.Leoan_Payments_delete.Location = new System.Drawing.Point(636, 514);
             this.Leoan_Payments_delete.Name = "Leoan_Payments_delete";
             this.Leoan_Payments_delete.Size = new System.Drawing.Size(87, 37);
-            this.Leoan_Payments_delete.TabIndex = 74;
+            this.Leoan_Payments_delete.TabIndex = 10;
             this.Leoan_Payments_delete.Text = "حذف";
             this.Leoan_Payments_delete.UseSelectable = true;
             this.Leoan_Payments_delete.Click += new System.EventHandler(this.Leoan_Payments_delete_Click);
@@ -171,7 +171,7 @@
             this.Leoan_Payments_update.Location = new System.Drawing.Point(526, 514);
             this.Leoan_Payments_update.Name = "Leoan_Payments_update";
             this.Leoan_Payments_update.Size = new System.Drawing.Size(87, 37);
-            this.Leoan_Payments_update.TabIndex = 73;
+            this.Leoan_Payments_update.TabIndex = 9;
             this.Leoan_Payments_update.Text = "تعديل";
             this.Leoan_Payments_update.UseSelectable = true;
             this.Leoan_Payments_update.Click += new System.EventHandler(this.Leoan_Payments_update_Click);
@@ -183,7 +183,7 @@
             this.Leoan_Payments_add.Location = new System.Drawing.Point(416, 514);
             this.Leoan_Payments_add.Name = "Leoan_Payments_add";
             this.Leoan_Payments_add.Size = new System.Drawing.Size(87, 37);
-            this.Leoan_Payments_add.TabIndex = 72;
+            this.Leoan_Payments_add.TabIndex = 8;
             this.Leoan_Payments_add.Text = "أضافة";
             this.Leoan_Payments_add.UseSelectable = true;
             this.Leoan_Payments_add.Click += new System.EventHandler(this.Leoan_Payments_add_Click);
@@ -194,7 +194,7 @@
             this.Leoan_Payments_new.Location = new System.Drawing.Point(306, 514);
             this.Leoan_Payments_new.Name = "Leoan_Payments_new";
             this.Leoan_Payments_new.Size = new System.Drawing.Size(87, 37);
-            this.Leoan_Payments_new.TabIndex = 71;
+            this.Leoan_Payments_new.TabIndex = 7;
             this.Leoan_Payments_new.Text = "جديد";
             this.Leoan_Payments_new.UseSelectable = true;
             this.Leoan_Payments_new.Click += new System.EventHandler(this.Leoan_Payments_new_Click);
@@ -209,23 +209,23 @@
             this.Leoan_Payments_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Leoan_Payments_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Leoan_Payments_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Leoan_Payments_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Leoan_Payments_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Leoan_Payments_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Leoan_Payments_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Leoan_Payments_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.Leoan_Payments_Gridview.EnableHeadersVisualStyles = false;
             this.Leoan_Payments_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Leoan_Payments_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -233,14 +233,14 @@
             this.Leoan_Payments_Gridview.Name = "Leoan_Payments_Gridview";
             this.Leoan_Payments_Gridview.ReadOnly = true;
             this.Leoan_Payments_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Leoan_Payments_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Leoan_Payments_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Leoan_Payments_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Leoan_Payments_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Leoan_Payments_Gridview.Size = new System.Drawing.Size(746, 404);
@@ -263,7 +263,8 @@
             this.Leoan_Payments_Notes.Location = new System.Drawing.Point(85, 184);
             this.Leoan_Payments_Notes.Name = "Leoan_Payments_Notes";
             this.Leoan_Payments_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Leoan_Payments_Notes.TabIndex = 68;
+            this.Leoan_Payments_Notes.TabIndex = 1;
+            this.Leoan_Payments_Notes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Leoan_Payments_Notes_KeyPress);
             // 
             // label2
             // 
@@ -281,7 +282,7 @@
             this.Leoan_Payments_Amont.Location = new System.Drawing.Point(85, 139);
             this.Leoan_Payments_Amont.Name = "Leoan_Payments_Amont";
             this.Leoan_Payments_Amont.Size = new System.Drawing.Size(163, 23);
-            this.Leoan_Payments_Amont.TabIndex = 66;
+            this.Leoan_Payments_Amont.TabIndex = 0;
             // 
             // label4
             // 
@@ -300,7 +301,7 @@
             this.Leoan_Payments_Comb_Dateloean.Location = new System.Drawing.Point(85, 415);
             this.Leoan_Payments_Comb_Dateloean.Name = "Leoan_Payments_Comb_Dateloean";
             this.Leoan_Payments_Comb_Dateloean.Size = new System.Drawing.Size(163, 29);
-            this.Leoan_Payments_Comb_Dateloean.TabIndex = 86;
+            this.Leoan_Payments_Comb_Dateloean.TabIndex = 6;
             this.Leoan_Payments_Comb_Dateloean.UseSelectable = true;
             // 
             // Leoan_Payments_Search_All
@@ -328,7 +329,7 @@
             this.Leoan_Payments_Search_All.SelectionStart = 0;
             this.Leoan_Payments_Search_All.ShortcutsEnabled = true;
             this.Leoan_Payments_Search_All.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Search_All.TabIndex = 203;
+            this.Leoan_Payments_Search_All.TabIndex = 13;
             this.Leoan_Payments_Search_All.UseSelectable = true;
             this.Leoan_Payments_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -352,7 +353,7 @@
             this.Leoan_Payments_CombSerach.Name = "Leoan_Payments_CombSerach";
             this.Leoan_Payments_CombSerach.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Leoan_Payments_CombSerach.Size = new System.Drawing.Size(195, 29);
-            this.Leoan_Payments_CombSerach.TabIndex = 209;
+            this.Leoan_Payments_CombSerach.TabIndex = 14;
             this.Leoan_Payments_CombSerach.UseSelectable = true;
             this.Leoan_Payments_CombSerach.SelectedValueChanged += new System.EventHandler(this.Leoan_Payments_CombSerach_SelectedValueChanged);
             // 
@@ -372,7 +373,7 @@
             this.Leoan_Payments_Print.Location = new System.Drawing.Point(746, 514);
             this.Leoan_Payments_Print.Name = "Leoan_Payments_Print";
             this.Leoan_Payments_Print.Size = new System.Drawing.Size(87, 38);
-            this.Leoan_Payments_Print.TabIndex = 210;
+            this.Leoan_Payments_Print.TabIndex = 11;
             this.Leoan_Payments_Print.Text = "طباعة";
             this.Leoan_Payments_Print.UseSelectable = true;
             this.Leoan_Payments_Print.Click += new System.EventHandler(this.Leoan_Payments_Print_Click);

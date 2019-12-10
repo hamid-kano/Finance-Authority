@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Payment_Document_Date_last = new MetroFramework.Controls.MetroDateTime();
             this.Payment_Document_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.label12 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.Payment_Document_Date_last.Name = "Payment_Document_Date_last";
             this.Payment_Document_Date_last.RightToLeftLayout = true;
             this.Payment_Document_Date_last.Size = new System.Drawing.Size(188, 29);
-            this.Payment_Document_Date_last.TabIndex = 154;
+            this.Payment_Document_Date_last.TabIndex = 19;
             this.Payment_Document_Date_last.ValueChanged += new System.EventHandler(this.Payment_Document_Date_last_ValueChanged);
             // 
             // Payment_Document_Date_first
@@ -87,7 +87,7 @@
             this.Payment_Document_Date_first.Name = "Payment_Document_Date_first";
             this.Payment_Document_Date_first.RightToLeftLayout = true;
             this.Payment_Document_Date_first.Size = new System.Drawing.Size(188, 29);
-            this.Payment_Document_Date_first.TabIndex = 153;
+            this.Payment_Document_Date_first.TabIndex = 18;
             this.Payment_Document_Date_first.ValueChanged += new System.EventHandler(this.Payment_Document_Date_first_ValueChanged);
             // 
             // label12
@@ -116,8 +116,9 @@
             this.Payment_Document_Search.Location = new System.Drawing.Point(522, 57);
             this.Payment_Document_Search.Name = "Payment_Document_Search";
             this.Payment_Document_Search.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_Search.TabIndex = 150;
+            this.Payment_Document_Search.TabIndex = 17;
             this.Payment_Document_Search.TextChanged += new System.EventHandler(this.Payment_Document_Search_TextChanged);
+            this.Payment_Document_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_Search_KeyPress);
             // 
             // Payment_Document_Comb_Cate
             // 
@@ -126,7 +127,7 @@
             this.Payment_Document_Comb_Cate.Location = new System.Drawing.Point(125, 493);
             this.Payment_Document_Comb_Cate.Name = "Payment_Document_Comb_Cate";
             this.Payment_Document_Comb_Cate.Size = new System.Drawing.Size(188, 29);
-            this.Payment_Document_Comb_Cate.TabIndex = 149;
+            this.Payment_Document_Comb_Cate.TabIndex = 10;
             this.Payment_Document_Comb_Cate.UseSelectable = true;
             // 
             // Payment_Document_Comb_Date
@@ -136,7 +137,7 @@
             this.Payment_Document_Comb_Date.Location = new System.Drawing.Point(125, 450);
             this.Payment_Document_Comb_Date.Name = "Payment_Document_Comb_Date";
             this.Payment_Document_Comb_Date.Size = new System.Drawing.Size(188, 29);
-            this.Payment_Document_Comb_Date.TabIndex = 148;
+            this.Payment_Document_Comb_Date.TabIndex = 9;
             this.Payment_Document_Comb_Date.UseSelectable = true;
             // 
             // Payment_Document_dataGrid
@@ -149,23 +150,23 @@
             this.Payment_Document_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Payment_Document_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Payment_Document_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Payment_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Payment_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Payment_Document_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Payment_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Payment_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Payment_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Payment_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Payment_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -173,14 +174,14 @@
             this.Payment_Document_dataGrid.Name = "Payment_Document_dataGrid";
             this.Payment_Document_dataGrid.ReadOnly = true;
             this.Payment_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Payment_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Payment_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Payment_Document_dataGrid.Size = new System.Drawing.Size(697, 399);
@@ -193,7 +194,7 @@
             this.Payment_Document_exit.Location = new System.Drawing.Point(909, 518);
             this.Payment_Document_exit.Name = "Payment_Document_exit";
             this.Payment_Document_exit.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_exit.TabIndex = 146;
+            this.Payment_Document_exit.TabIndex = 16;
             this.Payment_Document_exit.Text = "خروج";
             this.Payment_Document_exit.UseSelectable = true;
             this.Payment_Document_exit.Click += new System.EventHandler(this.Payment_Document_exit_Click);
@@ -205,7 +206,7 @@
             this.Payment_Document_delete.Location = new System.Drawing.Point(689, 518);
             this.Payment_Document_delete.Name = "Payment_Document_delete";
             this.Payment_Document_delete.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_delete.TabIndex = 145;
+            this.Payment_Document_delete.TabIndex = 14;
             this.Payment_Document_delete.Text = "حذف";
             this.Payment_Document_delete.UseSelectable = true;
             this.Payment_Document_delete.Click += new System.EventHandler(this.Payment_Document_delete_Click);
@@ -217,7 +218,7 @@
             this.Payment_Document_update.Location = new System.Drawing.Point(582, 518);
             this.Payment_Document_update.Name = "Payment_Document_update";
             this.Payment_Document_update.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_update.TabIndex = 144;
+            this.Payment_Document_update.TabIndex = 13;
             this.Payment_Document_update.Text = "تعديل";
             this.Payment_Document_update.UseSelectable = true;
             this.Payment_Document_update.Click += new System.EventHandler(this.Payment_Document_update_Click);
@@ -229,7 +230,7 @@
             this.Payment_Document_add.Location = new System.Drawing.Point(463, 518);
             this.Payment_Document_add.Name = "Payment_Document_add";
             this.Payment_Document_add.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_add.TabIndex = 143;
+            this.Payment_Document_add.TabIndex = 12;
             this.Payment_Document_add.Text = "أضافة";
             this.Payment_Document_add.UseSelectable = true;
             this.Payment_Document_add.Click += new System.EventHandler(this.Payment_Document_add_Click);
@@ -240,7 +241,7 @@
             this.Payment_Document_new.Location = new System.Drawing.Point(351, 518);
             this.Payment_Document_new.Name = "Payment_Document_new";
             this.Payment_Document_new.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_new.TabIndex = 142;
+            this.Payment_Document_new.TabIndex = 11;
             this.Payment_Document_new.Text = "جديد";
             this.Payment_Document_new.UseSelectable = true;
             this.Payment_Document_new.Click += new System.EventHandler(this.Payment_Document_new_Click);
@@ -253,7 +254,7 @@
             this.Payment_Document_DateTime.Name = "Payment_Document_DateTime";
             this.Payment_Document_DateTime.RightToLeftLayout = true;
             this.Payment_Document_DateTime.Size = new System.Drawing.Size(188, 29);
-            this.Payment_Document_DateTime.TabIndex = 141;
+            this.Payment_Document_DateTime.TabIndex = 7;
             // 
             // label10
             // 
@@ -271,7 +272,7 @@
             this.Payment_Document_Notes.Location = new System.Drawing.Point(125, 413);
             this.Payment_Document_Notes.Name = "Payment_Document_Notes";
             this.Payment_Document_Notes.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_Notes.TabIndex = 139;
+            this.Payment_Document_Notes.TabIndex = 8;
             // 
             // label11
             // 
@@ -299,7 +300,7 @@
             this.Payment_Document_Reason.Location = new System.Drawing.Point(125, 296);
             this.Payment_Document_Reason.Name = "Payment_Document_Reason";
             this.Payment_Document_Reason.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_Reason.TabIndex = 136;
+            this.Payment_Document_Reason.TabIndex = 5;
             // 
             // label3
             // 
@@ -337,7 +338,7 @@
             this.Payment_Document_Receve.Location = new System.Drawing.Point(125, 333);
             this.Payment_Document_Receve.Name = "Payment_Document_Receve";
             this.Payment_Document_Receve.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_Receve.TabIndex = 132;
+            this.Payment_Document_Receve.TabIndex = 6;
             // 
             // label1
             // 
@@ -355,7 +356,8 @@
             this.Payment_Document_sy.Location = new System.Drawing.Point(125, 111);
             this.Payment_Document_sy.Name = "Payment_Document_sy";
             this.Payment_Document_sy.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_sy.TabIndex = 130;
+            this.Payment_Document_sy.TabIndex = 0;
+            this.Payment_Document_sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_sy_KeyPress);
             // 
             // label6
             // 
@@ -373,7 +375,8 @@
             this.Payment_Document_no.Location = new System.Drawing.Point(125, 222);
             this.Payment_Document_no.Name = "Payment_Document_no";
             this.Payment_Document_no.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_no.TabIndex = 128;
+            this.Payment_Document_no.TabIndex = 3;
+            this.Payment_Document_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_no_KeyPress);
             // 
             // label5
             // 
@@ -391,7 +394,8 @@
             this.Payment_Document_rate.Location = new System.Drawing.Point(125, 185);
             this.Payment_Document_rate.Name = "Payment_Document_rate";
             this.Payment_Document_rate.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_rate.TabIndex = 126;
+            this.Payment_Document_rate.TabIndex = 2;
+            this.Payment_Document_rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_rate_KeyPress);
             // 
             // label4
             // 
@@ -409,7 +413,8 @@
             this.Payment_Document_Dollar.Location = new System.Drawing.Point(125, 148);
             this.Payment_Document_Dollar.Name = "Payment_Document_Dollar";
             this.Payment_Document_Dollar.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_Dollar.TabIndex = 124;
+            this.Payment_Document_Dollar.TabIndex = 1;
+            this.Payment_Document_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_Dollar_KeyPress);
             // 
             // label13
             // 
@@ -427,7 +432,8 @@
             this.Payment_Document_No_Order.Location = new System.Drawing.Point(125, 259);
             this.Payment_Document_No_Order.Name = "Payment_Document_No_Order";
             this.Payment_Document_No_Order.Size = new System.Drawing.Size(188, 23);
-            this.Payment_Document_No_Order.TabIndex = 155;
+            this.Payment_Document_No_Order.TabIndex = 4;
+            this.Payment_Document_No_Order.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_No_Order_KeyPress);
             // 
             // Payment_Document_Print
             // 
@@ -435,7 +441,7 @@
             this.Payment_Document_Print.Location = new System.Drawing.Point(799, 518);
             this.Payment_Document_Print.Name = "Payment_Document_Print";
             this.Payment_Document_Print.Size = new System.Drawing.Size(87, 37);
-            this.Payment_Document_Print.TabIndex = 157;
+            this.Payment_Document_Print.TabIndex = 15;
             this.Payment_Document_Print.Text = "طباعة";
             this.Payment_Document_Print.UseSelectable = true;
             this.Payment_Document_Print.Click += new System.EventHandler(this.Payment_Document_Print_Click);

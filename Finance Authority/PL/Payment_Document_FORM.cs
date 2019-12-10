@@ -72,6 +72,18 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_add_Click(object sender, EventArgs e)
         {
+            if (Payment_Document_no.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Payment_Document_No_Order.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             pay.Payment_Document_add(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
                 Payment_Document_no.Text , Payment_Document_No_Order.Text, Payment_Document_Reason.Text ,
                 Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text ,
@@ -92,6 +104,18 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
         {
+            if (Payment_Document_no.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Payment_Document_No_Order.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             pay.Payment_Document_update(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
                Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
                Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,

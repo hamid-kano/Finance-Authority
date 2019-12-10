@@ -68,6 +68,12 @@ namespace Finance_Authority.PL
 
         private void Loans_add_Click(object sender, EventArgs e)
         {
+            if (Loans_Amont.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
@@ -108,6 +114,12 @@ namespace Finance_Authority.PL
 
         private void Loans_update_Click(object sender, EventArgs e)
         {
+            if (Loans_Amont.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);

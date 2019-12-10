@@ -51,6 +51,12 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_add_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_no.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Reciv.Reciver_Document_add(Reciver_Document_sy.Text , Reciver_Document_Dollar.Text , Reciver_Document_rate.Text , Reciver_Document_no.Text , Reciver_Document_Reason.Text, Reciver_Document_Receve.Text , Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text , Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
@@ -68,6 +74,12 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_no.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Reciv.Reciver_Document_update(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue) , Program.Reciver_Document_id);
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;

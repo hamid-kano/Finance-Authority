@@ -63,7 +63,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 385);
+            this.label7.Location = new System.Drawing.Point(11, 378);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 16);
             this.label7.TabIndex = 85;
@@ -73,7 +73,7 @@
             // 
             this.Leoan_Payments_Comb_Employ.FormattingEnabled = true;
             this.Leoan_Payments_Comb_Employ.ItemHeight = 23;
-            this.Leoan_Payments_Comb_Employ.Location = new System.Drawing.Point(85, 372);
+            this.Leoan_Payments_Comb_Employ.Location = new System.Drawing.Point(85, 365);
             this.Leoan_Payments_Comb_Employ.Name = "Leoan_Payments_Comb_Employ";
             this.Leoan_Payments_Comb_Employ.Size = new System.Drawing.Size(163, 29);
             this.Leoan_Payments_Comb_Employ.TabIndex = 5;
@@ -84,7 +84,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 338);
+            this.label6.Location = new System.Drawing.Point(11, 328);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 83;
@@ -94,7 +94,7 @@
             // 
             this.Leoan_Payments_Comb_Department.FormattingEnabled = true;
             this.Leoan_Payments_Comb_Department.ItemHeight = 23;
-            this.Leoan_Payments_Comb_Department.Location = new System.Drawing.Point(85, 325);
+            this.Leoan_Payments_Comb_Department.Location = new System.Drawing.Point(85, 315);
             this.Leoan_Payments_Comb_Department.Name = "Leoan_Payments_Comb_Department";
             this.Leoan_Payments_Comb_Department.Size = new System.Drawing.Size(163, 29);
             this.Leoan_Payments_Comb_Department.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-1, 291);
+            this.label5.Location = new System.Drawing.Point(4, 278);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 16);
             this.label5.TabIndex = 81;
@@ -115,7 +115,7 @@
             // 
             this.Leoan_Payments_Comb_Budget.FormattingEnabled = true;
             this.Leoan_Payments_Comb_Budget.ItemHeight = 23;
-            this.Leoan_Payments_Comb_Budget.Location = new System.Drawing.Point(85, 278);
+            this.Leoan_Payments_Comb_Budget.Location = new System.Drawing.Point(85, 265);
             this.Leoan_Payments_Comb_Budget.Name = "Leoan_Payments_Comb_Budget";
             this.Leoan_Payments_Comb_Budget.Size = new System.Drawing.Size(163, 29);
             this.Leoan_Payments_Comb_Budget.TabIndex = 3;
@@ -124,7 +124,7 @@
             // Leoan_Payments_Date
             // 
             this.Leoan_Payments_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Leoan_Payments_Date.Location = new System.Drawing.Point(85, 225);
+            this.Leoan_Payments_Date.Location = new System.Drawing.Point(85, 215);
             this.Leoan_Payments_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Leoan_Payments_Date.Name = "Leoan_Payments_Date";
             this.Leoan_Payments_Date.Size = new System.Drawing.Size(163, 29);
@@ -134,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 428);
+            this.label1.Location = new System.Drawing.Point(11, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 16);
             this.label1.TabIndex = 76;
@@ -251,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 146);
+            this.label3.Location = new System.Drawing.Point(6, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 69;
@@ -260,17 +260,16 @@
             // Leoan_Payments_Notes
             // 
             this.Leoan_Payments_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Leoan_Payments_Notes.Location = new System.Drawing.Point(85, 184);
+            this.Leoan_Payments_Notes.Location = new System.Drawing.Point(87, 171);
             this.Leoan_Payments_Notes.Name = "Leoan_Payments_Notes";
             this.Leoan_Payments_Notes.Size = new System.Drawing.Size(163, 23);
             this.Leoan_Payments_Notes.TabIndex = 1;
-            this.Leoan_Payments_Notes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Leoan_Payments_Notes_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 191);
+            this.label2.Location = new System.Drawing.Point(6, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 67;
@@ -279,16 +278,17 @@
             // Leoan_Payments_Amont
             // 
             this.Leoan_Payments_Amont.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Leoan_Payments_Amont.Location = new System.Drawing.Point(85, 139);
+            this.Leoan_Payments_Amont.Location = new System.Drawing.Point(85, 127);
             this.Leoan_Payments_Amont.Name = "Leoan_Payments_Amont";
             this.Leoan_Payments_Amont.Size = new System.Drawing.Size(163, 23);
             this.Leoan_Payments_Amont.TabIndex = 0;
+            this.Leoan_Payments_Amont.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Leoan_Payments_Amont_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 233);
+            this.label4.Location = new System.Drawing.Point(4, 428);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 77;
@@ -319,7 +319,7 @@
             this.Leoan_Payments_Search_All.CustomButton.UseSelectable = true;
             this.Leoan_Payments_Search_All.CustomButton.Visible = false;
             this.Leoan_Payments_Search_All.Lines = new string[0];
-            this.Leoan_Payments_Search_All.Location = new System.Drawing.Point(426, 45);
+            this.Leoan_Payments_Search_All.Location = new System.Drawing.Point(429, 52);
             this.Leoan_Payments_Search_All.MaxLength = 32767;
             this.Leoan_Payments_Search_All.Name = "Leoan_Payments_Search_All";
             this.Leoan_Payments_Search_All.PasswordChar = '\0';
@@ -339,7 +339,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(355, 52);
+            this.label8.Location = new System.Drawing.Point(358, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 16);
             this.label8.TabIndex = 202;
@@ -412,6 +412,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "دفعات القروض";
+            this.Load += new System.EventHandler(this.Leoan_Payments_FORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Leoan_Payments_Gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

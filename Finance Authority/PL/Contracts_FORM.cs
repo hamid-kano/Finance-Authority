@@ -64,6 +64,12 @@ namespace Finance_Authority.PL
 
         private void Contracts_add_Click(object sender, EventArgs e)
         {
+            if (Contracts_Type.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل نوع العقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Contracts_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Contracts_Comb_Employee.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);

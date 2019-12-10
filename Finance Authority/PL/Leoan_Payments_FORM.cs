@@ -86,6 +86,12 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_add_Click(object sender, EventArgs e)
         {
+            if (Leoan_Payments_Amont.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Leoan_Payments_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Leoan_Payments_Comb_Employ.SelectedValue);
             int idDatelaon = Convert.ToInt32(Leoan_Payments_Comb_Dateloean.SelectedValue);
@@ -112,6 +118,12 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_update_Click(object sender, EventArgs e)
         {
+            if (Leoan_Payments_Amont.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Leoan_Payments_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Leoan_Payments_Comb_Employ.SelectedValue);
             int idDatelaon = Convert.ToInt32(Leoan_Payments_Comb_Dateloean.SelectedValue);
@@ -195,9 +207,14 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Leoan_Payments_Notes_KeyPress(object sender, KeyPressEventArgs e)
+        private void Leoan_Payments_Amont_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Leoan_Payments_FORM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

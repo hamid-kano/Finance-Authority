@@ -40,7 +40,7 @@ namespace Finance_Authority.PL
             if (Authority_Name.Text == String.Empty)
             {
 
-                MessageBox.Show("أضف رقم الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("أضف اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();
@@ -81,7 +81,7 @@ namespace Finance_Authority.PL
             if (Authority_Name.Text == String.Empty)
             {
 
-                MessageBox.Show("أضف رقم الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("أضف اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();

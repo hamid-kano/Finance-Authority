@@ -52,6 +52,18 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_add_Click(object sender, EventArgs e)
         {
+            if (Employee_Description_N0_Book.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم الكتاب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Employee_Description_Salery.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف راتب الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             //bool Functunal_status = Employee_Description_Allowes.Checked ? true : false;
             bool Role_status = Employee_Description_Now.Checked ? true : false;
             Empl_Des.Employee_Description_add(Employee_Description_Comb_Satutes.Text, Role_status , Employee_Description_DateTime.Value , Employee_Description_N0_Book.Text , Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue) , Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue));
@@ -66,7 +78,19 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_update_Click(object sender, EventArgs e)
         {
-         Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue), Program.Employee_Description_id);
+            if (Employee_Description_N0_Book.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم الكتاب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Employee_Description_Salery.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف راتب الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Convert.ToInt32(Employee_Description_Comb_employ.SelectedValue), Program.Employee_Description_id);
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[8].Visible = false;

@@ -64,6 +64,24 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_add_Click(object sender, EventArgs e)
         {
+            if (Coin_Exchange_Sy.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ بالسوري", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Coin_Exchange_Dollar.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ بالدولار", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Coin_Exchange_rate.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue));
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
@@ -77,6 +95,24 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_update_Click(object sender, EventArgs e)
         {
+            if (Coin_Exchange_Sy.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ بالسوري", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Coin_Exchange_Dollar.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل المبلغ بالدولار", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Coin_Exchange_rate.Text == String.Empty)
+            {
+
+                MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Coin.Coin_Exchange_update(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue), Program.Coin_Exchange_id);
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;

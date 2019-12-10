@@ -33,6 +33,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (EX_Orders_tosorce.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف الجهة المسستلمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = order.Exchange_Order_Cheack(EX_Orders_order.Text);
             if (Dt.Rows.Count == 0)
@@ -91,6 +97,18 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_update_Click(object sender, EventArgs e)
         {
+            if (EX_Orders_order.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رقم الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (EX_Orders_tosorce.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف الجهة المسستلمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = order.Exchange_Order_Cheack(EX_Orders_order.Text);
             if (Dt.Rows.Count == 0 || EX_Orders_order.Text== this.EX_Orders_dataGrid.CurrentRow.Cells[1].Value.ToString())

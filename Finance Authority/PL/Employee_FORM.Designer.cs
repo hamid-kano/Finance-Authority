@@ -428,7 +428,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 16);
             this.label14.TabIndex = 178;
-            this.label14.Text = "رقم اليطاقة";
+            this.label14.Text = "رقم البطاقة";
             // 
             // Employee_No_Card
             // 

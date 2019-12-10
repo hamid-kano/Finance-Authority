@@ -51,6 +51,26 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_add_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
+            {
+
+                MessageBox.Show("يجب ادخال المبلغ السوري او الدولار", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Reciver_Document_Dollar.Text != String.Empty && Reciver_Document_rate.Text == String.Empty)
+            {
+
+                MessageBox.Show("يجب ادخال قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Reciver_Document_Receve.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف المستلم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (Reciver_Document_no.Text == String.Empty)
             {
 
@@ -74,6 +94,25 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
+            {
+
+                MessageBox.Show("يجب ادخال المبلغ السوري او الدولار", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Reciver_Document_Dollar.Text != String.Empty && Reciver_Document_rate.Text == String.Empty)
+            {
+
+                MessageBox.Show("يجب ادخال قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Reciver_Document_Receve.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف المستلم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Reciver_Document_no.Text == String.Empty)
             {
 

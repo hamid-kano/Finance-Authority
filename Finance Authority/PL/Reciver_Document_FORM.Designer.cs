@@ -204,9 +204,9 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 16);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 94;
-            this.label5.Text = "سعر الصرف";
+            this.label5.Text = "قيمة التحويل";
             // 
             // Reciver_Document_rate
             // 

@@ -23,7 +23,7 @@ namespace Finance_Authority.PL
             Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Contracts_Comb_Department.DisplayMember = "Department_Name";
             Contracts_Comb_Department.ValueMember = "Department_ID";
-           
+            Contracts_Comb_Contract_statue.SelectedIndex = 0;
 
 
         }
@@ -183,9 +183,6 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Contracts_Type_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
+        
     }
 }

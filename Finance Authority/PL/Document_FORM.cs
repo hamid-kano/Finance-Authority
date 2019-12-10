@@ -43,6 +43,18 @@ namespace Finance_Authority.PL
 
         private void Document_add_Click(object sender, EventArgs e)
         {
+            if (Document_Name.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف اسم المستند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Document_URL.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رابط المستند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Doc.Document_add(Document_Type.Text , Document_Name.Text, Document_URL.Text, Document_Location.Text , Document_Extend.Text, Document_Notes.Text);
             this.Document_Gridview.DataSource = Doc.Document_View();
             this.Document_Gridview.Columns[0].Visible = false;
@@ -58,6 +70,18 @@ namespace Finance_Authority.PL
 
         private void Document_update_Click(object sender, EventArgs e)
         {
+            if (Document_Name.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف اسم المستند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Document_URL.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف رابط المستند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Doc.Document_update(Document_Type.Text, Document_Name.Text, Document_URL.Text, Document_Location.Text, Document_Extend.Text, Document_Notes.Text , Program.Document_id); 
             this.Document_Gridview.DataSource = Doc.Document_View();
             this.Document_Gridview.Columns[0].Visible = false;

@@ -202,7 +202,7 @@
             this.Contracts_Type.Name = "Contracts_Type";
             this.Contracts_Type.Size = new System.Drawing.Size(163, 23);
             this.Contracts_Type.TabIndex = 0;
-            this.Contracts_Type.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Contracts_Type_KeyPress);
+            
             // 
             // Contracts_Date_Start
             // 

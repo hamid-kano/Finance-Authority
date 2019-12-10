@@ -281,7 +281,7 @@
             this.EX_Orders_dataGrid.EnableHeadersVisualStyles = false;
             this.EX_Orders_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EX_Orders_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_dataGrid.Location = new System.Drawing.Point(338, 101);
+            this.EX_Orders_dataGrid.Location = new System.Drawing.Point(307, 101);
             this.EX_Orders_dataGrid.Name = "EX_Orders_dataGrid";
             this.EX_Orders_dataGrid.ReadOnly = true;
             this.EX_Orders_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -295,7 +295,7 @@
             this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.EX_Orders_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EX_Orders_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EX_Orders_dataGrid.Size = new System.Drawing.Size(536, 275);
+            this.EX_Orders_dataGrid.Size = new System.Drawing.Size(567, 275);
             this.EX_Orders_dataGrid.TabIndex = 41;
             this.EX_Orders_dataGrid.Click += new System.EventHandler(this.EX_Orders_dataGrid_Click);
             // 

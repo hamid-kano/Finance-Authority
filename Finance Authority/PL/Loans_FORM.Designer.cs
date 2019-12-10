@@ -57,6 +57,7 @@
             this.Loans_Search_All = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Loans_Search_Budget = new MetroFramework.Controls.MetroComboBox();
+            this.Loans_Print = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             // Loans_Fexit
             // 
             this.Loans_Fexit.Highlight = true;
-            this.Loans_Fexit.Location = new System.Drawing.Point(818, 479);
+            this.Loans_Fexit.Location = new System.Drawing.Point(820, 479);
             this.Loans_Fexit.Name = "Loans_Fexit";
             this.Loans_Fexit.Size = new System.Drawing.Size(87, 37);
             this.Loans_Fexit.TabIndex = 55;
@@ -80,7 +81,7 @@
             // 
             this.Loans_delete.Enabled = false;
             this.Loans_delete.Highlight = true;
-            this.Loans_delete.Location = new System.Drawing.Point(706, 479);
+            this.Loans_delete.Location = new System.Drawing.Point(600, 479);
             this.Loans_delete.Name = "Loans_delete";
             this.Loans_delete.Size = new System.Drawing.Size(87, 37);
             this.Loans_delete.TabIndex = 54;
@@ -92,7 +93,7 @@
             // 
             this.Loans_update.Enabled = false;
             this.Loans_update.Highlight = true;
-            this.Loans_update.Location = new System.Drawing.Point(594, 479);
+            this.Loans_update.Location = new System.Drawing.Point(490, 479);
             this.Loans_update.Name = "Loans_update";
             this.Loans_update.Size = new System.Drawing.Size(87, 37);
             this.Loans_update.TabIndex = 53;
@@ -104,7 +105,7 @@
             // 
             this.Loans_add.Enabled = false;
             this.Loans_add.Highlight = true;
-            this.Loans_add.Location = new System.Drawing.Point(482, 479);
+            this.Loans_add.Location = new System.Drawing.Point(380, 479);
             this.Loans_add.Name = "Loans_add";
             this.Loans_add.Size = new System.Drawing.Size(87, 37);
             this.Loans_add.TabIndex = 52;
@@ -115,7 +116,7 @@
             // Loans_new
             // 
             this.Loans_new.Highlight = true;
-            this.Loans_new.Location = new System.Drawing.Point(370, 479);
+            this.Loans_new.Location = new System.Drawing.Point(270, 479);
             this.Loans_new.Name = "Loans_new";
             this.Loans_new.Size = new System.Drawing.Size(87, 37);
             this.Loans_new.TabIndex = 51;
@@ -153,7 +154,7 @@
             this.Loans_Gridview.EnableHeadersVisualStyles = false;
             this.Loans_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Loans_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Loans_Gridview.Location = new System.Drawing.Point(324, 90);
+            this.Loans_Gridview.Location = new System.Drawing.Point(296, 90);
             this.Loans_Gridview.Name = "Loans_Gridview";
             this.Loans_Gridview.ReadOnly = true;
             this.Loans_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -167,7 +168,7 @@
             this.Loans_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Loans_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Loans_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Loans_Gridview.Size = new System.Drawing.Size(624, 377);
+            this.Loans_Gridview.Size = new System.Drawing.Size(652, 377);
             this.Loans_Gridview.TabIndex = 50;
             this.Loans_Gridview.Click += new System.EventHandler(this.Loans_Gridview_Click);
             // 
@@ -368,11 +369,23 @@
             this.Loans_Search_Budget.UseSelectable = true;
             this.Loans_Search_Budget.SelectedValueChanged += new System.EventHandler(this.Loans_Search_Budget_SelectedValueChanged);
             // 
+            // Loans_Print
+            // 
+            this.Loans_Print.Highlight = true;
+            this.Loans_Print.Location = new System.Drawing.Point(710, 478);
+            this.Loans_Print.Name = "Loans_Print";
+            this.Loans_Print.Size = new System.Drawing.Size(87, 38);
+            this.Loans_Print.TabIndex = 196;
+            this.Loans_Print.Text = "طباعة";
+            this.Loans_Print.UseSelectable = true;
+            this.Loans_Print.Click += new System.EventHandler(this.Loans_Print_Click);
+            // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 539);
+            this.Controls.Add(this.Loans_Print);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Loans_Search_Budget);
             this.Controls.Add(this.label8);
@@ -437,5 +450,6 @@
         private MetroFramework.Controls.MetroTextBox Loans_Search_All;
         private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroComboBox Loans_Search_Budget;
+        private MetroFramework.Controls.MetroButton Loans_Print;
     }
 }

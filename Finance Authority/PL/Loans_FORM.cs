@@ -164,5 +164,21 @@ namespace Finance_Authority.PL
             }
             catch { return; }
         }
+
+        private void Loans_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Loans Art = new REPT.Crystal_Loans();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Loans_Gridview.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Loans_Gridview.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

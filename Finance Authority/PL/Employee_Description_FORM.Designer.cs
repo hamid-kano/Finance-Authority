@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Employee_Description_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Description_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_Description_delete = new MetroFramework.Controls.MetroButton();
@@ -58,6 +58,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Employee_Description_Search_all = new MetroFramework.Controls.MetroTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Employee_Description_Print = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Description_dataGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,23 +73,23 @@
             this.Employee_Description_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_Description_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_Description_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Employee_Description_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.Employee_Description_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Description_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Description_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -96,14 +97,14 @@
             this.Employee_Description_dataGrid.Name = "Employee_Description_dataGrid";
             this.Employee_Description_dataGrid.ReadOnly = true;
             this.Employee_Description_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Employee_Description_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Description_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Employee_Description_dataGrid.Size = new System.Drawing.Size(811, 399);
@@ -113,7 +114,7 @@
             // Employee_Description_exit
             // 
             this.Employee_Description_exit.Highlight = true;
-            this.Employee_Description_exit.Location = new System.Drawing.Point(920, 499);
+            this.Employee_Description_exit.Location = new System.Drawing.Point(951, 499);
             this.Employee_Description_exit.Name = "Employee_Description_exit";
             this.Employee_Description_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_exit.TabIndex = 152;
@@ -125,7 +126,7 @@
             // 
             this.Employee_Description_delete.Enabled = false;
             this.Employee_Description_delete.Highlight = true;
-            this.Employee_Description_delete.Location = new System.Drawing.Point(809, 499);
+            this.Employee_Description_delete.Location = new System.Drawing.Point(725, 499);
             this.Employee_Description_delete.Name = "Employee_Description_delete";
             this.Employee_Description_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_delete.TabIndex = 151;
@@ -137,7 +138,7 @@
             // 
             this.Employee_Description_update.Enabled = false;
             this.Employee_Description_update.Highlight = true;
-            this.Employee_Description_update.Location = new System.Drawing.Point(702, 499);
+            this.Employee_Description_update.Location = new System.Drawing.Point(612, 499);
             this.Employee_Description_update.Name = "Employee_Description_update";
             this.Employee_Description_update.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_update.TabIndex = 150;
@@ -149,7 +150,7 @@
             // 
             this.Employee_Description_add.Enabled = false;
             this.Employee_Description_add.Highlight = true;
-            this.Employee_Description_add.Location = new System.Drawing.Point(583, 499);
+            this.Employee_Description_add.Location = new System.Drawing.Point(499, 499);
             this.Employee_Description_add.Name = "Employee_Description_add";
             this.Employee_Description_add.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_add.TabIndex = 149;
@@ -160,7 +161,7 @@
             // Employee_Description_new
             // 
             this.Employee_Description_new.Highlight = true;
-            this.Employee_Description_new.Location = new System.Drawing.Point(471, 499);
+            this.Employee_Description_new.Location = new System.Drawing.Point(386, 499);
             this.Employee_Description_new.Name = "Employee_Description_new";
             this.Employee_Description_new.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_new.TabIndex = 148;
@@ -422,11 +423,23 @@
             this.label8.TabIndex = 185;
             this.label8.Text = "بحث عام";
             // 
+            // Employee_Description_Print
+            // 
+            this.Employee_Description_Print.Highlight = true;
+            this.Employee_Description_Print.Location = new System.Drawing.Point(838, 499);
+            this.Employee_Description_Print.Name = "Employee_Description_Print";
+            this.Employee_Description_Print.Size = new System.Drawing.Size(87, 38);
+            this.Employee_Description_Print.TabIndex = 211;
+            this.Employee_Description_Print.Text = "طباعة";
+            this.Employee_Description_Print.UseSelectable = true;
+            this.Employee_Description_Print.Click += new System.EventHandler(this.Employee_Description_Print_Click);
+            // 
             // Employee_Description_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 548);
+            this.Controls.Add(this.Employee_Description_Print);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Employee_Description_Search_all);
             this.Controls.Add(this.Employee_Description_Comb_Search);
@@ -493,5 +506,6 @@
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroTextBox Employee_Description_Search_all;
         private System.Windows.Forms.Label label8;
+        private MetroFramework.Controls.MetroButton Employee_Description_Print;
     }
 }

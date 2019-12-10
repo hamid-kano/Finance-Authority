@@ -126,5 +126,21 @@ namespace Finance_Authority.PL
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[8].Visible = false;
         }
+
+        private void Employee_Description_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Employee_Description Art = new REPT.Crystal_Employee_Description();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Employee_Description_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Employee_Description_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

@@ -178,5 +178,21 @@ namespace Finance_Authority.PL
             }
             catch { return; }
         }
+
+        private void Leoan_Payments_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Leoan_Payments Art = new REPT.Crystal_Leoan_Payments();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Leoan_Payments_Gridview.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Leoan_Payments_Gridview.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

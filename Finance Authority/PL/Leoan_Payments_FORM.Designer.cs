@@ -55,6 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Leoan_Payments_CombSerach = new MetroFramework.Controls.MetroComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.Leoan_Payments_Print = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Leoan_Payments_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +144,7 @@
             // Leoan_Payments_exit
             // 
             this.Leoan_Payments_exit.Highlight = true;
-            this.Leoan_Payments_exit.Location = new System.Drawing.Point(792, 514);
+            this.Leoan_Payments_exit.Location = new System.Drawing.Point(856, 514);
             this.Leoan_Payments_exit.Name = "Leoan_Payments_exit";
             this.Leoan_Payments_exit.Size = new System.Drawing.Size(87, 37);
             this.Leoan_Payments_exit.TabIndex = 75;
@@ -155,7 +156,7 @@
             // 
             this.Leoan_Payments_delete.Enabled = false;
             this.Leoan_Payments_delete.Highlight = true;
-            this.Leoan_Payments_delete.Location = new System.Drawing.Point(680, 514);
+            this.Leoan_Payments_delete.Location = new System.Drawing.Point(636, 514);
             this.Leoan_Payments_delete.Name = "Leoan_Payments_delete";
             this.Leoan_Payments_delete.Size = new System.Drawing.Size(87, 37);
             this.Leoan_Payments_delete.TabIndex = 74;
@@ -167,7 +168,7 @@
             // 
             this.Leoan_Payments_update.Enabled = false;
             this.Leoan_Payments_update.Highlight = true;
-            this.Leoan_Payments_update.Location = new System.Drawing.Point(568, 514);
+            this.Leoan_Payments_update.Location = new System.Drawing.Point(526, 514);
             this.Leoan_Payments_update.Name = "Leoan_Payments_update";
             this.Leoan_Payments_update.Size = new System.Drawing.Size(87, 37);
             this.Leoan_Payments_update.TabIndex = 73;
@@ -179,7 +180,7 @@
             // 
             this.Leoan_Payments_add.Enabled = false;
             this.Leoan_Payments_add.Highlight = true;
-            this.Leoan_Payments_add.Location = new System.Drawing.Point(456, 514);
+            this.Leoan_Payments_add.Location = new System.Drawing.Point(416, 514);
             this.Leoan_Payments_add.Name = "Leoan_Payments_add";
             this.Leoan_Payments_add.Size = new System.Drawing.Size(87, 37);
             this.Leoan_Payments_add.TabIndex = 72;
@@ -190,7 +191,7 @@
             // Leoan_Payments_new
             // 
             this.Leoan_Payments_new.Highlight = true;
-            this.Leoan_Payments_new.Location = new System.Drawing.Point(344, 514);
+            this.Leoan_Payments_new.Location = new System.Drawing.Point(306, 514);
             this.Leoan_Payments_new.Name = "Leoan_Payments_new";
             this.Leoan_Payments_new.Size = new System.Drawing.Size(87, 37);
             this.Leoan_Payments_new.TabIndex = 71;
@@ -365,11 +366,23 @@
             this.label11.TabIndex = 208;
             this.label11.Text = "البحث حسب الميزانية";
             // 
+            // Leoan_Payments_Print
+            // 
+            this.Leoan_Payments_Print.Highlight = true;
+            this.Leoan_Payments_Print.Location = new System.Drawing.Point(746, 514);
+            this.Leoan_Payments_Print.Name = "Leoan_Payments_Print";
+            this.Leoan_Payments_Print.Size = new System.Drawing.Size(87, 38);
+            this.Leoan_Payments_Print.TabIndex = 210;
+            this.Leoan_Payments_Print.Text = "طباعة";
+            this.Leoan_Payments_Print.UseSelectable = true;
+            this.Leoan_Payments_Print.Click += new System.EventHandler(this.Leoan_Payments_Print_Click);
+            // 
             // Leoan_Payments_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 560);
+            this.Controls.Add(this.Leoan_Payments_Print);
             this.Controls.Add(this.Leoan_Payments_CombSerach);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Leoan_Payments_Search_All);
@@ -430,5 +443,6 @@
         private System.Windows.Forms.Label label8;
         private MetroFramework.Controls.MetroComboBox Leoan_Payments_CombSerach;
         private System.Windows.Forms.Label label11;
+        private MetroFramework.Controls.MetroButton Leoan_Payments_Print;
     }
 }

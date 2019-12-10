@@ -245,6 +245,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPT\Crystal_Employee_Description.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal_Employee_Description.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPT\Crystal_Leoan_Payments.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal_Leoan_Payments.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="REPT\Crystal_Bill.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -279,6 +291,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Crystal_EX_Orderrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPT\Crystal_Loans.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal_Loans.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="REPT\Crystal_Payment_Document.cs">
@@ -387,6 +405,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="REPT\Crystal_Employee_Description.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Employee_Description.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPT\Crystal_Leoan_Payments.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Leoan_Payments.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_Bill.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystal_Bill.cs</LastGenOutput>
@@ -410,6 +436,10 @@
     <EmbeddedResource Include="REPT\Crystal_EX_Orderrpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystal_EX_Orderrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPT\Crystal_Loans.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Loans.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_Payment_Document.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

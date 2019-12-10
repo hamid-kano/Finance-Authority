@@ -265,5 +265,21 @@ namespace Finance_Authority.PL
             }
             catch { }
         }
+
+        private void Employee_Salaries_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Employee_Salaries Art = new REPT.Crystal_Employee_Salaries();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Employee_Salaries_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Employee_Salaries_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

@@ -103,5 +103,21 @@ namespace Finance_Authority.PL
             Bills_dataGrid.DataSource = bill.Bills_Search_Between_Date(Bills_Date_first.Value, Bills_Date_last.Value);
             this.Bills_dataGrid.Columns[0].Visible = false;
         }
+
+        private void Bills_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Bill Art = new REPT.Crystal_Bill();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Bills_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Bills_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

@@ -140,5 +140,21 @@ namespace Finance_Authority.PL
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Date_Butween(Reciver_Document_Date_first.Value, Reciver_Document_Date_last.Value);
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
         }
+
+        private void Reciver_Document_Print_Click(object sender, EventArgs e)
+        {
+            REPT.Crystal_Reciver_Document Art = new REPT.Crystal_Reciver_Document();
+
+            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            if (Reciver_Document_dataGrid.Rows.Count != 0)
+            {
+                // DataTable dt = dataGrid_Ringall.DataSource;
+                Art.SetDataSource(Reciver_Document_dataGrid.DataSource);
+
+                FRPT.crystalReportViewer1.ReportSource = Art;
+                FRPT.ShowDialog();
+            }
+        }
     }
 }

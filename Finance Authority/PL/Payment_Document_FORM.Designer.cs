@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Payment_Document_Date_last = new MetroFramework.Controls.MetroDateTime();
             this.Payment_Document_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.Payment_Document_Dollar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Payment_Document_No_Order = new System.Windows.Forms.TextBox();
+            this.Payment_Document_Print = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Payment_Document_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,23 +149,23 @@
             this.Payment_Document_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Payment_Document_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Payment_Document_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Payment_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Payment_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Payment_Document_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Payment_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Payment_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.Payment_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Payment_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Payment_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -172,14 +173,14 @@
             this.Payment_Document_dataGrid.Name = "Payment_Document_dataGrid";
             this.Payment_Document_dataGrid.ReadOnly = true;
             this.Payment_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Payment_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Payment_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Payment_Document_dataGrid.Size = new System.Drawing.Size(697, 399);
@@ -189,7 +190,7 @@
             // Payment_Document_exit
             // 
             this.Payment_Document_exit.Highlight = true;
-            this.Payment_Document_exit.Location = new System.Drawing.Point(817, 518);
+            this.Payment_Document_exit.Location = new System.Drawing.Point(909, 518);
             this.Payment_Document_exit.Name = "Payment_Document_exit";
             this.Payment_Document_exit.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_exit.TabIndex = 146;
@@ -201,7 +202,7 @@
             // 
             this.Payment_Document_delete.Enabled = false;
             this.Payment_Document_delete.Highlight = true;
-            this.Payment_Document_delete.Location = new System.Drawing.Point(706, 518);
+            this.Payment_Document_delete.Location = new System.Drawing.Point(689, 518);
             this.Payment_Document_delete.Name = "Payment_Document_delete";
             this.Payment_Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_delete.TabIndex = 145;
@@ -213,7 +214,7 @@
             // 
             this.Payment_Document_update.Enabled = false;
             this.Payment_Document_update.Highlight = true;
-            this.Payment_Document_update.Location = new System.Drawing.Point(599, 518);
+            this.Payment_Document_update.Location = new System.Drawing.Point(582, 518);
             this.Payment_Document_update.Name = "Payment_Document_update";
             this.Payment_Document_update.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_update.TabIndex = 144;
@@ -225,7 +226,7 @@
             // 
             this.Payment_Document_add.Enabled = false;
             this.Payment_Document_add.Highlight = true;
-            this.Payment_Document_add.Location = new System.Drawing.Point(480, 518);
+            this.Payment_Document_add.Location = new System.Drawing.Point(463, 518);
             this.Payment_Document_add.Name = "Payment_Document_add";
             this.Payment_Document_add.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_add.TabIndex = 143;
@@ -236,7 +237,7 @@
             // Payment_Document_new
             // 
             this.Payment_Document_new.Highlight = true;
-            this.Payment_Document_new.Location = new System.Drawing.Point(368, 518);
+            this.Payment_Document_new.Location = new System.Drawing.Point(351, 518);
             this.Payment_Document_new.Name = "Payment_Document_new";
             this.Payment_Document_new.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_new.TabIndex = 142;
@@ -428,11 +429,23 @@
             this.Payment_Document_No_Order.Size = new System.Drawing.Size(188, 23);
             this.Payment_Document_No_Order.TabIndex = 155;
             // 
+            // Payment_Document_Print
+            // 
+            this.Payment_Document_Print.Highlight = true;
+            this.Payment_Document_Print.Location = new System.Drawing.Point(799, 518);
+            this.Payment_Document_Print.Name = "Payment_Document_Print";
+            this.Payment_Document_Print.Size = new System.Drawing.Size(87, 37);
+            this.Payment_Document_Print.TabIndex = 157;
+            this.Payment_Document_Print.Text = "طباعة";
+            this.Payment_Document_Print.UseSelectable = true;
+            this.Payment_Document_Print.Click += new System.EventHandler(this.Payment_Document_Print_Click);
+            // 
             // Payment_Document_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 578);
+            this.Controls.Add(this.Payment_Document_Print);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Payment_Document_No_Order);
             this.Controls.Add(this.Payment_Document_Date_last);
@@ -511,5 +524,6 @@
         private System.Windows.Forms.TextBox Payment_Document_Dollar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Payment_Document_No_Order;
+        private MetroFramework.Controls.MetroButton Payment_Document_Print;
     }
 }

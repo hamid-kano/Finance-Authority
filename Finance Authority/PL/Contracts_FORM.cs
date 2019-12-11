@@ -23,7 +23,7 @@ namespace Finance_Authority.PL
             Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Contracts_Comb_Department.DisplayMember = "Department_Name";
             Contracts_Comb_Department.ValueMember = "Department_ID";
-            Contracts_Comb_Contract_statue.SelectedIndex = 0;
+            Contracts_Comb_Employee.SelectedIndex = 0;
 
 
         }

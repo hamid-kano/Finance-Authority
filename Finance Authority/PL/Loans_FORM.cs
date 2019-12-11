@@ -33,11 +33,7 @@ namespace Finance_Authority.PL
             Loans_Comb_Budget.ValueMember = "Budget_Id";
         }
 
-        private void Loans_FORM_Load(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void Loans_Comb_Department_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -161,12 +157,7 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Loans_Search_All_TextChanged(object sender, EventArgs e)
-        {
-            this.Loans_Gridview.DataSource = Loa.Loans_Search_All(Loans_Search_All.Text);
-            Loans_Gridview.Columns[0].Visible = false;
-        }
-
+       
         private void Loans_Search_Budget_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -196,6 +187,12 @@ namespace Finance_Authority.PL
         private void Loans_Amont_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Loans_Search_All_TextChanged_1(object sender, EventArgs e)
+        {
+            this.Loans_Gridview.DataSource = Loa.Loans_Search_All(Loans_Search_All.Text);
+            Loans_Gridview.Columns[0].Visible = false;
         }
     }
 }

@@ -320,18 +320,9 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Employee_Search_Name_TextChanged(object sender, EventArgs e)
-        {
-            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
-            Employee_dataGrid.Columns[0].Visible = false;
-        }
+       
 
-        private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
-        {
-            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
-            Employee_dataGrid.Columns[0].Visible = false;
-        }
-
+       
         private void Employee_Print_Click(object sender, EventArgs e)
         {
             REPT.Crystal_Employee Art = new REPT.Crystal_Employee();
@@ -376,6 +367,18 @@ namespace Finance_Authority.PL
         private void Employee_Search_Mony_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
+        {
+            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
+            Employee_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
+        {
+            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
+            Employee_dataGrid.Columns[0].Visible = false;
         }
     }
 }

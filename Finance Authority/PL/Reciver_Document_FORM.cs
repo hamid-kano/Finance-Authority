@@ -174,12 +174,6 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)
-        {
-            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Search(Reciver_Document_Search.Text);
-            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
-        }
-
         private void Reciver_Document_Date_first_ValueChanged(object sender, EventArgs e)
         {
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Date_Butween(Reciver_Document_Date_first.Value, Reciver_Document_Date_last.Value);
@@ -231,6 +225,12 @@ namespace Finance_Authority.PL
         private void Reciver_Document_Search_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)
+        {
+            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Search(Reciver_Document_Search.Text);
+            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
         }
     }
 }

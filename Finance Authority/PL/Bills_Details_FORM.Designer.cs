@@ -39,6 +39,8 @@
             this.Bills_new = new MetroFramework.Controls.MetroButton();
             this.Bills_Date = new MetroFramework.Controls.MetroDateTime();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Bills_Not = new MetroFramework.Controls.MetroRadioButton();
+            this.Bills_Paid = new MetroFramework.Controls.MetroRadioButton();
             this.Bills_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
             this.Bills_Comb_Department = new MetroFramework.Controls.MetroComboBox();
             this.Bills_Details_Print = new MetroFramework.Controls.MetroButton();
@@ -59,8 +61,6 @@
             this.Bills_Details_Name_Department = new MetroFramework.Controls.MetroLabel();
             this.Bills_Details_Note = new MetroFramework.Controls.MetroLabel();
             this.Bills_Details_Date_Budget = new MetroFramework.Controls.MetroLabel();
-            this.Bills_Paid = new MetroFramework.Controls.MetroRadioButton();
-            this.Bills_Not = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -187,6 +187,28 @@
             this.groupBox1.TabIndex = 199;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "حالة الفاتورة:";
+            // 
+            // Bills_Not
+            // 
+            this.Bills_Not.AutoSize = true;
+            this.Bills_Not.Location = new System.Drawing.Point(31, 27);
+            this.Bills_Not.Name = "Bills_Not";
+            this.Bills_Not.Size = new System.Drawing.Size(83, 15);
+            this.Bills_Not.TabIndex = 222;
+            this.Bills_Not.Text = " غير مدفوعة";
+            this.Bills_Not.UseSelectable = true;
+            // 
+            // Bills_Paid
+            // 
+            this.Bills_Paid.AutoSize = true;
+            this.Bills_Paid.Checked = true;
+            this.Bills_Paid.Location = new System.Drawing.Point(157, 27);
+            this.Bills_Paid.Name = "Bills_Paid";
+            this.Bills_Paid.Size = new System.Drawing.Size(61, 15);
+            this.Bills_Paid.TabIndex = 221;
+            this.Bills_Paid.TabStop = true;
+            this.Bills_Paid.Text = "مدفوعة";
+            this.Bills_Paid.UseSelectable = true;
             // 
             // Bills_Comb_Budget
             // 
@@ -525,26 +547,6 @@
             this.Bills_Details_Date_Budget.Size = new System.Drawing.Size(78, 19);
             this.Bills_Details_Date_Budget.TabIndex = 220;
             this.Bills_Details_Date_Budget.Text = "تاريخ الميزانية";
-            // 
-            // Bills_Paid
-            // 
-            this.Bills_Paid.AutoSize = true;
-            this.Bills_Paid.Location = new System.Drawing.Point(157, 27);
-            this.Bills_Paid.Name = "Bills_Paid";
-            this.Bills_Paid.Size = new System.Drawing.Size(61, 15);
-            this.Bills_Paid.TabIndex = 221;
-            this.Bills_Paid.Text = "مدفوعة";
-            this.Bills_Paid.UseSelectable = true;
-            // 
-            // Bills_Not
-            // 
-            this.Bills_Not.AutoSize = true;
-            this.Bills_Not.Location = new System.Drawing.Point(31, 27);
-            this.Bills_Not.Name = "Bills_Not";
-            this.Bills_Not.Size = new System.Drawing.Size(83, 15);
-            this.Bills_Not.TabIndex = 222;
-            this.Bills_Not.Text = " غير مدفوعة";
-            this.Bills_Not.UseSelectable = true;
             // 
             // Bills_Details_FORM
             // 

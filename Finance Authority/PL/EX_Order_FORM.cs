@@ -154,18 +154,9 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void EX_Orders_search_All_TextChanged(object sender, EventArgs e)
-        {
-            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_All(EX_Orders_search_All.Text);
-            this.EX_Orders_dataGrid.Columns[0].Visible = false;
-        }
+      
 
-        private void EX_Orders_search_TextChanged(object sender, EventArgs e)
-        {
-            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_NO_Order(EX_Orders_search.Text);
-            this.EX_Orders_dataGrid.Columns[0].Visible = false;
-        }
-
+       
         private void EX_Orders_first_ValueChanged(object sender, EventArgs e)
         {
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_Between_Date(EX_Orders_first.Value, EX_Orders_last.Value);
@@ -202,6 +193,19 @@ namespace Finance_Authority.PL
         private void EX_Orders_search_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void EX_Orders_search_TextChanged_1(object sender, EventArgs e)
+        {
+            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_NO_Order(EX_Orders_search.Text);
+            this.EX_Orders_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void EX_Orders_search_All_TextChanged_1(object sender, EventArgs e)
+        {
+
+            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_All(EX_Orders_search_All.Text);
+            this.EX_Orders_dataGrid.Columns[0].Visible = false;
         }
     }
 }

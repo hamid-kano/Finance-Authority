@@ -37,10 +37,10 @@
             this.Document_Category_add = new MetroFramework.Controls.MetroButton();
             this.Document_Category_new = new MetroFramework.Controls.MetroButton();
             this.Document_Category_Gridview = new MetroFramework.Controls.MetroGrid();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Document_Category_textsearch = new System.Windows.Forms.TextBox();
-            this.Document_Category_Name = new System.Windows.Forms.TextBox();
+            this.Document_Category_Name = new MetroFramework.Controls.MetroTextBox();
+            this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
+            this.Document_Category_textsearch = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Document_Category_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,7 +132,7 @@
             this.Document_Category_Gridview.EnableHeadersVisualStyles = false;
             this.Document_Category_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Document_Category_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Document_Category_Gridview.Location = new System.Drawing.Point(37, 83);
+            this.Document_Category_Gridview.Location = new System.Drawing.Point(13, 83);
             this.Document_Category_Gridview.Name = "Document_Category_Gridview";
             this.Document_Category_Gridview.ReadOnly = true;
             this.Document_Category_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -146,62 +146,103 @@
             this.Document_Category_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Document_Category_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Document_Category_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Document_Category_Gridview.Size = new System.Drawing.Size(624, 253);
+            this.Document_Category_Gridview.Size = new System.Drawing.Size(648, 270);
             this.Document_Category_Gridview.TabIndex = 52;
             this.Document_Category_Gridview.Click += new System.EventHandler(this.Document_Category_Gridview_Click);
             // 
-            // label2
+            // Document_Category_Name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(123, 359);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "أسم الصنف";
             // 
-            // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "البحث";
+            // 
+            this.Document_Category_Name.CustomButton.Image = null;
+            this.Document_Category_Name.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.Document_Category_Name.CustomButton.Name = "";
+            this.Document_Category_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Document_Category_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Document_Category_Name.CustomButton.TabIndex = 1;
+            this.Document_Category_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Document_Category_Name.CustomButton.UseSelectable = true;
+            this.Document_Category_Name.CustomButton.Visible = false;
+            this.Document_Category_Name.Lines = new string[0];
+            this.Document_Category_Name.Location = new System.Drawing.Point(211, 359);
+            this.Document_Category_Name.MaxLength = 32767;
+            this.Document_Category_Name.Name = "Document_Category_Name";
+            this.Document_Category_Name.PasswordChar = '\0';
+            this.Document_Category_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Document_Category_Name.SelectedText = "";
+            this.Document_Category_Name.SelectionLength = 0;
+            this.Document_Category_Name.SelectionStart = 0;
+            this.Document_Category_Name.ShortcutsEnabled = true;
+            this.Document_Category_Name.Size = new System.Drawing.Size(350, 23);
+            this.Document_Category_Name.TabIndex = 223;
+            this.Document_Category_Name.UseSelectable = true;
+            this.Document_Category_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Document_Category_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Coin_Exc_Sy
+            // 
+            this.Coin_Exc_Sy.AutoSize = true;
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(121, 363);
+            this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
+            this.Coin_Exc_Sy.Size = new System.Drawing.Size(73, 19);
+            this.Coin_Exc_Sy.TabIndex = 222;
+            this.Coin_Exc_Sy.Text = "أسم الصنف";
             // 
             // Document_Category_textsearch
             // 
-            this.Document_Category_textsearch.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Document_Category_textsearch.Location = new System.Drawing.Point(211, 54);
+            // 
+            // 
+            // 
+            this.Document_Category_textsearch.CustomButton.Image = null;
+            this.Document_Category_textsearch.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.Document_Category_textsearch.CustomButton.Name = "";
+            this.Document_Category_textsearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Document_Category_textsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Document_Category_textsearch.CustomButton.TabIndex = 1;
+            this.Document_Category_textsearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Document_Category_textsearch.CustomButton.UseSelectable = true;
+            this.Document_Category_textsearch.CustomButton.Visible = false;
+            this.Document_Category_textsearch.Lines = new string[0];
+            this.Document_Category_textsearch.Location = new System.Drawing.Point(211, 50);
+            this.Document_Category_textsearch.MaxLength = 32767;
             this.Document_Category_textsearch.Name = "Document_Category_textsearch";
+            this.Document_Category_textsearch.PasswordChar = '\0';
+            this.Document_Category_textsearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Document_Category_textsearch.SelectedText = "";
+            this.Document_Category_textsearch.SelectionLength = 0;
+            this.Document_Category_textsearch.SelectionStart = 0;
+            this.Document_Category_textsearch.ShortcutsEnabled = true;
             this.Document_Category_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_textsearch.TabIndex = 6;
-            this.Document_Category_textsearch.TextChanged += new System.EventHandler(this.Document_Category_textsearch_TextChanged);
+            this.Document_Category_textsearch.TabIndex = 225;
+            this.Document_Category_textsearch.UseSelectable = true;
+            this.Document_Category_textsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Document_Category_textsearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // Document_Category_Name
+            // metroLabel1
             // 
-            this.Document_Category_Name.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Document_Category_Name.Location = new System.Drawing.Point(211, 356);
-            this.Document_Category_Name.Name = "Document_Category_Name";
-            this.Document_Category_Name.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_Name.TabIndex = 0;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(153, 54);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel1.TabIndex = 224;
+            this.metroLabel1.Text = "البحث";
             // 
             // Document_Category_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 450);
+            this.Controls.Add(this.Document_Category_textsearch);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Document_Category_Name);
+            this.Controls.Add(this.Coin_Exc_Sy);
             this.Controls.Add(this.Document_Category_exit);
             this.Controls.Add(this.Document_Category_delete);
             this.Controls.Add(this.Document_Category_update);
             this.Controls.Add(this.Document_Category_add);
             this.Controls.Add(this.Document_Category_new);
             this.Controls.Add(this.Document_Category_Gridview);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Document_Category_textsearch);
-            this.Controls.Add(this.Document_Category_Name);
             this.Name = "Document_Category_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -220,9 +261,9 @@
         private MetroFramework.Controls.MetroButton Document_Category_add;
         private MetroFramework.Controls.MetroButton Document_Category_new;
         private MetroFramework.Controls.MetroGrid Document_Category_Gridview;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Document_Category_textsearch;
-        private System.Windows.Forms.TextBox Document_Category_Name;
+        private MetroFramework.Controls.MetroTextBox Document_Category_Name;
+        private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
+        private MetroFramework.Controls.MetroTextBox Document_Category_textsearch;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

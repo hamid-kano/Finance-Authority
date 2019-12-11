@@ -125,10 +125,13 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Department_textsearch_TextChanged(object sender, EventArgs e)
+       
+        private void Department_textsearch_TextChanged_1(object sender, EventArgs e)
         {
             this.Department_Gridview.DataSource = Dep.Department_Search(Department_textsearch.Text);
             this.Department_Gridview.Columns[0].Visible = false;
         }
+
+        
     }
 }

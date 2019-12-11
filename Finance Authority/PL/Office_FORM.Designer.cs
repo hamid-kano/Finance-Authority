@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Office_exit = new MetroFramework.Controls.MetroButton();
             this.Office_delete = new MetroFramework.Controls.MetroButton();
             this.Office_update = new MetroFramework.Controls.MetroButton();
             this.Office_add = new MetroFramework.Controls.MetroButton();
             this.Office_new = new MetroFramework.Controls.MetroButton();
             this.Office_Gridview = new MetroFramework.Controls.MetroGrid();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Office_Notes = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Office_textsearch = new System.Windows.Forms.TextBox();
-            this.Office_Name = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Office_CombAuthontic = new System.Windows.Forms.ComboBox();
+            this.Office_Name = new MetroFramework.Controls.MetroTextBox();
+            this.Office_Notes = new MetroFramework.Controls.MetroTextBox();
+            this.Office_CombAuthontic = new MetroFramework.Controls.MetroComboBox();
+            this.Office_textsearch = new MetroFramework.Controls.MetroTextBox();
+            this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Office_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,23 +116,23 @@
             this.Office_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Office_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Office_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Office_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Office_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Office_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Office_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Office_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Office_Gridview.EnableHeadersVisualStyles = false;
             this.Office_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Office_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -140,114 +140,175 @@
             this.Office_Gridview.Name = "Office_Gridview";
             this.Office_Gridview.ReadOnly = true;
             this.Office_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Office_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Office_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Office_Gridview.Size = new System.Drawing.Size(540, 270);
             this.Office_Gridview.TabIndex = 52;
             this.Office_Gridview.Click += new System.EventHandler(this.Office_Gridview_Click);
             // 
-            // label3
+            // Office_Name
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "الملاحظات";
+            // 
+            // 
+            // 
+            this.Office_Name.CustomButton.Image = null;
+            this.Office_Name.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Office_Name.CustomButton.Name = "";
+            this.Office_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Office_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Office_Name.CustomButton.TabIndex = 1;
+            this.Office_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Office_Name.CustomButton.UseSelectable = true;
+            this.Office_Name.CustomButton.Visible = false;
+            this.Office_Name.Lines = new string[0];
+            this.Office_Name.Location = new System.Drawing.Point(89, 127);
+            this.Office_Name.MaxLength = 32767;
+            this.Office_Name.Name = "Office_Name";
+            this.Office_Name.PasswordChar = '\0';
+            this.Office_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Office_Name.SelectedText = "";
+            this.Office_Name.SelectionLength = 0;
+            this.Office_Name.SelectionStart = 0;
+            this.Office_Name.ShortcutsEnabled = true;
+            this.Office_Name.Size = new System.Drawing.Size(162, 23);
+            this.Office_Name.TabIndex = 213;
+            this.Office_Name.UseSelectable = true;
+            this.Office_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Office_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Office_Notes
             // 
-            this.Office_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Office_Notes.Location = new System.Drawing.Point(88, 186);
+            // 
+            // 
+            // 
+            this.Office_Notes.CustomButton.Image = null;
+            this.Office_Notes.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Office_Notes.CustomButton.Name = "";
+            this.Office_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Office_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Office_Notes.CustomButton.TabIndex = 1;
+            this.Office_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Office_Notes.CustomButton.UseSelectable = true;
+            this.Office_Notes.CustomButton.Visible = false;
+            this.Office_Notes.Lines = new string[0];
+            this.Office_Notes.Location = new System.Drawing.Point(87, 185);
+            this.Office_Notes.MaxLength = 32767;
             this.Office_Notes.Name = "Office_Notes";
-            this.Office_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Office_Notes.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "أسم المكتب";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "البحث";
-            // 
-            // Office_textsearch
-            // 
-            this.Office_textsearch.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Office_textsearch.Location = new System.Drawing.Point(363, 51);
-            this.Office_textsearch.Name = "Office_textsearch";
-            this.Office_textsearch.Size = new System.Drawing.Size(350, 23);
-            this.Office_textsearch.TabIndex = 8;
-            this.Office_textsearch.TextChanged += new System.EventHandler(this.Office_textsearch_TextChanged);
-            // 
-            // Office_Name
-            // 
-            this.Office_Name.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Office_Name.Location = new System.Drawing.Point(88, 131);
-            this.Office_Name.Name = "Office_Name";
-            this.Office_Name.Size = new System.Drawing.Size(163, 23);
-            this.Office_Name.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 233);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "الهيئة";
+            this.Office_Notes.PasswordChar = '\0';
+            this.Office_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Office_Notes.SelectedText = "";
+            this.Office_Notes.SelectionLength = 0;
+            this.Office_Notes.SelectionStart = 0;
+            this.Office_Notes.ShortcutsEnabled = true;
+            this.Office_Notes.Size = new System.Drawing.Size(162, 23);
+            this.Office_Notes.TabIndex = 212;
+            this.Office_Notes.UseSelectable = true;
+            this.Office_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Office_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Office_CombAuthontic
             // 
-            this.Office_CombAuthontic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Office_CombAuthontic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Office_CombAuthontic.FormattingEnabled = true;
-            this.Office_CombAuthontic.Location = new System.Drawing.Point(88, 233);
+            this.Office_CombAuthontic.ItemHeight = 23;
+            this.Office_CombAuthontic.Location = new System.Drawing.Point(87, 232);
             this.Office_CombAuthontic.Name = "Office_CombAuthontic";
-            this.Office_CombAuthontic.Size = new System.Drawing.Size(163, 24);
-            this.Office_CombAuthontic.TabIndex = 2;
+            this.Office_CombAuthontic.Size = new System.Drawing.Size(163, 29);
+            this.Office_CombAuthontic.TabIndex = 214;
+            this.Office_CombAuthontic.UseSelectable = true;
+            // 
+            // Office_textsearch
+            // 
+            // 
+            // 
+            // 
+            this.Office_textsearch.CustomButton.Image = null;
+            this.Office_textsearch.CustomButton.Location = new System.Drawing.Point(329, 1);
+            this.Office_textsearch.CustomButton.Name = "";
+            this.Office_textsearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Office_textsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Office_textsearch.CustomButton.TabIndex = 1;
+            this.Office_textsearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Office_textsearch.CustomButton.UseSelectable = true;
+            this.Office_textsearch.CustomButton.Visible = false;
+            this.Office_textsearch.Lines = new string[0];
+            this.Office_textsearch.Location = new System.Drawing.Point(371, 51);
+            this.Office_textsearch.MaxLength = 32767;
+            this.Office_textsearch.Name = "Office_textsearch";
+            this.Office_textsearch.PasswordChar = '\0';
+            this.Office_textsearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Office_textsearch.SelectedText = "";
+            this.Office_textsearch.SelectionLength = 0;
+            this.Office_textsearch.SelectionStart = 0;
+            this.Office_textsearch.ShortcutsEnabled = true;
+            this.Office_textsearch.Size = new System.Drawing.Size(351, 23);
+            this.Office_textsearch.TabIndex = 215;
+            this.Office_textsearch.UseSelectable = true;
+            this.Office_textsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Office_textsearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Coin_Exc_Sy
+            // 
+            this.Coin_Exc_Sy.AutoSize = true;
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(324, 51);
+            this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
+            this.Coin_Exc_Sy.Size = new System.Drawing.Size(41, 19);
+            this.Coin_Exc_Sy.TabIndex = 222;
+            this.Coin_Exc_Sy.Text = "البحث";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(-2, 127);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel1.TabIndex = 223;
+            this.metroLabel1.Text = "اسم المكتب";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(-2, 189);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel2.TabIndex = 224;
+            this.metroLabel2.Text = "الملاحظات";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(8, 242);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel3.TabIndex = 225;
+            this.metroLabel3.Text = "الهيئة";
             // 
             // Office_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 438);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Coin_Exc_Sy);
+            this.Controls.Add(this.Office_textsearch);
             this.Controls.Add(this.Office_CombAuthontic);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Office_Name);
+            this.Controls.Add(this.Office_Notes);
             this.Controls.Add(this.Office_exit);
             this.Controls.Add(this.Office_delete);
             this.Controls.Add(this.Office_update);
             this.Controls.Add(this.Office_add);
             this.Controls.Add(this.Office_new);
             this.Controls.Add(this.Office_Gridview);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Office_Notes);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Office_textsearch);
-            this.Controls.Add(this.Office_Name);
             this.Name = "Office_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -266,13 +327,13 @@
         private MetroFramework.Controls.MetroButton Office_add;
         private MetroFramework.Controls.MetroButton Office_new;
         private MetroFramework.Controls.MetroGrid Office_Gridview;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Office_Notes;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Office_textsearch;
-        private System.Windows.Forms.TextBox Office_Name;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox Office_CombAuthontic;
+        private MetroFramework.Controls.MetroTextBox Office_Name;
+        private MetroFramework.Controls.MetroTextBox Office_Notes;
+        private MetroFramework.Controls.MetroComboBox Office_CombAuthontic;
+        private MetroFramework.Controls.MetroTextBox Office_textsearch;
+        private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

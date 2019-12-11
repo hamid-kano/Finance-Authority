@@ -31,131 +31,61 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Insurances = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Files1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Years_Seniority = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Notes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.Empl_Sala_after_Reb = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Total = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Punishments = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Reparations = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Loans = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Taskes = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Dayes = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Exam = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Absences = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Rem_cons = new System.Windows.Forms.TextBox();
             this.Employee_Salaries_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Salaries_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_delete = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_update = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_add = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_new = new MetroFramework.Controls.MetroButton();
-            this.label16 = new System.Windows.Forms.Label();
-            this.Empl_Sala_Files2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.Empl_Sala_Comb_Date_Emiss = new MetroFramework.Controls.MetroComboBox();
             this.Empl_Sala_Comb_Department = new MetroFramework.Controls.MetroComboBox();
             this.Empl_Sala_Comb_Emplyment = new MetroFramework.Controls.MetroComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Empl_Sala_va_out_sal = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.Employee_Salaries_Department = new MetroFramework.Controls.MetroComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.Employee_Salaries_Employment = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Salaries_Saliery = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Salaries_Print = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.Empl_Sala_Dayes = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Rem_cons = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Absences = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_va_out_sal = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Exam = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Punishments = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Loans = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Taskes = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Reparations = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Years_Seniority = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Total = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_after_Reb = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Notes = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Insurances = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Files1 = new MetroFramework.Controls.MetroTextBox();
+            this.Empl_Sala_Files2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 524);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 226;
-            this.label3.Text = "التامينات";
-            // 
-            // Empl_Sala_Insurances
-            // 
-            this.Empl_Sala_Insurances.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Insurances.Location = new System.Drawing.Point(111, 517);
-            this.Empl_Sala_Insurances.Name = "Empl_Sala_Insurances";
-            this.Empl_Sala_Insurances.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Insurances.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 558);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 16);
-            this.label7.TabIndex = 224;
-            this.label7.Text = "حقل1";
-            // 
-            // Empl_Sala_Files1
-            // 
-            this.Empl_Sala_Files1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Files1.Location = new System.Drawing.Point(111, 551);
-            this.Empl_Sala_Files1.Name = "Empl_Sala_Files1";
-            this.Empl_Sala_Files1.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files1.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 388);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 16);
-            this.label8.TabIndex = 222;
-            this.label8.Text = "سنوات الخدمة";
-            // 
-            // Empl_Sala_Years_Seniority
-            // 
-            this.Empl_Sala_Years_Seniority.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Years_Seniority.Location = new System.Drawing.Point(111, 381);
-            this.Empl_Sala_Years_Seniority.Name = "Empl_Sala_Years_Seniority";
-            this.Empl_Sala_Years_Seniority.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Years_Seniority.TabIndex = 9;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(9, 490);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 16);
-            this.label12.TabIndex = 220;
-            this.label12.Text = "الملاحظات";
-            // 
-            // Empl_Sala_Notes
-            // 
-            this.Empl_Sala_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Notes.Location = new System.Drawing.Point(111, 483);
-            this.Empl_Sala_Notes.Name = "Empl_Sala_Notes";
-            this.Empl_Sala_Notes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Notes.TabIndex = 12;
             // 
             // label14
             // 
@@ -163,191 +93,8 @@
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(2, 456);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 16);
+            this.label14.Size = new System.Drawing.Size(0, 16);
             this.label14.TabIndex = 218;
-            this.label14.Text = "الراتب بعد الخصم";
-            // 
-            // Empl_Sala_after_Reb
-            // 
-            this.Empl_Sala_after_Reb.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_after_Reb.Location = new System.Drawing.Point(111, 449);
-            this.Empl_Sala_after_Reb.Name = "Empl_Sala_after_Reb";
-            this.Empl_Sala_after_Reb.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_after_Reb.TabIndex = 11;
-            this.Empl_Sala_after_Reb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Empl_Sala_after_Reb_KeyPress);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(-6, 422);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 16);
-            this.label15.TabIndex = 216;
-            this.label15.Text = "المجموع الاجمالي";
-            // 
-            // Empl_Sala_Total
-            // 
-            this.Empl_Sala_Total.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Total.Location = new System.Drawing.Point(111, 415);
-            this.Empl_Sala_Total.Name = "Empl_Sala_Total";
-            this.Empl_Sala_Total.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Total.TabIndex = 10;
-            this.Empl_Sala_Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Empl_Sala_Total_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(5, 286);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 16);
-            this.label13.TabIndex = 214;
-            this.label13.Text = "القروض";
-            // 
-            // Empl_Sala_Punishments
-            // 
-            this.Empl_Sala_Punishments.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Punishments.Location = new System.Drawing.Point(111, 245);
-            this.Empl_Sala_Punishments.Name = "Empl_Sala_Punishments";
-            this.Empl_Sala_Punishments.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Punishments.TabIndex = 5;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 354);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 16);
-            this.label10.TabIndex = 211;
-            this.label10.Text = "مكافات";
-            // 
-            // Empl_Sala_Reparations
-            // 
-            this.Empl_Sala_Reparations.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Reparations.Location = new System.Drawing.Point(111, 347);
-            this.Empl_Sala_Reparations.Name = "Empl_Sala_Reparations";
-            this.Empl_Sala_Reparations.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Reparations.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 179);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 16);
-            this.label11.TabIndex = 209;
-            this.label11.Text = "اجازة بدون راتب";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 208;
-            this.label2.Text = "العقوبات";
-            // 
-            // Empl_Sala_Loans
-            // 
-            this.Empl_Sala_Loans.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Loans.Location = new System.Drawing.Point(111, 279);
-            this.Empl_Sala_Loans.Name = "Empl_Sala_Loans";
-            this.Empl_Sala_Loans.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Loans.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 320);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 16);
-            this.label9.TabIndex = 206;
-            this.label9.Text = "المهام";
-            // 
-            // Empl_Sala_Taskes
-            // 
-            this.Empl_Sala_Taskes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Taskes.Location = new System.Drawing.Point(111, 313);
-            this.Empl_Sala_Taskes.Name = "Empl_Sala_Taskes";
-            this.Empl_Sala_Taskes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Taskes.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
-            this.label1.TabIndex = 204;
-            this.label1.Text = "ايام العمل";
-            // 
-            // Empl_Sala_Dayes
-            // 
-            this.Empl_Sala_Dayes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Dayes.Location = new System.Drawing.Point(111, 75);
-            this.Empl_Sala_Dayes.Name = "Empl_Sala_Dayes";
-            this.Empl_Sala_Dayes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Dayes.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 16);
-            this.label6.TabIndex = 202;
-            this.label6.Text = "أجازة أمتحانات";
-            // 
-            // Empl_Sala_Exam
-            // 
-            this.Empl_Sala_Exam.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Exam.Location = new System.Drawing.Point(111, 211);
-            this.Empl_Sala_Exam.Name = "Empl_Sala_Exam";
-            this.Empl_Sala_Exam.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Exam.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 150);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
-            this.label5.TabIndex = 200;
-            this.label5.Text = "الغيابات";
-            // 
-            // Empl_Sala_Absences
-            // 
-            this.Empl_Sala_Absences.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Absences.Location = new System.Drawing.Point(111, 143);
-            this.Empl_Sala_Absences.Name = "Empl_Sala_Absences";
-            this.Empl_Sala_Absences.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Absences.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 16);
-            this.label4.TabIndex = 198;
-            this.label4.Text = "أيام المتبقية للعقد";
-            // 
-            // Empl_Sala_Rem_cons
-            // 
-            this.Empl_Sala_Rem_cons.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Rem_cons.Location = new System.Drawing.Point(111, 109);
-            this.Empl_Sala_Rem_cons.Name = "Empl_Sala_Rem_cons";
-            this.Empl_Sala_Rem_cons.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Rem_cons.TabIndex = 1;
             // 
             // Employee_Salaries_dataGrid
             // 
@@ -455,34 +202,6 @@
             this.Employee_Salaries_new.UseSelectable = true;
             this.Employee_Salaries_new.Click += new System.EventHandler(this.Employee_Salaries_new_Click);
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(5, 592);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 16);
-            this.label16.TabIndex = 228;
-            this.label16.Text = "حقل2";
-            // 
-            // Empl_Sala_Files2
-            // 
-            this.Empl_Sala_Files2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_Files2.Location = new System.Drawing.Point(111, 585);
-            this.Empl_Sala_Files2.Name = "Empl_Sala_Files2";
-            this.Empl_Sala_Files2.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files2.TabIndex = 15;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(5, 627);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 16);
-            this.label17.TabIndex = 229;
-            this.label17.Text = "اصدار الراتب";
-            // 
             // Empl_Sala_Comb_Date_Emiss
             // 
             this.Empl_Sala_Comb_Date_Emiss.FormattingEnabled = true;
@@ -514,44 +233,6 @@
             this.Empl_Sala_Comb_Emplyment.TabIndex = 18;
             this.Empl_Sala_Comb_Emplyment.UseSelectable = true;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(8, 662);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 16);
-            this.label18.TabIndex = 236;
-            this.label18.Text = "القسم";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(8, 700);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 16);
-            this.label19.TabIndex = 237;
-            this.label19.Text = "الموظفين";
-            // 
-            // Empl_Sala_va_out_sal
-            // 
-            this.Empl_Sala_va_out_sal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empl_Sala_va_out_sal.Location = new System.Drawing.Point(111, 177);
-            this.Empl_Sala_va_out_sal.Name = "Empl_Sala_va_out_sal";
-            this.Empl_Sala_va_out_sal.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_va_out_sal.TabIndex = 3;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(685, 73);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 16);
-            this.label20.TabIndex = 242;
-            this.label20.Text = "القسم";
-            // 
             // Employee_Salaries_Department
             // 
             this.Employee_Salaries_Department.FormattingEnabled = true;
@@ -567,27 +248,16 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(405, 76);
+            this.label21.Location = new System.Drawing.Point(478, 76);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 16);
+            this.label21.Size = new System.Drawing.Size(0, 16);
             this.label21.TabIndex = 240;
-            this.label21.Text = "اصدار الراتب";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(990, 74);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 16);
-            this.label22.TabIndex = 244;
-            this.label22.Text = "الموظفين";
             // 
             // Employee_Salaries_Employment
             // 
             this.Employee_Salaries_Employment.FormattingEnabled = true;
             this.Employee_Salaries_Employment.ItemHeight = 23;
-            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1056, 61);
+            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1046, 60);
             this.Employee_Salaries_Employment.Name = "Employee_Salaries_Employment";
             this.Employee_Salaries_Employment.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Employment.TabIndex = 27;
@@ -616,56 +286,736 @@
             this.Employee_Salaries_Print.UseSelectable = true;
             this.Employee_Salaries_Print.Click += new System.EventHandler(this.Employee_Salaries_Print_Click);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(980, 70);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel1.TabIndex = 245;
+            this.metroLabel1.Text = "الموظفين";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(698, 70);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel2.TabIndex = 246;
+            this.metroLabel2.Text = "القسم";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(403, 70);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel3.TabIndex = 247;
+            this.metroLabel3.Text = "اصدار الراتب";
+            // 
+            // Empl_Sala_Dayes
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Dayes.CustomButton.Image = null;
+            this.Empl_Sala_Dayes.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Dayes.CustomButton.Name = "";
+            this.Empl_Sala_Dayes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Dayes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Dayes.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Dayes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Dayes.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Dayes.CustomButton.Visible = false;
+            this.Empl_Sala_Dayes.Lines = new string[0];
+            this.Empl_Sala_Dayes.Location = new System.Drawing.Point(111, 70);
+            this.Empl_Sala_Dayes.MaxLength = 32767;
+            this.Empl_Sala_Dayes.Name = "Empl_Sala_Dayes";
+            this.Empl_Sala_Dayes.PasswordChar = '\0';
+            this.Empl_Sala_Dayes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Dayes.SelectedText = "";
+            this.Empl_Sala_Dayes.SelectionLength = 0;
+            this.Empl_Sala_Dayes.SelectionStart = 0;
+            this.Empl_Sala_Dayes.ShortcutsEnabled = true;
+            this.Empl_Sala_Dayes.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Dayes.TabIndex = 257;
+            this.Empl_Sala_Dayes.UseSelectable = true;
+            this.Empl_Sala_Dayes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Dayes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Rem_cons
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Rem_cons.CustomButton.Image = null;
+            this.Empl_Sala_Rem_cons.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Rem_cons.CustomButton.Name = "";
+            this.Empl_Sala_Rem_cons.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Rem_cons.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Rem_cons.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Rem_cons.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Rem_cons.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Rem_cons.CustomButton.Visible = false;
+            this.Empl_Sala_Rem_cons.Lines = new string[0];
+            this.Empl_Sala_Rem_cons.Location = new System.Drawing.Point(111, 104);
+            this.Empl_Sala_Rem_cons.MaxLength = 32767;
+            this.Empl_Sala_Rem_cons.Name = "Empl_Sala_Rem_cons";
+            this.Empl_Sala_Rem_cons.PasswordChar = '\0';
+            this.Empl_Sala_Rem_cons.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Rem_cons.SelectedText = "";
+            this.Empl_Sala_Rem_cons.SelectionLength = 0;
+            this.Empl_Sala_Rem_cons.SelectionStart = 0;
+            this.Empl_Sala_Rem_cons.ShortcutsEnabled = true;
+            this.Empl_Sala_Rem_cons.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Rem_cons.TabIndex = 258;
+            this.Empl_Sala_Rem_cons.UseSelectable = true;
+            this.Empl_Sala_Rem_cons.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Rem_cons.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Absences
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Absences.CustomButton.Image = null;
+            this.Empl_Sala_Absences.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Absences.CustomButton.Name = "";
+            this.Empl_Sala_Absences.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Absences.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Absences.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Absences.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Absences.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Absences.CustomButton.Visible = false;
+            this.Empl_Sala_Absences.Lines = new string[0];
+            this.Empl_Sala_Absences.Location = new System.Drawing.Point(111, 143);
+            this.Empl_Sala_Absences.MaxLength = 32767;
+            this.Empl_Sala_Absences.Name = "Empl_Sala_Absences";
+            this.Empl_Sala_Absences.PasswordChar = '\0';
+            this.Empl_Sala_Absences.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Absences.SelectedText = "";
+            this.Empl_Sala_Absences.SelectionLength = 0;
+            this.Empl_Sala_Absences.SelectionStart = 0;
+            this.Empl_Sala_Absences.ShortcutsEnabled = true;
+            this.Empl_Sala_Absences.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Absences.TabIndex = 259;
+            this.Empl_Sala_Absences.UseSelectable = true;
+            this.Empl_Sala_Absences.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Absences.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_va_out_sal
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_va_out_sal.CustomButton.Image = null;
+            this.Empl_Sala_va_out_sal.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_va_out_sal.CustomButton.Name = "";
+            this.Empl_Sala_va_out_sal.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_va_out_sal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_va_out_sal.CustomButton.TabIndex = 1;
+            this.Empl_Sala_va_out_sal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_va_out_sal.CustomButton.UseSelectable = true;
+            this.Empl_Sala_va_out_sal.CustomButton.Visible = false;
+            this.Empl_Sala_va_out_sal.Lines = new string[0];
+            this.Empl_Sala_va_out_sal.Location = new System.Drawing.Point(111, 179);
+            this.Empl_Sala_va_out_sal.MaxLength = 32767;
+            this.Empl_Sala_va_out_sal.Name = "Empl_Sala_va_out_sal";
+            this.Empl_Sala_va_out_sal.PasswordChar = '\0';
+            this.Empl_Sala_va_out_sal.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_va_out_sal.SelectedText = "";
+            this.Empl_Sala_va_out_sal.SelectionLength = 0;
+            this.Empl_Sala_va_out_sal.SelectionStart = 0;
+            this.Empl_Sala_va_out_sal.ShortcutsEnabled = true;
+            this.Empl_Sala_va_out_sal.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_va_out_sal.TabIndex = 260;
+            this.Empl_Sala_va_out_sal.UseSelectable = true;
+            this.Empl_Sala_va_out_sal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_va_out_sal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Exam
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Exam.CustomButton.Image = null;
+            this.Empl_Sala_Exam.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Exam.CustomButton.Name = "";
+            this.Empl_Sala_Exam.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Exam.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Exam.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Exam.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Exam.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Exam.CustomButton.Visible = false;
+            this.Empl_Sala_Exam.Lines = new string[0];
+            this.Empl_Sala_Exam.Location = new System.Drawing.Point(111, 211);
+            this.Empl_Sala_Exam.MaxLength = 32767;
+            this.Empl_Sala_Exam.Name = "Empl_Sala_Exam";
+            this.Empl_Sala_Exam.PasswordChar = '\0';
+            this.Empl_Sala_Exam.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Exam.SelectedText = "";
+            this.Empl_Sala_Exam.SelectionLength = 0;
+            this.Empl_Sala_Exam.SelectionStart = 0;
+            this.Empl_Sala_Exam.ShortcutsEnabled = true;
+            this.Empl_Sala_Exam.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Exam.TabIndex = 261;
+            this.Empl_Sala_Exam.UseSelectable = true;
+            this.Empl_Sala_Exam.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Exam.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Punishments
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Punishments.CustomButton.Image = null;
+            this.Empl_Sala_Punishments.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Punishments.CustomButton.Name = "";
+            this.Empl_Sala_Punishments.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Punishments.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Punishments.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Punishments.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Punishments.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Punishments.CustomButton.Visible = false;
+            this.Empl_Sala_Punishments.Lines = new string[0];
+            this.Empl_Sala_Punishments.Location = new System.Drawing.Point(111, 245);
+            this.Empl_Sala_Punishments.MaxLength = 32767;
+            this.Empl_Sala_Punishments.Name = "Empl_Sala_Punishments";
+            this.Empl_Sala_Punishments.PasswordChar = '\0';
+            this.Empl_Sala_Punishments.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Punishments.SelectedText = "";
+            this.Empl_Sala_Punishments.SelectionLength = 0;
+            this.Empl_Sala_Punishments.SelectionStart = 0;
+            this.Empl_Sala_Punishments.ShortcutsEnabled = true;
+            this.Empl_Sala_Punishments.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Punishments.TabIndex = 262;
+            this.Empl_Sala_Punishments.UseSelectable = true;
+            this.Empl_Sala_Punishments.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Punishments.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Loans
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Loans.CustomButton.Image = null;
+            this.Empl_Sala_Loans.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Loans.CustomButton.Name = "";
+            this.Empl_Sala_Loans.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Loans.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Loans.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Loans.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Loans.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Loans.CustomButton.Visible = false;
+            this.Empl_Sala_Loans.Lines = new string[0];
+            this.Empl_Sala_Loans.Location = new System.Drawing.Point(111, 279);
+            this.Empl_Sala_Loans.MaxLength = 32767;
+            this.Empl_Sala_Loans.Name = "Empl_Sala_Loans";
+            this.Empl_Sala_Loans.PasswordChar = '\0';
+            this.Empl_Sala_Loans.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Loans.SelectedText = "";
+            this.Empl_Sala_Loans.SelectionLength = 0;
+            this.Empl_Sala_Loans.SelectionStart = 0;
+            this.Empl_Sala_Loans.ShortcutsEnabled = true;
+            this.Empl_Sala_Loans.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Loans.TabIndex = 263;
+            this.Empl_Sala_Loans.UseSelectable = true;
+            this.Empl_Sala_Loans.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Loans.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Taskes
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Taskes.CustomButton.Image = null;
+            this.Empl_Sala_Taskes.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Taskes.CustomButton.Name = "";
+            this.Empl_Sala_Taskes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Taskes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Taskes.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Taskes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Taskes.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Taskes.CustomButton.Visible = false;
+            this.Empl_Sala_Taskes.Lines = new string[0];
+            this.Empl_Sala_Taskes.Location = new System.Drawing.Point(111, 313);
+            this.Empl_Sala_Taskes.MaxLength = 32767;
+            this.Empl_Sala_Taskes.Name = "Empl_Sala_Taskes";
+            this.Empl_Sala_Taskes.PasswordChar = '\0';
+            this.Empl_Sala_Taskes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Taskes.SelectedText = "";
+            this.Empl_Sala_Taskes.SelectionLength = 0;
+            this.Empl_Sala_Taskes.SelectionStart = 0;
+            this.Empl_Sala_Taskes.ShortcutsEnabled = true;
+            this.Empl_Sala_Taskes.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Taskes.TabIndex = 264;
+            this.Empl_Sala_Taskes.UseSelectable = true;
+            this.Empl_Sala_Taskes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Taskes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Reparations
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Reparations.CustomButton.Image = null;
+            this.Empl_Sala_Reparations.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Reparations.CustomButton.Name = "";
+            this.Empl_Sala_Reparations.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Reparations.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Reparations.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Reparations.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Reparations.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Reparations.CustomButton.Visible = false;
+            this.Empl_Sala_Reparations.Lines = new string[0];
+            this.Empl_Sala_Reparations.Location = new System.Drawing.Point(111, 347);
+            this.Empl_Sala_Reparations.MaxLength = 32767;
+            this.Empl_Sala_Reparations.Name = "Empl_Sala_Reparations";
+            this.Empl_Sala_Reparations.PasswordChar = '\0';
+            this.Empl_Sala_Reparations.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Reparations.SelectedText = "";
+            this.Empl_Sala_Reparations.SelectionLength = 0;
+            this.Empl_Sala_Reparations.SelectionStart = 0;
+            this.Empl_Sala_Reparations.ShortcutsEnabled = true;
+            this.Empl_Sala_Reparations.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Reparations.TabIndex = 265;
+            this.Empl_Sala_Reparations.UseSelectable = true;
+            this.Empl_Sala_Reparations.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Reparations.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Years_Seniority
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Years_Seniority.CustomButton.Image = null;
+            this.Empl_Sala_Years_Seniority.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Years_Seniority.CustomButton.Name = "";
+            this.Empl_Sala_Years_Seniority.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Years_Seniority.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Years_Seniority.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Years_Seniority.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Years_Seniority.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Years_Seniority.CustomButton.Visible = false;
+            this.Empl_Sala_Years_Seniority.Lines = new string[0];
+            this.Empl_Sala_Years_Seniority.Location = new System.Drawing.Point(111, 381);
+            this.Empl_Sala_Years_Seniority.MaxLength = 32767;
+            this.Empl_Sala_Years_Seniority.Name = "Empl_Sala_Years_Seniority";
+            this.Empl_Sala_Years_Seniority.PasswordChar = '\0';
+            this.Empl_Sala_Years_Seniority.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Years_Seniority.SelectedText = "";
+            this.Empl_Sala_Years_Seniority.SelectionLength = 0;
+            this.Empl_Sala_Years_Seniority.SelectionStart = 0;
+            this.Empl_Sala_Years_Seniority.ShortcutsEnabled = true;
+            this.Empl_Sala_Years_Seniority.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Years_Seniority.TabIndex = 266;
+            this.Empl_Sala_Years_Seniority.UseSelectable = true;
+            this.Empl_Sala_Years_Seniority.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Years_Seniority.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Total
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Total.CustomButton.Image = null;
+            this.Empl_Sala_Total.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Total.CustomButton.Name = "";
+            this.Empl_Sala_Total.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Total.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Total.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Total.CustomButton.Visible = false;
+            this.Empl_Sala_Total.Lines = new string[0];
+            this.Empl_Sala_Total.Location = new System.Drawing.Point(111, 415);
+            this.Empl_Sala_Total.MaxLength = 32767;
+            this.Empl_Sala_Total.Name = "Empl_Sala_Total";
+            this.Empl_Sala_Total.PasswordChar = '\0';
+            this.Empl_Sala_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Total.SelectedText = "";
+            this.Empl_Sala_Total.SelectionLength = 0;
+            this.Empl_Sala_Total.SelectionStart = 0;
+            this.Empl_Sala_Total.ShortcutsEnabled = true;
+            this.Empl_Sala_Total.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Total.TabIndex = 267;
+            this.Empl_Sala_Total.UseSelectable = true;
+            this.Empl_Sala_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_after_Reb
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_after_Reb.CustomButton.Image = null;
+            this.Empl_Sala_after_Reb.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_after_Reb.CustomButton.Name = "";
+            this.Empl_Sala_after_Reb.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_after_Reb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_after_Reb.CustomButton.TabIndex = 1;
+            this.Empl_Sala_after_Reb.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_after_Reb.CustomButton.UseSelectable = true;
+            this.Empl_Sala_after_Reb.CustomButton.Visible = false;
+            this.Empl_Sala_after_Reb.Lines = new string[0];
+            this.Empl_Sala_after_Reb.Location = new System.Drawing.Point(111, 449);
+            this.Empl_Sala_after_Reb.MaxLength = 32767;
+            this.Empl_Sala_after_Reb.Name = "Empl_Sala_after_Reb";
+            this.Empl_Sala_after_Reb.PasswordChar = '\0';
+            this.Empl_Sala_after_Reb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_after_Reb.SelectedText = "";
+            this.Empl_Sala_after_Reb.SelectionLength = 0;
+            this.Empl_Sala_after_Reb.SelectionStart = 0;
+            this.Empl_Sala_after_Reb.ShortcutsEnabled = true;
+            this.Empl_Sala_after_Reb.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_after_Reb.TabIndex = 268;
+            this.Empl_Sala_after_Reb.UseSelectable = true;
+            this.Empl_Sala_after_Reb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_after_Reb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Notes
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Notes.CustomButton.Image = null;
+            this.Empl_Sala_Notes.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Notes.CustomButton.Name = "";
+            this.Empl_Sala_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Notes.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Notes.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Notes.CustomButton.Visible = false;
+            this.Empl_Sala_Notes.Lines = new string[0];
+            this.Empl_Sala_Notes.Location = new System.Drawing.Point(111, 483);
+            this.Empl_Sala_Notes.MaxLength = 32767;
+            this.Empl_Sala_Notes.Name = "Empl_Sala_Notes";
+            this.Empl_Sala_Notes.PasswordChar = '\0';
+            this.Empl_Sala_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Notes.SelectedText = "";
+            this.Empl_Sala_Notes.SelectionLength = 0;
+            this.Empl_Sala_Notes.SelectionStart = 0;
+            this.Empl_Sala_Notes.ShortcutsEnabled = true;
+            this.Empl_Sala_Notes.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Notes.TabIndex = 269;
+            this.Empl_Sala_Notes.UseSelectable = true;
+            this.Empl_Sala_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Insurances
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Insurances.CustomButton.Image = null;
+            this.Empl_Sala_Insurances.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Insurances.CustomButton.Name = "";
+            this.Empl_Sala_Insurances.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Insurances.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Insurances.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Insurances.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Insurances.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Insurances.CustomButton.Visible = false;
+            this.Empl_Sala_Insurances.Lines = new string[0];
+            this.Empl_Sala_Insurances.Location = new System.Drawing.Point(111, 517);
+            this.Empl_Sala_Insurances.MaxLength = 32767;
+            this.Empl_Sala_Insurances.Name = "Empl_Sala_Insurances";
+            this.Empl_Sala_Insurances.PasswordChar = '\0';
+            this.Empl_Sala_Insurances.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Insurances.SelectedText = "";
+            this.Empl_Sala_Insurances.SelectionLength = 0;
+            this.Empl_Sala_Insurances.SelectionStart = 0;
+            this.Empl_Sala_Insurances.ShortcutsEnabled = true;
+            this.Empl_Sala_Insurances.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Insurances.TabIndex = 270;
+            this.Empl_Sala_Insurances.UseSelectable = true;
+            this.Empl_Sala_Insurances.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Insurances.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Files1
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Files1.CustomButton.Image = null;
+            this.Empl_Sala_Files1.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Files1.CustomButton.Name = "";
+            this.Empl_Sala_Files1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Files1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Files1.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Files1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Files1.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Files1.CustomButton.Visible = false;
+            this.Empl_Sala_Files1.Lines = new string[0];
+            this.Empl_Sala_Files1.Location = new System.Drawing.Point(111, 551);
+            this.Empl_Sala_Files1.MaxLength = 32767;
+            this.Empl_Sala_Files1.Name = "Empl_Sala_Files1";
+            this.Empl_Sala_Files1.PasswordChar = '\0';
+            this.Empl_Sala_Files1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Files1.SelectedText = "";
+            this.Empl_Sala_Files1.SelectionLength = 0;
+            this.Empl_Sala_Files1.SelectionStart = 0;
+            this.Empl_Sala_Files1.ShortcutsEnabled = true;
+            this.Empl_Sala_Files1.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Files1.TabIndex = 271;
+            this.Empl_Sala_Files1.UseSelectable = true;
+            this.Empl_Sala_Files1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Files1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Empl_Sala_Files2
+            // 
+            // 
+            // 
+            // 
+            this.Empl_Sala_Files2.CustomButton.Image = null;
+            this.Empl_Sala_Files2.CustomButton.Location = new System.Drawing.Point(91, 1);
+            this.Empl_Sala_Files2.CustomButton.Name = "";
+            this.Empl_Sala_Files2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Empl_Sala_Files2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Empl_Sala_Files2.CustomButton.TabIndex = 1;
+            this.Empl_Sala_Files2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Empl_Sala_Files2.CustomButton.UseSelectable = true;
+            this.Empl_Sala_Files2.CustomButton.Visible = false;
+            this.Empl_Sala_Files2.Lines = new string[0];
+            this.Empl_Sala_Files2.Location = new System.Drawing.Point(111, 585);
+            this.Empl_Sala_Files2.MaxLength = 32767;
+            this.Empl_Sala_Files2.Name = "Empl_Sala_Files2";
+            this.Empl_Sala_Files2.PasswordChar = '\0';
+            this.Empl_Sala_Files2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Empl_Sala_Files2.SelectedText = "";
+            this.Empl_Sala_Files2.SelectionLength = 0;
+            this.Empl_Sala_Files2.SelectionStart = 0;
+            this.Empl_Sala_Files2.ShortcutsEnabled = true;
+            this.Empl_Sala_Files2.Size = new System.Drawing.Size(113, 23);
+            this.Empl_Sala_Files2.TabIndex = 272;
+            this.Empl_Sala_Files2.UseSelectable = true;
+            this.Empl_Sala_Files2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Empl_Sala_Files2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(8, 74);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel4.TabIndex = 273;
+            this.metroLabel4.Text = "ايام العمل";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(5, 108);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(101, 19);
+            this.metroLabel5.TabIndex = 274;
+            this.metroLabel5.Text = "ايام المتبقية للعقد";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(2, 147);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel6.TabIndex = 275;
+            this.metroLabel6.Text = "الغيابات";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(5, 183);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(91, 19);
+            this.metroLabel7.TabIndex = 276;
+            this.metroLabel7.Text = "اجازة بدون راتب";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(5, 215);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel8.TabIndex = 277;
+            this.metroLabel8.Text = "اجازة امتحانات";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(6, 249);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel9.TabIndex = 278;
+            this.metroLabel9.Text = "العقوبات";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(6, 283);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel10.TabIndex = 279;
+            this.metroLabel10.Text = "القروض";
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(11, 317);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel11.TabIndex = 280;
+            this.metroLabel11.Text = "المهام";
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(8, 347);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel12.TabIndex = 281;
+            this.metroLabel12.Text = "مكافات";
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(5, 385);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel13.TabIndex = 282;
+            this.metroLabel13.Text = "سنوات الخدمة";
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(1, 419);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel14.TabIndex = 283;
+            this.metroLabel14.Text = "المجموع الاجمالي";
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(4, 449);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel15.TabIndex = 284;
+            this.metroLabel15.Text = "الراتب بعد الخصم";
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(2, 483);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel16.TabIndex = 285;
+            this.metroLabel16.Text = "الملاحظات";
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.Location = new System.Drawing.Point(8, 521);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel17.TabIndex = 286;
+            this.metroLabel17.Text = "التامينات";
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Location = new System.Drawing.Point(6, 624);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel18.TabIndex = 287;
+            this.metroLabel18.Text = "اصدار الراتب";
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Location = new System.Drawing.Point(8, 589);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel19.TabIndex = 288;
+            this.metroLabel19.Text = "حقل2";
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.Location = new System.Drawing.Point(8, 659);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel20.TabIndex = 289;
+            this.metroLabel20.Text = "القسم";
+            // 
+            // metroLabel21
+            // 
+            this.metroLabel21.AutoSize = true;
+            this.metroLabel21.Location = new System.Drawing.Point(8, 555);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel21.TabIndex = 290;
+            this.metroLabel21.Text = "حقل1";
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.AutoSize = true;
+            this.metroLabel22.Location = new System.Drawing.Point(2, 694);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel22.TabIndex = 291;
+            this.metroLabel22.Text = "الموظفين";
+            // 
             // Employee_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 736);
+            this.Controls.Add(this.metroLabel22);
+            this.Controls.Add(this.metroLabel21);
+            this.Controls.Add(this.metroLabel20);
+            this.Controls.Add(this.metroLabel19);
+            this.Controls.Add(this.metroLabel18);
+            this.Controls.Add(this.metroLabel17);
+            this.Controls.Add(this.metroLabel16);
+            this.Controls.Add(this.metroLabel15);
+            this.Controls.Add(this.metroLabel14);
+            this.Controls.Add(this.metroLabel13);
+            this.Controls.Add(this.metroLabel12);
+            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.Empl_Sala_Files2);
+            this.Controls.Add(this.Empl_Sala_Files1);
+            this.Controls.Add(this.Empl_Sala_Insurances);
+            this.Controls.Add(this.Empl_Sala_Notes);
+            this.Controls.Add(this.Empl_Sala_after_Reb);
+            this.Controls.Add(this.Empl_Sala_Total);
+            this.Controls.Add(this.Empl_Sala_Years_Seniority);
+            this.Controls.Add(this.Empl_Sala_Reparations);
+            this.Controls.Add(this.Empl_Sala_Taskes);
+            this.Controls.Add(this.Empl_Sala_Loans);
+            this.Controls.Add(this.Empl_Sala_Punishments);
+            this.Controls.Add(this.Empl_Sala_Exam);
+            this.Controls.Add(this.Empl_Sala_va_out_sal);
+            this.Controls.Add(this.Empl_Sala_Absences);
+            this.Controls.Add(this.Empl_Sala_Rem_cons);
+            this.Controls.Add(this.Empl_Sala_Dayes);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Employee_Salaries_Print);
             this.Controls.Add(this.Employee_Salaries_Saliery);
-            this.Controls.Add(this.label22);
             this.Controls.Add(this.Employee_Salaries_Employment);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.Employee_Salaries_Department);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.Empl_Sala_va_out_sal);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.Empl_Sala_Comb_Department);
             this.Controls.Add(this.Empl_Sala_Comb_Emplyment);
             this.Controls.Add(this.Empl_Sala_Comb_Date_Emiss);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.Empl_Sala_Files2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Empl_Sala_Insurances);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Empl_Sala_Files1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.Empl_Sala_Years_Seniority);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.Empl_Sala_Notes);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.Empl_Sala_after_Reb);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.Empl_Sala_Total);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.Empl_Sala_Punishments);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.Empl_Sala_Reparations);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Empl_Sala_Loans);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.Empl_Sala_Taskes);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Empl_Sala_Dayes);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.Empl_Sala_Exam);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Empl_Sala_Absences);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Empl_Sala_Rem_cons);
             this.Controls.Add(this.Employee_Salaries_dataGrid);
             this.Controls.Add(this.Employee_Salaries_exit);
             this.Controls.Add(this.Employee_Salaries_delete);
@@ -683,57 +1033,58 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Empl_Sala_Insurances;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Empl_Sala_Files1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Empl_Sala_Years_Seniority;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox Empl_Sala_Notes;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox Empl_Sala_after_Reb;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox Empl_Sala_Total;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox Empl_Sala_Punishments;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Empl_Sala_Reparations;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Empl_Sala_Loans;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Empl_Sala_Taskes;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Empl_Sala_Dayes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Empl_Sala_Exam;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Empl_Sala_Absences;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Empl_Sala_Rem_cons;
         private MetroFramework.Controls.MetroGrid Employee_Salaries_dataGrid;
         private MetroFramework.Controls.MetroButton Employee_Salaries_exit;
         private MetroFramework.Controls.MetroButton Employee_Salaries_delete;
         private MetroFramework.Controls.MetroButton Employee_Salaries_update;
         private MetroFramework.Controls.MetroButton Employee_Salaries_add;
         private MetroFramework.Controls.MetroButton Employee_Salaries_new;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox Empl_Sala_Files2;
-        private System.Windows.Forms.Label label17;
         private MetroFramework.Controls.MetroComboBox Empl_Sala_Comb_Date_Emiss;
         private MetroFramework.Controls.MetroComboBox Empl_Sala_Comb_Department;
         private MetroFramework.Controls.MetroComboBox Empl_Sala_Comb_Emplyment;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox Empl_Sala_va_out_sal;
-        private System.Windows.Forms.Label label20;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Department;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Employment;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Saliery;
         private MetroFramework.Controls.MetroButton Employee_Salaries_Print;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Dayes;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Rem_cons;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Absences;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_va_out_sal;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Exam;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Punishments;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Loans;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Taskes;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Reparations;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Years_Seniority;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Total;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_after_Reb;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Notes;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Insurances;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Files1;
+        private MetroFramework.Controls.MetroTextBox Empl_Sala_Files2;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroLabel metroLabel17;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
+        private MetroFramework.Controls.MetroLabel metroLabel19;
+        private MetroFramework.Controls.MetroLabel metroLabel20;
+        private MetroFramework.Controls.MetroLabel metroLabel21;
+        private MetroFramework.Controls.MetroLabel metroLabel22;
     }
 }

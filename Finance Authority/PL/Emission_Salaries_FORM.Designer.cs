@@ -37,12 +37,12 @@
             this.Emission_Salaries_update = new MetroFramework.Controls.MetroButton();
             this.Emission_Salaries_add = new MetroFramework.Controls.MetroButton();
             this.Emission_Salaries_new = new MetroFramework.Controls.MetroButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.Emission_Salaries_Date = new MetroFramework.Controls.MetroDateTime();
             this.Emission_Salaries_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
             this.Emission_Salaries_Name_office = new MetroFramework.Controls.MetroComboBox();
+            this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Emission_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,36 +152,6 @@
             this.Emission_Salaries_new.UseSelectable = true;
             this.Emission_Salaries_new.Click += new System.EventHandler(this.Emission_Salaries_new_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(604, 468);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 16);
-            this.label7.TabIndex = 62;
-            this.label7.Text = "تاريخ الميزانية";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(366, 468);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "التاريخ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(83, 468);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "أسم المكتب";
-            // 
             // Emission_Salaries_Date
             // 
             this.Emission_Salaries_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -211,17 +181,44 @@
             this.Emission_Salaries_Name_office.TabIndex = 0;
             this.Emission_Salaries_Name_office.UseSelectable = true;
             // 
+            // Coin_Exc_Sy
+            // 
+            this.Coin_Exc_Sy.AutoSize = true;
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(85, 470);
+            this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
+            this.Coin_Exc_Sy.Size = new System.Drawing.Size(74, 19);
+            this.Coin_Exc_Sy.TabIndex = 221;
+            this.Coin_Exc_Sy.Text = "اسم المكتب";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(608, 465);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel1.TabIndex = 222;
+            this.metroLabel1.Text = "تاريخ الميزانية";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(369, 470);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel2.TabIndex = 223;
+            this.metroLabel2.Text = "التاريخ";
+            // 
             // Emission_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 556);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Coin_Exc_Sy);
             this.Controls.Add(this.Emission_Salaries_Name_office);
             this.Controls.Add(this.Emission_Salaries_Comb_Budget);
             this.Controls.Add(this.Emission_Salaries_Date);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.Emission_Salaries_dataGrid);
             this.Controls.Add(this.Emission_Salaries_exit);
             this.Controls.Add(this.Emission_Salaries_delete);
@@ -247,11 +244,11 @@
         private MetroFramework.Controls.MetroButton Emission_Salaries_update;
         private MetroFramework.Controls.MetroButton Emission_Salaries_add;
         private MetroFramework.Controls.MetroButton Emission_Salaries_new;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroDateTime Emission_Salaries_Date;
         private MetroFramework.Controls.MetroComboBox Emission_Salaries_Comb_Budget;
         private MetroFramework.Controls.MetroComboBox Emission_Salaries_Name_office;
+        private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

@@ -17,12 +17,15 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
-            SY_Now_Label.Text = Program.Budget_NOW()[1].ToString();
-            Dollar_Now_Label.Text = Program.Budget_NOW()[2].ToString();
+            DataRow dt = Program.Budget_NOW();
+            SY_Now_Label.Text = dt[0].ToString();
+            Dollar_Now_Label.Text = dt[1].ToString();
+            Month_imports_ProgressSpinner.Value = Program.Month_Imports_rate();
+            Month_imports_Label.Text="% "+Program.Month_Imports_rate();
         }
-
         private void MetroTabPage1_Scroll(object sender, ScrollEventArgs e)
         {
+
         }
 
         private void MetroToggle1_CheckedChanged(object sender, EventArgs e)

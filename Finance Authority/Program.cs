@@ -33,14 +33,14 @@ namespace Finance_Authority
         /// </summary>
         /// 
         public static int theme=1;
-        public static int style;
+        public static int style=-1;
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MAIN_FORM());
+            Application.Run(new PL.Finance_Authority());
         }
 
 
@@ -57,6 +57,9 @@ namespace Finance_Authority
 
             switch (style)
             {
+                case -1:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Blue;
+                    break;
                 case 0:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Red;
                     break;

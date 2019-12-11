@@ -32,36 +32,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Finance_Authority));
             this.Tab_Main = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile20 = new MetroFramework.Controls.MetroTile();
-            this.metroTile21 = new MetroFramework.Controls.MetroTile();
-            this.metroTile22 = new MetroFramework.Controls.MetroTile();
+            this.Authority_Button = new MetroFramework.Controls.MetroTile();
+            this.Department_Button = new MetroFramework.Controls.MetroTile();
+            this.Office_Button = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile31 = new MetroFramework.Controls.MetroTile();
-            this.metroTile30 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
+            this.EX_Order_Button = new MetroFramework.Controls.MetroTile();
+            this.EX_Orders_Cat_Button = new MetroFramework.Controls.MetroTile();
+            this.Budget_Button = new MetroFramework.Controls.MetroTile();
+            this.Emission_Salaries_Button = new MetroFramework.Controls.MetroTile();
+            this.Coin_Exchange_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
-            this.metroTile10 = new MetroFramework.Controls.MetroTile();
+            this.Loans_Button = new MetroFramework.Controls.MetroTile();
+            this.Leoan_Payments_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.Backup_Button = new MetroFramework.Controls.MetroTile();
+            this.Backup_Restor_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.metroTile23 = new MetroFramework.Controls.MetroTile();
             this.metroTile24 = new MetroFramework.Controls.MetroTile();
             this.metroTile25 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile15 = new MetroFramework.Controls.MetroTile();
-            this.metroTile14 = new MetroFramework.Controls.MetroTile();
-            this.metroTile11 = new MetroFramework.Controls.MetroTile();
-            this.metroTile12 = new MetroFramework.Controls.MetroTile();
-            this.metroTile13 = new MetroFramework.Controls.MetroTile();
+            this.Document_Button = new MetroFramework.Controls.MetroTile();
+            this.Contracts_Button = new MetroFramework.Controls.MetroTile();
+            this.Employee_Button = new MetroFramework.Controls.MetroTile();
+            this.Role_Functional_Button = new MetroFramework.Controls.MetroTile();
+            this.Employee_Description_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
+            this.Document_Category_Button = new MetroFramework.Controls.MetroTile();
+            this.Reciver_Document_Button = new MetroFramework.Controls.MetroTile();
+            this.Payment_Document_Button = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
@@ -77,14 +77,14 @@
             this.metroTile32 = new MetroFramework.Controls.MetroTile();
             this.metroTile33 = new MetroFramework.Controls.MetroTile();
             this.metroTile36 = new MetroFramework.Controls.MetroTile();
-            this.metroTile35 = new MetroFramework.Controls.MetroTile();
+            this.Employee_Button_MAIN = new MetroFramework.Controls.MetroTile();
             this.metroTile27 = new MetroFramework.Controls.MetroTile();
-            this.metroTile19 = new MetroFramework.Controls.MetroTile();
-            this.metroTile17 = new MetroFramework.Controls.MetroTile();
+            this.Reciver_Document_Button_MAIN = new MetroFramework.Controls.MetroTile();
+            this.Coin_Exchange_Button_MAIN = new MetroFramework.Controls.MetroTile();
             this.metroTile29 = new MetroFramework.Controls.MetroTile();
-            this.metroTile28 = new MetroFramework.Controls.MetroTile();
-            this.metroTile18 = new MetroFramework.Controls.MetroTile();
-            this.metroTile16 = new MetroFramework.Controls.MetroTile();
+            this.Payment_Document_Button_MAIN = new MetroFramework.Controls.MetroTile();
+            this.Bill_Button_MAIN = new MetroFramework.Controls.MetroTile();
+            this.Employee_Salaries_Button = new MetroFramework.Controls.MetroTile();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -113,19 +113,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
+            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage7);
             this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
             this.Tab_Main.Controls.Add(this.metroTabPage6);
             this.Tab_Main.Controls.Add(this.metroTabPage2);
-            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.Tab_Main.Location = new System.Drawing.Point(2, 66);
             this.Tab_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Tab_Main.Name = "Tab_Main";
             this.Tab_Main.RightToLeftLayout = true;
-            this.Tab_Main.SelectedIndex = 7;
+            this.Tab_Main.SelectedIndex = 2;
             this.Tab_Main.Size = new System.Drawing.Size(1105, 134);
             this.Tab_Main.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.Tab_Main.TabIndex = 0;
@@ -133,9 +133,9 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.metroTile20);
-            this.metroTabPage1.Controls.Add(this.metroTile21);
-            this.metroTabPage1.Controls.Add(this.metroTile22);
+            this.metroTabPage1.Controls.Add(this.Authority_Button);
+            this.metroTabPage1.Controls.Add(this.Department_Button);
+            this.metroTabPage1.Controls.Add(this.Office_Button);
             this.metroTabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
@@ -151,52 +151,71 @@
             this.metroTabPage1.VerticalScrollbarSize = 35;
             this.metroTabPage1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.MetroTabPage1_Scroll);
             // 
-            // metroTile20
+            // Authority_Button
             // 
-            this.metroTile20.ActiveControl = null;
-            this.metroTile20.Location = new System.Drawing.Point(917, 19);
-            this.metroTile20.Name = "metroTile20";
-            this.metroTile20.Size = new System.Drawing.Size(153, 49);
-            this.metroTile20.TabIndex = 12;
-            this.metroTile20.Text = "الهيئات";
-            this.metroTile20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile20.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile20.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile20.UseSelectable = true;
+            this.Authority_Button.ActiveControl = null;
+            this.Authority_Button.Location = new System.Drawing.Point(917, 19);
+            this.Authority_Button.Name = "Authority_Button";
+            this.Authority_Button.Size = new System.Drawing.Size(153, 49);
+            this.Authority_Button.TabIndex = 12;
+            this.Authority_Button.Text = "الهيئات";
+            this.Authority_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Authority_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Authority_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Authority_Button.UseSelectable = true;
+            this.Authority_Button.Click += new System.EventHandler(this.Authority_Button_Click);
             // 
-            // metroTile21
+            // Department_Button
             // 
-            this.metroTile21.ActiveControl = null;
-            this.metroTile21.Location = new System.Drawing.Point(612, 19);
-            this.metroTile21.Name = "metroTile21";
-            this.metroTile21.Size = new System.Drawing.Size(136, 49);
-            this.metroTile21.TabIndex = 11;
-            this.metroTile21.Text = "الاقسام";
-            this.metroTile21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile21.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile21.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile21.UseSelectable = true;
+            this.Department_Button.ActiveControl = null;
+            this.Department_Button.Location = new System.Drawing.Point(612, 19);
+            this.Department_Button.Name = "Department_Button";
+            this.Department_Button.Size = new System.Drawing.Size(136, 49);
+            this.Department_Button.TabIndex = 11;
+            this.Department_Button.Text = "الاقسام";
+            this.Department_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Department_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Department_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Department_Button.UseSelectable = true;
+            this.Department_Button.Click += new System.EventHandler(this.Department_Button_Click);
             // 
-            // metroTile22
+            // Office_Button
             // 
-            this.metroTile22.ActiveControl = null;
-            this.metroTile22.Location = new System.Drawing.Point(754, 19);
-            this.metroTile22.Name = "metroTile22";
-            this.metroTile22.Size = new System.Drawing.Size(157, 49);
-            this.metroTile22.TabIndex = 10;
-            this.metroTile22.Text = "المكاتب";
-            this.metroTile22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile22.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile22.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile22.UseSelectable = true;
+            this.Office_Button.ActiveControl = null;
+            this.Office_Button.Location = new System.Drawing.Point(754, 19);
+            this.Office_Button.Name = "Office_Button";
+            this.Office_Button.Size = new System.Drawing.Size(157, 49);
+            this.Office_Button.TabIndex = 10;
+            this.Office_Button.Text = "المكاتب";
+            this.Office_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Office_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Office_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Office_Button.UseSelectable = true;
+            this.Office_Button.Click += new System.EventHandler(this.Office_Button_Click);
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.HorizontalScrollbarSize = 15;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "الدعم الفني";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.VerticalScrollbarSize = 12;
             // 
             // metroTabPage4
             // 
-            this.metroTabPage4.Controls.Add(this.metroTile31);
-            this.metroTabPage4.Controls.Add(this.metroTile30);
-            this.metroTabPage4.Controls.Add(this.metroTile6);
-            this.metroTabPage4.Controls.Add(this.metroTile7);
-            this.metroTabPage4.Controls.Add(this.metroTile8);
+            this.metroTabPage4.Controls.Add(this.EX_Order_Button);
+            this.metroTabPage4.Controls.Add(this.EX_Orders_Cat_Button);
+            this.metroTabPage4.Controls.Add(this.Budget_Button);
+            this.metroTabPage4.Controls.Add(this.Emission_Salaries_Button);
+            this.metroTabPage4.Controls.Add(this.Coin_Exchange_Button);
             this.metroTabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
@@ -211,75 +230,80 @@
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 12;
             // 
-            // metroTile31
+            // EX_Order_Button
             // 
-            this.metroTile31.ActiveControl = null;
-            this.metroTile31.Location = new System.Drawing.Point(397, 19);
-            this.metroTile31.Name = "metroTile31";
-            this.metroTile31.Size = new System.Drawing.Size(136, 49);
-            this.metroTile31.TabIndex = 11;
-            this.metroTile31.Text = "طلب تحويل";
-            this.metroTile31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile31.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile31.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile31.UseSelectable = true;
+            this.EX_Order_Button.ActiveControl = null;
+            this.EX_Order_Button.Location = new System.Drawing.Point(397, 19);
+            this.EX_Order_Button.Name = "EX_Order_Button";
+            this.EX_Order_Button.Size = new System.Drawing.Size(136, 49);
+            this.EX_Order_Button.TabIndex = 11;
+            this.EX_Order_Button.Text = "طلب تحويل";
+            this.EX_Order_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EX_Order_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.EX_Order_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.EX_Order_Button.UseSelectable = true;
+            this.EX_Order_Button.Click += new System.EventHandler(this.EX_Order_Button_Click);
             // 
-            // metroTile30
+            // EX_Orders_Cat_Button
             // 
-            this.metroTile30.ActiveControl = null;
-            this.metroTile30.Location = new System.Drawing.Point(539, 19);
-            this.metroTile30.Name = "metroTile30";
-            this.metroTile30.Size = new System.Drawing.Size(209, 49);
-            this.metroTile30.TabIndex = 10;
-            this.metroTile30.Text = "اصناف طلبات التحويل";
-            this.metroTile30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile30.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile30.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile30.UseSelectable = true;
+            this.EX_Orders_Cat_Button.ActiveControl = null;
+            this.EX_Orders_Cat_Button.Location = new System.Drawing.Point(539, 19);
+            this.EX_Orders_Cat_Button.Name = "EX_Orders_Cat_Button";
+            this.EX_Orders_Cat_Button.Size = new System.Drawing.Size(209, 49);
+            this.EX_Orders_Cat_Button.TabIndex = 10;
+            this.EX_Orders_Cat_Button.Text = "اصناف طلبات التحويل";
+            this.EX_Orders_Cat_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EX_Orders_Cat_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.EX_Orders_Cat_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.EX_Orders_Cat_Button.UseSelectable = true;
+            this.EX_Orders_Cat_Button.Click += new System.EventHandler(this.EX_Orders_Cat_Button_Click);
             // 
-            // metroTile6
+            // Budget_Button
             // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(917, 19);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(153, 49);
-            this.metroTile6.TabIndex = 9;
-            this.metroTile6.Text = "الصندوق المالي";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile6.UseSelectable = true;
+            this.Budget_Button.ActiveControl = null;
+            this.Budget_Button.Location = new System.Drawing.Point(917, 19);
+            this.Budget_Button.Name = "Budget_Button";
+            this.Budget_Button.Size = new System.Drawing.Size(153, 49);
+            this.Budget_Button.TabIndex = 9;
+            this.Budget_Button.Text = "الصندوق المالي";
+            this.Budget_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Budget_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Budget_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Budget_Button.UseSelectable = true;
+            this.Budget_Button.Click += new System.EventHandler(this.Budget_Button_Click);
             // 
-            // metroTile7
+            // Emission_Salaries_Button
             // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(255, 19);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(136, 49);
-            this.metroTile7.TabIndex = 8;
-            this.metroTile7.Text = "اصدار الرواتب";
-            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile7.UseSelectable = true;
+            this.Emission_Salaries_Button.ActiveControl = null;
+            this.Emission_Salaries_Button.Location = new System.Drawing.Point(255, 19);
+            this.Emission_Salaries_Button.Name = "Emission_Salaries_Button";
+            this.Emission_Salaries_Button.Size = new System.Drawing.Size(136, 49);
+            this.Emission_Salaries_Button.TabIndex = 8;
+            this.Emission_Salaries_Button.Text = "اصدار الرواتب";
+            this.Emission_Salaries_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Emission_Salaries_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Emission_Salaries_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Emission_Salaries_Button.UseSelectable = true;
+            this.Emission_Salaries_Button.Click += new System.EventHandler(this.Emission_Salaries_Button_Click);
             // 
-            // metroTile8
+            // Coin_Exchange_Button
             // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Location = new System.Drawing.Point(754, 19);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(157, 49);
-            this.metroTile8.TabIndex = 7;
-            this.metroTile8.Text = "التحويل المالي";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile8.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile8.UseSelectable = true;
+            this.Coin_Exchange_Button.ActiveControl = null;
+            this.Coin_Exchange_Button.Location = new System.Drawing.Point(754, 19);
+            this.Coin_Exchange_Button.Name = "Coin_Exchange_Button";
+            this.Coin_Exchange_Button.Size = new System.Drawing.Size(157, 49);
+            this.Coin_Exchange_Button.TabIndex = 7;
+            this.Coin_Exchange_Button.Text = "التحويل المالي";
+            this.Coin_Exchange_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Coin_Exchange_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Coin_Exchange_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Coin_Exchange_Button.UseSelectable = true;
+            this.Coin_Exchange_Button.Click += new System.EventHandler(this.Coin_Exchange_Button_Click);
             // 
             // metroTabPage5
             // 
-            this.metroTabPage5.Controls.Add(this.metroTile9);
-            this.metroTabPage5.Controls.Add(this.metroTile10);
+            this.metroTabPage5.Controls.Add(this.Loans_Button);
+            this.metroTabPage5.Controls.Add(this.Leoan_Payments_Button);
             this.metroTabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
@@ -294,36 +318,38 @@
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.VerticalScrollbarSize = 12;
             // 
-            // metroTile9
+            // Loans_Button
             // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Location = new System.Drawing.Point(894, 19);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(176, 49);
-            this.metroTile9.TabIndex = 4;
-            this.metroTile9.Text = "طلب قرض";
-            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile9.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile9.UseSelectable = true;
+            this.Loans_Button.ActiveControl = null;
+            this.Loans_Button.Location = new System.Drawing.Point(894, 19);
+            this.Loans_Button.Name = "Loans_Button";
+            this.Loans_Button.Size = new System.Drawing.Size(176, 49);
+            this.Loans_Button.TabIndex = 4;
+            this.Loans_Button.Text = "طلب قرض";
+            this.Loans_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Loans_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Loans_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Loans_Button.UseSelectable = true;
+            this.Loans_Button.Click += new System.EventHandler(this.Loans_Button_Click);
             // 
-            // metroTile10
+            // Leoan_Payments_Button
             // 
-            this.metroTile10.ActiveControl = null;
-            this.metroTile10.Location = new System.Drawing.Point(733, 19);
-            this.metroTile10.Name = "metroTile10";
-            this.metroTile10.Size = new System.Drawing.Size(155, 49);
-            this.metroTile10.TabIndex = 5;
-            this.metroTile10.Text = "دفعات قرض";
-            this.metroTile10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile10.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile10.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile10.UseSelectable = true;
+            this.Leoan_Payments_Button.ActiveControl = null;
+            this.Leoan_Payments_Button.Location = new System.Drawing.Point(733, 19);
+            this.Leoan_Payments_Button.Name = "Leoan_Payments_Button";
+            this.Leoan_Payments_Button.Size = new System.Drawing.Size(155, 49);
+            this.Leoan_Payments_Button.TabIndex = 5;
+            this.Leoan_Payments_Button.Text = "دفعات قرض";
+            this.Leoan_Payments_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Leoan_Payments_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Leoan_Payments_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Leoan_Payments_Button.UseSelectable = true;
+            this.Leoan_Payments_Button.Click += new System.EventHandler(this.Leoan_Payments_Button_Click);
             // 
             // metroTabPage8
             // 
-            this.metroTabPage8.Controls.Add(this.metroTile1);
-            this.metroTabPage8.Controls.Add(this.metroTile2);
+            this.metroTabPage8.Controls.Add(this.Backup_Button);
+            this.metroTabPage8.Controls.Add(this.Backup_Restor_Button);
             this.metroTabPage8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.metroTabPage8.HorizontalScrollbarBarColor = true;
             this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
@@ -338,33 +364,35 @@
             this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage8.VerticalScrollbarSize = 12;
             // 
-            // metroTile1
+            // Backup_Button
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile1.Location = new System.Drawing.Point(915, 19);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(155, 49);
-            this.metroTile1.TabIndex = 4;
-            this.metroTile1.Text = "النسخ الاحتياطي";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile1.UseSelectable = true;
+            this.Backup_Button.ActiveControl = null;
+            this.Backup_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Backup_Button.Location = new System.Drawing.Point(915, 19);
+            this.Backup_Button.Name = "Backup_Button";
+            this.Backup_Button.Size = new System.Drawing.Size(155, 49);
+            this.Backup_Button.TabIndex = 4;
+            this.Backup_Button.Text = "النسخ الاحتياطي";
+            this.Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Backup_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Backup_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Backup_Button.UseSelectable = true;
+            this.Backup_Button.Click += new System.EventHandler(this.Backup_Button_Click);
             // 
-            // metroTile2
+            // Backup_Restor_Button
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTile2.Location = new System.Drawing.Point(683, 19);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(226, 49);
-            this.metroTile2.TabIndex = 5;
-            this.metroTile2.Text = "استعادة النسخ الاحتياطي";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile2.UseSelectable = true;
+            this.Backup_Restor_Button.ActiveControl = null;
+            this.Backup_Restor_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Backup_Restor_Button.Location = new System.Drawing.Point(683, 19);
+            this.Backup_Restor_Button.Name = "Backup_Restor_Button";
+            this.Backup_Restor_Button.Size = new System.Drawing.Size(226, 49);
+            this.Backup_Restor_Button.TabIndex = 5;
+            this.Backup_Restor_Button.Text = "استعادة النسخ الاحتياطي";
+            this.Backup_Restor_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Backup_Restor_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Backup_Restor_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Backup_Restor_Button.UseSelectable = true;
+            this.Backup_Restor_Button.Click += new System.EventHandler(this.Backup_Restor_Button_Click);
             // 
             // metroTabPage6
             // 
@@ -426,11 +454,11 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.metroTile15);
-            this.metroTabPage2.Controls.Add(this.metroTile14);
-            this.metroTabPage2.Controls.Add(this.metroTile11);
-            this.metroTabPage2.Controls.Add(this.metroTile12);
-            this.metroTabPage2.Controls.Add(this.metroTile13);
+            this.metroTabPage2.Controls.Add(this.Document_Button);
+            this.metroTabPage2.Controls.Add(this.Contracts_Button);
+            this.metroTabPage2.Controls.Add(this.Employee_Button);
+            this.metroTabPage2.Controls.Add(this.Role_Functional_Button);
+            this.metroTabPage2.Controls.Add(this.Employee_Description_Button);
             this.metroTabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
@@ -445,76 +473,81 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 12;
             // 
-            // metroTile15
+            // Document_Button
             // 
-            this.metroTile15.ActiveControl = null;
-            this.metroTile15.Location = new System.Drawing.Point(334, 19);
-            this.metroTile15.Name = "metroTile15";
-            this.metroTile15.Size = new System.Drawing.Size(136, 49);
-            this.metroTile15.TabIndex = 13;
-            this.metroTile15.Text = "الوثائق";
-            this.metroTile15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile15.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile15.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile15.UseSelectable = true;
+            this.Document_Button.ActiveControl = null;
+            this.Document_Button.Location = new System.Drawing.Point(334, 19);
+            this.Document_Button.Name = "Document_Button";
+            this.Document_Button.Size = new System.Drawing.Size(136, 49);
+            this.Document_Button.TabIndex = 13;
+            this.Document_Button.Text = "الوثائق";
+            this.Document_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Document_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Document_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Document_Button.UseSelectable = true;
+            this.Document_Button.Click += new System.EventHandler(this.Document_Button_Click);
             // 
-            // metroTile14
+            // Contracts_Button
             // 
-            this.metroTile14.ActiveControl = null;
-            this.metroTile14.Location = new System.Drawing.Point(476, 19);
-            this.metroTile14.Name = "metroTile14";
-            this.metroTile14.Size = new System.Drawing.Size(136, 49);
-            this.metroTile14.TabIndex = 12;
-            this.metroTile14.Text = "العقود";
-            this.metroTile14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile14.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile14.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile14.UseSelectable = true;
+            this.Contracts_Button.ActiveControl = null;
+            this.Contracts_Button.Location = new System.Drawing.Point(476, 19);
+            this.Contracts_Button.Name = "Contracts_Button";
+            this.Contracts_Button.Size = new System.Drawing.Size(136, 49);
+            this.Contracts_Button.TabIndex = 12;
+            this.Contracts_Button.Text = "العقود";
+            this.Contracts_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Contracts_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Contracts_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Contracts_Button.UseSelectable = true;
+            this.Contracts_Button.Click += new System.EventHandler(this.Contracts_Button_Click);
             // 
-            // metroTile11
+            // Employee_Button
             // 
-            this.metroTile11.ActiveControl = null;
-            this.metroTile11.Location = new System.Drawing.Point(940, 19);
-            this.metroTile11.Name = "metroTile11";
-            this.metroTile11.Size = new System.Drawing.Size(130, 49);
-            this.metroTile11.TabIndex = 11;
-            this.metroTile11.Text = "العاملين";
-            this.metroTile11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile11.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile11.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile11.UseSelectable = true;
+            this.Employee_Button.ActiveControl = null;
+            this.Employee_Button.Location = new System.Drawing.Point(940, 19);
+            this.Employee_Button.Name = "Employee_Button";
+            this.Employee_Button.Size = new System.Drawing.Size(130, 49);
+            this.Employee_Button.TabIndex = 11;
+            this.Employee_Button.Text = "العاملين";
+            this.Employee_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Employee_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Employee_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Employee_Button.UseSelectable = true;
+            this.Employee_Button.Click += new System.EventHandler(this.Employee_Button_Click);
             // 
-            // metroTile12
+            // Role_Functional_Button
             // 
-            this.metroTile12.ActiveControl = null;
-            this.metroTile12.Location = new System.Drawing.Point(618, 19);
-            this.metroTile12.Name = "metroTile12";
-            this.metroTile12.Size = new System.Drawing.Size(146, 49);
-            this.metroTile12.TabIndex = 10;
-            this.metroTile12.Text = "الدور الوظيفي";
-            this.metroTile12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile12.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile12.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile12.UseSelectable = true;
+            this.Role_Functional_Button.ActiveControl = null;
+            this.Role_Functional_Button.Location = new System.Drawing.Point(618, 19);
+            this.Role_Functional_Button.Name = "Role_Functional_Button";
+            this.Role_Functional_Button.Size = new System.Drawing.Size(146, 49);
+            this.Role_Functional_Button.TabIndex = 10;
+            this.Role_Functional_Button.Text = "الدور الوظيفي";
+            this.Role_Functional_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Role_Functional_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Role_Functional_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Role_Functional_Button.UseSelectable = true;
+            this.Role_Functional_Button.Click += new System.EventHandler(this.Role_Functional_Button_Click);
             // 
-            // metroTile13
+            // Employee_Description_Button
             // 
-            this.metroTile13.ActiveControl = null;
-            this.metroTile13.Location = new System.Drawing.Point(770, 19);
-            this.metroTile13.Name = "metroTile13";
-            this.metroTile13.Size = new System.Drawing.Size(163, 49);
-            this.metroTile13.TabIndex = 9;
-            this.metroTile13.Text = "الصفات الوظيفية";
-            this.metroTile13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile13.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile13.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile13.UseSelectable = true;
+            this.Employee_Description_Button.ActiveControl = null;
+            this.Employee_Description_Button.Location = new System.Drawing.Point(770, 19);
+            this.Employee_Description_Button.Name = "Employee_Description_Button";
+            this.Employee_Description_Button.Size = new System.Drawing.Size(163, 49);
+            this.Employee_Description_Button.TabIndex = 9;
+            this.Employee_Description_Button.Text = "الصفات الوظيفية";
+            this.Employee_Description_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Employee_Description_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Employee_Description_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Employee_Description_Button.UseSelectable = true;
+            this.Employee_Description_Button.Click += new System.EventHandler(this.Employee_Description_Button_Click);
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.metroTile5);
-            this.metroTabPage3.Controls.Add(this.metroTile3);
-            this.metroTabPage3.Controls.Add(this.metroTile4);
+            this.metroTabPage3.Controls.Add(this.Document_Category_Button);
+            this.metroTabPage3.Controls.Add(this.Reciver_Document_Button);
+            this.metroTabPage3.Controls.Add(this.Payment_Document_Button);
             this.metroTabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
@@ -529,60 +562,47 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 12;
             // 
-            // metroTile5
+            // Document_Category_Button
             // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(918, 19);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(152, 49);
-            this.metroTile5.TabIndex = 9;
-            this.metroTile5.Text = "اصناف السندات";
-            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile5.UseSelectable = true;
+            this.Document_Category_Button.ActiveControl = null;
+            this.Document_Category_Button.Location = new System.Drawing.Point(918, 19);
+            this.Document_Category_Button.Name = "Document_Category_Button";
+            this.Document_Category_Button.Size = new System.Drawing.Size(152, 49);
+            this.Document_Category_Button.TabIndex = 9;
+            this.Document_Category_Button.Text = "اصناف السندات";
+            this.Document_Category_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Document_Category_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Document_Category_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Document_Category_Button.UseSelectable = true;
+            this.Document_Category_Button.Click += new System.EventHandler(this.Document_Category_Button_Click);
             // 
-            // metroTile3
+            // Reciver_Document_Button
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(640, 19);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(136, 49);
-            this.metroTile3.TabIndex = 8;
-            this.metroTile3.Text = "سند قبض";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile3.UseSelectable = true;
+            this.Reciver_Document_Button.ActiveControl = null;
+            this.Reciver_Document_Button.Location = new System.Drawing.Point(640, 19);
+            this.Reciver_Document_Button.Name = "Reciver_Document_Button";
+            this.Reciver_Document_Button.Size = new System.Drawing.Size(136, 49);
+            this.Reciver_Document_Button.TabIndex = 8;
+            this.Reciver_Document_Button.Text = "سند قبض";
+            this.Reciver_Document_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Reciver_Document_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Reciver_Document_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Reciver_Document_Button.UseSelectable = true;
+            this.Reciver_Document_Button.Click += new System.EventHandler(this.Reciver_Document_Button_Click);
             // 
-            // metroTile4
+            // Payment_Document_Button
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(782, 19);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(130, 49);
-            this.metroTile4.TabIndex = 7;
-            this.metroTile4.Text = "سند دفع";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile4.UseSelectable = true;
-            // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.HorizontalScrollbarSize = 15;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
-            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "الدعم الفني";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.VerticalScrollbarSize = 12;
+            this.Payment_Document_Button.ActiveControl = null;
+            this.Payment_Document_Button.Location = new System.Drawing.Point(782, 19);
+            this.Payment_Document_Button.Name = "Payment_Document_Button";
+            this.Payment_Document_Button.Size = new System.Drawing.Size(130, 49);
+            this.Payment_Document_Button.TabIndex = 7;
+            this.Payment_Document_Button.Text = "سند دفع";
+            this.Payment_Document_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Payment_Document_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Payment_Document_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Payment_Document_Button.UseSelectable = true;
+            this.Payment_Document_Button.Click += new System.EventHandler(this.Payment_Document_Button_Click);
             // 
             // metroStyleManager1
             // 
@@ -768,21 +788,22 @@
             this.metroTile36.UseSelectable = true;
             this.metroTile36.UseTileImage = true;
             // 
-            // metroTile35
+            // Employee_Button_MAIN
             // 
-            this.metroTile35.ActiveControl = null;
-            this.metroTile35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile35.Location = new System.Drawing.Point(865, 275);
-            this.metroTile35.Name = "metroTile35";
-            this.metroTile35.Size = new System.Drawing.Size(208, 149);
-            this.metroTile35.TabIndex = 24;
-            this.metroTile35.Text = "العـــامليـن";
-            this.metroTile35.TileImage = global::Finance_Authority.Properties.Resources.العاملين;
-            this.metroTile35.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile35.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile35.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile35.UseSelectable = true;
-            this.metroTile35.UseTileImage = true;
+            this.Employee_Button_MAIN.ActiveControl = null;
+            this.Employee_Button_MAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Employee_Button_MAIN.Location = new System.Drawing.Point(865, 275);
+            this.Employee_Button_MAIN.Name = "Employee_Button_MAIN";
+            this.Employee_Button_MAIN.Size = new System.Drawing.Size(208, 149);
+            this.Employee_Button_MAIN.TabIndex = 24;
+            this.Employee_Button_MAIN.Text = "العـــامليـن";
+            this.Employee_Button_MAIN.TileImage = global::Finance_Authority.Properties.Resources.العاملين;
+            this.Employee_Button_MAIN.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Employee_Button_MAIN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Employee_Button_MAIN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Employee_Button_MAIN.UseSelectable = true;
+            this.Employee_Button_MAIN.UseTileImage = true;
+            this.Employee_Button_MAIN.Click += new System.EventHandler(this.Employee_Button_MAIN_Click);
             // 
             // metroTile27
             // 
@@ -800,37 +821,39 @@
             this.metroTile27.UseSelectable = true;
             this.metroTile27.UseTileImage = true;
             // 
-            // metroTile19
+            // Reciver_Document_Button_MAIN
             // 
-            this.metroTile19.ActiveControl = null;
-            this.metroTile19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile19.Location = new System.Drawing.Point(426, 275);
-            this.metroTile19.Name = "metroTile19";
-            this.metroTile19.Size = new System.Drawing.Size(125, 149);
-            this.metroTile19.TabIndex = 14;
-            this.metroTile19.Text = "سند قبض";
-            this.metroTile19.TileImage = global::Finance_Authority.Properties.Resources.سند_قبض;
-            this.metroTile19.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile19.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile19.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile19.UseSelectable = true;
-            this.metroTile19.UseTileImage = true;
+            this.Reciver_Document_Button_MAIN.ActiveControl = null;
+            this.Reciver_Document_Button_MAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Reciver_Document_Button_MAIN.Location = new System.Drawing.Point(426, 275);
+            this.Reciver_Document_Button_MAIN.Name = "Reciver_Document_Button_MAIN";
+            this.Reciver_Document_Button_MAIN.Size = new System.Drawing.Size(125, 149);
+            this.Reciver_Document_Button_MAIN.TabIndex = 14;
+            this.Reciver_Document_Button_MAIN.Text = "سند قبض";
+            this.Reciver_Document_Button_MAIN.TileImage = global::Finance_Authority.Properties.Resources.سند_قبض;
+            this.Reciver_Document_Button_MAIN.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Reciver_Document_Button_MAIN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Reciver_Document_Button_MAIN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Reciver_Document_Button_MAIN.UseSelectable = true;
+            this.Reciver_Document_Button_MAIN.UseTileImage = true;
+            this.Reciver_Document_Button_MAIN.Click += new System.EventHandler(this.Reciver_Document_Button_MAIN_Click);
             // 
-            // metroTile17
+            // Coin_Exchange_Button_MAIN
             // 
-            this.metroTile17.ActiveControl = null;
-            this.metroTile17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile17.Location = new System.Drawing.Point(426, 430);
-            this.metroTile17.Name = "metroTile17";
-            this.metroTile17.Size = new System.Drawing.Size(125, 149);
-            this.metroTile17.TabIndex = 13;
-            this.metroTile17.Text = "تحويل مالي";
-            this.metroTile17.TileImage = global::Finance_Authority.Properties.Resources.تحويل_مالي;
-            this.metroTile17.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile17.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile17.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile17.UseSelectable = true;
-            this.metroTile17.UseTileImage = true;
+            this.Coin_Exchange_Button_MAIN.ActiveControl = null;
+            this.Coin_Exchange_Button_MAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Coin_Exchange_Button_MAIN.Location = new System.Drawing.Point(426, 430);
+            this.Coin_Exchange_Button_MAIN.Name = "Coin_Exchange_Button_MAIN";
+            this.Coin_Exchange_Button_MAIN.Size = new System.Drawing.Size(125, 149);
+            this.Coin_Exchange_Button_MAIN.TabIndex = 13;
+            this.Coin_Exchange_Button_MAIN.Text = "تحويل مالي";
+            this.Coin_Exchange_Button_MAIN.TileImage = global::Finance_Authority.Properties.Resources.تحويل_مالي;
+            this.Coin_Exchange_Button_MAIN.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Coin_Exchange_Button_MAIN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Coin_Exchange_Button_MAIN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Coin_Exchange_Button_MAIN.UseSelectable = true;
+            this.Coin_Exchange_Button_MAIN.UseTileImage = true;
+            this.Coin_Exchange_Button_MAIN.Click += new System.EventHandler(this.Coin_Exchange_Button_MAIN_Click);
             // 
             // metroTile29
             // 
@@ -848,53 +871,56 @@
             this.metroTile29.UseSelectable = true;
             this.metroTile29.UseTileImage = true;
             // 
-            // metroTile28
+            // Payment_Document_Button_MAIN
             // 
-            this.metroTile28.ActiveControl = null;
-            this.metroTile28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile28.Location = new System.Drawing.Point(295, 275);
-            this.metroTile28.Name = "metroTile28";
-            this.metroTile28.Size = new System.Drawing.Size(125, 149);
-            this.metroTile28.TabIndex = 11;
-            this.metroTile28.Text = "سند دفع";
-            this.metroTile28.TileImage = global::Finance_Authority.Properties.Resources.سند_دفع;
-            this.metroTile28.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile28.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile28.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile28.UseSelectable = true;
-            this.metroTile28.UseTileImage = true;
+            this.Payment_Document_Button_MAIN.ActiveControl = null;
+            this.Payment_Document_Button_MAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Payment_Document_Button_MAIN.Location = new System.Drawing.Point(295, 275);
+            this.Payment_Document_Button_MAIN.Name = "Payment_Document_Button_MAIN";
+            this.Payment_Document_Button_MAIN.Size = new System.Drawing.Size(125, 149);
+            this.Payment_Document_Button_MAIN.TabIndex = 11;
+            this.Payment_Document_Button_MAIN.Text = "سند دفع";
+            this.Payment_Document_Button_MAIN.TileImage = global::Finance_Authority.Properties.Resources.سند_دفع;
+            this.Payment_Document_Button_MAIN.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Payment_Document_Button_MAIN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Payment_Document_Button_MAIN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Payment_Document_Button_MAIN.UseSelectable = true;
+            this.Payment_Document_Button_MAIN.UseTileImage = true;
+            this.Payment_Document_Button_MAIN.Click += new System.EventHandler(this.Payment_Document_Button_MAIN_Click);
             // 
-            // metroTile18
+            // Bill_Button_MAIN
             // 
-            this.metroTile18.ActiveControl = null;
-            this.metroTile18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile18.Location = new System.Drawing.Point(33, 430);
-            this.metroTile18.Name = "metroTile18";
-            this.metroTile18.Size = new System.Drawing.Size(125, 149);
-            this.metroTile18.TabIndex = 7;
-            this.metroTile18.Text = "الفواتير";
-            this.metroTile18.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile18.TileImage")));
-            this.metroTile18.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile18.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile18.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile18.UseSelectable = true;
-            this.metroTile18.UseTileImage = true;
+            this.Bill_Button_MAIN.ActiveControl = null;
+            this.Bill_Button_MAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Bill_Button_MAIN.Location = new System.Drawing.Point(33, 430);
+            this.Bill_Button_MAIN.Name = "Bill_Button_MAIN";
+            this.Bill_Button_MAIN.Size = new System.Drawing.Size(125, 149);
+            this.Bill_Button_MAIN.TabIndex = 7;
+            this.Bill_Button_MAIN.Text = "الفواتير";
+            this.Bill_Button_MAIN.TileImage = ((System.Drawing.Image)(resources.GetObject("Bill_Button_MAIN.TileImage")));
+            this.Bill_Button_MAIN.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Bill_Button_MAIN.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Bill_Button_MAIN.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Bill_Button_MAIN.UseSelectable = true;
+            this.Bill_Button_MAIN.UseTileImage = true;
+            this.Bill_Button_MAIN.Click += new System.EventHandler(this.Bill_Button_MAIN_Click);
             // 
-            // metroTile16
+            // Employee_Salaries_Button
             // 
-            this.metroTile16.ActiveControl = null;
-            this.metroTile16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile16.Location = new System.Drawing.Point(33, 275);
-            this.metroTile16.Name = "metroTile16";
-            this.metroTile16.Size = new System.Drawing.Size(256, 149);
-            this.metroTile16.TabIndex = 5;
-            this.metroTile16.Text = " تسليم الرواتب";
-            this.metroTile16.TileImage = global::Finance_Authority.Properties.Resources.تسليم_الرواتب;
-            this.metroTile16.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile16.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile16.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile16.UseSelectable = true;
-            this.metroTile16.UseTileImage = true;
+            this.Employee_Salaries_Button.ActiveControl = null;
+            this.Employee_Salaries_Button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Employee_Salaries_Button.Location = new System.Drawing.Point(33, 275);
+            this.Employee_Salaries_Button.Name = "Employee_Salaries_Button";
+            this.Employee_Salaries_Button.Size = new System.Drawing.Size(256, 149);
+            this.Employee_Salaries_Button.TabIndex = 5;
+            this.Employee_Salaries_Button.Text = " تسليم الرواتب";
+            this.Employee_Salaries_Button.TileImage = global::Finance_Authority.Properties.Resources.تسليم_الرواتب;
+            this.Employee_Salaries_Button.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Employee_Salaries_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Employee_Salaries_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Employee_Salaries_Button.UseSelectable = true;
+            this.Employee_Salaries_Button.UseTileImage = true;
+            this.Employee_Salaries_Button.Click += new System.EventHandler(this.Employee_Salaries_Button_Click);
             // 
             // metroPanel3
             // 
@@ -996,19 +1022,19 @@
             this.ClientSize = new System.Drawing.Size(1106, 638);
             this.Controls.Add(this.metroPanel3);
             this.Controls.Add(this.metroTile36);
-            this.Controls.Add(this.metroTile35);
+            this.Controls.Add(this.Employee_Button_MAIN);
             this.Controls.Add(this.metroTile33);
             this.Controls.Add(this.metroTile32);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroTile27);
             this.Controls.Add(this.metroTile26);
-            this.Controls.Add(this.metroTile19);
-            this.Controls.Add(this.metroTile17);
+            this.Controls.Add(this.Reciver_Document_Button_MAIN);
+            this.Controls.Add(this.Coin_Exchange_Button_MAIN);
             this.Controls.Add(this.metroTile29);
-            this.Controls.Add(this.metroTile28);
-            this.Controls.Add(this.metroTile18);
-            this.Controls.Add(this.metroTile16);
+            this.Controls.Add(this.Payment_Document_Button_MAIN);
+            this.Controls.Add(this.Bill_Button_MAIN);
+            this.Controls.Add(this.Employee_Salaries_Button);
             this.Controls.Add(this.metroTrackBar1);
             this.Controls.Add(this.metroToggle1);
             this.Controls.Add(this.Tab_Main);
@@ -1056,37 +1082,37 @@
         public MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroToggle metroToggle1;
         private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
-        private MetroFramework.Controls.MetroTile metroTile18;
-        private MetroFramework.Controls.MetroTile metroTile16;
-        private MetroFramework.Controls.MetroTile metroTile15;
-        private MetroFramework.Controls.MetroTile metroTile14;
-        private MetroFramework.Controls.MetroTile metroTile11;
-        private MetroFramework.Controls.MetroTile metroTile12;
-        private MetroFramework.Controls.MetroTile metroTile13;
-        private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile8;
-        private MetroFramework.Controls.MetroTile metroTile9;
-        private MetroFramework.Controls.MetroTile metroTile10;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile20;
-        private MetroFramework.Controls.MetroTile metroTile21;
-        private MetroFramework.Controls.MetroTile metroTile22;
+        private MetroFramework.Controls.MetroTile Bill_Button_MAIN;
+        private MetroFramework.Controls.MetroTile Employee_Salaries_Button;
+        private MetroFramework.Controls.MetroTile Document_Button;
+        private MetroFramework.Controls.MetroTile Contracts_Button;
+        private MetroFramework.Controls.MetroTile Employee_Button;
+        private MetroFramework.Controls.MetroTile Role_Functional_Button;
+        private MetroFramework.Controls.MetroTile Employee_Description_Button;
+        private MetroFramework.Controls.MetroTile Document_Category_Button;
+        private MetroFramework.Controls.MetroTile Reciver_Document_Button;
+        private MetroFramework.Controls.MetroTile Payment_Document_Button;
+        private MetroFramework.Controls.MetroTile Budget_Button;
+        private MetroFramework.Controls.MetroTile Emission_Salaries_Button;
+        private MetroFramework.Controls.MetroTile Coin_Exchange_Button;
+        private MetroFramework.Controls.MetroTile Loans_Button;
+        private MetroFramework.Controls.MetroTile Leoan_Payments_Button;
+        private MetroFramework.Controls.MetroTile Backup_Button;
+        private MetroFramework.Controls.MetroTile Backup_Restor_Button;
+        private MetroFramework.Controls.MetroTile Authority_Button;
+        private MetroFramework.Controls.MetroTile Department_Button;
+        private MetroFramework.Controls.MetroTile Office_Button;
         private MetroFramework.Controls.MetroTile metroTile23;
         private MetroFramework.Controls.MetroTile metroTile24;
         private MetroFramework.Controls.MetroTile metroTile25;
-        private MetroFramework.Controls.MetroTile metroTile28;
+        private MetroFramework.Controls.MetroTile Payment_Document_Button_MAIN;
         private MetroFramework.Controls.MetroTile metroTile29;
         private MetroFramework.Controls.MetroTile metroTile26;
-        private MetroFramework.Controls.MetroTile metroTile19;
-        private MetroFramework.Controls.MetroTile metroTile17;
+        private MetroFramework.Controls.MetroTile Reciver_Document_Button_MAIN;
+        private MetroFramework.Controls.MetroTile Coin_Exchange_Button_MAIN;
         private MetroFramework.Controls.MetroTile metroTile27;
-        private MetroFramework.Controls.MetroTile metroTile31;
-        private MetroFramework.Controls.MetroTile metroTile30;
+        private MetroFramework.Controls.MetroTile EX_Order_Button;
+        private MetroFramework.Controls.MetroTile EX_Orders_Cat_Button;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
@@ -1098,7 +1124,7 @@
         private MetroFramework.Controls.MetroTile metroTile33;
         private MetroFramework.Controls.MetroTile metroTile32;
         private MetroFramework.Controls.MetroTile metroTile36;
-        private MetroFramework.Controls.MetroTile metroTile35;
+        private MetroFramework.Controls.MetroTile Employee_Button_MAIN;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel8;

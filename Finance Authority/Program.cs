@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data;
 
 namespace Finance_Authority
 {
@@ -34,6 +36,9 @@ namespace Finance_Authority
         /// 
         public static int theme=1;
         public static int style=-1;
+
+        // حساب الصندوق الحالي و نسبة الواردات والصادرات
+        public static BL.CLS_Budget budget = new BL.CLS_Budget();
 
         [STAThread]
         static void Main()
@@ -103,10 +108,8 @@ namespace Finance_Authority
         {
             return MessageBox.Show("هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
         }
-
-
          public static bool DenyChar(KeyPressEventArgs e) 
-        {
+         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 return true;
@@ -116,6 +119,10 @@ namespace Finance_Authority
                 return false;
             }
          }
+        public static DataRow Budget_NOW()
+        {
+            return budget.Budget_Last_Budget().Rows[0];
+        }
 
     }
 }

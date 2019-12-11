@@ -19,6 +19,36 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        // مجموع الواردات
+        public DataTable Budget_Last_Sum_Reciver()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Budget_Last_Sum_Reciver", null);
+            DAL.close();
+            return Dt;
+        }
+        // مجموع الصادرات
+        public DataTable Budget_Last_Sum_Payment()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Budget_Last_Sum_Payment", null);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Reciver_Sum_import()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Reciver_Sum_import", null);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable Budget_add(string Amount_Now_SY,string Amount_Now_Dollar,string Imports_Amount_SY,string Imports_Amount_Dollar , string Recycle_Amount_SY , string Recycle_Amount_Dollar,string Specified_Amount_SY , string Specified_Amount_Dollar, string Notes, DateTime Date)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

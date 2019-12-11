@@ -17,6 +17,8 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
+            SY_Now_Label.Text = Program.Budget_NOW()[1].ToString();
+            Dollar_Now_Label.Text = Program.Budget_NOW()[2].ToString();
         }
 
         private void MetroTabPage1_Scroll(object sender, ScrollEventArgs e)

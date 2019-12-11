@@ -183,6 +183,9 @@ namespace Finance_Authority.PL
             }
         }
 
-        
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

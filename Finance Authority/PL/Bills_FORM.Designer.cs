@@ -36,13 +36,13 @@
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
             this.Bills_Details = new MetroFramework.Controls.MetroButton();
             this.Bills_add = new MetroFramework.Controls.MetroButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.Bills_Search_All = new MetroFramework.Controls.MetroTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.Bills_Date_last = new MetroFramework.Controls.MetroDateTime();
             this.Bills_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.Bills_Print = new MetroFramework.Controls.MetroButton();
+            this.Bills_Search = new MetroFramework.Controls.MetroLabel();
+            this.Bills_Data_First = new MetroFramework.Controls.MetroLabel();
+            this.Bills_Data_Last = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,16 +140,6 @@
             this.Bills_add.UseSelectable = true;
             this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(213, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 16);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "البحث عام";
-            // 
             // Bills_Search_All
             // 
             // 
@@ -180,26 +170,6 @@
             this.Bills_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Bills_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.Bills_Search_All.TextChanged += new System.EventHandler(this.Bills_Search_All_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(532, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
-            this.label9.TabIndex = 201;
-            this.label9.Text = "تاريخ النهاية";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(533, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 200;
-            this.label10.Text = "تاريخ البداية";
             // 
             // Bills_Date_last
             // 
@@ -234,18 +204,45 @@
             this.Bills_Print.UseSelectable = true;
             this.Bills_Print.Click += new System.EventHandler(this.Bills_Print_Click);
             // 
+            // Bills_Search
+            // 
+            this.Bills_Search.AutoSize = true;
+            this.Bills_Search.Location = new System.Drawing.Point(215, 46);
+            this.Bills_Search.Name = "Bills_Search";
+            this.Bills_Search.Size = new System.Drawing.Size(63, 19);
+            this.Bills_Search.TabIndex = 212;
+            this.Bills_Search.Text = "البحث عام";
+            // 
+            // Bills_Data_First
+            // 
+            this.Bills_Data_First.AutoSize = true;
+            this.Bills_Data_First.Location = new System.Drawing.Point(520, 30);
+            this.Bills_Data_First.Name = "Bills_Data_First";
+            this.Bills_Data_First.Size = new System.Drawing.Size(69, 19);
+            this.Bills_Data_First.TabIndex = 213;
+            this.Bills_Data_First.Text = "تاريخ البداية";
+            // 
+            // Bills_Data_Last
+            // 
+            this.Bills_Data_Last.AutoSize = true;
+            this.Bills_Data_Last.Location = new System.Drawing.Point(521, 60);
+            this.Bills_Data_Last.Name = "Bills_Data_Last";
+            this.Bills_Data_Last.Size = new System.Drawing.Size(68, 19);
+            this.Bills_Data_Last.TabIndex = 214;
+            this.Bills_Data_Last.Text = "تاريخ النهاية";
+            // 
             // Bills_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 492);
+            this.Controls.Add(this.Bills_Data_Last);
+            this.Controls.Add(this.Bills_Data_First);
+            this.Controls.Add(this.Bills_Search);
             this.Controls.Add(this.Bills_Print);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.Bills_Date_last);
             this.Controls.Add(this.Bills_Date_first);
             this.Controls.Add(this.Bills_Search_All);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.Bills_dataGrid);
             this.Controls.Add(this.Bills_exit);
             this.Controls.Add(this.Bills_delete);
@@ -265,14 +262,14 @@
         private MetroFramework.Controls.MetroButton Bills_exit;
         private MetroFramework.Controls.MetroButton Bills_Details;
         private MetroFramework.Controls.MetroButton Bills_add;
-        private System.Windows.Forms.Label label8;
         public MetroFramework.Controls.MetroButton Bills_delete;
         public MetroFramework.Controls.MetroGrid Bills_dataGrid;
         private MetroFramework.Controls.MetroTextBox Bills_Search_All;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroDateTime Bills_Date_last;
         private MetroFramework.Controls.MetroDateTime Bills_Date_first;
         private MetroFramework.Controls.MetroButton Bills_Print;
+        private MetroFramework.Controls.MetroLabel Bills_Search;
+        private MetroFramework.Controls.MetroLabel Bills_Data_First;
+        private MetroFramework.Controls.MetroLabel Bills_Data_Last;
     }
 }

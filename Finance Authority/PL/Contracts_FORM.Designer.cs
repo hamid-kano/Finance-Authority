@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Contracts_exit = new MetroFramework.Controls.MetroButton();
             this.Contracts_delete = new MetroFramework.Controls.MetroButton();
             this.Contracts_update = new MetroFramework.Controls.MetroButton();
             this.Contracts_add = new MetroFramework.Controls.MetroButton();
             this.Contracts_new = new MetroFramework.Controls.MetroButton();
             this.Contracts_Gridview = new MetroFramework.Controls.MetroGrid();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Contracts_Notes = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Contracts_Type = new System.Windows.Forms.TextBox();
             this.Contracts_Date_Start = new MetroFramework.Controls.MetroDateTime();
             this.Contracts_Date_end = new MetroFramework.Controls.MetroDateTime();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Contracts_Comb_Department = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Contracts_Comb_Employee = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.Contracts_Comb_Contract_statue = new MetroFramework.Controls.MetroComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Contracts_Search_All = new MetroFramework.Controls.MetroTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.Contracts_Date_last = new MetroFramework.Controls.MetroDateTime();
             this.Contracts_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.Contracts_Print = new MetroFramework.Controls.MetroButton();
+            this.Contracts_Notes = new MetroFramework.Controls.MetroTextBox();
+            this.Contracts_Type = new MetroFramework.Controls.MetroTextBox();
+            this.Contracts_Comb_Employee = new MetroFramework.Controls.MetroComboBox();
+            this.Contracts_Comb_Department = new MetroFramework.Controls.MetroComboBox();
+            this.Contracts_Type1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Contracts_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,23 +129,23 @@
             this.Contracts_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Contracts_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Contracts_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Contracts_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.Contracts_Gridview.EnableHeadersVisualStyles = false;
             this.Contracts_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Contracts_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -153,56 +153,19 @@
             this.Contracts_Gridview.Name = "Contracts_Gridview";
             this.Contracts_Gridview.ReadOnly = true;
             this.Contracts_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Contracts_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Contracts_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Contracts_Gridview.Size = new System.Drawing.Size(669, 383);
             this.Contracts_Gridview.TabIndex = 50;
             this.Contracts_Gridview.Click += new System.EventHandler(this.Contracts_Gridview_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 362);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "الملاحظات";
-            // 
-            // Contracts_Notes
-            // 
-            this.Contracts_Notes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contracts_Notes.Location = new System.Drawing.Point(99, 359);
-            this.Contracts_Notes.Name = "Contracts_Notes";
-            this.Contracts_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Contracts_Notes.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 16);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "نوع العقد";
-            // 
-            // Contracts_Type
-            // 
-            this.Contracts_Type.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contracts_Type.Location = new System.Drawing.Point(99, 139);
-            this.Contracts_Type.Name = "Contracts_Type";
-            this.Contracts_Type.Size = new System.Drawing.Size(163, 23);
-            this.Contracts_Type.TabIndex = 0;
-            
             // 
             // Contracts_Date_Start
             // 
@@ -217,73 +180,12 @@
             // Contracts_Date_end
             // 
             this.Contracts_Date_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Contracts_Date_end.Location = new System.Drawing.Point(99, 233);
+            this.Contracts_Date_end.Location = new System.Drawing.Point(99, 237);
             this.Contracts_Date_end.MinimumSize = new System.Drawing.Size(0, 29);
             this.Contracts_Date_end.Name = "Contracts_Date_end";
             this.Contracts_Date_end.RightToLeftLayout = true;
             this.Contracts_Date_end.Size = new System.Drawing.Size(163, 29);
             this.Contracts_Date_end.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "تاريخ البداية";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 16);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "تاريخ النهاية";
-            // 
-            // Contracts_Comb_Department
-            // 
-            this.Contracts_Comb_Department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Contracts_Comb_Department.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contracts_Comb_Department.FormattingEnabled = true;
-            this.Contracts_Comb_Department.Location = new System.Drawing.Point(99, 405);
-            this.Contracts_Comb_Department.Name = "Contracts_Comb_Department";
-            this.Contracts_Comb_Department.Size = new System.Drawing.Size(163, 24);
-            this.Contracts_Comb_Department.TabIndex = 5;
-            this.Contracts_Comb_Department.SelectedValueChanged += new System.EventHandler(this.Contracts_Comb_Department_SelectedValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 413);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 16);
-            this.label7.TabIndex = 180;
-            this.label7.Text = "الأقسام";
-            // 
-            // Contracts_Comb_Employee
-            // 
-            this.Contracts_Comb_Employee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Contracts_Comb_Employee.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contracts_Comb_Employee.FormattingEnabled = true;
-            this.Contracts_Comb_Employee.Location = new System.Drawing.Point(99, 452);
-            this.Contracts_Comb_Employee.Name = "Contracts_Comb_Employee";
-            this.Contracts_Comb_Employee.Size = new System.Drawing.Size(163, 24);
-            this.Contracts_Comb_Employee.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 460);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 16);
-            this.label5.TabIndex = 182;
-            this.label5.Text = "الموظفين";
             // 
             // Contracts_Comb_Contract_statue
             // 
@@ -293,21 +195,11 @@
             "خبرة",
             "مؤقت",
             "أختصاص"});
-            this.Contracts_Comb_Contract_statue.Location = new System.Drawing.Point(99, 288);
+            this.Contracts_Comb_Contract_statue.Location = new System.Drawing.Point(99, 291);
             this.Contracts_Comb_Contract_statue.Name = "Contracts_Comb_Contract_statue";
             this.Contracts_Comb_Contract_statue.Size = new System.Drawing.Size(163, 29);
             this.Contracts_Comb_Contract_statue.TabIndex = 3;
             this.Contracts_Comb_Contract_statue.UseSelectable = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 301);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 16);
-            this.label6.TabIndex = 185;
-            this.label6.Text = "حالة العقود";
             // 
             // Contracts_Search_All
             // 
@@ -339,36 +231,6 @@
             this.Contracts_Search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Contracts_Search_All.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.Contracts_Search_All.TextChanged += new System.EventHandler(this.Contracts_Search_All_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(343, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 16);
-            this.label8.TabIndex = 187;
-            this.label8.Text = "بحث عام";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(660, 78);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
-            this.label9.TabIndex = 191;
-            this.label9.Text = "تاريخ النهاية";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(661, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 190;
-            this.label10.Text = "تاريخ البداية";
             // 
             // Contracts_Date_last
             // 
@@ -403,26 +265,209 @@
             this.Contracts_Print.UseSelectable = true;
             this.Contracts_Print.Click += new System.EventHandler(this.Contracts_Print_Click);
             // 
+            // Contracts_Notes
+            // 
+            // 
+            // 
+            // 
+            this.Contracts_Notes.CustomButton.Image = null;
+            this.Contracts_Notes.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.Contracts_Notes.CustomButton.Name = "";
+            this.Contracts_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Contracts_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Contracts_Notes.CustomButton.TabIndex = 1;
+            this.Contracts_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Contracts_Notes.CustomButton.UseSelectable = true;
+            this.Contracts_Notes.CustomButton.Visible = false;
+            this.Contracts_Notes.Lines = new string[0];
+            this.Contracts_Notes.Location = new System.Drawing.Point(99, 345);
+            this.Contracts_Notes.MaxLength = 32767;
+            this.Contracts_Notes.Name = "Contracts_Notes";
+            this.Contracts_Notes.PasswordChar = '\0';
+            this.Contracts_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Contracts_Notes.SelectedText = "";
+            this.Contracts_Notes.SelectionLength = 0;
+            this.Contracts_Notes.SelectionStart = 0;
+            this.Contracts_Notes.ShortcutsEnabled = true;
+            this.Contracts_Notes.Size = new System.Drawing.Size(163, 23);
+            this.Contracts_Notes.TabIndex = 192;
+            this.Contracts_Notes.UseSelectable = true;
+            this.Contracts_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Contracts_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Contracts_Type
+            // 
+            // 
+            // 
+            // 
+            this.Contracts_Type.CustomButton.Image = null;
+            this.Contracts_Type.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.Contracts_Type.CustomButton.Name = "";
+            this.Contracts_Type.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Contracts_Type.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Contracts_Type.CustomButton.TabIndex = 1;
+            this.Contracts_Type.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Contracts_Type.CustomButton.UseSelectable = true;
+            this.Contracts_Type.CustomButton.Visible = false;
+            this.Contracts_Type.Lines = new string[0];
+            this.Contracts_Type.Location = new System.Drawing.Point(99, 135);
+            this.Contracts_Type.MaxLength = 32767;
+            this.Contracts_Type.Name = "Contracts_Type";
+            this.Contracts_Type.PasswordChar = '\0';
+            this.Contracts_Type.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Contracts_Type.SelectedText = "";
+            this.Contracts_Type.SelectionLength = 0;
+            this.Contracts_Type.SelectionStart = 0;
+            this.Contracts_Type.ShortcutsEnabled = true;
+            this.Contracts_Type.Size = new System.Drawing.Size(163, 23);
+            this.Contracts_Type.TabIndex = 193;
+            this.Contracts_Type.UseSelectable = true;
+            this.Contracts_Type.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Contracts_Type.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Contracts_Comb_Employee
+            // 
+            this.Contracts_Comb_Employee.FormattingEnabled = true;
+            this.Contracts_Comb_Employee.ItemHeight = 23;
+            this.Contracts_Comb_Employee.Items.AddRange(new object[] {
+            "خبرة",
+            "مؤقت",
+            "أختصاص"});
+            this.Contracts_Comb_Employee.Location = new System.Drawing.Point(99, 447);
+            this.Contracts_Comb_Employee.Name = "Contracts_Comb_Employee";
+            this.Contracts_Comb_Employee.Size = new System.Drawing.Size(163, 29);
+            this.Contracts_Comb_Employee.TabIndex = 194;
+            this.Contracts_Comb_Employee.UseSelectable = true;
+            // 
+            // Contracts_Comb_Department
+            // 
+            this.Contracts_Comb_Department.FormattingEnabled = true;
+            this.Contracts_Comb_Department.ItemHeight = 23;
+            this.Contracts_Comb_Department.Items.AddRange(new object[] {
+            "خبرة",
+            "مؤقت",
+            "أختصاص"});
+            this.Contracts_Comb_Department.Location = new System.Drawing.Point(99, 393);
+            this.Contracts_Comb_Department.Name = "Contracts_Comb_Department";
+            this.Contracts_Comb_Department.Size = new System.Drawing.Size(163, 29);
+            this.Contracts_Comb_Department.TabIndex = 195;
+            this.Contracts_Comb_Department.UseSelectable = true;
+            // 
+            // Contracts_Type1
+            // 
+            this.Contracts_Type1.AutoSize = true;
+            this.Contracts_Type1.Location = new System.Drawing.Point(9, 139);
+            this.Contracts_Type1.Name = "Contracts_Type1";
+            this.Contracts_Type1.Size = new System.Drawing.Size(58, 19);
+            this.Contracts_Type1.TabIndex = 219;
+            this.Contracts_Type1.Text = "نوع العقد";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(8, 193);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 220;
+            this.metroLabel1.Text = "تاريخ البداية";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(8, 247);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel2.TabIndex = 221;
+            this.metroLabel2.Text = "تاريخ النهاية";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(649, 34);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel3.TabIndex = 222;
+            this.metroLabel3.Text = "تاريخ البداية";
+            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(650, 80);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel4.TabIndex = 223;
+            this.metroLabel4.Text = "تاريخ النهاية";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(344, 63);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel5.TabIndex = 224;
+            this.metroLabel5.Text = "بحث عام";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(10, 349);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel6.TabIndex = 225;
+            this.metroLabel6.Text = "الملاحظات";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(10, 457);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel7.TabIndex = 226;
+            this.metroLabel7.Text = "الموظفين";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(8, 301);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel8.TabIndex = 227;
+            this.metroLabel8.Text = "حالة العقود";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(10, 403);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel9.TabIndex = 228;
+            this.metroLabel9.Text = "الأقسام";
+            // 
             // Contracts_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 556);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Contracts_Type1);
+            this.Controls.Add(this.Contracts_Comb_Department);
+            this.Controls.Add(this.Contracts_Comb_Employee);
+            this.Controls.Add(this.Contracts_Type);
+            this.Controls.Add(this.Contracts_Notes);
             this.Controls.Add(this.Contracts_Print);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.Contracts_Date_last);
             this.Controls.Add(this.Contracts_Date_first);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.Contracts_Search_All);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.Contracts_Comb_Contract_statue);
-            this.Controls.Add(this.Contracts_Comb_Employee);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Contracts_Comb_Department);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Contracts_Date_end);
             this.Controls.Add(this.Contracts_Date_Start);
             this.Controls.Add(this.Contracts_exit);
@@ -431,10 +476,6 @@
             this.Controls.Add(this.Contracts_add);
             this.Controls.Add(this.Contracts_new);
             this.Controls.Add(this.Contracts_Gridview);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Contracts_Notes);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Contracts_Type);
             this.Name = "Contracts_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -453,26 +494,26 @@
         private MetroFramework.Controls.MetroButton Contracts_add;
         private MetroFramework.Controls.MetroButton Contracts_new;
         private MetroFramework.Controls.MetroGrid Contracts_Gridview;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Contracts_Notes;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Contracts_Type;
         private MetroFramework.Controls.MetroDateTime Contracts_Date_Start;
         private MetroFramework.Controls.MetroDateTime Contracts_Date_end;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox Contracts_Comb_Department;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Contracts_Comb_Employee;
-        private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroComboBox Contracts_Comb_Contract_statue;
-        private System.Windows.Forms.Label label6;
         private MetroFramework.Controls.MetroTextBox Contracts_Search_All;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroDateTime Contracts_Date_last;
         private MetroFramework.Controls.MetroDateTime Contracts_Date_first;
         private MetroFramework.Controls.MetroButton Contracts_Print;
+        private MetroFramework.Controls.MetroTextBox Contracts_Notes;
+        private MetroFramework.Controls.MetroTextBox Contracts_Type;
+        private MetroFramework.Controls.MetroComboBox Contracts_Comb_Employee;
+        private MetroFramework.Controls.MetroComboBox Contracts_Comb_Department;
+        private MetroFramework.Controls.MetroLabel Contracts_Type1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
     }
 }

@@ -120,16 +120,10 @@ namespace Finance_Authority.PL
                 Authority_delete.Enabled = false;
             }
         }
-
-        private void Authority_textsearch_TextChanged(object sender, EventArgs e)
+        private void Authority_textsearch_TextChanged_1(object sender, EventArgs e)
         {
             this.Authority_Gridview.DataSource = Auth.Authority_Search_Name(Authority_textsearch.Text);
             Authority_Gridview.Columns[0].Visible = false;
-        }
-
-        private void Authority_FORM_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
-using System.Data;
+
 
 namespace Finance_Authority
 {
@@ -121,8 +121,28 @@ namespace Finance_Authority
          }
         public static DataRow Budget_NOW()
         {
-            return budget.Budget_Last_Budget().Rows[0];
+            DataRow dt = budget.Budget_Last_Budget().Rows[0];
+            return dt;
         }
+
+        //الميزانية الفعلية = المبلغ الحالي -الوارد +الصادر
+        //نسبة الواردات = مجموع الواردات / الميزانية الفعلية
+        public static int Month_Imports_rate()
+        {
+            try
+            {
+                DataRow dt_Sum_import = budget.Budget_Last_Sum_Payment().Rows[0];
+                DataRow dt_Sum_export = budget.Budget_Last_Sum_Reciver().Rows[0];
+                DataRow dt_Budget_NOW = Budget_NOW();
+                int actual_Budget = Convert.ToInt32(dt_Budget_NOW[0]) + Convert.ToInt32(dt_Sum_export[0]) - Convert.ToInt32(dt_Sum_import[0]);
+                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100));
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
 
     }
 }

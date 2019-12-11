@@ -337,6 +337,17 @@ namespace Finance_Authority.PL
                 FRPT.crystalReportViewer1.ReportSource = Art;
                 FRPT.ShowDialog();
             }
+        }     
+        private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
+        {
+            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
+            Employee_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
+        {
+            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
+            Employee_dataGrid.Columns[0].Visible = false;
         }
 
         private void Employee_Mobail_KeyPress(object sender, KeyPressEventArgs e)
@@ -362,23 +373,6 @@ namespace Finance_Authority.PL
         private void Employee_No_Card_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
-        }
-
-        private void Employee_Search_Mony_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
-        private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
-        {
-            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
-            Employee_dataGrid.Columns[0].Visible = false;
-        }
-
-        private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
-        {
-            this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
-            Employee_dataGrid.Columns[0].Visible = false;
         }
     }
 }

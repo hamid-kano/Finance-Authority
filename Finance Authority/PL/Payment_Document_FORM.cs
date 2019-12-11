@@ -223,6 +223,12 @@ namespace Finance_Authority.PL
             }
         }
 
+        private void Payment_Document_Search_TextChanged(object sender, EventArgs e)
+        {
+            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_Search(Payment_Document_Search.Text);
+            this.Payment_Document_dataGrid.Columns[0].Visible = false;
+        }
+
         private void Payment_Document_sy_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
@@ -246,17 +252,6 @@ namespace Finance_Authority.PL
         private void Payment_Document_No_Order_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
-        }
-
-        private void Payment_Document_Search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
-        private void Payment_Document_Search_TextChanged(object sender, EventArgs e)
-        {
-            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_Search(Payment_Document_Search.Text);
-            this.Payment_Document_dataGrid.Columns[0].Visible = false;
         }
     }
 }

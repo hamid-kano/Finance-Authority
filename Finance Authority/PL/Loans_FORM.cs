@@ -184,15 +184,15 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Loans_Amont_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
         private void Loans_Search_All_TextChanged_1(object sender, EventArgs e)
         {
             this.Loans_Gridview.DataSource = Loa.Loans_Search_All(Loans_Search_All.Text);
             Loans_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Loans_Amont_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
         }
     }
 }

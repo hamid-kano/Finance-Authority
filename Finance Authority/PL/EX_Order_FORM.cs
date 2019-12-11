@@ -185,16 +185,7 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void EX_Orders_order_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
-        private void EX_Orders_search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
+        
         private void EX_Orders_search_TextChanged_1(object sender, EventArgs e)
         {
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_NO_Order(EX_Orders_search.Text);
@@ -206,6 +197,16 @@ namespace Finance_Authority.PL
 
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_Search_All(EX_Orders_search_All.Text);
             this.EX_Orders_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void EX_Orders_order_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void EX_Orders_Body_order_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
         }
     }
 }

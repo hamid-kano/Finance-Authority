@@ -375,6 +375,7 @@
             this.Loans_Amont.UseSelectable = true;
             this.Loans_Amont.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Loans_Amont.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Loans_Amont.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Loans_Amont_KeyPress);
             // 
             // Loans_Search_All
             // 

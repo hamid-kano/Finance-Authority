@@ -126,7 +126,7 @@
             this.Employee_Salaries_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Salaries_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Salaries_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Employee_Salaries_dataGrid.Location = new System.Drawing.Point(230, 109);
+            this.Employee_Salaries_dataGrid.Location = new System.Drawing.Point(230, 83);
             this.Employee_Salaries_dataGrid.Name = "Employee_Salaries_dataGrid";
             this.Employee_Salaries_dataGrid.ReadOnly = true;
             this.Employee_Salaries_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -140,7 +140,7 @@
             this.Employee_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1102, 557);
+            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1102, 583);
             this.Employee_Salaries_dataGrid.TabIndex = 196;
             this.Employee_Salaries_dataGrid.Click += new System.EventHandler(this.Employee_Salaries_dataGrid_Click);
             // 
@@ -237,7 +237,7 @@
             // 
             this.Employee_Salaries_Department.FormattingEnabled = true;
             this.Employee_Salaries_Department.ItemHeight = 23;
-            this.Employee_Salaries_Department.Location = new System.Drawing.Point(746, 62);
+            this.Employee_Salaries_Department.Location = new System.Drawing.Point(748, 47);
             this.Employee_Salaries_Department.Name = "Employee_Salaries_Department";
             this.Employee_Salaries_Department.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Department.TabIndex = 26;
@@ -248,7 +248,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(478, 76);
+            this.label21.Location = new System.Drawing.Point(480, 61);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(0, 16);
             this.label21.TabIndex = 240;
@@ -257,7 +257,7 @@
             // 
             this.Employee_Salaries_Employment.FormattingEnabled = true;
             this.Employee_Salaries_Employment.ItemHeight = 23;
-            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1046, 60);
+            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(1048, 45);
             this.Employee_Salaries_Employment.Name = "Employee_Salaries_Employment";
             this.Employee_Salaries_Employment.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Employment.TabIndex = 27;
@@ -268,7 +268,7 @@
             // 
             this.Employee_Salaries_Saliery.FormattingEnabled = true;
             this.Employee_Salaries_Saliery.ItemHeight = 23;
-            this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(484, 63);
+            this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(486, 48);
             this.Employee_Salaries_Saliery.Name = "Employee_Salaries_Saliery";
             this.Employee_Salaries_Saliery.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Saliery.TabIndex = 25;
@@ -289,7 +289,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(980, 70);
+            this.metroLabel1.Location = new System.Drawing.Point(982, 55);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(60, 19);
             this.metroLabel1.TabIndex = 245;
@@ -298,7 +298,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(698, 70);
+            this.metroLabel2.Location = new System.Drawing.Point(700, 55);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(42, 19);
             this.metroLabel2.TabIndex = 246;
@@ -307,7 +307,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(403, 70);
+            this.metroLabel3.Location = new System.Drawing.Point(405, 55);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(75, 19);
             this.metroLabel3.TabIndex = 247;
@@ -642,6 +642,7 @@
             this.Empl_Sala_Total.UseSelectable = true;
             this.Empl_Sala_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Empl_Sala_Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Empl_Sala_Total_KeyPress);
             // 
             // Empl_Sala_after_Reb
             // 

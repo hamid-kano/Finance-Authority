@@ -201,6 +201,11 @@ namespace Finance_Authority.PL
                 FRPT.ShowDialog();
             }
         }
+        private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)
+        {
+            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Search(Reciver_Document_Search.Text);
+            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+        }
 
         private void Reciver_Document_sy_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -220,17 +225,6 @@ namespace Finance_Authority.PL
         private void Reciver_Document_no_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
-        }
-
-        private void Reciver_Document_Search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
-        private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)
-        {
-            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_Search(Reciver_Document_Search.Text);
-            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
         }
     }
 }

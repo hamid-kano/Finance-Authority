@@ -211,10 +211,5 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
-
-        private void Leoan_Payments_FORM_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

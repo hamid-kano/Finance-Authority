@@ -167,7 +167,7 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void Employee_Description_Salery_KeyPress(object sender, KeyPressEventArgs e)
+        private void Employee_Description_N0_Book_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
         }

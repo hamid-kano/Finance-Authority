@@ -166,23 +166,39 @@ namespace Finance_Authority
 
         // تحديث الميزانية بعد عمليات الدفع
         // statue add ;update ;delete
-        public static void Update_budget_After_Payment(string statue,string SY ,string Dollar)
+        public static void Budget_update_after_Payment_Reciver(string statue,string statusPR,string SY ,string Dollar)
         {
             DataRow dt_Budget_NOW = Budget_NOW();
             int sy_now =Convert.ToInt32(dt_Budget_NOW[1]);
             int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
-            int sy = 0;
-            int dollar = 0;
-            try
+            int sy = SY != string.Empty? Convert.ToInt32(SY) : 0;
+            int dollar = Dollar != string.Empty ? Convert.ToInt32(Dollar) : 0; 
+            if (statue == "add")
             {
-               sy = Convert.ToInt32(SY);
-               dollar = Convert.ToInt32(Dollar);
+                if (statusPR=="p")
+                {
+                    budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
+                }
+                else
+                {
+                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
+                }
             }
-            catch
+            else if (statue == "update")
             {
-
+                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
             }
-            budget.Budget_update_after_Payment((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
+            else if (statue == "delete")
+            {
+                if (statusPR == "p")
+                {
+                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
+                }
+                else 
+                {
+                    budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
+                }
+            }
 
         }
     }

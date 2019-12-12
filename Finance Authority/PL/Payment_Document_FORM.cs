@@ -15,6 +15,8 @@ namespace Finance_Authority.PL
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Reciver_Document Reciv = new BL.CLS_Reciver_Document();
         BL.CLS_Payment_Document pay = new BL.CLS_Payment_Document();
+        Finance_Authority frm = Finance_Authority.getMainForm;
+        int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
             InitializeComponent();
@@ -53,6 +55,7 @@ namespace Finance_Authority.PL
         {
             if (Payment_Document_dataGrid.CurrentRow != null)
             {
+                indexRowDeleted_or_Updated = Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Index);
                 Program.Payment_Document_id = Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Cells[0].Value.ToString());
                 Payment_Document_sy.Text = this.Payment_Document_dataGrid.CurrentRow.Cells[1].Value.ToString();
                 Payment_Document_Dollar.Text = this.Payment_Document_dataGrid.CurrentRow.Cells[2].Value.ToString();
@@ -110,7 +113,8 @@ namespace Finance_Authority.PL
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
             // تحديث الميزانية
-            Program.Update_budget_After_Payment("add", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
+            Program.Budget_update_after_Payment_Reciver("add","p", Payment_Document_sy.Text, Payment_Document_Dollar.Text) ;
+            frm.Update_label_finance_Box();
             //
             Program.Add_Message();
             Payment_Document_sy.Text = "";
@@ -157,17 +161,18 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            // تحديث الميزانية
+            int Sy_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) -Convert.ToInt32(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text) ;
+            int Dollar_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value)- Convert.ToInt32(Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text) ;
+            Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+            frm.Update_label_finance_Box();
+            //
             pay.Payment_Document_update(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
                Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
                Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
                Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue) , Program.Payment_Document_id);
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
-            // تحديث الميزانية
-            int Sy_After_Updat= Convert.ToInt32(Payment_Document_sy.Text)-Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Cells[1].Value);
-            int Dollar_After_Updat = Convert.ToInt32(Payment_Document_Dollar.Text)-Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Cells[2].Value) ;
-            Program.Update_budget_After_Payment("update", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-            //
             Program.Update_Message();
             Payment_Document_sy.Text = "";
             Payment_Document_Dollar.Text = "";
@@ -185,6 +190,10 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete", "p", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+                frm.Update_label_finance_Box();
+                //
                 pay.Payment_Document_Delete(Program.Payment_Document_id);
                 this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
                 this.Payment_Document_dataGrid.Columns[0].Visible = false;

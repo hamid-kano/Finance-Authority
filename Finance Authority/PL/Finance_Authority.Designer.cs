@@ -92,6 +92,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.update_budget = new System.Windows.Forms.Timer(this.components);
             this.Tab_Main.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
@@ -756,12 +757,13 @@
             // metroTile32
             // 
             this.metroTile32.ActiveControl = null;
-            this.metroTile32.Location = new System.Drawing.Point(1074, 440);
+            this.metroTile32.Location = new System.Drawing.Point(1073, 440);
             this.metroTile32.Name = "metroTile32";
             this.metroTile32.Size = new System.Drawing.Size(30, 23);
             this.metroTile32.TabIndex = 21;
             this.metroTile32.Text = "metroTile32";
             this.metroTile32.UseSelectable = true;
+            this.metroTile32.Click += new System.EventHandler(this.metroTile32_Click);
             // 
             // metroTile33
             // 
@@ -1012,6 +1014,10 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // update_budget
+            // 
+            this.update_budget.Interval = 1000;
+            // 
             // Finance_Authority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1124,12 +1130,13 @@
         private MetroFramework.Controls.MetroTile metroTile32;
         private MetroFramework.Controls.MetroTile metroTile36;
         private MetroFramework.Controls.MetroTile Employee_Button_MAIN;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         public MetroFramework.Controls.MetroLabel Dollar_Now_Label;
         public MetroFramework.Controls.MetroLabel SY_Now_Label;
+        public MetroFramework.Controls.MetroPanel metroPanel3;
+        private System.Windows.Forms.Timer update_budget;
     }
 }

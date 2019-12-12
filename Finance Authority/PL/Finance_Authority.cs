@@ -17,13 +17,31 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
-            DataRow dt = Program.Budget_NOW();
-            SY_Now_Label.Text = dt[1].ToString();
-            Dollar_Now_Label.Text = dt[2].ToString();
+            Update_label_finance_Box();
             Month_imports_ProgressSpinner.Value =  Program.Month_Imports_rate() > 100 ? 100 : Program.Month_Imports_rate();
             Month_imports_Label.Text = Program.Month_Imports_rate() > 100? "%"+ Program.Month_Imports_rate(): "%" + Program.Month_Imports_rate();
             Month_export_ProgressSpinner.Value =  Program.Month_Exmports_rate() > 100? 100: Program.Month_Exmports_rate();
             Month_exmports_Label.Text = Program.Month_Exmports_rate() > 100 ? "%" + Program.Month_Exmports_rate() : "%" + Program.Month_Exmports_rate();
+        }
+
+        private static Finance_Authority frm;
+
+        static void frm_formclosed(object sender, FormClosedEventArgs e)
+        {
+            frm = null;
+        }
+
+        public static Finance_Authority getMainForm
+        {
+            get
+            {
+                if (frm == null)
+                {
+                    frm = new Finance_Authority();
+                    frm.FormClosed += new FormClosedEventHandler(frm_formclosed);
+                }
+                return frm;
+            }
         }
         private void MetroTabPage1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -233,6 +251,18 @@ namespace Finance_Authority.PL
         {
             Coin_Exchange_FORM FRM = new Coin_Exchange_FORM();
             FRM.ShowDialog();
+        }
+
+        public void Update_label_finance_Box()
+        {
+            DataRow dt = Program.Budget_NOW();
+            this.SY_Now_Label.Text = dt[1].ToString();
+            this.Dollar_Now_Label.Text = dt[2].ToString();
+        }
+
+        private void metroTile32_Click(object sender, EventArgs e)
+        {
+            Update_label_finance_Box();
         }
     }
 }

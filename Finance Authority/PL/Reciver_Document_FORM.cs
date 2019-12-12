@@ -14,7 +14,8 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Reciver_Document Reciv = new BL.CLS_Reciver_Document();
-
+        Finance_Authority frm = Finance_Authority.getMainForm;
+        int indexRowDeleted_or_Updated;
 
         public Reciver_Document_FORM()
         {
@@ -80,6 +81,10 @@ namespace Finance_Authority.PL
             Reciv.Reciver_Document_add(Reciver_Document_sy.Text , Reciver_Document_Dollar.Text , Reciver_Document_rate.Text , Reciver_Document_no.Text , Reciver_Document_Reason.Text, Reciver_Document_Receve.Text , Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text , Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+            // تحديث الميزانية
+            Program.Budget_update_after_Payment_Reciver("add", "r", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
+            frm.Update_label_finance_Box();
+            //
             Program.Add_Message();
             Reciver_Document_sy.Text = "";
             Reciver_Document_Dollar.Text = "";
@@ -122,6 +127,12 @@ namespace Finance_Authority.PL
             Reciv.Reciver_Document_update(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue) , Program.Reciver_Document_id);
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+            // تحديث الميزانية
+            int Sy_After_Updat = Convert.ToInt32(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text)- Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) ;
+            int Dollar_After_Updat = Convert.ToInt32(Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value) ;
+            Program.Budget_update_after_Payment_Reciver("update", "r", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+            frm.Update_label_finance_Box();
+            //
             Program.Update_Message();
             Reciver_Document_sy.Text = "";
             Reciver_Document_Dollar.Text = "";
@@ -138,6 +149,7 @@ namespace Finance_Authority.PL
         {
             if (Reciver_Document_dataGrid.CurrentRow != null)
             {
+                indexRowDeleted_or_Updated = Convert.ToInt32(this.Reciver_Document_dataGrid.CurrentRow.Index);
                 Program.Reciver_Document_id= Convert.ToInt32(this.Reciver_Document_dataGrid.CurrentRow.Cells[0].Value.ToString());
                 Reciver_Document_sy.Text = this.Reciver_Document_dataGrid.CurrentRow.Cells[1].Value.ToString();
                 Reciver_Document_Dollar.Text = this.Reciver_Document_dataGrid.CurrentRow.Cells[2].Value.ToString();
@@ -158,6 +170,10 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete","r", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+                frm.Update_label_finance_Box();
+                //
                 Reciv.Reciver_Document_Delete(Program.Reciver_Document_id);
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;

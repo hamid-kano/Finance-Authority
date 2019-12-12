@@ -25,7 +25,7 @@ namespace Finance_Authority.BL
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
-            Dt = DAL.selectdata("Budget_Last_Sum_Reciver", null);
+            Dt = DAL.selectdata("Budget_Last_Budget", null);
             DAL.close();
             return Dt;
         }
@@ -47,6 +47,21 @@ namespace Finance_Authority.BL
             DAL.open();
             DataTable Dt = new DataTable();
             Dt = DAL.selectdata("Budget_Last_Sum_Payment", null);
+            DAL.close();
+            return Dt;
+        }
+        // تحديث الميزانية بعد عملية الدفع
+        public DataTable Budget_update_after_Payment(string Amount_Now_SY, string Amount_Now_Dollar)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@Amount_Now_SY", SqlDbType.NVarChar);
+            param[0].Value = Amount_Now_SY;
+            param[1] = new SqlParameter("@Amount_Now_Dollar", SqlDbType.NVarChar);
+            param[1].Value = Amount_Now_Dollar;
+            Dt = DAL.selectdata("Budget_update_after_Payment", param);
             DAL.close();
             return Dt;
         }

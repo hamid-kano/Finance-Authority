@@ -35,11 +35,11 @@
             this.Authority_Button = new MetroFramework.Controls.MetroTile();
             this.Department_Button = new MetroFramework.Controls.MetroTile();
             this.Office_Button = new MetroFramework.Controls.MetroTile();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.Document_Category_Button = new MetroFramework.Controls.MetroTile();
             this.Reciver_Document_Button = new MetroFramework.Controls.MetroTile();
             this.Payment_Document_Button = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.EX_Order_Button = new MetroFramework.Controls.MetroTile();
             this.EX_Orders_Cat_Button = new MetroFramework.Controls.MetroTile();
@@ -72,8 +72,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroProgressSpinner2 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.Month_exmports_Label = new MetroFramework.Controls.MetroLabel();
+            this.Month_export_ProgressSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             this.metroTile32 = new MetroFramework.Controls.MetroTile();
             this.metroTile33 = new MetroFramework.Controls.MetroTile();
             this.metroTile36 = new MetroFramework.Controls.MetroTile();
@@ -113,8 +113,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
-            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage7);
+            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
@@ -193,22 +193,6 @@
             this.Office_Button.UseSelectable = true;
             this.Office_Button.Click += new System.EventHandler(this.Office_Button_Click);
             // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.HorizontalScrollbarSize = 15;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
-            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "الدعم الفني";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.VerticalScrollbarSize = 12;
-            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.Document_Category_Button);
@@ -269,6 +253,22 @@
             this.Payment_Document_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.Payment_Document_Button.UseSelectable = true;
             this.Payment_Document_Button.Click += new System.EventHandler(this.Payment_Document_Button_Click);
+            // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.HorizontalScrollbarSize = 15;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "الدعم الفني";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.VerticalScrollbarSize = 12;
             // 
             // metroTabPage4
             // 
@@ -662,13 +662,12 @@
             // Month_imports_Label
             // 
             this.Month_imports_Label.AutoSize = true;
-            this.Month_imports_Label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.Month_imports_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Month_imports_Label.Location = new System.Drawing.Point(54, 49);
+            this.Month_imports_Label.Location = new System.Drawing.Point(56, 54);
             this.Month_imports_Label.Name = "Month_imports_Label";
-            this.Month_imports_Label.Size = new System.Drawing.Size(53, 25);
+            this.Month_imports_Label.Size = new System.Drawing.Size(45, 19);
             this.Month_imports_Label.TabIndex = 18;
-            this.Month_imports_Label.Text = "% 77";
+            this.Month_imports_Label.Text = "%100";
             this.Month_imports_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroPanel1
@@ -704,8 +703,8 @@
             // 
             this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel2.Controls.Add(this.metroLabel3);
-            this.metroPanel2.Controls.Add(this.metroLabel4);
-            this.metroPanel2.Controls.Add(this.metroProgressSpinner2);
+            this.metroPanel2.Controls.Add(this.Month_exmports_Label);
+            this.metroPanel2.Controls.Add(this.Month_export_ProgressSpinner);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
@@ -729,30 +728,30 @@
             this.metroLabel3.Text = "الصادرات الشهرية";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel4
+            // Month_exmports_Label
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(53, 50);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(53, 25);
-            this.metroLabel4.TabIndex = 18;
-            this.metroLabel4.Text = "% 99";
-            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Month_exmports_Label.AutoSize = true;
+            this.Month_exmports_Label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Month_exmports_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Month_exmports_Label.Location = new System.Drawing.Point(57, 54);
+            this.Month_exmports_Label.Name = "Month_exmports_Label";
+            this.Month_exmports_Label.Size = new System.Drawing.Size(45, 19);
+            this.Month_exmports_Label.TabIndex = 18;
+            this.Month_exmports_Label.Text = "%100";
+            this.Month_exmports_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroProgressSpinner2
+            // Month_export_ProgressSpinner
             // 
-            this.metroProgressSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroProgressSpinner2.Location = new System.Drawing.Point(28, 9);
-            this.metroProgressSpinner2.Maximum = 100;
-            this.metroProgressSpinner2.Name = "metroProgressSpinner2";
-            this.metroProgressSpinner2.Size = new System.Drawing.Size(105, 105);
-            this.metroProgressSpinner2.Spinning = false;
-            this.metroProgressSpinner2.Style = MetroFramework.MetroColorStyle.Pink;
-            this.metroProgressSpinner2.TabIndex = 17;
-            this.metroProgressSpinner2.UseSelectable = true;
-            this.metroProgressSpinner2.Value = 100;
+            this.Month_export_ProgressSpinner.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Month_export_ProgressSpinner.Location = new System.Drawing.Point(28, 9);
+            this.Month_export_ProgressSpinner.Maximum = 100;
+            this.Month_export_ProgressSpinner.Name = "Month_export_ProgressSpinner";
+            this.Month_export_ProgressSpinner.Size = new System.Drawing.Size(105, 104);
+            this.Month_export_ProgressSpinner.Spinning = false;
+            this.Month_export_ProgressSpinner.Style = MetroFramework.MetroColorStyle.Pink;
+            this.Month_export_ProgressSpinner.TabIndex = 17;
+            this.Month_export_ProgressSpinner.UseSelectable = true;
+            this.Month_export_ProgressSpinner.Value = 100;
             // 
             // metroTile32
             // 
@@ -1118,8 +1117,8 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner2;
+        private MetroFramework.Controls.MetroLabel Month_exmports_Label;
+        private MetroFramework.Controls.MetroProgressSpinner Month_export_ProgressSpinner;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTile metroTile33;
         private MetroFramework.Controls.MetroTile metroTile32;

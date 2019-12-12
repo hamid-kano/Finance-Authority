@@ -131,11 +131,32 @@ namespace Finance_Authority
         {
             try
             {
-                DataRow dt_Sum_import = budget.Budget_Last_Sum_Payment().Rows[0];
-                DataRow dt_Sum_export = budget.Budget_Last_Sum_Reciver().Rows[0];
-                DataRow dt_Budget_NOW = Budget_NOW();
+                DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0];
+                DataRow dt_Sum_export = budget.Budget_Last_Sum_Payment().Rows[0]; 
+                 DataRow dt_Budget_NOW = Budget_NOW();
+                int sumimport = Convert.ToInt32(dt_Sum_import[0]);
+                int sumexport = Convert.ToInt32(dt_Sum_export[0]);
+                int budgetNow = Convert.ToInt32(dt_Budget_NOW[0]);
                 int actual_Budget = Convert.ToInt32(dt_Budget_NOW[0]) + Convert.ToInt32(dt_Sum_export[0]) - Convert.ToInt32(dt_Sum_import[0]);
-                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100));
+                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100)) <0? 0: Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100));
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+        public static int Month_Exmports_rate()
+        {
+            try
+            {
+                DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0];
+                DataRow dt_Sum_export = budget.Budget_Last_Sum_Payment().Rows[0];
+                DataRow dt_Budget_NOW = Budget_NOW();
+                int sumimport = Convert.ToInt32(dt_Sum_import[0]);
+                int sumexport = Convert.ToInt32(dt_Sum_export[0]);
+                int budgetNow = Convert.ToInt32(dt_Budget_NOW[0]);
+                int actual_Budget = Convert.ToInt32(dt_Budget_NOW[0]) + Convert.ToInt32(dt_Sum_export[0]) - Convert.ToInt32(dt_Sum_import[0]);
+                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100))<0 ? 0: Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100));
             }
             catch
             {
@@ -143,6 +164,26 @@ namespace Finance_Authority
             }
         }
 
+        // تحديث الميزانية بعد عمليات الدفع
+        // statue add ;update ;delete
+        public static void Update_budget_After_Payment(string statue,string SY ,string Dollar)
+        {
+            DataRow dt_Budget_NOW = Budget_NOW();
+            int sy_now =Convert.ToInt32(dt_Budget_NOW[1]);
+            int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
+            int sy = 0;
+            int dollar = 0;
+            try
+            {
+               sy = Convert.ToInt32(SY);
+               dollar = Convert.ToInt32(Dollar);
+            }
+            catch
+            {
 
+            }
+            budget.Budget_update_after_Payment((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
+
+        }
     }
 }

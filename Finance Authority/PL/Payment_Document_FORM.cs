@@ -109,6 +109,9 @@ namespace Finance_Authority.PL
                 Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32( Payment_Document_Comb_Cate.SelectedValue));
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+            // تحديث الميزانية
+            Program.Update_budget_After_Payment("add", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
+            //
             Program.Add_Message();
             Payment_Document_sy.Text = "";
             Payment_Document_Dollar.Text = "";
@@ -119,6 +122,9 @@ namespace Finance_Authority.PL
             Payment_Document_Receve.Text = "";
             Payment_Document_Notes.Text = "";
             Payment_Document_add.Enabled = false;
+
+            
+            
         }
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
@@ -138,19 +144,16 @@ namespace Finance_Authority.PL
 
             if (Payment_Document_Receve.Text == String.Empty)
             {
-
                 MessageBox.Show("أضف المستلم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Payment_Document_no.Text == String.Empty)
             {
-
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Payment_Document_No_Order.Text == String.Empty)
             {
-
                 MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
@@ -160,6 +163,11 @@ namespace Finance_Authority.PL
                Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue) , Program.Payment_Document_id);
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+            // تحديث الميزانية
+            int Sy_After_Updat= Convert.ToInt32(Payment_Document_sy.Text)-Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Cells[1].Value);
+            int Dollar_After_Updat = Convert.ToInt32(Payment_Document_Dollar.Text)-Convert.ToInt32(this.Payment_Document_dataGrid.CurrentRow.Cells[2].Value) ;
+            Program.Update_budget_After_Payment("update", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+            //
             Program.Update_Message();
             Payment_Document_sy.Text = "";
             Payment_Document_Dollar.Text = "";

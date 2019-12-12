@@ -18,10 +18,12 @@ namespace Finance_Authority.PL
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
             DataRow dt = Program.Budget_NOW();
-            SY_Now_Label.Text = dt[0].ToString();
-            Dollar_Now_Label.Text = dt[1].ToString();
-            Month_imports_ProgressSpinner.Value = Program.Month_Imports_rate();
-            Month_imports_Label.Text="% "+Program.Month_Imports_rate();
+            SY_Now_Label.Text = dt[1].ToString();
+            Dollar_Now_Label.Text = dt[2].ToString();
+            Month_imports_ProgressSpinner.Value =  Program.Month_Imports_rate() > 100 ? 100 : Program.Month_Imports_rate();
+            Month_imports_Label.Text = Program.Month_Imports_rate() > 100? "%"+ Program.Month_Imports_rate(): "%" + Program.Month_Imports_rate();
+            Month_export_ProgressSpinner.Value =  Program.Month_Exmports_rate() > 100? 100: Program.Month_Exmports_rate();
+            Month_exmports_Label.Text = Program.Month_Exmports_rate() > 100 ? "%" + Program.Month_Exmports_rate() : "%" + Program.Month_Exmports_rate();
         }
         private void MetroTabPage1_Scroll(object sender, ScrollEventArgs e)
         {

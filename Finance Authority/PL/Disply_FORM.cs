@@ -16,5 +16,10 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

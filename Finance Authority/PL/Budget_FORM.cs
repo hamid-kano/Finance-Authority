@@ -25,41 +25,6 @@ namespace Finance_Authority.PL
             this.Close();
         }
 
-        private void Budget_new_Click(object sender, EventArgs e)
-        {
-            Budget_add.Enabled = true;
-            Budget_amount_sy.Text = "";
-            Budget_amount_Dollar.Text = "";
-            Budget_import_sy.Text = "";
-            Budget_import_Dollar.Text = "";
-            Budget_Recycle_Sy.Text = "";
-            Budget_Recycle_Dollar.Text = "";
-            Budget_spicified_Sy.Text = "";
-            Budget_spicified_Dollar.Text = "";
-            Budget_Notes.Text = "";
-            Budget_update.Enabled = false;
-            Budget_delete.Enabled = false;
-        }
-   
-
-        private void Budget_add_Click(object sender, EventArgs e)
-        {
-            Bud.Budget_add(Budget_amount_sy.Text, Budget_amount_Dollar.Text, Budget_import_sy.Text , Budget_import_Dollar.Text, Budget_Recycle_Sy.Text , Budget_Recycle_Dollar.Text, Budget_spicified_Sy.Text , Budget_spicified_Dollar.Text , Budget_Notes.Text , Budget_DateTime.Value);
-            this.Budget_dataGrid.DataSource = Bud.Budget_view();
-            this.Budget_dataGrid.Columns[0].Visible = false;
-            MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Budget_amount_sy.Text = "";
-            Budget_amount_Dollar.Text = "";
-            Budget_import_sy.Text = "";
-            Budget_import_Dollar.Text = "";
-            Budget_Recycle_Sy.Text = "";
-            Budget_Recycle_Dollar.Text = "";
-            Budget_spicified_Sy.Text = "";
-            Budget_spicified_Dollar.Text = "";
-            Budget_Notes.Text = "";
-            Budget_add.Enabled = false;
-        }
-
         private void Budget_dataGrid_Click(object sender, EventArgs e)
         {
             if (Budget_dataGrid.CurrentRow != null)
@@ -75,50 +40,36 @@ namespace Finance_Authority.PL
                 Budget_spicified_Dollar.Text = this.Budget_dataGrid.CurrentRow.Cells[8].Value.ToString();
                 Budget_DateTime.Text = this.Budget_dataGrid.CurrentRow.Cells[9].Value.ToString();
                 Budget_Notes.Text = this.Budget_dataGrid.CurrentRow.Cells[10].Value.ToString();
-                Budget_update.Enabled = true;
                 Budget_delete.Enabled = true;
             }
         }
-
-        private void Budget_update_Click(object sender, EventArgs e)
-        {
-            Bud.Budget_update(Budget_amount_sy.Text, Budget_amount_Dollar.Text, Budget_import_sy.Text, Budget_import_Dollar.Text, Budget_Recycle_Sy.Text, Budget_Recycle_Dollar.Text, Budget_spicified_Sy.Text, Budget_spicified_Dollar.Text, Budget_Notes.Text, Budget_DateTime.Value , Program.Budget_Id);
-            this.Budget_dataGrid.DataSource = Bud.Budget_view();
-            this.Budget_dataGrid.Columns[0].Visible = false;
-            MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Budget_amount_sy.Text = "";
-            Budget_amount_Dollar.Text = "";
-            Budget_import_sy.Text = "";
-            Budget_import_Dollar.Text = "";
-            Budget_Recycle_Sy.Text = "";
-            Budget_Recycle_Dollar.Text = "";
-            Budget_spicified_Sy.Text = "";
-            Budget_spicified_Dollar.Text = "";
-            Budget_Notes.Text = "";
-            Budget_update.Enabled = false;
-            Budget_delete.Enabled = false;
-        }
-
         private void Budget_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (Program.Budget_Id==Convert.ToInt32(Bud.Budget_Last_Budget().Rows[0][0]))
             {
-                Bud.Budget_Delete(Program.Budget_Id);
-                this.Budget_dataGrid.DataSource = Bud.Budget_view();
-                this.Budget_dataGrid.Columns[0].Visible = false;
-                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Budget_amount_sy.Text = "";
-                Budget_amount_Dollar.Text = "";
-                Budget_import_sy.Text = "";
-                Budget_import_Dollar.Text = "";
-                Budget_Recycle_Sy.Text = "";
-                Budget_Recycle_Dollar.Text = "";
-                Budget_spicified_Sy.Text = "";
-                Budget_spicified_Dollar.Text = "";
-                Budget_Notes.Text = "";
-                Budget_update.Enabled = false;
-                Budget_delete.Enabled = false;
+                if (MessageBox.Show("هل تريد الحذف بالتاكيد .. اذا قمت بحذ الميزانية الحالية سيتم حذف جميع سندات الدفع و القبض وكا مايتعلق بهذه الميزانية؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Bud.Budget_Delete(Program.Budget_Id);
+                    this.Budget_dataGrid.DataSource = Bud.Budget_view();
+                    this.Budget_dataGrid.Columns[0].Visible = false;
+                    MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Budget_amount_sy.Text = "";
+                    Budget_amount_Dollar.Text = "";
+                    Budget_import_sy.Text = "";
+                    Budget_import_Dollar.Text = "";
+                    Budget_Recycle_Sy.Text = "";
+                    Budget_Recycle_Dollar.Text = "";
+                    Budget_spicified_Sy.Text = "";
+                    Budget_spicified_Dollar.Text = "";
+                    Budget_Notes.Text = "";
+                    Budget_delete.Enabled = false;
+                }
             }
+            else
+            {
+                MessageBox.Show("لا يمكنك حذف ميزانية سابقة", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+          
         }
         private void Budget_Date_first_ValueChanged_1(object sender, EventArgs e)
         {

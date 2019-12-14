@@ -195,7 +195,7 @@ namespace Finance_Authority.PL
 
         private void Document_Button_Click(object sender, EventArgs e)
         {
-            Document_FORM FRM = new Document_FORM();
+            Document_FORM FRM = new Document_FORM(0,"");
             FRM.ShowDialog();
         }
 

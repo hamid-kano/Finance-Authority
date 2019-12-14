@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
+        int _Contract_id;
         public Contracts_FORM()
         {
             InitializeComponent();
@@ -97,6 +98,7 @@ namespace Finance_Authority.PL
             if (Contracts_Gridview.CurrentRow != null)
             {
                 Program.Contracts_id = Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[0].Value.ToString());
+                _Contract_id= Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[0].Value.ToString());
                 Contracts_Type.Text = this.Contracts_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Contracts_Date_Start.Text = this.Contracts_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Contracts_Date_end.Text = this.Contracts_Gridview.CurrentRow.Cells[3].Value.ToString();
@@ -192,6 +194,19 @@ namespace Finance_Authority.PL
         {
             this.Contracts_Gridview.DataSource = cont.Contracts_View();
             Contracts_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Contracts_Add_Doc_Click(object sender, EventArgs e)
+        {
+            if (_Contract_id!=null)
+            {
+                Document_FORM FRM = new Document_FORM(_Contract_id, "عقد");
+                FRM.ShowDialog();
+            }
+            else
+            {
+
+            }
         }
     }
 }

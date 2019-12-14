@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Budget_FORM));
             this.Budget_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Budget_xit = new MetroFramework.Controls.MetroButton();
             this.Budget_delete = new MetroFramework.Controls.MetroButton();
-            this.Budget_update = new MetroFramework.Controls.MetroButton();
-            this.Budget_add = new MetroFramework.Controls.MetroButton();
-            this.Budget_new = new MetroFramework.Controls.MetroButton();
             this.Budget_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.Budget_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.Budget_Date_last = new MetroFramework.Controls.MetroDateTime();
@@ -76,23 +73,23 @@
             this.Budget_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Budget_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Budget_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Budget_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Budget_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Budget_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Budget_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Budget_dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.Budget_dataGrid.EnableHeadersVisualStyles = false;
             this.Budget_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Budget_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -100,14 +97,14 @@
             this.Budget_dataGrid.Name = "Budget_dataGrid";
             this.Budget_dataGrid.ReadOnly = true;
             this.Budget_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Budget_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Budget_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Budget_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Budget_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Budget_dataGrid.Size = new System.Drawing.Size(672, 399);
@@ -117,7 +114,7 @@
             // Budget_xit
             // 
             this.Budget_xit.Highlight = true;
-            this.Budget_xit.Location = new System.Drawing.Point(878, 501);
+            this.Budget_xit.Location = new System.Drawing.Point(746, 501);
             this.Budget_xit.Name = "Budget_xit";
             this.Budget_xit.Size = new System.Drawing.Size(87, 37);
             this.Budget_xit.TabIndex = 14;
@@ -129,7 +126,7 @@
             // 
             this.Budget_delete.Enabled = false;
             this.Budget_delete.Highlight = true;
-            this.Budget_delete.Location = new System.Drawing.Point(767, 501);
+            this.Budget_delete.Location = new System.Drawing.Point(635, 501);
             this.Budget_delete.Name = "Budget_delete";
             this.Budget_delete.Size = new System.Drawing.Size(87, 37);
             this.Budget_delete.TabIndex = 13;
@@ -137,43 +134,9 @@
             this.Budget_delete.UseSelectable = true;
             this.Budget_delete.Click += new System.EventHandler(this.Budget_delete_Click);
             // 
-            // Budget_update
-            // 
-            this.Budget_update.Enabled = false;
-            this.Budget_update.Highlight = true;
-            this.Budget_update.Location = new System.Drawing.Point(660, 501);
-            this.Budget_update.Name = "Budget_update";
-            this.Budget_update.Size = new System.Drawing.Size(87, 37);
-            this.Budget_update.TabIndex = 12;
-            this.Budget_update.Text = "تعديل";
-            this.Budget_update.UseSelectable = true;
-            this.Budget_update.Click += new System.EventHandler(this.Budget_update_Click);
-            // 
-            // Budget_add
-            // 
-            this.Budget_add.Enabled = false;
-            this.Budget_add.Highlight = true;
-            this.Budget_add.Location = new System.Drawing.Point(541, 501);
-            this.Budget_add.Name = "Budget_add";
-            this.Budget_add.Size = new System.Drawing.Size(87, 37);
-            this.Budget_add.TabIndex = 11;
-            this.Budget_add.Text = "أضافة";
-            this.Budget_add.UseSelectable = true;
-            this.Budget_add.Click += new System.EventHandler(this.Budget_add_Click);
-            // 
-            // Budget_new
-            // 
-            this.Budget_new.Highlight = true;
-            this.Budget_new.Location = new System.Drawing.Point(429, 501);
-            this.Budget_new.Name = "Budget_new";
-            this.Budget_new.Size = new System.Drawing.Size(87, 37);
-            this.Budget_new.TabIndex = 10;
-            this.Budget_new.Text = "جديد";
-            this.Budget_new.UseSelectable = true;
-            this.Budget_new.Click += new System.EventHandler(this.Budget_new_Click);
-            // 
             // Budget_DateTime
             // 
+            this.Budget_DateTime.Enabled = false;
             this.Budget_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Budget_DateTime.Location = new System.Drawing.Point(150, 417);
             this.Budget_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
@@ -223,6 +186,7 @@
             this.Budget_Notes.MaxLength = 32767;
             this.Budget_Notes.Name = "Budget_Notes";
             this.Budget_Notes.PasswordChar = '\0';
+            this.Budget_Notes.ReadOnly = true;
             this.Budget_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_Notes.SelectedText = "";
             this.Budget_Notes.SelectionLength = 0;
@@ -253,6 +217,7 @@
             this.Budget_amount_sy.MaxLength = 32767;
             this.Budget_amount_sy.Name = "Budget_amount_sy";
             this.Budget_amount_sy.PasswordChar = '\0';
+            this.Budget_amount_sy.ReadOnly = true;
             this.Budget_amount_sy.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_amount_sy.SelectedText = "";
             this.Budget_amount_sy.SelectionLength = 0;
@@ -284,6 +249,7 @@
             this.Budget_amount_Dollar.MaxLength = 32767;
             this.Budget_amount_Dollar.Name = "Budget_amount_Dollar";
             this.Budget_amount_Dollar.PasswordChar = '\0';
+            this.Budget_amount_Dollar.ReadOnly = true;
             this.Budget_amount_Dollar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_amount_Dollar.SelectedText = "";
             this.Budget_amount_Dollar.SelectionLength = 0;
@@ -315,6 +281,7 @@
             this.Budget_Recycle_Dollar.MaxLength = 32767;
             this.Budget_Recycle_Dollar.Name = "Budget_Recycle_Dollar";
             this.Budget_Recycle_Dollar.PasswordChar = '\0';
+            this.Budget_Recycle_Dollar.ReadOnly = true;
             this.Budget_Recycle_Dollar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_Recycle_Dollar.SelectedText = "";
             this.Budget_Recycle_Dollar.SelectionLength = 0;
@@ -346,6 +313,7 @@
             this.Budget_Recycle_Sy.MaxLength = 32767;
             this.Budget_Recycle_Sy.Name = "Budget_Recycle_Sy";
             this.Budget_Recycle_Sy.PasswordChar = '\0';
+            this.Budget_Recycle_Sy.ReadOnly = true;
             this.Budget_Recycle_Sy.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_Recycle_Sy.SelectedText = "";
             this.Budget_Recycle_Sy.SelectionLength = 0;
@@ -377,6 +345,7 @@
             this.Budget_import_Dollar.MaxLength = 32767;
             this.Budget_import_Dollar.Name = "Budget_import_Dollar";
             this.Budget_import_Dollar.PasswordChar = '\0';
+            this.Budget_import_Dollar.ReadOnly = true;
             this.Budget_import_Dollar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_import_Dollar.SelectedText = "";
             this.Budget_import_Dollar.SelectionLength = 0;
@@ -408,6 +377,7 @@
             this.Budget_import_sy.MaxLength = 32767;
             this.Budget_import_sy.Name = "Budget_import_sy";
             this.Budget_import_sy.PasswordChar = '\0';
+            this.Budget_import_sy.ReadOnly = true;
             this.Budget_import_sy.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_import_sy.SelectedText = "";
             this.Budget_import_sy.SelectionLength = 0;
@@ -439,6 +409,7 @@
             this.Budget_spicified_Dollar.MaxLength = 32767;
             this.Budget_spicified_Dollar.Name = "Budget_spicified_Dollar";
             this.Budget_spicified_Dollar.PasswordChar = '\0';
+            this.Budget_spicified_Dollar.ReadOnly = true;
             this.Budget_spicified_Dollar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_spicified_Dollar.SelectedText = "";
             this.Budget_spicified_Dollar.SelectionLength = 0;
@@ -470,6 +441,7 @@
             this.Budget_spicified_Sy.MaxLength = 32767;
             this.Budget_spicified_Sy.Name = "Budget_spicified_Sy";
             this.Budget_spicified_Sy.PasswordChar = '\0';
+            this.Budget_spicified_Sy.ReadOnly = true;
             this.Budget_spicified_Sy.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Budget_spicified_Sy.SelectedText = "";
             this.Budget_spicified_Sy.SelectionLength = 0;
@@ -557,11 +529,11 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(13, 427);
+            this.metroLabel8.Location = new System.Drawing.Point(13, 422);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(113, 19);
             this.metroLabel8.TabIndex = 108;
-            this.metroLabel8.Text = "التاريخ";
+            this.metroLabel8.Text = "تاريخ اضافة الميزانية";
             // 
             // metroLabel9
             // 
@@ -592,6 +564,7 @@
             // 
             // update
             // 
+            this.update.BackColor = System.Drawing.Color.Transparent;
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.update.Location = new System.Drawing.Point(379, 35);
@@ -634,13 +607,10 @@
             this.Controls.Add(this.Budget_dataGrid);
             this.Controls.Add(this.Budget_xit);
             this.Controls.Add(this.Budget_delete);
-            this.Controls.Add(this.Budget_update);
-            this.Controls.Add(this.Budget_add);
-            this.Controls.Add(this.Budget_new);
             this.Name = "Budget_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "الميزانية";
+            this.Text = "الميزانيات";
             ((System.ComponentModel.ISupportInitialize)(this.Budget_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -651,9 +621,6 @@
         private MetroFramework.Controls.MetroGrid Budget_dataGrid;
         private MetroFramework.Controls.MetroButton Budget_xit;
         private MetroFramework.Controls.MetroButton Budget_delete;
-        private MetroFramework.Controls.MetroButton Budget_update;
-        private MetroFramework.Controls.MetroButton Budget_add;
-        private MetroFramework.Controls.MetroButton Budget_new;
         private MetroFramework.Controls.MetroDateTime Budget_DateTime;
         private MetroFramework.Controls.MetroDateTime Budget_Date_first;
         private MetroFramework.Controls.MetroDateTime Budget_Date_last;

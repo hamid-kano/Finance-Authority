@@ -35,11 +35,11 @@
             this.Authority_Button = new MetroFramework.Controls.MetroTile();
             this.Department_Button = new MetroFramework.Controls.MetroTile();
             this.Office_Button = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.Document_Category_Button = new MetroFramework.Controls.MetroTile();
             this.Reciver_Document_Button = new MetroFramework.Controls.MetroTile();
             this.Payment_Document_Button = new MetroFramework.Controls.MetroTile();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.EX_Order_Button = new MetroFramework.Controls.MetroTile();
             this.EX_Orders_Cat_Button = new MetroFramework.Controls.MetroTile();
@@ -114,8 +114,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
-            this.Tab_Main.Controls.Add(this.metroTabPage7);
             this.Tab_Main.Controls.Add(this.metroTabPage3);
+            this.Tab_Main.Controls.Add(this.metroTabPage7);
             this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
@@ -126,7 +126,7 @@
             this.Tab_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Tab_Main.Name = "Tab_Main";
             this.Tab_Main.RightToLeftLayout = true;
-            this.Tab_Main.SelectedIndex = 2;
+            this.Tab_Main.SelectedIndex = 3;
             this.Tab_Main.Size = new System.Drawing.Size(1105, 134);
             this.Tab_Main.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.Tab_Main.TabIndex = 0;
@@ -194,6 +194,22 @@
             this.Office_Button.UseSelectable = true;
             this.Office_Button.Click += new System.EventHandler(this.Office_Button_Click);
             // 
+            // metroTabPage7
+            // 
+            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.metroTabPage7.HorizontalScrollbarBarColor = true;
+            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.HorizontalScrollbarSize = 15;
+            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage7.Name = "metroTabPage7";
+            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
+            this.metroTabPage7.TabIndex = 6;
+            this.metroTabPage7.Text = "الدعم الفني";
+            this.metroTabPage7.VerticalScrollbarBarColor = true;
+            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage7.VerticalScrollbarSize = 12;
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.Document_Category_Button);
@@ -255,22 +271,6 @@
             this.Payment_Document_Button.UseSelectable = true;
             this.Payment_Document_Button.Click += new System.EventHandler(this.Payment_Document_Button_Click);
             // 
-            // metroTabPage7
-            // 
-            this.metroTabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.metroTabPage7.HorizontalScrollbarBarColor = true;
-            this.metroTabPage7.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.HorizontalScrollbarSize = 15;
-            this.metroTabPage7.Location = new System.Drawing.Point(4, 47);
-            this.metroTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage7.Name = "metroTabPage7";
-            this.metroTabPage7.Size = new System.Drawing.Size(1097, 83);
-            this.metroTabPage7.TabIndex = 6;
-            this.metroTabPage7.Text = "الدعم الفني";
-            this.metroTabPage7.VerticalScrollbarBarColor = true;
-            this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage7.VerticalScrollbarSize = 12;
-            // 
             // metroTabPage4
             // 
             this.metroTabPage4.Controls.Add(this.EX_Order_Button);
@@ -327,7 +327,7 @@
             this.Budget_Button.Name = "Budget_Button";
             this.Budget_Button.Size = new System.Drawing.Size(153, 49);
             this.Budget_Button.TabIndex = 9;
-            this.Budget_Button.Text = "الصندوق المالي";
+            this.Budget_Button.Text = "الميزانيات";
             this.Budget_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Budget_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.Budget_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;

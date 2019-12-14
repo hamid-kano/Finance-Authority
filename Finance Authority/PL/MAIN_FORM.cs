@@ -130,7 +130,7 @@ namespace Finance_Authority
 
         private void Document_BTN_Click(object sender, EventArgs e)
         {
-            PL.Document_FORM FRM = new PL.Document_FORM();
+            PL.Document_FORM FRM = new PL.Document_FORM(0,"");
             FRM.ShowDialog();
         }
 

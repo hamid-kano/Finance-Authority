@@ -193,5 +193,20 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void Bills_Add_Doc_Click(object sender, EventArgs e)
+        {
+            if (_Bill_ID == null)
+            {
+                _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
+                Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
+                FRM.ShowDialog();
+            }
+            else
+            {
+                Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
+                FRM.ShowDialog();
+            }
+        }
     }
 }

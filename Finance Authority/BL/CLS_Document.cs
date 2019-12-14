@@ -19,29 +19,21 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Document_add(string Type_Doc, string Doc_Name, string Doc_URL , string Location, string Extends, string Notes)
+        public DataTable Document_View_By_Type_Id_Doc(string Document_Type,int Doc_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
-            SqlParameter[] param = new SqlParameter[6];
-            param[0] = new SqlParameter("@Type_Doc", SqlDbType.NVarChar);
-            param[0].Value = Type_Doc;
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@Document_Type", SqlDbType.NVarChar);
+            param[0].Value = Document_Type;
             param[1] = new SqlParameter("@Doc_Name", SqlDbType.NVarChar);
-            param[1].Value = Doc_Name;
-            param[2] = new SqlParameter("@Doc_URL", SqlDbType.NVarChar);
-            param[2].Value = Doc_URL;
-            param[3] = new SqlParameter("@Location", SqlDbType.NVarChar);
-            param[3].Value = Location;
-            param[4] = new SqlParameter("@Extends", SqlDbType.NVarChar);
-            param[4].Value = Extends;
-            param[5] = new SqlParameter("@Notes", SqlDbType.NVarChar);
-            param[5].Value = Notes;
-            Dt = DAL.selectdata("Document_add", param);
+            param[1].Value = Doc_id;
+            Dt = DAL.selectdata("Document_View", param);
             DAL.close();
             return Dt;
         }
-        public DataTable Document_update(string Type_Doc, string Doc_Name, string Doc_URL, string Location, string Extends, string Notes ,int id)
+        public DataTable Document_add(string Type_Doc, string Doc_Name, string Doc_URL , string Location, string Extends, string Notes, int Doc_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -59,8 +51,35 @@ namespace Finance_Authority.BL
             param[4].Value = Extends;
             param[5] = new SqlParameter("@Notes", SqlDbType.NVarChar);
             param[5].Value = Notes;
-            param[6] = new SqlParameter("@id", SqlDbType.Int);
-            param[6].Value = id;
+            param[6] = new SqlParameter("@Doc_id", SqlDbType.NVarChar);
+            param[6].Value = Doc_id;
+
+            Dt = DAL.selectdata("Document_add", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Document_update(string Type_Doc, string Doc_Name, string Doc_URL, string Location, string Extends, string Notes, int Doc_id, int id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[8];
+            param[0] = new SqlParameter("@Type_Doc", SqlDbType.NVarChar);
+            param[0].Value = Type_Doc;
+            param[1] = new SqlParameter("@Doc_Name", SqlDbType.NVarChar);
+            param[1].Value = Doc_Name;
+            param[2] = new SqlParameter("@Doc_URL", SqlDbType.NVarChar);
+            param[2].Value = Doc_URL;
+            param[3] = new SqlParameter("@Location", SqlDbType.NVarChar);
+            param[3].Value = Location;
+            param[4] = new SqlParameter("@Extends", SqlDbType.NVarChar);
+            param[4].Value = Extends;
+            param[5] = new SqlParameter("@Notes", SqlDbType.NVarChar);
+            param[5].Value = Notes;
+            param[6] = new SqlParameter("@Doc_id", SqlDbType.NVarChar);
+            param[6].Value = Doc_id;
+            param[7] = new SqlParameter("@id", SqlDbType.Int);
+            param[7].Value = id;
             Dt = DAL.selectdata("Document_update", param);
             DAL.close();
             return Dt;

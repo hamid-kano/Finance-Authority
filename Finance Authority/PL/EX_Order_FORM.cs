@@ -206,10 +206,6 @@ namespace Finance_Authority.PL
             e.Handled = Program.DenyChar(e);
         }
 
-        private void EX_Orders_Body_order_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
 
         private void update_Click(object sender, EventArgs e)
         {

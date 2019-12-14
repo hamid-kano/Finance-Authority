@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Document_exit = new MetroFramework.Controls.MetroButton();
             this.Document_delete = new MetroFramework.Controls.MetroButton();
             this.Document_update = new MetroFramework.Controls.MetroButton();
@@ -42,7 +42,6 @@
             this.Document_Search_All = new MetroFramework.Controls.MetroTextBox();
             this.Document_Name = new MetroFramework.Controls.MetroTextBox();
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
-            this.Document_Type = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.Document_Location = new MetroFramework.Controls.MetroTextBox();
             this.Document_URL = new MetroFramework.Controls.MetroTextBox();
@@ -52,13 +51,14 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.Document_Type = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Document_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // Document_exit
             // 
             this.Document_exit.Highlight = true;
-            this.Document_exit.Location = new System.Drawing.Point(822, 489);
+            this.Document_exit.Location = new System.Drawing.Point(875, 489);
             this.Document_exit.Name = "Document_exit";
             this.Document_exit.Size = new System.Drawing.Size(87, 37);
             this.Document_exit.TabIndex = 12;
@@ -70,7 +70,7 @@
             // 
             this.Document_delete.Enabled = false;
             this.Document_delete.Highlight = true;
-            this.Document_delete.Location = new System.Drawing.Point(710, 489);
+            this.Document_delete.Location = new System.Drawing.Point(763, 489);
             this.Document_delete.Name = "Document_delete";
             this.Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Document_delete.TabIndex = 10;
@@ -82,7 +82,7 @@
             // 
             this.Document_update.Enabled = false;
             this.Document_update.Highlight = true;
-            this.Document_update.Location = new System.Drawing.Point(598, 489);
+            this.Document_update.Location = new System.Drawing.Point(651, 489);
             this.Document_update.Name = "Document_update";
             this.Document_update.Size = new System.Drawing.Size(87, 37);
             this.Document_update.TabIndex = 9;
@@ -94,7 +94,7 @@
             // 
             this.Document_add.Enabled = false;
             this.Document_add.Highlight = true;
-            this.Document_add.Location = new System.Drawing.Point(486, 489);
+            this.Document_add.Location = new System.Drawing.Point(539, 489);
             this.Document_add.Name = "Document_add";
             this.Document_add.Size = new System.Drawing.Size(87, 37);
             this.Document_add.TabIndex = 8;
@@ -105,7 +105,7 @@
             // Document_new
             // 
             this.Document_new.Highlight = true;
-            this.Document_new.Location = new System.Drawing.Point(374, 489);
+            this.Document_new.Location = new System.Drawing.Point(427, 489);
             this.Document_new.Name = "Document_new";
             this.Document_new.Size = new System.Drawing.Size(87, 37);
             this.Document_new.TabIndex = 7;
@@ -123,52 +123,52 @@
             this.Document_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Document_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Document_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Document_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Document_Gridview.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Document_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.Document_Gridview.EnableHeadersVisualStyles = false;
             this.Document_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Document_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Document_Gridview.Location = new System.Drawing.Point(204, 91);
+            this.Document_Gridview.Location = new System.Drawing.Point(289, 91);
             this.Document_Gridview.Name = "Document_Gridview";
             this.Document_Gridview.ReadOnly = true;
             this.Document_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Document_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Document_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Document_Gridview.Size = new System.Drawing.Size(782, 386);
+            this.Document_Gridview.Size = new System.Drawing.Size(697, 386);
             this.Document_Gridview.TabIndex = 50;
             this.Document_Gridview.Click += new System.EventHandler(this.Document_Gridview_Click);
             // 
             // Document_View
             // 
             this.Document_View.Highlight = true;
-            this.Document_View.Location = new System.Drawing.Point(264, 489);
+            this.Document_View.Location = new System.Drawing.Point(150, 108);
             this.Document_View.Name = "Document_View";
             this.Document_View.Size = new System.Drawing.Size(87, 37);
             this.Document_View.TabIndex = 6;
-            this.Document_View.Text = "أستعراض";
+            this.Document_View.Text = "اختيار الملف";
             this.Document_View.UseSelectable = true;
             this.Document_View.Click += new System.EventHandler(this.Document_View_Click);
             // 
@@ -219,7 +219,7 @@
             // 
             // 
             this.Document_Name.CustomButton.Image = null;
-            this.Document_Name.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.Document_Name.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.Document_Name.CustomButton.Name = "";
             this.Document_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -228,7 +228,7 @@
             this.Document_Name.CustomButton.UseSelectable = true;
             this.Document_Name.CustomButton.Visible = false;
             this.Document_Name.Lines = new string[0];
-            this.Document_Name.Location = new System.Drawing.Point(80, 147);
+            this.Document_Name.Location = new System.Drawing.Point(131, 162);
             this.Document_Name.MaxLength = 32767;
             this.Document_Name.Name = "Document_Name";
             this.Document_Name.PasswordChar = '\0';
@@ -237,7 +237,7 @@
             this.Document_Name.SelectionLength = 0;
             this.Document_Name.SelectionStart = 0;
             this.Document_Name.ShortcutsEnabled = true;
-            this.Document_Name.Size = new System.Drawing.Size(117, 23);
+            this.Document_Name.Size = new System.Drawing.Size(121, 23);
             this.Document_Name.TabIndex = 223;
             this.Document_Name.UseSelectable = true;
             this.Document_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -246,46 +246,16 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(1, 147);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(32, 162);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(77, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
             this.Coin_Exc_Sy.Text = "اسم المستند";
             // 
-            // Document_Type
-            // 
-            // 
-            // 
-            // 
-            this.Document_Type.CustomButton.Image = null;
-            this.Document_Type.CustomButton.Location = new System.Drawing.Point(95, 1);
-            this.Document_Type.CustomButton.Name = "";
-            this.Document_Type.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Document_Type.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Document_Type.CustomButton.TabIndex = 1;
-            this.Document_Type.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Document_Type.CustomButton.UseSelectable = true;
-            this.Document_Type.CustomButton.Visible = false;
-            this.Document_Type.Lines = new string[0];
-            this.Document_Type.Location = new System.Drawing.Point(80, 192);
-            this.Document_Type.MaxLength = 32767;
-            this.Document_Type.Name = "Document_Type";
-            this.Document_Type.PasswordChar = '\0';
-            this.Document_Type.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Document_Type.SelectedText = "";
-            this.Document_Type.SelectionLength = 0;
-            this.Document_Type.SelectionStart = 0;
-            this.Document_Type.ShortcutsEnabled = true;
-            this.Document_Type.Size = new System.Drawing.Size(117, 23);
-            this.Document_Type.TabIndex = 225;
-            this.Document_Type.UseSelectable = true;
-            this.Document_Type.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Document_Type.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(5, 196);
+            this.metroLabel1.Location = new System.Drawing.Point(32, 211);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(73, 19);
             this.metroLabel1.TabIndex = 224;
@@ -297,7 +267,7 @@
             // 
             // 
             this.Document_Location.CustomButton.Image = null;
-            this.Document_Location.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.Document_Location.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.Document_Location.CustomButton.Name = "";
             this.Document_Location.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Location.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -306,7 +276,7 @@
             this.Document_Location.CustomButton.UseSelectable = true;
             this.Document_Location.CustomButton.Visible = false;
             this.Document_Location.Lines = new string[0];
-            this.Document_Location.Location = new System.Drawing.Point(80, 282);
+            this.Document_Location.Location = new System.Drawing.Point(131, 345);
             this.Document_Location.MaxLength = 32767;
             this.Document_Location.Name = "Document_Location";
             this.Document_Location.PasswordChar = '\0';
@@ -315,7 +285,7 @@
             this.Document_Location.SelectionLength = 0;
             this.Document_Location.SelectionStart = 0;
             this.Document_Location.ShortcutsEnabled = true;
-            this.Document_Location.Size = new System.Drawing.Size(117, 23);
+            this.Document_Location.Size = new System.Drawing.Size(121, 23);
             this.Document_Location.TabIndex = 227;
             this.Document_Location.UseSelectable = true;
             this.Document_Location.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -327,7 +297,7 @@
             // 
             // 
             this.Document_URL.CustomButton.Image = null;
-            this.Document_URL.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.Document_URL.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.Document_URL.CustomButton.Name = "";
             this.Document_URL.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_URL.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -336,16 +306,17 @@
             this.Document_URL.CustomButton.UseSelectable = true;
             this.Document_URL.CustomButton.Visible = false;
             this.Document_URL.Lines = new string[0];
-            this.Document_URL.Location = new System.Drawing.Point(80, 237);
+            this.Document_URL.Location = new System.Drawing.Point(131, 252);
             this.Document_URL.MaxLength = 32767;
             this.Document_URL.Name = "Document_URL";
             this.Document_URL.PasswordChar = '\0';
+            this.Document_URL.ReadOnly = true;
             this.Document_URL.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Document_URL.SelectedText = "";
             this.Document_URL.SelectionLength = 0;
             this.Document_URL.SelectionStart = 0;
             this.Document_URL.ShortcutsEnabled = true;
-            this.Document_URL.Size = new System.Drawing.Size(117, 23);
+            this.Document_URL.Size = new System.Drawing.Size(121, 23);
             this.Document_URL.TabIndex = 229;
             this.Document_URL.UseSelectable = true;
             this.Document_URL.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -357,7 +328,7 @@
             // 
             // 
             this.Document_Extend.CustomButton.Image = null;
-            this.Document_Extend.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.Document_Extend.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.Document_Extend.CustomButton.Name = "";
             this.Document_Extend.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Extend.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -366,16 +337,17 @@
             this.Document_Extend.CustomButton.UseSelectable = true;
             this.Document_Extend.CustomButton.Visible = false;
             this.Document_Extend.Lines = new string[0];
-            this.Document_Extend.Location = new System.Drawing.Point(81, 327);
+            this.Document_Extend.Location = new System.Drawing.Point(131, 299);
             this.Document_Extend.MaxLength = 32767;
             this.Document_Extend.Name = "Document_Extend";
             this.Document_Extend.PasswordChar = '\0';
+            this.Document_Extend.ReadOnly = true;
             this.Document_Extend.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Document_Extend.SelectedText = "";
             this.Document_Extend.SelectionLength = 0;
             this.Document_Extend.SelectionStart = 0;
             this.Document_Extend.ShortcutsEnabled = true;
-            this.Document_Extend.Size = new System.Drawing.Size(117, 23);
+            this.Document_Extend.Size = new System.Drawing.Size(121, 23);
             this.Document_Extend.TabIndex = 230;
             this.Document_Extend.UseSelectable = true;
             this.Document_Extend.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -387,7 +359,7 @@
             // 
             // 
             this.Document_Notes.CustomButton.Image = null;
-            this.Document_Notes.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.Document_Notes.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.Document_Notes.CustomButton.Name = "";
             this.Document_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -396,7 +368,7 @@
             this.Document_Notes.CustomButton.UseSelectable = true;
             this.Document_Notes.CustomButton.Visible = false;
             this.Document_Notes.Lines = new string[0];
-            this.Document_Notes.Location = new System.Drawing.Point(80, 372);
+            this.Document_Notes.Location = new System.Drawing.Point(131, 387);
             this.Document_Notes.MaxLength = 32767;
             this.Document_Notes.Name = "Document_Notes";
             this.Document_Notes.PasswordChar = '\0';
@@ -405,7 +377,7 @@
             this.Document_Notes.SelectionLength = 0;
             this.Document_Notes.SelectionStart = 0;
             this.Document_Notes.ShortcutsEnabled = true;
-            this.Document_Notes.Size = new System.Drawing.Size(117, 23);
+            this.Document_Notes.Size = new System.Drawing.Size(121, 23);
             this.Document_Notes.TabIndex = 231;
             this.Document_Notes.UseSelectable = true;
             this.Document_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -414,7 +386,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(5, 286);
+            this.metroLabel4.Location = new System.Drawing.Point(36, 349);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(43, 19);
             this.metroLabel4.TabIndex = 232;
@@ -423,16 +395,16 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(8, 331);
+            this.metroLabel5.Location = new System.Drawing.Point(35, 302);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(74, 19);
             this.metroLabel5.TabIndex = 233;
-            this.metroLabel5.Text = "الشرح";
+            this.metroLabel5.Text = "لاحقة الملف";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(9, 241);
+            this.metroLabel6.Location = new System.Drawing.Point(36, 256);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(38, 19);
             this.metroLabel6.TabIndex = 234;
@@ -441,17 +413,49 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(1, 376);
+            this.metroLabel7.Location = new System.Drawing.Point(32, 391);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(66, 19);
             this.metroLabel7.TabIndex = 235;
             this.metroLabel7.Text = "الملاحظات";
+            // 
+            // Document_Type
+            // 
+            // 
+            // 
+            // 
+            this.Document_Type.CustomButton.Image = null;
+            this.Document_Type.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.Document_Type.CustomButton.Name = "";
+            this.Document_Type.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Document_Type.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Document_Type.CustomButton.TabIndex = 1;
+            this.Document_Type.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Document_Type.CustomButton.UseSelectable = true;
+            this.Document_Type.CustomButton.Visible = false;
+            this.Document_Type.Lines = new string[0];
+            this.Document_Type.Location = new System.Drawing.Point(131, 211);
+            this.Document_Type.MaxLength = 32767;
+            this.Document_Type.Name = "Document_Type";
+            this.Document_Type.PasswordChar = '\0';
+            this.Document_Type.ReadOnly = true;
+            this.Document_Type.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Document_Type.SelectedText = "";
+            this.Document_Type.SelectionLength = 0;
+            this.Document_Type.SelectionStart = 0;
+            this.Document_Type.ShortcutsEnabled = true;
+            this.Document_Type.Size = new System.Drawing.Size(121, 23);
+            this.Document_Type.TabIndex = 237;
+            this.Document_Type.UseSelectable = true;
+            this.Document_Type.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Document_Type.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Document_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 536);
+            this.Controls.Add(this.Document_Type);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
@@ -460,7 +464,6 @@
             this.Controls.Add(this.Document_Extend);
             this.Controls.Add(this.Document_URL);
             this.Controls.Add(this.Document_Location);
-            this.Controls.Add(this.Document_Type);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Document_Name);
             this.Controls.Add(this.Coin_Exc_Sy);
@@ -496,7 +499,6 @@
         private MetroFramework.Controls.MetroTextBox Document_Search_All;
         private MetroFramework.Controls.MetroTextBox Document_Name;
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
-        private MetroFramework.Controls.MetroTextBox Document_Type;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox Document_Location;
         private MetroFramework.Controls.MetroTextBox Document_URL;
@@ -506,5 +508,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox Document_Type;
     }
 }

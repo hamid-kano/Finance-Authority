@@ -16,6 +16,9 @@ namespace Finance_Authority.PL
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
         BL.CLS_Leoan_Payments pay_Leo = new BL.CLS_Leoan_Payments();
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.Authority Auth = new BL.Authority();
+        BL.Department Dep = new BL.Department();
         public Leoan_Payments_FORM()
         {
             InitializeComponent();
@@ -25,12 +28,12 @@ namespace Finance_Authority.PL
             Leoan_Payments_CombSerach.ValueMember = "Budget_Id";
             this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
             Leoan_Payments_Gridview.Columns[0].Visible = false;
-            Leoan_Payments_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Leoan_Payments_Comb_Department.DisplayMember = "Department_Name";
-            Leoan_Payments_Comb_Department.ValueMember = "Department_ID";
-            Leoan_Payments_Comb_Budget.DataSource = Coin.Coin_Exchange_CombBudg();
+            Leoan_Payments_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Leoan_Payments_Comb_Budget.DisplayMember = "Date";
             Leoan_Payments_Comb_Budget.ValueMember = "Budget_Id";
+            Leoan_Payments_CombAthuontic.DataSource = Auth.Authority_view();
+            Leoan_Payments_CombAthuontic.DisplayMember = "اسم الهيئة";
+            Leoan_Payments_CombAthuontic.ValueMember = "Authority_ID";
         }
 
         private void Leoan_Payments_Comb_Department_SelectedValueChanged(object sender, EventArgs e)
@@ -157,12 +160,13 @@ namespace Finance_Authority.PL
                 Leoan_Payments_Comb_Employ.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[5].Value.ToString();
                 Leoan_Payments_update.Enabled = true;
                 Leoan_Payments_delete.Enabled = true;
+                Leoan_Payments_add.Enabled = false;
             }
         }
 
         private void Leoan_Payments_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف دفعة القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 pay_Leo.Leoan_Payments_Delete(Program.Leoan_Payments_id);
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
@@ -216,6 +220,41 @@ namespace Finance_Authority.PL
         {
             this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
             Leoan_Payments_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Leoan_Payments_CombAthuontic_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idAthuontic = Convert.ToInt32(Leoan_Payments_CombAthuontic.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Leoan_Payments_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idAthuontic);
+                Leoan_Payments_CombOffice.DisplayMember = "Office_Name";
+                Leoan_Payments_CombOffice.ValueMember = "Office_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        private void Leoan_Payments_CombOffice_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idOffice = Convert.ToInt32(Leoan_Payments_CombOffice.SelectedValue);
+                Leoan_Payments_Comb_Department.DataSource = Dep.Loans_Comb_Department(idOffice);
+                Leoan_Payments_Comb_Department.DisplayMember = "Department_Name";
+                Leoan_Payments_Comb_Department.ValueMember = "Department_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
         }
     }
 }

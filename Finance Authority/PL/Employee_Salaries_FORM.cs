@@ -176,12 +176,13 @@ namespace Finance_Authority.PL
                 Empl_Sala_Comb_Emplyment.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[18].Value.ToString();
                 Employee_Salaries_update.Enabled = true;
                 Employee_Salaries_delete.Enabled = true;
+                Employee_Salaries_add.Enabled = false;
             }
         }
 
         private void Employee_Salaries_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف راتب الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Empl_Sala.Employee_Salaries_Delete(Program.Employee_Salaries_id);
                 this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();

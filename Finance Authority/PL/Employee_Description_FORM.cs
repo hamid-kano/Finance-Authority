@@ -103,7 +103,7 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف صفة الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Empl_Des.Employee_Description_Delete(Program.Employee_Description_id);
                 this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
@@ -134,6 +134,7 @@ namespace Finance_Authority.PL
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
                 Employee_Description_update.Enabled = true;
                 Employee_Description_delete.Enabled = true;
+                Employee_Description_add.Enabled = false;
             }
         }
 
@@ -177,6 +178,11 @@ namespace Finance_Authority.PL
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[8].Visible = false;
+        }
+
+        private void Employee_Description_Salery_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
         }
     }
 }

@@ -30,24 +30,7 @@ namespace Finance_Authority.PL
         }
 
        
-        private void EX_Orders_Cat_dataGrid_Click(object sender, EventArgs e)
-        {
-            if (EX_Orders_Cat_dataGrid.CurrentRow != null)
-            {
-                EX_Orders_Cat_update.Enabled = true;
-                EX_Orders_Cat_delete.Enabled = true;
-               Program.Category_id= Convert.ToInt32(this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[0].Value.ToString());
-                EX_Orders_Cat_text.Text = this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[1].Value.ToString();
-                EX_Orders_Cat_update.Enabled = true;
-                EX_Orders_Cat_delete.Enabled = true;
-            }
-        }    
-        private void EX_Orders_Cat_textsearch_TextChanged(object sender, EventArgs e)
-        {
-            this.EX_Orders_Cat_dataGrid.DataSource =cat.EX_Orders_Cat_Search(EX_Orders_Cat_textsearch.Text);
-            EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
-        }
-
+       
         private void EX_Orders_Cat_new_Click(object sender, EventArgs e)
         {
             EX_Orders_Cat_add.Enabled = true;
@@ -108,7 +91,7 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_Cat_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف صنف طلب صرف المبلغ .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 cat.EX_Orders_Cat_Delete(Program.Category_id);
                 this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
@@ -123,6 +106,26 @@ namespace Finance_Authority.PL
         private void EX_Orders_Cat_exit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void EX_Orders_Cat_textsearch_TextChanged(object sender, EventArgs e)
+        {
+            this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_Search(EX_Orders_Cat_textsearch.Text);
+            EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void EX_Orders_Cat_dataGrid_Click(object sender, EventArgs e)
+        {
+            if (EX_Orders_Cat_dataGrid.CurrentRow != null)
+            {
+                EX_Orders_Cat_update.Enabled = true;
+                EX_Orders_Cat_delete.Enabled = true;
+                Program.Category_id = Convert.ToInt32(this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[0].Value.ToString());
+                EX_Orders_Cat_text.Text = this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[1].Value.ToString();
+                EX_Orders_Cat_update.Enabled = true;
+                EX_Orders_Cat_delete.Enabled = true;
+                EX_Orders_Cat_add.Enabled = false;
+            }
         }
     }
 }

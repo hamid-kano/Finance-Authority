@@ -65,18 +65,45 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
-        public DataTable Department_Cheack(string Department_Name)
+        public DataTable Department_Cheack(string Department_Name , int Office_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@Department_Name", SqlDbType.NVarChar);
+            param[0].Value = Department_Name;
+            param[1] = new SqlParameter("@Office_ID", SqlDbType.Int);
+            param[1].Value = Office_ID;
+            Dt = DAL.selectdata("Department_Cheack", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Department_CombAuthority_Office(int Authority_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Department_Name", SqlDbType.NVarChar);
-            param[0].Value = Department_Name;
-            Dt = DAL.selectdata("Department_Cheack", param);
+            param[0] = new SqlParameter("@Authority_id ", SqlDbType.Int);
+            param[0].Value = Authority_id;
+            Dt = DAL.selectdata("Department_CombAuthority_Office", param);
             DAL.close();
             return Dt;
         }
+        public DataTable Loans_Comb_Department(int Office_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Office_ID ", SqlDbType.Int);
+            param[0].Value = Office_ID;
+            Dt = DAL.selectdata("Loans_Comb_Department", param);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable Department_CombOffice()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

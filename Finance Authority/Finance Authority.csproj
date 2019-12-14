@@ -111,6 +111,12 @@
     <Compile Include="PL\Budget_FORM.Designer.cs">
       <DependentUpon>Budget_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Budget_Now.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Budget_Now.Designer.cs">
+      <DependentUpon>Budget_Now.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Coin_Exchange_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Budget_FORM.resx">
       <DependentUpon>Budget_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Budget_Now.resx">
+      <DependentUpon>Budget_Now.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Coin_Exchange_FORM.resx">
       <DependentUpon>Coin_Exchange_FORM.cs</DependentUpon>

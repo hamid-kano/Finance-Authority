@@ -43,6 +43,7 @@ namespace Finance_Authority.PL
                 Office_CombAuthontic.Text = this.Office_Gridview.CurrentRow.Cells[3].Value.ToString();
                 Office_update.Enabled = true;
                 Office_delete.Enabled = true;
+                Office_add.Enabled = false;
             }
         }
 
@@ -55,7 +56,7 @@ namespace Finance_Authority.PL
                 return;
             }
             DataTable Dt = new DataTable();
-            Dt = Offic.Office_Cheack(Office_Name.Text);
+            Dt = Offic.Office_Cheack(Office_Name.Text , Convert.ToInt32(Office_CombAuthontic.SelectedValue));
             if (Dt.Rows.Count == 0 || Office_Name.Text== this.Office_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Offic.Office_update(Program.Office_ID, Office_Name.Text, Office_Notes.Text, Convert.ToInt32(Office_CombAuthontic.SelectedValue));
@@ -78,7 +79,7 @@ namespace Finance_Authority.PL
 
         private void Office_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف المكتب .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Offic.Office_Delete(Program.Office_ID);
                 this.Office_Gridview.DataSource = Offic.Office_View();
@@ -100,7 +101,7 @@ namespace Finance_Authority.PL
                 return;
             }
             DataTable Dt = new DataTable();
-            Dt = Offic.Office_Cheack(Office_Name.Text);
+            Dt = Offic.Office_Cheack(Office_Name.Text , Convert.ToInt32(Office_CombAuthontic.SelectedValue));
             if (Dt.Rows.Count == 0)
             {
                 Offic.Office_add(Office_Name.Text, Office_Notes.Text, Convert.ToInt32(Office_CombAuthontic.SelectedValue));

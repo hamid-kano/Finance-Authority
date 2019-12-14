@@ -16,14 +16,14 @@ namespace Finance_Authority.PL
         BL.CLS_Reciver_Document Reciv = new BL.CLS_Reciver_Document();
         Finance_Authority frm = Finance_Authority.getMainForm;
         int indexRowDeleted_or_Updated;
-
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
         public Reciver_Document_FORM()
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
             this.Reciver_Document_dataGrid.DataSource= Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
-            Reciver_Document_Comb_Date.DataSource = Coin.Coin_Exchange_CombBudg();
+            Reciver_Document_Comb_Date.DataSource = Bud.Budget_combo_Last_Budget();
             Reciver_Document_Comb_Date.DisplayMember = "Date";
             Reciver_Document_Comb_Date.ValueMember = "Budget_Id";
             Reciver_Document_Comb_Cate.DataSource = Reciv.Reciver_Document_Comb_Cate();
@@ -163,12 +163,13 @@ namespace Finance_Authority.PL
                 Reciver_Document_Comb_Cate.Text= this.Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 Reciver_Document_update.Enabled = true;
                 Reciver_Document_delete.Enabled = true;
+                Reciver_Document_add.Enabled = false;
             }
         }
 
         private void Reciver_Document_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف سند الاستلام .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete","r", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());

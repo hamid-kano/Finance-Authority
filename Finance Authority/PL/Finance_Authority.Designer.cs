@@ -93,6 +93,7 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.update_budget = new System.Windows.Forms.Timer(this.components);
+            this.Budget_Now = new MetroFramework.Controls.MetroTile();
             this.Tab_Main.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
@@ -273,6 +274,7 @@
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.Budget_Now);
             this.metroTabPage4.Controls.Add(this.EX_Order_Button);
             this.metroTabPage4.Controls.Add(this.EX_Orders_Cat_Button);
             this.metroTabPage4.Controls.Add(this.Budget_Button);
@@ -1018,6 +1020,20 @@
             // 
             this.update_budget.Interval = 1000;
             // 
+            // Budget_Now
+            // 
+            this.Budget_Now.ActiveControl = null;
+            this.Budget_Now.Location = new System.Drawing.Point(106, 19);
+            this.Budget_Now.Name = "Budget_Now";
+            this.Budget_Now.Size = new System.Drawing.Size(143, 49);
+            this.Budget_Now.TabIndex = 12;
+            this.Budget_Now.Text = "الميزانية الحالية";
+            this.Budget_Now.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Budget_Now.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Budget_Now.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Budget_Now.UseSelectable = true;
+            this.Budget_Now.Click += new System.EventHandler(this.Budget_Now_Click);
+            // 
             // Finance_Authority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1138,5 +1154,6 @@
         public MetroFramework.Controls.MetroLabel SY_Now_Label;
         public MetroFramework.Controls.MetroPanel metroPanel3;
         private System.Windows.Forms.Timer update_budget;
+        private MetroFramework.Controls.MetroTile Budget_Now;
     }
 }

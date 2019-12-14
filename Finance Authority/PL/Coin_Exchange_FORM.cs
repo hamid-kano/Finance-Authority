@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Coin_Exchange_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
         public Coin_Exchange_FORM()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Finance_Authority.PL
             Coin_Exchange_CombSerach.ValueMember = "Budget_Id";
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
-            Coin_Exchange_CombBudge.DataSource = Coin.Coin_Exchange_CombBudg();
+            Coin_Exchange_CombBudge.DataSource = Bud.Budget_combo_Last_Budget();
             Coin_Exchange_CombBudge.DisplayMember = "Date";
             Coin_Exchange_CombBudge.ValueMember = "Budget_Id";
 
@@ -59,6 +60,7 @@ namespace Finance_Authority.PL
                 Coin_Exchange_CombBudge.Text = this.Coin_Exchange_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Coin_Exchange_update.Enabled = true;
                 Coin_Exchange_delete.Enabled = true;
+                Coin_Exchange_add.Enabled = false;
             }
         }
 
@@ -127,7 +129,7 @@ namespace Finance_Authority.PL
 
         private void Coin_Exchange_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف تحويل العملة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Coin.Coin_Exchange_Delete(Program.Coin_Exchange_id);
                 this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();

@@ -29,7 +29,15 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-
+        public DataTable Budget_combo_Last_Budget()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Budget_combo_Last_Budget", null);
+            DAL.close();
+            return Dt;
+        }
         // مجموع الواردات
         public DataTable Budget_Last_Sum_Reciver()
         {

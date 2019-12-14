@@ -60,6 +60,10 @@
             this.Loans_Search_All = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.update = new MetroFramework.Controls.MetroButton();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.Loans_CombAthuontic = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.Loans_CombOffice = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
@@ -177,7 +181,7 @@
             // Loans_Date
             // 
             this.Loans_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Loans_Date.Location = new System.Drawing.Point(127, 184);
+            this.Loans_Date.Location = new System.Drawing.Point(126, 164);
             this.Loans_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Loans_Date.Name = "Loans_Date";
             this.Loans_Date.Size = new System.Drawing.Size(163, 29);
@@ -186,7 +190,7 @@
             // Loans_Date_Start
             // 
             this.Loans_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Loans_Date_Start.Location = new System.Drawing.Point(127, 230);
+            this.Loans_Date_Start.Location = new System.Drawing.Point(127, 209);
             this.Loans_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
             this.Loans_Date_Start.Name = "Loans_Date_Start";
             this.Loans_Date_Start.Size = new System.Drawing.Size(163, 29);
@@ -196,7 +200,7 @@
             // 
             this.Loans_Comb_Budget.FormattingEnabled = true;
             this.Loans_Comb_Budget.ItemHeight = 23;
-            this.Loans_Comb_Budget.Location = new System.Drawing.Point(127, 279);
+            this.Loans_Comb_Budget.Location = new System.Drawing.Point(126, 254);
             this.Loans_Comb_Budget.Name = "Loans_Comb_Budget";
             this.Loans_Comb_Budget.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Budget.TabIndex = 4;
@@ -206,7 +210,7 @@
             // 
             this.Loans_Comb_Department.FormattingEnabled = true;
             this.Loans_Comb_Department.ItemHeight = 23;
-            this.Loans_Comb_Department.Location = new System.Drawing.Point(127, 331);
+            this.Loans_Comb_Department.Location = new System.Drawing.Point(127, 389);
             this.Loans_Comb_Department.Name = "Loans_Comb_Department";
             this.Loans_Comb_Department.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Department.TabIndex = 5;
@@ -217,7 +221,7 @@
             // 
             this.Loans_Comb_Employ.FormattingEnabled = true;
             this.Loans_Comb_Employ.ItemHeight = 23;
-            this.Loans_Comb_Employ.Location = new System.Drawing.Point(127, 378);
+            this.Loans_Comb_Employ.Location = new System.Drawing.Point(127, 434);
             this.Loans_Comb_Employ.Name = "Loans_Comb_Employ";
             this.Loans_Comb_Employ.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Employ.TabIndex = 6;
@@ -258,7 +262,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 184);
+            this.metroLabel6.Location = new System.Drawing.Point(10, 183);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(34, 19);
             this.metroLabel6.TabIndex = 230;
@@ -285,7 +289,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(0, 289);
+            this.metroLabel7.Location = new System.Drawing.Point(0, 264);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(78, 19);
             this.metroLabel7.TabIndex = 233;
@@ -294,7 +298,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(2, 339);
+            this.metroLabel5.Location = new System.Drawing.Point(0, 396);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(48, 19);
             this.metroLabel5.TabIndex = 232;
@@ -303,7 +307,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(2, 389);
+            this.metroLabel4.Location = new System.Drawing.Point(0, 446);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(60, 19);
             this.metroLabel4.TabIndex = 231;
@@ -312,7 +316,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(2, 240);
+            this.metroLabel1.Location = new System.Drawing.Point(2, 230);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(108, 19);
             this.metroLabel1.TabIndex = 234;
@@ -333,7 +337,7 @@
             this.Loans_Notes.CustomButton.UseSelectable = true;
             this.Loans_Notes.CustomButton.Visible = false;
             this.Loans_Notes.Lines = new string[0];
-            this.Loans_Notes.Location = new System.Drawing.Point(127, 135);
+            this.Loans_Notes.Location = new System.Drawing.Point(128, 125);
             this.Loans_Notes.MaxLength = 32767;
             this.Loans_Notes.Name = "Loans_Notes";
             this.Loans_Notes.PasswordChar = '\0';
@@ -430,11 +434,57 @@
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(2, 353);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel9.TabIndex = 269;
+            this.metroLabel9.Text = "المكتب";
+            // 
+            // Loans_CombAthuontic
+            // 
+            this.Loans_CombAthuontic.FormattingEnabled = true;
+            this.Loans_CombAthuontic.ItemHeight = 23;
+            this.Loans_CombAthuontic.Location = new System.Drawing.Point(126, 299);
+            this.Loans_CombAthuontic.Name = "Loans_CombAthuontic";
+            this.Loans_CombAthuontic.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Loans_CombAthuontic.Size = new System.Drawing.Size(163, 29);
+            this.Loans_CombAthuontic.TabIndex = 268;
+            this.Loans_CombAthuontic.UseSelectable = true;
+            this.Loans_CombAthuontic.SelectedValueChanged += new System.EventHandler(this.Loans_CombAthuontic_SelectedValueChanged);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(-1, 309);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel10.TabIndex = 267;
+            this.metroLabel10.Text = "الهيئات";
+            // 
+            // Loans_CombOffice
+            // 
+            this.Loans_CombOffice.FormattingEnabled = true;
+            this.Loans_CombOffice.ItemHeight = 23;
+            this.Loans_CombOffice.Location = new System.Drawing.Point(126, 344);
+            this.Loans_CombOffice.Name = "Loans_CombOffice";
+            this.Loans_CombOffice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Loans_CombOffice.Size = new System.Drawing.Size(163, 29);
+            this.Loans_CombOffice.TabIndex = 266;
+            this.Loans_CombOffice.UseSelectable = true;
+            this.Loans_CombOffice.SelectedValueChanged += new System.EventHandler(this.Loans_CombOffice_SelectedValueChanged);
+            // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 539);
+            this.ClientSize = new System.Drawing.Size(965, 539);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.Loans_CombAthuontic);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.Loans_CombOffice);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.Loans_Search_All);
@@ -502,5 +552,9 @@
         private MetroFramework.Controls.MetroTextBox Loans_Search_All;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroButton update;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroComboBox Loans_CombAthuontic;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroComboBox Loans_CombOffice;
     }
 }

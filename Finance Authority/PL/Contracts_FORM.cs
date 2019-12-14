@@ -110,6 +110,7 @@ namespace Finance_Authority.PL
                 //Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
                 Contracts_update.Enabled = true;
                 Contracts_delete.Enabled = true;
+                Contracts_add.Enabled = false;
             }
         }
 
@@ -138,7 +139,7 @@ namespace Finance_Authority.PL
 
         private void Contracts_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف العقد .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 cont.Contracts_Delete(Program.Contracts_id);
                 this.Contracts_Gridview.DataSource = cont.Contracts_View();

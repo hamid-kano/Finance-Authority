@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Department_exit = new MetroFramework.Controls.MetroButton();
             this.Department_delete = new MetroFramework.Controls.MetroButton();
             this.Department_update = new MetroFramework.Controls.MetroButton();
@@ -45,6 +45,8 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.Department_CombAuthority = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Department_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,48 +118,48 @@
             this.Department_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Department_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Department_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Department_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Department_Gridview.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Department_Gridview.DefaultCellStyle = dataGridViewCellStyle8;
             this.Department_Gridview.EnableHeadersVisualStyles = false;
             this.Department_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Department_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Department_Gridview.Location = new System.Drawing.Point(262, 80);
+            this.Department_Gridview.Location = new System.Drawing.Point(247, 80);
             this.Department_Gridview.Name = "Department_Gridview";
             this.Department_Gridview.ReadOnly = true;
             this.Department_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Department_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Department_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Department_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Department_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Department_Gridview.Size = new System.Drawing.Size(528, 284);
+            this.Department_Gridview.Size = new System.Drawing.Size(543, 284);
             this.Department_Gridview.TabIndex = 66;
             this.Department_Gridview.Click += new System.EventHandler(this.Department_Gridview_Click);
             // 
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(9, 111);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(9, 256);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(68, 19);
             this.Coin_Exc_Sy.TabIndex = 220;
@@ -209,7 +211,7 @@
             this.Department_Name.CustomButton.UseSelectable = true;
             this.Department_Name.CustomButton.Visible = false;
             this.Department_Name.Lines = new string[0];
-            this.Department_Name.Location = new System.Drawing.Point(93, 111);
+            this.Department_Name.Location = new System.Drawing.Point(78, 256);
             this.Department_Name.MaxLength = 32767;
             this.Department_Name.Name = "Department_Name";
             this.Department_Name.PasswordChar = '\0';
@@ -239,7 +241,7 @@
             this.Department_Notes.CustomButton.UseSelectable = true;
             this.Department_Notes.CustomButton.Visible = false;
             this.Department_Notes.Lines = new string[0];
-            this.Department_Notes.Location = new System.Drawing.Point(93, 171);
+            this.Department_Notes.Location = new System.Drawing.Point(78, 316);
             this.Department_Notes.MaxLength = 32767;
             this.Department_Notes.Name = "Department_Notes";
             this.Department_Notes.PasswordChar = '\0';
@@ -258,7 +260,7 @@
             // 
             this.Department_CombOffice.FormattingEnabled = true;
             this.Department_CombOffice.ItemHeight = 23;
-            this.Department_CombOffice.Location = new System.Drawing.Point(93, 222);
+            this.Department_CombOffice.Location = new System.Drawing.Point(78, 190);
             this.Department_CombOffice.Name = "Department_CombOffice";
             this.Department_CombOffice.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Department_CombOffice.Size = new System.Drawing.Size(163, 29);
@@ -268,16 +270,16 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(9, 232);
+            this.metroLabel1.Location = new System.Drawing.Point(12, 134);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(45, 19);
             this.metroLabel1.TabIndex = 224;
-            this.metroLabel1.Text = "المكتب";
+            this.metroLabel1.Text = "الهيئات";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(9, 175);
+            this.metroLabel2.Location = new System.Drawing.Point(9, 320);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
             this.metroLabel2.TabIndex = 225;
@@ -292,11 +294,34 @@
             this.metroLabel3.TabIndex = 226;
             this.metroLabel3.Text = "البحث";
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(9, 200);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel4.TabIndex = 228;
+            this.metroLabel4.Text = "المكتب";
+            // 
+            // Department_CombAuthority
+            // 
+            this.Department_CombAuthority.FormattingEnabled = true;
+            this.Department_CombAuthority.ItemHeight = 23;
+            this.Department_CombAuthority.Location = new System.Drawing.Point(78, 124);
+            this.Department_CombAuthority.Name = "Department_CombAuthority";
+            this.Department_CombAuthority.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Department_CombAuthority.Size = new System.Drawing.Size(163, 29);
+            this.Department_CombAuthority.TabIndex = 227;
+            this.Department_CombAuthority.UseSelectable = true;
+            this.Department_CombAuthority.SelectedValueChanged += new System.EventHandler(this.Department_CombAuthority_SelectedValueChanged);
+            // 
             // Department_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 421);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.Department_CombAuthority);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -315,7 +340,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الاقسام";
-          
             ((System.ComponentModel.ISupportInitialize)(this.Department_Gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,5 +361,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroComboBox Department_CombAuthority;
     }
 }

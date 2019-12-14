@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         BL.CLS_Reciver_Document Reciv = new BL.CLS_Reciver_Document();
         BL.CLS_Payment_Document pay = new BL.CLS_Payment_Document();
         Finance_Authority frm = Finance_Authority.getMainForm;
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -23,9 +24,10 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
-            Payment_Document_Comb_Date.DataSource = Coin.Coin_Exchange_CombBudg();
+            Payment_Document_Comb_Date.DataSource = Bud.Budget_combo_Last_Budget();
             Payment_Document_Comb_Date.DisplayMember = "Date";
             Payment_Document_Comb_Date.ValueMember = "Budget_Id";
+            
             Payment_Document_Comb_Cate.DataSource = Reciv.Reciver_Document_Comb_Cate();
             Payment_Document_Comb_Cate.DisplayMember = "Document_Type";
             Payment_Document_Comb_Cate.ValueMember = "Category_id";
@@ -70,6 +72,7 @@ namespace Finance_Authority.PL
                 Payment_Document_Comb_Cate.Text = this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString();
                 Payment_Document_update.Enabled = true;
                 Payment_Document_delete.Enabled = true;
+                Payment_Document_add.Enabled = false;
             }
         }
 
@@ -188,7 +191,7 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف سند الدفع .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete", "p", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());

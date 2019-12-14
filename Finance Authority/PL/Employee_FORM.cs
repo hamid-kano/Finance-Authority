@@ -280,12 +280,13 @@ namespace Finance_Authority.PL
                 Employee_Pr_Service_Years.Text = this.Employee_dataGrid.CurrentRow.Cells[15].Value.ToString();
                 Employee_update.Enabled = true;
                 Employee_delete.Enabled = true;
+                Employee_add.Enabled = false;
             }
         }
 
         private void Employee_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Emp.Employee_Delete(Program.Employee_id);
                 this.Employee_dataGrid.DataSource = Emp.Employee_View();

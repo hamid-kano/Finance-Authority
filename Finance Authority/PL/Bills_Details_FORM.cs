@@ -84,6 +84,7 @@ namespace Finance_Authority.PL
             {
                 Bills_update.Enabled = true;
                 Bills_delete.Enabled = true;
+                Bills_add.Enabled = false;
             }
         }
 
@@ -137,7 +138,7 @@ namespace Finance_Authority.PL
 
         private void Bills_delete_Click(object sender, EventArgs e)
         {
-            if (Program.Delete_Confirm_Message() == DialogResult.OK)
+            if (MessageBox.Show("هل تريد حذف تفاصيل الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Bill.Bills_Details_Delete(_Bill_ID);
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);

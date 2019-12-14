@@ -65,14 +65,16 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
-        public DataTable Office_Cheack(string Office_Name)
+        public DataTable Office_Cheack(string Office_Name , int Authontic_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
-            SqlParameter[] param = new SqlParameter[1];
+            SqlParameter[] param = new SqlParameter[2];
             param[0] = new SqlParameter("@Office_Name", SqlDbType.NVarChar);
             param[0].Value = Office_Name;
+            param[1] = new SqlParameter("@Authontic_id", SqlDbType.Int);
+            param[1].Value = Authontic_id;
             Dt = DAL.selectdata("Office_Cheack", param);
             DAL.close();
             return Dt;

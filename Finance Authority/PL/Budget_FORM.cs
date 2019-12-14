@@ -77,6 +77,7 @@ namespace Finance_Authority.PL
                 Budget_Notes.Text = this.Budget_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 Budget_update.Enabled = true;
                 Budget_delete.Enabled = true;
+                Budget_add.Enabled = false;
             }
         }
 

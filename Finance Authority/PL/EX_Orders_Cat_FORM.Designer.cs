@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EX_Orders_Cat_dataGrid = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EX_Orders_Cat_textsearch = new MetroFramework.Controls.MetroTextBox();
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.EX_Orders_Cat_text = new MetroFramework.Controls.MetroTextBox();
@@ -38,25 +40,9 @@
             this.EX_Orders_Cat_update = new MetroFramework.Controls.MetroButton();
             this.EX_Orders_Cat_add = new MetroFramework.Controls.MetroButton();
             this.EX_Orders_Cat_new = new MetroFramework.Controls.MetroButton();
+            this.EX_Orders_Cat_dataGrid = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.EX_Orders_Cat_dataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // EX_Orders_Cat_dataGrid
-            // 
-            this.EX_Orders_Cat_dataGrid.AllowUserToAddRows = false;
-            this.EX_Orders_Cat_dataGrid.AllowUserToDeleteRows = false;
-            this.EX_Orders_Cat_dataGrid.AllowUserToResizeColumns = false;
-            this.EX_Orders_Cat_dataGrid.AllowUserToResizeRows = false;
-            this.EX_Orders_Cat_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EX_Orders_Cat_dataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EX_Orders_Cat_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(13, 99);
-            this.EX_Orders_Cat_dataGrid.Name = "EX_Orders_Cat_dataGrid";
-            this.EX_Orders_Cat_dataGrid.ReadOnly = true;
-            this.EX_Orders_Cat_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(607, 237);
-            this.EX_Orders_Cat_dataGrid.TabIndex = 0;
-            this.EX_Orders_Cat_dataGrid.Click += new System.EventHandler(this.EX_Orders_Cat_dataGrid_Click);
             // 
             // EX_Orders_Cat_textsearch
             // 
@@ -87,6 +73,7 @@
             this.EX_Orders_Cat_textsearch.UseSelectable = true;
             this.EX_Orders_Cat_textsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_Cat_textsearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.EX_Orders_Cat_textsearch.TextChanged += new System.EventHandler(this.EX_Orders_Cat_textsearch_TextChanged);
             // 
             // Coin_Exc_Sy
             // 
@@ -112,7 +99,7 @@
             this.EX_Orders_Cat_text.CustomButton.UseSelectable = true;
             this.EX_Orders_Cat_text.CustomButton.Visible = false;
             this.EX_Orders_Cat_text.Lines = new string[0];
-            this.EX_Orders_Cat_text.Location = new System.Drawing.Point(203, 351);
+            this.EX_Orders_Cat_text.Location = new System.Drawing.Point(156, 351);
             this.EX_Orders_Cat_text.MaxLength = 32767;
             this.EX_Orders_Cat_text.Name = "EX_Orders_Cat_text";
             this.EX_Orders_Cat_text.PasswordChar = '\0';
@@ -130,7 +117,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(143, 355);
+            this.metroLabel1.Location = new System.Drawing.Point(102, 355);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(47, 19);
             this.metroLabel1.TabIndex = 225;
@@ -194,11 +181,60 @@
             this.EX_Orders_Cat_new.UseSelectable = true;
             this.EX_Orders_Cat_new.Click += new System.EventHandler(this.EX_Orders_Cat_new_Click);
             // 
+            // EX_Orders_Cat_dataGrid
+            // 
+            this.EX_Orders_Cat_dataGrid.AllowUserToAddRows = false;
+            this.EX_Orders_Cat_dataGrid.AllowUserToDeleteRows = false;
+            this.EX_Orders_Cat_dataGrid.AllowUserToResizeRows = false;
+            this.EX_Orders_Cat_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EX_Orders_Cat_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EX_Orders_Cat_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.EX_Orders_Cat_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.EX_Orders_Cat_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_Cat_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.EX_Orders_Cat_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EX_Orders_Cat_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.EX_Orders_Cat_dataGrid.EnableHeadersVisualStyles = false;
+            this.EX_Orders_Cat_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EX_Orders_Cat_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(12, 88);
+            this.EX_Orders_Cat_dataGrid.Name = "EX_Orders_Cat_dataGrid";
+            this.EX_Orders_Cat_dataGrid.ReadOnly = true;
+            this.EX_Orders_Cat_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_Cat_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.EX_Orders_Cat_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.EX_Orders_Cat_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(623, 257);
+            this.EX_Orders_Cat_dataGrid.TabIndex = 231;
+            this.EX_Orders_Cat_dataGrid.Click += new System.EventHandler(this.EX_Orders_Cat_dataGrid_Click);
+            // 
             // EX_Orders_Cat_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 450);
+            this.Controls.Add(this.EX_Orders_Cat_dataGrid);
             this.Controls.Add(this.EX_Orders_Cat_exit);
             this.Controls.Add(this.EX_Orders_Cat_delete);
             this.Controls.Add(this.EX_Orders_Cat_update);
@@ -208,7 +244,6 @@
             this.Controls.Add(this.EX_Orders_Cat_text);
             this.Controls.Add(this.EX_Orders_Cat_textsearch);
             this.Controls.Add(this.Coin_Exc_Sy);
-            this.Controls.Add(this.EX_Orders_Cat_dataGrid);
             this.Name = "EX_Orders_Cat_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -220,7 +255,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView EX_Orders_Cat_dataGrid;
         private MetroFramework.Controls.MetroTextBox EX_Orders_Cat_textsearch;
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
         private MetroFramework.Controls.MetroTextBox EX_Orders_Cat_text;
@@ -230,5 +264,6 @@
         private MetroFramework.Controls.MetroButton EX_Orders_Cat_update;
         private MetroFramework.Controls.MetroButton EX_Orders_Cat_add;
         private MetroFramework.Controls.MetroButton EX_Orders_Cat_new;
+        private MetroFramework.Controls.MetroGrid EX_Orders_Cat_dataGrid;
     }
 }

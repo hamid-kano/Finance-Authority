@@ -73,6 +73,7 @@ namespace Finance_Authority.PL
                 Authority_Notes.Text = this.Authority_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Authority_update.Enabled = true;
                 Authority_delete.Enabled = true;
+                Authority_add.Enabled = false;
             }
         }
 
@@ -108,7 +109,7 @@ namespace Finance_Authority.PL
 
         private void Authority_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف الهيئة .أذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Auth.Authority_Delete(Program.Authority_ID);
                 this.Authority_Gridview.DataSource = Auth.Authority_view();

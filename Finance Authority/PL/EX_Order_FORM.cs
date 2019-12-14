@@ -89,6 +89,7 @@ namespace Finance_Authority.PL
                 EX_Orders_update.Enabled = true;
                 EX_Orders_delete.Enabled = true;
                 EX_Orders_add.Enabled = false;
+                EX_Orders_add.Enabled = false;
             }
         }
 
@@ -141,7 +142,7 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف طلب صرف مبلغ .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 order.Exchange_Order_Delete(Program.Exchange_Order_id);
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();

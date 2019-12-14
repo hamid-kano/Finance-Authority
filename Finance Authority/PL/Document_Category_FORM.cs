@@ -94,13 +94,14 @@ namespace Finance_Authority.PL
                 Document_Category_Name.Text = this.Document_Category_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Document_Category_update.Enabled = true;
                 Document_Category_delete.Enabled = true;
+                Document_Category_add.Enabled = false;
             }
         }
 
         private void Document_Category_delete_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف صفة السند .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Doc.Document_Category_Delete(Program.Category_id_id);
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();

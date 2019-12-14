@@ -73,6 +73,7 @@ namespace Finance_Authority.PL
                 Role_Functional_Notes.Text = this.Role_Functional_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Role_Functional_update.Enabled = true;
                 Role_Functional_delete.Enabled = true;
+                Role_Functional_add.Enabled = false;
             }
         }
 
@@ -108,7 +109,7 @@ namespace Finance_Authority.PL
 
         private void Role_Functional_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف دور الوظيفي .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Role.Role_Functional_Delete(Program.Role_Functional_id);
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();

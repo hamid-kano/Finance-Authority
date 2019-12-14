@@ -399,6 +399,7 @@
             this.Employee_Description_Salery.UseSelectable = true;
             this.Employee_Description_Salery.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Employee_Description_Salery.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Employee_Description_Salery.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Employee_Description_Salery_KeyPress);
             // 
             // metroLabel1
             // 

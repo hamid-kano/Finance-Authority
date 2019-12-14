@@ -77,8 +77,8 @@ namespace Finance_Authority.PL
         private void Bills_delete_Click(object sender, EventArgs e)
         {
             if (Bills_dataGrid.CurrentRow != null)
-            if (Program.Delete_Confirm_Message() == DialogResult.OK)
-            {
+                if (MessageBox.Show("هل تريد حذف الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
                 bill_details.Bills_Details_Delete(Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value));
                 Bills_dataGrid.DataSource = bill.Bills_View();
                 this.Bills_dataGrid.Columns[0].Visible = false;

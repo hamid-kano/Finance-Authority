@@ -109,12 +109,13 @@ namespace Finance_Authority.PL
                 Document_Notes.Text = this.Document_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Document_update.Enabled = true;
                 Document_delete.Enabled = true;
+                Document_add.Enabled = false;
             }
         }
 
         private void Document_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف الوثيقة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Doc.Document_Delete(Program.Document_id);
                 this.Document_Gridview.DataSource = Doc.Document_View();

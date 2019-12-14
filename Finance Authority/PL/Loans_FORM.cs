@@ -16,6 +16,9 @@ namespace Finance_Authority.PL
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Loan Loa = new BL.CLS_Loan();
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.Authority Auth = new BL.Authority();
+        BL.Department Dep = new BL.Department();
         public Loans_FORM()
         {
             InitializeComponent();
@@ -25,12 +28,13 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
-            Loans_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Loans_Comb_Department.DisplayMember = "Department_Name";
-            Loans_Comb_Department.ValueMember = "Department_ID";
-            Loans_Comb_Budget.DataSource = Coin.Coin_Exchange_CombBudg();
+            
+            Loans_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Loans_Comb_Budget.DisplayMember = "Date";
             Loans_Comb_Budget.ValueMember = "Budget_Id";
+            Loans_CombAthuontic.DataSource = Auth.Authority_view();
+            Loans_CombAthuontic.DisplayMember = "اسم الهيئة";
+            Loans_CombAthuontic.ValueMember = "Authority_ID";
         }
 
       
@@ -105,6 +109,7 @@ namespace Finance_Authority.PL
                 Loans_Comb_Employ.Text = this.Loans_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Loans_update.Enabled = true;
                 Loans_delete.Enabled = true;
+                Loans_add.Enabled = false;
             }
         }
 
@@ -144,7 +149,7 @@ namespace Finance_Authority.PL
 
         private void Loans_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Loa.Loans_Delete(Program.Loan_id);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
@@ -199,6 +204,40 @@ namespace Finance_Authority.PL
         {
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
+        }
+        private void Loans_CombAthuontic_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idAthuontic = Convert.ToInt32(Loans_CombAthuontic.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Loans_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idAthuontic);
+                Loans_CombOffice.DisplayMember = "Office_Name";
+                Loans_CombOffice.ValueMember = "Office_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
+
+        private void Loans_CombOffice_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idOffice = Convert.ToInt32(Loans_CombOffice.SelectedValue);
+                Loans_Comb_Department.DataSource = Dep.Loans_Comb_Department(idOffice);
+                Loans_Comb_Department.DisplayMember = "Department_Name";
+                Loans_Comb_Department.ValueMember = "Department_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
         }
     }
 }

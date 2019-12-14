@@ -14,13 +14,14 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
         BL.Department Dep = new BL.Department();
+        BL.CLS_Budget Bud = new BL.CLS_Budget();
         public Emission_Salaries_FORM()
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
-            Emission_Salaries_Comb_Budget.DataSource = Emiss.Emission_Salaries_Comb_Budget();
+            Emission_Salaries_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Emission_Salaries_Comb_Budget.DisplayMember = "Date";
             Emission_Salaries_Comb_Budget.ValueMember = "Budget_Id";
             Emission_Salaries_Name_office.DataSource = Dep.Department_CombOffice();
@@ -69,12 +70,13 @@ namespace Finance_Authority.PL
                 Emission_Salaries_Comb_Budget.Text = this.Emission_Salaries_dataGrid.CurrentRow.Cells[3].Value.ToString();
                 Emission_Salaries_update.Enabled = true;
                 Emission_Salaries_delete.Enabled = true;
+                Emission_Salaries_add.Enabled = false;
             }
         }
 
         private void Emission_Salaries_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف اصدار الراتب .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Emiss.Emission_Salaries_Delete(Program.Emission_Salaries_id);
                 this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();

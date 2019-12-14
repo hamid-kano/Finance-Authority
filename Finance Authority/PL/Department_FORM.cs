@@ -13,15 +13,19 @@ namespace Finance_Authority.PL
     public partial class Department_FORM : MetroFramework.Forms.MetroForm
     {
         BL.Department Dep = new BL.Department();
+        BL.Authority Auth = new BL.Authority();
         public Department_FORM()
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
             this.Department_Gridview.DataSource = Dep.Department_View();
             this.Department_Gridview.Columns[0].Visible = false;
-            Department_CombOffice.DataSource = Dep.Department_CombOffice();
-            Department_CombOffice.DisplayMember = "Office_Name";
-            Department_CombOffice.ValueMember = "Office_ID";
+            Department_CombAuthority.DataSource = Auth.Authority_view();
+            Department_CombAuthority.DisplayMember = "اسم الهيئة";
+            Department_CombAuthority.ValueMember = "Authority_ID";
+            //Department_CombOffice.DataSource = Dep.Department_CombOffice();
+            //Department_CombOffice.DisplayMember = "Office_Name";
+            //Department_CombOffice.ValueMember = "Office_ID";
         }
 
         private void Department_new_Click(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace Finance_Authority.PL
                 return;
             }
             DataTable Dt = new DataTable();
-            Dt = Dep.Department_Cheack(Department_Name.Text);
+            Dt = Dep.Department_Cheack(Department_Name.Text , Convert.ToInt32(Department_CombOffice.SelectedValue));
             if (Dt.Rows.Count == 0)
             {
                 Dep.Department_add(Department_Name.Text, Department_Notes.Text, Convert.ToInt32(Department_CombOffice.SelectedValue));
@@ -76,7 +80,7 @@ namespace Finance_Authority.PL
                 return;
             }
             DataTable Dt = new DataTable();
-            Dt = Dep.Department_Cheack(Department_Name.Text);
+            Dt = Dep.Department_Cheack(Department_Name.Text , Convert.ToInt32(Department_CombOffice.SelectedValue));
             if (Dt.Rows.Count == 0 || Department_Name.Text == this.Department_Gridview.CurrentRow.Cells[1].Value.ToString())
             {
                 Dep.Department_update(Convert.ToInt32(Department_CombOffice.SelectedValue), Department_Name.Text, Department_Notes.Text, Program.Department_ID);
@@ -107,12 +111,13 @@ namespace Finance_Authority.PL
                 Department_CombOffice.Text = this.Department_Gridview.CurrentRow.Cells[3].Value.ToString();
                 Department_update.Enabled = true;
                 Department_delete.Enabled = true;
+                Department_add.Enabled = false;
             }
         }
 
         private void Department_delete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("هل تريد الحذف؟؟  ", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("هل تريد حذف القسم .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Dep.Department_Delete(Program.Department_ID);
                 this.Department_Gridview.DataSource = Dep.Department_View();
@@ -132,6 +137,22 @@ namespace Finance_Authority.PL
             this.Department_Gridview.Columns[0].Visible = false;
         }
 
-        
+        private void Department_CombAuthority_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idDepartment = Convert.ToInt32(Department_CombAuthority.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Department_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idDepartment);
+                Department_CombOffice.DisplayMember = "Office_Name";
+                Department_CombOffice.ValueMember = "Office_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+        }
     }
 }

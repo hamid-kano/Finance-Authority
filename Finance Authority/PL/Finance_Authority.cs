@@ -264,5 +264,11 @@ namespace Finance_Authority.PL
         {
             Update_label_finance_Box();
         }
+
+        private void Budget_Now_Click(object sender, EventArgs e)
+        {
+            Budget_Now FRM = new Budget_Now();
+            FRM.ShowDialog();
+        }
     }
 }

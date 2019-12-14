@@ -194,5 +194,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Loans_Gridview.DataSource = Loa.Loans_View();
+            Loans_Gridview.Columns[0].Visible = false;
+        }
     }
 }

@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payment_Document_FORM));
             this.Payment_Document_Date_last = new MetroFramework.Controls.MetroDateTime();
             this.Payment_Document_Date_first = new MetroFramework.Controls.MetroDateTime();
             this.Payment_Document_Comb_Cate = new MetroFramework.Controls.MetroComboBox();
@@ -66,13 +67,14 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Payment_Document_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Payment_Document_Date_last
             // 
             this.Payment_Document_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_last.Location = new System.Drawing.Point(790, 72);
+            this.Payment_Document_Date_last.Location = new System.Drawing.Point(799, 17);
             this.Payment_Document_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_last.Name = "Payment_Document_Date_last";
             this.Payment_Document_Date_last.RightToLeftLayout = true;
@@ -83,7 +85,7 @@
             // Payment_Document_Date_first
             // 
             this.Payment_Document_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_first.Location = new System.Drawing.Point(790, 29);
+            this.Payment_Document_Date_first.Location = new System.Drawing.Point(513, 17);
             this.Payment_Document_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_first.Name = "Payment_Document_Date_first";
             this.Payment_Document_Date_first.RightToLeftLayout = true;
@@ -535,7 +537,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(720, 39);
+            this.metroLabel2.Location = new System.Drawing.Point(443, 27);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(69, 19);
             this.metroLabel2.TabIndex = 233;
@@ -544,7 +546,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(721, 75);
+            this.metroLabel3.Location = new System.Drawing.Point(730, 20);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 234;
@@ -640,11 +642,23 @@
             this.metroLabel13.TabIndex = 244;
             this.metroLabel13.Text = "الملاحظات";
             // 
+            // update
+            // 
+            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
+            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.update.Location = new System.Drawing.Point(779, 60);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(33, 31);
+            this.update.TabIndex = 264;
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Payment_Document_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 578);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroLabel11);
@@ -727,5 +741,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroButton update;
     }
 }

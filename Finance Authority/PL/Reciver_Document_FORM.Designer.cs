@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reciver_Document_FORM));
             this.Reciver_Document_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.Reciver_Document_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Reciver_Document_xit = new MetroFramework.Controls.MetroButton();
@@ -64,6 +65,7 @@
             this.Reciver_Document_no = new MetroFramework.Controls.MetroTextBox();
             this.Reciver_Document_Reason = new MetroFramework.Controls.MetroTextBox();
             this.Reciver_Document_Receve = new MetroFramework.Controls.MetroTextBox();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Reciver_Document_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,7 +208,7 @@
             // Reciver_Document_Date_first
             // 
             this.Reciver_Document_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Reciver_Document_Date_first.Location = new System.Drawing.Point(802, 34);
+            this.Reciver_Document_Date_first.Location = new System.Drawing.Point(468, 22);
             this.Reciver_Document_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Reciver_Document_Date_first.Name = "Reciver_Document_Date_first";
             this.Reciver_Document_Date_first.RightToLeftLayout = true;
@@ -217,7 +219,7 @@
             // Reciver_Document_Date_last
             // 
             this.Reciver_Document_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Reciver_Document_Date_last.Location = new System.Drawing.Point(802, 77);
+            this.Reciver_Document_Date_last.Location = new System.Drawing.Point(795, 25);
             this.Reciver_Document_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.Reciver_Document_Date_last.Name = "Reciver_Document_Date_last";
             this.Reciver_Document_Date_last.RightToLeftLayout = true;
@@ -338,7 +340,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(726, 44);
+            this.metroLabel3.Location = new System.Drawing.Point(386, 25);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(69, 19);
             this.metroLabel3.TabIndex = 253;
@@ -347,7 +349,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(727, 87);
+            this.metroLabel5.Location = new System.Drawing.Point(720, 26);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(68, 19);
             this.metroLabel5.TabIndex = 254;
@@ -598,11 +600,23 @@
             this.Reciver_Document_Receve.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Reciver_Document_Receve.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // update
+            // 
+            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
+            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.update.Location = new System.Drawing.Point(732, 70);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(33, 31);
+            this.update.TabIndex = 263;
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Reciver_Document_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 579);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.Reciver_Document_Receve);
             this.Controls.Add(this.Reciver_Document_Reason);
             this.Controls.Add(this.Reciver_Document_no);
@@ -681,5 +695,6 @@
         private MetroFramework.Controls.MetroTextBox Reciver_Document_no;
         private MetroFramework.Controls.MetroTextBox Reciver_Document_Reason;
         private MetroFramework.Controls.MetroTextBox Reciver_Document_Receve;
+        private MetroFramework.Controls.MetroButton update;
     }
 }

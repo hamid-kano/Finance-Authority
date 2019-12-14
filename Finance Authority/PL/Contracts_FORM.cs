@@ -187,5 +187,11 @@ namespace Finance_Authority.PL
         {
 
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Contracts_Gridview.DataSource = cont.Contracts_View();
+            Contracts_Gridview.Columns[0].Visible = false;
+        }
     }
 }

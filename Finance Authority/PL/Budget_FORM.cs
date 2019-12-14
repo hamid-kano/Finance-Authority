@@ -171,5 +171,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Budget_dataGrid.DataSource = Bud.Budget_view();
+            this.Budget_dataGrid.Columns[0].Visible = false;
+        }
     }
 }

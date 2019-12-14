@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bills_FORM));
             this.Bills_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Bills_exit = new MetroFramework.Controls.MetroButton();
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
@@ -43,6 +44,7 @@
             this.Bills_Search = new MetroFramework.Controls.MetroLabel();
             this.Bills_Data_First = new MetroFramework.Controls.MetroLabel();
             this.Bills_Data_Last = new MetroFramework.Controls.MetroLabel();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Bills_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,11 +233,23 @@
             this.Bills_Data_Last.TabIndex = 214;
             this.Bills_Data_Last.Text = "تاريخ النهاية";
             // 
+            // update
+            // 
+            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
+            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.update.Location = new System.Drawing.Point(803, 48);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(33, 31);
+            this.update.TabIndex = 264;
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Bills_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 492);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.Bills_Data_Last);
             this.Controls.Add(this.Bills_Data_First);
             this.Controls.Add(this.Bills_Search);
@@ -271,5 +285,6 @@
         private MetroFramework.Controls.MetroLabel Bills_Search;
         private MetroFramework.Controls.MetroLabel Bills_Data_First;
         private MetroFramework.Controls.MetroLabel Bills_Data_Last;
+        private MetroFramework.Controls.MetroButton update;
     }
 }

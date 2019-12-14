@@ -291,5 +291,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+            Employee_Salaries_dataGrid.Columns[0].Visible = false;
+        }
     }
 }

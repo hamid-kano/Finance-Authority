@@ -128,5 +128,11 @@ namespace Finance_Authority.PL
             this.Role_Functional_Gridview.DataSource = Role.Role_Functional_Search(Role_Functional_textsearch.Text);
             Role_Functional_Gridview.Columns[0].Visible = false;
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
+            Role_Functional_Gridview.Columns[0].Visible = false;
+        }
     }
 }

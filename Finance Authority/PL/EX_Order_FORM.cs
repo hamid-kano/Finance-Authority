@@ -66,6 +66,8 @@ namespace Finance_Authority.PL
         private void EX_Orders_new_Click(object sender, EventArgs e)
         {
             EX_Orders_add.Enabled = true;
+            EX_Orders_update.Enabled = false;
+            EX_Orders_delete.Enabled = false;
             EX_Orders_order.Text = "";
             EX_Orders_tosorce.Text = "";
             EX_Orders_Body_order.Text = "";
@@ -207,6 +209,12 @@ namespace Finance_Authority.PL
         private void EX_Orders_Body_order_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
+            EX_Orders_CombCategorise.DataSource = order.EX_Orders_CombCategorise();
         }
     }
 }

@@ -171,5 +171,12 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
+            Employee_Description_dataGrid.Columns[0].Visible = false;
+            Employee_Description_dataGrid.Columns[8].Visible = false;
+        }
     }
 }

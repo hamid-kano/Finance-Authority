@@ -41,7 +41,6 @@ namespace Finance_Authority.PL
                 Budget_DateTime.Text = this.Budget_dataGrid.CurrentRow.Cells[9].Value.ToString();
                 Budget_Notes.Text = this.Budget_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 Budget_delete.Enabled = true;
-                Budget_add.Enabled = false;
             }
         }
         private void Budget_delete_Click(object sender, EventArgs e)

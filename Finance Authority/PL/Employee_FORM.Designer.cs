@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Employee_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_delete = new MetroFramework.Controls.MetroButton();
@@ -53,8 +53,6 @@
             this.Employee_No_Affairs = new MetroFramework.Controls.MetroTextBox();
             this.Employee_No_File = new MetroFramework.Controls.MetroTextBox();
             this.Employee_No_Card = new MetroFramework.Controls.MetroTextBox();
-            this.Employee_Gender = new MetroFramework.Controls.MetroTextBox();
-            this.Employee_Marital_status = new MetroFramework.Controls.MetroTextBox();
             this.Employee_Pr_Service_Years = new MetroFramework.Controls.MetroTextBox();
             this.Employee_Search_Name = new MetroFramework.Controls.MetroTextBox();
             this.Employee_Search_Mony = new MetroFramework.Controls.MetroTextBox();
@@ -72,6 +70,8 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.Employee_Gender = new MetroFramework.Controls.MetroComboBox();
+            this.Employee_Marital_status = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,23 +85,23 @@
             this.Employee_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.Employee_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_dataGrid.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_dataGrid.DefaultCellStyle = dataGridViewCellStyle11;
             this.Employee_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -109,14 +109,14 @@
             this.Employee_dataGrid.Name = "Employee_dataGrid";
             this.Employee_dataGrid.ReadOnly = true;
             this.Employee_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.Employee_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Employee_dataGrid.Size = new System.Drawing.Size(859, 470);
@@ -564,66 +564,6 @@
             this.Employee_No_Card.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_No_Card.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Employee_No_Card_KeyPress);
             // 
-            // Employee_Gender
-            // 
-            // 
-            // 
-            // 
-            this.Employee_Gender.CustomButton.Image = null;
-            this.Employee_Gender.CustomButton.Location = new System.Drawing.Point(166, 1);
-            this.Employee_Gender.CustomButton.Name = "";
-            this.Employee_Gender.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Employee_Gender.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Employee_Gender.CustomButton.TabIndex = 1;
-            this.Employee_Gender.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Employee_Gender.CustomButton.UseSelectable = true;
-            this.Employee_Gender.CustomButton.Visible = false;
-            this.Employee_Gender.Lines = new string[0];
-            this.Employee_Gender.Location = new System.Drawing.Point(137, 508);
-            this.Employee_Gender.MaxLength = 32767;
-            this.Employee_Gender.Name = "Employee_Gender";
-            this.Employee_Gender.PasswordChar = '\0';
-            this.Employee_Gender.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Employee_Gender.SelectedText = "";
-            this.Employee_Gender.SelectionLength = 0;
-            this.Employee_Gender.SelectionStart = 0;
-            this.Employee_Gender.ShortcutsEnabled = true;
-            this.Employee_Gender.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Gender.TabIndex = 236;
-            this.Employee_Gender.UseSelectable = true;
-            this.Employee_Gender.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Employee_Gender.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Employee_Marital_status
-            // 
-            // 
-            // 
-            // 
-            this.Employee_Marital_status.CustomButton.Image = null;
-            this.Employee_Marital_status.CustomButton.Location = new System.Drawing.Point(166, 1);
-            this.Employee_Marital_status.CustomButton.Name = "";
-            this.Employee_Marital_status.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Employee_Marital_status.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Employee_Marital_status.CustomButton.TabIndex = 1;
-            this.Employee_Marital_status.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Employee_Marital_status.CustomButton.UseSelectable = true;
-            this.Employee_Marital_status.CustomButton.Visible = false;
-            this.Employee_Marital_status.Lines = new string[0];
-            this.Employee_Marital_status.Location = new System.Drawing.Point(137, 544);
-            this.Employee_Marital_status.MaxLength = 32767;
-            this.Employee_Marital_status.Name = "Employee_Marital_status";
-            this.Employee_Marital_status.PasswordChar = '\0';
-            this.Employee_Marital_status.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Employee_Marital_status.SelectedText = "";
-            this.Employee_Marital_status.SelectionLength = 0;
-            this.Employee_Marital_status.SelectionStart = 0;
-            this.Employee_Marital_status.ShortcutsEnabled = true;
-            this.Employee_Marital_status.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Marital_status.TabIndex = 237;
-            this.Employee_Marital_status.UseSelectable = true;
-            this.Employee_Marital_status.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Employee_Marital_status.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // Employee_Pr_Service_Years
             // 
             // 
@@ -653,6 +593,7 @@
             this.Employee_Pr_Service_Years.UseSelectable = true;
             this.Employee_Pr_Service_Years.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Employee_Pr_Service_Years.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Employee_Pr_Service_Years.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Employee_Pr_Service_Years_KeyPress);
             // 
             // Employee_Search_Name
             // 
@@ -838,15 +779,43 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Location = new System.Drawing.Point(12, 544);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(93, 19);
             this.metroLabel16.TabIndex = 253;
-            this.metroLabel16.Text = "الوضع العائلي";
+            this.metroLabel16.Text = "الحالة الاجتماعية";
+            // 
+            // Employee_Gender
+            // 
+            this.Employee_Gender.FormattingEnabled = true;
+            this.Employee_Gender.ItemHeight = 23;
+            this.Employee_Gender.Items.AddRange(new object[] {
+            "ذكر",
+            "انثى"});
+            this.Employee_Gender.Location = new System.Drawing.Point(137, 502);
+            this.Employee_Gender.Name = "Employee_Gender";
+            this.Employee_Gender.Size = new System.Drawing.Size(188, 29);
+            this.Employee_Gender.TabIndex = 254;
+            this.Employee_Gender.UseSelectable = true;
+            // 
+            // Employee_Marital_status
+            // 
+            this.Employee_Marital_status.FormattingEnabled = true;
+            this.Employee_Marital_status.ItemHeight = 23;
+            this.Employee_Marital_status.Items.AddRange(new object[] {
+            "اعزب",
+            "متزوج"});
+            this.Employee_Marital_status.Location = new System.Drawing.Point(137, 543);
+            this.Employee_Marital_status.Name = "Employee_Marital_status";
+            this.Employee_Marital_status.Size = new System.Drawing.Size(188, 29);
+            this.Employee_Marital_status.TabIndex = 255;
+            this.Employee_Marital_status.UseSelectable = true;
             // 
             // Employee_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1248, 622);
+            this.Controls.Add(this.Employee_Marital_status);
+            this.Controls.Add(this.Employee_Gender);
             this.Controls.Add(this.metroLabel16);
             this.Controls.Add(this.metroLabel15);
             this.Controls.Add(this.metroLabel14);
@@ -864,8 +833,6 @@
             this.Controls.Add(this.Employee_Search_Mony);
             this.Controls.Add(this.Employee_Search_Name);
             this.Controls.Add(this.Employee_Pr_Service_Years);
-            this.Controls.Add(this.Employee_Marital_status);
-            this.Controls.Add(this.Employee_Gender);
             this.Controls.Add(this.Employee_No_Card);
             this.Controls.Add(this.Employee_No_File);
             this.Controls.Add(this.Employee_No_Affairs);
@@ -922,8 +889,6 @@
         private MetroFramework.Controls.MetroTextBox Employee_No_Affairs;
         private MetroFramework.Controls.MetroTextBox Employee_No_File;
         private MetroFramework.Controls.MetroTextBox Employee_No_Card;
-        private MetroFramework.Controls.MetroTextBox Employee_Gender;
-        private MetroFramework.Controls.MetroTextBox Employee_Marital_status;
         private MetroFramework.Controls.MetroTextBox Employee_Pr_Service_Years;
         private MetroFramework.Controls.MetroTextBox Employee_Search_Name;
         private MetroFramework.Controls.MetroTextBox Employee_Search_Mony;
@@ -941,5 +906,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroComboBox Employee_Gender;
+        private MetroFramework.Controls.MetroComboBox Employee_Marital_status;
     }
 }

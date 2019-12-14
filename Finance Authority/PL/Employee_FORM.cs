@@ -19,6 +19,8 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Employee_dataGrid.DataSource = Emp.Employee_View();
             Employee_dataGrid.Columns[0].Visible = false;
+            Employee_Gender.SelectedIndex = 0;
+            Employee_Marital_status.SelectedIndex = 0;
         }
 
         private void Employee_new_Click(object sender, EventArgs e)
@@ -71,12 +73,6 @@ namespace Finance_Authority.PL
             {
 
                 MessageBox.Show("أضف اسم الام للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (Employee_Mobail.Text == String.Empty)
-            {
-
-                MessageBox.Show("أضف رقم الموبايل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Employee_Scie_Level.Text == String.Empty)
@@ -181,12 +177,6 @@ namespace Finance_Authority.PL
             {
 
                 MessageBox.Show("أضف اسم الام للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (Employee_Mobail.Text == String.Empty)
-            {
-
-                MessageBox.Show("أضف رقم الموبايل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Employee_Scie_Level.Text == String.Empty)
@@ -371,6 +361,11 @@ namespace Finance_Authority.PL
         }
 
         private void Employee_No_Card_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Employee_Pr_Service_Years_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
         }

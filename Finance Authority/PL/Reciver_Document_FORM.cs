@@ -242,5 +242,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
+            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+        }
     }
 }

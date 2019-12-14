@@ -119,5 +119,12 @@ namespace Finance_Authority.PL
                 FRPT.ShowDialog();
             }
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            Bills_dataGrid.DataSource = bill.Bills_View();
+            this.Bills_dataGrid.Columns[0].Visible = false;
+
+        }
     }
 }

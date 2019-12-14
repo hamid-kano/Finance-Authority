@@ -270,5 +270,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
+            this.Payment_Document_dataGrid.Columns[0].Visible = false;
+        }
     }
 }

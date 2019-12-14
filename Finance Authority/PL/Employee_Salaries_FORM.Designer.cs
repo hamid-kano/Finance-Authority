@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Salaries_FORM));
             this.label14 = new System.Windows.Forms.Label();
             this.Employee_Salaries_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Salaries_exit = new MetroFramework.Controls.MetroButton();
@@ -84,6 +85,7 @@
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -934,7 +936,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(8, 589);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(39, 19);
             this.metroLabel19.TabIndex = 288;
             this.metroLabel19.Text = "حقل2";
             // 
@@ -952,7 +954,7 @@
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Location = new System.Drawing.Point(8, 555);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(37, 19);
             this.metroLabel21.TabIndex = 290;
             this.metroLabel21.Text = "حقل1";
             // 
@@ -965,11 +967,23 @@
             this.metroLabel22.TabIndex = 291;
             this.metroLabel22.Text = "الموظفين";
             // 
+            // update
+            // 
+            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
+            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.update.Location = new System.Drawing.Point(1238, 43);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(33, 31);
+            this.update.TabIndex = 292;
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Employee_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 736);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel22);
             this.Controls.Add(this.metroLabel21);
             this.Controls.Add(this.metroLabel20);
@@ -1087,5 +1101,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroLabel metroLabel21;
         private MetroFramework.Controls.MetroLabel metroLabel22;
+        private MetroFramework.Controls.MetroButton update;
     }
 }

@@ -168,5 +168,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
+            Coin_Exchange_Gridview.Columns[0].Visible = false;
+        }
     }
 }

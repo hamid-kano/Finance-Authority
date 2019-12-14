@@ -211,5 +211,11 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View();
+            Leoan_Payments_Gridview.Columns[0].Visible = false;
+        }
     }
 }

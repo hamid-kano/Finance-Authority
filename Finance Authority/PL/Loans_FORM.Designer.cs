@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loans_FORM));
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.Loans_Fexit = new MetroFramework.Controls.MetroButton();
             this.Loans_delete = new MetroFramework.Controls.MetroButton();
@@ -58,6 +59,7 @@
             this.Loans_Amont = new MetroFramework.Controls.MetroTextBox();
             this.Loans_Search_All = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
@@ -417,11 +419,23 @@
             this.metroLabel8.TabIndex = 238;
             this.metroLabel8.Text = "بحث عام";
             // 
+            // update
+            // 
+            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
+            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.update.Location = new System.Drawing.Point(911, 48);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(33, 31);
+            this.update.TabIndex = 265;
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 539);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.Loans_Search_All);
             this.Controls.Add(this.Loans_Amont);
@@ -487,5 +501,6 @@
         private MetroFramework.Controls.MetroTextBox Loans_Amont;
         private MetroFramework.Controls.MetroTextBox Loans_Search_All;
         private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroButton update;
     }
 }

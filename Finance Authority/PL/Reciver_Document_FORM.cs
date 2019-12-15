@@ -44,12 +44,10 @@ namespace Finance_Authority.PL
             Reciver_Document_update.Enabled = false;
             Reciver_Document_delete.Enabled = false;
         }
-
         private void Reciver_Document_xit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void Reciver_Document_add_Click(object sender, EventArgs e)
         {
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
@@ -78,23 +76,33 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Reciv.Reciver_Document_add(Reciver_Document_sy.Text , Reciver_Document_Dollar.Text , Reciver_Document_rate.Text , Reciver_Document_no.Text , Reciver_Document_Reason.Text, Reciver_Document_Receve.Text , Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text , Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
-            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
-            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
-            // تحديث الميزانية
-            Program.Budget_update_after_Payment_Reciver("add", "r", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
-            frm.Update_label_finance_Box();
-            //
-            Program.Add_Message();
-            Reciver_Document_sy.Text = "";
-            Reciver_Document_Dollar.Text = "";
-            Reciver_Document_rate.Text = "";
-            Reciver_Document_no.Text = "";
-            Reciver_Document_Reason.Text = "";
-            Reciver_Document_Receve.Text = "";
-            Reciver_Document_Notes.Text = "";
-            Reciver_Document_add.Enabled = false;
+            DataTable Dt = new DataTable();
+            Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
+            if (Dt.Rows.Count == 0)
+            {
+                Reciv.Reciver_Document_add(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
+                this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
+                this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "r", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
+                frm.Update_label_finance_Box();
+                //
+                Program.Add_Message();
+                Reciver_Document_sy.Text = "";
+                Reciver_Document_Dollar.Text = "";
+                Reciver_Document_rate.Text = "";
+                Reciver_Document_no.Text = "";
+                Reciver_Document_Reason.Text = "";
+                Reciver_Document_Receve.Text = "";
+                Reciver_Document_Notes.Text = "";
+                Reciver_Document_add.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+                return;
+            } 
         }
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
@@ -124,25 +132,36 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Reciv.Reciver_Document_update(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue) , Program.Reciver_Document_id);
-            this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
-            this.Reciver_Document_dataGrid.Columns[0].Visible = false;
-            // تحديث الميزانية
-            int Sy_After_Updat = Convert.ToInt32(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text)- Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) ;
-            int Dollar_After_Updat = Convert.ToInt32(Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value) ;
-            Program.Budget_update_after_Payment_Reciver("update", "r", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-            frm.Update_label_finance_Box();
-            //
-            Program.Update_Message();
-            Reciver_Document_sy.Text = "";
-            Reciver_Document_Dollar.Text = "";
-            Reciver_Document_rate.Text = "";
-            Reciver_Document_no.Text = "";
-            Reciver_Document_Reason.Text = "";
-            Reciver_Document_Receve.Text = "";
-            Reciver_Document_Notes.Text = "";
-            Reciver_Document_update.Enabled = false;
-            Reciver_Document_delete.Enabled = false;
+            DataTable Dt = new DataTable();
+            Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
+            if (Dt.Rows.Count == 0 || Reciver_Document_no.Text== this.Reciver_Document_dataGrid.CurrentRow.Cells[4].Value.ToString())
+            {
+                Reciv.Reciver_Document_update(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue), Program.Reciver_Document_id);
+                this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
+                this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+                // تحديث الميزانية
+                int Sy_After_Updat = Convert.ToInt32(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value);
+                int Dollar_After_Updat = Convert.ToInt32(Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value);
+                Program.Budget_update_after_Payment_Reciver("update", "r", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+                frm.Update_label_finance_Box();
+                //
+                Program.Update_Message();
+                Reciver_Document_sy.Text = "";
+                Reciver_Document_Dollar.Text = "";
+                Reciver_Document_rate.Text = "";
+                Reciver_Document_no.Text = "";
+                Reciver_Document_Reason.Text = "";
+                Reciver_Document_Receve.Text = "";
+                Reciver_Document_Notes.Text = "";
+                Reciver_Document_update.Enabled = false;
+                Reciver_Document_delete.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                return;
+            } 
         }
 
         private void Reciver_Document_dataGrid_Click(object sender, EventArgs e)

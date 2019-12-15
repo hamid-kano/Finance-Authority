@@ -114,6 +114,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Reciver_Document_Cheack(String no)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@no", SqlDbType.NVarChar);
+            param[0].Value = no;
+            Dt = DAL.selectdata("Reciver_Document_Cheack", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Reciver_Document_Date_Butween(DateTime Reciver_Document_Date_first, DateTime Reciver_Document_Date_last)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

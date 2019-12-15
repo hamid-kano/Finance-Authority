@@ -56,7 +56,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("رقم الطلب موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                
                 return;
             }
@@ -132,7 +132,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("رقم الطلب موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 EX_Orders_update.Enabled = false;
                 EX_Orders_delete.Enabled = false;
                 return;

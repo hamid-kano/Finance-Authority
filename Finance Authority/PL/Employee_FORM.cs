@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Employee_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Employee Emp = new BL.CLS_Employee();
+        DataTable Dt = new DataTable();
         public Employee_FORM()
         {
             InitializeComponent();
@@ -129,6 +130,43 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف عدد السنوات السابقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            Dt =Emp.Employee_View();
+            for(int i=0; i<Dt.Rows.Count;i++)
+            {
+                if(Employee_No_Financial.Text == Dt.Rows[i][9].ToString())
+                {
+                    MessageBox.Show("الرقم المالي موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Employee_No_Affairs.Text == Dt.Rows[i][10].ToString())
+                {
+                    MessageBox.Show("الرقم شؤون موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Employee_No_File.Text == Dt.Rows[i][11].ToString())
+                {
+                    MessageBox.Show("الرقم الاضبارة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Employee_No_Card.Text == Dt.Rows[i][12].ToString())
+                {
+                    MessageBox.Show("الرقم البطاقة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Employee_First_Name.Text == Dt.Rows[i][1].ToString() && Employee_Father_Name.Text == Dt.Rows[i][2].ToString()
+                    && Employee_Last_Name.Text == Dt.Rows[i][3].ToString())
+                {
+                    if (MessageBox.Show("يوجد موظف بنفس الاسم هل تريد الاضافة؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+
+                    }
+                    else
+                    {
+                        return;
+                    }
+                       
+                }
+            }
             Emp.Employee_add(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
                 , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                 , Employee_No_Financial.Text, Employee_No_Affairs.Text , Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
@@ -233,7 +271,50 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف عدد السنوات السابقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Emp.Employee_update(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
+            Dt = Emp.Employee_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+
+
+                if ((int)Dt.Rows[i][0]!=Program.Employee_id)
+                {
+                    if (Employee_No_Financial.Text == Dt.Rows[i][9].ToString())
+                    {
+                        MessageBox.Show("الرقم المالي موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Employee_No_Affairs.Text == Dt.Rows[i][10].ToString())
+                    {
+                        MessageBox.Show("الرقم شؤون موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Employee_No_File.Text == Dt.Rows[i][11].ToString())
+                    {
+                        MessageBox.Show("الرقم الاضبارة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Employee_No_Card.Text == Dt.Rows[i][12].ToString())
+                    {
+                        MessageBox.Show("الرقم البطاقة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Employee_First_Name.Text == Dt.Rows[i][1].ToString() && Employee_Father_Name.Text == Dt.Rows[i][2].ToString()
+                        && Employee_Last_Name.Text == Dt.Rows[i][3].ToString())
+                    {
+                        if (MessageBox.Show("يوجد موظف بنفس الاسم هل تريد الاضافة؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+                    }
+
+                }      
+            }
+                Emp.Employee_update(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
                , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
                , Employee_Marital_status.Text, Employee_Pr_Service_Years.Text, Program.Employee_id);

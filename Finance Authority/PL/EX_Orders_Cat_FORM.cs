@@ -44,7 +44,7 @@ namespace Finance_Authority.PL
             if (EX_Orders_Cat_text.Text == String.Empty)
             {
 
-                MessageBox.Show("أضف واصفة الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("أضف اسم الصنف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();
@@ -60,7 +60,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("اسم الصنف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 EX_Orders_Cat_text.Text = "";
                 return;
             }
@@ -69,6 +69,12 @@ namespace Finance_Authority.PL
 
         private void EX_Orders_Cat_update_Click(object sender, EventArgs e)
         {
+            if (EX_Orders_Cat_text.Text == String.Empty)
+            {
+
+                MessageBox.Show("أضف اسم الصنف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = cat.EX_Orders_Cat_Cheack(EX_Orders_Cat_text.Text);
             if (Dt.Rows.Count == 0 || EX_Orders_Cat_text.Text == this.EX_Orders_Cat_dataGrid.CurrentRow.Cells[1].Value.ToString())
@@ -83,7 +89,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("اسم الصنف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 EX_Orders_Cat_text.Text = "";
                 return;
             }

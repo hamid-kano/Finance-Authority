@@ -137,5 +137,29 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        //public DataTable Employee_Financial_Cheack(int No_Financial)
+        //{
+        //    DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+        //    DataTable Dt = new DataTable();
+        //    DAL.open();
+        //    SqlParameter[] param = new SqlParameter[1];
+        //    param[0] = new SqlParameter("@No_Financial", SqlDbType.Int);
+        //    param[0].Value = No_Financial;
+        //    Dt = DAL.selectdata("Employee_Financial_Cheack", param);
+        //    DAL.close();
+        //    return Dt;
+        //}
+        //public DataTable Employee_Affairs_Cheack(int No_Affairs)
+        //{
+        //    DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+        //    DataTable Dt = new DataTable();
+        //    DAL.open();
+        //    SqlParameter[] param = new SqlParameter[1];
+        //    param[0] = new SqlParameter("@No_Affairs", SqlDbType.Int);
+        //    param[0].Value = No_Affairs;
+        //    Dt = DAL.selectdata("Employee_Affairs_Cheack", param);
+        //    DAL.close();
+        //    return Dt;
+        //}
     }
 }

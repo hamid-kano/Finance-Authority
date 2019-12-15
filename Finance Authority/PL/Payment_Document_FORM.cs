@@ -17,6 +17,7 @@ namespace Finance_Authority.PL
         BL.CLS_Payment_Document pay = new BL.CLS_Payment_Document();
         Finance_Authority frm = Finance_Authority.getMainForm;
         BL.CLS_Budget Bud = new BL.CLS_Budget();
+        DataTable Dt = new DataTable();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -109,29 +110,41 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            pay.Payment_Document_add(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
-                Payment_Document_no.Text , Payment_Document_No_Order.Text, Payment_Document_Reason.Text ,
-                Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text ,
-                Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32( Payment_Document_Comb_Cate.SelectedValue));
-            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
-            this.Payment_Document_dataGrid.Columns[0].Visible = false;
-            // تحديث الميزانية
-            Program.Budget_update_after_Payment_Reciver("add","p", Payment_Document_sy.Text, Payment_Document_Dollar.Text) ;
-            frm.Update_label_finance_Box();
-            //
-            Program.Add_Message();
-            Payment_Document_sy.Text = "";
-            Payment_Document_Dollar.Text = "";
-            Payment_Document_rate.Text = "";
-            Payment_Document_no.Text = "";
-            Payment_Document_No_Order.Text = "";
-            Payment_Document_Reason.Text = "";
-            Payment_Document_Receve.Text = "";
-            Payment_Document_Notes.Text = "";
-            Payment_Document_add.Enabled = false;
-
-            
-            
+            Dt = pay.Payment_Document_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                {
+                    MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                {
+                    MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+                pay.Payment_Document_add(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
+                Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
+                Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
+                Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue));
+                this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
+                this.Payment_Document_dataGrid.Columns[0].Visible = false;
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "p", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
+                frm.Update_label_finance_Box();
+                //
+                Program.Add_Message();
+                Payment_Document_sy.Text = "";
+                Payment_Document_Dollar.Text = "";
+                Payment_Document_rate.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
+                Payment_Document_Reason.Text = "";
+                Payment_Document_Receve.Text = "";
+                Payment_Document_Notes.Text = "";
+                Payment_Document_add.Enabled = false;
+           
         }
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
@@ -165,28 +178,46 @@ namespace Finance_Authority.PL
                 return;
             }
             // تحديث الميزانية
-            int Sy_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) -Convert.ToInt32(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text) ;
-            int Dollar_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value)- Convert.ToInt32(Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text) ;
-            Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-            frm.Update_label_finance_Box();
-            //
-            pay.Payment_Document_update(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
-               Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
-               Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
-               Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue) , Program.Payment_Document_id);
-            this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
-            this.Payment_Document_dataGrid.Columns[0].Visible = false;
-            Program.Update_Message();
-            Payment_Document_sy.Text = "";
-            Payment_Document_Dollar.Text = "";
-            Payment_Document_rate.Text = "";
-            Payment_Document_no.Text = "";
-            Payment_Document_No_Order.Text = "";
-            Payment_Document_Reason.Text = "";
-            Payment_Document_Receve.Text = "";
-            Payment_Document_Notes.Text = "";
-            Payment_Document_update.Enabled = false;
-            Payment_Document_delete.Enabled = false;
+            Dt = pay.Payment_Document_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                if ((int)Dt.Rows[i][0] != Program.Payment_Document_id)
+                {
+                    if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                    {
+                        MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                    {
+                        MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    } 
+                }
+            }
+            int Sy_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) - Convert.ToInt32(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text);
+                int Dollar_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value) - Convert.ToInt32(Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text);
+                Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+                frm.Update_label_finance_Box();
+                //
+                pay.Payment_Document_update(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
+                   Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
+                   Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
+                   Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue), Program.Payment_Document_id);
+                this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
+                this.Payment_Document_dataGrid.Columns[0].Visible = false;
+                Program.Update_Message();
+                Payment_Document_sy.Text = "";
+                Payment_Document_Dollar.Text = "";
+                Payment_Document_rate.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
+                Payment_Document_Reason.Text = "";
+                Payment_Document_Receve.Text = "";
+                Payment_Document_Notes.Text = "";
+                Payment_Document_update.Enabled = false;
+                Payment_Document_delete.Enabled = false;
+           
         }
 
         private void Payment_Document_delete_Click(object sender, EventArgs e)

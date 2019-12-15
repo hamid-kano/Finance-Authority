@@ -137,6 +137,60 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Employee_last_id()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Employee_last_id", null);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_Description_last_id()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Employee_Description_last_id", null);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_Description_View_id(int Employee_Des_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_Des_ID", SqlDbType.Int);
+            param[0].Value = Employee_Des_ID;
+            Dt = DAL.selectdata("Employee_Description_View_id", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Employee_View_id(int Employee_id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_id ", SqlDbType.Int);
+            param[0].Value = Employee_id;
+            Dt = DAL.selectdata("Employee_View_id", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Contracts_View_id(int id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@id ", SqlDbType.Int);
+            param[0].Value = id;
+            Dt = DAL.selectdata("Contracts_View_id", param);
+            DAL.close();
+            return Dt;
+        }
         //public DataTable Employee_Financial_Cheack(int No_Financial)
         //{
         //    DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

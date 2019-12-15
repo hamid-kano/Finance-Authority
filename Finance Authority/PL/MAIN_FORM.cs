@@ -52,7 +52,7 @@ namespace Finance_Authority
 
         private void Employee_BTN_Click(object sender, EventArgs e)
         {
-            PL.Employee_FORM FRM = new PL.Employee_FORM();
+            PL.Employee_FORM FRM = new PL.Employee_FORM(-1);
             FRM.ShowDialog();
         }
 

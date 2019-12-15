@@ -184,5 +184,12 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
+
+        private void Employee_Description_Details_Click(object sender, EventArgs e)
+        {
+            Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
+
+            FRM.ShowDialog();
+        }
     }
 }

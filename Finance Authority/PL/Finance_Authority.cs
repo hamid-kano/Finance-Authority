@@ -169,7 +169,7 @@ namespace Finance_Authority.PL
 
         private void Employee_Button_Click(object sender, EventArgs e)
         {
-            Employee_FORM FRM = new Employee_FORM();
+            Employee_FORM FRM = new Employee_FORM(-1);
             FRM.ShowDialog();
         }
 
@@ -235,7 +235,7 @@ namespace Finance_Authority.PL
 
         private void Employee_Button_MAIN_Click(object sender, EventArgs e)
         {
-            Employee_FORM FRM = new Employee_FORM();
+            Employee_FORM FRM = new Employee_FORM(-1);
             FRM.ShowDialog();
         }
 

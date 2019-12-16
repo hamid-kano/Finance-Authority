@@ -20,7 +20,7 @@ namespace Finance_Authority.PL
             Employee_Description_Comb_Search.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Employee_Description_Comb_Search.DisplayMember = "Department_Name";
             Employee_Description_Comb_Search.ValueMember = "Department_ID";
-            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View_Spical_three();
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[8].Visible = false;
             Employee_Description_Comb_employ.DataSource = Empl_Des.Employee_Description_Comb_employ();
@@ -190,6 +190,13 @@ namespace Finance_Authority.PL
             Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
 
             FRM.ShowDialog();
+        }
+
+        private void Employee_Description_view_all_Click(object sender, EventArgs e)
+        {
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
+            Employee_Description_dataGrid.Columns[0].Visible = false;
+            Employee_Description_dataGrid.Columns[8].Visible = false;
         }
     }
 }

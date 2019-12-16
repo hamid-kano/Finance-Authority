@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Budget_Now : MetroFramework.Forms.MetroForm
+    public partial class Budget_Now_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         DataTable dt = new DataTable();
-        public Budget_Now()
+        public Budget_Now_FORM()
         {
             InitializeComponent();
+            this.StyleManager = Program.theme_style(this);
             dt = Bud.Budget_Last_Budget();
             Budget_Now_amount_sy.Text = dt.Rows[0][1].ToString();
             Budget_Now_amount_Dollar.Text = dt.Rows[0][2].ToString();

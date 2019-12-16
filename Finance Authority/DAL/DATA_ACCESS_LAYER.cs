@@ -13,7 +13,7 @@ namespace Finance_Authority.DAL
         SqlConnection sqlconnection;
         public DATA_ACCESS_LAYER()
         {
-            sqlconnection = new SqlConnection(@"Server =. ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
+            sqlconnection = new SqlConnection(@"Server =192.168.50.50 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
         }
 
         public void open()
@@ -35,7 +35,6 @@ namespace Finance_Authority.DAL
         //هذا التابع لإجراء عملية القراءة من قاعدة البيانات
         public DataTable selectdata(string stored_prouceture, SqlParameter[] param)
         {
-
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = stored_prouceture;
@@ -52,7 +51,6 @@ namespace Finance_Authority.DAL
             da.Fill(dt);
             return dt;
         }
-
         //هذا التابع لإجراء عمليات الحذف والإضافة والتعديل
         public void excutecommand(string stored_prouceture, SqlParameter[] param)
         {

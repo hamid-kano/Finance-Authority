@@ -124,7 +124,9 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
-                pay.Payment_Document_add(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
+                pay.Payment_Document_add(Payment_Document_sy.Text==string.Empty?"0": Payment_Document_sy.Text,
+                                         Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text,
+                                         Payment_Document_rate.Text == string.Empty ? "1" : Payment_Document_rate.Text,
                 Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
                 Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
                 Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue));
@@ -200,7 +202,9 @@ namespace Finance_Authority.PL
                 Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
                 frm.Update_label_finance_Box();
                 //
-                pay.Payment_Document_update(Payment_Document_sy.Text, Payment_Document_Dollar.Text, Payment_Document_rate.Text,
+                pay.Payment_Document_update(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text,
+                                         Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text,
+                                         Payment_Document_rate.Text == string.Empty ? "1" : Payment_Document_rate.Text,
                    Payment_Document_no.Text, Payment_Document_No_Order.Text, Payment_Document_Reason.Text,
                    Payment_Document_Receve.Text, Payment_Document_DateTime.Value, Payment_Document_Notes.Text,
                    Convert.ToInt32(Payment_Document_Comb_Date.SelectedValue), Convert.ToInt32(Payment_Document_Comb_Cate.SelectedValue), Program.Payment_Document_id);

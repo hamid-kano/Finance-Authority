@@ -80,7 +80,10 @@ namespace Finance_Authority.PL
             Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
             if (Dt.Rows.Count == 0)
             {
-                Reciv.Reciver_Document_add(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
+                Reciv.Reciver_Document_add(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
+                                         Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text,
+                                         Reciver_Document_rate.Text == string.Empty ? "1" : Reciver_Document_rate.Text,
+                    Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 // تحديث الميزانية
@@ -136,7 +139,10 @@ namespace Finance_Authority.PL
             Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
             if (Dt.Rows.Count == 0 || Reciver_Document_no.Text== this.Reciver_Document_dataGrid.CurrentRow.Cells[4].Value.ToString())
             {
-                Reciv.Reciver_Document_update(Reciver_Document_sy.Text, Reciver_Document_Dollar.Text, Reciver_Document_rate.Text, Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue), Program.Reciver_Document_id);
+                Reciv.Reciver_Document_update(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
+                                         Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text,
+                                         Reciver_Document_rate.Text == string.Empty ? "1" : Reciver_Document_rate.Text,
+                    Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue), Program.Reciver_Document_id);
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 // تحديث الميزانية

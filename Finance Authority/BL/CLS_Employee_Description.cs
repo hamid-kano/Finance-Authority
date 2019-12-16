@@ -136,5 +136,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Employee_Description_update_Role_status_Empl_ID  (int Employee_id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_id", SqlDbType.NVarChar);
+            param[0].Value = Employee_id;
+            Dt = DAL.selectdata("Employee_Description_update_Role_status_Empl_ID", param);
+            DAL.close();
+            return Dt;
+        }
+
     }
 }

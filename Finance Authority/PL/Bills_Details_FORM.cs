@@ -16,7 +16,7 @@ namespace Finance_Authority.PL
         BL.CLS_Bills_Details Bill = new BL.CLS_Bills_Details();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
-        int _Bill_ID;
+        int _Bill_ID=-1; // update Status ;
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace Finance_Authority.PL
                this.Bill_Objects_dataGrid.Columns[5].Visible = false;
                Bills_add.Enabled = true;
             }
-
+            this.Bill_Objects_dataGrid.Columns[4].ReadOnly = true;
         }
 
         private void Bills_new_Click(object sender, EventArgs e)
@@ -90,6 +90,12 @@ namespace Finance_Authority.PL
 
         private void Bills_add_Click(object sender, EventArgs e)
         {
+            if (!(Bill_Objects_dataGrid.Rows.Count>0))
+            {
+                MessageBox.Show("لا يمكنك اضافة فاتورة دون مواد","تنبيه",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
             _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
@@ -99,7 +105,6 @@ namespace Finance_Authority.PL
                     Bill_Objects_dataGrid.Rows[i].Cells[3].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[4].Value.ToString(),
                     _Bill_ID);
             }
-
             Bills_FORM frm= Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
@@ -118,7 +123,12 @@ namespace Finance_Authority.PL
 
         private void Bills_update_Click(object sender, EventArgs e)
         {
-             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
+            if (!(Bill_Objects_dataGrid.Rows.Count > 1))
+            {
+                MessageBox.Show("لا يمكنك حذف جميع مواد الفاتورة وتعديلها", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
              obj.Bills_Object_Delete_ByBill_Id(_Bill_ID);
             for (int i = 0; i < Bill_Objects_dataGrid.RowCount - 1; i++)
@@ -197,7 +207,7 @@ namespace Finance_Authority.PL
 
         private void Bills_Add_Doc_Click(object sender, EventArgs e)
         {
-            if (_Bill_ID == null)
+            if (_Bill_ID != -1)
             {
                 _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
                 Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
@@ -209,5 +219,45 @@ namespace Finance_Authority.PL
                 FRM.ShowDialog();
             }
         }
+
+
+        private void Bill_Objects_dataGrid_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (Bill_Objects_dataGrid.CurrentCell.ColumnIndex == 2|| Bill_Objects_dataGrid.CurrentCell.ColumnIndex==3)
+            {
+                if (!(Bill_Objects_dataGrid.Rows[Bill_Objects_dataGrid.CurrentCell.RowIndex].Cells[1].Value is DBNull))
+                {
+                        Bill_Objects_dataGrid.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                }
+                else
+                {
+                    MessageBox.Show("يجب اضافة اسم المادة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Bill_Objects_dataGrid.CurrentCell.Value = 1;
+                }
+            }
+
+        }
+
+        private void Bill_Objects_dataGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2 || e.ColumnIndex ==3)
+            {
+                double test;
+                if (!double.TryParse(Bill_Objects_dataGrid.CurrentCell.Value.ToString(), out test))
+                {
+                    MessageBox.Show("يجب ان تكون الكمية والالسعر الافرادي قيمة رقمية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Bill_Objects_dataGrid.CurrentCell.Value = 1;
+                    return;
+                }
+                double cellPrice = Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[2].Value is DBNull ? 1 : Convert.ToDouble(Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[2].Value);
+                double cellQty = Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value is DBNull ? 1 : Convert.ToDouble(Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value);
+                Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[4].Value = cellQty * cellPrice;
+            }
+            for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
+            {
+
+            }
+        }
+
     }
 }

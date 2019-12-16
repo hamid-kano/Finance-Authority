@@ -110,6 +110,8 @@
             this.Bill_Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 434);
             this.Bill_Objects_dataGrid.TabIndex = 47;
+            this.Bill_Objects_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Bill_Objects_dataGrid_CellValueChanged);
+            this.Bill_Objects_dataGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.Bill_Objects_dataGrid_CurrentCellDirtyStateChanged);
             this.Bill_Objects_dataGrid.Click += new System.EventHandler(this.Bills_dataGrid_Click);
             // 
             // Bills_exit
@@ -389,6 +391,7 @@
             this.Bill_Total.MaxLength = 32767;
             this.Bill_Total.Name = "Bill_Total";
             this.Bill_Total.PasswordChar = '\0';
+            this.Bill_Total.ReadOnly = true;
             this.Bill_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Bill_Total.SelectedText = "";
             this.Bill_Total.SelectionLength = 0;
@@ -435,7 +438,7 @@
             // Bills_Details_Namber
             // 
             this.Bills_Details_Namber.AutoSize = true;
-            this.Bills_Details_Namber.Location = new System.Drawing.Point(-1, 77);
+            this.Bills_Details_Namber.Location = new System.Drawing.Point(32, 75);
             this.Bills_Details_Namber.Name = "Bills_Details_Namber";
             this.Bills_Details_Namber.Size = new System.Drawing.Size(67, 19);
             this.Bills_Details_Namber.TabIndex = 211;
@@ -444,7 +447,7 @@
             // Bills_Details_Name
             // 
             this.Bills_Details_Name.AutoSize = true;
-            this.Bills_Details_Name.Location = new System.Drawing.Point(6, 111);
+            this.Bills_Details_Name.Location = new System.Drawing.Point(32, 109);
             this.Bills_Details_Name.Name = "Bills_Details_Name";
             this.Bills_Details_Name.Size = new System.Drawing.Size(60, 19);
             this.Bills_Details_Name.TabIndex = 212;
@@ -453,7 +456,7 @@
             // Bills_Details_Type_coin
             // 
             this.Bills_Details_Type_coin.AutoSize = true;
-            this.Bills_Details_Type_coin.Location = new System.Drawing.Point(3, 149);
+            this.Bills_Details_Type_coin.Location = new System.Drawing.Point(32, 147);
             this.Bills_Details_Type_coin.Name = "Bills_Details_Type_coin";
             this.Bills_Details_Type_coin.Size = new System.Drawing.Size(63, 19);
             this.Bills_Details_Type_coin.TabIndex = 213;
@@ -462,7 +465,7 @@
             // Bills_Details_Rate
             // 
             this.Bills_Details_Rate.AutoSize = true;
-            this.Bills_Details_Rate.Location = new System.Drawing.Point(6, 186);
+            this.Bills_Details_Rate.Location = new System.Drawing.Point(32, 184);
             this.Bills_Details_Rate.Name = "Bills_Details_Rate";
             this.Bills_Details_Rate.Size = new System.Drawing.Size(76, 19);
             this.Bills_Details_Rate.TabIndex = 214;
@@ -471,7 +474,7 @@
             // Bills_Details_Type_Bill
             // 
             this.Bills_Details_Type_Bill.AutoSize = true;
-            this.Bills_Details_Type_Bill.Location = new System.Drawing.Point(10, 220);
+            this.Bills_Details_Type_Bill.Location = new System.Drawing.Point(32, 218);
             this.Bills_Details_Type_Bill.Name = "Bills_Details_Type_Bill";
             this.Bills_Details_Type_Bill.Size = new System.Drawing.Size(67, 19);
             this.Bills_Details_Type_Bill.TabIndex = 215;
@@ -480,7 +483,7 @@
             // Bills_Details_Total
             // 
             this.Bills_Details_Total.AutoSize = true;
-            this.Bills_Details_Total.Location = new System.Drawing.Point(6, 251);
+            this.Bills_Details_Total.Location = new System.Drawing.Point(32, 249);
             this.Bills_Details_Total.Name = "Bills_Details_Total";
             this.Bills_Details_Total.Size = new System.Drawing.Size(113, 19);
             this.Bills_Details_Total.TabIndex = 216;
@@ -489,7 +492,7 @@
             // Bills_Details_Date
             // 
             this.Bills_Details_Date.AutoSize = true;
-            this.Bills_Details_Date.Location = new System.Drawing.Point(10, 291);
+            this.Bills_Details_Date.Location = new System.Drawing.Point(32, 289);
             this.Bills_Details_Date.Name = "Bills_Details_Date";
             this.Bills_Details_Date.Size = new System.Drawing.Size(41, 19);
             this.Bills_Details_Date.TabIndex = 217;
@@ -498,7 +501,7 @@
             // Bills_Details_Name_Department
             // 
             this.Bills_Details_Name_Department.AutoSize = true;
-            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(10, 473);
+            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(32, 465);
             this.Bills_Details_Name_Department.Name = "Bills_Details_Name_Department";
             this.Bills_Details_Name_Department.Size = new System.Drawing.Size(68, 19);
             this.Bills_Details_Name_Department.TabIndex = 218;
@@ -507,7 +510,7 @@
             // Bills_Details_Note
             // 
             this.Bills_Details_Note.AutoSize = true;
-            this.Bills_Details_Note.Location = new System.Drawing.Point(12, 390);
+            this.Bills_Details_Note.Location = new System.Drawing.Point(32, 389);
             this.Bills_Details_Note.Name = "Bills_Details_Note";
             this.Bills_Details_Note.Size = new System.Drawing.Size(66, 19);
             this.Bills_Details_Note.TabIndex = 219;
@@ -516,7 +519,7 @@
             // Bills_Details_Date_Budget
             // 
             this.Bills_Details_Date_Budget.AutoSize = true;
-            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(10, 433);
+            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(32, 431);
             this.Bills_Details_Date_Budget.Name = "Bills_Details_Date_Budget";
             this.Bills_Details_Date_Budget.Size = new System.Drawing.Size(78, 19);
             this.Bills_Details_Date_Budget.TabIndex = 220;

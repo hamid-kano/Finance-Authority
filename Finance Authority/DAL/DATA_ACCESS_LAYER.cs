@@ -31,10 +31,7 @@ namespace Finance_Authority.DAL
             {
                 sqlconnection.Close();
             }
-
         }
-
-
         //هذا التابع لإجراء عملية القراءة من قاعدة البيانات
         public DataTable selectdata(string stored_prouceture, SqlParameter[] param)
         {

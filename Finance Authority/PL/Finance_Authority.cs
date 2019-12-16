@@ -47,7 +47,6 @@ namespace Finance_Authority.PL
         {
 
         }
-
         private void MetroToggle1_CheckedChanged(object sender, EventArgs e)
         {
             if (metroStyleManager1.Theme == MetroFramework.MetroThemeStyle.Light)
@@ -96,7 +95,6 @@ namespace Finance_Authority.PL
                     break;
             }
         }
-
         private void Authority_Button_Click(object sender, EventArgs e)
         {
             Authority_FORM FRM = new Authority_FORM();

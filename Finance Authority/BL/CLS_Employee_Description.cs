@@ -148,6 +148,14 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-
+        public DataTable Employee_Description_View_Spical_three()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Employee_Description_View_Spical_three", null);
+            DAL.close();
+            return Dt;
+        }
     }
 }

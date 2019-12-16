@@ -172,7 +172,7 @@
             // 
             // Contracts_Date_Start
             // 
-            this.Contracts_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Contracts_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Contracts_Date_Start.Location = new System.Drawing.Point(99, 155);
             this.Contracts_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
             this.Contracts_Date_Start.Name = "Contracts_Date_Start";

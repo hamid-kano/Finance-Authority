@@ -9,12 +9,15 @@ namespace Finance_Authority.BL
 {
     class CLS_Leoan_Payments
     {
-        public DataTable Leoan_Payments_View()
+        public DataTable Leoan_Payments_View(int leoan_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
-            DAL.open();
             DataTable Dt = new DataTable();
-            Dt = DAL.selectdata("Leoan_Payments_View", null);
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@leoan_id ", SqlDbType.Int);
+            param[0].Value = leoan_id;
+            Dt = DAL.selectdata("Leoan_Payments_View", param);
             DAL.close();
             return Dt;
         }

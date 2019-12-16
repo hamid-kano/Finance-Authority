@@ -64,6 +64,7 @@
             this.Loans_CombAthuontic = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.Loans_CombOffice = new MetroFramework.Controls.MetroComboBox();
+            this.Loans_Dail = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
@@ -476,11 +477,23 @@
             this.Loans_CombOffice.UseSelectable = true;
             this.Loans_CombOffice.SelectedValueChanged += new System.EventHandler(this.Loans_CombOffice_SelectedValueChanged);
             // 
+            // Loans_Dail
+            // 
+            this.Loans_Dail.Highlight = true;
+            this.Loans_Dail.Location = new System.Drawing.Point(158, 479);
+            this.Loans_Dail.Name = "Loans_Dail";
+            this.Loans_Dail.Size = new System.Drawing.Size(87, 37);
+            this.Loans_Dail.TabIndex = 270;
+            this.Loans_Dail.Text = "تفاصل";
+            this.Loans_Dail.UseSelectable = true;
+            this.Loans_Dail.Click += new System.EventHandler(this.Loans_Dail_Click);
+            // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 539);
+            this.Controls.Add(this.Loans_Dail);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.Loans_CombAthuontic);
             this.Controls.Add(this.metroLabel10);
@@ -556,5 +569,6 @@
         private MetroFramework.Controls.MetroComboBox Loans_CombAthuontic;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroComboBox Loans_CombOffice;
+        private MetroFramework.Controls.MetroButton Loans_Dail;
     }
 }

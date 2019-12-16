@@ -265,7 +265,7 @@ namespace Finance_Authority.PL
 
         private void Budget_Now_Click(object sender, EventArgs e)
         {
-            Budget_Now FRM = new Budget_Now();
+            Budget_Now_FORM FRM = new Budget_Now_FORM();
             FRM.ShowDialog();
         }
     }

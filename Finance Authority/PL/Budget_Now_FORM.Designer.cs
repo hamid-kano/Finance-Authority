@@ -1,6 +1,6 @@
 ﻿namespace Finance_Authority.PL
 {
-    partial class Budget_Now
+    partial class Budget_Now_FORM
     {
         /// <summary>
         /// Required designer variable.

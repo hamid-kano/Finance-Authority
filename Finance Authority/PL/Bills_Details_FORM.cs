@@ -255,7 +255,7 @@ namespace Finance_Authority.PL
             }
             for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
             {
-
+                Bill_Total.Text =( double.TryParse(Bill_Total.Text, out double temp) ?0 : temp +Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
             }
         }
 

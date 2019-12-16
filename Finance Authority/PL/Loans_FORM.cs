@@ -243,6 +243,7 @@ namespace Finance_Authority.PL
         private void Loans_Dail_Click(object sender, EventArgs e)
         {
             Leoan_Payments_FORM FRM = new Leoan_Payments_FORM();
+            FRM.Leoan_Payments_Total.Text=this.Loans_Gridview.CurrentRow.Cells[1].Value.ToString();
             FRM.ShowDialog();
         }
     }

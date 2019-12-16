@@ -12,6 +12,7 @@ namespace Finance_Authority.PL
 {
     public partial class Leoan_Payments_FORM : MetroFramework.Forms.MetroForm
     {
+        BL.CLS_Loan Loa = new BL.CLS_Loan();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
@@ -19,6 +20,9 @@ namespace Finance_Authority.PL
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         BL.Authority Auth = new BL.Authority();
         BL.Department Dep = new BL.Department();
+        DataTable Dt = new DataTable();
+        double sum;
+        double sumtotal;
         public Leoan_Payments_FORM()
         {
             InitializeComponent();
@@ -31,12 +35,13 @@ namespace Finance_Authority.PL
             Leoan_Payments_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Leoan_Payments_Comb_Budget.DisplayMember = "Date";
             Leoan_Payments_Comb_Budget.ValueMember = "Budget_Id";
-           
+            Dt= pay_Leo.Leoan_Payments_View(Program.Loan_id);
+            for(int i=0;i< Dt.Rows.Count;i++)
+            {
+                 sum =sum + Convert.ToDouble( Dt.Rows[i][1]);
+            }
         }
-
-       
-
-        private void Leoan_Payments_exit_Click(object sender, EventArgs e)
+       private void Leoan_Payments_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -184,8 +189,12 @@ namespace Finance_Authority.PL
             Leoan_Payments_Gridview.Columns[0].Visible = false;
         }
 
-       
-
-        
+        private void Leoan_Payments_FORM_Load(object sender, EventArgs e)
+        {
+            Leoan_Payments_Total_Payment_Amount.Text = sum.ToString();
+            sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
+            sumtotal = sumtotal - sum;
+            Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
+        }
     }
 }

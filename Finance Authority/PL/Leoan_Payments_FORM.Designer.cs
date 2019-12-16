@@ -52,6 +52,12 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.update = new MetroFramework.Controls.MetroButton();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.Leoan_Payments_Total_Payment_Amount = new MetroFramework.Controls.MetroTextBox();
+            this.Leoan_Payments_Total = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.Leoan_Payments_Remind_Amont = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Leoan_Payments_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +65,7 @@
             // 
             this.Leoan_Payments_Comb_Budget.FormattingEnabled = true;
             this.Leoan_Payments_Comb_Budget.ItemHeight = 23;
-            this.Leoan_Payments_Comb_Budget.Location = new System.Drawing.Point(83, 291);
+            this.Leoan_Payments_Comb_Budget.Location = new System.Drawing.Point(110, 291);
             this.Leoan_Payments_Comb_Budget.Name = "Leoan_Payments_Comb_Budget";
             this.Leoan_Payments_Comb_Budget.Size = new System.Drawing.Size(163, 29);
             this.Leoan_Payments_Comb_Budget.TabIndex = 3;
@@ -67,8 +73,9 @@
             // 
             // Leoan_Payments_Date
             // 
+            this.Leoan_Payments_Date.CustomFormat = "dd/MM/yyyy";
             this.Leoan_Payments_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Leoan_Payments_Date.Location = new System.Drawing.Point(83, 241);
+            this.Leoan_Payments_Date.Location = new System.Drawing.Point(110, 241);
             this.Leoan_Payments_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Leoan_Payments_Date.Name = "Leoan_Payments_Date";
             this.Leoan_Payments_Date.Size = new System.Drawing.Size(163, 29);
@@ -162,7 +169,7 @@
             this.Leoan_Payments_Gridview.EnableHeadersVisualStyles = false;
             this.Leoan_Payments_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Leoan_Payments_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Leoan_Payments_Gridview.Location = new System.Drawing.Point(254, 93);
+            this.Leoan_Payments_Gridview.Location = new System.Drawing.Point(297, 93);
             this.Leoan_Payments_Gridview.Name = "Leoan_Payments_Gridview";
             this.Leoan_Payments_Gridview.ReadOnly = true;
             this.Leoan_Payments_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -176,7 +183,7 @@
             this.Leoan_Payments_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Leoan_Payments_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Leoan_Payments_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Leoan_Payments_Gridview.Size = new System.Drawing.Size(746, 404);
+            this.Leoan_Payments_Gridview.Size = new System.Drawing.Size(703, 404);
             this.Leoan_Payments_Gridview.TabIndex = 70;
             this.Leoan_Payments_Gridview.Click += new System.EventHandler(this.Leoan_Payments_Gridview_Click);
             // 
@@ -249,7 +256,7 @@
             this.Leoan_Payments_Amont.CustomButton.UseSelectable = true;
             this.Leoan_Payments_Amont.CustomButton.Visible = false;
             this.Leoan_Payments_Amont.Lines = new string[0];
-            this.Leoan_Payments_Amont.Location = new System.Drawing.Point(86, 153);
+            this.Leoan_Payments_Amont.Location = new System.Drawing.Point(113, 153);
             this.Leoan_Payments_Amont.MaxLength = 32767;
             this.Leoan_Payments_Amont.Name = "Leoan_Payments_Amont";
             this.Leoan_Payments_Amont.PasswordChar = '\0';
@@ -280,7 +287,7 @@
             this.Leoan_Payments_Notes.CustomButton.UseSelectable = true;
             this.Leoan_Payments_Notes.CustomButton.Visible = false;
             this.Leoan_Payments_Notes.Lines = new string[0];
-            this.Leoan_Payments_Notes.Location = new System.Drawing.Point(86, 200);
+            this.Leoan_Payments_Notes.Location = new System.Drawing.Point(113, 200);
             this.Leoan_Payments_Notes.MaxLength = 32767;
             this.Leoan_Payments_Notes.Name = "Leoan_Payments_Notes";
             this.Leoan_Payments_Notes.PasswordChar = '\0';
@@ -316,16 +323,16 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(4, 157);
+            this.metroLabel2.Location = new System.Drawing.Point(18, 157);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(68, 19);
             this.metroLabel2.TabIndex = 223;
-            this.metroLabel2.Text = "المبلغ";
+            this.metroLabel2.Text = "مبلغ الدفعة";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 204);
+            this.metroLabel3.Location = new System.Drawing.Point(18, 204);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(66, 19);
             this.metroLabel3.TabIndex = 224;
@@ -334,7 +341,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 251);
+            this.metroLabel6.Location = new System.Drawing.Point(18, 251);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(34, 19);
             this.metroLabel6.TabIndex = 227;
@@ -343,7 +350,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 301);
+            this.metroLabel7.Location = new System.Drawing.Point(18, 301);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(78, 19);
             this.metroLabel7.TabIndex = 228;
@@ -360,11 +367,137 @@
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(18, 392);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel4.TabIndex = 270;
+            this.metroLabel4.Text = "المبلغ المدفوع";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(18, 345);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel5.TabIndex = 269;
+            this.metroLabel5.Text = "مبلغ القرض";
+            // 
+            // Leoan_Payments_Total_Payment_Amount
+            // 
+            // 
+            // 
+            // 
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Image = null;
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Name = "";
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.TabIndex = 1;
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.UseSelectable = true;
+            this.Leoan_Payments_Total_Payment_Amount.CustomButton.Visible = false;
+            this.Leoan_Payments_Total_Payment_Amount.Lines = new string[0];
+            this.Leoan_Payments_Total_Payment_Amount.Location = new System.Drawing.Point(111, 389);
+            this.Leoan_Payments_Total_Payment_Amount.MaxLength = 32767;
+            this.Leoan_Payments_Total_Payment_Amount.Name = "Leoan_Payments_Total_Payment_Amount";
+            this.Leoan_Payments_Total_Payment_Amount.PasswordChar = '\0';
+            this.Leoan_Payments_Total_Payment_Amount.ReadOnly = true;
+            this.Leoan_Payments_Total_Payment_Amount.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Leoan_Payments_Total_Payment_Amount.SelectedText = "";
+            this.Leoan_Payments_Total_Payment_Amount.SelectionLength = 0;
+            this.Leoan_Payments_Total_Payment_Amount.SelectionStart = 0;
+            this.Leoan_Payments_Total_Payment_Amount.ShortcutsEnabled = true;
+            this.Leoan_Payments_Total_Payment_Amount.Size = new System.Drawing.Size(162, 23);
+            this.Leoan_Payments_Total_Payment_Amount.TabIndex = 268;
+            this.Leoan_Payments_Total_Payment_Amount.UseSelectable = true;
+            this.Leoan_Payments_Total_Payment_Amount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Leoan_Payments_Total_Payment_Amount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Leoan_Payments_Total
+            // 
+            // 
+            // 
+            // 
+            this.Leoan_Payments_Total.CustomButton.Image = null;
+            this.Leoan_Payments_Total.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Leoan_Payments_Total.CustomButton.Name = "";
+            this.Leoan_Payments_Total.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Leoan_Payments_Total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Leoan_Payments_Total.CustomButton.TabIndex = 1;
+            this.Leoan_Payments_Total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Leoan_Payments_Total.CustomButton.UseSelectable = true;
+            this.Leoan_Payments_Total.CustomButton.Visible = false;
+            this.Leoan_Payments_Total.Lines = new string[0];
+            this.Leoan_Payments_Total.Location = new System.Drawing.Point(111, 342);
+            this.Leoan_Payments_Total.MaxLength = 32767;
+            this.Leoan_Payments_Total.Name = "Leoan_Payments_Total";
+            this.Leoan_Payments_Total.PasswordChar = '\0';
+            this.Leoan_Payments_Total.ReadOnly = true;
+            this.Leoan_Payments_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Leoan_Payments_Total.SelectedText = "";
+            this.Leoan_Payments_Total.SelectionLength = 0;
+            this.Leoan_Payments_Total.SelectionStart = 0;
+            this.Leoan_Payments_Total.ShortcutsEnabled = true;
+            this.Leoan_Payments_Total.Size = new System.Drawing.Size(162, 23);
+            this.Leoan_Payments_Total.TabIndex = 267;
+            this.Leoan_Payments_Total.UseSelectable = true;
+            this.Leoan_Payments_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Leoan_Payments_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(18, 438);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel8.TabIndex = 272;
+            this.metroLabel8.Text = "المبلغ المتبقي";
+            // 
+            // Leoan_Payments_Remind_Amont
+            // 
+            // 
+            // 
+            // 
+            this.Leoan_Payments_Remind_Amont.CustomButton.Image = null;
+            this.Leoan_Payments_Remind_Amont.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Leoan_Payments_Remind_Amont.CustomButton.Name = "";
+            this.Leoan_Payments_Remind_Amont.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Leoan_Payments_Remind_Amont.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Leoan_Payments_Remind_Amont.CustomButton.TabIndex = 1;
+            this.Leoan_Payments_Remind_Amont.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Leoan_Payments_Remind_Amont.CustomButton.UseSelectable = true;
+            this.Leoan_Payments_Remind_Amont.CustomButton.Visible = false;
+            this.Leoan_Payments_Remind_Amont.Lines = new string[0];
+            this.Leoan_Payments_Remind_Amont.Location = new System.Drawing.Point(110, 435);
+            this.Leoan_Payments_Remind_Amont.MaxLength = 32767;
+            this.Leoan_Payments_Remind_Amont.Name = "Leoan_Payments_Remind_Amont";
+            this.Leoan_Payments_Remind_Amont.PasswordChar = '\0';
+            this.Leoan_Payments_Remind_Amont.ReadOnly = true;
+            this.Leoan_Payments_Remind_Amont.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Leoan_Payments_Remind_Amont.SelectedText = "";
+            this.Leoan_Payments_Remind_Amont.SelectionLength = 0;
+            this.Leoan_Payments_Remind_Amont.SelectionStart = 0;
+            this.Leoan_Payments_Remind_Amont.ShortcutsEnabled = true;
+            this.Leoan_Payments_Remind_Amont.Size = new System.Drawing.Size(162, 23);
+            this.Leoan_Payments_Remind_Amont.TabIndex = 271;
+            this.Leoan_Payments_Remind_Amont.UseSelectable = true;
+            this.Leoan_Payments_Remind_Amont.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Leoan_Payments_Remind_Amont.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Leoan_Payments_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 560);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.Leoan_Payments_Remind_Amont);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.Leoan_Payments_Total_Payment_Amount);
+            this.Controls.Add(this.Leoan_Payments_Total);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
@@ -389,6 +522,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "دفعات القروض";
+            this.Load += new System.EventHandler(this.Leoan_Payments_FORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Leoan_Payments_Gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -407,7 +541,6 @@
         private MetroFramework.Controls.MetroTextBox Leoan_Payments_Search_All;
         private MetroFramework.Controls.MetroComboBox Leoan_Payments_CombSerach;
         private MetroFramework.Controls.MetroButton Leoan_Payments_Print;
-        private MetroFramework.Controls.MetroTextBox Leoan_Payments_Amont;
         private MetroFramework.Controls.MetroTextBox Leoan_Payments_Notes;
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -416,5 +549,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroButton update;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox Leoan_Payments_Total_Payment_Amount;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroTextBox Leoan_Payments_Remind_Amont;
+        private MetroFramework.Controls.MetroTextBox Leoan_Payments_Amont;
+        public MetroFramework.Controls.MetroTextBox Leoan_Payments_Total;
     }
 }

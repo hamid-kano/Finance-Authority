@@ -20,12 +20,10 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Department_Gridview.DataSource = Dep.Department_View();
             this.Department_Gridview.Columns[0].Visible = false;
+            this.Department_Gridview.Columns[4].Visible = false;
             Department_CombAuthority.DataSource = Auth.Authority_view();
             Department_CombAuthority.DisplayMember = "اسم الهيئة";
             Department_CombAuthority.ValueMember = "Authority_ID";
-            //Department_CombOffice.DataSource = Dep.Department_CombOffice();
-            //Department_CombOffice.DisplayMember = "Office_Name";
-            //Department_CombOffice.ValueMember = "Office_ID";
         }
 
         private void Department_new_Click(object sender, EventArgs e)
@@ -52,6 +50,7 @@ namespace Finance_Authority.PL
                 Dep.Department_add(Department_Name.Text, Department_Notes.Text, Convert.ToInt32(Department_CombOffice.SelectedValue));
                 this.Department_Gridview.DataSource = Dep.Department_View();
                 this.Department_Gridview.Columns[0].Visible = false;
+                this.Department_Gridview.Columns[4].Visible = false;
                 Program.Add_Message();
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
@@ -86,6 +85,7 @@ namespace Finance_Authority.PL
                 Dep.Department_update(Convert.ToInt32(Department_CombOffice.SelectedValue), Department_Name.Text, Department_Notes.Text, Program.Department_ID);
                 this.Department_Gridview.DataSource = Dep.Department_View();
                 this.Department_Gridview.Columns[0].Visible = false;
+                this.Department_Gridview.Columns[4].Visible = false;
                 Program.Update_Message();
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
@@ -109,6 +109,7 @@ namespace Finance_Authority.PL
                 Department_Name.Text = this.Department_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Department_Notes.Text = this.Department_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Department_CombOffice.Text = this.Department_Gridview.CurrentRow.Cells[3].Value.ToString();
+                Department_CombAuthority.Text= this.Department_Gridview.CurrentRow.Cells[4].Value.ToString();
                 Department_update.Enabled = true;
                 Department_delete.Enabled = true;
                 Department_add.Enabled = false;
@@ -122,6 +123,7 @@ namespace Finance_Authority.PL
                 Dep.Department_Delete(Program.Department_ID);
                 this.Department_Gridview.DataSource = Dep.Department_View();
                 this.Department_Gridview.Columns[0].Visible = false;
+                this.Department_Gridview.Columns[4].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
@@ -135,6 +137,7 @@ namespace Finance_Authority.PL
         {
             this.Department_Gridview.DataSource = Dep.Department_Search(Department_textsearch.Text);
             this.Department_Gridview.Columns[0].Visible = false;
+            this.Department_Gridview.Columns[4].Visible = false;
         }
 
         private void Department_CombAuthority_SelectedValueChanged(object sender, EventArgs e)

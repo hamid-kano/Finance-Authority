@@ -96,6 +96,11 @@ namespace Finance_Authority
         {
             MessageBox.Show("تمت عملية الاضافة بنجاح", "الاضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        public static void Special_Message(string contentMessage)
+        {
+            MessageBox.Show(contentMessage, "معلومات", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public static void Update_Message()
         {
             MessageBox.Show("تمت عملية التعديل بنجاح", "التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);

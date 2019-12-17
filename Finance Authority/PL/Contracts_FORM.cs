@@ -21,134 +21,28 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Contracts_Gridview.DataSource = cont.Contracts_View();
             Contracts_Gridview.Columns[0].Visible = false;
-            Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Contracts_Comb_Department.DisplayMember = "Department_Name";
-            Contracts_Comb_Department.ValueMember = "Department_ID";
-            Contracts_Comb_Employee.SelectedIndex = 0;
-
-
-        }
-
-        private void Contracts_new_Click(object sender, EventArgs e)
-        {
-            Contracts_add.Enabled = true;
-            Contracts_Type.Text = "";
-            Contracts_Notes.Text = "";
-            Contracts_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Contracts_Comb_Department.DisplayMember = "Department_Name";
-            Contracts_Comb_Department.ValueMember = "Department_ID";
-
+            Contracts_Gridview.Columns[7].Visible = false;
         }
 
         private void Contracts_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void Contracts_Comb_Department_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int idDepartment = Convert.ToInt32(Contracts_Comb_Department.SelectedValue);
-                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
-                Contracts_Comb_Employee.DataSource = cont.Contracts_Comb_Employee(idDepartment);
-                Contracts_Comb_Employee.DisplayMember = "fullName";
-                Contracts_Comb_Employee.ValueMember = "Emp_id";
-
-            }
-            catch (Exception)
-            {
-
-                //throw;
-            }       
-        }
-
-        private void Contracts_add_Click(object sender, EventArgs e)
-        {
-            if (Contracts_Type.Text == String.Empty)
-            {
-
-                MessageBox.Show("ادخل نوع العقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            int idDepartment = Convert.ToInt32(Contracts_Comb_Department.SelectedValue);
-            int idemployee = Convert.ToInt32(Contracts_Comb_Employee.SelectedValue);
-            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
-            if (DT.Rows.Count > 0)
-            {
-                DataRow row = DT.Rows[0];
-                int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
-                //MessageBox.Show(id_EmployeeDES.ToString());
-             //   bool Functunal_status = Contracts_end.Checked ? true : false;
-                cont.Contracts_add(Contracts_Type.Text , Contracts_Date_Start.Value , Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
-                     , Contracts_Notes.Text, id_EmployeeDES );
-                this.Contracts_Gridview.DataSource = cont.Contracts_View();
-                Contracts_Gridview.Columns[0].Visible = false;
-                Program.Add_Message();
-                Contracts_Type.Text = "";
-                Contracts_Notes.Text = "";
-                Contracts_add.Enabled = false;
-            }
-
-
-        }
-
         private void Contracts_Gridview_Click(object sender, EventArgs e)
         {
             if (Contracts_Gridview.CurrentRow != null)
             {
-                Program.Contracts_id = Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[0].Value.ToString());
+                Program.Employee_Description_id= Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[7].Value.ToString());
                 _Contract_id= Convert.ToInt32(this.Contracts_Gridview.CurrentRow.Cells[0].Value.ToString());
                 Contracts_Type.Text = this.Contracts_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Contracts_Date_Start.Text = this.Contracts_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Contracts_Date_end.Text = this.Contracts_Gridview.CurrentRow.Cells[3].Value.ToString();
-                Contracts_Comb_Employee.Text = this.Contracts_Gridview.CurrentRow.Cells[6].Value.ToString();
-                Contracts_Comb_Department.Text = this.Contracts_Gridview.CurrentRow.Cells[7].Value.ToString();
+                Contracts_Employee.Text = this.Contracts_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Contracts_Notes.Text = this.Contracts_Gridview.CurrentRow.Cells[5].Value.ToString();
                 Contracts_Comb_Contract_statue.Text= this.Contracts_Gridview.CurrentRow.Cells[4].Value.ToString();
                 //Contracts_end.Checked = Convert.ToBoolean(this.Contracts_Gridview.CurrentRow.Cells[4].Value) ? true : false;
                 //Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
-                Contracts_update.Enabled = true;
-                Contracts_delete.Enabled = true;
-                Contracts_add.Enabled = false;
-            }
-        }
-
-        private void Contracts_update_Click(object sender, EventArgs e)
-        {
-            int idDepartment = Convert.ToInt32(Contracts_Comb_Department.SelectedValue);
-            int idemployee = Convert.ToInt32(Contracts_Comb_Employee.SelectedValue);
-            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
-            if (DT.Rows.Count > 0)
-            {
-                DataRow row = DT.Rows[0];
-                int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
-                //MessageBox.Show(id_EmployeeDES.ToString());
-               // bool Functunal_status = Contracts_end.Checked ? true : false;
-                cont.Contracts_update(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
-                     , Contracts_Notes.Text, id_EmployeeDES, Program.Contracts_id);
-                this.Contracts_Gridview.DataSource = cont.Contracts_View();
-                Contracts_Gridview.Columns[0].Visible = false;
-                Program.Update_Message();
-                Contracts_Type.Text = "";
-                Contracts_Notes.Text = "";
-                Contracts_add.Enabled = false;
-            }
-            
-        }
-
-        private void Contracts_delete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("هل تريد حذف العقد .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                cont.Contracts_Delete(Program.Contracts_id);
-                this.Contracts_Gridview.DataSource = cont.Contracts_View();
-                Contracts_Gridview.Columns[0].Visible = false;
-                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Contracts_Type.Text = "";
-                Contracts_Notes.Text = "";
-                Contracts_update.Enabled = false;
-                Contracts_delete.Enabled = false;
+                Contracts_Details.Enabled = true;
             }
         }
 
@@ -156,18 +50,21 @@ namespace Finance_Authority.PL
         {
             this.Contracts_Gridview.DataSource = cont.Contracts_Search_All(Contracts_Search_All.Text);
             Contracts_Gridview.Columns[0].Visible = false;
+            Contracts_Gridview.Columns[7].Visible = false;
         }
 
         private void Contracts_Date_first_ValueChanged(object sender, EventArgs e)
         {
             this.Contracts_Gridview.DataSource = cont.Contracts_Search_Between_Date(Contracts_Date_first.Value , Contracts_Date_last.Value);
             Contracts_Gridview.Columns[0].Visible = false;
+            Contracts_Gridview.Columns[7].Visible = false;
         }
 
         private void Contracts_Date_last_ValueChanged(object sender, EventArgs e)
         {
             this.Contracts_Gridview.DataSource = cont.Contracts_Search_Between_Date(Contracts_Date_first.Value, Contracts_Date_last.Value);
             Contracts_Gridview.Columns[0].Visible = false;
+            Contracts_Gridview.Columns[7].Visible = false;
         }
 
         private void Contracts_Print_Click(object sender, EventArgs e)
@@ -186,28 +83,10 @@ namespace Finance_Authority.PL
             }
         }
 
-        private void metroLabel3_Click(object sender, EventArgs e)
+        private void Contracts_Details_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void update_Click(object sender, EventArgs e)
-        {
-            this.Contracts_Gridview.DataSource = cont.Contracts_View();
-            Contracts_Gridview.Columns[0].Visible = false;
-        }
-
-        private void Contracts_Add_Doc_Click(object sender, EventArgs e)
-        {
-            if (_Contract_id!=null)
-            {
-                Document_FORM FRM = new Document_FORM(_Contract_id, "عقد");
-                FRM.ShowDialog();
-            }
-            else
-            {
-
-            }
+            Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
+            FRM.ShowDialog();
         }
     }
 }

@@ -47,6 +47,9 @@ namespace Finance_Authority.PL
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(Bills_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;
+                Bills_Brows_Docs.Enabled = true;
+                Bills_update.Enabled = true;
+
             }
             else 
             {
@@ -54,6 +57,8 @@ namespace Finance_Authority.PL
                this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                this.Bill_Objects_dataGrid.Columns[5].Visible = false;
                Bills_add.Enabled = true;
+                Bills_update.Enabled = false;
+
             }
             this.Bill_Objects_dataGrid.Columns[4].ReadOnly = true;
         }
@@ -61,6 +66,7 @@ namespace Finance_Authority.PL
         private void Bills_new_Click(object sender, EventArgs e)
         {
             Bills_add.Enabled = true;
+            Bills_Brows_Docs.Enabled = false;
             Bills_Buyer_Name.Text = "";
             Bills_Coin_Type.Text = "";
             Bills_Exchange_rate.Text = "";
@@ -82,15 +88,30 @@ namespace Finance_Authority.PL
         {
             if (Bill_Objects_dataGrid.CurrentRow != null)
             {
-                Bills_update.Enabled = true;
-                Bills_delete.Enabled = true;
-                Bills_add.Enabled = false;
+                Bills_update.Enabled = false;
+                Bills_delete.Enabled = false;
+                Bills_add.Enabled = true;
             }
         }
 
         private void Bills_add_Click(object sender, EventArgs e)
         {
-            if (!(Bill_Objects_dataGrid.Rows.Count>0))
+            if (Bills_NO_Bill.Text=="")
+            {
+                Program.Special_Message("يجب اضافة رقم الفاتورة");return;
+            }
+            if (Bills_Buyer_Name.Text == "")
+            {
+                Program.Special_Message("يجب اضافة اسم البائع"); return;
+            }
+            if (Bills_Coin_Type.Text == "")
+            {
+                Program.Special_Message("يجب اختيار نوع العملة"); return;
+            }
+
+
+
+            if (!(Bill_Objects_dataGrid.Rows.Count-1  >0))
             {
                 MessageBox.Show("لا يمكنك اضافة فاتورة دون مواد","تنبيه",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
@@ -110,8 +131,15 @@ namespace Finance_Authority.PL
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;
+
+            if (MessageBox.Show("هل تريد اضافة ملحقات لهذه الفاتورة؟","ملحقات",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation)==DialogResult.Yes)
+            {
+                Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
+                FRM.ShowDialog();
+            }
             Program.Add_Message();
             Bills_add.Enabled = false;
+            Bills_Brows_Docs.Enabled = false;
             Bills_Buyer_Name.Text = "";
             Bills_Coin_Type.Text = "";
             Bills_Exchange_rate.Text = "";
@@ -123,7 +151,7 @@ namespace Finance_Authority.PL
 
         private void Bills_update_Click(object sender, EventArgs e)
         {
-            if (!(Bill_Objects_dataGrid.Rows.Count > 1))
+            if (!(Bill_Objects_dataGrid.Rows.Count-1 > 1))
             {
                 MessageBox.Show("لا يمكنك حذف جميع مواد الفاتورة وتعديلها", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -158,8 +186,12 @@ namespace Finance_Authority.PL
                 Bills_FORM frm = Bills_FORM.getMainForm;
                 frm.Bills_dataGrid.DataSource = obj.Bills_View();
                 Program.Delete_Message();
-                Bills_update.Enabled = false;
-                Bills_delete.Enabled = false;
+                if (_Bill_ID==-1)
+                {
+                    Bills_update.Enabled = false;
+                    Bills_delete.Enabled = false;
+                }
+                Bills_Brows_Docs.Enabled = false;
                 Bills_Buyer_Name.Text = "";
                 Bills_Coin_Type.Text = "";
                 Bills_Exchange_rate.Text = "";
@@ -253,11 +285,19 @@ namespace Finance_Authority.PL
                 double cellQty = Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value is DBNull ? 1 : Convert.ToDouble(Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value);
                 Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[4].Value = cellQty * cellPrice;
             }
-            for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
+            if (e.ColumnIndex == 3)
             {
-                Bill_Total.Text =( double.TryParse(Bill_Total.Text, out double temp) ?0 : temp +Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
+                for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
+                {
+                    Bill_Total.Text = (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp + Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
+                }
             }
         }
 
+        private void Bills_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM( _Bill_ID,"فاتورة");
+            FRM.ShowDialog();
+        }
     }
 }

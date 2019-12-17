@@ -67,7 +67,8 @@ namespace Finance_Authority.PL
                 Employee_Marital_status.Text = Dt_emp.Rows[0][14].ToString();
                 Employee_Pr_Service_Years.Text = Dt_emp.Rows[0][15].ToString();
                 // معلومات الوصف الوظيفي
-
+                Employee_CombAthuontic.Text = Dt.Rows[0][10].ToString();
+                Employee_CombOffice.Text = Dt.Rows[0][9].ToString();
                 Employee_Description_N0_Book.Text = Dt.Rows[0][4].ToString();
                 Employee_Description_Salery.Text = Dt.Rows[0][5].ToString(); ;
                 Employee_Description_Comb_Department.Text = Dt.Rows[0][6].ToString();
@@ -75,7 +76,8 @@ namespace Finance_Authority.PL
                 Employee_Description_Comb_Satutes.Text = Dt.Rows[0][1].ToString();
                 Employee_Description_Now.Checked = Convert.ToBoolean(Dt.Rows[0][2].ToString()) ? true : false;
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
-
+               
+               
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
                 {
                     StatusContractNewOrOld = true;
@@ -298,7 +300,7 @@ namespace Finance_Authority.PL
                                 return;
                         }
                     }
-
+                }
                     Emp.Employee_update(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
                   , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                   , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
@@ -306,8 +308,9 @@ namespace Finance_Authority.PL
                     //
                     if (Employee_Description_Update.Checked)
                     {
-                        Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue),
-                           Employee_id, _Empolyee_Description_ID);
+                        Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue),
+                            Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue),
+                              Employee_id, _Empolyee_Description_ID);
                     }
                     else
                     {
@@ -353,7 +356,7 @@ namespace Finance_Authority.PL
                         }
 
                     }
-                }
+              
                 Program.Update_Message();
                 Employee_Description_N0_Book.Text = "";
                 Employee_Description_Salery.Text = "";

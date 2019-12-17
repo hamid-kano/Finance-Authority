@@ -124,6 +124,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Employee_Description_Search_Office(String Office_Name)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Office_Name", SqlDbType.NVarChar);
+            param[0].Value = Office_Name;
+            Dt = DAL.selectdata("Employee_Description_Search_Office", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Employee_Description_Search_All(String text_change)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

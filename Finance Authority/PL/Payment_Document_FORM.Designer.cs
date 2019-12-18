@@ -74,6 +74,7 @@
             // 
             // Payment_Document_Date_last
             // 
+            this.Payment_Document_Date_last.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Payment_Document_Date_last.Location = new System.Drawing.Point(799, 17);
             this.Payment_Document_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
@@ -85,8 +86,9 @@
             // 
             // Payment_Document_Date_first
             // 
+            this.Payment_Document_Date_first.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_first.Location = new System.Drawing.Point(513, 17);
+            this.Payment_Document_Date_first.Location = new System.Drawing.Point(522, 17);
             this.Payment_Document_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_first.Name = "Payment_Document_Date_first";
             this.Payment_Document_Date_first.RightToLeftLayout = true;
@@ -222,6 +224,7 @@
             // 
             // Payment_Document_DateTime
             // 
+            this.Payment_Document_DateTime.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Payment_Document_DateTime.Location = new System.Drawing.Point(125, 370);
             this.Payment_Document_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
@@ -670,6 +673,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1037, 642);
             this.Controls.Add(this.Payment_Document_Brows_Docs);
             this.Controls.Add(this.update);
@@ -708,7 +712,9 @@
             this.Controls.Add(this.Payment_Document_add);
             this.Controls.Add(this.Payment_Document_new);
             this.Controls.Add(this.Payment_Document_DateTime);
+            this.MaximizeBox = false;
             this.Name = "Payment_Document_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "سندات الدفع";

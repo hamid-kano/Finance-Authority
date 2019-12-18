@@ -287,6 +287,8 @@ namespace Finance_Authority.PL
         {
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+            Reciver_Document_Date_first.Value = DateTime.Now.Date;
+            Reciver_Document_Date_last.Value = DateTime.Now.Date;
         }
 
         private void Reciver_Document_Brows_Docs_Click(object sender, EventArgs e)

@@ -396,6 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.update);
             this.Controls.Add(this.Coin_Exc_Notes);
@@ -418,7 +419,9 @@
             this.Controls.Add(this.Coin_Exchange_add);
             this.Controls.Add(this.Coin_Exchange_new);
             this.Controls.Add(this.Coin_Exchange_Gridview);
+            this.MaximizeBox = false;
             this.Name = "Coin_Exchange_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "التحويل المالي";

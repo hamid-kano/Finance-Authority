@@ -225,6 +225,8 @@ namespace Finance_Authority.PL
         {
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
             EX_Orders_CombCategorise.DataSource = order.EX_Orders_CombCategorise();
+            EX_Orders_first.Value = DateTime.Now.Date;
+            EX_Orders_last.Value = DateTime.Now.Date;
         }
 
         private void EX_Orders_Brows_Docs_Click(object sender, EventArgs e)

@@ -51,7 +51,7 @@
             // Office_exit
             // 
             this.Office_exit.Highlight = true;
-            this.Office_exit.Location = new System.Drawing.Point(698, 377);
+            this.Office_exit.Location = new System.Drawing.Point(709, 378);
             this.Office_exit.Name = "Office_exit";
             this.Office_exit.Size = new System.Drawing.Size(87, 37);
             this.Office_exit.TabIndex = 7;
@@ -63,7 +63,7 @@
             // 
             this.Office_delete.Enabled = false;
             this.Office_delete.Highlight = true;
-            this.Office_delete.Location = new System.Drawing.Point(586, 377);
+            this.Office_delete.Location = new System.Drawing.Point(597, 378);
             this.Office_delete.Name = "Office_delete";
             this.Office_delete.Size = new System.Drawing.Size(87, 37);
             this.Office_delete.TabIndex = 6;
@@ -75,7 +75,7 @@
             // 
             this.Office_update.Enabled = false;
             this.Office_update.Highlight = true;
-            this.Office_update.Location = new System.Drawing.Point(474, 377);
+            this.Office_update.Location = new System.Drawing.Point(485, 378);
             this.Office_update.Name = "Office_update";
             this.Office_update.Size = new System.Drawing.Size(87, 37);
             this.Office_update.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             this.Office_add.Enabled = false;
             this.Office_add.Highlight = true;
-            this.Office_add.Location = new System.Drawing.Point(362, 377);
+            this.Office_add.Location = new System.Drawing.Point(373, 378);
             this.Office_add.Name = "Office_add";
             this.Office_add.Size = new System.Drawing.Size(87, 37);
             this.Office_add.TabIndex = 4;
@@ -98,7 +98,7 @@
             // Office_new
             // 
             this.Office_new.Highlight = true;
-            this.Office_new.Location = new System.Drawing.Point(250, 377);
+            this.Office_new.Location = new System.Drawing.Point(261, 378);
             this.Office_new.Name = "Office_new";
             this.Office_new.Size = new System.Drawing.Size(87, 37);
             this.Office_new.TabIndex = 3;
@@ -136,7 +136,7 @@
             this.Office_Gridview.EnableHeadersVisualStyles = false;
             this.Office_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Office_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Office_Gridview.Location = new System.Drawing.Point(267, 87);
+            this.Office_Gridview.Location = new System.Drawing.Point(257, 87);
             this.Office_Gridview.Name = "Office_Gridview";
             this.Office_Gridview.ReadOnly = true;
             this.Office_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -150,7 +150,7 @@
             this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Office_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Office_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Office_Gridview.Size = new System.Drawing.Size(540, 270);
+            this.Office_Gridview.Size = new System.Drawing.Size(550, 270);
             this.Office_Gridview.TabIndex = 52;
             this.Office_Gridview.Click += new System.EventHandler(this.Office_Gridview_Click);
             // 
@@ -160,7 +160,7 @@
             // 
             // 
             this.Office_Name.CustomButton.Image = null;
-            this.Office_Name.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Office_Name.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.Office_Name.CustomButton.Name = "";
             this.Office_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Office_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -169,7 +169,7 @@
             this.Office_Name.CustomButton.UseSelectable = true;
             this.Office_Name.CustomButton.Visible = false;
             this.Office_Name.Lines = new string[0];
-            this.Office_Name.Location = new System.Drawing.Point(89, 127);
+            this.Office_Name.Location = new System.Drawing.Point(75, 137);
             this.Office_Name.MaxLength = 32767;
             this.Office_Name.Name = "Office_Name";
             this.Office_Name.PasswordChar = '\0';
@@ -178,7 +178,7 @@
             this.Office_Name.SelectionLength = 0;
             this.Office_Name.SelectionStart = 0;
             this.Office_Name.ShortcutsEnabled = true;
-            this.Office_Name.Size = new System.Drawing.Size(162, 23);
+            this.Office_Name.Size = new System.Drawing.Size(177, 23);
             this.Office_Name.TabIndex = 213;
             this.Office_Name.UseSelectable = true;
             this.Office_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -190,17 +190,18 @@
             // 
             // 
             this.Office_Notes.CustomButton.Image = null;
-            this.Office_Notes.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Office_Notes.CustomButton.Location = new System.Drawing.Point(3, 2);
             this.Office_Notes.CustomButton.Name = "";
-            this.Office_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Office_Notes.CustomButton.Size = new System.Drawing.Size(171, 171);
             this.Office_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Office_Notes.CustomButton.TabIndex = 1;
             this.Office_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Office_Notes.CustomButton.UseSelectable = true;
             this.Office_Notes.CustomButton.Visible = false;
             this.Office_Notes.Lines = new string[0];
-            this.Office_Notes.Location = new System.Drawing.Point(87, 185);
+            this.Office_Notes.Location = new System.Drawing.Point(74, 181);
             this.Office_Notes.MaxLength = 32767;
+            this.Office_Notes.Multiline = true;
             this.Office_Notes.Name = "Office_Notes";
             this.Office_Notes.PasswordChar = '\0';
             this.Office_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -208,7 +209,7 @@
             this.Office_Notes.SelectionLength = 0;
             this.Office_Notes.SelectionStart = 0;
             this.Office_Notes.ShortcutsEnabled = true;
-            this.Office_Notes.Size = new System.Drawing.Size(162, 23);
+            this.Office_Notes.Size = new System.Drawing.Size(177, 176);
             this.Office_Notes.TabIndex = 212;
             this.Office_Notes.UseSelectable = true;
             this.Office_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -218,9 +219,9 @@
             // 
             this.Office_CombAuthontic.FormattingEnabled = true;
             this.Office_CombAuthontic.ItemHeight = 23;
-            this.Office_CombAuthontic.Location = new System.Drawing.Point(87, 232);
+            this.Office_CombAuthontic.Location = new System.Drawing.Point(74, 87);
             this.Office_CombAuthontic.Name = "Office_CombAuthontic";
-            this.Office_CombAuthontic.Size = new System.Drawing.Size(163, 29);
+            this.Office_CombAuthontic.Size = new System.Drawing.Size(178, 29);
             this.Office_CombAuthontic.TabIndex = 214;
             this.Office_CombAuthontic.UseSelectable = true;
             // 
@@ -267,7 +268,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(-2, 127);
+            this.metroLabel1.Location = new System.Drawing.Point(-1, 143);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(74, 19);
             this.metroLabel1.TabIndex = 223;
@@ -276,7 +277,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(-2, 189);
+            this.metroLabel2.Location = new System.Drawing.Point(0, 185);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
             this.metroLabel2.TabIndex = 224;
@@ -285,7 +286,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(8, 242);
+            this.metroLabel3.Location = new System.Drawing.Point(10, 97);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(36, 19);
             this.metroLabel3.TabIndex = 225;
@@ -295,6 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(830, 438);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -310,7 +312,9 @@
             this.Controls.Add(this.Office_add);
             this.Controls.Add(this.Office_new);
             this.Controls.Add(this.Office_Gridview);
+            this.MaximizeBox = false;
             this.Name = "Office_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "المكاتب";

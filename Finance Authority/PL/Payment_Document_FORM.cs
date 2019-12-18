@@ -327,6 +327,8 @@ namespace Finance_Authority.PL
         {
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+            Payment_Document_Date_first.Value = DateTime.Now.Date;
+            Payment_Document_Date_last.Value = DateTime.Now.Date;
         }
 
         private void Payment_Document_Brows_Docs_Click(object sender, EventArgs e)

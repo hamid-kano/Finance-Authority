@@ -233,6 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(643, 450);
             this.Controls.Add(this.EX_Orders_Cat_dataGrid);
             this.Controls.Add(this.EX_Orders_Cat_exit);
@@ -244,7 +245,9 @@
             this.Controls.Add(this.EX_Orders_Cat_text);
             this.Controls.Add(this.EX_Orders_Cat_textsearch);
             this.Controls.Add(this.Coin_Exc_Sy);
+            this.MaximizeBox = false;
             this.Name = "EX_Orders_Cat_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "أدارة أصناف طلبات صرف مبلغ";

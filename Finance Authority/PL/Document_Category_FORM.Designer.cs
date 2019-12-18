@@ -233,6 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.Document_Category_textsearch);
             this.Controls.Add(this.metroLabel1);
@@ -244,7 +245,9 @@
             this.Controls.Add(this.Document_Category_add);
             this.Controls.Add(this.Document_Category_new);
             this.Controls.Add(this.Document_Category_Gridview);
+            this.MaximizeBox = false;
             this.Name = "Document_Category_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "اصناف السندات";

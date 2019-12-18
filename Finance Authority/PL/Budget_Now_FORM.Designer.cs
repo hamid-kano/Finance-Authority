@@ -430,10 +430,11 @@
             this.Budget_Now_DateTime.Size = new System.Drawing.Size(188, 29);
             this.Budget_Now_DateTime.TabIndex = 110;
             // 
-            // Budget_Now
+            // Budget_Now_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(800, 401);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.metroLabel8);
@@ -455,7 +456,9 @@
             this.Controls.Add(this.Budget_Now_amount_sy);
             this.Controls.Add(this.Budget_Now_Notes);
             this.Controls.Add(this.Budget_Now_DateTime);
-            this.Name = "Budget_Now";
+            this.MaximizeBox = false;
+            this.Name = "Budget_Now_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الميزانية الحالية";

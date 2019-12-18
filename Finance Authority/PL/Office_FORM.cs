@@ -110,6 +110,7 @@ namespace Finance_Authority.PL
                 Program.Add_Message();
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
+                Office_add.Enabled = false;
                 Office_Name.Text = "";
                 Office_Notes.Text = "";
             }

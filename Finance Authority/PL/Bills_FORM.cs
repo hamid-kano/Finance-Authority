@@ -124,7 +124,8 @@ namespace Finance_Authority.PL
         {
             Bills_dataGrid.DataSource = bill.Bills_View();
             this.Bills_dataGrid.Columns[0].Visible = false;
-
+            Bills_Date_first.Value = DateTime.Now.Date;
+            Bills_Date_last.Value = DateTime.Now.Date;
         }
     }
 }

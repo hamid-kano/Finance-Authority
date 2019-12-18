@@ -248,6 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(894, 492);
             this.Controls.Add(this.update);
             this.Controls.Add(this.Bills_Data_Last);
@@ -262,7 +263,9 @@
             this.Controls.Add(this.Bills_delete);
             this.Controls.Add(this.Bills_Details);
             this.Controls.Add(this.Bills_add);
+            this.MaximizeBox = false;
             this.Name = "Bills_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الفواتير";

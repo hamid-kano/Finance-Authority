@@ -49,7 +49,7 @@
             // Role_Functional_exit
             // 
             this.Role_Functional_exit.Highlight = true;
-            this.Role_Functional_exit.Location = new System.Drawing.Point(527, 385);
+            this.Role_Functional_exit.Location = new System.Drawing.Point(754, 442);
             this.Role_Functional_exit.Name = "Role_Functional_exit";
             this.Role_Functional_exit.Size = new System.Drawing.Size(87, 37);
             this.Role_Functional_exit.TabIndex = 7;
@@ -61,7 +61,7 @@
             // 
             this.Role_Functional_delete.Enabled = false;
             this.Role_Functional_delete.Highlight = true;
-            this.Role_Functional_delete.Location = new System.Drawing.Point(415, 385);
+            this.Role_Functional_delete.Location = new System.Drawing.Point(642, 442);
             this.Role_Functional_delete.Name = "Role_Functional_delete";
             this.Role_Functional_delete.Size = new System.Drawing.Size(87, 37);
             this.Role_Functional_delete.TabIndex = 6;
@@ -73,7 +73,7 @@
             // 
             this.Role_Functional_update.Enabled = false;
             this.Role_Functional_update.Highlight = true;
-            this.Role_Functional_update.Location = new System.Drawing.Point(303, 385);
+            this.Role_Functional_update.Location = new System.Drawing.Point(530, 442);
             this.Role_Functional_update.Name = "Role_Functional_update";
             this.Role_Functional_update.Size = new System.Drawing.Size(87, 37);
             this.Role_Functional_update.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.Role_Functional_add.Enabled = false;
             this.Role_Functional_add.Highlight = true;
-            this.Role_Functional_add.Location = new System.Drawing.Point(191, 385);
+            this.Role_Functional_add.Location = new System.Drawing.Point(418, 442);
             this.Role_Functional_add.Name = "Role_Functional_add";
             this.Role_Functional_add.Size = new System.Drawing.Size(87, 37);
             this.Role_Functional_add.TabIndex = 4;
@@ -96,7 +96,7 @@
             // Role_Functional_new
             // 
             this.Role_Functional_new.Highlight = true;
-            this.Role_Functional_new.Location = new System.Drawing.Point(79, 385);
+            this.Role_Functional_new.Location = new System.Drawing.Point(306, 442);
             this.Role_Functional_new.Name = "Role_Functional_new";
             this.Role_Functional_new.Size = new System.Drawing.Size(87, 37);
             this.Role_Functional_new.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.Role_Functional_Gridview.AllowUserToResizeRows = false;
             this.Role_Functional_Gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Role_Functional_Gridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Role_Functional_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Role_Functional_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Role_Functional_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Role_Functional_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             this.Role_Functional_Gridview.EnableHeadersVisualStyles = false;
             this.Role_Functional_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Role_Functional_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Role_Functional_Gridview.Location = new System.Drawing.Point(26, 71);
+            this.Role_Functional_Gridview.Location = new System.Drawing.Point(268, 71);
             this.Role_Functional_Gridview.Name = "Role_Functional_Gridview";
             this.Role_Functional_Gridview.ReadOnly = true;
             this.Role_Functional_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -148,14 +148,14 @@
             this.Role_Functional_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Role_Functional_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Role_Functional_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Role_Functional_Gridview.Size = new System.Drawing.Size(624, 270);
+            this.Role_Functional_Gridview.Size = new System.Drawing.Size(575, 355);
             this.Role_Functional_Gridview.TabIndex = 52;
             this.Role_Functional_Gridview.Click += new System.EventHandler(this.Role_Functional_Gridview_Click);
             // 
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(177, 46);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(384, 46);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(41, 19);
             this.Coin_Exc_Sy.TabIndex = 223;
@@ -176,7 +176,7 @@
             this.Role_Functional_textsearch.CustomButton.UseSelectable = true;
             this.Role_Functional_textsearch.CustomButton.Visible = false;
             this.Role_Functional_textsearch.Lines = new string[0];
-            this.Role_Functional_textsearch.Location = new System.Drawing.Point(224, 42);
+            this.Role_Functional_textsearch.Location = new System.Drawing.Point(431, 42);
             this.Role_Functional_textsearch.MaxLength = 32767;
             this.Role_Functional_textsearch.Name = "Role_Functional_textsearch";
             this.Role_Functional_textsearch.PasswordChar = '\0';
@@ -195,7 +195,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(91, 351);
+            this.metroLabel1.Location = new System.Drawing.Point(4, 92);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(60, 19);
             this.metroLabel1.TabIndex = 225;
@@ -207,7 +207,7 @@
             // 
             // 
             this.Role_Functional_Name.CustomButton.Image = null;
-            this.Role_Functional_Name.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Role_Functional_Name.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.Role_Functional_Name.CustomButton.Name = "";
             this.Role_Functional_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Role_Functional_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -216,7 +216,7 @@
             this.Role_Functional_Name.CustomButton.UseSelectable = true;
             this.Role_Functional_Name.CustomButton.Visible = false;
             this.Role_Functional_Name.Lines = new string[0];
-            this.Role_Functional_Name.Location = new System.Drawing.Point(171, 347);
+            this.Role_Functional_Name.Location = new System.Drawing.Point(70, 92);
             this.Role_Functional_Name.MaxLength = 32767;
             this.Role_Functional_Name.Name = "Role_Functional_Name";
             this.Role_Functional_Name.PasswordChar = '\0';
@@ -225,7 +225,7 @@
             this.Role_Functional_Name.SelectionLength = 0;
             this.Role_Functional_Name.SelectionStart = 0;
             this.Role_Functional_Name.ShortcutsEnabled = true;
-            this.Role_Functional_Name.Size = new System.Drawing.Size(162, 23);
+            this.Role_Functional_Name.Size = new System.Drawing.Size(192, 23);
             this.Role_Functional_Name.TabIndex = 224;
             this.Role_Functional_Name.UseSelectable = true;
             this.Role_Functional_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -234,7 +234,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(358, 351);
+            this.metroLabel2.Location = new System.Drawing.Point(-2, 138);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
             this.metroLabel2.TabIndex = 227;
@@ -246,17 +246,18 @@
             // 
             // 
             this.Role_Functional_Notes.CustomButton.Image = null;
-            this.Role_Functional_Notes.CustomButton.Location = new System.Drawing.Point(140, 1);
+            this.Role_Functional_Notes.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Role_Functional_Notes.CustomButton.Name = "";
-            this.Role_Functional_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Role_Functional_Notes.CustomButton.Size = new System.Drawing.Size(129, 129);
             this.Role_Functional_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Role_Functional_Notes.CustomButton.TabIndex = 1;
             this.Role_Functional_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Role_Functional_Notes.CustomButton.UseSelectable = true;
             this.Role_Functional_Notes.CustomButton.Visible = false;
             this.Role_Functional_Notes.Lines = new string[0];
-            this.Role_Functional_Notes.Location = new System.Drawing.Point(430, 347);
+            this.Role_Functional_Notes.Location = new System.Drawing.Point(70, 134);
             this.Role_Functional_Notes.MaxLength = 32767;
+            this.Role_Functional_Notes.Multiline = true;
             this.Role_Functional_Notes.Name = "Role_Functional_Notes";
             this.Role_Functional_Notes.PasswordChar = '\0';
             this.Role_Functional_Notes.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -264,7 +265,7 @@
             this.Role_Functional_Notes.SelectionLength = 0;
             this.Role_Functional_Notes.SelectionStart = 0;
             this.Role_Functional_Notes.ShortcutsEnabled = true;
-            this.Role_Functional_Notes.Size = new System.Drawing.Size(162, 23);
+            this.Role_Functional_Notes.Size = new System.Drawing.Size(192, 131);
             this.Role_Functional_Notes.TabIndex = 226;
             this.Role_Functional_Notes.UseSelectable = true;
             this.Role_Functional_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -274,7 +275,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 450);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(866, 492);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Role_Functional_Notes);
             this.Controls.Add(this.metroLabel1);
@@ -287,7 +289,9 @@
             this.Controls.Add(this.Role_Functional_add);
             this.Controls.Add(this.Role_Functional_new);
             this.Controls.Add(this.Role_Functional_Gridview);
+            this.MaximizeBox = false;
             this.Name = "Role_Functional_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الادوار الوظيفية";

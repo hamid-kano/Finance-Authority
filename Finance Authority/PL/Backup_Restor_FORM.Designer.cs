@@ -102,12 +102,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(536, 277);
             this.Controls.Add(this.Close_Button);
             this.Controls.Add(this.Backup_Restor_Path_TextBox);
             this.Controls.Add(this.Backup_Restor_Button);
             this.Controls.Add(this.Brows_Button);
+            this.MaximizeBox = false;
             this.Name = "Backup_Restor_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "استعادة النسخ الاحتياطي";

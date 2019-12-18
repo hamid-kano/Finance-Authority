@@ -126,8 +126,15 @@ namespace Finance_Authority
          }
         public static DataRow Budget_NOW()
         {
-            DataRow dt = budget.Budget_Last_Budget().Rows[0];
-            return dt;
+            if (budget.Budget_Last_Budget().Rows.Count!=0)
+            {
+                DataRow dt = budget.Budget_Last_Budget().Rows[0];
+                return dt;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         //الميزانية الفعلية = المبلغ الحالي -الوارد +الصادر
@@ -173,6 +180,9 @@ namespace Finance_Authority
         // statue add ;update ;delete
         public static void Budget_update_after_Payment_Reciver(string statue,string statusPR,string SY ,string Dollar)
         {
+            try
+            {
+
             DataRow dt_Budget_NOW = Budget_NOW();
             int sy_now =Convert.ToInt32(dt_Budget_NOW[1]);
             int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
@@ -203,6 +213,12 @@ namespace Finance_Authority
                 {
                     budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
                 }
+            }
+            }
+            catch (Exception)
+            {
+
+              //  throw;
             }
 
         }

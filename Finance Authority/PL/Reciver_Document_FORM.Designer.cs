@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reciver_Document_FORM));
             this.Reciver_Document_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.Reciver_Document_dataGrid = new MetroFramework.Controls.MetroGrid();
@@ -66,6 +66,7 @@
             this.Reciver_Document_Reason = new MetroFramework.Controls.MetroTextBox();
             this.Reciver_Document_Receve = new MetroFramework.Controls.MetroTextBox();
             this.update = new MetroFramework.Controls.MetroButton();
+            this.Reciver_Document_Brows_Docs = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Reciver_Document_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,23 +91,23 @@
             this.Reciver_Document_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Reciver_Document_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Reciver_Document_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Reciver_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Reciver_Document_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Reciver_Document_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Reciver_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Reciver_Document_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.Reciver_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Reciver_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Reciver_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -114,24 +115,24 @@
             this.Reciver_Document_dataGrid.Name = "Reciver_Document_dataGrid";
             this.Reciver_Document_dataGrid.ReadOnly = true;
             this.Reciver_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Reciver_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Reciver_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Reciver_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Reciver_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Reciver_Document_dataGrid.Size = new System.Drawing.Size(655, 399);
+            this.Reciver_Document_dataGrid.Size = new System.Drawing.Size(655, 431);
             this.Reciver_Document_dataGrid.TabIndex = 116;
             this.Reciver_Document_dataGrid.Click += new System.EventHandler(this.Reciver_Document_dataGrid_Click);
             // 
             // Reciver_Document_xit
             // 
             this.Reciver_Document_xit.Highlight = true;
-            this.Reciver_Document_xit.Location = new System.Drawing.Point(923, 537);
+            this.Reciver_Document_xit.Location = new System.Drawing.Point(929, 571);
             this.Reciver_Document_xit.Name = "Reciver_Document_xit";
             this.Reciver_Document_xit.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_xit.TabIndex = 15;
@@ -143,7 +144,7 @@
             // 
             this.Reciver_Document_delete.Enabled = false;
             this.Reciver_Document_delete.Highlight = true;
-            this.Reciver_Document_delete.Location = new System.Drawing.Point(708, 537);
+            this.Reciver_Document_delete.Location = new System.Drawing.Point(714, 571);
             this.Reciver_Document_delete.Name = "Reciver_Document_delete";
             this.Reciver_Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_delete.TabIndex = 13;
@@ -155,7 +156,7 @@
             // 
             this.Reciver_Document_update.Enabled = false;
             this.Reciver_Document_update.Highlight = true;
-            this.Reciver_Document_update.Location = new System.Drawing.Point(601, 537);
+            this.Reciver_Document_update.Location = new System.Drawing.Point(607, 571);
             this.Reciver_Document_update.Name = "Reciver_Document_update";
             this.Reciver_Document_update.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_update.TabIndex = 12;
@@ -167,7 +168,7 @@
             // 
             this.Reciver_Document_add.Enabled = false;
             this.Reciver_Document_add.Highlight = true;
-            this.Reciver_Document_add.Location = new System.Drawing.Point(482, 537);
+            this.Reciver_Document_add.Location = new System.Drawing.Point(488, 571);
             this.Reciver_Document_add.Name = "Reciver_Document_add";
             this.Reciver_Document_add.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_add.TabIndex = 11;
@@ -178,7 +179,7 @@
             // Reciver_Document_new
             // 
             this.Reciver_Document_new.Highlight = true;
-            this.Reciver_Document_new.Location = new System.Drawing.Point(370, 537);
+            this.Reciver_Document_new.Location = new System.Drawing.Point(376, 571);
             this.Reciver_Document_new.Name = "Reciver_Document_new";
             this.Reciver_Document_new.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_new.TabIndex = 10;
@@ -232,7 +233,7 @@
             // Reciver_Document_Print
             // 
             this.Reciver_Document_Print.Highlight = true;
-            this.Reciver_Document_Print.Location = new System.Drawing.Point(815, 537);
+            this.Reciver_Document_Print.Location = new System.Drawing.Point(821, 571);
             this.Reciver_Document_Print.Name = "Reciver_Document_Print";
             this.Reciver_Document_Print.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_Print.TabIndex = 14;
@@ -613,11 +614,24 @@
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // Reciver_Document_Brows_Docs
+            // 
+            this.Reciver_Document_Brows_Docs.Enabled = false;
+            this.Reciver_Document_Brows_Docs.Highlight = true;
+            this.Reciver_Document_Brows_Docs.Location = new System.Drawing.Point(184, 571);
+            this.Reciver_Document_Brows_Docs.Name = "Reciver_Document_Brows_Docs";
+            this.Reciver_Document_Brows_Docs.Size = new System.Drawing.Size(118, 37);
+            this.Reciver_Document_Brows_Docs.TabIndex = 266;
+            this.Reciver_Document_Brows_Docs.Text = "استعراض الملحقات";
+            this.Reciver_Document_Brows_Docs.UseSelectable = true;
+            this.Reciver_Document_Brows_Docs.Click += new System.EventHandler(this.Reciver_Document_Brows_Docs_Click);
+            // 
             // Reciver_Document_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 579);
+            this.ClientSize = new System.Drawing.Size(1027, 645);
+            this.Controls.Add(this.Reciver_Document_Brows_Docs);
             this.Controls.Add(this.update);
             this.Controls.Add(this.Reciver_Document_Receve);
             this.Controls.Add(this.Reciver_Document_Reason);
@@ -698,5 +712,6 @@
         private MetroFramework.Controls.MetroTextBox Reciver_Document_Reason;
         private MetroFramework.Controls.MetroTextBox Reciver_Document_Receve;
         private MetroFramework.Controls.MetroButton update;
+        private MetroFramework.Controls.MetroButton Reciver_Document_Brows_Docs;
     }
 }

@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
         BL.CLS_Bills_Details Bill = new BL.CLS_Bills_Details();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
+        BL.CLS_Budget budget = new BL.CLS_Budget();
         int _Bill_ID=-1; // update Status ;
         public Bills_Details_FORM(int Bills_ID)
         {
@@ -24,7 +25,7 @@ namespace Finance_Authority.PL
             Bills_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
             Bills_Comb_Department.DisplayMember = "Department_Name";
             Bills_Comb_Department.ValueMember = "Department_ID";
-            Bills_Comb_Budget.DataSource = Emiss.Emission_Salaries_Comb_Budget();
+            Bills_Comb_Budget.DataSource =budget.Budget_combo_Last_Budget();
             Bills_Comb_Budget.DisplayMember = "Date";
             Bills_Comb_Budget.ValueMember = "Budget_Id";
             if (Bills_ID != -1)
@@ -57,7 +58,7 @@ namespace Finance_Authority.PL
                this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                this.Bill_Objects_dataGrid.Columns[5].Visible = false;
                Bills_add.Enabled = true;
-                Bills_update.Enabled = false;
+               Bills_update.Enabled = false;
 
             }
             this.Bill_Objects_dataGrid.Columns[4].ReadOnly = true;
@@ -108,9 +109,10 @@ namespace Finance_Authority.PL
             {
                 Program.Special_Message("يجب اختيار نوع العملة"); return;
             }
-
-
-
+            if (Bills_Coin_Type.Text == "دولار" && Bills_Exchange_rate.Text=="")
+            {
+                Program.Special_Message("يجب اضافة قيمة التحويل"); return;
+            }
             if (!(Bill_Objects_dataGrid.Rows.Count-1  >0))
             {
                 MessageBox.Show("لا يمكنك اضافة فاتورة دون مواد","تنبيه",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -296,7 +298,7 @@ namespace Finance_Authority.PL
 
         private void Bills_Brows_Docs_Click(object sender, EventArgs e)
         {
-            Document_FORM FRM = new Document_FORM( _Bill_ID,"فاتورة");
+            Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
             FRM.ShowDialog();
         }
     }

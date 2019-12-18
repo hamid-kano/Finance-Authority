@@ -43,6 +43,7 @@ namespace Finance_Authority.PL
                 //Contracts_end.Checked = Convert.ToBoolean(this.Contracts_Gridview.CurrentRow.Cells[4].Value) ? true : false;
                 //Contracts_Not_end.Checked = Contracts_end.Checked ? false : true;
                 Contracts_Details.Enabled = true;
+                Contracts_Brows_Docs.Enabled = true;
             }
         }
 
@@ -87,6 +88,13 @@ namespace Finance_Authority.PL
         {
             Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
             FRM.ShowDialog();
+        }
+
+        private void Contracts_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Employee_Description_id, "عقد");
+            FRM.ShowDialog();
+
         }
     }
 }

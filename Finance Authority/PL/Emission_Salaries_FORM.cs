@@ -34,6 +34,7 @@ namespace Finance_Authority.PL
             Emission_Salaries_add.Enabled = true;
             Emission_Salaries_update.Enabled = false;
             Emission_Salaries_delete.Enabled = false;
+            Emission_Salaries_Brows_Docs.Enabled = false;
         }
 
         private void Emission_Salaries_exit_Click(object sender, EventArgs e)
@@ -44,6 +45,14 @@ namespace Finance_Authority.PL
         private void Emission_Salaries_add_Click(object sender, EventArgs e)
         {
             Emiss.Emission_Salaries_add(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue) , Emission_Salaries_Date.Value , Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue));
+            /// اضافة ملحقات لهذا لاصدار الرواتب
+            if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الاصدار؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                int MAX_EEmission_Salaries_ID = Convert.ToInt32(Emiss.Emission_Salaries_Max_ID().Rows[0][0]);
+                Document_FORM FRM = new Document_FORM(MAX_EEmission_Salaries_ID, "اصدار الرواتب");
+                FRM.ShowDialog();
+            }
+            ////
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
             Program.Add_Message();
@@ -58,6 +67,7 @@ namespace Finance_Authority.PL
             Program.Update_Message();
             Emission_Salaries_update.Enabled = false;
             Emission_Salaries_delete.Enabled = false;
+            Emission_Salaries_Brows_Docs.Enabled = false;
         }
 
         private void Emission_Salaries_dataGrid_Click(object sender, EventArgs e)
@@ -70,6 +80,7 @@ namespace Finance_Authority.PL
                 Emission_Salaries_Comb_Budget.Text = this.Emission_Salaries_dataGrid.CurrentRow.Cells[3].Value.ToString();
                 Emission_Salaries_update.Enabled = true;
                 Emission_Salaries_delete.Enabled = true;
+                Emission_Salaries_Brows_Docs.Enabled = true;
                 Emission_Salaries_add.Enabled = false;
             }
         }
@@ -84,12 +95,14 @@ namespace Finance_Authority.PL
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Emission_Salaries_update.Enabled = false;
                 Emission_Salaries_delete.Enabled = false;
+                Emission_Salaries_Brows_Docs.Enabled = false;
             }
         }
 
-        private void Emission_Salaries_FORM_Load(object sender, EventArgs e)
+        private void Emission_Salaries_Brows_Docs_Click(object sender, EventArgs e)
         {
-
+            Document_FORM FRM = new Document_FORM(Program.Emission_Salaries_id, "اصدار الرواتب");
+            FRM.ShowDialog();
         }
     }
 }

@@ -55,6 +55,7 @@
             this.Contracts_Type = new MetroFramework.Controls.MetroComboBox();
             this.Contracts_Comb_Contract_statue = new MetroFramework.Controls.MetroComboBox();
             this.Contracts_Employee = new MetroFramework.Controls.MetroTextBox();
+            this.Contracts_Brows_Docs = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Contracts_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -397,11 +398,24 @@
             this.Contracts_Employee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Contracts_Employee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // Contracts_Brows_Docs
+            // 
+            this.Contracts_Brows_Docs.Enabled = false;
+            this.Contracts_Brows_Docs.Highlight = true;
+            this.Contracts_Brows_Docs.Location = new System.Drawing.Point(108, 439);
+            this.Contracts_Brows_Docs.Name = "Contracts_Brows_Docs";
+            this.Contracts_Brows_Docs.Size = new System.Drawing.Size(118, 37);
+            this.Contracts_Brows_Docs.TabIndex = 269;
+            this.Contracts_Brows_Docs.Text = "استعراض الملحقات";
+            this.Contracts_Brows_Docs.UseSelectable = true;
+            this.Contracts_Brows_Docs.Click += new System.EventHandler(this.Contracts_Brows_Docs_Click);
+            // 
             // Contracts_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 556);
+            this.Controls.Add(this.Contracts_Brows_Docs);
             this.Controls.Add(this.Contracts_Employee);
             this.Controls.Add(this.Contracts_Comb_Contract_statue);
             this.Controls.Add(this.Contracts_Type);
@@ -460,5 +474,6 @@
         private MetroFramework.Controls.MetroComboBox Contracts_Type;
         private MetroFramework.Controls.MetroComboBox Contracts_Comb_Contract_statue;
         private MetroFramework.Controls.MetroTextBox Contracts_Employee;
+        private MetroFramework.Controls.MetroButton Contracts_Brows_Docs;
     }
 }

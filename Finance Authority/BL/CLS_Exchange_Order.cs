@@ -19,6 +19,16 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Exchange_Order_Max_ID()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Exchange_Order_Max_ID", null);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable EX_Orders_CombCategorise()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

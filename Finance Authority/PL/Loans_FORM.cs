@@ -64,6 +64,8 @@ namespace Finance_Authority.PL
             Loans_Notes.Text = "";
             Loans_update.Enabled = false;
             Loans_delete.Enabled = false;
+            Loans_Brows_Docs.Enabled = false;
+            Loans_Dail.Enabled = false;
         }
 
         private void Loans_add_Click(object sender, EventArgs e)
@@ -86,12 +88,21 @@ namespace Finance_Authority.PL
                 Loa.Loans_add(Loans_Amont.Text , Loans_Notes.Text , Loans_Date.Value , Loans_Date_Start.Value , Convert.ToInt32(Loans_Comb_Budget.SelectedValue) , id_EmployeeDEsS);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
+                int Max_loan_id =Convert.ToInt32(Loa.Leoan_Max_ID().Rows[0][0]);
+                /// اضافة ملحقات للقرض
+                if (MessageBox.Show("هل تريد اضافة ملحقات لهذا القرض؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Document_FORM FRM = new Document_FORM(Max_loan_id, "قرض");
+                    FRM.ShowDialog();
+                }
+                ////
                 Program.Add_Message();
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
                 Loans_delete.Enabled = false;
-
+                Loans_Brows_Docs.Enabled = false;
+                Loans_Dail.Enabled = false;
             }
 
         }
@@ -109,6 +120,8 @@ namespace Finance_Authority.PL
                 Loans_Comb_Employ.Text = this.Loans_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Loans_update.Enabled = true;
                 Loans_delete.Enabled = true;
+                Loans_Brows_Docs.Enabled = true;
+                Loans_Dail.Enabled = true;
                 Loans_add.Enabled = false;
                 Loans_Dail.Enabled = true;
             }
@@ -139,7 +152,8 @@ namespace Finance_Authority.PL
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
                 Loans_delete.Enabled = false;
-
+                Loans_Brows_Docs.Enabled = false;
+                Loans_Dail.Enabled = false;
             }
         }
 
@@ -160,6 +174,8 @@ namespace Finance_Authority.PL
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
                 Loans_delete.Enabled = false;
+                Loans_Brows_Docs.Enabled = false;
+                Loans_Dail.Enabled = false;
             }
         }
 
@@ -247,6 +263,12 @@ namespace Finance_Authority.PL
             FRM.Leoan_Payments_Total.Text=this.Loans_Gridview.CurrentRow.Cells[1].Value.ToString();
             FRM.ShowDialog();
             Loans_Dail.Enabled = false;
+        }
+
+        private void Loans_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Loan_id, "قرض");
+            FRM.ShowDialog();
         }
     }
 }

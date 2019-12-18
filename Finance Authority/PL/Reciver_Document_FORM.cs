@@ -43,6 +43,7 @@ namespace Finance_Authority.PL
             Reciver_Document_Notes.Text = "";
             Reciver_Document_update.Enabled = false;
             Reciver_Document_delete.Enabled = false;
+            Reciver_Document_Brows_Docs.Enabled = false;
         }
         private void Reciver_Document_xit_Click(object sender, EventArgs e)
         {
@@ -90,6 +91,14 @@ namespace Finance_Authority.PL
                 Program.Budget_update_after_Payment_Reciver("add", "r", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
                 //
+                /// اضافة ملحقات لسند القبض
+                int id_Reciver_Doc_new_add = Convert.ToInt32(Reciv.Reciver_Document_Max_ID().Rows[0][0]) + 1;
+                if (MessageBox.Show("هل تريد اضافة ملحقات لهذا السند؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Document_FORM FRM = new Document_FORM(id_Reciver_Doc_new_add, "سند قبض");
+                    FRM.ShowDialog();
+                }
+                ////
                 Program.Add_Message();
                 Reciver_Document_sy.Text = "";
                 Reciver_Document_Dollar.Text = "";
@@ -161,6 +170,8 @@ namespace Finance_Authority.PL
                 Reciver_Document_Notes.Text = "";
                 Reciver_Document_update.Enabled = false;
                 Reciver_Document_delete.Enabled = false;
+                Reciver_Document_Brows_Docs.Enabled = false;
+
             }
             else
             {
@@ -188,6 +199,7 @@ namespace Finance_Authority.PL
                 Reciver_Document_Comb_Cate.Text= this.Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 Reciver_Document_update.Enabled = true;
                 Reciver_Document_delete.Enabled = true;
+                Reciver_Document_Brows_Docs.Enabled = true;
                 Reciver_Document_add.Enabled = false;
             }
         }
@@ -213,6 +225,8 @@ namespace Finance_Authority.PL
                 Reciver_Document_Notes.Text = "";
                 Reciver_Document_update.Enabled = false;
                 Reciver_Document_delete.Enabled = false;
+                Reciver_Document_Brows_Docs.Enabled = false;
+
             }
         }
 
@@ -273,6 +287,12 @@ namespace Finance_Authority.PL
         {
             this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
             this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Reciver_Document_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Payment_Document_id, "سند قبض");
+            FRM.ShowDialog();
         }
     }
 }

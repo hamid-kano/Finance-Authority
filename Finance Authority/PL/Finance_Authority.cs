@@ -253,9 +253,17 @@ namespace Finance_Authority.PL
 
         public void Update_label_finance_Box()
         {
-            DataRow dt = Program.Budget_NOW();
-            this.SY_Now_Label.Text = dt[1].ToString();
-            this.Dollar_Now_Label.Text = dt[2].ToString();
+            if (Program.Budget_NOW()!=null)
+            {
+                DataRow dt = Program.Budget_NOW();
+                this.SY_Now_Label.Text = dt[1].ToString();
+                this.Dollar_Now_Label.Text = dt[2].ToString();
+            }
+            else
+            {
+                this.SY_Now_Label.Text = "";
+                this.Dollar_Now_Label.Text = "";
+            }
         }
 
         private void metroTile32_Click(object sender, EventArgs e)

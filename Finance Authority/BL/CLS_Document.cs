@@ -27,9 +27,9 @@ namespace Finance_Authority.BL
             SqlParameter[] param = new SqlParameter[2];
             param[0] = new SqlParameter("@Document_Type", SqlDbType.NVarChar);
             param[0].Value = Document_Type;
-            param[1] = new SqlParameter("@Doc_Name", SqlDbType.NVarChar);
+            param[1] = new SqlParameter("@Doc_id", SqlDbType.NVarChar);
             param[1].Value = Doc_id;
-            Dt = DAL.selectdata("Document_View", param);
+            Dt = DAL.selectdata("Document_View_By_Type_Id_Doc", param);
             DAL.close();
             return Dt;
         }

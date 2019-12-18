@@ -52,6 +52,7 @@ namespace Finance_Authority.PL
             Payment_Document_Notes.Text = "";
             Payment_Document_update.Enabled = false;
             Payment_Document_delete.Enabled = false;
+            Payment_Document_Brows_Docs.Enabled = false;
         }
 
         private void Payment_Document_dataGrid_Click(object sender, EventArgs e)
@@ -74,6 +75,8 @@ namespace Finance_Authority.PL
                 Payment_Document_update.Enabled = true;
                 Payment_Document_delete.Enabled = true;
                 Payment_Document_add.Enabled = false;
+                Payment_Document_Brows_Docs.Enabled = true;
+
             }
         }
 
@@ -135,8 +138,17 @@ namespace Finance_Authority.PL
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("add", "p", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
-                //
-                Program.Add_Message();
+            //
+
+            /// اضافة ملحقات لسند الدفع
+            int id_Paymetn_Doc_new_add =Convert.ToInt32(pay.Payment_Document_Max_ID().Rows[0][0])+1 ;
+            if (MessageBox.Show("هل تريد اضافة ملحقات لهذا السند؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                Document_FORM FRM = new Document_FORM(id_Paymetn_Doc_new_add, "سند دفع");
+                FRM.ShowDialog();
+            }
+            ////
+            Program.Add_Message();
                 Payment_Document_sy.Text = "";
                 Payment_Document_Dollar.Text = "";
                 Payment_Document_rate.Text = "";
@@ -146,7 +158,6 @@ namespace Finance_Authority.PL
                 Payment_Document_Receve.Text = "";
                 Payment_Document_Notes.Text = "";
                 Payment_Document_add.Enabled = false;
-           
         }
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
@@ -221,7 +232,9 @@ namespace Finance_Authority.PL
                 Payment_Document_Notes.Text = "";
                 Payment_Document_update.Enabled = false;
                 Payment_Document_delete.Enabled = false;
-           
+                Payment_Document_Brows_Docs.Enabled = false;
+
+
         }
 
         private void Payment_Document_delete_Click(object sender, EventArgs e)
@@ -246,6 +259,7 @@ namespace Finance_Authority.PL
                 Payment_Document_Notes.Text = "";
                 Payment_Document_update.Enabled = false;
                 Payment_Document_delete.Enabled = false;
+                Payment_Document_Brows_Docs.Enabled = false;
             }
         }
 
@@ -313,6 +327,13 @@ namespace Finance_Authority.PL
         {
             this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
             this.Payment_Document_dataGrid.Columns[0].Visible = false;
+        }
+
+        private void Payment_Document_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Payment_Document_id, "سند دفع");
+            FRM.ShowDialog();
+
         }
     }
 }

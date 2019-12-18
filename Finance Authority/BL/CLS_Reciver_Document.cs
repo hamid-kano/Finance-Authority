@@ -19,6 +19,17 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Reciver_Document_Max_ID()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Reciver_Document_Max_ID", null);
+            DAL.close();
+            return Dt;
+        }
+
+
         public DataTable Reciver_Document_add(string Amount_SY, string Amount_Dollar, string Exchange_rate, string No_Pay_Document, string Reason, string From_Giver, DateTime Date,  string Notes, int Budget_Id , int Category_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

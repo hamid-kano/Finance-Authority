@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
         BL.CLS_Budget budget = new BL.CLS_Budget();
         int _Bill_ID=-1; // update Status ;
+        bool StatePaied;
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace Finance_Authority.PL
                 Bills_Date.Text = dt.Rows[0][7].ToString();
                 Bills_Notes.Text = dt.Rows[0][9].ToString();
                 Bills_Paid.Checked = Convert.ToBoolean(dt.Rows[0][8]) ? true : false;
+                StatePaied = Bills_Paid.Checked;// الاحتفاظ بحالة الدفع قبل التحديث من في حال اصبحت مدفوعة يعرض رسالة لاضافة سند دفع 
                 Bills_Not.Checked = Convert.ToBoolean(dt.Rows[0][8]) ? false : true;
                 Bills_Comb_Department.Text = dt.Rows[0][11].ToString();
                 Bills_Comb_Budget.Text = dt.Rows[0][10].ToString();
@@ -118,7 +120,6 @@ namespace Finance_Authority.PL
                 MessageBox.Show("لا يمكنك اضافة فاتورة دون مواد","تنبيه",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
             _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
@@ -140,6 +141,15 @@ namespace Finance_Authority.PL
                 FRM.ShowDialog();
             }
             Program.Add_Message();
+
+            if (Bills_Paid.Checked)
+            {
+                if (MessageBox.Show("هل تريد اضافة سند دفع لهذه الفاتورة بما أن قيمتها مدفوعة ؟؟","سند دفع",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+                {
+                    Payment_Document_FORM FRM = new Payment_Document_FORM();
+                    FRM.ShowDialog();
+                } 
+            }
             Bills_add.Enabled = false;
             Bills_Brows_Docs.Enabled = false;
             Bills_Buyer_Name.Text = "";
@@ -170,6 +180,14 @@ namespace Finance_Authority.PL
             Bills_FORM frm = Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
+            if (!StatePaied && Bills_Paid.Checked)
+            {
+                if (MessageBox.Show("هل تريد اضافة سند دفع لهذه الفاتورة بما أن قيمتها اصبحت مدفوعة ؟؟", "سند دفع", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    Payment_Document_FORM FRM = new Payment_Document_FORM();
+                    FRM.ShowDialog();
+                }
+            }
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;
             Program.Update_Message();

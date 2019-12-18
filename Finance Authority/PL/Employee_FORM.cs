@@ -43,7 +43,8 @@ namespace Finance_Authority.PL
             Employee_CombAthuontic.DisplayMember = "اسم الهيئة";
             Employee_CombAthuontic.ValueMember = "Authority_ID";
             _Empolyee_Description_ID = Empolyee_Description_ID;
-            
+            Contracts_Type.SelectedIndex = 0;
+            Contracts_Comb_Contract_statue.SelectedIndex = 0;
             if (_Empolyee_Description_ID != -1)
             {
                 Statues_Change.Enabled = true;
@@ -102,8 +103,7 @@ namespace Finance_Authority.PL
             }
 
         }
-
-        private void Employee_new_Click(object sender, EventArgs e)
+       private void Employee_new_Click(object sender, EventArgs e)
         {
             Employee_add.Enabled = true;
             Employee_First_Name.Text = "";
@@ -126,8 +126,6 @@ namespace Finance_Authority.PL
             Employee_Description_Salery.Text = "";
             Contracts_Type.Text = "";
             Contracts_Notes.Text = "";
-
-
         }
 
         private void Employee_exit_Click(object sender, EventArgs e)
@@ -356,7 +354,6 @@ namespace Finance_Authority.PL
                         }
 
                     }
-              
                 Program.Update_Message();
                 Employee_Description_N0_Book.Text = "";
                 Employee_Description_Salery.Text = "";

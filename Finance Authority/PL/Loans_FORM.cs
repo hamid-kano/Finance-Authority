@@ -110,6 +110,7 @@ namespace Finance_Authority.PL
                 Loans_update.Enabled = true;
                 Loans_delete.Enabled = true;
                 Loans_add.Enabled = false;
+                Loans_Dail.Enabled = true;
             }
         }
 
@@ -183,7 +184,7 @@ namespace Finance_Authority.PL
             {
                 // DataTable dt = dataGrid_Ringall.DataSource;
                 Art.SetDataSource(Loans_Gridview.DataSource);
-
+               // Art.Refresh();
                 FRPT.crystalReportViewer1.ReportSource = Art;
                 FRPT.ShowDialog();
             }
@@ -245,6 +246,7 @@ namespace Finance_Authority.PL
             Leoan_Payments_FORM FRM = new Leoan_Payments_FORM();
             FRM.Leoan_Payments_Total.Text=this.Loans_Gridview.CurrentRow.Cells[1].Value.ToString();
             FRM.ShowDialog();
+            Loans_Dail.Enabled = false;
         }
     }
 }

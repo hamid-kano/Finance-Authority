@@ -35,7 +35,6 @@
             this.Employee_Description_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Description_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_Description_delete = new MetroFramework.Controls.MetroButton();
-            this.Employee_Description_new = new MetroFramework.Controls.MetroButton();
             this.Employee_Description_Comb_Search = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Description_Search_all = new MetroFramework.Controls.MetroTextBox();
             this.Employee_Description_Print = new MetroFramework.Controls.MetroButton();
@@ -117,17 +116,6 @@
             this.Employee_Description_delete.Text = "حذف";
             this.Employee_Description_delete.UseSelectable = true;
             this.Employee_Description_delete.Click += new System.EventHandler(this.Employee_Description_delete_Click);
-            // 
-            // Employee_Description_new
-            // 
-            this.Employee_Description_new.Highlight = true;
-            this.Employee_Description_new.Location = new System.Drawing.Point(193, 495);
-            this.Employee_Description_new.Name = "Employee_Description_new";
-            this.Employee_Description_new.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_new.TabIndex = 9;
-            this.Employee_Description_new.Text = "جديد";
-            this.Employee_Description_new.UseSelectable = true;
-            this.Employee_Description_new.Click += new System.EventHandler(this.Employee_Description_new_Click);
             // 
             // Employee_Description_Comb_Search
             // 
@@ -249,7 +237,6 @@
             this.Controls.Add(this.Employee_Description_dataGrid);
             this.Controls.Add(this.Employee_Description_exit);
             this.Controls.Add(this.Employee_Description_delete);
-            this.Controls.Add(this.Employee_Description_new);
             this.Name = "Employee_Description_FORM";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -265,7 +252,6 @@
         private MetroFramework.Controls.MetroGrid Employee_Description_dataGrid;
         private MetroFramework.Controls.MetroButton Employee_Description_exit;
         private MetroFramework.Controls.MetroButton Employee_Description_delete;
-        private MetroFramework.Controls.MetroButton Employee_Description_new;
         private MetroFramework.Controls.MetroComboBox Employee_Description_Comb_Search;
         private MetroFramework.Controls.MetroTextBox Employee_Description_Search_all;
         private MetroFramework.Controls.MetroButton Employee_Description_Print;

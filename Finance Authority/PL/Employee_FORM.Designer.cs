@@ -34,10 +34,6 @@
             this.Employee_add = new MetroFramework.Controls.MetroButton();
             this.Employee_new = new MetroFramework.Controls.MetroButton();
             this.Employee_Print = new MetroFramework.Controls.MetroButton();
-            this.Employee_Search_Name = new MetroFramework.Controls.MetroTextBox();
-            this.Employee_Search_Mony = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.groupBox_Employee_Des = new System.Windows.Forms.GroupBox();
             this.Statues_Change = new System.Windows.Forms.GroupBox();
             this.Employee_Description_Change = new MetroFramework.Controls.MetroRadioButton();
@@ -62,6 +58,7 @@
             this.Employee_Description_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.groupBox_Contract = new System.Windows.Forms.GroupBox();
+            this.Contracts_Type = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
@@ -102,7 +99,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.Contracts_Type = new MetroFramework.Controls.MetroComboBox();
             this.groupBox_Employee_Des.SuspendLayout();
             this.Statues_Change.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -176,84 +172,6 @@
             this.Employee_Print.TabIndex = 19;
             this.Employee_Print.Text = "طباعة";
             this.Employee_Print.UseSelectable = true;
-            // 
-            // Employee_Search_Name
-            // 
-            // 
-            // 
-            // 
-            this.Employee_Search_Name.CustomButton.Image = null;
-            this.Employee_Search_Name.CustomButton.Location = new System.Drawing.Point(166, 1);
-            this.Employee_Search_Name.CustomButton.Name = "";
-            this.Employee_Search_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Employee_Search_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Employee_Search_Name.CustomButton.TabIndex = 1;
-            this.Employee_Search_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Employee_Search_Name.CustomButton.UseSelectable = true;
-            this.Employee_Search_Name.CustomButton.Visible = false;
-            this.Employee_Search_Name.Lines = new string[0];
-            this.Employee_Search_Name.Location = new System.Drawing.Point(529, 44);
-            this.Employee_Search_Name.MaxLength = 32767;
-            this.Employee_Search_Name.Name = "Employee_Search_Name";
-            this.Employee_Search_Name.PasswordChar = '\0';
-            this.Employee_Search_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Employee_Search_Name.SelectedText = "";
-            this.Employee_Search_Name.SelectionLength = 0;
-            this.Employee_Search_Name.SelectionStart = 0;
-            this.Employee_Search_Name.ShortcutsEnabled = true;
-            this.Employee_Search_Name.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Search_Name.TabIndex = 239;
-            this.Employee_Search_Name.UseSelectable = true;
-            this.Employee_Search_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Employee_Search_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Employee_Search_Mony
-            // 
-            // 
-            // 
-            // 
-            this.Employee_Search_Mony.CustomButton.Image = null;
-            this.Employee_Search_Mony.CustomButton.Location = new System.Drawing.Point(166, 1);
-            this.Employee_Search_Mony.CustomButton.Name = "";
-            this.Employee_Search_Mony.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Employee_Search_Mony.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Employee_Search_Mony.CustomButton.TabIndex = 1;
-            this.Employee_Search_Mony.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Employee_Search_Mony.CustomButton.UseSelectable = true;
-            this.Employee_Search_Mony.CustomButton.Visible = false;
-            this.Employee_Search_Mony.Lines = new string[0];
-            this.Employee_Search_Mony.Location = new System.Drawing.Point(901, 44);
-            this.Employee_Search_Mony.MaxLength = 32767;
-            this.Employee_Search_Mony.Name = "Employee_Search_Mony";
-            this.Employee_Search_Mony.PasswordChar = '\0';
-            this.Employee_Search_Mony.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Employee_Search_Mony.SelectedText = "";
-            this.Employee_Search_Mony.SelectionLength = 0;
-            this.Employee_Search_Mony.SelectionStart = 0;
-            this.Employee_Search_Mony.ShortcutsEnabled = true;
-            this.Employee_Search_Mony.Size = new System.Drawing.Size(188, 23);
-            this.Employee_Search_Mony.TabIndex = 240;
-            this.Employee_Search_Mony.UseSelectable = true;
-            this.Employee_Search_Mony.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Employee_Search_Mony.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(407, 48);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(105, 19);
-            this.metroLabel3.TabIndex = 241;
-            this.metroLabel3.Text = "بحث حسب الاسم";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(757, 44);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(138, 19);
-            this.metroLabel4.TabIndex = 242;
-            this.metroLabel4.Text = "بحث حسب الرقم المالي";
             // 
             // groupBox_Employee_Des
             // 
@@ -592,6 +510,20 @@
             this.groupBox_Contract.TabIndex = 257;
             this.groupBox_Contract.TabStop = false;
             this.groupBox_Contract.Text = "العقود";
+            // 
+            // Contracts_Type
+            // 
+            this.Contracts_Type.FormattingEnabled = true;
+            this.Contracts_Type.ItemHeight = 23;
+            this.Contracts_Type.Items.AddRange(new object[] {
+            "خبرة",
+            "مؤقت",
+            "أختصاص"});
+            this.Contracts_Type.Location = new System.Drawing.Point(15, 49);
+            this.Contracts_Type.Name = "Contracts_Type";
+            this.Contracts_Type.Size = new System.Drawing.Size(163, 29);
+            this.Contracts_Type.TabIndex = 242;
+            this.Contracts_Type.UseSelectable = true;
             // 
             // metroLabel25
             // 
@@ -1277,20 +1209,6 @@
             this.metroLabel1.TabIndex = 259;
             this.metroLabel1.Text = "الأسم الاول";
             // 
-            // Contracts_Type
-            // 
-            this.Contracts_Type.FormattingEnabled = true;
-            this.Contracts_Type.ItemHeight = 23;
-            this.Contracts_Type.Items.AddRange(new object[] {
-            "خبرة",
-            "مؤقت",
-            "أختصاص"});
-            this.Contracts_Type.Location = new System.Drawing.Point(15, 49);
-            this.Contracts_Type.Name = "Contracts_Type";
-            this.Contracts_Type.Size = new System.Drawing.Size(163, 29);
-            this.Contracts_Type.TabIndex = 242;
-            this.Contracts_Type.UseSelectable = true;
-            // 
             // Employee_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1299,10 +1217,6 @@
             this.Controls.Add(this.groupBox_Employee);
             this.Controls.Add(this.groupBox_Contract);
             this.Controls.Add(this.groupBox_Employee_Des);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.Employee_Search_Mony);
-            this.Controls.Add(this.Employee_Search_Name);
             this.Controls.Add(this.Employee_Print);
             this.Controls.Add(this.Employee_exit);
             this.Controls.Add(this.Employee_delete);
@@ -1324,7 +1238,6 @@
             this.groupBox_Employee.ResumeLayout(false);
             this.groupBox_Employee.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1335,10 +1248,6 @@
         private MetroFramework.Controls.MetroButton Employee_add;
         private MetroFramework.Controls.MetroButton Employee_new;
         private MetroFramework.Controls.MetroButton Employee_Print;
-        private MetroFramework.Controls.MetroTextBox Employee_Search_Name;
-        private MetroFramework.Controls.MetroTextBox Employee_Search_Mony;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.GroupBox groupBox_Employee_Des;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroTextBox Employee_Description_Salery;

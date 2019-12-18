@@ -19,6 +19,15 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Leoan_Max_ID()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Leoan_Max_ID", null);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Contracts_by_Departmentid_Employeeid(int Department_ID, int Employee_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

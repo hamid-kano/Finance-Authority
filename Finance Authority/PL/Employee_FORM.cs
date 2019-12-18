@@ -76,8 +76,9 @@ namespace Finance_Authority.PL
                 Employee_Description_Comb_Satutes.Text = Dt.Rows[0][1].ToString();
                 Employee_Description_Now.Checked = Convert.ToBoolean(Dt.Rows[0][2].ToString()) ? true : false;
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
-               
-               
+                Contracts_Brows_Docs.Enabled = true;
+                Employees_Brows_Docs.Enabled = true;
+
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
                 {
                     StatusContractNewOrOld = true;
@@ -99,6 +100,8 @@ namespace Finance_Authority.PL
             else
             {
                 Statues_Change.Enabled = false;
+                Contracts_Brows_Docs.Enabled = false;
+                Employees_Brows_Docs.Enabled = false;
             }
 
         }
@@ -126,6 +129,9 @@ namespace Finance_Authority.PL
             Employee_Description_Salery.Text = "";
             Contracts_Type.Text = "";
             Contracts_Notes.Text = "";
+            Contracts_Brows_Docs.Enabled = false;
+            Employees_Brows_Docs.Enabled = false;
+
 
 
         }
@@ -247,21 +253,37 @@ namespace Finance_Authority.PL
                     , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                     , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
                     , Employee_Marital_status.Text, Employee_Pr_Service_Years.Text);
-
                 // اضافة الوصف الوظيفي
-                int last_id_Emp = (int)Emp.Employee_last_id().Rows[0][0];
+                Program.Employee_id = (int)Emp.Employee_last_id().Rows[0][0];
                 bool Role_status = true;
                 Empl_Des.Employee_Description_add(Employee_Description_Comb_Satutes.Text, Role_status, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text,
-                    Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), last_id_Emp);
+                    Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Program.Employee_id);
+               
+                int Description_last_id = (int)Emp.Employee_Description_last_id().Rows[0][0];
+                /// اضافة ملحقات لهذا المووظف
+                if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الموظف؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Document_FORM FRM = new Document_FORM(Description_last_id, "موظف");
+                    FRM.ShowDialog();
+                }
+                ////
+
                 if (groupBox_Contract.Enabled == true)
                 {
-                    int Description_last_id = (int)Emp.Employee_Description_last_id().Rows[0][0];
                     cont.Contracts_add(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
                          , Contracts_Notes.Text, Description_last_id);
                     Contracts_Type.Text = "";
                     Contracts_Notes.Text = "";
+                    ///
+                    /// اضافة ملحقات للعقد
+                    if (MessageBox.Show("هل تريد اضافة ملحقات لهذا العقد؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                    {
+                        Document_FORM FRM = new Document_FORM(Description_last_id, "عقد");
+                        FRM.ShowDialog();
+                    }
+                    ////
+                    ///
                 }
-                ///
                 Program.Add_Message();
 
             }
@@ -522,35 +544,10 @@ namespace Finance_Authority.PL
                 Employee_Pr_Service_Years.Text = "";
                 Employee_update.Enabled = false;
                 Employee_delete.Enabled = false;
-            }
+                Employees_Brows_Docs.Enabled = false;
 
-            //private void Employee_dataGrid_Click(object sender, EventArgs e)
-            //{
-            //    if (Employee_dataGrid.CurrentRow != null)
-            //    {
-            //        Program.Employee_id= Convert.ToInt32(this.Employee_dataGrid.CurrentRow.Cells[0].Value.ToString());
-            //        Employee_First_Name.Text = this.Employee_dataGrid.CurrentRow.Cells[1].Value.ToString();
-            //        Employee_Father_Name.Text = this.Employee_dataGrid.CurrentRow.Cells[2].Value.ToString();
-            //        Employee_Last_Name.Text = this.Employee_dataGrid.CurrentRow.Cells[3].Value.ToString();
-            //        Employee_Mother_Name.Text = this.Employee_dataGrid.CurrentRow.Cells[4].Value.ToString();
-            //        Employee_Brith_Date.Text = this.Employee_dataGrid.CurrentRow.Cells[5].Value.ToString();
-            //        Employee_Mobail.Text = this.Employee_dataGrid.CurrentRow.Cells[6].Value.ToString();
-            //        Employee_Scie_Level.Text = this.Employee_dataGrid.CurrentRow.Cells[7].Value.ToString();
-            //        Employee_Scie_Specialization.Text = this.Employee_dataGrid.CurrentRow.Cells[8].Value.ToString();
-            //        Employee_No_Financial.Text = this.Employee_dataGrid.CurrentRow.Cells[9].Value.ToString();
-            //        Employee_No_Affairs.Text = this.Employee_dataGrid.CurrentRow.Cells[10].Value.ToString();
-            //        Employee_No_File.Text = this.Employee_dataGrid.CurrentRow.Cells[11].Value.ToString();
-            //        Employee_No_Card.Text = this.Employee_dataGrid.CurrentRow.Cells[12].Value.ToString();
-            //        Employee_Gender.Text = this.Employee_dataGrid.CurrentRow.Cells[13].Value.ToString();
-            //        Employee_Marital_status.Text = this.Employee_dataGrid.CurrentRow.Cells[14].Value.ToString();
-            //        Employee_Pr_Service_Years.Text = this.Employee_dataGrid.CurrentRow.Cells[15].Value.ToString();
-            //        Employee_update.Enabled = true;
-            //        Employee_delete.Enabled = true;
-            //        Employee_add.Enabled = false;
-            //    }
-            //}
-
-            private void Employee_delete_Click(object sender, EventArgs e)
+        }
+        private void Employee_delete_Click(object sender, EventArgs e)
             {
                 if (MessageBox.Show("هل تريد حذف الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -574,8 +571,10 @@ namespace Finance_Authority.PL
                     Employee_Pr_Service_Years.Text = "";
                     Employee_update.Enabled = false;
                     Employee_delete.Enabled = false;
-                }
+                    Employees_Brows_Docs.Enabled = false;
+
             }
+        }
             private void Employee_Mobail_KeyPress(object sender, KeyPressEventArgs e)
             {
                 e.Handled = Program.DenyChar(e);
@@ -652,43 +651,55 @@ namespace Finance_Authority.PL
             private void Employee_Description_Comb_Satutes_SelectedValueChanged(object sender, EventArgs e)
             {
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
-                {
+                {   
                     groupBox_Contract.Enabled = true;
                 }
                 else groupBox_Contract.Enabled = false;
 
             }
 
-
-            //private void Employee_Print_Click(object sender, EventArgs e)
-            //{
-            //    REPT.Crystal_Employee Art = new REPT.Crystal_Employee();
-
-            //    REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            //    if (Employee_dataGrid.Rows.Count != 0)
-            //    {
-            //        // DataTable dt = dataGrid_Ringall.DataSource;
-            //        Art.SetDataSource(Employee_dataGrid.DataSource);
-
-            //        FRPT.crystalReportViewer1.ReportSource = Art;
-            //        FRPT.ShowDialog();
-            //    }
-            //}     
-            //private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
-            //{
-            //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
-            //    Employee_dataGrid.Columns[0].Visible = false;
-            //}
-
-            //private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
-            //{
-            //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
-            //    Employee_dataGrid.Columns[0].Visible = false;
-            //}
-
-
+        private void Contracts_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(_Empolyee_Description_ID, "عقد");
+            FRM.ShowDialog();
         }
+
+        private void Employees_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(_Empolyee_Description_ID, "موظف");
+            FRM.ShowDialog();
+        }
+
+
+        //private void Employee_Print_Click(object sender, EventArgs e)
+        //{
+        //    REPT.Crystal_Employee Art = new REPT.Crystal_Employee();
+
+        //    REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+        //    if (Employee_dataGrid.Rows.Count != 0)
+        //    {
+        //        // DataTable dt = dataGrid_Ringall.DataSource;
+        //        Art.SetDataSource(Employee_dataGrid.DataSource);
+
+        //        FRPT.crystalReportViewer1.ReportSource = Art;
+        //        FRPT.ShowDialog();
+        //    }
+        //}     
+        //private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
+        //{
+        //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
+        //    Employee_dataGrid.Columns[0].Visible = false;
+        //}
+
+        //private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
+        //{
+        //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
+        //    Employee_dataGrid.Columns[0].Visible = false;
+        //}        
+
+
+    }
     } 
 
 

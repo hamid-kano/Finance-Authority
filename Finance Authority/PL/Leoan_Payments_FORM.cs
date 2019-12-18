@@ -53,6 +53,7 @@ namespace Finance_Authority.PL
             Leoan_Payments_Notes.Text = "";
             Leoan_Payments_update.Enabled = false;
             Leoan_Payments_delete.Enabled = false;
+            Loans_Payments_Brows_Docs.Enabled = false;
         }
 
        
@@ -76,11 +77,22 @@ namespace Finance_Authority.PL
                 pay_Leo.Leoan_Payments_add(Program.Loan_id,Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text , Leoan_Payments_Date.Value , Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue));
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
-                Program.Add_Message();
+                int Max_loan_Payment_id =Convert.ToInt32(pay_Leo.Leoan_Payments_MAX_id().Rows[0][0]);
+                /// اضافة ملحقات لدفعة القرض
+                if (MessageBox.Show("هل تريد اضافة ملحقات لدفعة القرض هذا؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Document_FORM FRM = new Document_FORM(Max_loan_Payment_id, "دفعة قرض");
+                    FRM.ShowDialog();
+                }
+                ////
+
+            Program.Add_Message();
                 Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
+                Loans_Payments_Brows_Docs.Enabled = false;
+
             //}
         }
 
@@ -113,6 +125,7 @@ namespace Finance_Authority.PL
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
+                Loans_Payments_Brows_Docs.Enabled = false;
             //}
         }
 
@@ -127,6 +140,7 @@ namespace Finance_Authority.PL
                 Leoan_Payments_Comb_Budget.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[4].Value.ToString();
                 Leoan_Payments_update.Enabled = true;
                 Leoan_Payments_delete.Enabled = true;
+                Loans_Payments_Brows_Docs.Enabled = true;
                 Leoan_Payments_add.Enabled = false;
             }
         }
@@ -143,6 +157,7 @@ namespace Finance_Authority.PL
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
+                Loans_Payments_Brows_Docs.Enabled = false;
             }
         }
 
@@ -195,6 +210,12 @@ namespace Finance_Authority.PL
             sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
             sumtotal = sumtotal - sum;
             Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
+        }
+
+        private void Loans_Payments_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Leoan_Payments_id, "دفعة قرض");
+            FRM.ShowDialog();
         }
     }
 }

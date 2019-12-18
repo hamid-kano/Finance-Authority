@@ -92,7 +92,7 @@ namespace Finance_Authority.PL
                 frm.Update_label_finance_Box();
                 //
                 /// اضافة ملحقات لسند القبض
-                int id_Reciver_Doc_new_add = Convert.ToInt32(Reciv.Reciver_Document_Max_ID().Rows[0][0]) + 1;
+                int id_Reciver_Doc_new_add = Convert.ToInt32(Reciv.Reciver_Document_Max_ID().Rows[0][0]);
                 if (MessageBox.Show("هل تريد اضافة ملحقات لهذا السند؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
                     Document_FORM FRM = new Document_FORM(id_Reciver_Doc_new_add, "سند قبض");

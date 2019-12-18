@@ -43,6 +43,7 @@
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.Emission_Salaries_Brows_Docs = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Emission_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,14 +91,14 @@
             this.Emission_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Emission_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Emission_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Emission_Salaries_dataGrid.Size = new System.Drawing.Size(950, 386);
+            this.Emission_Salaries_dataGrid.Size = new System.Drawing.Size(716, 386);
             this.Emission_Salaries_dataGrid.TabIndex = 59;
             this.Emission_Salaries_dataGrid.Click += new System.EventHandler(this.Emission_Salaries_dataGrid_Click);
             // 
             // Emission_Salaries_exit
             // 
             this.Emission_Salaries_exit.Highlight = true;
-            this.Emission_Salaries_exit.Location = new System.Drawing.Point(662, 508);
+            this.Emission_Salaries_exit.Location = new System.Drawing.Point(606, 496);
             this.Emission_Salaries_exit.Name = "Emission_Salaries_exit";
             this.Emission_Salaries_exit.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_exit.TabIndex = 7;
@@ -109,7 +110,7 @@
             // 
             this.Emission_Salaries_delete.Enabled = false;
             this.Emission_Salaries_delete.Highlight = true;
-            this.Emission_Salaries_delete.Location = new System.Drawing.Point(551, 508);
+            this.Emission_Salaries_delete.Location = new System.Drawing.Point(503, 496);
             this.Emission_Salaries_delete.Name = "Emission_Salaries_delete";
             this.Emission_Salaries_delete.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_delete.TabIndex = 6;
@@ -121,7 +122,7 @@
             // 
             this.Emission_Salaries_update.Enabled = false;
             this.Emission_Salaries_update.Highlight = true;
-            this.Emission_Salaries_update.Location = new System.Drawing.Point(444, 508);
+            this.Emission_Salaries_update.Location = new System.Drawing.Point(400, 496);
             this.Emission_Salaries_update.Name = "Emission_Salaries_update";
             this.Emission_Salaries_update.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_update.TabIndex = 5;
@@ -133,7 +134,7 @@
             // 
             this.Emission_Salaries_add.Enabled = false;
             this.Emission_Salaries_add.Highlight = true;
-            this.Emission_Salaries_add.Location = new System.Drawing.Point(325, 508);
+            this.Emission_Salaries_add.Location = new System.Drawing.Point(295, 496);
             this.Emission_Salaries_add.Name = "Emission_Salaries_add";
             this.Emission_Salaries_add.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_add.TabIndex = 4;
@@ -144,7 +145,7 @@
             // Emission_Salaries_new
             // 
             this.Emission_Salaries_new.Highlight = true;
-            this.Emission_Salaries_new.Location = new System.Drawing.Point(213, 508);
+            this.Emission_Salaries_new.Location = new System.Drawing.Point(189, 496);
             this.Emission_Salaries_new.Name = "Emission_Salaries_new";
             this.Emission_Salaries_new.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_new.TabIndex = 3;
@@ -155,7 +156,7 @@
             // Emission_Salaries_Date
             // 
             this.Emission_Salaries_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Emission_Salaries_Date.Location = new System.Drawing.Point(416, 460);
+            this.Emission_Salaries_Date.Location = new System.Drawing.Point(314, 455);
             this.Emission_Salaries_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Emission_Salaries_Date.Name = "Emission_Salaries_Date";
             this.Emission_Salaries_Date.Size = new System.Drawing.Size(151, 29);
@@ -165,7 +166,7 @@
             // 
             this.Emission_Salaries_Comb_Budget.FormattingEnabled = true;
             this.Emission_Salaries_Comb_Budget.ItemHeight = 23;
-            this.Emission_Salaries_Comb_Budget.Location = new System.Drawing.Point(692, 455);
+            this.Emission_Salaries_Comb_Budget.Location = new System.Drawing.Point(568, 456);
             this.Emission_Salaries_Comb_Budget.Name = "Emission_Salaries_Comb_Budget";
             this.Emission_Salaries_Comb_Budget.Size = new System.Drawing.Size(149, 29);
             this.Emission_Salaries_Comb_Budget.TabIndex = 2;
@@ -175,7 +176,7 @@
             // 
             this.Emission_Salaries_Name_office.FormattingEnabled = true;
             this.Emission_Salaries_Name_office.ItemHeight = 23;
-            this.Emission_Salaries_Name_office.Location = new System.Drawing.Point(165, 460);
+            this.Emission_Salaries_Name_office.Location = new System.Drawing.Point(97, 455);
             this.Emission_Salaries_Name_office.Name = "Emission_Salaries_Name_office";
             this.Emission_Salaries_Name_office.Size = new System.Drawing.Size(149, 29);
             this.Emission_Salaries_Name_office.TabIndex = 0;
@@ -184,7 +185,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(85, 470);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(17, 461);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(74, 19);
             this.Coin_Exc_Sy.TabIndex = 221;
@@ -193,7 +194,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(608, 465);
+            this.metroLabel1.Location = new System.Drawing.Point(484, 460);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(78, 19);
             this.metroLabel1.TabIndex = 222;
@@ -202,17 +203,30 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(369, 470);
+            this.metroLabel2.Location = new System.Drawing.Point(267, 459);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(41, 19);
             this.metroLabel2.TabIndex = 223;
             this.metroLabel2.Text = "التاريخ";
             // 
+            // Emission_Salaries_Brows_Docs
+            // 
+            this.Emission_Salaries_Brows_Docs.Enabled = false;
+            this.Emission_Salaries_Brows_Docs.Highlight = true;
+            this.Emission_Salaries_Brows_Docs.Location = new System.Drawing.Point(54, 496);
+            this.Emission_Salaries_Brows_Docs.Name = "Emission_Salaries_Brows_Docs";
+            this.Emission_Salaries_Brows_Docs.Size = new System.Drawing.Size(118, 37);
+            this.Emission_Salaries_Brows_Docs.TabIndex = 288;
+            this.Emission_Salaries_Brows_Docs.Text = "استعراض الملحقات";
+            this.Emission_Salaries_Brows_Docs.UseSelectable = true;
+            this.Emission_Salaries_Brows_Docs.Click += new System.EventHandler(this.Emission_Salaries_Brows_Docs_Click);
+            // 
             // Emission_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 556);
+            this.ClientSize = new System.Drawing.Size(745, 556);
+            this.Controls.Add(this.Emission_Salaries_Brows_Docs);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Coin_Exc_Sy);
@@ -229,7 +243,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "اصدار الرواتب";
-            this.Load += new System.EventHandler(this.Emission_Salaries_FORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Emission_Salaries_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,5 +263,6 @@
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton Emission_Salaries_Brows_Docs;
     }
 }

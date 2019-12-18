@@ -45,6 +45,7 @@ namespace Finance_Authority.PL
             Document_Type.Text = _Document_Type;
             Document_update.Enabled = false;
             Document_delete.Enabled = false;
+            Document_Brows_File.Enabled = false;
         }
 
         private void Document_add_Click(object sender, EventArgs e)
@@ -96,6 +97,7 @@ namespace Finance_Authority.PL
             Program.Update_Message();
             Document_update.Enabled = false;
             Document_delete.Enabled = false;
+            Document_Brows_File.Enabled = false;
             Document_Name.Text = "";
             Document_URL.Text = "";
             Document_Location.Text = "";
@@ -118,6 +120,7 @@ namespace Finance_Authority.PL
                 _Doc_id= Convert.ToInt32(this.Document_Gridview.CurrentRow.Cells[7].Value);
                 Document_update.Enabled = true;
                 Document_delete.Enabled = true;
+                Document_Brows_File.Enabled = true;
                 Document_add.Enabled = false;
             }
         }
@@ -133,6 +136,7 @@ namespace Finance_Authority.PL
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Document_update.Enabled = false;
                 Document_delete.Enabled = false;
+                Document_Brows_File.Enabled = false;
                 Document_Name.Text = "";
                 Document_URL.Text = "";
                 Document_Location.Text = "";
@@ -159,6 +163,18 @@ namespace Finance_Authority.PL
             Document_add.Enabled = false;
             Document_update.Enabled = false;
             Document_new.Enabled = false;
+        }
+
+        private void Document_Brows_File_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(Document_URL.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("الملحق غير موجود في مساره الصحيح", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

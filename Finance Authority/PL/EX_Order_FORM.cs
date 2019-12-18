@@ -44,6 +44,14 @@ namespace Finance_Authority.PL
             if (Dt.Rows.Count == 0)
             {
                 order.Exchange_Order_add(EX_Orders_order.Text, EX_Orders_DateTime.Value, EX_Orders_tosorce.Text, EX_Orders_Body_order.Text, EX_Orders_Notes.Text, Convert.ToInt32(EX_Orders_CombCategorise.SelectedValue));
+                /// اضافة ملحقات لهذا الطلب
+                if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الطلب؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    int MAX_Exchange_Order_ID =Convert.ToInt32(order.Exchange_Order_Max_ID().Rows[0][0]);
+                    Document_FORM FRM = new Document_FORM(MAX_Exchange_Order_ID, "طلب صرف مبلغ");
+                    FRM.ShowDialog();
+                }
+                ////
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
                 Program.Add_Message();
@@ -68,6 +76,7 @@ namespace Finance_Authority.PL
             EX_Orders_add.Enabled = true;
             EX_Orders_update.Enabled = false;
             EX_Orders_delete.Enabled = false;
+            EX_Orders_Brows_Docs.Enabled = false;
             EX_Orders_order.Text = "";
             EX_Orders_tosorce.Text = "";
             EX_Orders_Body_order.Text = "";
@@ -88,7 +97,7 @@ namespace Finance_Authority.PL
                 EX_Orders_CombCategorise.Text = this.EX_Orders_dataGrid.CurrentRow.Cells[6].Value.ToString();
                 EX_Orders_update.Enabled = true;
                 EX_Orders_delete.Enabled = true;
-                EX_Orders_add.Enabled = false;
+                EX_Orders_Brows_Docs.Enabled = true;
                 EX_Orders_add.Enabled = false;
             }
         }
@@ -129,6 +138,8 @@ namespace Finance_Authority.PL
               
                 EX_Orders_update.Enabled = false;
                 EX_Orders_delete.Enabled = false;
+                EX_Orders_Brows_Docs.Enabled = false;
+
             }
             else
             {
@@ -154,6 +165,8 @@ namespace Finance_Authority.PL
                 EX_Orders_Notes.Text = "";
                 EX_Orders_update.Enabled = false;
                 EX_Orders_delete.Enabled = false;
+                EX_Orders_Brows_Docs.Enabled = false;
+
             }
         }
 
@@ -212,6 +225,12 @@ namespace Finance_Authority.PL
         {
             this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
             EX_Orders_CombCategorise.DataSource = order.EX_Orders_CombCategorise();
+        }
+
+        private void EX_Orders_Brows_Docs_Click(object sender, EventArgs e)
+        {
+            Document_FORM FRM = new Document_FORM(Program.Exchange_Order_id, "طلب صرف مبلغ");
+            FRM.ShowDialog();
         }
     }
 }

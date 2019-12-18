@@ -19,6 +19,16 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Emission_Salaries_Max_ID()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Emission_Salaries_Max_ID", null);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable Emission_Salaries_add(int Office_ID, DateTime Date , int Budget_Id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

@@ -27,11 +27,6 @@ namespace Finance_Authority.PL
            
         }
 
-        private void Employee_Description_new_Click(object sender, EventArgs e)
-        { 
-            Employee_Description_delete.Enabled = false;
-        }
-
         private void Employee_Description_exit_Click(object sender, EventArgs e)
         {
             this.Close();

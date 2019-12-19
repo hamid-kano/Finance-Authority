@@ -278,18 +278,36 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Payment_Document Art = new REPT.Crystal_Payment_Document();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            if (Payment_Document_dataGrid.Rows.Count != 0)
+            DT_REPORT.Columns.Add("المبلغ بالسوري", typeof(string));
+            DT_REPORT.Columns.Add("المبلغ بالدولار", typeof(string));
+            DT_REPORT.Columns.Add("قيمة التحويل", typeof(string));
+            DT_REPORT.Columns.Add("رقم سند الدفع", typeof(string));
+            DT_REPORT.Columns.Add("رقم امر الصرف", typeof(string));
+            DT_REPORT.Columns.Add("سبب الدفع", typeof(string));
+            DT_REPORT.Columns.Add("المستلم", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("الميزانية", typeof(string));
+            DT_REPORT.Columns.Add("نوع السند", typeof(string));
+            foreach (DataGridViewRow dgv in Payment_Document_dataGrid.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Payment_Document_dataGrid.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value,dgv.Cells[3].Value
+                   , dgv.Cells[4].Value,
+                  dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, Convert.ToDateTime(dgv.Cells[8].Value).ToShortDateString()
+                  , dgv.Cells[9].Value,  Convert.ToDateTime(dgv.Cells[10].Value).ToShortDateString(), dgv.Cells[11].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Payment_Document.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Payment_Document report = new REPT.Crystal_Payment_Document();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
         }
 
         private void Payment_Document_Search_TextChanged(object sender, EventArgs e)

@@ -244,18 +244,35 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Reciver_Document Art = new REPT.Crystal_Reciver_Document();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            if (Reciver_Document_dataGrid.Rows.Count != 0)
+            DT_REPORT.Columns.Add("المبلغ بالسوري", typeof(string));
+            DT_REPORT.Columns.Add("المبلغ بالدولار", typeof(string));
+            DT_REPORT.Columns.Add("قيمة التحويل", typeof(string));
+            DT_REPORT.Columns.Add("رقم سند الاستلام", typeof(string));
+            DT_REPORT.Columns.Add("السبب ", typeof(string));
+            DT_REPORT.Columns.Add("من قبل", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("الميزانية", typeof(string));
+            DT_REPORT.Columns.Add("نوع السند", typeof(string));
+            foreach (DataGridViewRow dgv in Reciver_Document_dataGrid.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Reciver_Document_dataGrid.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value
+                   , dgv.Cells[4].Value,
+                  dgv.Cells[5].Value, dgv.Cells[6].Value, Convert.ToDateTime(dgv.Cells[7].Value).ToShortDateString(), dgv.Cells[8].Value
+                  , Convert.ToDateTime(dgv.Cells[9].Value).ToShortDateString(),dgv.Cells[10].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Reciver_Document.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Reciver_Documents report = new REPT.Crystal_Reciver_Documents();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
         }
         private void Reciver_Document_Search_TextChanged(object sender, EventArgs e)
         {

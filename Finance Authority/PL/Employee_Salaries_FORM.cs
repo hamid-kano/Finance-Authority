@@ -15,80 +15,49 @@ namespace Finance_Authority.PL
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Employee_Salaries Empl_Sala = new BL.CLS_Employee_Salaries();
+        BL.Department Dep = new BL.Department();
         public Employee_Salaries_FORM()
         {
             InitializeComponent();
             Employee_Salaries_Saliery.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
             Employee_Salaries_Saliery.DisplayMember = "Date";
             Employee_Salaries_Saliery.ValueMember = "Emission_Salaries_id";
-            Employee_Salaries_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Employee_Salaries_Department.DisplayMember = "Department_Name";
-            Employee_Salaries_Department.ValueMember = "Department_ID";
+            Employee_Salaries_Office.DataSource = Dep.Department_CombOffice();
+            Employee_Salaries_Office.DisplayMember = "Office_Name";
+            Employee_Salaries_Office.ValueMember = "Office_ID";
             this.StyleManager = Program.theme_style(this);
-            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-            Employee_Salaries_dataGrid.Columns[0].Visible = false;
-            Empl_Sala_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Empl_Sala_Comb_Department.DisplayMember = "Department_Name";
-            Empl_Sala_Comb_Department.ValueMember = "Department_ID";
-            Empl_Sala_Comb_Date_Emiss.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
-            Empl_Sala_Comb_Date_Emiss.DisplayMember = "Date";
-            Empl_Sala_Comb_Date_Emiss.ValueMember = "Emission_Salaries_id";
+            //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+            //Employee_Salaries_dataGrid.Columns[0].Visible = false;
         }
 
-        private void Empl_Sala_Comb_Department_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int idDepartment = Convert.ToInt32(Empl_Sala_Comb_Department.SelectedValue);
-                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
-                Empl_Sala_Comb_Emplyment.DataSource = cont.Contracts_Comb_Employee(idDepartment);
-                Empl_Sala_Comb_Emplyment.DisplayMember = "fullName";
-                Empl_Sala_Comb_Emplyment.ValueMember = "Emp_id";
-
-            }
-            catch (Exception)
-            {
-
-                //throw;
-            }
-        }
+       
 
         private void Employee_Salaries_add_Click(object sender, EventArgs e)
         {
-            int idDepartment = Convert.ToInt32(Empl_Sala_Comb_Department.SelectedValue);
-            int idemployee = Convert.ToInt32(Empl_Sala_Comb_Emplyment.SelectedValue);
-            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
-            if (DT.Rows.Count > 0)
-            {
-                DataRow row = DT.Rows[0];
-                int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
-                Empl_Sala.Employee_Salaries_add(Empl_Sala_Dayes.Text, Empl_Sala_Rem_cons.Text, Empl_Sala_Absences.Text, Empl_Sala_va_out_sal.Text
-                    , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
-                    , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
-                    , Empl_Sala_Insurances.Text , Empl_Sala_Files1.Text, Empl_Sala_Files2.Text,Convert.ToInt32(Empl_Sala_Comb_Date_Emiss.SelectedValue), id_EmployeeDES);
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-                Employee_Salaries_dataGrid.Columns[0].Visible = false;
-                Program.Add_Message();
-                Empl_Sala_Dayes.Text = "";
-                Empl_Sala_Rem_cons.Text = "";
-                Empl_Sala_Absences.Text = "";
-                Empl_Sala_va_out_sal.Text = "";
-                Empl_Sala_Exam.Text = "";
-                Empl_Sala_Punishments.Text = "";
-                Empl_Sala_Loans.Text = "";
-                Empl_Sala_Taskes.Text = "";
-                Empl_Sala_Reparations.Text = "";
-                Empl_Sala_Years_Seniority.Text = "";
-                Empl_Sala_Total.Text = "";
-                Empl_Sala_after_Reb.Text = "";
-                Empl_Sala_Notes.Text = "";
-                Empl_Sala_Insurances.Text = "";
-                Empl_Sala_Files1.Text = "";
-                Empl_Sala_Files2.Text = "";
-                Employee_Salaries_add.Enabled = false;
-
-            }
-            
+                //Empl_Sala.Employee_Salaries_add(Empl_Sala_Dayes.Text, Empl_Sala_Rem_cons.Text, Empl_Sala_Absences.Text, Empl_Sala_va_out_sal.Text
+                //    , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
+                //    , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
+                //    , Empl_Sala_Insurances.Text , Empl_Sala_Files1.Text, Empl_Sala_Files2.Text,Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue));
+                //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+                //Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                //Program.Add_Message();
+                //Empl_Sala_Dayes.Text = "";
+                //Empl_Sala_Rem_cons.Text = "";
+                //Empl_Sala_Absences.Text = "";
+                //Empl_Sala_va_out_sal.Text = "";
+                //Empl_Sala_Exam.Text = "";
+                //Empl_Sala_Punishments.Text = "";
+                //Empl_Sala_Loans.Text = "";
+                //Empl_Sala_Taskes.Text = "";
+                //Empl_Sala_Reparations.Text = "";
+                //Empl_Sala_Years_Seniority.Text = "";
+                //Empl_Sala_Total.Text = "";
+                //Empl_Sala_after_Reb.Text = "";
+                //Empl_Sala_Notes.Text = "";
+                //Empl_Sala_Insurances.Text = "";
+                //Empl_Sala_Files1.Text = "";
+                //Empl_Sala_Files2.Text = "";
+                //Employee_Salaries_add.Enabled = false;         
         }
 
         private void Employee_Salaries_new_Click(object sender, EventArgs e)
@@ -114,41 +83,41 @@ namespace Finance_Authority.PL
 
         private void Employee_Salaries_update_Click(object sender, EventArgs e)
         {
-            int idDepartment = Convert.ToInt32(Empl_Sala_Comb_Department.SelectedValue);
-            int idemployee = Convert.ToInt32(Empl_Sala_Comb_Emplyment.SelectedValue);
-            DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
-            if (DT.Rows.Count > 0)
-            {
-                DataRow row = DT.Rows[0];
-                int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
-                Empl_Sala.Employee_Salaries_update(Empl_Sala_Dayes.Text, Empl_Sala_Rem_cons.Text, Empl_Sala_Absences.Text, Empl_Sala_va_out_sal.Text
-                    , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
-                    , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
-                    , Empl_Sala_Insurances.Text, Empl_Sala_Files1.Text, Empl_Sala_Files2.Text, Convert.ToInt32(Empl_Sala_Comb_Date_Emiss.SelectedValue), id_EmployeeDES, Program.Employee_Salaries_id);
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-                Employee_Salaries_dataGrid.Columns[0].Visible = false;
-                Program.Update_Message();
-                Empl_Sala_Dayes.Text = "";
-                Empl_Sala_Rem_cons.Text = "";
-                Empl_Sala_Absences.Text = "";
-                Empl_Sala_va_out_sal.Text = "";
-                Empl_Sala_Exam.Text = "";
-                Empl_Sala_Punishments.Text = "";
-                Empl_Sala_Loans.Text = "";
-                Empl_Sala_Taskes.Text = "";
-                Empl_Sala_Reparations.Text = "";
-                Empl_Sala_Years_Seniority.Text = "";
-                Empl_Sala_Total.Text = "";
-                Empl_Sala_after_Reb.Text = "";
-                Empl_Sala_Notes.Text = "";
-                Empl_Sala_Insurances.Text = "";
-                Empl_Sala_Files1.Text = "";
-                Empl_Sala_Files2.Text = "";
-                Employee_Salaries_add.Enabled = false;
-                Employee_Salaries_update.Enabled = false;
-                Employee_Salaries_delete.Enabled = false;
+            //int idDepartment = Convert.ToInt32(Empl_Sala_Comb_Department.SelectedValue);
+            //int idemployee = Convert.ToInt32(Empl_Sala_Comb_Emplyment.SelectedValue);
+            //DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
+            //if (DT.Rows.Count > 0)
+            //{
+            //    DataRow row = DT.Rows[0];
+            //    int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
+            //    Empl_Sala.Employee_Salaries_update(Empl_Sala_Dayes.Text, Empl_Sala_Rem_cons.Text, Empl_Sala_Absences.Text, Empl_Sala_va_out_sal.Text
+            //        , Empl_Sala_Exam.Text, Empl_Sala_Punishments.Text, Empl_Sala_Loans.Text, Empl_Sala_Taskes.Text, Empl_Sala_Reparations.Text
+            //        , Empl_Sala_Years_Seniority.Text, Empl_Sala_Total.Text, Empl_Sala_after_Reb.Text, Empl_Sala_Notes.Text
+            //        , Empl_Sala_Insurances.Text, Empl_Sala_Files1.Text, Empl_Sala_Files2.Text, Convert.ToInt32(Empl_Sala_Comb_Date_Emiss.SelectedValue), id_EmployeeDES, Program.Employee_Salaries_id);
+            //    this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+            //    Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            //    Program.Update_Message();
+            //    Empl_Sala_Dayes.Text = "";
+            //    Empl_Sala_Rem_cons.Text = "";
+            //    Empl_Sala_Absences.Text = "";
+            //    Empl_Sala_va_out_sal.Text = "";
+            //    Empl_Sala_Exam.Text = "";
+            //    Empl_Sala_Punishments.Text = "";
+            //    Empl_Sala_Loans.Text = "";
+            //    Empl_Sala_Taskes.Text = "";
+            //    Empl_Sala_Reparations.Text = "";
+            //    Empl_Sala_Years_Seniority.Text = "";
+            //    Empl_Sala_Total.Text = "";
+            //    Empl_Sala_after_Reb.Text = "";
+            //    Empl_Sala_Notes.Text = "";
+            //    Empl_Sala_Insurances.Text = "";
+            //    Empl_Sala_Files1.Text = "";
+            //    Empl_Sala_Files2.Text = "";
+            //    Employee_Salaries_add.Enabled = false;
+            //    Employee_Salaries_update.Enabled = false;
+            //    Employee_Salaries_delete.Enabled = false;
 
-            }
+            //}
         }
 
         private void Employee_Salaries_dataGrid_Click(object sender, EventArgs e)
@@ -171,9 +140,7 @@ namespace Finance_Authority.PL
                 Empl_Sala_Notes.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[13].Value.ToString();
                 Empl_Sala_Insurances.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[14].Value.ToString();
                 Empl_Sala_Files1.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[15].Value.ToString();
-                Empl_Sala_Files2.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[16].Value.ToString();
-                Empl_Sala_Comb_Department.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[19].Value.ToString();
-                Empl_Sala_Comb_Emplyment.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[18].Value.ToString();
+                Empl_Sala_Files2.Text = this.Employee_Salaries_dataGrid.CurrentRow.Cells[16].Value.ToString(); 
                 Employee_Salaries_update.Enabled = true;
                 Employee_Salaries_delete.Enabled = true;
                 Employee_Salaries_add.Enabled = false;
@@ -185,8 +152,8 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف راتب الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Empl_Sala.Employee_Salaries_Delete(Program.Employee_Salaries_id);
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
+                //Employee_Salaries_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Empl_Sala_Dayes.Text = "";
                 Empl_Sala_Rem_cons.Text = "";
@@ -214,23 +181,23 @@ namespace Finance_Authority.PL
             this.Close();
         }
 
-        private void Employee_Salaries_Department_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int idDepartment = Convert.ToInt32(Employee_Salaries_Department.SelectedValue);
-                Employee_Salaries_Employment.DataSource = cont.Contracts_Comb_Employee(idDepartment);
-                Employee_Salaries_Employment.DisplayMember = "fullName";
-                Employee_Salaries_Employment.ValueMember = "Emp_id";
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Department(idDepartment);
-                Employee_Salaries_dataGrid.Columns[0].Visible = false;
-            }
-            catch (Exception)
-            {
+        //private void Employee_Salaries_Department_SelectedValueChanged(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        int idDepartment = Convert.ToInt32(Employee_Salaries_Office.SelectedValue);
+        //        Employee_Salaries_Employment.DataSource = cont.Contracts_Comb_Employee(idDepartment);
+        //        Employee_Salaries_Employment.DisplayMember = "fullName";
+        //        Employee_Salaries_Employment.ValueMember = "Emp_id";
+        //        this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Department(idDepartment);
+        //        Employee_Salaries_dataGrid.Columns[0].Visible = false;
+        //    }
+        //    catch (Exception)
+        //    {
 
-                //throw;
-            }
-        }
+        //        //throw;
+        //    }
+        //}
 
         private void Employee_Salaries_Saliery_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -252,17 +219,11 @@ namespace Finance_Authority.PL
         private void Employee_Salaries_Employment_SelectedValueChanged(object sender, EventArgs e)
         {
             try
-            {
-                int idDepartment = Convert.ToInt32(Employee_Salaries_Department.SelectedValue);
+            { 
                 int idemployee = Convert.ToInt32(Employee_Salaries_Employment.SelectedValue);
-                DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
-                if (DT.Rows.Count > 0)
-                {
-                    DataRow row = DT.Rows[0];
-                    int id_EmployeeDES = Convert.ToInt32(row["Employee_Des_ID"]);
-                    this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Employee_Department(id_EmployeeDES);
-                    Employee_Salaries_dataGrid.Columns[0].Visible = false;
-                }
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Employee_Offiice(idemployee);
+                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+                
             }
             catch { }
         }
@@ -357,6 +318,24 @@ namespace Finance_Authority.PL
         private void Empl_Sala_Insurances_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Employee_Salaries_Office_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int Office = Convert.ToInt32(Employee_Salaries_Office.SelectedValue);
+                Employee_Salaries_Employment.DataSource = cont.Contracts_Comb_Employee(Office);
+                Employee_Salaries_Employment.DisplayMember = "fullName";
+                Employee_Salaries_Employment.ValueMember = "Emp_id";
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Office(Office);
+                Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
         }
     }
 }

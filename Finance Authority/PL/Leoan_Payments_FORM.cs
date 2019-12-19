@@ -179,18 +179,33 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Leoan_Payments Art = new REPT.Crystal_Leoan_Payments();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+            DT_REPORT.Columns.Add("المبلغ", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("تاريخ الدفع", typeof(string));
+            DT_REPORT.Columns.Add("الميزانية", typeof(string));
+            DT_REPORT.Columns.Add("الموظف", typeof(string));
+            DT_REPORT.Columns.Add("القسم", typeof(string));
+            DT_REPORT.Columns.Add("تاريخ القرض", typeof(string));
 
-            if (Leoan_Payments_Gridview.Rows.Count != 0)
+            foreach (DataGridViewRow dgv in Leoan_Payments_Gridview.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Leoan_Payments_Gridview.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, Convert.ToDateTime(dgv.Cells[3].Value).ToShortDateString()
+                   , Convert.ToDateTime(dgv.Cells[4].Value).ToShortDateString(),
+                  dgv.Cells[5].Value, dgv.Cells[6].Value,  Convert.ToDateTime(dgv.Cells[7].Value).ToShortDateString());
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Leoan_Payments.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Leoan_Payments report = new REPT.Crystal_Leoan_Payments();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
+
         }
 
         private void Leoan_Payments_Amont_KeyPress(object sender, KeyPressEventArgs e)

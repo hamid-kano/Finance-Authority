@@ -13,7 +13,7 @@ namespace Finance_Authority.DAL
         SqlConnection sqlconnection;
         public DATA_ACCESS_LAYER()
         {
-            sqlconnection = new SqlConnection(@"Server =192.168.50.51 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =qwer;PASSWORD =1234");
+            sqlconnection = new SqlConnection(@"Server =192.168.50.51; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =qwer;PASSWORD =1234");
         }
 
         public void open()

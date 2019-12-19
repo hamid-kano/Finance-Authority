@@ -192,18 +192,49 @@ namespace Finance_Authority.PL
 
         private void Loans_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Loans Art = new REPT.Crystal_Loans();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
+            DT_REPORT.Columns.Add("المبلغ", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("بداية الحساب", typeof(string));
+            DT_REPORT.Columns.Add("الميزانية", typeof(string));
+            DT_REPORT.Columns.Add("الموظف", typeof(string));
+            DT_REPORT.Columns.Add("القسم", typeof(string));
 
-            if (Loans_Gridview.Rows.Count != 0)
+            foreach (DataGridViewRow dgv in Loans_Gridview.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Loans_Gridview.DataSource);
-               // Art.Refresh();
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, Convert.ToDateTime(dgv.Cells[3].Value).ToShortDateString()
+                   , Convert.ToDateTime(dgv.Cells[4].Value).ToShortDateString(),
+                   Convert.ToDateTime(dgv.Cells[5].Value).ToShortDateString(), dgv.Cells[6].Value, dgv.Cells[7].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Loans.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Lean report = new REPT.Crystal_Lean();
+
+            report.Refresh();
+            report.SetDataSource(DS);
+
+            frm.crystalReportViewer1.ReportSource = report;
+
+
+            frm.ShowDialog();
+            // TAXI.ADD_LOG(Program.USER_ID, "Capkirin", "Capkirina lîsteyekê bi otombîlên", DateTime.Now);
+            //REPT.Crystal_Loans Art = new REPT.Crystal_Loans();
+
+            //REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            //if (Loans_Gridview.Rows.Count != 0)
+            //{
+            //    // DataTable dt = dataGrid_Ringall.DataSource;
+            //    Art.SetDataSource(Loans_Gridview.DataSource);
+            //   // Art.Refresh();
+            //    FRPT.crystalReportViewer1.ReportSource = Art;
+            //    FRPT.ShowDialog();
+            //}
         }
 
         private void Loans_Search_All_TextChanged_1(object sender, EventArgs e)

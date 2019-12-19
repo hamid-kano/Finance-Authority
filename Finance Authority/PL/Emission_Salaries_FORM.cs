@@ -15,6 +15,8 @@ namespace Finance_Authority.PL
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
         BL.Department Dep = new BL.Department();
         BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
+        BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         public Emission_Salaries_FORM()
         {
             InitializeComponent();
@@ -45,6 +47,16 @@ namespace Finance_Authority.PL
         private void Emission_Salaries_add_Click(object sender, EventArgs e)
         {
             Emiss.Emission_Salaries_add(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue) , Emission_Salaries_Date.Value , Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue));
+            /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
+            DataTable dt = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.Text);
+            int id_last_emission =Convert.ToInt32(Emiss.Emission_Salaries_Max_ID().Rows[0][0]);
+            foreach (var item in dt.Rows)
+            {
+                emp_Sal.Employee_Salaries_add("","","","","", "", "", "", "", "", "", "", "", "", "", "", id_last_emission,(int)dt.Rows[0][0]);
+            }
+
+            ////////
+
             /// اضافة ملحقات لهذا لاصدار الرواتب
             if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الاصدار؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {

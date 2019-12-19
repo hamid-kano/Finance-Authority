@@ -18,14 +18,14 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Contracts_Comb_Employee(int Department_ID)
+        public DataTable Contracts_Comb_Employee(int Office_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
             DAL.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Department_ID", SqlDbType.Int);
-            param[0].Value = Department_ID;
+            param[0] = new SqlParameter("@Office_id", SqlDbType.Int);
+            param[0].Value = Office_id;
             Dt = DAL.selectdata("Contracts_Comb_Employee", param);
             DAL.close();
             return Dt;

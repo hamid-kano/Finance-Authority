@@ -187,18 +187,45 @@ namespace Finance_Authority.PL
 
         private void EX_Order_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_EX_Orderrpt Art = new REPT.Crystal_EX_Orderrpt();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            if (EX_Orders_dataGrid.Rows.Count != 0)
+            DT_REPORT.Columns.Add("رقم الطلب", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("الى الجهة", typeof(string));
+            DT_REPORT.Columns.Add("المضمون", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("نوع الطلب", typeof(string));
+            foreach (DataGridViewRow dgv in EX_Orders_dataGrid.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(EX_Orders_dataGrid.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, Convert.ToDateTime(dgv.Cells[2].Value).ToShortDateString(),dgv.Cells[3].Value
+                   ,dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\EX_Orders.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_EX_Order report = new REPT.Crystal_EX_Order();
+
+            report.Refresh();
+            report.SetDataSource(DS);
+
+            frm.crystalReportViewer1.ReportSource = report;
+
+
+            frm.ShowDialog();
+            //REPT.Crystal_EX_Orderrpt Art = new REPT.Crystal_EX_Orderrpt();
+
+            //REPT.FRM_Report FRPT = new REPT.FRM_Report();
+
+            //if (EX_Orders_dataGrid.Rows.Count != 0)
+            //{
+            //    // DataTable dt = dataGrid_Ringall.DataSource;
+            //    Art.SetDataSource(EX_Orders_dataGrid.DataSource);
+
+            //    FRPT.crystalReportViewer1.ReportSource = Art;
+            //    FRPT.ShowDialog();
+            //}
         }
 
         

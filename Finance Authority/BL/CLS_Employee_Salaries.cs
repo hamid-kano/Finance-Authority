@@ -138,15 +138,15 @@ namespace Finance_Authority.BL
             DAL.close();
 
         }
-        public DataTable Employee_Salaries_Search_Department(int Department_ID)
+        public DataTable Employee_Salaries_Search_Office(int office_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
             DAL.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Department_ID", SqlDbType.Int);
-            param[0].Value = Department_ID;
-            Dt = DAL.selectdata("Employee_Salaries_Search_Department", param);
+            param[0] = new SqlParameter("@office_id", SqlDbType.Int);
+            param[0].Value = office_id;
+            Dt = DAL.selectdata("Employee_Salaries_Search_Office", param);
             DAL.close();
             return Dt;
         }
@@ -162,15 +162,15 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Employee_Salaries_Search_Employee_Department(int Employee_Des_ID)
+        public DataTable Employee_Salaries_Search_Employee_Offiice(int Employee_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
             DAL.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Employee_Des_ID", SqlDbType.Int);
-            param[0].Value = Employee_Des_ID;
-            Dt = DAL.selectdata("Employee_Salaries_Search_Employee_Department", param);
+            param[0] = new SqlParameter("@Employee_id", SqlDbType.Int);
+            param[0].Value = Employee_id;
+            Dt = DAL.selectdata("Employee_Salaries_Search_Employee_Offiice", param);
             DAL.close();
             return Dt;
         }

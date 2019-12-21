@@ -178,7 +178,7 @@
             this.Office_Name.SelectionStart = 0;
             this.Office_Name.ShortcutsEnabled = true;
             this.Office_Name.Size = new System.Drawing.Size(177, 23);
-            this.Office_Name.TabIndex = 213;
+            this.Office_Name.TabIndex = 0;
             this.Office_Name.UseSelectable = true;
             this.Office_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Office_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -209,7 +209,7 @@
             this.Office_Notes.SelectionStart = 0;
             this.Office_Notes.ShortcutsEnabled = true;
             this.Office_Notes.Size = new System.Drawing.Size(177, 176);
-            this.Office_Notes.TabIndex = 212;
+            this.Office_Notes.TabIndex = 1;
             this.Office_Notes.UseSelectable = true;
             this.Office_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Office_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

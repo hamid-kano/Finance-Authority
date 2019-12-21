@@ -220,7 +220,7 @@
             this.Authority_Name.SelectionStart = 0;
             this.Authority_Name.ShortcutsEnabled = true;
             this.Authority_Name.Size = new System.Drawing.Size(157, 23);
-            this.Authority_Name.TabIndex = 30;
+            this.Authority_Name.TabIndex = 0;
             this.Authority_Name.UseSelectable = true;
             this.Authority_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Authority_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -252,7 +252,7 @@
             this.Authority_Notes.SelectionStart = 0;
             this.Authority_Notes.ShortcutsEnabled = true;
             this.Authority_Notes.Size = new System.Drawing.Size(159, 137);
-            this.Authority_Notes.TabIndex = 31;
+            this.Authority_Notes.TabIndex = 1;
             this.Authority_Notes.UseSelectable = true;
             this.Authority_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Authority_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

@@ -303,7 +303,7 @@
             this.Empl_Sala_Dayes.SelectionStart = 0;
             this.Empl_Sala_Dayes.ShortcutsEnabled = true;
             this.Empl_Sala_Dayes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Dayes.TabIndex = 257;
+            this.Empl_Sala_Dayes.TabIndex = 0;
             this.Empl_Sala_Dayes.UseSelectable = true;
             this.Empl_Sala_Dayes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Dayes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -335,7 +335,7 @@
             this.Empl_Sala_Rem_cons.SelectionStart = 0;
             this.Empl_Sala_Rem_cons.ShortcutsEnabled = true;
             this.Empl_Sala_Rem_cons.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Rem_cons.TabIndex = 258;
+            this.Empl_Sala_Rem_cons.TabIndex = 1;
             this.Empl_Sala_Rem_cons.UseSelectable = true;
             this.Empl_Sala_Rem_cons.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Rem_cons.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -366,7 +366,7 @@
             this.Empl_Sala_Absences.SelectionStart = 0;
             this.Empl_Sala_Absences.ShortcutsEnabled = true;
             this.Empl_Sala_Absences.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Absences.TabIndex = 259;
+            this.Empl_Sala_Absences.TabIndex = 2;
             this.Empl_Sala_Absences.UseSelectable = true;
             this.Empl_Sala_Absences.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Absences.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -397,7 +397,7 @@
             this.Empl_Sala_va_out_sal.SelectionStart = 0;
             this.Empl_Sala_va_out_sal.ShortcutsEnabled = true;
             this.Empl_Sala_va_out_sal.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_va_out_sal.TabIndex = 260;
+            this.Empl_Sala_va_out_sal.TabIndex = 3;
             this.Empl_Sala_va_out_sal.UseSelectable = true;
             this.Empl_Sala_va_out_sal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_va_out_sal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -428,7 +428,7 @@
             this.Empl_Sala_Exam.SelectionStart = 0;
             this.Empl_Sala_Exam.ShortcutsEnabled = true;
             this.Empl_Sala_Exam.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Exam.TabIndex = 261;
+            this.Empl_Sala_Exam.TabIndex = 4;
             this.Empl_Sala_Exam.UseSelectable = true;
             this.Empl_Sala_Exam.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Exam.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -459,7 +459,7 @@
             this.Empl_Sala_Punishments.SelectionStart = 0;
             this.Empl_Sala_Punishments.ShortcutsEnabled = true;
             this.Empl_Sala_Punishments.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Punishments.TabIndex = 262;
+            this.Empl_Sala_Punishments.TabIndex = 5;
             this.Empl_Sala_Punishments.UseSelectable = true;
             this.Empl_Sala_Punishments.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Punishments.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -490,7 +490,7 @@
             this.Empl_Sala_Loans.SelectionStart = 0;
             this.Empl_Sala_Loans.ShortcutsEnabled = true;
             this.Empl_Sala_Loans.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Loans.TabIndex = 263;
+            this.Empl_Sala_Loans.TabIndex = 6;
             this.Empl_Sala_Loans.UseSelectable = true;
             this.Empl_Sala_Loans.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Loans.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -521,7 +521,7 @@
             this.Empl_Sala_Taskes.SelectionStart = 0;
             this.Empl_Sala_Taskes.ShortcutsEnabled = true;
             this.Empl_Sala_Taskes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Taskes.TabIndex = 264;
+            this.Empl_Sala_Taskes.TabIndex = 7;
             this.Empl_Sala_Taskes.UseSelectable = true;
             this.Empl_Sala_Taskes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Taskes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -552,7 +552,7 @@
             this.Empl_Sala_Reparations.SelectionStart = 0;
             this.Empl_Sala_Reparations.ShortcutsEnabled = true;
             this.Empl_Sala_Reparations.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Reparations.TabIndex = 265;
+            this.Empl_Sala_Reparations.TabIndex = 8;
             this.Empl_Sala_Reparations.UseSelectable = true;
             this.Empl_Sala_Reparations.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Reparations.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -583,7 +583,7 @@
             this.Empl_Sala_Years_Seniority.SelectionStart = 0;
             this.Empl_Sala_Years_Seniority.ShortcutsEnabled = true;
             this.Empl_Sala_Years_Seniority.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Years_Seniority.TabIndex = 266;
+            this.Empl_Sala_Years_Seniority.TabIndex = 9;
             this.Empl_Sala_Years_Seniority.UseSelectable = true;
             this.Empl_Sala_Years_Seniority.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Years_Seniority.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -614,7 +614,7 @@
             this.Empl_Sala_Total.SelectionStart = 0;
             this.Empl_Sala_Total.ShortcutsEnabled = true;
             this.Empl_Sala_Total.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Total.TabIndex = 267;
+            this.Empl_Sala_Total.TabIndex = 10;
             this.Empl_Sala_Total.UseSelectable = true;
             this.Empl_Sala_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -645,7 +645,7 @@
             this.Empl_Sala_after_Reb.SelectionStart = 0;
             this.Empl_Sala_after_Reb.ShortcutsEnabled = true;
             this.Empl_Sala_after_Reb.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_after_Reb.TabIndex = 268;
+            this.Empl_Sala_after_Reb.TabIndex = 11;
             this.Empl_Sala_after_Reb.UseSelectable = true;
             this.Empl_Sala_after_Reb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_after_Reb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -676,7 +676,7 @@
             this.Empl_Sala_Notes.SelectionStart = 0;
             this.Empl_Sala_Notes.ShortcutsEnabled = true;
             this.Empl_Sala_Notes.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Notes.TabIndex = 269;
+            this.Empl_Sala_Notes.TabIndex = 12;
             this.Empl_Sala_Notes.UseSelectable = true;
             this.Empl_Sala_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -706,7 +706,7 @@
             this.Empl_Sala_Insurances.SelectionStart = 0;
             this.Empl_Sala_Insurances.ShortcutsEnabled = true;
             this.Empl_Sala_Insurances.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Insurances.TabIndex = 270;
+            this.Empl_Sala_Insurances.TabIndex = 13;
             this.Empl_Sala_Insurances.UseSelectable = true;
             this.Empl_Sala_Insurances.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Insurances.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -737,7 +737,7 @@
             this.Empl_Sala_Files1.SelectionStart = 0;
             this.Empl_Sala_Files1.ShortcutsEnabled = true;
             this.Empl_Sala_Files1.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files1.TabIndex = 271;
+            this.Empl_Sala_Files1.TabIndex = 14;
             this.Empl_Sala_Files1.UseSelectable = true;
             this.Empl_Sala_Files1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Files1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -767,7 +767,7 @@
             this.Empl_Sala_Files2.SelectionStart = 0;
             this.Empl_Sala_Files2.ShortcutsEnabled = true;
             this.Empl_Sala_Files2.Size = new System.Drawing.Size(113, 23);
-            this.Empl_Sala_Files2.TabIndex = 272;
+            this.Empl_Sala_Files2.TabIndex = 15;
             this.Empl_Sala_Files2.UseSelectable = true;
             this.Empl_Sala_Files2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Empl_Sala_Files2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -903,7 +903,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Location = new System.Drawing.Point(8, 589);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(38, 19);
             this.metroLabel19.TabIndex = 288;
             this.metroLabel19.Text = "حقل2";
             // 
@@ -912,7 +912,7 @@
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Location = new System.Drawing.Point(8, 555);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(36, 19);
             this.metroLabel21.TabIndex = 290;
             this.metroLabel21.Text = "حقل1";
             // 

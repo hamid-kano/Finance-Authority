@@ -237,7 +237,7 @@
             this.EX_Orders_order.SelectionStart = 0;
             this.EX_Orders_order.ShortcutsEnabled = true;
             this.EX_Orders_order.Size = new System.Drawing.Size(184, 23);
-            this.EX_Orders_order.TabIndex = 223;
+            this.EX_Orders_order.TabIndex = 0;
             this.EX_Orders_order.UseSelectable = true;
             this.EX_Orders_order.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_order.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -277,7 +277,7 @@
             this.EX_Orders_Body_order.SelectionStart = 0;
             this.EX_Orders_Body_order.ShortcutsEnabled = true;
             this.EX_Orders_Body_order.Size = new System.Drawing.Size(184, 23);
-            this.EX_Orders_Body_order.TabIndex = 225;
+            this.EX_Orders_Body_order.TabIndex = 2;
             this.EX_Orders_Body_order.UseSelectable = true;
             this.EX_Orders_Body_order.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_Body_order.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -316,7 +316,7 @@
             this.EX_Orders_tosorce.SelectionStart = 0;
             this.EX_Orders_tosorce.ShortcutsEnabled = true;
             this.EX_Orders_tosorce.Size = new System.Drawing.Size(184, 23);
-            this.EX_Orders_tosorce.TabIndex = 226;
+            this.EX_Orders_tosorce.TabIndex = 1;
             this.EX_Orders_tosorce.UseSelectable = true;
             this.EX_Orders_tosorce.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_tosorce.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -347,7 +347,7 @@
             this.EX_Orders_Notes.SelectionStart = 0;
             this.EX_Orders_Notes.ShortcutsEnabled = true;
             this.EX_Orders_Notes.Size = new System.Drawing.Size(184, 83);
-            this.EX_Orders_Notes.TabIndex = 227;
+            this.EX_Orders_Notes.TabIndex = 3;
             this.EX_Orders_Notes.UseSelectable = true;
             this.EX_Orders_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

@@ -338,7 +338,7 @@
             this.Loans_Notes.SelectionStart = 0;
             this.Loans_Notes.ShortcutsEnabled = true;
             this.Loans_Notes.Size = new System.Drawing.Size(162, 23);
-            this.Loans_Notes.TabIndex = 235;
+            this.Loans_Notes.TabIndex = 1;
             this.Loans_Notes.UseSelectable = true;
             this.Loans_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Loans_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -368,7 +368,7 @@
             this.Loans_Amont.SelectionStart = 0;
             this.Loans_Amont.ShortcutsEnabled = true;
             this.Loans_Amont.Size = new System.Drawing.Size(162, 23);
-            this.Loans_Amont.TabIndex = 236;
+            this.Loans_Amont.TabIndex = 0;
             this.Loans_Amont.UseSelectable = true;
             this.Loans_Amont.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Loans_Amont.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

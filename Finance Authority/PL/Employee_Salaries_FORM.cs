@@ -230,43 +230,43 @@ namespace Finance_Authority.PL
 
         private void Employee_Salaries_Print_Click(object sender, EventArgs e)
         {
-            //DataSet DS = new DataSet();
-            //DataTable DT_REPORT = new DataTable();
-            //DT_REPORT.Columns.Add("ايام العمل", typeof(string));
-            //DT_REPORT.Columns.Add("ايام العقد", typeof(string));
-            //DT_REPORT.Columns.Add("الغيابات", typeof(string));
-            //DT_REPORT.Columns.Add("اجازة بدون راتب", typeof(string));
-            //DT_REPORT.Columns.Add("اجازة امتحان ", typeof(string));
-            //DT_REPORT.Columns.Add("العقوبات", typeof(string));
-            //DT_REPORT.Columns.Add("القروض", typeof(string));
-            //DT_REPORT.Columns.Add("المهمات", typeof(string));
-            //DT_REPORT.Columns.Add("المكافات", typeof(string));
-            //DT_REPORT.Columns.Add("سنوات الخدمة", typeof(string));
-            //DT_REPORT.Columns.Add("الاجمالي", typeof(string));
-            //DT_REPORT.Columns.Add("الراتب", typeof(string));
-            //DT_REPORT.Columns.Add("الملاحظات", typeof(string));
-            //DT_REPORT.Columns.Add("التامينات", typeof(string));
-            //DT_REPORT.Columns.Add("حقل1", typeof(string));
-            //DT_REPORT.Columns.Add("حقل2", typeof(string));
-            //DT_REPORT.Columns.Add("التاريخ", typeof(string));
-            //DT_REPORT.Columns.Add("الموظف", typeof(string));
-            //DT_REPORT.Columns.Add("القسم", typeof(string));
-            //foreach (DataGridViewRow dgv in Employee_Salaries_dataGrid.Rows)
-            //{
-            //    DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value
-            //       , dgv.Cells[4].Value,dgv.Cells[5].Value, dgv.Cells[6].Value,dgv.Cells[7].Value, dgv.Cells[8].Value
-            //      , dgv.Cells[9].Value, dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value
-            //      , dgv.Cells[13].Value, dgv.Cells[14].Value, dgv.Cells[15].Value, dgv.Cells[16].Value,Convert.ToDateTime(dgv.Cells[17].Value).ToShortDateString()
-            //      , dgv.Cells[18].Value, dgv.Cells[19].Value);
-            //}
-            //DS.Tables.Add(DT_REPORT);
-            //DS.WriteXmlSchema("C:\\AraratProgramFiles\\Reciver_Document.xml");
-            //REPT.FRM_Report frm = new REPT.FRM_Report();
-            //REPT.Crystal_Reciver_Documents report = new REPT.Crystal_Reciver_Documents();
-            //report.Refresh();
-            //report.SetDataSource(DS);
-            //frm.crystalReportViewer1.ReportSource = report;
-            //frm.ShowDialog();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
+            DT_REPORT.Columns.Add("ايام العمل", typeof(string));
+            DT_REPORT.Columns.Add("ايام العقد", typeof(string));
+            DT_REPORT.Columns.Add("الغيابات", typeof(string));
+            DT_REPORT.Columns.Add("اجازة بدون راتب", typeof(string));
+            DT_REPORT.Columns.Add("اجازة امتحان ", typeof(string));
+            DT_REPORT.Columns.Add("العقوبات", typeof(string));
+            DT_REPORT.Columns.Add("القروض", typeof(string));
+            DT_REPORT.Columns.Add("المهمات", typeof(string));
+            DT_REPORT.Columns.Add("المكافات", typeof(string));
+            DT_REPORT.Columns.Add("سنوات الخدمة", typeof(string));
+            DT_REPORT.Columns.Add("الاجمالي", typeof(string));
+            DT_REPORT.Columns.Add("الراتب", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("التامينات", typeof(string));
+            DT_REPORT.Columns.Add("حقل1", typeof(string));
+            DT_REPORT.Columns.Add("حقل2", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("الموظف", typeof(string));
+            DT_REPORT.Columns.Add("القسم", typeof(string));
+            foreach (DataGridViewRow dgv in Employee_Salaries_dataGrid.Rows)
+            {
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value
+                   , dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value
+                  , dgv.Cells[9].Value, dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value
+                  , dgv.Cells[13].Value, dgv.Cells[14].Value, dgv.Cells[15].Value, dgv.Cells[16].Value, Convert.ToDateTime(dgv.Cells[17].Value).ToShortDateString()
+                  , dgv.Cells[18].Value, dgv.Cells[19].Value);
+            }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Employee_Salaries.xml");
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Employee_Salaries report = new REPT.Crystal_Employee_Salaries();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
         }
 
         private void Empl_Sala_after_Reb_KeyPress(object sender, KeyPressEventArgs e)

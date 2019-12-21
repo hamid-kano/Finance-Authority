@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loans_FORM));
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.Loans_Fexit = new MetroFramework.Controls.MetroButton();
@@ -45,7 +45,6 @@
             this.Loans_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
             this.Loans_Comb_Department = new MetroFramework.Controls.MetroComboBox();
             this.Loans_Comb_Employ = new MetroFramework.Controls.MetroComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.Loans_Search_Budget = new MetroFramework.Controls.MetroComboBox();
             this.Loans_Print = new MetroFramework.Controls.MetroButton();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -66,6 +65,7 @@
             this.Loans_CombOffice = new MetroFramework.Controls.MetroComboBox();
             this.Loans_Dail = new MetroFramework.Controls.MetroButton();
             this.Loans_Brows_Docs = new MetroFramework.Controls.MetroButton();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Loans_Gridview)).BeginInit();
             this.SuspendLayout();
@@ -111,13 +111,12 @@
             // 
             // Loans_add
             // 
-            this.Loans_add.Enabled = false;
             this.Loans_add.Highlight = true;
             this.Loans_add.Location = new System.Drawing.Point(503, 478);
             this.Loans_add.Name = "Loans_add";
             this.Loans_add.Size = new System.Drawing.Size(87, 37);
             this.Loans_add.TabIndex = 8;
-            this.Loans_add.Text = "أضافة";
+            this.Loans_add.Text = "اضافة";
             this.Loans_add.UseSelectable = true;
             this.Loans_add.Click += new System.EventHandler(this.Loans_add_Click);
             // 
@@ -142,23 +141,23 @@
             this.Loans_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Loans_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Loans_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Loans_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Loans_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Loans_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Loans_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Loans_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Loans_Gridview.EnableHeadersVisualStyles = false;
             this.Loans_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Loans_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -166,14 +165,14 @@
             this.Loans_Gridview.Name = "Loans_Gridview";
             this.Loans_Gridview.ReadOnly = true;
             this.Loans_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Loans_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Loans_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Loans_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Loans_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Loans_Gridview.Size = new System.Drawing.Size(675, 377);
@@ -183,7 +182,7 @@
             // Loans_Date
             // 
             this.Loans_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Loans_Date.Location = new System.Drawing.Point(126, 164);
+            this.Loans_Date.Location = new System.Drawing.Point(126, 162);
             this.Loans_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Loans_Date.Name = "Loans_Date";
             this.Loans_Date.Size = new System.Drawing.Size(163, 29);
@@ -192,7 +191,7 @@
             // Loans_Date_Start
             // 
             this.Loans_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Loans_Date_Start.Location = new System.Drawing.Point(127, 209);
+            this.Loans_Date_Start.Location = new System.Drawing.Point(127, 211);
             this.Loans_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
             this.Loans_Date_Start.Name = "Loans_Date_Start";
             this.Loans_Date_Start.Size = new System.Drawing.Size(163, 29);
@@ -202,7 +201,7 @@
             // 
             this.Loans_Comb_Budget.FormattingEnabled = true;
             this.Loans_Comb_Budget.ItemHeight = 23;
-            this.Loans_Comb_Budget.Location = new System.Drawing.Point(126, 254);
+            this.Loans_Comb_Budget.Location = new System.Drawing.Point(126, 257);
             this.Loans_Comb_Budget.Name = "Loans_Comb_Budget";
             this.Loans_Comb_Budget.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Budget.TabIndex = 4;
@@ -212,7 +211,7 @@
             // 
             this.Loans_Comb_Department.FormattingEnabled = true;
             this.Loans_Comb_Department.ItemHeight = 23;
-            this.Loans_Comb_Department.Location = new System.Drawing.Point(127, 389);
+            this.Loans_Comb_Department.Location = new System.Drawing.Point(127, 391);
             this.Loans_Comb_Department.Name = "Loans_Comb_Department";
             this.Loans_Comb_Department.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Department.TabIndex = 5;
@@ -223,27 +222,17 @@
             // 
             this.Loans_Comb_Employ.FormattingEnabled = true;
             this.Loans_Comb_Employ.ItemHeight = 23;
-            this.Loans_Comb_Employ.Location = new System.Drawing.Point(127, 434);
+            this.Loans_Comb_Employ.Location = new System.Drawing.Point(127, 437);
             this.Loans_Comb_Employ.Name = "Loans_Comb_Employ";
             this.Loans_Comb_Employ.Size = new System.Drawing.Size(163, 29);
             this.Loans_Comb_Employ.TabIndex = 6;
             this.Loans_Comb_Employ.UseSelectable = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(593, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 16);
-            this.label9.TabIndex = 195;
-            this.label9.Text = "تاريخ الميزانية";
-            // 
             // Loans_Search_Budget
             // 
             this.Loans_Search_Budget.FormattingEnabled = true;
             this.Loans_Search_Budget.ItemHeight = 23;
-            this.Loans_Search_Budget.Location = new System.Drawing.Point(681, 47);
+            this.Loans_Search_Budget.Location = new System.Drawing.Point(693, 44);
             this.Loans_Search_Budget.Name = "Loans_Search_Budget";
             this.Loans_Search_Budget.Size = new System.Drawing.Size(163, 29);
             this.Loans_Search_Budget.TabIndex = 14;
@@ -264,7 +253,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 172);
+            this.metroLabel6.Location = new System.Drawing.Point(17, 167);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(41, 19);
             this.metroLabel6.TabIndex = 230;
@@ -273,7 +262,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(2, 135);
+            this.metroLabel3.Location = new System.Drawing.Point(10, 127);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(66, 19);
             this.metroLabel3.TabIndex = 229;
@@ -282,7 +271,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(14, 90);
+            this.metroLabel2.Location = new System.Drawing.Point(10, 90);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(39, 19);
             this.metroLabel2.TabIndex = 228;
@@ -291,7 +280,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(0, 264);
+            this.metroLabel7.Location = new System.Drawing.Point(10, 262);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(78, 19);
             this.metroLabel7.TabIndex = 233;
@@ -300,7 +289,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(0, 396);
+            this.metroLabel5.Location = new System.Drawing.Point(10, 396);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(48, 19);
             this.metroLabel5.TabIndex = 232;
@@ -309,7 +298,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 446);
+            this.metroLabel4.Location = new System.Drawing.Point(10, 442);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(60, 19);
             this.metroLabel4.TabIndex = 231;
@@ -318,7 +307,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(2, 219);
+            this.metroLabel1.Location = new System.Drawing.Point(10, 216);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(108, 19);
             this.metroLabel1.TabIndex = 234;
@@ -400,7 +389,7 @@
             this.Loans_Search_All.CustomButton.UseSelectable = true;
             this.Loans_Search_All.CustomButton.Visible = false;
             this.Loans_Search_All.Lines = new string[0];
-            this.Loans_Search_All.Location = new System.Drawing.Point(393, 52);
+            this.Loans_Search_All.Location = new System.Drawing.Point(405, 47);
             this.Loans_Search_All.MaxLength = 32767;
             this.Loans_Search_All.Name = "Loans_Search_All";
             this.Loans_Search_All.PasswordChar = '\0';
@@ -419,7 +408,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(319, 56);
+            this.metroLabel8.Location = new System.Drawing.Point(331, 49);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(56, 19);
             this.metroLabel8.TabIndex = 238;
@@ -429,7 +418,7 @@
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(850, 47);
+            this.update.Location = new System.Drawing.Point(862, 43);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 265;
@@ -439,7 +428,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(2, 353);
+            this.metroLabel9.Location = new System.Drawing.Point(10, 353);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(48, 19);
             this.metroLabel9.TabIndex = 269;
@@ -449,7 +438,7 @@
             // 
             this.Loans_CombAthuontic.FormattingEnabled = true;
             this.Loans_CombAthuontic.ItemHeight = 23;
-            this.Loans_CombAthuontic.Location = new System.Drawing.Point(126, 299);
+            this.Loans_CombAthuontic.Location = new System.Drawing.Point(126, 300);
             this.Loans_CombAthuontic.Name = "Loans_CombAthuontic";
             this.Loans_CombAthuontic.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Loans_CombAthuontic.Size = new System.Drawing.Size(163, 29);
@@ -460,7 +449,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(-1, 309);
+            this.metroLabel10.Location = new System.Drawing.Point(10, 305);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(45, 19);
             this.metroLabel10.TabIndex = 267;
@@ -470,7 +459,7 @@
             // 
             this.Loans_CombOffice.FormattingEnabled = true;
             this.Loans_CombOffice.ItemHeight = 23;
-            this.Loans_CombOffice.Location = new System.Drawing.Point(126, 344);
+            this.Loans_CombOffice.Location = new System.Drawing.Point(126, 348);
             this.Loans_CombOffice.Name = "Loans_CombOffice";
             this.Loans_CombOffice.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Loans_CombOffice.Size = new System.Drawing.Size(163, 29);
@@ -502,12 +491,22 @@
             this.Loans_Brows_Docs.UseSelectable = true;
             this.Loans_Brows_Docs.Click += new System.EventHandler(this.Loans_Brows_Docs_Click);
             // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(608, 49);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel11.TabIndex = 272;
+            this.metroLabel11.Text = "تاريخ الميزانية";
+            // 
             // Loans_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(994, 539);
+            this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.Loans_Brows_Docs);
             this.Controls.Add(this.Loans_Dail);
             this.Controls.Add(this.metroLabel9);
@@ -527,7 +526,6 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Loans_Print);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.Loans_Search_Budget);
             this.Controls.Add(this.Loans_Comb_Employ);
             this.Controls.Add(this.Loans_Comb_Department);
@@ -568,7 +566,6 @@
         private MetroFramework.Controls.MetroComboBox Loans_Comb_Budget;
         private MetroFramework.Controls.MetroComboBox Loans_Comb_Department;
         private MetroFramework.Controls.MetroComboBox Loans_Comb_Employ;
-        private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroComboBox Loans_Search_Budget;
         private MetroFramework.Controls.MetroButton Loans_Print;
         private MetroFramework.Controls.MetroLabel metroLabel6;
@@ -589,5 +586,6 @@
         private MetroFramework.Controls.MetroComboBox Loans_CombOffice;
         private MetroFramework.Controls.MetroButton Loans_Dail;
         private MetroFramework.Controls.MetroButton Loans_Brows_Docs;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
     }
 }

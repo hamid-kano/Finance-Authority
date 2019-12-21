@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EX_Order_FORM));
             this.EX_Orders_DateTime = new MetroFramework.Controls.MetroDateTime();
             this.EX_Orders_new = new MetroFramework.Controls.MetroButton();
@@ -67,7 +67,7 @@
             // EX_Orders_DateTime
             // 
             this.EX_Orders_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EX_Orders_DateTime.Location = new System.Drawing.Point(95, 146);
+            this.EX_Orders_DateTime.Location = new System.Drawing.Point(103, 198);
             this.EX_Orders_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.EX_Orders_DateTime.Name = "EX_Orders_DateTime";
             this.EX_Orders_DateTime.RightToLeftLayout = true;
@@ -77,7 +77,7 @@
             // EX_Orders_new
             // 
             this.EX_Orders_new.Highlight = true;
-            this.EX_Orders_new.Location = new System.Drawing.Point(265, 413);
+            this.EX_Orders_new.Location = new System.Drawing.Point(351, 468);
             this.EX_Orders_new.Name = "EX_Orders_new";
             this.EX_Orders_new.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_new.TabIndex = 6;
@@ -87,13 +87,12 @@
             // 
             // EX_Orders_add
             // 
-            this.EX_Orders_add.Enabled = false;
             this.EX_Orders_add.Highlight = true;
-            this.EX_Orders_add.Location = new System.Drawing.Point(377, 413);
+            this.EX_Orders_add.Location = new System.Drawing.Point(443, 468);
             this.EX_Orders_add.Name = "EX_Orders_add";
             this.EX_Orders_add.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_add.TabIndex = 7;
-            this.EX_Orders_add.Text = "أضافة";
+            this.EX_Orders_add.Text = "اضافة";
             this.EX_Orders_add.UseSelectable = true;
             this.EX_Orders_add.Click += new System.EventHandler(this.EX_Orders_add_Click);
             // 
@@ -101,7 +100,7 @@
             // 
             this.EX_Orders_update.Enabled = false;
             this.EX_Orders_update.Highlight = true;
-            this.EX_Orders_update.Location = new System.Drawing.Point(489, 413);
+            this.EX_Orders_update.Location = new System.Drawing.Point(536, 468);
             this.EX_Orders_update.Name = "EX_Orders_update";
             this.EX_Orders_update.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_update.TabIndex = 8;
@@ -113,7 +112,7 @@
             // 
             this.EX_Orders_delete.Enabled = false;
             this.EX_Orders_delete.Highlight = true;
-            this.EX_Orders_delete.Location = new System.Drawing.Point(601, 413);
+            this.EX_Orders_delete.Location = new System.Drawing.Point(629, 468);
             this.EX_Orders_delete.Name = "EX_Orders_delete";
             this.EX_Orders_delete.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_delete.TabIndex = 9;
@@ -124,7 +123,7 @@
             // EX_Orders_exit
             // 
             this.EX_Orders_exit.Highlight = true;
-            this.EX_Orders_exit.Location = new System.Drawing.Point(825, 413);
+            this.EX_Orders_exit.Location = new System.Drawing.Point(815, 468);
             this.EX_Orders_exit.Name = "EX_Orders_exit";
             this.EX_Orders_exit.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_exit.TabIndex = 11;
@@ -139,73 +138,73 @@
             this.EX_Orders_dataGrid.AllowUserToResizeRows = false;
             this.EX_Orders_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EX_Orders_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EX_Orders_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EX_Orders_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EX_Orders_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.EX_Orders_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EX_Orders_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EX_Orders_dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.EX_Orders_dataGrid.EnableHeadersVisualStyles = false;
             this.EX_Orders_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EX_Orders_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_dataGrid.Location = new System.Drawing.Point(285, 92);
+            this.EX_Orders_dataGrid.Location = new System.Drawing.Point(299, 146);
             this.EX_Orders_dataGrid.Name = "EX_Orders_dataGrid";
             this.EX_Orders_dataGrid.ReadOnly = true;
             this.EX_Orders_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EX_Orders_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.EX_Orders_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EX_Orders_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EX_Orders_dataGrid.Size = new System.Drawing.Size(636, 315);
+            this.EX_Orders_dataGrid.Size = new System.Drawing.Size(636, 305);
             this.EX_Orders_dataGrid.TabIndex = 41;
             this.EX_Orders_dataGrid.Click += new System.EventHandler(this.EX_Orders_dataGrid_Click);
             // 
             // EX_Orders_last
             // 
             this.EX_Orders_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EX_Orders_last.Location = new System.Drawing.Point(685, 16);
+            this.EX_Orders_last.Location = new System.Drawing.Point(715, 67);
             this.EX_Orders_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.EX_Orders_last.Name = "EX_Orders_last";
             this.EX_Orders_last.RightToLeftLayout = true;
-            this.EX_Orders_last.Size = new System.Drawing.Size(128, 29);
+            this.EX_Orders_last.Size = new System.Drawing.Size(139, 29);
             this.EX_Orders_last.TabIndex = 15;
             this.EX_Orders_last.ValueChanged += new System.EventHandler(this.EX_Orders_last_ValueChanged);
             // 
             // EX_Orders_first
             // 
             this.EX_Orders_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.EX_Orders_first.Location = new System.Drawing.Point(477, 16);
+            this.EX_Orders_first.Location = new System.Drawing.Point(487, 67);
             this.EX_Orders_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.EX_Orders_first.Name = "EX_Orders_first";
             this.EX_Orders_first.RightToLeftLayout = true;
-            this.EX_Orders_first.Size = new System.Drawing.Size(128, 29);
+            this.EX_Orders_first.Size = new System.Drawing.Size(148, 29);
             this.EX_Orders_first.TabIndex = 14;
             this.EX_Orders_first.ValueChanged += new System.EventHandler(this.EX_Orders_first_ValueChanged);
             // 
             // EX_Order_Print
             // 
             this.EX_Order_Print.Highlight = true;
-            this.EX_Order_Print.Location = new System.Drawing.Point(713, 413);
+            this.EX_Order_Print.Location = new System.Drawing.Point(722, 468);
             this.EX_Order_Print.Name = "EX_Order_Print";
             this.EX_Order_Print.Size = new System.Drawing.Size(87, 37);
             this.EX_Order_Print.TabIndex = 10;
@@ -228,7 +227,7 @@
             this.EX_Orders_order.CustomButton.UseSelectable = true;
             this.EX_Orders_order.CustomButton.Visible = false;
             this.EX_Orders_order.Lines = new string[0];
-            this.EX_Orders_order.Location = new System.Drawing.Point(95, 107);
+            this.EX_Orders_order.Location = new System.Drawing.Point(104, 158);
             this.EX_Orders_order.MaxLength = 32767;
             this.EX_Orders_order.Name = "EX_Orders_order";
             this.EX_Orders_order.PasswordChar = '\0';
@@ -247,7 +246,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(10, 111);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(15, 160);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(66, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
@@ -268,7 +267,7 @@
             this.EX_Orders_Body_order.CustomButton.UseSelectable = true;
             this.EX_Orders_Body_order.CustomButton.Visible = false;
             this.EX_Orders_Body_order.Lines = new string[0];
-            this.EX_Orders_Body_order.Location = new System.Drawing.Point(95, 224);
+            this.EX_Orders_Body_order.Location = new System.Drawing.Point(104, 277);
             this.EX_Orders_Body_order.MaxLength = 32767;
             this.EX_Orders_Body_order.Name = "EX_Orders_Body_order";
             this.EX_Orders_Body_order.PasswordChar = '\0';
@@ -286,7 +285,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(7, 190);
+            this.metroLabel1.Location = new System.Drawing.Point(7, 241);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(89, 19);
             this.metroLabel1.TabIndex = 224;
@@ -307,7 +306,7 @@
             this.EX_Orders_tosorce.CustomButton.UseSelectable = true;
             this.EX_Orders_tosorce.CustomButton.Visible = false;
             this.EX_Orders_tosorce.Lines = new string[0];
-            this.EX_Orders_tosorce.Location = new System.Drawing.Point(95, 186);
+            this.EX_Orders_tosorce.Location = new System.Drawing.Point(104, 239);
             this.EX_Orders_tosorce.MaxLength = 32767;
             this.EX_Orders_tosorce.Name = "EX_Orders_tosorce";
             this.EX_Orders_tosorce.PasswordChar = '\0';
@@ -337,7 +336,7 @@
             this.EX_Orders_Notes.CustomButton.UseSelectable = true;
             this.EX_Orders_Notes.CustomButton.Visible = false;
             this.EX_Orders_Notes.Lines = new string[0];
-            this.EX_Orders_Notes.Location = new System.Drawing.Point(95, 262);
+            this.EX_Orders_Notes.Location = new System.Drawing.Point(104, 315);
             this.EX_Orders_Notes.MaxLength = 32767;
             this.EX_Orders_Notes.Multiline = true;
             this.EX_Orders_Notes.Name = "EX_Orders_Notes";
@@ -359,7 +358,7 @@
             // 
             // 
             this.EX_Orders_search.CustomButton.Image = null;
-            this.EX_Orders_search.CustomButton.Location = new System.Drawing.Point(103, 1);
+            this.EX_Orders_search.CustomButton.Location = new System.Drawing.Point(130, 1);
             this.EX_Orders_search.CustomButton.Name = "";
             this.EX_Orders_search.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.EX_Orders_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -368,7 +367,7 @@
             this.EX_Orders_search.CustomButton.UseSelectable = true;
             this.EX_Orders_search.CustomButton.Visible = false;
             this.EX_Orders_search.Lines = new string[0];
-            this.EX_Orders_search.Location = new System.Drawing.Point(487, 63);
+            this.EX_Orders_search.Location = new System.Drawing.Point(487, 113);
             this.EX_Orders_search.MaxLength = 32767;
             this.EX_Orders_search.Name = "EX_Orders_search";
             this.EX_Orders_search.PasswordChar = '\0';
@@ -377,7 +376,7 @@
             this.EX_Orders_search.SelectionLength = 0;
             this.EX_Orders_search.SelectionStart = 0;
             this.EX_Orders_search.ShortcutsEnabled = true;
-            this.EX_Orders_search.Size = new System.Drawing.Size(125, 23);
+            this.EX_Orders_search.Size = new System.Drawing.Size(152, 23);
             this.EX_Orders_search.TabIndex = 228;
             this.EX_Orders_search.UseSelectable = true;
             this.EX_Orders_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -390,7 +389,7 @@
             // 
             // 
             this.EX_Orders_search_All.CustomButton.Image = null;
-            this.EX_Orders_search_All.CustomButton.Location = new System.Drawing.Point(103, 1);
+            this.EX_Orders_search_All.CustomButton.Location = new System.Drawing.Point(118, 1);
             this.EX_Orders_search_All.CustomButton.Name = "";
             this.EX_Orders_search_All.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.EX_Orders_search_All.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -399,7 +398,7 @@
             this.EX_Orders_search_All.CustomButton.UseSelectable = true;
             this.EX_Orders_search_All.CustomButton.Visible = false;
             this.EX_Orders_search_All.Lines = new string[0];
-            this.EX_Orders_search_All.Location = new System.Drawing.Point(708, 59);
+            this.EX_Orders_search_All.Location = new System.Drawing.Point(714, 113);
             this.EX_Orders_search_All.MaxLength = 32767;
             this.EX_Orders_search_All.Name = "EX_Orders_search_All";
             this.EX_Orders_search_All.PasswordChar = '\0';
@@ -408,7 +407,7 @@
             this.EX_Orders_search_All.SelectionLength = 0;
             this.EX_Orders_search_All.SelectionStart = 0;
             this.EX_Orders_search_All.ShortcutsEnabled = true;
-            this.EX_Orders_search_All.Size = new System.Drawing.Size(125, 23);
+            this.EX_Orders_search_All.Size = new System.Drawing.Size(140, 23);
             this.EX_Orders_search_All.TabIndex = 229;
             this.EX_Orders_search_All.UseSelectable = true;
             this.EX_Orders_search_All.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -419,7 +418,7 @@
             // 
             this.EX_Orders_CombCategorise.FormattingEnabled = true;
             this.EX_Orders_CombCategorise.ItemHeight = 23;
-            this.EX_Orders_CombCategorise.Location = new System.Drawing.Point(95, 362);
+            this.EX_Orders_CombCategorise.Location = new System.Drawing.Point(104, 416);
             this.EX_Orders_CombCategorise.Name = "EX_Orders_CombCategorise";
             this.EX_Orders_CombCategorise.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.EX_Orders_CombCategorise.Size = new System.Drawing.Size(184, 29);
@@ -429,7 +428,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(10, 156);
+            this.metroLabel2.Location = new System.Drawing.Point(14, 203);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(41, 19);
             this.metroLabel2.TabIndex = 231;
@@ -438,7 +437,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(7, 228);
+            this.metroLabel3.Location = new System.Drawing.Point(7, 279);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(69, 19);
             this.metroLabel3.TabIndex = 232;
@@ -447,7 +446,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(10, 372);
+            this.metroLabel4.Location = new System.Drawing.Point(7, 421);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(79, 19);
             this.metroLabel4.TabIndex = 233;
@@ -456,7 +455,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(7, 262);
+            this.metroLabel5.Location = new System.Drawing.Point(7, 315);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(66, 19);
             this.metroLabel5.TabIndex = 234;
@@ -465,7 +464,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(402, 26);
+            this.metroLabel6.Location = new System.Drawing.Point(404, 72);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(69, 19);
             this.metroLabel6.TabIndex = 235;
@@ -474,7 +473,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(611, 26);
+            this.metroLabel7.Location = new System.Drawing.Point(643, 72);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(68, 19);
             this.metroLabel7.TabIndex = 236;
@@ -483,7 +482,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(342, 67);
+            this.metroLabel8.Location = new System.Drawing.Point(334, 116);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(139, 19);
             this.metroLabel8.TabIndex = 237;
@@ -492,7 +491,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(639, 63);
+            this.metroLabel9.Location = new System.Drawing.Point(645, 115);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(63, 19);
             this.metroLabel9.TabIndex = 238;
@@ -502,7 +501,7 @@
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(855, 55);
+            this.update.Location = new System.Drawing.Point(889, 109);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 267;
@@ -513,7 +512,7 @@
             // 
             this.EX_Orders_Brows_Docs.Enabled = false;
             this.EX_Orders_Brows_Docs.Highlight = true;
-            this.EX_Orders_Brows_Docs.Location = new System.Drawing.Point(90, 413);
+            this.EX_Orders_Brows_Docs.Location = new System.Drawing.Point(140, 468);
             this.EX_Orders_Brows_Docs.Name = "EX_Orders_Brows_Docs";
             this.EX_Orders_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.EX_Orders_Brows_Docs.TabIndex = 287;
@@ -526,7 +525,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(934, 463);
+            this.ClientSize = new System.Drawing.Size(945, 541);
             this.Controls.Add(this.EX_Orders_Brows_Docs);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel9);

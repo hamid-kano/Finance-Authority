@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Office_exit = new MetroFramework.Controls.MetroButton();
             this.Office_delete = new MetroFramework.Controls.MetroButton();
             this.Office_update = new MetroFramework.Controls.MetroButton();
@@ -51,7 +51,7 @@
             // Office_exit
             // 
             this.Office_exit.Highlight = true;
-            this.Office_exit.Location = new System.Drawing.Point(709, 378);
+            this.Office_exit.Location = new System.Drawing.Point(715, 375);
             this.Office_exit.Name = "Office_exit";
             this.Office_exit.Size = new System.Drawing.Size(87, 37);
             this.Office_exit.TabIndex = 7;
@@ -63,7 +63,7 @@
             // 
             this.Office_delete.Enabled = false;
             this.Office_delete.Highlight = true;
-            this.Office_delete.Location = new System.Drawing.Point(597, 378);
+            this.Office_delete.Location = new System.Drawing.Point(622, 375);
             this.Office_delete.Name = "Office_delete";
             this.Office_delete.Size = new System.Drawing.Size(87, 37);
             this.Office_delete.TabIndex = 6;
@@ -75,7 +75,7 @@
             // 
             this.Office_update.Enabled = false;
             this.Office_update.Highlight = true;
-            this.Office_update.Location = new System.Drawing.Point(485, 378);
+            this.Office_update.Location = new System.Drawing.Point(529, 375);
             this.Office_update.Name = "Office_update";
             this.Office_update.Size = new System.Drawing.Size(87, 37);
             this.Office_update.TabIndex = 5;
@@ -85,20 +85,19 @@
             // 
             // Office_add
             // 
-            this.Office_add.Enabled = false;
             this.Office_add.Highlight = true;
-            this.Office_add.Location = new System.Drawing.Point(373, 378);
+            this.Office_add.Location = new System.Drawing.Point(436, 375);
             this.Office_add.Name = "Office_add";
             this.Office_add.Size = new System.Drawing.Size(87, 37);
             this.Office_add.TabIndex = 4;
-            this.Office_add.Text = "أضافة";
+            this.Office_add.Text = "اضافة";
             this.Office_add.UseSelectable = true;
             this.Office_add.Click += new System.EventHandler(this.Office_add_Click_1);
             // 
             // Office_new
             // 
             this.Office_new.Highlight = true;
-            this.Office_new.Location = new System.Drawing.Point(261, 378);
+            this.Office_new.Location = new System.Drawing.Point(343, 375);
             this.Office_new.Name = "Office_new";
             this.Office_new.Size = new System.Drawing.Size(87, 37);
             this.Office_new.TabIndex = 3;
@@ -116,41 +115,41 @@
             this.Office_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Office_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Office_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Office_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Office_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Office_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Office_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Office_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Office_Gridview.EnableHeadersVisualStyles = false;
             this.Office_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Office_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Office_Gridview.Location = new System.Drawing.Point(257, 87);
+            this.Office_Gridview.Location = new System.Drawing.Point(285, 87);
             this.Office_Gridview.Name = "Office_Gridview";
             this.Office_Gridview.ReadOnly = true;
             this.Office_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Office_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Office_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Office_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Office_Gridview.Size = new System.Drawing.Size(550, 270);
+            this.Office_Gridview.Size = new System.Drawing.Size(546, 270);
             this.Office_Gridview.TabIndex = 52;
             this.Office_Gridview.Click += new System.EventHandler(this.Office_Gridview_Click);
             // 
@@ -169,7 +168,7 @@
             this.Office_Name.CustomButton.UseSelectable = true;
             this.Office_Name.CustomButton.Visible = false;
             this.Office_Name.Lines = new string[0];
-            this.Office_Name.Location = new System.Drawing.Point(75, 137);
+            this.Office_Name.Location = new System.Drawing.Point(89, 138);
             this.Office_Name.MaxLength = 32767;
             this.Office_Name.Name = "Office_Name";
             this.Office_Name.PasswordChar = '\0';
@@ -199,7 +198,7 @@
             this.Office_Notes.CustomButton.UseSelectable = true;
             this.Office_Notes.CustomButton.Visible = false;
             this.Office_Notes.Lines = new string[0];
-            this.Office_Notes.Location = new System.Drawing.Point(74, 181);
+            this.Office_Notes.Location = new System.Drawing.Point(87, 181);
             this.Office_Notes.MaxLength = 32767;
             this.Office_Notes.Multiline = true;
             this.Office_Notes.Name = "Office_Notes";
@@ -219,7 +218,7 @@
             // 
             this.Office_CombAuthontic.FormattingEnabled = true;
             this.Office_CombAuthontic.ItemHeight = 23;
-            this.Office_CombAuthontic.Location = new System.Drawing.Point(74, 87);
+            this.Office_CombAuthontic.Location = new System.Drawing.Point(89, 90);
             this.Office_CombAuthontic.Name = "Office_CombAuthontic";
             this.Office_CombAuthontic.Size = new System.Drawing.Size(178, 29);
             this.Office_CombAuthontic.TabIndex = 214;
@@ -240,7 +239,7 @@
             this.Office_textsearch.CustomButton.UseSelectable = true;
             this.Office_textsearch.CustomButton.Visible = false;
             this.Office_textsearch.Lines = new string[0];
-            this.Office_textsearch.Location = new System.Drawing.Point(371, 51);
+            this.Office_textsearch.Location = new System.Drawing.Point(386, 51);
             this.Office_textsearch.MaxLength = 32767;
             this.Office_textsearch.Name = "Office_textsearch";
             this.Office_textsearch.PasswordChar = '\0';
@@ -259,7 +258,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(324, 51);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(339, 51);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(41, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
@@ -268,7 +267,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(-1, 143);
+            this.metroLabel1.Location = new System.Drawing.Point(8, 140);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(74, 19);
             this.metroLabel1.TabIndex = 223;
@@ -277,7 +276,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 185);
+            this.metroLabel2.Location = new System.Drawing.Point(8, 181);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(66, 19);
             this.metroLabel2.TabIndex = 224;
@@ -286,7 +285,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(10, 97);
+            this.metroLabel3.Location = new System.Drawing.Point(16, 94);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(36, 19);
             this.metroLabel3.TabIndex = 225;
@@ -297,7 +296,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(830, 438);
+            this.ClientSize = new System.Drawing.Size(848, 438);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -317,6 +316,7 @@
             this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "المكاتب";
             ((System.ComponentModel.ISupportInitialize)(this.Office_Gridview)).EndInit();
             this.ResumeLayout(false);

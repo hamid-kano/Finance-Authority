@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Disply_FORM : MetroFramework.Forms.MetroForm
+    public partial class Login_FORM : MetroFramework.Forms.MetroForm
     {
-        public Disply_FORM()
+        public Login_FORM()
         {
             InitializeComponent();
         }

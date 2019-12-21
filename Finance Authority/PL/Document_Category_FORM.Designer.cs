@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Document_Category_exit = new MetroFramework.Controls.MetroButton();
             this.Document_Category_delete = new MetroFramework.Controls.MetroButton();
             this.Document_Category_update = new MetroFramework.Controls.MetroButton();
@@ -47,7 +47,7 @@
             // Document_Category_exit
             // 
             this.Document_Category_exit.Highlight = true;
-            this.Document_Category_exit.Location = new System.Drawing.Point(538, 397);
+            this.Document_Category_exit.Location = new System.Drawing.Point(410, 428);
             this.Document_Category_exit.Name = "Document_Category_exit";
             this.Document_Category_exit.Size = new System.Drawing.Size(87, 37);
             this.Document_Category_exit.TabIndex = 5;
@@ -59,7 +59,7 @@
             // 
             this.Document_Category_delete.Enabled = false;
             this.Document_Category_delete.Highlight = true;
-            this.Document_Category_delete.Location = new System.Drawing.Point(426, 397);
+            this.Document_Category_delete.Location = new System.Drawing.Point(317, 428);
             this.Document_Category_delete.Name = "Document_Category_delete";
             this.Document_Category_delete.Size = new System.Drawing.Size(87, 37);
             this.Document_Category_delete.TabIndex = 4;
@@ -71,7 +71,7 @@
             // 
             this.Document_Category_update.Enabled = false;
             this.Document_Category_update.Highlight = true;
-            this.Document_Category_update.Location = new System.Drawing.Point(314, 397);
+            this.Document_Category_update.Location = new System.Drawing.Point(224, 428);
             this.Document_Category_update.Name = "Document_Category_update";
             this.Document_Category_update.Size = new System.Drawing.Size(87, 37);
             this.Document_Category_update.TabIndex = 3;
@@ -81,20 +81,19 @@
             // 
             // Document_Category_add
             // 
-            this.Document_Category_add.Enabled = false;
             this.Document_Category_add.Highlight = true;
-            this.Document_Category_add.Location = new System.Drawing.Point(202, 397);
+            this.Document_Category_add.Location = new System.Drawing.Point(131, 428);
             this.Document_Category_add.Name = "Document_Category_add";
             this.Document_Category_add.Size = new System.Drawing.Size(87, 37);
             this.Document_Category_add.TabIndex = 2;
-            this.Document_Category_add.Text = "أضافة";
+            this.Document_Category_add.Text = "اضافة";
             this.Document_Category_add.UseSelectable = true;
             this.Document_Category_add.Click += new System.EventHandler(this.Document_Category_add_Click);
             // 
             // Document_Category_new
             // 
             this.Document_Category_new.Highlight = true;
-            this.Document_Category_new.Location = new System.Drawing.Point(90, 397);
+            this.Document_Category_new.Location = new System.Drawing.Point(38, 428);
             this.Document_Category_new.Name = "Document_Category_new";
             this.Document_Category_new.Size = new System.Drawing.Size(87, 37);
             this.Document_Category_new.TabIndex = 1;
@@ -112,41 +111,41 @@
             this.Document_Category_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Document_Category_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Document_Category_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Category_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Category_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Document_Category_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Document_Category_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Document_Category_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Document_Category_Gridview.EnableHeadersVisualStyles = false;
             this.Document_Category_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Document_Category_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Document_Category_Gridview.Location = new System.Drawing.Point(13, 83);
+            this.Document_Category_Gridview.Location = new System.Drawing.Point(16, 107);
             this.Document_Category_Gridview.Name = "Document_Category_Gridview";
             this.Document_Category_Gridview.ReadOnly = true;
             this.Document_Category_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Document_Category_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Document_Category_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Document_Category_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Document_Category_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Document_Category_Gridview.Size = new System.Drawing.Size(648, 270);
+            this.Document_Category_Gridview.Size = new System.Drawing.Size(494, 270);
             this.Document_Category_Gridview.TabIndex = 52;
             this.Document_Category_Gridview.Click += new System.EventHandler(this.Document_Category_Gridview_Click);
             // 
@@ -156,7 +155,7 @@
             // 
             // 
             this.Document_Category_Name.CustomButton.Image = null;
-            this.Document_Category_Name.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.Document_Category_Name.CustomButton.Location = new System.Drawing.Point(221, 1);
             this.Document_Category_Name.CustomButton.Name = "";
             this.Document_Category_Name.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Category_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -165,7 +164,7 @@
             this.Document_Category_Name.CustomButton.UseSelectable = true;
             this.Document_Category_Name.CustomButton.Visible = false;
             this.Document_Category_Name.Lines = new string[0];
-            this.Document_Category_Name.Location = new System.Drawing.Point(211, 359);
+            this.Document_Category_Name.Location = new System.Drawing.Point(161, 389);
             this.Document_Category_Name.MaxLength = 32767;
             this.Document_Category_Name.Name = "Document_Category_Name";
             this.Document_Category_Name.PasswordChar = '\0';
@@ -174,8 +173,8 @@
             this.Document_Category_Name.SelectionLength = 0;
             this.Document_Category_Name.SelectionStart = 0;
             this.Document_Category_Name.ShortcutsEnabled = true;
-            this.Document_Category_Name.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_Name.TabIndex = 0;
+            this.Document_Category_Name.Size = new System.Drawing.Size(243, 23);
+            this.Document_Category_Name.TabIndex = 223;
             this.Document_Category_Name.UseSelectable = true;
             this.Document_Category_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Category_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -183,11 +182,11 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(121, 363);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(80, 391);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(73, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
-            this.Coin_Exc_Sy.Text = "أسم الصنف";
+            this.Coin_Exc_Sy.Text = "اسم الصنف";
             // 
             // Document_Category_textsearch
             // 
@@ -195,7 +194,7 @@
             // 
             // 
             this.Document_Category_textsearch.CustomButton.Image = null;
-            this.Document_Category_textsearch.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.Document_Category_textsearch.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.Document_Category_textsearch.CustomButton.Name = "";
             this.Document_Category_textsearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Document_Category_textsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -204,7 +203,7 @@
             this.Document_Category_textsearch.CustomButton.UseSelectable = true;
             this.Document_Category_textsearch.CustomButton.Visible = false;
             this.Document_Category_textsearch.Lines = new string[0];
-            this.Document_Category_textsearch.Location = new System.Drawing.Point(211, 50);
+            this.Document_Category_textsearch.Location = new System.Drawing.Point(170, 70);
             this.Document_Category_textsearch.MaxLength = 32767;
             this.Document_Category_textsearch.Name = "Document_Category_textsearch";
             this.Document_Category_textsearch.PasswordChar = '\0';
@@ -213,7 +212,7 @@
             this.Document_Category_textsearch.SelectionLength = 0;
             this.Document_Category_textsearch.SelectionStart = 0;
             this.Document_Category_textsearch.ShortcutsEnabled = true;
-            this.Document_Category_textsearch.Size = new System.Drawing.Size(350, 23);
+            this.Document_Category_textsearch.Size = new System.Drawing.Size(234, 23);
             this.Document_Category_textsearch.TabIndex = 225;
             this.Document_Category_textsearch.UseSelectable = true;
             this.Document_Category_textsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -223,7 +222,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(153, 54);
+            this.metroLabel1.Location = new System.Drawing.Point(112, 72);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(41, 19);
             this.metroLabel1.TabIndex = 224;
@@ -234,7 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(684, 450);
+            this.ClientSize = new System.Drawing.Size(525, 495);
             this.Controls.Add(this.Document_Category_textsearch);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Document_Category_Name);

@@ -226,7 +226,7 @@
             this.Role_Functional_Name.SelectionStart = 0;
             this.Role_Functional_Name.ShortcutsEnabled = true;
             this.Role_Functional_Name.Size = new System.Drawing.Size(192, 23);
-            this.Role_Functional_Name.TabIndex = 224;
+            this.Role_Functional_Name.TabIndex = 0;
             this.Role_Functional_Name.UseSelectable = true;
             this.Role_Functional_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Role_Functional_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -266,7 +266,7 @@
             this.Role_Functional_Notes.SelectionStart = 0;
             this.Role_Functional_Notes.ShortcutsEnabled = true;
             this.Role_Functional_Notes.Size = new System.Drawing.Size(192, 131);
-            this.Role_Functional_Notes.TabIndex = 226;
+            this.Role_Functional_Notes.TabIndex = 1;
             this.Role_Functional_Notes.UseSelectable = true;
             this.Role_Functional_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Role_Functional_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

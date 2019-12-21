@@ -220,7 +220,7 @@
             this.Coin_Exchange_Notes.SelectionStart = 0;
             this.Coin_Exchange_Notes.ShortcutsEnabled = true;
             this.Coin_Exchange_Notes.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Notes.TabIndex = 82;
+            this.Coin_Exchange_Notes.TabIndex = 3;
             this.Coin_Exchange_Notes.UseSelectable = true;
             this.Coin_Exchange_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -250,7 +250,7 @@
             this.Coin_Exchange_Sy.SelectionStart = 0;
             this.Coin_Exchange_Sy.ShortcutsEnabled = true;
             this.Coin_Exchange_Sy.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Sy.TabIndex = 83;
+            this.Coin_Exchange_Sy.TabIndex = 0;
             this.Coin_Exchange_Sy.UseSelectable = true;
             this.Coin_Exchange_Sy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_Sy.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -281,7 +281,7 @@
             this.Coin_Exchange_Dollar.SelectionStart = 0;
             this.Coin_Exchange_Dollar.ShortcutsEnabled = true;
             this.Coin_Exchange_Dollar.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_Dollar.TabIndex = 84;
+            this.Coin_Exchange_Dollar.TabIndex = 1;
             this.Coin_Exchange_Dollar.UseSelectable = true;
             this.Coin_Exchange_Dollar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_Dollar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -312,7 +312,7 @@
             this.Coin_Exchange_rate.SelectionStart = 0;
             this.Coin_Exchange_rate.ShortcutsEnabled = true;
             this.Coin_Exchange_rate.Size = new System.Drawing.Size(163, 23);
-            this.Coin_Exchange_rate.TabIndex = 85;
+            this.Coin_Exchange_rate.TabIndex = 2;
             this.Coin_Exchange_rate.UseSelectable = true;
             this.Coin_Exchange_rate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_rate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

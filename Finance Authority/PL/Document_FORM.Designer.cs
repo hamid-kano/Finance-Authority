@@ -239,7 +239,7 @@
             this.Document_Name.SelectionStart = 0;
             this.Document_Name.ShortcutsEnabled = true;
             this.Document_Name.Size = new System.Drawing.Size(121, 23);
-            this.Document_Name.TabIndex = 223;
+            this.Document_Name.TabIndex = 0;
             this.Document_Name.UseSelectable = true;
             this.Document_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -287,7 +287,7 @@
             this.Document_Location.SelectionStart = 0;
             this.Document_Location.ShortcutsEnabled = true;
             this.Document_Location.Size = new System.Drawing.Size(121, 23);
-            this.Document_Location.TabIndex = 227;
+            this.Document_Location.TabIndex = 4;
             this.Document_Location.UseSelectable = true;
             this.Document_Location.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Location.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -318,7 +318,7 @@
             this.Document_URL.SelectionStart = 0;
             this.Document_URL.ShortcutsEnabled = true;
             this.Document_URL.Size = new System.Drawing.Size(121, 23);
-            this.Document_URL.TabIndex = 229;
+            this.Document_URL.TabIndex = 2;
             this.Document_URL.UseSelectable = true;
             this.Document_URL.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_URL.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -349,7 +349,7 @@
             this.Document_Extend.SelectionStart = 0;
             this.Document_Extend.ShortcutsEnabled = true;
             this.Document_Extend.Size = new System.Drawing.Size(121, 23);
-            this.Document_Extend.TabIndex = 230;
+            this.Document_Extend.TabIndex = 3;
             this.Document_Extend.UseSelectable = true;
             this.Document_Extend.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Extend.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -379,7 +379,7 @@
             this.Document_Notes.SelectionStart = 0;
             this.Document_Notes.ShortcutsEnabled = true;
             this.Document_Notes.Size = new System.Drawing.Size(121, 23);
-            this.Document_Notes.TabIndex = 231;
+            this.Document_Notes.TabIndex = 5;
             this.Document_Notes.UseSelectable = true;
             this.Document_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -446,7 +446,7 @@
             this.Document_Type.SelectionStart = 0;
             this.Document_Type.ShortcutsEnabled = true;
             this.Document_Type.Size = new System.Drawing.Size(121, 23);
-            this.Document_Type.TabIndex = 237;
+            this.Document_Type.TabIndex = 1;
             this.Document_Type.UseSelectable = true;
             this.Document_Type.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Type.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

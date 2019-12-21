@@ -72,18 +72,35 @@ namespace Finance_Authority.PL
 
         private void Employee_Description_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Employee_Description Art = new REPT.Crystal_Employee_Description();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            if (Employee_Description_dataGrid.Rows.Count != 0)
+            DT_REPORT.Columns.Add("الحالة الوظيفية", typeof(string));
+            DT_REPORT.Columns.Add("حالة الدور الوظيفي", typeof(string));
+            DT_REPORT.Columns.Add("التاريخ", typeof(string));
+            DT_REPORT.Columns.Add("رقم الكتاب", typeof(string));
+            DT_REPORT.Columns.Add("الراتب", typeof(string));
+            DT_REPORT.Columns.Add("اسم الهيئة", typeof(string));
+            DT_REPORT.Columns.Add("اسم المكتب", typeof(string));
+            DT_REPORT.Columns.Add("القسم", typeof(string));
+            DT_REPORT.Columns.Add("الدور الوظيفي", typeof(string));
+            DT_REPORT.Columns.Add("الموظف", typeof(string));
+            foreach (DataGridViewRow dgv in Employee_Description_dataGrid.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Employee_Description_dataGrid.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, Convert.ToDateTime(dgv.Cells[3].Value).ToShortDateString()
+                   , dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value,
+                   dgv.Cells[8].Value , dgv.Cells[9].Value, 
+                   dgv.Cells[11].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Employee_Description.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Employee_Description report = new REPT.Crystal_Employee_Description();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
         }
 
         private void Employee_Description_N0_Book_KeyPress(object sender, KeyPressEventArgs e)

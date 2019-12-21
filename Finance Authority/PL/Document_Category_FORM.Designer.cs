@@ -175,7 +175,7 @@
             this.Document_Category_Name.SelectionStart = 0;
             this.Document_Category_Name.ShortcutsEnabled = true;
             this.Document_Category_Name.Size = new System.Drawing.Size(350, 23);
-            this.Document_Category_Name.TabIndex = 223;
+            this.Document_Category_Name.TabIndex = 0;
             this.Document_Category_Name.UseSelectable = true;
             this.Document_Category_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Document_Category_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

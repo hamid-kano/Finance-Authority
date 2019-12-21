@@ -109,7 +109,7 @@
             this.EX_Orders_Cat_text.SelectionStart = 0;
             this.EX_Orders_Cat_text.ShortcutsEnabled = true;
             this.EX_Orders_Cat_text.Size = new System.Drawing.Size(350, 23);
-            this.EX_Orders_Cat_text.TabIndex = 224;
+            this.EX_Orders_Cat_text.TabIndex = 0;
             this.EX_Orders_Cat_text.UseSelectable = true;
             this.EX_Orders_Cat_text.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EX_Orders_Cat_text.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

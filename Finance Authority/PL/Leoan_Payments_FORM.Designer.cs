@@ -267,7 +267,7 @@
             this.Leoan_Payments_Amont.SelectionStart = 0;
             this.Leoan_Payments_Amont.ShortcutsEnabled = true;
             this.Leoan_Payments_Amont.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Amont.TabIndex = 209;
+            this.Leoan_Payments_Amont.TabIndex = 0;
             this.Leoan_Payments_Amont.UseSelectable = true;
             this.Leoan_Payments_Amont.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Amont.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -298,7 +298,7 @@
             this.Leoan_Payments_Notes.SelectionStart = 0;
             this.Leoan_Payments_Notes.ShortcutsEnabled = true;
             this.Leoan_Payments_Notes.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Notes.TabIndex = 211;
+            this.Leoan_Payments_Notes.TabIndex = 1;
             this.Leoan_Payments_Notes.UseSelectable = true;
             this.Leoan_Payments_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Notes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -412,7 +412,7 @@
             this.Leoan_Payments_Total_Payment_Amount.SelectionStart = 0;
             this.Leoan_Payments_Total_Payment_Amount.ShortcutsEnabled = true;
             this.Leoan_Payments_Total_Payment_Amount.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Total_Payment_Amount.TabIndex = 268;
+            this.Leoan_Payments_Total_Payment_Amount.TabIndex = 3;
             this.Leoan_Payments_Total_Payment_Amount.UseSelectable = true;
             this.Leoan_Payments_Total_Payment_Amount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Total_Payment_Amount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -443,7 +443,7 @@
             this.Leoan_Payments_Total.SelectionStart = 0;
             this.Leoan_Payments_Total.ShortcutsEnabled = true;
             this.Leoan_Payments_Total.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Total.TabIndex = 267;
+            this.Leoan_Payments_Total.TabIndex = 2;
             this.Leoan_Payments_Total.UseSelectable = true;
             this.Leoan_Payments_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -483,7 +483,7 @@
             this.Leoan_Payments_Remind_Amont.SelectionStart = 0;
             this.Leoan_Payments_Remind_Amont.ShortcutsEnabled = true;
             this.Leoan_Payments_Remind_Amont.Size = new System.Drawing.Size(162, 23);
-            this.Leoan_Payments_Remind_Amont.TabIndex = 271;
+            this.Leoan_Payments_Remind_Amont.TabIndex = 4;
             this.Leoan_Payments_Remind_Amont.UseSelectable = true;
             this.Leoan_Payments_Remind_Amont.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Leoan_Payments_Remind_Amont.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

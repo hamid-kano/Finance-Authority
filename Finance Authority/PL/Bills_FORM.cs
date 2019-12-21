@@ -106,18 +106,36 @@ namespace Finance_Authority.PL
 
         private void Bills_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Bill Art = new REPT.Crystal_Bill();
+            DataSet DS = new DataSet();
+            DataTable DT_REPORT = new DataTable();
 
-            REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-            if (Bills_dataGrid.Rows.Count != 0)
+            DT_REPORT.Columns.Add("رقم الفاتورة", typeof(string));
+            DT_REPORT.Columns.Add("البائع", typeof(string));
+            DT_REPORT.Columns.Add("العملة", typeof(string));
+            DT_REPORT.Columns.Add("قيمة التحويل", typeof(string));
+            DT_REPORT.Columns.Add("نوع الفاتورة", typeof(string));
+            DT_REPORT.Columns.Add("الاجمالي", typeof(string));
+            DT_REPORT.Columns.Add("تاريخ الفاتورة", typeof(string));
+            DT_REPORT.Columns.Add("حالة الدفع", typeof(string));
+            DT_REPORT.Columns.Add("الملاحظات", typeof(string));
+            DT_REPORT.Columns.Add("الميزانية", typeof(string));
+            DT_REPORT.Columns.Add("القسم", typeof(string));
+            foreach (DataGridViewRow dgv in Bills_dataGrid.Rows)
             {
-                // DataTable dt = dataGrid_Ringall.DataSource;
-                Art.SetDataSource(Bills_dataGrid.DataSource);
-
-                FRPT.crystalReportViewer1.ReportSource = Art;
-                FRPT.ShowDialog();
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value
+                   , dgv.Cells[4].Value,dgv.Cells[5].Value, dgv.Cells[6].Value, Convert.ToDateTime(dgv.Cells[7].Value).ToShortDateString(),
+                  dgv.Cells[8].Value
+                  , dgv.Cells[9].Value, Convert.ToDateTime(dgv.Cells[10].Value).ToShortDateString(), dgv.Cells[11].Value);
             }
+            DS.Tables.Add(DT_REPORT);
+            DS.WriteXmlSchema("C:\\AraratProgramFiles\\Bills.xml");
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+            REPT.Crystal_Bills report = new REPT.Crystal_Bills();
+            report.Refresh();
+            report.SetDataSource(DS);
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
         }
 
         private void update_Click(object sender, EventArgs e)

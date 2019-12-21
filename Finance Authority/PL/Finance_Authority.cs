@@ -90,9 +90,43 @@ namespace Finance_Authority.PL
                     metroStyleManager1.Style = MetroFramework.MetroColorStyle.Yellow;
                     Program.style = 5;
                     break;
-                default:
-                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Blue;
+                case 6:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.White;
+                    Program.style = 6;
                     break;
+                case 7:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Blue;
+                    Program.style = 7;
+                    break;
+                case 8:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Teal;
+                    Program.style = 8;
+                    break;
+                case 9:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Green;
+                    Program.style = 9;
+                    break;
+                case 10:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Black;
+                    Program.style = 10;
+                    break;
+                case 11:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Brown;
+                    Program.style = 11;
+                    break;
+                case 12:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Lime;
+                    Program.style = 12;
+                    break;
+                case 13:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Silver;
+                    Program.style = 13;
+                    break;
+                case 14:
+                    metroStyleManager1.Style = MetroFramework.MetroColorStyle.Blue;
+                    Program.style = 14;
+                    break;
+                
             }
         }
         private void Authority_Button_Click(object sender, EventArgs e)

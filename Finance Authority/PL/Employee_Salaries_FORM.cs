@@ -267,7 +267,7 @@ namespace Finance_Authority.PL
 
         private void Empl_Sala_Rem_cons_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = Program.DenyChar(e);
+            //e.Handled = Program.DenyChar(e);
         }
 
         private void Empl_Sala_Absences_KeyPress(object sender, KeyPressEventArgs e)

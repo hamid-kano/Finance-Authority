@@ -30,10 +30,8 @@
         {
             this.Employee_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_delete = new MetroFramework.Controls.MetroButton();
-            this.Employee_update = new MetroFramework.Controls.MetroButton();
             this.Employee_add = new MetroFramework.Controls.MetroButton();
             this.Employee_new = new MetroFramework.Controls.MetroButton();
-            this.Employee_Print = new MetroFramework.Controls.MetroButton();
             this.groupBox_Employee_Des = new System.Windows.Forms.GroupBox();
             this.Statues_Change = new System.Windows.Forms.GroupBox();
             this.Employee_Description_Change = new MetroFramework.Controls.MetroRadioButton();
@@ -70,6 +68,7 @@
             this.Contracts_Date_end = new MetroFramework.Controls.MetroDateTime();
             this.Contracts_Date_Start = new MetroFramework.Controls.MetroDateTime();
             this.groupBox_Employee = new System.Windows.Forms.GroupBox();
+            this.Employees_Brows_Docs = new MetroFramework.Controls.MetroButton();
             this.Employee_Marital_status = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Gender = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
@@ -100,7 +99,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.Employees_Brows_Docs = new MetroFramework.Controls.MetroButton();
             this.groupBox_Employee_Des.SuspendLayout();
             this.Statues_Change.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,7 +109,7 @@
             // Employee_exit
             // 
             this.Employee_exit.Highlight = true;
-            this.Employee_exit.Location = new System.Drawing.Point(912, 571);
+            this.Employee_exit.Location = new System.Drawing.Point(743, 571);
             this.Employee_exit.Name = "Employee_exit";
             this.Employee_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_exit.TabIndex = 20;
@@ -123,7 +121,7 @@
             // 
             this.Employee_delete.Enabled = false;
             this.Employee_delete.Highlight = true;
-            this.Employee_delete.Location = new System.Drawing.Point(692, 571);
+            this.Employee_delete.Location = new System.Drawing.Point(646, 571);
             this.Employee_delete.Name = "Employee_delete";
             this.Employee_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_delete.TabIndex = 18;
@@ -131,49 +129,27 @@
             this.Employee_delete.UseSelectable = true;
             this.Employee_delete.Click += new System.EventHandler(this.Employee_delete_Click);
             // 
-            // Employee_update
-            // 
-            this.Employee_update.Enabled = false;
-            this.Employee_update.Highlight = true;
-            this.Employee_update.Location = new System.Drawing.Point(582, 571);
-            this.Employee_update.Name = "Employee_update";
-            this.Employee_update.Size = new System.Drawing.Size(87, 37);
-            this.Employee_update.TabIndex = 17;
-            this.Employee_update.Text = "تعديل";
-            this.Employee_update.UseSelectable = true;
-            this.Employee_update.Click += new System.EventHandler(this.Employee_update_Click);
-            // 
             // Employee_add
             // 
             this.Employee_add.Highlight = true;
-            this.Employee_add.Location = new System.Drawing.Point(472, 571);
+            this.Employee_add.Location = new System.Drawing.Point(544, 571);
             this.Employee_add.Name = "Employee_add";
             this.Employee_add.Size = new System.Drawing.Size(87, 37);
             this.Employee_add.TabIndex = 16;
-            this.Employee_add.Text = "أضافة";
+            this.Employee_add.Text = "اضافة";
             this.Employee_add.UseSelectable = true;
             this.Employee_add.Click += new System.EventHandler(this.Employee_add_Click);
             // 
             // Employee_new
             // 
             this.Employee_new.Highlight = true;
-            this.Employee_new.Location = new System.Drawing.Point(362, 571);
+            this.Employee_new.Location = new System.Drawing.Point(446, 571);
             this.Employee_new.Name = "Employee_new";
             this.Employee_new.Size = new System.Drawing.Size(87, 37);
             this.Employee_new.TabIndex = 15;
             this.Employee_new.Text = "جديد";
             this.Employee_new.UseSelectable = true;
             this.Employee_new.Click += new System.EventHandler(this.Employee_new_Click);
-            // 
-            // Employee_Print
-            // 
-            this.Employee_Print.Highlight = true;
-            this.Employee_Print.Location = new System.Drawing.Point(802, 571);
-            this.Employee_Print.Name = "Employee_Print";
-            this.Employee_Print.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Print.TabIndex = 19;
-            this.Employee_Print.Text = "طباعة";
-            this.Employee_Print.UseSelectable = true;
             // 
             // groupBox_Employee_Des
             // 
@@ -688,6 +664,18 @@
             this.groupBox_Employee.TabIndex = 258;
             this.groupBox_Employee.TabStop = false;
             this.groupBox_Employee.Text = "وصف الموظفين";
+            // 
+            // Employees_Brows_Docs
+            // 
+            this.Employees_Brows_Docs.Enabled = false;
+            this.Employees_Brows_Docs.Highlight = true;
+            this.Employees_Brows_Docs.Location = new System.Drawing.Point(28, 387);
+            this.Employees_Brows_Docs.Name = "Employees_Brows_Docs";
+            this.Employees_Brows_Docs.Size = new System.Drawing.Size(118, 37);
+            this.Employees_Brows_Docs.TabIndex = 286;
+            this.Employees_Brows_Docs.Text = "استعراض الملحقات";
+            this.Employees_Brows_Docs.UseSelectable = true;
+            this.Employees_Brows_Docs.Click += new System.EventHandler(this.Employees_Brows_Docs_Click);
             // 
             // Employee_Marital_status
             // 
@@ -1226,18 +1214,6 @@
             this.metroLabel1.TabIndex = 259;
             this.metroLabel1.Text = "الأسم الاول";
             // 
-            // Employees_Brows_Docs
-            // 
-            this.Employees_Brows_Docs.Enabled = false;
-            this.Employees_Brows_Docs.Highlight = true;
-            this.Employees_Brows_Docs.Location = new System.Drawing.Point(28, 387);
-            this.Employees_Brows_Docs.Name = "Employees_Brows_Docs";
-            this.Employees_Brows_Docs.Size = new System.Drawing.Size(118, 37);
-            this.Employees_Brows_Docs.TabIndex = 286;
-            this.Employees_Brows_Docs.Text = "استعراض الملحقات";
-            this.Employees_Brows_Docs.UseSelectable = true;
-            this.Employees_Brows_Docs.Click += new System.EventHandler(this.Employees_Brows_Docs_Click);
-            // 
             // Employee_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1246,10 +1222,8 @@
             this.Controls.Add(this.groupBox_Employee);
             this.Controls.Add(this.groupBox_Contract);
             this.Controls.Add(this.groupBox_Employee_Des);
-            this.Controls.Add(this.Employee_Print);
             this.Controls.Add(this.Employee_exit);
             this.Controls.Add(this.Employee_delete);
-            this.Controls.Add(this.Employee_update);
             this.Controls.Add(this.Employee_add);
             this.Controls.Add(this.Employee_new);
             this.Name = "Employee_FORM";
@@ -1273,10 +1247,8 @@
         #endregion
         private MetroFramework.Controls.MetroButton Employee_exit;
         private MetroFramework.Controls.MetroButton Employee_delete;
-        private MetroFramework.Controls.MetroButton Employee_update;
         private MetroFramework.Controls.MetroButton Employee_add;
         private MetroFramework.Controls.MetroButton Employee_new;
-        private MetroFramework.Controls.MetroButton Employee_Print;
         private System.Windows.Forms.GroupBox groupBox_Employee_Des;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroTextBox Employee_Description_Salery;

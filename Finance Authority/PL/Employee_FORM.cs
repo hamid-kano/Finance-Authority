@@ -78,6 +78,7 @@ namespace Finance_Authority.PL
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
                 Contracts_Brows_Docs.Enabled = true;
                 Employees_Brows_Docs.Enabled = true;
+                Employee_delete.Enabled = true;
 
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
                 {
@@ -123,7 +124,6 @@ namespace Finance_Authority.PL
             Employee_Gender.Text = "";
             Employee_Marital_status.Text = "";
             Employee_Pr_Service_Years.Text = "";
-            Employee_update.Enabled = false;
             Employee_delete.Enabled = false;
             Employee_Description_N0_Book.Text = "";
             Employee_Description_Salery.Text = "";
@@ -131,6 +131,8 @@ namespace Finance_Authority.PL
             Contracts_Notes.Text = "";
             Contracts_Brows_Docs.Enabled = false;
             Employees_Brows_Docs.Enabled = false;
+            Employee_add.Text = "اضافة";
+            Statues_Change.Enabled = false;
 
 
 
@@ -241,6 +243,12 @@ namespace Finance_Authority.PL
                 {
 
                     MessageBox.Show("ادخل نوع العقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Contracts_Date_Start.Value > Contracts_Date_end.Value)
+                {
+
+                    MessageBox.Show("يجب ان يكون تاريخ نهاية العقد اكبر من تاريخ بدايته", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
@@ -399,161 +407,11 @@ namespace Finance_Authority.PL
                 Employee_add.Enabled = false;
             }
         }
-
-            private void Employee_update_Click(object sender, EventArgs e)
-            {
-                if (Employee_First_Name.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف اسم الاول للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Father_Name.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف اسم الاب للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Last_Name.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف الكنية للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Mother_Name.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف اسم الام للموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Scie_Level.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف التحصيل العلمي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Scie_Specialization.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف المؤهل العلمي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_No_Financial.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف الرقم المالي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_No_Affairs.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف رقم الشؤون", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_No_File.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف رقم الاضبارة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_No_Card.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف رقم البطاقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Gender.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف الجنس", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Marital_status.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف الوضع العائلي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Employee_Pr_Service_Years.Text == String.Empty)
-                {
-
-                    MessageBox.Show("أضف عدد السنوات السابقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                Dt = Emp.Employee_View();
-                for (int i = 0; i < Dt.Rows.Count; i++)
-                {
-
-
-                    if ((int)Dt.Rows[i][0] != Program.Employee_id)
-                    {
-                        if (Employee_No_Financial.Text == Dt.Rows[i][9].ToString())
-                        {
-                            MessageBox.Show("الرقم المالي موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                        if (Employee_No_Affairs.Text == Dt.Rows[i][10].ToString())
-                        {
-                            MessageBox.Show("الرقم شؤون موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                        if (Employee_No_File.Text == Dt.Rows[i][11].ToString())
-                        {
-                            MessageBox.Show("الرقم الاضبارة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                        if (Employee_No_Card.Text == Dt.Rows[i][12].ToString())
-                        {
-                            MessageBox.Show("الرقم البطاقة موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                        if (Employee_First_Name.Text == Dt.Rows[i][1].ToString() && Employee_Father_Name.Text == Dt.Rows[i][2].ToString()
-                            && Employee_Last_Name.Text == Dt.Rows[i][3].ToString())
-                        {
-                            if (MessageBox.Show("يوجد موظف بنفس الاسم هل تريد الاضافة؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                            {
-
-                            }
-                            else
-                            {
-                                return;
-                            }
-
-                        }
-
-                    }
-                }
-                Emp.Employee_update(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
-               , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
-               , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
-               , Employee_Marital_status.Text, Employee_Pr_Service_Years.Text, Program.Employee_id);
-                Program.Update_Message();
-                Employee_First_Name.Text = "";
-                Employee_Father_Name.Text = "";
-                Employee_Last_Name.Text = "";
-                Employee_Mother_Name.Text = "";
-                Employee_Mobail.Text = "";
-                Employee_Scie_Level.Text = "";
-                Employee_Scie_Specialization.Text = "";
-                Employee_No_Financial.Text = "";
-                Employee_No_Affairs.Text = "";
-                Employee_No_File.Text = "";
-                Employee_No_Card.Text = "";
-                Employee_Gender.Text = "";
-                Employee_Marital_status.Text = "";
-                Employee_Pr_Service_Years.Text = "";
-                Employee_update.Enabled = false;
-                Employee_delete.Enabled = false;
-                Employees_Brows_Docs.Enabled = false;
-
-        }
         private void Employee_delete_Click(object sender, EventArgs e)
             {
                 if (MessageBox.Show("هل تريد حذف الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    Emp.Employee_Delete(Program.Employee_id);
-                    //this.Employee_dataGrid.DataSource = Emp.Employee_View();
-                    //Employee_dataGrid.Columns[0].Visible = false;
+                    Empl_Des.Employee_Description_Delete(_Empolyee_Description_ID);
                     MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Employee_First_Name.Text = "";
                     Employee_Father_Name.Text = "";
@@ -569,11 +427,10 @@ namespace Finance_Authority.PL
                     Employee_Gender.Text = "";
                     Employee_Marital_status.Text = "";
                     Employee_Pr_Service_Years.Text = "";
-                    Employee_update.Enabled = false;
                     Employee_delete.Enabled = false;
                     Employees_Brows_Docs.Enabled = false;
 
-            }
+                }
         }
             private void Employee_Mobail_KeyPress(object sender, KeyPressEventArgs e)
             {
@@ -669,34 +526,6 @@ namespace Finance_Authority.PL
             Document_FORM FRM = new Document_FORM(_Empolyee_Description_ID, "موظف");
             FRM.ShowDialog();
         }
-
-
-        //private void Employee_Print_Click(object sender, EventArgs e)
-        //{
-        //    REPT.Crystal_Employee Art = new REPT.Crystal_Employee();
-
-        //    REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
-        //    if (Employee_dataGrid.Rows.Count != 0)
-        //    {
-        //        // DataTable dt = dataGrid_Ringall.DataSource;
-        //        Art.SetDataSource(Employee_dataGrid.DataSource);
-
-        //        FRPT.crystalReportViewer1.ReportSource = Art;
-        //        FRPT.ShowDialog();
-        //    }
-        //}     
-        //private void Employee_Search_Name_TextChanged_1(object sender, EventArgs e)
-        //{
-        //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Name(Employee_Search_Name.Text);
-        //    Employee_dataGrid.Columns[0].Visible = false;
-        //}
-
-        //private void Employee_Search_Mony_TextChanged(object sender, EventArgs e)
-        //{
-        //    this.Employee_dataGrid.DataSource = Emp.Employee_Search_Mony(Employee_Search_Mony.Text);
-        //    Employee_dataGrid.Columns[0].Visible = false;
-        //}        
 
 
     }

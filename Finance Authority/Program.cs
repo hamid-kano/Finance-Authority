@@ -35,7 +35,7 @@ namespace Finance_Authority
         /// </summary>
         /// 
         public static int theme=1;
-        public static int style=-1;
+        public static int style=14;
 
         // حساب الصندوق الحالي و نسبة الواردات والصادرات
         public static BL.CLS_Budget budget = new BL.CLS_Budget();
@@ -62,30 +62,67 @@ namespace Finance_Authority
 
             switch (style)
             {
-                case -1:
-                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Blue;
-                    break;
                 case 0:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Red;
+                    Program.style = 0;
                     break;
                 case 1:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Orange;
+                    Program.style = 1;
                     break;
                 case 2:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Pink;
+                    Program.style = 2;
                     break;
                 case 3:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Magenta;
+                    Program.style = 3;
                     break;
                 case 4:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Purple;
+                    Program.style = 4;
                     break;
                 case 5:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Yellow;
+                    Program.style = 5;
                     break;
-                default:
+                case 6:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.White;
+                    Program.style = 6;
+                    break;
+                case 7:
                     metroStyleManager.Style = MetroFramework.MetroColorStyle.Blue;
+                    Program.style = 7;
                     break;
+                case 8:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Teal;
+                    Program.style = 8;
+                    break;
+                case 9:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Green;
+                    Program.style = 9;
+                    break;
+                case 10:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Black;
+                    Program.style = 10;
+                    break;
+                case 11:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Brown;
+                    Program.style = 11;
+                    break;
+                case 12:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Lime;
+                    Program.style = 12;
+                    break;
+                case 13:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Silver;
+                    Program.style = 13;
+                    break;
+                case 14:
+                    metroStyleManager.Style = MetroFramework.MetroColorStyle.Blue;
+                    Program.style = 14;
+                    break;
+
             }
 
             return metroStyleManager;

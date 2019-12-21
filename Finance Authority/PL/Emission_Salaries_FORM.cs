@@ -17,6 +17,7 @@ namespace Finance_Authority.PL
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
+        BL.CLS_Employee emp = new BL.CLS_Employee();
         public Emission_Salaries_FORM()
         {
             InitializeComponent();
@@ -50,9 +51,21 @@ namespace Finance_Authority.PL
             /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
             DataTable dt = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.Text);
             int id_last_emission =Convert.ToInt32(Emiss.Emission_Salaries_Max_ID().Rows[0][0]);
-            foreach (var item in dt.Rows)
+
+            //  الحصول على الايام المتبقية للعقد الخاص بالموظف حلقة الادخال
+            
+            foreach (DataRow item in dt.Rows)
             {
-                emp_Sal.Employee_Salaries_add("","","","","", "", "", "", "", "", "", "", "", "", "", "", id_last_emission,(int)dt.Rows[0][0]);
+                if(item[1].ToString()=="عقد")
+                {       
+                    int TotalDays_Remind = Convert.ToInt32((Convert.ToDateTime(emp.Contracts_View_id((int)item[0]).Rows[0][3]) - DateTime.Now.Date).TotalDays);
+                    emp_Sal.Employee_Salaries_add("", TotalDays_Remind.ToString(), "", "", "", "", "", "", "", "", "", "", "", "", "", "", id_last_emission,Convert.ToInt32(item[0]));
+                }
+                else
+                {
+                    emp_Sal.Employee_Salaries_add("", "مثبت", "", "", "", "", "", "", "", "", "", "", "", "", "", "", id_last_emission, Convert.ToInt32(item[0]));
+
+                }
             }
 
             ////////

@@ -37,7 +37,7 @@
             // Close_Button
             // 
             this.Close_Button.Highlight = true;
-            this.Close_Button.Location = new System.Drawing.Point(351, 180);
+            this.Close_Button.Location = new System.Drawing.Point(253, 157);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(87, 37);
             this.Close_Button.TabIndex = 2;
@@ -60,7 +60,7 @@
             this.Backup_Restor_Path_TextBox.CustomButton.UseSelectable = true;
             this.Backup_Restor_Path_TextBox.CustomButton.Visible = false;
             this.Backup_Restor_Path_TextBox.Lines = new string[0];
-            this.Backup_Restor_Path_TextBox.Location = new System.Drawing.Point(240, 116);
+            this.Backup_Restor_Path_TextBox.Location = new System.Drawing.Point(201, 95);
             this.Backup_Restor_Path_TextBox.MaxLength = 32767;
             this.Backup_Restor_Path_TextBox.Multiline = true;
             this.Backup_Restor_Path_TextBox.Name = "Backup_Restor_Path_TextBox";
@@ -79,7 +79,7 @@
             // Backup_Restor_Button
             // 
             this.Backup_Restor_Button.Highlight = true;
-            this.Backup_Restor_Button.Location = new System.Drawing.Point(239, 180);
+            this.Backup_Restor_Button.Location = new System.Drawing.Point(160, 157);
             this.Backup_Restor_Button.Name = "Backup_Restor_Button";
             this.Backup_Restor_Button.Size = new System.Drawing.Size(87, 37);
             this.Backup_Restor_Button.TabIndex = 1;
@@ -90,7 +90,7 @@
             // Brows_Button
             // 
             this.Brows_Button.Highlight = true;
-            this.Brows_Button.Location = new System.Drawing.Point(109, 110);
+            this.Brows_Button.Location = new System.Drawing.Point(84, 89);
             this.Brows_Button.Name = "Brows_Button";
             this.Brows_Button.Size = new System.Drawing.Size(87, 37);
             this.Brows_Button.TabIndex = 0;
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(536, 277);
+            this.ClientSize = new System.Drawing.Size(432, 236);
             this.Controls.Add(this.Close_Button);
             this.Controls.Add(this.Backup_Restor_Path_TextBox);
             this.Controls.Add(this.Backup_Restor_Button);
@@ -113,6 +113,7 @@
             this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "استعادة النسخ الاحتياطي";
             this.ResumeLayout(false);
 

@@ -37,7 +37,7 @@
             // Brows_Button
             // 
             this.Brows_Button.Highlight = true;
-            this.Brows_Button.Location = new System.Drawing.Point(111, 131);
+            this.Brows_Button.Location = new System.Drawing.Point(84, 89);
             this.Brows_Button.Name = "Brows_Button";
             this.Brows_Button.Size = new System.Drawing.Size(87, 37);
             this.Brows_Button.TabIndex = 0;
@@ -48,7 +48,7 @@
             // Backup_Button
             // 
             this.Backup_Button.Highlight = true;
-            this.Backup_Button.Location = new System.Drawing.Point(239, 195);
+            this.Backup_Button.Location = new System.Drawing.Point(160, 157);
             this.Backup_Button.Name = "Backup_Button";
             this.Backup_Button.Size = new System.Drawing.Size(87, 37);
             this.Backup_Button.TabIndex = 1;
@@ -71,7 +71,7 @@
             this.Backup_Path_TextBox.CustomButton.UseSelectable = true;
             this.Backup_Path_TextBox.CustomButton.Visible = false;
             this.Backup_Path_TextBox.Lines = new string[0];
-            this.Backup_Path_TextBox.Location = new System.Drawing.Point(260, 137);
+            this.Backup_Path_TextBox.Location = new System.Drawing.Point(201, 95);
             this.Backup_Path_TextBox.MaxLength = 32767;
             this.Backup_Path_TextBox.Multiline = true;
             this.Backup_Path_TextBox.Name = "Backup_Path_TextBox";
@@ -90,7 +90,7 @@
             // Close_Button
             // 
             this.Close_Button.Highlight = true;
-            this.Close_Button.Location = new System.Drawing.Point(351, 195);
+            this.Close_Button.Location = new System.Drawing.Point(253, 157);
             this.Close_Button.Name = "Close_Button";
             this.Close_Button.Size = new System.Drawing.Size(87, 37);
             this.Close_Button.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(536, 277);
+            this.ClientSize = new System.Drawing.Size(432, 236);
             this.Controls.Add(this.Close_Button);
             this.Controls.Add(this.Backup_Path_TextBox);
             this.Controls.Add(this.Backup_Button);

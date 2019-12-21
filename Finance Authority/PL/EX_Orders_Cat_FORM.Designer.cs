@@ -50,7 +50,7 @@
             // 
             // 
             this.EX_Orders_Cat_textsearch.CustomButton.Image = null;
-            this.EX_Orders_Cat_textsearch.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.EX_Orders_Cat_textsearch.CustomButton.Location = new System.Drawing.Point(190, 1);
             this.EX_Orders_Cat_textsearch.CustomButton.Name = "";
             this.EX_Orders_Cat_textsearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.EX_Orders_Cat_textsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -59,7 +59,7 @@
             this.EX_Orders_Cat_textsearch.CustomButton.UseSelectable = true;
             this.EX_Orders_Cat_textsearch.CustomButton.Visible = false;
             this.EX_Orders_Cat_textsearch.Lines = new string[0];
-            this.EX_Orders_Cat_textsearch.Location = new System.Drawing.Point(156, 59);
+            this.EX_Orders_Cat_textsearch.Location = new System.Drawing.Point(191, 74);
             this.EX_Orders_Cat_textsearch.MaxLength = 32767;
             this.EX_Orders_Cat_textsearch.Name = "EX_Orders_Cat_textsearch";
             this.EX_Orders_Cat_textsearch.PasswordChar = '\0';
@@ -68,7 +68,7 @@
             this.EX_Orders_Cat_textsearch.SelectionLength = 0;
             this.EX_Orders_Cat_textsearch.SelectionStart = 0;
             this.EX_Orders_Cat_textsearch.ShortcutsEnabled = true;
-            this.EX_Orders_Cat_textsearch.Size = new System.Drawing.Size(350, 23);
+            this.EX_Orders_Cat_textsearch.Size = new System.Drawing.Size(212, 23);
             this.EX_Orders_Cat_textsearch.TabIndex = 223;
             this.EX_Orders_Cat_textsearch.UseSelectable = true;
             this.EX_Orders_Cat_textsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -78,7 +78,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(102, 63);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(139, 76);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(41, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
@@ -90,7 +90,7 @@
             // 
             // 
             this.EX_Orders_Cat_text.CustomButton.Image = null;
-            this.EX_Orders_Cat_text.CustomButton.Location = new System.Drawing.Point(328, 1);
+            this.EX_Orders_Cat_text.CustomButton.Location = new System.Drawing.Point(190, 1);
             this.EX_Orders_Cat_text.CustomButton.Name = "";
             this.EX_Orders_Cat_text.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.EX_Orders_Cat_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -99,7 +99,7 @@
             this.EX_Orders_Cat_text.CustomButton.UseSelectable = true;
             this.EX_Orders_Cat_text.CustomButton.Visible = false;
             this.EX_Orders_Cat_text.Lines = new string[0];
-            this.EX_Orders_Cat_text.Location = new System.Drawing.Point(156, 351);
+            this.EX_Orders_Cat_text.Location = new System.Drawing.Point(191, 369);
             this.EX_Orders_Cat_text.MaxLength = 32767;
             this.EX_Orders_Cat_text.Name = "EX_Orders_Cat_text";
             this.EX_Orders_Cat_text.PasswordChar = '\0';
@@ -108,7 +108,7 @@
             this.EX_Orders_Cat_text.SelectionLength = 0;
             this.EX_Orders_Cat_text.SelectionStart = 0;
             this.EX_Orders_Cat_text.ShortcutsEnabled = true;
-            this.EX_Orders_Cat_text.Size = new System.Drawing.Size(350, 23);
+            this.EX_Orders_Cat_text.Size = new System.Drawing.Size(212, 23);
             this.EX_Orders_Cat_text.TabIndex = 224;
             this.EX_Orders_Cat_text.UseSelectable = true;
             this.EX_Orders_Cat_text.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -117,7 +117,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(102, 355);
+            this.metroLabel1.Location = new System.Drawing.Point(133, 369);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(47, 19);
             this.metroLabel1.TabIndex = 225;
@@ -126,7 +126,7 @@
             // EX_Orders_Cat_exit
             // 
             this.EX_Orders_Cat_exit.Highlight = true;
-            this.EX_Orders_Cat_exit.Location = new System.Drawing.Point(483, 392);
+            this.EX_Orders_Cat_exit.Location = new System.Drawing.Point(404, 407);
             this.EX_Orders_Cat_exit.Name = "EX_Orders_Cat_exit";
             this.EX_Orders_Cat_exit.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_Cat_exit.TabIndex = 230;
@@ -138,7 +138,7 @@
             // 
             this.EX_Orders_Cat_delete.Enabled = false;
             this.EX_Orders_Cat_delete.Highlight = true;
-            this.EX_Orders_Cat_delete.Location = new System.Drawing.Point(371, 392);
+            this.EX_Orders_Cat_delete.Location = new System.Drawing.Point(311, 407);
             this.EX_Orders_Cat_delete.Name = "EX_Orders_Cat_delete";
             this.EX_Orders_Cat_delete.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_Cat_delete.TabIndex = 229;
@@ -150,7 +150,7 @@
             // 
             this.EX_Orders_Cat_update.Enabled = false;
             this.EX_Orders_Cat_update.Highlight = true;
-            this.EX_Orders_Cat_update.Location = new System.Drawing.Point(259, 392);
+            this.EX_Orders_Cat_update.Location = new System.Drawing.Point(218, 407);
             this.EX_Orders_Cat_update.Name = "EX_Orders_Cat_update";
             this.EX_Orders_Cat_update.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_Cat_update.TabIndex = 228;
@@ -160,20 +160,19 @@
             // 
             // EX_Orders_Cat_add
             // 
-            this.EX_Orders_Cat_add.Enabled = false;
             this.EX_Orders_Cat_add.Highlight = true;
-            this.EX_Orders_Cat_add.Location = new System.Drawing.Point(147, 392);
+            this.EX_Orders_Cat_add.Location = new System.Drawing.Point(125, 407);
             this.EX_Orders_Cat_add.Name = "EX_Orders_Cat_add";
             this.EX_Orders_Cat_add.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_Cat_add.TabIndex = 227;
-            this.EX_Orders_Cat_add.Text = "أضافة";
+            this.EX_Orders_Cat_add.Text = "اضافة";
             this.EX_Orders_Cat_add.UseSelectable = true;
             this.EX_Orders_Cat_add.Click += new System.EventHandler(this.EX_Orders_Cat_add_Click);
             // 
             // EX_Orders_Cat_new
             // 
             this.EX_Orders_Cat_new.Highlight = true;
-            this.EX_Orders_Cat_new.Location = new System.Drawing.Point(35, 392);
+            this.EX_Orders_Cat_new.Location = new System.Drawing.Point(32, 407);
             this.EX_Orders_Cat_new.Name = "EX_Orders_Cat_new";
             this.EX_Orders_Cat_new.Size = new System.Drawing.Size(87, 37);
             this.EX_Orders_Cat_new.TabIndex = 226;
@@ -211,7 +210,7 @@
             this.EX_Orders_Cat_dataGrid.EnableHeadersVisualStyles = false;
             this.EX_Orders_Cat_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EX_Orders_Cat_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(12, 88);
+            this.EX_Orders_Cat_dataGrid.Location = new System.Drawing.Point(23, 111);
             this.EX_Orders_Cat_dataGrid.Name = "EX_Orders_Cat_dataGrid";
             this.EX_Orders_Cat_dataGrid.ReadOnly = true;
             this.EX_Orders_Cat_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -225,7 +224,7 @@
             this.EX_Orders_Cat_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.EX_Orders_Cat_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EX_Orders_Cat_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(623, 257);
+            this.EX_Orders_Cat_dataGrid.Size = new System.Drawing.Size(479, 243);
             this.EX_Orders_Cat_dataGrid.TabIndex = 231;
             this.EX_Orders_Cat_dataGrid.Click += new System.EventHandler(this.EX_Orders_Cat_dataGrid_Click);
             // 
@@ -234,7 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(643, 450);
+            this.ClientSize = new System.Drawing.Size(520, 467);
             this.Controls.Add(this.EX_Orders_Cat_dataGrid);
             this.Controls.Add(this.EX_Orders_Cat_exit);
             this.Controls.Add(this.EX_Orders_Cat_delete);
@@ -250,7 +249,7 @@
             this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "أدارة أصناف طلبات صرف مبلغ";
+            this.Text = "ادارة اصناف طلبات صرف مبلغ";
             ((System.ComponentModel.ISupportInitialize)(this.EX_Orders_Cat_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

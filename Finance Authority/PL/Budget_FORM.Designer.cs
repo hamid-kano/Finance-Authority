@@ -70,7 +70,7 @@
             this.Budget_dataGrid.AllowUserToResizeRows = false;
             this.Budget_dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Budget_dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Budget_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Budget_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Budget_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Budget_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -93,7 +93,7 @@
             this.Budget_dataGrid.EnableHeadersVisualStyles = false;
             this.Budget_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Budget_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Budget_dataGrid.Location = new System.Drawing.Point(344, 85);
+            this.Budget_dataGrid.Location = new System.Drawing.Point(352, 85);
             this.Budget_dataGrid.Name = "Budget_dataGrid";
             this.Budget_dataGrid.ReadOnly = true;
             this.Budget_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -107,14 +107,14 @@
             this.Budget_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Budget_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Budget_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Budget_dataGrid.Size = new System.Drawing.Size(672, 399);
+            this.Budget_dataGrid.Size = new System.Drawing.Size(672, 418);
             this.Budget_dataGrid.TabIndex = 65;
             this.Budget_dataGrid.Click += new System.EventHandler(this.Budget_dataGrid_Click);
             // 
             // Budget_xit
             // 
             this.Budget_xit.Highlight = true;
-            this.Budget_xit.Location = new System.Drawing.Point(746, 501);
+            this.Budget_xit.Location = new System.Drawing.Point(705, 520);
             this.Budget_xit.Name = "Budget_xit";
             this.Budget_xit.Size = new System.Drawing.Size(87, 37);
             this.Budget_xit.TabIndex = 14;
@@ -126,7 +126,7 @@
             // 
             this.Budget_delete.Enabled = false;
             this.Budget_delete.Highlight = true;
-            this.Budget_delete.Location = new System.Drawing.Point(635, 501);
+            this.Budget_delete.Location = new System.Drawing.Point(612, 520);
             this.Budget_delete.Name = "Budget_delete";
             this.Budget_delete.Size = new System.Drawing.Size(87, 37);
             this.Budget_delete.TabIndex = 13;
@@ -138,7 +138,7 @@
             // 
             this.Budget_DateTime.Enabled = false;
             this.Budget_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Budget_DateTime.Location = new System.Drawing.Point(150, 417);
+            this.Budget_DateTime.Location = new System.Drawing.Point(150, 365);
             this.Budget_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Budget_DateTime.Name = "Budget_DateTime";
             this.Budget_DateTime.RightToLeftLayout = true;
@@ -148,22 +148,22 @@
             // Budget_Date_first
             // 
             this.Budget_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Budget_Date_first.Location = new System.Drawing.Point(511, 37);
+            this.Budget_Date_first.Location = new System.Drawing.Point(531, 44);
             this.Budget_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Budget_Date_first.Name = "Budget_Date_first";
             this.Budget_Date_first.RightToLeftLayout = true;
-            this.Budget_Date_first.Size = new System.Drawing.Size(188, 29);
+            this.Budget_Date_first.Size = new System.Drawing.Size(132, 29);
             this.Budget_Date_first.TabIndex = 15;
             this.Budget_Date_first.ValueChanged += new System.EventHandler(this.Budget_Date_first_ValueChanged_1);
             // 
             // Budget_Date_last
             // 
             this.Budget_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Budget_Date_last.Location = new System.Drawing.Point(796, 37);
+            this.Budget_Date_last.Location = new System.Drawing.Point(757, 44);
             this.Budget_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.Budget_Date_last.Name = "Budget_Date_last";
             this.Budget_Date_last.RightToLeftLayout = true;
-            this.Budget_Date_last.Size = new System.Drawing.Size(188, 29);
+            this.Budget_Date_last.Size = new System.Drawing.Size(132, 29);
             this.Budget_Date_last.TabIndex = 16;
             this.Budget_Date_last.ValueChanged += new System.EventHandler(this.Budget_Date_last_ValueChanged_1);
             // 
@@ -173,17 +173,18 @@
             // 
             // 
             this.Budget_Notes.CustomButton.Image = null;
-            this.Budget_Notes.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Budget_Notes.CustomButton.Location = new System.Drawing.Point(94, 2);
             this.Budget_Notes.CustomButton.Name = "";
-            this.Budget_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Budget_Notes.CustomButton.Size = new System.Drawing.Size(91, 91);
             this.Budget_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Budget_Notes.CustomButton.TabIndex = 1;
             this.Budget_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Budget_Notes.CustomButton.UseSelectable = true;
             this.Budget_Notes.CustomButton.Visible = false;
             this.Budget_Notes.Lines = new string[0];
-            this.Budget_Notes.Location = new System.Drawing.Point(150, 465);
+            this.Budget_Notes.Location = new System.Drawing.Point(150, 407);
             this.Budget_Notes.MaxLength = 32767;
+            this.Budget_Notes.Multiline = true;
             this.Budget_Notes.Name = "Budget_Notes";
             this.Budget_Notes.PasswordChar = '\0';
             this.Budget_Notes.ReadOnly = true;
@@ -192,7 +193,7 @@
             this.Budget_Notes.SelectionLength = 0;
             this.Budget_Notes.SelectionStart = 0;
             this.Budget_Notes.ShortcutsEnabled = true;
-            this.Budget_Notes.Size = new System.Drawing.Size(188, 23);
+            this.Budget_Notes.Size = new System.Drawing.Size(188, 96);
             this.Budget_Notes.TabIndex = 90;
             this.Budget_Notes.UseSelectable = true;
             this.Budget_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -213,7 +214,7 @@
             this.Budget_amount_sy.CustomButton.UseSelectable = true;
             this.Budget_amount_sy.CustomButton.Visible = false;
             this.Budget_amount_sy.Lines = new string[0];
-            this.Budget_amount_sy.Location = new System.Drawing.Point(150, 81);
+            this.Budget_amount_sy.Location = new System.Drawing.Point(150, 93);
             this.Budget_amount_sy.MaxLength = 32767;
             this.Budget_amount_sy.Name = "Budget_amount_sy";
             this.Budget_amount_sy.PasswordChar = '\0';
@@ -245,7 +246,7 @@
             this.Budget_amount_Dollar.CustomButton.UseSelectable = true;
             this.Budget_amount_Dollar.CustomButton.Visible = false;
             this.Budget_amount_Dollar.Lines = new string[0];
-            this.Budget_amount_Dollar.Location = new System.Drawing.Point(150, 123);
+            this.Budget_amount_Dollar.Location = new System.Drawing.Point(150, 127);
             this.Budget_amount_Dollar.MaxLength = 32767;
             this.Budget_amount_Dollar.Name = "Budget_amount_Dollar";
             this.Budget_amount_Dollar.PasswordChar = '\0';
@@ -277,7 +278,7 @@
             this.Budget_Recycle_Dollar.CustomButton.UseSelectable = true;
             this.Budget_Recycle_Dollar.CustomButton.Visible = false;
             this.Budget_Recycle_Dollar.Lines = new string[0];
-            this.Budget_Recycle_Dollar.Location = new System.Drawing.Point(150, 291);
+            this.Budget_Recycle_Dollar.Location = new System.Drawing.Point(150, 263);
             this.Budget_Recycle_Dollar.MaxLength = 32767;
             this.Budget_Recycle_Dollar.Name = "Budget_Recycle_Dollar";
             this.Budget_Recycle_Dollar.PasswordChar = '\0';
@@ -309,7 +310,7 @@
             this.Budget_Recycle_Sy.CustomButton.UseSelectable = true;
             this.Budget_Recycle_Sy.CustomButton.Visible = false;
             this.Budget_Recycle_Sy.Lines = new string[0];
-            this.Budget_Recycle_Sy.Location = new System.Drawing.Point(150, 249);
+            this.Budget_Recycle_Sy.Location = new System.Drawing.Point(150, 229);
             this.Budget_Recycle_Sy.MaxLength = 32767;
             this.Budget_Recycle_Sy.Name = "Budget_Recycle_Sy";
             this.Budget_Recycle_Sy.PasswordChar = '\0';
@@ -341,7 +342,7 @@
             this.Budget_import_Dollar.CustomButton.UseSelectable = true;
             this.Budget_import_Dollar.CustomButton.Visible = false;
             this.Budget_import_Dollar.Lines = new string[0];
-            this.Budget_import_Dollar.Location = new System.Drawing.Point(150, 207);
+            this.Budget_import_Dollar.Location = new System.Drawing.Point(150, 195);
             this.Budget_import_Dollar.MaxLength = 32767;
             this.Budget_import_Dollar.Name = "Budget_import_Dollar";
             this.Budget_import_Dollar.PasswordChar = '\0';
@@ -373,7 +374,7 @@
             this.Budget_import_sy.CustomButton.UseSelectable = true;
             this.Budget_import_sy.CustomButton.Visible = false;
             this.Budget_import_sy.Lines = new string[0];
-            this.Budget_import_sy.Location = new System.Drawing.Point(150, 165);
+            this.Budget_import_sy.Location = new System.Drawing.Point(150, 161);
             this.Budget_import_sy.MaxLength = 32767;
             this.Budget_import_sy.Name = "Budget_import_sy";
             this.Budget_import_sy.PasswordChar = '\0';
@@ -405,7 +406,7 @@
             this.Budget_spicified_Dollar.CustomButton.UseSelectable = true;
             this.Budget_spicified_Dollar.CustomButton.Visible = false;
             this.Budget_spicified_Dollar.Lines = new string[0];
-            this.Budget_spicified_Dollar.Location = new System.Drawing.Point(150, 375);
+            this.Budget_spicified_Dollar.Location = new System.Drawing.Point(150, 331);
             this.Budget_spicified_Dollar.MaxLength = 32767;
             this.Budget_spicified_Dollar.Name = "Budget_spicified_Dollar";
             this.Budget_spicified_Dollar.PasswordChar = '\0';
@@ -437,7 +438,7 @@
             this.Budget_spicified_Sy.CustomButton.UseSelectable = true;
             this.Budget_spicified_Sy.CustomButton.Visible = false;
             this.Budget_spicified_Sy.Lines = new string[0];
-            this.Budget_spicified_Sy.Location = new System.Drawing.Point(150, 333);
+            this.Budget_spicified_Sy.Location = new System.Drawing.Point(150, 297);
             this.Budget_spicified_Sy.MaxLength = 32767;
             this.Budget_spicified_Sy.Name = "Budget_spicified_Sy";
             this.Budget_spicified_Sy.PasswordChar = '\0';
@@ -457,7 +458,7 @@
             // Authority_Search
             // 
             this.Authority_Search.AutoSize = true;
-            this.Authority_Search.Location = new System.Drawing.Point(13, 117);
+            this.Authority_Search.Location = new System.Drawing.Point(15, 128);
             this.Authority_Search.Name = "Authority_Search";
             this.Authority_Search.Size = new System.Drawing.Size(118, 19);
             this.Authority_Search.TabIndex = 100;
@@ -466,7 +467,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(13, 81);
+            this.metroLabel1.Location = new System.Drawing.Point(15, 94);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(124, 19);
             this.metroLabel1.TabIndex = 101;
@@ -475,7 +476,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(13, 160);
+            this.metroLabel2.Location = new System.Drawing.Point(15, 162);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(97, 19);
             this.metroLabel2.TabIndex = 102;
@@ -484,7 +485,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(13, 207);
+            this.metroLabel3.Location = new System.Drawing.Point(15, 196);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(91, 19);
             this.metroLabel3.TabIndex = 103;
@@ -493,7 +494,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(13, 246);
+            this.metroLabel4.Location = new System.Drawing.Point(15, 230);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(89, 19);
             this.metroLabel4.TabIndex = 104;
@@ -502,7 +503,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(13, 289);
+            this.metroLabel5.Location = new System.Drawing.Point(15, 264);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(83, 19);
             this.metroLabel5.TabIndex = 105;
@@ -511,7 +512,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(11, 337);
+            this.metroLabel6.Location = new System.Drawing.Point(15, 298);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(120, 19);
             this.metroLabel6.TabIndex = 106;
@@ -520,7 +521,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(13, 379);
+            this.metroLabel7.Location = new System.Drawing.Point(15, 332);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(114, 19);
             this.metroLabel7.TabIndex = 107;
@@ -529,7 +530,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(13, 422);
+            this.metroLabel8.Location = new System.Drawing.Point(15, 366);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(113, 19);
             this.metroLabel8.TabIndex = 108;
@@ -538,7 +539,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(11, 465);
+            this.metroLabel9.Location = new System.Drawing.Point(15, 400);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(66, 19);
             this.metroLabel9.TabIndex = 109;
@@ -547,7 +548,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(429, 47);
+            this.metroLabel10.Location = new System.Drawing.Point(456, 49);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(69, 19);
             this.metroLabel10.TabIndex = 110;
@@ -556,7 +557,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(728, 47);
+            this.metroLabel11.Location = new System.Drawing.Point(683, 49);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(68, 19);
             this.metroLabel11.TabIndex = 111;
@@ -567,7 +568,7 @@
             this.update.BackColor = System.Drawing.Color.Transparent;
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(379, 35);
+            this.update.Location = new System.Drawing.Point(920, 43);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 264;
@@ -578,7 +579,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 551);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(1039, 580);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.metroLabel10);
@@ -607,9 +609,12 @@
             this.Controls.Add(this.Budget_dataGrid);
             this.Controls.Add(this.Budget_xit);
             this.Controls.Add(this.Budget_delete);
+            this.MaximizeBox = false;
             this.Name = "Budget_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "الميزانيات";
             ((System.ComponentModel.ISupportInitialize)(this.Budget_dataGrid)).EndInit();
             this.ResumeLayout(false);

@@ -76,11 +76,11 @@
             // 
             this.Payment_Document_Date_last.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_last.Location = new System.Drawing.Point(799, 17);
+            this.Payment_Document_Date_last.Location = new System.Drawing.Point(937, 64);
             this.Payment_Document_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_last.Name = "Payment_Document_Date_last";
             this.Payment_Document_Date_last.RightToLeftLayout = true;
-            this.Payment_Document_Date_last.Size = new System.Drawing.Size(188, 29);
+            this.Payment_Document_Date_last.Size = new System.Drawing.Size(134, 29);
             this.Payment_Document_Date_last.TabIndex = 19;
             this.Payment_Document_Date_last.ValueChanged += new System.EventHandler(this.Payment_Document_Date_last_ValueChanged);
             // 
@@ -88,11 +88,11 @@
             // 
             this.Payment_Document_Date_first.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_Date_first.Location = new System.Drawing.Point(522, 17);
+            this.Payment_Document_Date_first.Location = new System.Drawing.Point(723, 64);
             this.Payment_Document_Date_first.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_Date_first.Name = "Payment_Document_Date_first";
             this.Payment_Document_Date_first.RightToLeftLayout = true;
-            this.Payment_Document_Date_first.Size = new System.Drawing.Size(188, 29);
+            this.Payment_Document_Date_first.Size = new System.Drawing.Size(134, 29);
             this.Payment_Document_Date_first.TabIndex = 18;
             this.Payment_Document_Date_first.ValueChanged += new System.EventHandler(this.Payment_Document_Date_first_ValueChanged);
             // 
@@ -100,7 +100,7 @@
             // 
             this.Payment_Document_Comb_Cate.FormattingEnabled = true;
             this.Payment_Document_Comb_Cate.ItemHeight = 23;
-            this.Payment_Document_Comb_Cate.Location = new System.Drawing.Point(125, 493);
+            this.Payment_Document_Comb_Cate.Location = new System.Drawing.Point(125, 505);
             this.Payment_Document_Comb_Cate.Name = "Payment_Document_Comb_Cate";
             this.Payment_Document_Comb_Cate.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Comb_Cate.TabIndex = 10;
@@ -110,7 +110,7 @@
             // 
             this.Payment_Document_Comb_Date.FormattingEnabled = true;
             this.Payment_Document_Comb_Date.ItemHeight = 23;
-            this.Payment_Document_Comb_Date.Location = new System.Drawing.Point(125, 450);
+            this.Payment_Document_Comb_Date.Location = new System.Drawing.Point(125, 460);
             this.Payment_Document_Comb_Date.Name = "Payment_Document_Comb_Date";
             this.Payment_Document_Comb_Date.Size = new System.Drawing.Size(188, 29);
             this.Payment_Document_Comb_Date.TabIndex = 9;
@@ -146,7 +146,7 @@
             this.Payment_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Payment_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Payment_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Payment_Document_dataGrid.Location = new System.Drawing.Point(319, 106);
+            this.Payment_Document_dataGrid.Location = new System.Drawing.Point(322, 106);
             this.Payment_Document_dataGrid.Name = "Payment_Document_dataGrid";
             this.Payment_Document_dataGrid.ReadOnly = true;
             this.Payment_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -160,14 +160,14 @@
             this.Payment_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Payment_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Payment_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Payment_Document_dataGrid.Size = new System.Drawing.Size(697, 440);
+            this.Payment_Document_dataGrid.Size = new System.Drawing.Size(791, 431);
             this.Payment_Document_dataGrid.TabIndex = 147;
             this.Payment_Document_dataGrid.Click += new System.EventHandler(this.Payment_Document_dataGrid_Click);
             // 
             // Payment_Document_exit
             // 
             this.Payment_Document_exit.Highlight = true;
-            this.Payment_Document_exit.Location = new System.Drawing.Point(914, 577);
+            this.Payment_Document_exit.Location = new System.Drawing.Point(949, 564);
             this.Payment_Document_exit.Name = "Payment_Document_exit";
             this.Payment_Document_exit.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_exit.TabIndex = 16;
@@ -179,7 +179,7 @@
             // 
             this.Payment_Document_delete.Enabled = false;
             this.Payment_Document_delete.Highlight = true;
-            this.Payment_Document_delete.Location = new System.Drawing.Point(694, 577);
+            this.Payment_Document_delete.Location = new System.Drawing.Point(763, 564);
             this.Payment_Document_delete.Name = "Payment_Document_delete";
             this.Payment_Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_delete.TabIndex = 14;
@@ -191,7 +191,7 @@
             // 
             this.Payment_Document_update.Enabled = false;
             this.Payment_Document_update.Highlight = true;
-            this.Payment_Document_update.Location = new System.Drawing.Point(587, 577);
+            this.Payment_Document_update.Location = new System.Drawing.Point(670, 564);
             this.Payment_Document_update.Name = "Payment_Document_update";
             this.Payment_Document_update.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_update.TabIndex = 13;
@@ -201,9 +201,8 @@
             // 
             // Payment_Document_add
             // 
-            this.Payment_Document_add.Enabled = false;
             this.Payment_Document_add.Highlight = true;
-            this.Payment_Document_add.Location = new System.Drawing.Point(468, 577);
+            this.Payment_Document_add.Location = new System.Drawing.Point(577, 564);
             this.Payment_Document_add.Name = "Payment_Document_add";
             this.Payment_Document_add.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_add.TabIndex = 12;
@@ -214,7 +213,7 @@
             // Payment_Document_new
             // 
             this.Payment_Document_new.Highlight = true;
-            this.Payment_Document_new.Location = new System.Drawing.Point(356, 577);
+            this.Payment_Document_new.Location = new System.Drawing.Point(484, 564);
             this.Payment_Document_new.Name = "Payment_Document_new";
             this.Payment_Document_new.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_new.TabIndex = 11;
@@ -226,7 +225,7 @@
             // 
             this.Payment_Document_DateTime.CustomFormat = "dd/MM/yyyy";
             this.Payment_Document_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Payment_Document_DateTime.Location = new System.Drawing.Point(125, 370);
+            this.Payment_Document_DateTime.Location = new System.Drawing.Point(125, 375);
             this.Payment_Document_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Payment_Document_DateTime.Name = "Payment_Document_DateTime";
             this.Payment_Document_DateTime.RightToLeftLayout = true;
@@ -236,7 +235,7 @@
             // Payment_Document_Print
             // 
             this.Payment_Document_Print.Highlight = true;
-            this.Payment_Document_Print.Location = new System.Drawing.Point(804, 577);
+            this.Payment_Document_Print.Location = new System.Drawing.Point(856, 564);
             this.Payment_Document_Print.Name = "Payment_Document_Print";
             this.Payment_Document_Print.Size = new System.Drawing.Size(87, 37);
             this.Payment_Document_Print.TabIndex = 15;
@@ -247,7 +246,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(364, 60);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(325, 68);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(152, 19);
             this.Coin_Exc_Sy.TabIndex = 223;
@@ -259,7 +258,7 @@
             // 
             // 
             this.Payment_Document_Search.CustomButton.Image = null;
-            this.Payment_Document_Search.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Payment_Document_Search.CustomButton.Location = new System.Drawing.Point(127, 1);
             this.Payment_Document_Search.CustomButton.Name = "";
             this.Payment_Document_Search.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Payment_Document_Search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -268,7 +267,7 @@
             this.Payment_Document_Search.CustomButton.UseSelectable = true;
             this.Payment_Document_Search.CustomButton.Visible = false;
             this.Payment_Document_Search.Lines = new string[0];
-            this.Payment_Document_Search.Location = new System.Drawing.Point(522, 60);
+            this.Payment_Document_Search.Location = new System.Drawing.Point(483, 67);
             this.Payment_Document_Search.MaxLength = 32767;
             this.Payment_Document_Search.Name = "Payment_Document_Search";
             this.Payment_Document_Search.PasswordChar = '\0';
@@ -277,7 +276,7 @@
             this.Payment_Document_Search.SelectionLength = 0;
             this.Payment_Document_Search.SelectionStart = 0;
             this.Payment_Document_Search.ShortcutsEnabled = true;
-            this.Payment_Document_Search.Size = new System.Drawing.Size(188, 23);
+            this.Payment_Document_Search.Size = new System.Drawing.Size(149, 23);
             this.Payment_Document_Search.TabIndex = 222;
             this.Payment_Document_Search.UseSelectable = true;
             this.Payment_Document_Search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -287,7 +286,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 106);
+            this.metroLabel1.Location = new System.Drawing.Point(19, 111);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(86, 19);
             this.metroLabel1.TabIndex = 225;
@@ -308,7 +307,7 @@
             this.Payment_Document_sy.CustomButton.UseSelectable = true;
             this.Payment_Document_sy.CustomButton.Visible = false;
             this.Payment_Document_sy.Lines = new string[0];
-            this.Payment_Document_sy.Location = new System.Drawing.Point(125, 110);
+            this.Payment_Document_sy.Location = new System.Drawing.Point(125, 108);
             this.Payment_Document_sy.MaxLength = 32767;
             this.Payment_Document_sy.Name = "Payment_Document_sy";
             this.Payment_Document_sy.PasswordChar = '\0';
@@ -339,7 +338,7 @@
             this.Payment_Document_no.CustomButton.UseSelectable = true;
             this.Payment_Document_no.CustomButton.Visible = false;
             this.Payment_Document_no.Lines = new string[0];
-            this.Payment_Document_no.Location = new System.Drawing.Point(125, 227);
+            this.Payment_Document_no.Location = new System.Drawing.Point(125, 225);
             this.Payment_Document_no.MaxLength = 32767;
             this.Payment_Document_no.Name = "Payment_Document_no";
             this.Payment_Document_no.PasswordChar = '\0';
@@ -370,7 +369,7 @@
             this.Payment_Document_rate.CustomButton.UseSelectable = true;
             this.Payment_Document_rate.CustomButton.Visible = false;
             this.Payment_Document_rate.Lines = new string[0];
-            this.Payment_Document_rate.Location = new System.Drawing.Point(125, 188);
+            this.Payment_Document_rate.Location = new System.Drawing.Point(125, 186);
             this.Payment_Document_rate.MaxLength = 32767;
             this.Payment_Document_rate.Name = "Payment_Document_rate";
             this.Payment_Document_rate.PasswordChar = '\0';
@@ -401,7 +400,7 @@
             this.Payment_Document_Dollar.CustomButton.UseSelectable = true;
             this.Payment_Document_Dollar.CustomButton.Visible = false;
             this.Payment_Document_Dollar.Lines = new string[0];
-            this.Payment_Document_Dollar.Location = new System.Drawing.Point(125, 149);
+            this.Payment_Document_Dollar.Location = new System.Drawing.Point(125, 147);
             this.Payment_Document_Dollar.MaxLength = 32767;
             this.Payment_Document_Dollar.Name = "Payment_Document_Dollar";
             this.Payment_Document_Dollar.PasswordChar = '\0';
@@ -432,7 +431,7 @@
             this.Payment_Document_Reason.CustomButton.UseSelectable = true;
             this.Payment_Document_Reason.CustomButton.Visible = false;
             this.Payment_Document_Reason.Lines = new string[0];
-            this.Payment_Document_Reason.Location = new System.Drawing.Point(125, 298);
+            this.Payment_Document_Reason.Location = new System.Drawing.Point(125, 301);
             this.Payment_Document_Reason.MaxLength = 32767;
             this.Payment_Document_Reason.Name = "Payment_Document_Reason";
             this.Payment_Document_Reason.PasswordChar = '\0';
@@ -462,7 +461,7 @@
             this.Payment_Document_No_Order.CustomButton.UseSelectable = true;
             this.Payment_Document_No_Order.CustomButton.Visible = false;
             this.Payment_Document_No_Order.Lines = new string[0];
-            this.Payment_Document_No_Order.Location = new System.Drawing.Point(125, 259);
+            this.Payment_Document_No_Order.Location = new System.Drawing.Point(125, 261);
             this.Payment_Document_No_Order.MaxLength = 32767;
             this.Payment_Document_No_Order.Name = "Payment_Document_No_Order";
             this.Payment_Document_No_Order.PasswordChar = '\0';
@@ -493,7 +492,7 @@
             this.Payment_Document_Receve.CustomButton.UseSelectable = true;
             this.Payment_Document_Receve.CustomButton.Visible = false;
             this.Payment_Document_Receve.Lines = new string[0];
-            this.Payment_Document_Receve.Location = new System.Drawing.Point(125, 337);
+            this.Payment_Document_Receve.Location = new System.Drawing.Point(125, 336);
             this.Payment_Document_Receve.MaxLength = 32767;
             this.Payment_Document_Receve.Name = "Payment_Document_Receve";
             this.Payment_Document_Receve.PasswordChar = '\0';
@@ -523,7 +522,7 @@
             this.Payment_Document_Notes.CustomButton.UseSelectable = true;
             this.Payment_Document_Notes.CustomButton.Visible = false;
             this.Payment_Document_Notes.Lines = new string[0];
-            this.Payment_Document_Notes.Location = new System.Drawing.Point(125, 415);
+            this.Payment_Document_Notes.Location = new System.Drawing.Point(125, 420);
             this.Payment_Document_Notes.MaxLength = 32767;
             this.Payment_Document_Notes.Name = "Payment_Document_Notes";
             this.Payment_Document_Notes.PasswordChar = '\0';
@@ -541,7 +540,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(431, 21);
+            this.metroLabel2.Location = new System.Drawing.Point(641, 69);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(69, 19);
             this.metroLabel2.TabIndex = 233;
@@ -550,7 +549,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(720, 21);
+            this.metroLabel3.Location = new System.Drawing.Point(863, 69);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 234;
@@ -559,7 +558,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 188);
+            this.metroLabel4.Location = new System.Drawing.Point(19, 187);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(72, 19);
             this.metroLabel4.TabIndex = 235;
@@ -568,7 +567,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(23, 263);
+            this.metroLabel5.Location = new System.Drawing.Point(19, 264);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(86, 19);
             this.metroLabel5.TabIndex = 236;
@@ -577,7 +576,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(23, 302);
+            this.metroLabel6.Location = new System.Drawing.Point(19, 302);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(45, 19);
             this.metroLabel6.TabIndex = 237;
@@ -586,7 +585,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(23, 337);
+            this.metroLabel7.Location = new System.Drawing.Point(19, 337);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(52, 19);
             this.metroLabel7.TabIndex = 238;
@@ -595,7 +594,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(23, 370);
+            this.metroLabel8.Location = new System.Drawing.Point(19, 379);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(41, 19);
             this.metroLabel8.TabIndex = 239;
@@ -604,7 +603,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(23, 227);
+            this.metroLabel9.Location = new System.Drawing.Point(19, 226);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(61, 19);
             this.metroLabel9.TabIndex = 240;
@@ -613,7 +612,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(23, 149);
+            this.metroLabel10.Location = new System.Drawing.Point(19, 148);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(80, 19);
             this.metroLabel10.TabIndex = 241;
@@ -622,7 +621,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(23, 503);
+            this.metroLabel11.Location = new System.Drawing.Point(19, 509);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(69, 19);
             this.metroLabel11.TabIndex = 242;
@@ -631,7 +630,7 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(23, 460);
+            this.metroLabel12.Location = new System.Drawing.Point(19, 464);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(78, 19);
             this.metroLabel12.TabIndex = 243;
@@ -640,7 +639,7 @@
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(23, 419);
+            this.metroLabel13.Location = new System.Drawing.Point(19, 421);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(66, 19);
             this.metroLabel13.TabIndex = 244;
@@ -650,7 +649,7 @@
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(779, 60);
+            this.update.Location = new System.Drawing.Point(1075, 63);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 264;
@@ -661,7 +660,7 @@
             // 
             this.Payment_Document_Brows_Docs.Enabled = false;
             this.Payment_Document_Brows_Docs.Highlight = true;
-            this.Payment_Document_Brows_Docs.Location = new System.Drawing.Point(145, 577);
+            this.Payment_Document_Brows_Docs.Location = new System.Drawing.Point(159, 564);
             this.Payment_Document_Brows_Docs.Name = "Payment_Document_Brows_Docs";
             this.Payment_Document_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Payment_Document_Brows_Docs.TabIndex = 265;
@@ -674,7 +673,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1037, 642);
+            this.ClientSize = new System.Drawing.Size(1127, 627);
             this.Controls.Add(this.Payment_Document_Brows_Docs);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel13);

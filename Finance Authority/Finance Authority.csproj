@@ -129,11 +129,11 @@
     <Compile Include="PL\Contracts_FORM.Designer.cs">
       <DependentUpon>Contracts_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Disply_FORM.cs">
+    <Compile Include="PL\Login_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Disply_FORM.Designer.cs">
-      <DependentUpon>Disply_FORM.cs</DependentUpon>
+    <Compile Include="PL\Login_FORM.Designer.cs">
+      <DependentUpon>Login_FORM.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Document_Category_FORM.cs">
       <SubType>Form</SubType>
@@ -176,12 +176,6 @@
     </Compile>
     <Compile Include="PL\Loans_FORM.Designer.cs">
       <DependentUpon>Loans_FORM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\MAIN_FORM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\MAIN_FORM.Designer.cs">
-      <DependentUpon>MAIN_FORM.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\EX_Order_FORM.cs">
       <SubType>Form</SubType>
@@ -347,8 +341,8 @@
     <EmbeddedResource Include="PL\Contracts_FORM.resx">
       <DependentUpon>Contracts_FORM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Disply_FORM.resx">
-      <DependentUpon>Disply_FORM.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Login_FORM.resx">
+      <DependentUpon>Login_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Document_Category_FORM.resx">
       <DependentUpon>Document_Category_FORM.cs</DependentUpon>
@@ -400,9 +394,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Emission_Salaries_FORM.resx">
       <DependentUpon>Emission_Salaries_FORM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\MAIN_FORM.resx">
-      <DependentUpon>MAIN_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

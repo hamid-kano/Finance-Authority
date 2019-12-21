@@ -121,7 +121,7 @@
             // 
             this.Employee_delete.Enabled = false;
             this.Employee_delete.Highlight = true;
-            this.Employee_delete.Location = new System.Drawing.Point(646, 571);
+            this.Employee_delete.Location = new System.Drawing.Point(650, 571);
             this.Employee_delete.Name = "Employee_delete";
             this.Employee_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_delete.TabIndex = 18;
@@ -132,7 +132,7 @@
             // Employee_add
             // 
             this.Employee_add.Highlight = true;
-            this.Employee_add.Location = new System.Drawing.Point(544, 571);
+            this.Employee_add.Location = new System.Drawing.Point(557, 571);
             this.Employee_add.Name = "Employee_add";
             this.Employee_add.Size = new System.Drawing.Size(87, 37);
             this.Employee_add.TabIndex = 16;
@@ -143,7 +143,7 @@
             // Employee_new
             // 
             this.Employee_new.Highlight = true;
-            this.Employee_new.Location = new System.Drawing.Point(446, 571);
+            this.Employee_new.Location = new System.Drawing.Point(464, 571);
             this.Employee_new.Name = "Employee_new";
             this.Employee_new.Size = new System.Drawing.Size(87, 37);
             this.Employee_new.TabIndex = 15;
@@ -216,7 +216,7 @@
             // metroLabel23
             // 
             this.metroLabel23.AutoSize = true;
-            this.metroLabel23.Location = new System.Drawing.Point(270, 343);
+            this.metroLabel23.Location = new System.Drawing.Point(264, 341);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(48, 19);
             this.metroLabel23.TabIndex = 277;
@@ -226,7 +226,7 @@
             // 
             this.Employee_CombAthuontic.FormattingEnabled = true;
             this.Employee_CombAthuontic.ItemHeight = 23;
-            this.Employee_CombAthuontic.Location = new System.Drawing.Point(13, 295);
+            this.Employee_CombAthuontic.Location = new System.Drawing.Point(13, 293);
             this.Employee_CombAthuontic.Name = "Employee_CombAthuontic";
             this.Employee_CombAthuontic.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Employee_CombAthuontic.Size = new System.Drawing.Size(188, 29);
@@ -237,7 +237,7 @@
             // metroLabel30
             // 
             this.metroLabel30.AutoSize = true;
-            this.metroLabel30.Location = new System.Drawing.Point(271, 295);
+            this.metroLabel30.Location = new System.Drawing.Point(267, 298);
             this.metroLabel30.Name = "metroLabel30";
             this.metroLabel30.Size = new System.Drawing.Size(45, 19);
             this.metroLabel30.TabIndex = 275;
@@ -247,7 +247,7 @@
             // 
             this.Employee_CombOffice.FormattingEnabled = true;
             this.Employee_CombOffice.ItemHeight = 23;
-            this.Employee_CombOffice.Location = new System.Drawing.Point(13, 337);
+            this.Employee_CombOffice.Location = new System.Drawing.Point(13, 336);
             this.Employee_CombOffice.Name = "Employee_CombOffice";
             this.Employee_CombOffice.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Employee_CombOffice.Size = new System.Drawing.Size(188, 29);
@@ -258,7 +258,7 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(253, 422);
+            this.metroLabel17.Location = new System.Drawing.Point(252, 417);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(60, 19);
             this.metroLabel17.TabIndex = 247;
@@ -310,7 +310,7 @@
             this.Employee_Description_N0_Book.CustomButton.UseSelectable = true;
             this.Employee_Description_N0_Book.CustomButton.Visible = false;
             this.Employee_Description_N0_Book.Lines = new string[0];
-            this.Employee_Description_N0_Book.Location = new System.Drawing.Point(13, 228);
+            this.Employee_Description_N0_Book.Location = new System.Drawing.Point(13, 227);
             this.Employee_Description_N0_Book.MaxLength = 32767;
             this.Employee_Description_N0_Book.Name = "Employee_Description_N0_Book";
             this.Employee_Description_N0_Book.PasswordChar = '\0';
@@ -329,7 +329,7 @@
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(252, 233);
+            this.metroLabel18.Location = new System.Drawing.Point(248, 229);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(64, 19);
             this.metroLabel18.TabIndex = 246;
@@ -371,7 +371,7 @@
             // metroLabel19
             // 
             this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Location = new System.Drawing.Point(271, 384);
+            this.metroLabel19.Location = new System.Drawing.Point(270, 379);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(42, 19);
             this.metroLabel19.TabIndex = 245;
@@ -415,7 +415,7 @@
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(276, 263);
+            this.metroLabel20.Location = new System.Drawing.Point(272, 264);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(40, 19);
             this.metroLabel20.TabIndex = 244;
@@ -444,7 +444,7 @@
             // metroLabel21
             // 
             this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(220, 157);
+            this.metroLabel21.Location = new System.Drawing.Point(216, 155);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(96, 19);
             this.metroLabel21.TabIndex = 243;
@@ -453,7 +453,7 @@
             // Employee_Description_DateTime
             // 
             this.Employee_Description_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Employee_Description_DateTime.Location = new System.Drawing.Point(13, 188);
+            this.Employee_Description_DateTime.Location = new System.Drawing.Point(13, 190);
             this.Employee_Description_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Employee_Description_DateTime.Name = "Employee_Description_DateTime";
             this.Employee_Description_DateTime.RightToLeftLayout = true;
@@ -463,7 +463,7 @@
             // metroLabel22
             // 
             this.metroLabel22.AutoSize = true;
-            this.metroLabel22.Location = new System.Drawing.Point(271, 196);
+            this.metroLabel22.Location = new System.Drawing.Point(271, 195);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(41, 19);
             this.metroLabel22.TabIndex = 242;
@@ -488,13 +488,13 @@
             this.groupBox_Contract.Size = new System.Drawing.Size(288, 456);
             this.groupBox_Contract.TabIndex = 257;
             this.groupBox_Contract.TabStop = false;
-            this.groupBox_Contract.Text = "العقود";
+            this.groupBox_Contract.Text = "العقد";
             // 
             // Contracts_Brows_Docs
             // 
             this.Contracts_Brows_Docs.Enabled = false;
             this.Contracts_Brows_Docs.Highlight = true;
-            this.Contracts_Brows_Docs.Location = new System.Drawing.Point(39, 366);
+            this.Contracts_Brows_Docs.Location = new System.Drawing.Point(44, 376);
             this.Contracts_Brows_Docs.Name = "Contracts_Brows_Docs";
             this.Contracts_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Contracts_Brows_Docs.TabIndex = 266;
@@ -510,7 +510,7 @@
             "خبرة",
             "مؤقت",
             "أختصاص"});
-            this.Contracts_Type.Location = new System.Drawing.Point(15, 40);
+            this.Contracts_Type.Location = new System.Drawing.Point(21, 38);
             this.Contracts_Type.Name = "Contracts_Type";
             this.Contracts_Type.Size = new System.Drawing.Size(163, 29);
             this.Contracts_Type.TabIndex = 242;
@@ -519,7 +519,7 @@
             // metroLabel25
             // 
             this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(202, 198);
+            this.metroLabel25.Location = new System.Drawing.Point(203, 191);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(66, 19);
             this.metroLabel25.TabIndex = 241;
@@ -528,7 +528,7 @@
             // metroLabel27
             // 
             this.metroLabel27.AutoSize = true;
-            this.metroLabel27.Location = new System.Drawing.Point(203, 249);
+            this.metroLabel27.Location = new System.Drawing.Point(203, 244);
             this.metroLabel27.Name = "metroLabel27";
             this.metroLabel27.Size = new System.Drawing.Size(66, 19);
             this.metroLabel27.TabIndex = 239;
@@ -537,7 +537,7 @@
             // metroLabel28
             // 
             this.metroLabel28.AutoSize = true;
-            this.metroLabel28.Location = new System.Drawing.Point(200, 144);
+            this.metroLabel28.Location = new System.Drawing.Point(201, 138);
             this.metroLabel28.Name = "metroLabel28";
             this.metroLabel28.Size = new System.Drawing.Size(68, 19);
             this.metroLabel28.TabIndex = 238;
@@ -546,7 +546,7 @@
             // metroLabel29
             // 
             this.metroLabel29.AutoSize = true;
-            this.metroLabel29.Location = new System.Drawing.Point(200, 96);
+            this.metroLabel29.Location = new System.Drawing.Point(200, 90);
             this.metroLabel29.Name = "metroLabel29";
             this.metroLabel29.Size = new System.Drawing.Size(69, 19);
             this.metroLabel29.TabIndex = 237;
@@ -555,7 +555,7 @@
             // Contracts_Type1
             // 
             this.Contracts_Type1.AutoSize = true;
-            this.Contracts_Type1.Location = new System.Drawing.Point(211, 42);
+            this.Contracts_Type1.Location = new System.Drawing.Point(211, 43);
             this.Contracts_Type1.Name = "Contracts_Type1";
             this.Contracts_Type1.Size = new System.Drawing.Size(58, 19);
             this.Contracts_Type1.TabIndex = 236;
@@ -576,7 +576,7 @@
             this.Contracts_Notes.CustomButton.UseSelectable = true;
             this.Contracts_Notes.CustomButton.Visible = false;
             this.Contracts_Notes.Lines = new string[0];
-            this.Contracts_Notes.Location = new System.Drawing.Point(15, 245);
+            this.Contracts_Notes.Location = new System.Drawing.Point(21, 240);
             this.Contracts_Notes.MaxLength = 32767;
             this.Contracts_Notes.Multiline = true;
             this.Contracts_Notes.Name = "Contracts_Notes";
@@ -586,7 +586,7 @@
             this.Contracts_Notes.SelectionLength = 0;
             this.Contracts_Notes.SelectionStart = 0;
             this.Contracts_Notes.ShortcutsEnabled = true;
-            this.Contracts_Notes.Size = new System.Drawing.Size(163, 89);
+            this.Contracts_Notes.Size = new System.Drawing.Size(163, 120);
             this.Contracts_Notes.TabIndex = 232;
             this.Contracts_Notes.UseSelectable = true;
             this.Contracts_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -599,7 +599,7 @@
             this.Contracts_Comb_Contract_statue.Items.AddRange(new object[] {
             "منتهي",
             "غير منتهي"});
-            this.Contracts_Comb_Contract_statue.Location = new System.Drawing.Point(14, 188);
+            this.Contracts_Comb_Contract_statue.Location = new System.Drawing.Point(20, 186);
             this.Contracts_Comb_Contract_statue.Name = "Contracts_Comb_Contract_statue";
             this.Contracts_Comb_Contract_statue.Size = new System.Drawing.Size(163, 29);
             this.Contracts_Comb_Contract_statue.TabIndex = 231;
@@ -608,7 +608,7 @@
             // Contracts_Date_end
             // 
             this.Contracts_Date_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Contracts_Date_end.Location = new System.Drawing.Point(14, 134);
+            this.Contracts_Date_end.Location = new System.Drawing.Point(20, 133);
             this.Contracts_Date_end.MinimumSize = new System.Drawing.Size(0, 29);
             this.Contracts_Date_end.Name = "Contracts_Date_end";
             this.Contracts_Date_end.RightToLeftLayout = true;
@@ -618,7 +618,7 @@
             // Contracts_Date_Start
             // 
             this.Contracts_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Contracts_Date_Start.Location = new System.Drawing.Point(15, 86);
+            this.Contracts_Date_Start.Location = new System.Drawing.Point(21, 85);
             this.Contracts_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
             this.Contracts_Date_Start.Name = "Contracts_Date_Start";
             this.Contracts_Date_Start.RightToLeftLayout = true;
@@ -663,13 +663,13 @@
             this.groupBox_Employee.Size = new System.Drawing.Size(542, 456);
             this.groupBox_Employee.TabIndex = 258;
             this.groupBox_Employee.TabStop = false;
-            this.groupBox_Employee.Text = "وصف الموظفين";
+            this.groupBox_Employee.Text = "معلومات الموظف";
             // 
             // Employees_Brows_Docs
             // 
             this.Employees_Brows_Docs.Enabled = false;
             this.Employees_Brows_Docs.Highlight = true;
-            this.Employees_Brows_Docs.Location = new System.Drawing.Point(28, 387);
+            this.Employees_Brows_Docs.Location = new System.Drawing.Point(22, 376);
             this.Employees_Brows_Docs.Name = "Employees_Brows_Docs";
             this.Employees_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Employees_Brows_Docs.TabIndex = 286;
@@ -684,7 +684,7 @@
             this.Employee_Marital_status.Items.AddRange(new object[] {
             "اعزب",
             "متزوج"});
-            this.Employee_Marital_status.Location = new System.Drawing.Point(24, 295);
+            this.Employee_Marital_status.Location = new System.Drawing.Point(19, 279);
             this.Employee_Marital_status.Name = "Employee_Marital_status";
             this.Employee_Marital_status.Size = new System.Drawing.Size(126, 29);
             this.Employee_Marital_status.TabIndex = 285;
@@ -697,7 +697,7 @@
             this.Employee_Gender.Items.AddRange(new object[] {
             "ذكر",
             "انثى"});
-            this.Employee_Gender.Location = new System.Drawing.Point(24, 249);
+            this.Employee_Gender.Location = new System.Drawing.Point(19, 232);
             this.Employee_Gender.Name = "Employee_Gender";
             this.Employee_Gender.Size = new System.Drawing.Size(126, 29);
             this.Employee_Gender.TabIndex = 284;
@@ -706,7 +706,7 @@
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(177, 299);
+            this.metroLabel16.Location = new System.Drawing.Point(182, 284);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(93, 19);
             this.metroLabel16.TabIndex = 283;
@@ -715,7 +715,7 @@
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(156, 341);
+            this.metroLabel15.Location = new System.Drawing.Point(149, 326);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(126, 19);
             this.metroLabel15.TabIndex = 282;
@@ -724,7 +724,7 @@
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(220, 249);
+            this.metroLabel14.Location = new System.Drawing.Point(231, 237);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(44, 19);
             this.metroLabel14.TabIndex = 281;
@@ -733,7 +733,7 @@
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(194, 168);
+            this.metroLabel13.Location = new System.Drawing.Point(203, 147);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(72, 19);
             this.metroLabel13.TabIndex = 280;
@@ -742,7 +742,7 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(196, 121);
+            this.metroLabel12.Location = new System.Drawing.Point(205, 102);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(70, 19);
             this.metroLabel12.TabIndex = 279;
@@ -751,7 +751,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(196, 210);
+            this.metroLabel11.Location = new System.Drawing.Point(207, 193);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(68, 19);
             this.metroLabel11.TabIndex = 278;
@@ -760,7 +760,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(177, 41);
+            this.metroLabel10.Location = new System.Drawing.Point(436, 376);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(89, 19);
             this.metroLabel10.TabIndex = 277;
@@ -769,7 +769,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(486, 338);
+            this.metroLabel9.Location = new System.Drawing.Point(483, 284);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(42, 19);
             this.metroLabel9.TabIndex = 276;
@@ -778,7 +778,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(194, 76);
+            this.metroLabel8.Location = new System.Drawing.Point(203, 55);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(72, 19);
             this.metroLabel8.TabIndex = 275;
@@ -799,7 +799,7 @@
             this.Employee_Pr_Service_Years.CustomButton.UseSelectable = true;
             this.Employee_Pr_Service_Years.CustomButton.Visible = false;
             this.Employee_Pr_Service_Years.Lines = new string[0];
-            this.Employee_Pr_Service_Years.Location = new System.Drawing.Point(24, 341);
+            this.Employee_Pr_Service_Years.Location = new System.Drawing.Point(19, 324);
             this.Employee_Pr_Service_Years.MaxLength = 32767;
             this.Employee_Pr_Service_Years.Name = "Employee_Pr_Service_Years";
             this.Employee_Pr_Service_Years.PasswordChar = '\0';
@@ -830,7 +830,7 @@
             this.Employee_No_Card.CustomButton.UseSelectable = true;
             this.Employee_No_Card.CustomButton.Visible = false;
             this.Employee_No_Card.Lines = new string[0];
-            this.Employee_No_Card.Location = new System.Drawing.Point(24, 206);
+            this.Employee_No_Card.Location = new System.Drawing.Point(19, 191);
             this.Employee_No_Card.MaxLength = 32767;
             this.Employee_No_Card.Name = "Employee_No_Card";
             this.Employee_No_Card.PasswordChar = '\0';
@@ -849,7 +849,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(440, 392);
+            this.metroLabel6.Location = new System.Drawing.Point(429, 326);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(96, 19);
             this.metroLabel6.TabIndex = 273;
@@ -870,7 +870,7 @@
             this.Employee_Scie_Level.CustomButton.UseSelectable = true;
             this.Employee_Scie_Level.CustomButton.Visible = false;
             this.Employee_Scie_Level.Lines = new string[0];
-            this.Employee_Scie_Level.Location = new System.Drawing.Point(308, 388);
+            this.Employee_Scie_Level.Location = new System.Drawing.Point(300, 324);
             this.Employee_Scie_Level.MaxLength = 32767;
             this.Employee_Scie_Level.Name = "Employee_Scie_Level";
             this.Employee_Scie_Level.PasswordChar = '\0';
@@ -900,7 +900,7 @@
             this.Employee_No_File.CustomButton.UseSelectable = true;
             this.Employee_No_File.CustomButton.Visible = false;
             this.Employee_No_File.Lines = new string[0];
-            this.Employee_No_File.Location = new System.Drawing.Point(24, 164);
+            this.Employee_No_File.Location = new System.Drawing.Point(19, 145);
             this.Employee_No_File.MaxLength = 32767;
             this.Employee_No_File.Name = "Employee_No_File";
             this.Employee_No_File.PasswordChar = '\0';
@@ -931,7 +931,7 @@
             this.Employee_No_Affairs.CustomButton.UseSelectable = true;
             this.Employee_No_Affairs.CustomButton.Visible = false;
             this.Employee_No_Affairs.Lines = new string[0];
-            this.Employee_No_Affairs.Location = new System.Drawing.Point(24, 117);
+            this.Employee_No_Affairs.Location = new System.Drawing.Point(19, 100);
             this.Employee_No_Affairs.MaxLength = 32767;
             this.Employee_No_Affairs.Name = "Employee_No_Affairs";
             this.Employee_No_Affairs.PasswordChar = '\0';
@@ -950,7 +950,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(450, 284);
+            this.metroLabel7.Location = new System.Drawing.Point(447, 237);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(78, 19);
             this.metroLabel7.TabIndex = 274;
@@ -971,7 +971,7 @@
             this.Employee_Mobail.CustomButton.UseSelectable = true;
             this.Employee_Mobail.CustomButton.Visible = false;
             this.Employee_Mobail.Lines = new string[0];
-            this.Employee_Mobail.Location = new System.Drawing.Point(308, 334);
+            this.Employee_Mobail.Location = new System.Drawing.Point(300, 282);
             this.Employee_Mobail.MaxLength = 32767;
             this.Employee_Mobail.Name = "Employee_Mobail";
             this.Employee_Mobail.PasswordChar = '\0';
@@ -1002,7 +1002,7 @@
             this.Employee_No_Financial.CustomButton.UseSelectable = true;
             this.Employee_No_Financial.CustomButton.Visible = false;
             this.Employee_No_Financial.Lines = new string[0];
-            this.Employee_No_Financial.Location = new System.Drawing.Point(24, 76);
+            this.Employee_No_Financial.Location = new System.Drawing.Point(22, 53);
             this.Employee_No_Financial.MaxLength = 32767;
             this.Employee_No_Financial.Name = "Employee_No_Financial";
             this.Employee_No_Financial.PasswordChar = '\0';
@@ -1021,7 +1021,7 @@
             // Employee_Brith_Date
             // 
             this.Employee_Brith_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Employee_Brith_Date.Location = new System.Drawing.Point(308, 278);
+            this.Employee_Brith_Date.Location = new System.Drawing.Point(300, 232);
             this.Employee_Brith_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Employee_Brith_Date.Name = "Employee_Brith_Date";
             this.Employee_Brith_Date.RightToLeftLayout = true;
@@ -1043,7 +1043,7 @@
             this.Employee_Scie_Specialization.CustomButton.UseSelectable = true;
             this.Employee_Scie_Specialization.CustomButton.Visible = false;
             this.Employee_Scie_Specialization.Lines = new string[0];
-            this.Employee_Scie_Specialization.Location = new System.Drawing.Point(24, 41);
+            this.Employee_Scie_Specialization.Location = new System.Drawing.Point(300, 374);
             this.Employee_Scie_Specialization.MaxLength = 32767;
             this.Employee_Scie_Specialization.Name = "Employee_Scie_Specialization";
             this.Employee_Scie_Specialization.PasswordChar = '\0';
@@ -1061,7 +1061,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(470, 224);
+            this.metroLabel5.Location = new System.Drawing.Point(472, 193);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(53, 19);
             this.metroLabel5.TabIndex = 272;
@@ -1082,7 +1082,7 @@
             this.Employee_Father_Name.CustomButton.UseSelectable = true;
             this.Employee_Father_Name.CustomButton.Visible = false;
             this.Employee_Father_Name.Lines = new string[0];
-            this.Employee_Father_Name.Location = new System.Drawing.Point(308, 116);
+            this.Employee_Father_Name.Location = new System.Drawing.Point(300, 100);
             this.Employee_Father_Name.MaxLength = 32767;
             this.Employee_Father_Name.Name = "Employee_Father_Name";
             this.Employee_Father_Name.PasswordChar = '\0';
@@ -1112,7 +1112,7 @@
             this.Employee_First_Name.CustomButton.UseSelectable = true;
             this.Employee_First_Name.CustomButton.Visible = false;
             this.Employee_First_Name.Lines = new string[0];
-            this.Employee_First_Name.Location = new System.Drawing.Point(308, 62);
+            this.Employee_First_Name.Location = new System.Drawing.Point(300, 53);
             this.Employee_First_Name.MaxLength = 32767;
             this.Employee_First_Name.Name = "Employee_First_Name";
             this.Employee_First_Name.PasswordChar = '\0';
@@ -1142,7 +1142,7 @@
             this.Employee_Last_Name.CustomButton.UseSelectable = true;
             this.Employee_Last_Name.CustomButton.Visible = false;
             this.Employee_Last_Name.Lines = new string[0];
-            this.Employee_Last_Name.Location = new System.Drawing.Point(308, 169);
+            this.Employee_Last_Name.Location = new System.Drawing.Point(300, 145);
             this.Employee_Last_Name.MaxLength = 32767;
             this.Employee_Last_Name.Name = "Employee_Last_Name";
             this.Employee_Last_Name.PasswordChar = '\0';
@@ -1172,7 +1172,7 @@
             this.Employee_Mother_Name.CustomButton.UseSelectable = true;
             this.Employee_Mother_Name.CustomButton.Visible = false;
             this.Employee_Mother_Name.Lines = new string[0];
-            this.Employee_Mother_Name.Location = new System.Drawing.Point(308, 224);
+            this.Employee_Mother_Name.Location = new System.Drawing.Point(300, 191);
             this.Employee_Mother_Name.MaxLength = 32767;
             this.Employee_Mother_Name.Name = "Employee_Mother_Name";
             this.Employee_Mother_Name.PasswordChar = '\0';
@@ -1190,7 +1190,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(486, 170);
+            this.metroLabel2.Location = new System.Drawing.Point(488, 147);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(37, 19);
             this.metroLabel2.TabIndex = 261;
@@ -1199,7 +1199,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(465, 116);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(467, 102);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(58, 19);
             this.Coin_Exc_Sy.TabIndex = 257;
@@ -1208,7 +1208,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(454, 62);
+            this.metroLabel1.Location = new System.Drawing.Point(456, 55);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(69, 19);
             this.metroLabel1.TabIndex = 259;
@@ -1218,7 +1218,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 622);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(1189, 628);
             this.Controls.Add(this.groupBox_Employee);
             this.Controls.Add(this.groupBox_Contract);
             this.Controls.Add(this.groupBox_Employee_Des);
@@ -1226,9 +1227,12 @@
             this.Controls.Add(this.Employee_delete);
             this.Controls.Add(this.Employee_add);
             this.Controls.Add(this.Employee_new);
+            this.MaximizeBox = false;
             this.Name = "Employee_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "العاملين";
             this.groupBox_Employee_Des.ResumeLayout(false);
             this.groupBox_Employee_Des.PerformLayout();

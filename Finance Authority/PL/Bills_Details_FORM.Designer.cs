@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Bill_Objects_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Bills_exit = new MetroFramework.Controls.MetroButton();
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
@@ -75,37 +75,37 @@
             this.Bill_Objects_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Bill_Objects_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Bill_Objects_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bill_Objects_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bill_Objects_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.Bill_Objects_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Bill_Objects_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Bill_Objects_dataGrid.DefaultCellStyle = dataGridViewCellStyle11;
             this.Bill_Objects_dataGrid.EnableHeadersVisualStyles = false;
             this.Bill_Objects_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Bill_Objects_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Bill_Objects_dataGrid.Location = new System.Drawing.Point(294, 77);
+            this.Bill_Objects_dataGrid.Location = new System.Drawing.Point(304, 77);
             this.Bill_Objects_dataGrid.Name = "Bill_Objects_dataGrid";
             this.Bill_Objects_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bill_Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bill_Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.Bill_Objects_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Bill_Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 434);
@@ -117,7 +117,7 @@
             // Bills_exit
             // 
             this.Bills_exit.Highlight = true;
-            this.Bills_exit.Location = new System.Drawing.Point(882, 540);
+            this.Bills_exit.Location = new System.Drawing.Point(855, 534);
             this.Bills_exit.Name = "Bills_exit";
             this.Bills_exit.Size = new System.Drawing.Size(87, 37);
             this.Bills_exit.TabIndex = 17;
@@ -128,7 +128,7 @@
             // Bills_delete
             // 
             this.Bills_delete.Highlight = true;
-            this.Bills_delete.Location = new System.Drawing.Point(662, 540);
+            this.Bills_delete.Location = new System.Drawing.Point(669, 534);
             this.Bills_delete.Name = "Bills_delete";
             this.Bills_delete.Size = new System.Drawing.Size(87, 37);
             this.Bills_delete.TabIndex = 15;
@@ -139,7 +139,7 @@
             // Bills_update
             // 
             this.Bills_update.Highlight = true;
-            this.Bills_update.Location = new System.Drawing.Point(552, 540);
+            this.Bills_update.Location = new System.Drawing.Point(576, 534);
             this.Bills_update.Name = "Bills_update";
             this.Bills_update.Size = new System.Drawing.Size(87, 37);
             this.Bills_update.TabIndex = 14;
@@ -150,18 +150,18 @@
             // Bills_add
             // 
             this.Bills_add.Highlight = true;
-            this.Bills_add.Location = new System.Drawing.Point(442, 540);
+            this.Bills_add.Location = new System.Drawing.Point(483, 534);
             this.Bills_add.Name = "Bills_add";
             this.Bills_add.Size = new System.Drawing.Size(87, 37);
             this.Bills_add.TabIndex = 13;
-            this.Bills_add.Text = "أضافة";
+            this.Bills_add.Text = "اضافة";
             this.Bills_add.UseSelectable = true;
             this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
             // 
             // Bills_new
             // 
             this.Bills_new.Highlight = true;
-            this.Bills_new.Location = new System.Drawing.Point(332, 540);
+            this.Bills_new.Location = new System.Drawing.Point(390, 534);
             this.Bills_new.Name = "Bills_new";
             this.Bills_new.Size = new System.Drawing.Size(87, 37);
             this.Bills_new.TabIndex = 12;
@@ -183,9 +183,9 @@
             this.groupBox1.Controls.Add(this.Bills_Not);
             this.groupBox1.Controls.Add(this.Bills_Paid);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(43, 321);
+            this.groupBox1.Location = new System.Drawing.Point(29, 321);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 55);
+            this.groupBox1.Size = new System.Drawing.Size(259, 55);
             this.groupBox1.TabIndex = 199;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "حالة الفاتورة:";
@@ -216,7 +216,7 @@
             // 
             this.Bills_Comb_Budget.FormattingEnabled = true;
             this.Bills_Comb_Budget.ItemHeight = 23;
-            this.Bills_Comb_Budget.Location = new System.Drawing.Point(148, 421);
+            this.Bills_Comb_Budget.Location = new System.Drawing.Point(148, 422);
             this.Bills_Comb_Budget.Name = "Bills_Comb_Budget";
             this.Bills_Comb_Budget.Size = new System.Drawing.Size(140, 29);
             this.Bills_Comb_Budget.TabIndex = 10;
@@ -226,7 +226,7 @@
             // 
             this.Bills_Comb_Department.FormattingEnabled = true;
             this.Bills_Comb_Department.ItemHeight = 23;
-            this.Bills_Comb_Department.Location = new System.Drawing.Point(148, 461);
+            this.Bills_Comb_Department.Location = new System.Drawing.Point(148, 459);
             this.Bills_Comb_Department.Name = "Bills_Comb_Department";
             this.Bills_Comb_Department.Size = new System.Drawing.Size(140, 29);
             this.Bills_Comb_Department.TabIndex = 11;
@@ -235,7 +235,7 @@
             // Bills_Details_Print
             // 
             this.Bills_Details_Print.Highlight = true;
-            this.Bills_Details_Print.Location = new System.Drawing.Point(772, 540);
+            this.Bills_Details_Print.Location = new System.Drawing.Point(762, 534);
             this.Bills_Details_Print.Name = "Bills_Details_Print";
             this.Bills_Details_Print.Size = new System.Drawing.Size(87, 37);
             this.Bills_Details_Print.TabIndex = 16;
@@ -291,7 +291,7 @@
             this.Bills_Buyer_Name.CustomButton.Visible = false;
             this.Bills_Buyer_Name.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Bills_Buyer_Name.Lines = new string[0];
-            this.Bills_Buyer_Name.Location = new System.Drawing.Point(145, 111);
+            this.Bills_Buyer_Name.Location = new System.Drawing.Point(145, 110);
             this.Bills_Buyer_Name.MaxLength = 32767;
             this.Bills_Buyer_Name.Name = "Bills_Buyer_Name";
             this.Bills_Buyer_Name.PasswordChar = '\0';
@@ -322,7 +322,7 @@
             this.Bills_Exchange_rate.CustomButton.Visible = false;
             this.Bills_Exchange_rate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Bills_Exchange_rate.Lines = new string[0];
-            this.Bills_Exchange_rate.Location = new System.Drawing.Point(145, 179);
+            this.Bills_Exchange_rate.Location = new System.Drawing.Point(145, 182);
             this.Bills_Exchange_rate.MaxLength = 32767;
             this.Bills_Exchange_rate.Name = "Bills_Exchange_rate";
             this.Bills_Exchange_rate.PasswordChar = '\0';
@@ -354,7 +354,7 @@
             this.Bill_Type.CustomButton.Visible = false;
             this.Bill_Type.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Bill_Type.Lines = new string[0];
-            this.Bill_Type.Location = new System.Drawing.Point(145, 213);
+            this.Bill_Type.Location = new System.Drawing.Point(145, 215);
             this.Bill_Type.MaxLength = 32767;
             this.Bill_Type.Name = "Bill_Type";
             this.Bill_Type.PasswordChar = '\0';
@@ -386,7 +386,7 @@
             this.Bill_Total.CustomButton.Visible = false;
             this.Bill_Total.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Bill_Total.Lines = new string[0];
-            this.Bill_Total.Location = new System.Drawing.Point(145, 247);
+            this.Bill_Total.Location = new System.Drawing.Point(145, 248);
             this.Bill_Total.MaxLength = 32767;
             this.Bill_Total.Name = "Bill_Total";
             this.Bill_Total.PasswordChar = '\0';
@@ -437,7 +437,7 @@
             // Bills_Details_Namber
             // 
             this.Bills_Details_Namber.AutoSize = true;
-            this.Bills_Details_Namber.Location = new System.Drawing.Point(32, 75);
+            this.Bills_Details_Namber.Location = new System.Drawing.Point(29, 79);
             this.Bills_Details_Namber.Name = "Bills_Details_Namber";
             this.Bills_Details_Namber.Size = new System.Drawing.Size(67, 19);
             this.Bills_Details_Namber.TabIndex = 211;
@@ -446,7 +446,7 @@
             // Bills_Details_Name
             // 
             this.Bills_Details_Name.AutoSize = true;
-            this.Bills_Details_Name.Location = new System.Drawing.Point(32, 109);
+            this.Bills_Details_Name.Location = new System.Drawing.Point(29, 113);
             this.Bills_Details_Name.Name = "Bills_Details_Name";
             this.Bills_Details_Name.Size = new System.Drawing.Size(60, 19);
             this.Bills_Details_Name.TabIndex = 212;
@@ -455,7 +455,7 @@
             // Bills_Details_Type_coin
             // 
             this.Bills_Details_Type_coin.AutoSize = true;
-            this.Bills_Details_Type_coin.Location = new System.Drawing.Point(32, 147);
+            this.Bills_Details_Type_coin.Location = new System.Drawing.Point(29, 148);
             this.Bills_Details_Type_coin.Name = "Bills_Details_Type_coin";
             this.Bills_Details_Type_coin.Size = new System.Drawing.Size(63, 19);
             this.Bills_Details_Type_coin.TabIndex = 213;
@@ -464,7 +464,7 @@
             // Bills_Details_Rate
             // 
             this.Bills_Details_Rate.AutoSize = true;
-            this.Bills_Details_Rate.Location = new System.Drawing.Point(32, 184);
+            this.Bills_Details_Rate.Location = new System.Drawing.Point(29, 183);
             this.Bills_Details_Rate.Name = "Bills_Details_Rate";
             this.Bills_Details_Rate.Size = new System.Drawing.Size(76, 19);
             this.Bills_Details_Rate.TabIndex = 214;
@@ -473,7 +473,7 @@
             // Bills_Details_Type_Bill
             // 
             this.Bills_Details_Type_Bill.AutoSize = true;
-            this.Bills_Details_Type_Bill.Location = new System.Drawing.Point(32, 218);
+            this.Bills_Details_Type_Bill.Location = new System.Drawing.Point(29, 218);
             this.Bills_Details_Type_Bill.Name = "Bills_Details_Type_Bill";
             this.Bills_Details_Type_Bill.Size = new System.Drawing.Size(67, 19);
             this.Bills_Details_Type_Bill.TabIndex = 215;
@@ -482,7 +482,7 @@
             // Bills_Details_Total
             // 
             this.Bills_Details_Total.AutoSize = true;
-            this.Bills_Details_Total.Location = new System.Drawing.Point(32, 249);
+            this.Bills_Details_Total.Location = new System.Drawing.Point(29, 253);
             this.Bills_Details_Total.Name = "Bills_Details_Total";
             this.Bills_Details_Total.Size = new System.Drawing.Size(113, 19);
             this.Bills_Details_Total.TabIndex = 216;
@@ -491,7 +491,7 @@
             // Bills_Details_Date
             // 
             this.Bills_Details_Date.AutoSize = true;
-            this.Bills_Details_Date.Location = new System.Drawing.Point(32, 289);
+            this.Bills_Details_Date.Location = new System.Drawing.Point(29, 288);
             this.Bills_Details_Date.Name = "Bills_Details_Date";
             this.Bills_Details_Date.Size = new System.Drawing.Size(41, 19);
             this.Bills_Details_Date.TabIndex = 217;
@@ -500,16 +500,16 @@
             // Bills_Details_Name_Department
             // 
             this.Bills_Details_Name_Department.AutoSize = true;
-            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(32, 465);
+            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(29, 464);
             this.Bills_Details_Name_Department.Name = "Bills_Details_Name_Department";
             this.Bills_Details_Name_Department.Size = new System.Drawing.Size(68, 19);
             this.Bills_Details_Name_Department.TabIndex = 218;
-            this.Bills_Details_Name_Department.Text = "أسم القسم";
+            this.Bills_Details_Name_Department.Text = "اسم القسم";
             // 
             // Bills_Details_Note
             // 
             this.Bills_Details_Note.AutoSize = true;
-            this.Bills_Details_Note.Location = new System.Drawing.Point(32, 389);
+            this.Bills_Details_Note.Location = new System.Drawing.Point(29, 389);
             this.Bills_Details_Note.Name = "Bills_Details_Note";
             this.Bills_Details_Note.Size = new System.Drawing.Size(66, 19);
             this.Bills_Details_Note.TabIndex = 219;
@@ -518,7 +518,7 @@
             // Bills_Details_Date_Budget
             // 
             this.Bills_Details_Date_Budget.AutoSize = true;
-            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(32, 431);
+            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(29, 427);
             this.Bills_Details_Date_Budget.Name = "Bills_Details_Date_Budget";
             this.Bills_Details_Date_Budget.Size = new System.Drawing.Size(78, 19);
             this.Bills_Details_Date_Budget.TabIndex = 220;
@@ -541,7 +541,7 @@
             // 
             this.Bills_Brows_Docs.Enabled = false;
             this.Bills_Brows_Docs.Highlight = true;
-            this.Bills_Brows_Docs.Location = new System.Drawing.Point(114, 516);
+            this.Bills_Brows_Docs.Location = new System.Drawing.Point(139, 534);
             this.Bills_Brows_Docs.Name = "Bills_Brows_Docs";
             this.Bills_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Bills_Brows_Docs.TabIndex = 223;
@@ -589,6 +589,7 @@
             this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "تفاصيل الفاتورة";
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);

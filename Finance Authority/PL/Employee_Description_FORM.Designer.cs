@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Description_FORM));
             this.Employee_Description_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Description_exit = new MetroFramework.Controls.MetroButton();
@@ -56,48 +56,48 @@
             this.Employee_Description_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_Description_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_Description_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Employee_Description_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.Employee_Description_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Description_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Description_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Employee_Description_dataGrid.Location = new System.Drawing.Point(23, 87);
+            this.Employee_Description_dataGrid.Location = new System.Drawing.Point(14, 126);
             this.Employee_Description_dataGrid.Name = "Employee_Description_dataGrid";
             this.Employee_Description_dataGrid.ReadOnly = true;
             this.Employee_Description_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Employee_Description_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Description_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(1096, 399);
+            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(818, 399);
             this.Employee_Description_dataGrid.TabIndex = 153;
             this.Employee_Description_dataGrid.Click += new System.EventHandler(this.Employee_Description_dataGrid_Click);
             // 
             // Employee_Description_exit
             // 
             this.Employee_Description_exit.Highlight = true;
-            this.Employee_Description_exit.Location = new System.Drawing.Point(733, 492);
+            this.Employee_Description_exit.Location = new System.Drawing.Point(606, 540);
             this.Employee_Description_exit.Name = "Employee_Description_exit";
             this.Employee_Description_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_exit.TabIndex = 14;
@@ -109,7 +109,7 @@
             // 
             this.Employee_Description_delete.Enabled = false;
             this.Employee_Description_delete.Highlight = true;
-            this.Employee_Description_delete.Location = new System.Drawing.Point(517, 492);
+            this.Employee_Description_delete.Location = new System.Drawing.Point(420, 539);
             this.Employee_Description_delete.Name = "Employee_Description_delete";
             this.Employee_Description_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_delete.TabIndex = 12;
@@ -121,7 +121,7 @@
             // 
             this.Employee_Description_Comb_Search.FormattingEnabled = true;
             this.Employee_Description_Comb_Search.ItemHeight = 23;
-            this.Employee_Description_Comb_Search.Location = new System.Drawing.Point(569, 46);
+            this.Employee_Description_Comb_Search.Location = new System.Drawing.Point(523, 84);
             this.Employee_Description_Comb_Search.Name = "Employee_Description_Comb_Search";
             this.Employee_Description_Comb_Search.Size = new System.Drawing.Size(188, 29);
             this.Employee_Description_Comb_Search.TabIndex = 15;
@@ -143,7 +143,7 @@
             this.Employee_Description_Search_all.CustomButton.UseSelectable = true;
             this.Employee_Description_Search_all.CustomButton.Visible = false;
             this.Employee_Description_Search_all.Lines = new string[0];
-            this.Employee_Description_Search_all.Location = new System.Drawing.Point(882, 52);
+            this.Employee_Description_Search_all.Location = new System.Drawing.Point(212, 87);
             this.Employee_Description_Search_all.MaxLength = 32767;
             this.Employee_Description_Search_all.Name = "Employee_Description_Search_all";
             this.Employee_Description_Search_all.PasswordChar = '\0';
@@ -162,7 +162,7 @@
             // Employee_Description_Print
             // 
             this.Employee_Description_Print.Highlight = true;
-            this.Employee_Description_Print.Location = new System.Drawing.Point(625, 492);
+            this.Employee_Description_Print.Location = new System.Drawing.Point(513, 539);
             this.Employee_Description_Print.Name = "Employee_Description_Print";
             this.Employee_Description_Print.Size = new System.Drawing.Size(87, 38);
             this.Employee_Description_Print.TabIndex = 13;
@@ -173,7 +173,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(820, 52);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(140, 89);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(56, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
@@ -182,17 +182,17 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(455, 50);
+            this.metroLabel1.Location = new System.Drawing.Point(432, 89);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(114, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(85, 19);
             this.metroLabel1.TabIndex = 224;
-            this.metroLabel1.Text = "بحث حسب المكتب";
+            this.metroLabel1.Text = "حسب المكتب";
             // 
             // update
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(1075, 46);
+            this.update.Location = new System.Drawing.Point(738, 82);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 293;
@@ -202,7 +202,7 @@
             // 
             this.Employee_Description_Details.Enabled = false;
             this.Employee_Description_Details.Highlight = true;
-            this.Employee_Description_Details.Location = new System.Drawing.Point(301, 494);
+            this.Employee_Description_Details.Location = new System.Drawing.Point(234, 541);
             this.Employee_Description_Details.Name = "Employee_Description_Details";
             this.Employee_Description_Details.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_Details.TabIndex = 294;
@@ -213,7 +213,7 @@
             // Employee_Description_view_all
             // 
             this.Employee_Description_view_all.Highlight = true;
-            this.Employee_Description_view_all.Location = new System.Drawing.Point(409, 493);
+            this.Employee_Description_view_all.Location = new System.Drawing.Point(327, 540);
             this.Employee_Description_view_all.Name = "Employee_Description_view_all";
             this.Employee_Description_view_all.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_view_all.TabIndex = 295;
@@ -225,7 +225,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 548);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(845, 594);
             this.Controls.Add(this.Employee_Description_view_all);
             this.Controls.Add(this.Employee_Description_Details);
             this.Controls.Add(this.update);
@@ -237,9 +238,12 @@
             this.Controls.Add(this.Employee_Description_dataGrid);
             this.Controls.Add(this.Employee_Description_exit);
             this.Controls.Add(this.Employee_Description_delete);
+            this.MaximizeBox = false;
             this.Name = "Employee_Description_FORM";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "الوصف الوظيفي للعاملين";
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Description_dataGrid)).EndInit();
             this.ResumeLayout(false);

@@ -16,14 +16,14 @@ namespace Finance_Authority.REPT {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Crystal_Bill : ReportClass {
+    public class Crystal_Bills : ReportClass {
         
-        public Crystal_Bill() {
+        public Crystal_Bills() {
         }
         
         public override string ResourceName {
             get {
-                return "Crystal_Bill.rpt";
+                return "Crystal_Bills.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Finance_Authority.REPT {
         
         public override string FullResourceName {
             get {
-                return "Finance_Authority.REPT.Crystal_Bill.rpt";
+                return "Finance_Authority.REPT.Crystal_Bills.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Finance_Authority.REPT {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystal_Bill : Component, ICachedReport {
+    public class CachedCrystal_Bills : Component, ICachedReport {
         
-        public CachedCrystal_Bill() {
+        public CachedCrystal_Bills() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Finance_Authority.REPT {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Crystal_Bill rpt = new Crystal_Bill();
+            Crystal_Bills rpt = new Crystal_Bills();
             rpt.Site = this.Site;
             return rpt;
         }

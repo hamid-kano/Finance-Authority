@@ -87,7 +87,7 @@ namespace Finance_Authority.PL
             DT_REPORT.Columns.Add("الموظف", typeof(string));
             foreach (DataGridViewRow dgv in Employee_Description_dataGrid.Rows)
             {
-                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, Convert.ToDateTime(dgv.Cells[3].Value).ToShortDateString()
+                DT_REPORT.Rows.Add(dgv.Cells[1].Value,(bool)dgv.Cells[2].Value?"حالياً":"سابقاً", Convert.ToDateTime(dgv.Cells[3].Value).ToShortDateString()
                    , dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value,
                    dgv.Cells[8].Value , dgv.Cells[9].Value, 
                    dgv.Cells[11].Value);
@@ -125,6 +125,13 @@ namespace Finance_Authority.PL
         private void Employee_Description_view_all_Click(object sender, EventArgs e)
         {
             this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View();
+            Employee_Description_dataGrid.Columns[0].Visible = false;
+            Employee_Description_dataGrid.Columns[10].Visible = false;
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View_Spical_three();
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[10].Visible = false;
         }

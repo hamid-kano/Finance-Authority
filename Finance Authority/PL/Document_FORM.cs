@@ -21,12 +21,20 @@ namespace Finance_Authority.PL
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
-            this.Document_Gridview.DataSource = Doc.Document_View_By_Type_Id_Doc(Document_Type, Doc_id);
-            this.Document_Gridview.Columns[0].Visible = false;
-            this.Document_Gridview.Columns[7].Visible = false;
-            _Doc_id = Doc_id;
-            _Document_Type = Document_Type;
-            this.Document_Type.Text = _Document_Type;
+            if (Doc_id==-1)
+            {
+                this.Document_Gridview.DataSource = Doc.Document_View();
+                Document_new.Enabled = false;
+            }
+            else
+            {
+                this.Document_Gridview.DataSource = Doc.Document_View_By_Type_Id_Doc(Document_Type, Doc_id);
+            }
+                this.Document_Gridview.Columns[0].Visible = false;
+                this.Document_Gridview.Columns[7].Visible = false;
+                _Doc_id = Doc_id;
+                _Document_Type = Document_Type;
+                this.Document_Type.Text = _Document_Type;
         }
 
         private void Document_exit_Click(object sender, EventArgs e)

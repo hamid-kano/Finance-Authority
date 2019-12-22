@@ -52,6 +52,17 @@ namespace Finance_Authority.PL
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(Bills_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;
+                // امر الصرف و رقم السند في حال كانت الفاتورة مدفوعة
+                if (Bills_Paid.Checked)
+                {
+                    int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
+                    if (Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows.Count!=0)
+                    {
+                        Payment_Document_no.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][4].ToString();
+                        Payment_Document_No_Order.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][5].ToString();
+                    }
+                }
+                //
                 Bills_Brows_Docs.Enabled = true;
                 Bills_update.Enabled = true;
 
@@ -72,6 +83,8 @@ namespace Finance_Authority.PL
         {
             Bills_add.Enabled = true;
             Bills_Brows_Docs.Enabled = false;
+            Bills_update.Enabled = false;
+            Bills_delete.Enabled = false;
             Bills_Buyer_Name.Text = "";
             Bills_Coin_Type.Text = "";
             Bills_Exchange_rate.Text = "";
@@ -79,6 +92,8 @@ namespace Finance_Authority.PL
             Bill_Total.Text = "";
             Bills_Notes.Text = "";
             Bills_NO_Bill.Text = "";
+            Payment_Document_no.Text ="";
+            Payment_Document_No_Order.Text = "";
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(-1);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;
@@ -89,16 +104,7 @@ namespace Finance_Authority.PL
             this.Close();
         }
 
-        private void Bills_dataGrid_Click(object sender, EventArgs e)
-        {
-            if (Bill_Objects_dataGrid.CurrentRow != null)
-            {
-                Bills_update.Enabled = false;
-                Bills_delete.Enabled = false;
-                Bills_add.Enabled = true;
-            }
-        }
-
+       
         private void Bills_add_Click(object sender, EventArgs e)
         {
             if (Bills_NO_Bill.Text=="")
@@ -170,6 +176,8 @@ namespace Finance_Authority.PL
             }
             Bills_add.Enabled = false;
             Bills_Brows_Docs.Enabled = false;
+            Bills_update.Enabled = false;
+            Bills_delete.Enabled = false;
             Bills_Buyer_Name.Text = "";
             Bills_Coin_Type.Text = "";
             Bills_Exchange_rate.Text = "";
@@ -177,11 +185,13 @@ namespace Finance_Authority.PL
             Bill_Total.Text = "";
             Bills_Notes.Text = "";
             Bills_NO_Bill.Text = "";
+            Payment_Document_no.Text = "";
+            Payment_Document_No_Order.Text = "";
         }
 
         private void Bills_update_Click(object sender, EventArgs e)
         {
-            if (!(Bill_Objects_dataGrid.Rows.Count-1 > 1))
+            if (!(Bill_Objects_dataGrid.Rows.Count-1 >0))
             {
                 MessageBox.Show("لا يمكنك حذف جميع مواد الفاتورة وتعديلها", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -227,7 +237,7 @@ namespace Finance_Authority.PL
             }
             Bills_FORM frm = Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
-
+            // لم تكن مدفوعة واصبحت مدفوعة
             if (!StatePaied && Bills_Paid.Checked) // توليد سند دفع للفاتورة في حال اصبحت مدفوعة
             {
                 Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
@@ -239,11 +249,12 @@ namespace Finance_Authority.PL
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
                 //
             }
+            // مدفوعة وبقيت مدفوعة
             else if(StatePaied && Bills_Paid.Checked)  // تعديل قيمة سند الدفع للفاتورة
             {
                 int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-                double PrivSy =Convert.ToDouble(Pay.Payment_Document_Search(Payement_id_for_this_Bill.ToString()).Rows[0][1]);
-                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search(Payement_id_for_this_Bill.ToString()).Rows[0][2]);
+                double PrivSy =Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1]);
+                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2]);
                 // تحديث الميزانية بعد تعديل سند الدفع
                 double Sy_After_Updat = Convert.ToDouble(PrivSy - Convert.ToDouble(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text));
                 double Dollar_After_Updat = Convert.ToDouble(PrivDo - Convert.ToDouble(Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text));
@@ -251,7 +262,20 @@ namespace Finance_Authority.PL
                 ///
                 Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                      Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
-                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005, Payement_id_for_this_Bill);
+                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005, Payement_id_for_this_Bill);
+            }
+            // مدفوعة واصبحت غير مدفوعة
+            else if (StatePaied && !Bills_Paid.Checked)
+            {
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows.Count!=0)
+                {
+                    int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
+                    // تحديث الميزانية
+                    Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
+                    //
+                    Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                }
             }
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
@@ -265,8 +289,13 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف تفاصيل الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Bill.Bills_Details_Delete(_Bill_ID);
+                // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
                 int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
+                //
                 Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;
@@ -287,6 +316,8 @@ namespace Finance_Authority.PL
                 Bill_Total.Text = "";
                 Bills_Notes.Text = "";
                 Bills_NO_Bill.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
             }
         }
 
@@ -314,12 +345,7 @@ namespace Finance_Authority.PL
         {
             e.Handled = Program.DenyChar(e);
         }
-
-        private void Bill_Type_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = Program.DenyChar(e);
-        }
-
+  
         private void Bill_Total_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
@@ -373,12 +399,24 @@ namespace Finance_Authority.PL
                 double cellQty = Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value is DBNull ? 1 : Convert.ToDouble(Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value);
                 Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[4].Value = cellQty * cellPrice;
             }
-            if (e.ColumnIndex == 3)
+            //if (e.ColumnIndex == 3)
+            //{
+            //    for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
+            //    {
+            //        Bill_Total.Text = (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp + Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
+            //    }
+            //}
+            try
             {
-                for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
-                {
-                    Bill_Total.Text = (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp + Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
-                }
+                double total = Bill_Objects_dataGrid.Rows.Cast<DataGridViewRow>().Sum(t => double.TryParse(t.Cells[3].Value.ToString(), out double temp1) ? 0 : temp1) +
+                                                                                     (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp);
+                Bill_Total.Text = total.ToString();
+
+            }
+            catch (Exception)
+            {
+
+               // throw;
             }
         }
 

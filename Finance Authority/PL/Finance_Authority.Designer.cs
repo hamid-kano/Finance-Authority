@@ -35,6 +35,9 @@
             this.Authority_Button = new MetroFramework.Controls.MetroTile();
             this.Department_Button = new MetroFramework.Controls.MetroTile();
             this.Office_Button = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.Loans_Button = new MetroFramework.Controls.MetroTile();
+            this.Leoan_Payments_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.Budget_Now = new MetroFramework.Controls.MetroTile();
             this.EX_Order_Button = new MetroFramework.Controls.MetroTile();
@@ -47,9 +50,6 @@
             this.Reciver_Document_Button = new MetroFramework.Controls.MetroTile();
             this.Payment_Document_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.Loans_Button = new MetroFramework.Controls.MetroTile();
-            this.Leoan_Payments_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
             this.Backup_Button = new MetroFramework.Controls.MetroTile();
             this.Backup_Restor_Button = new MetroFramework.Controls.MetroTile();
@@ -96,9 +96,9 @@
             this.update_budget = new System.Windows.Forms.Timer(this.components);
             this.Tab_Main.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            this.metroTabPage5.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
-            this.metroTabPage5.SuspendLayout();
             this.metroTabPage8.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -115,10 +115,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
+            this.Tab_Main.Controls.Add(this.metroTabPage7);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
             this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage3);
-            this.Tab_Main.Controls.Add(this.metroTabPage7);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
             this.Tab_Main.Controls.Add(this.metroTabPage6);
             this.Tab_Main.Controls.Add(this.metroTabPage2);
@@ -194,6 +194,53 @@
             this.Office_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.Office_Button.UseSelectable = true;
             this.Office_Button.Click += new System.EventHandler(this.Office_Button_Click);
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.Loans_Button);
+            this.metroTabPage5.Controls.Add(this.Leoan_Payments_Button);
+            this.metroTabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 15;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(1097, 83);
+            this.metroTabPage5.TabIndex = 8;
+            this.metroTabPage5.Text = "القروض";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 12;
+            // 
+            // Loans_Button
+            // 
+            this.Loans_Button.ActiveControl = null;
+            this.Loans_Button.Location = new System.Drawing.Point(894, 19);
+            this.Loans_Button.Name = "Loans_Button";
+            this.Loans_Button.Size = new System.Drawing.Size(176, 49);
+            this.Loans_Button.TabIndex = 4;
+            this.Loans_Button.Text = "طلب قرض";
+            this.Loans_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Loans_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Loans_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Loans_Button.UseSelectable = true;
+            this.Loans_Button.Click += new System.EventHandler(this.Loans_Button_Click);
+            // 
+            // Leoan_Payments_Button
+            // 
+            this.Leoan_Payments_Button.ActiveControl = null;
+            this.Leoan_Payments_Button.Enabled = false;
+            this.Leoan_Payments_Button.Location = new System.Drawing.Point(733, 19);
+            this.Leoan_Payments_Button.Name = "Leoan_Payments_Button";
+            this.Leoan_Payments_Button.Size = new System.Drawing.Size(155, 49);
+            this.Leoan_Payments_Button.TabIndex = 5;
+            this.Leoan_Payments_Button.Text = "دفعات قرض";
+            this.Leoan_Payments_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Leoan_Payments_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Leoan_Payments_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Leoan_Payments_Button.UseSelectable = true;
+            this.Leoan_Payments_Button.Click += new System.EventHandler(this.Leoan_Payments_Button_Click);
             // 
             // metroTabPage4
             // 
@@ -377,53 +424,6 @@
             this.metroTabPage7.VerticalScrollbarBarColor = true;
             this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage7.VerticalScrollbarSize = 12;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.Controls.Add(this.Loans_Button);
-            this.metroTabPage5.Controls.Add(this.Leoan_Payments_Button);
-            this.metroTabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 15;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 47);
-            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1097, 83);
-            this.metroTabPage5.TabIndex = 8;
-            this.metroTabPage5.Text = "القروض";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 12;
-            // 
-            // Loans_Button
-            // 
-            this.Loans_Button.ActiveControl = null;
-            this.Loans_Button.Location = new System.Drawing.Point(894, 19);
-            this.Loans_Button.Name = "Loans_Button";
-            this.Loans_Button.Size = new System.Drawing.Size(176, 49);
-            this.Loans_Button.TabIndex = 4;
-            this.Loans_Button.Text = "طلب قرض";
-            this.Loans_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Loans_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Loans_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Loans_Button.UseSelectable = true;
-            this.Loans_Button.Click += new System.EventHandler(this.Loans_Button_Click);
-            // 
-            // Leoan_Payments_Button
-            // 
-            this.Leoan_Payments_Button.ActiveControl = null;
-            this.Leoan_Payments_Button.Enabled = false;
-            this.Leoan_Payments_Button.Location = new System.Drawing.Point(733, 19);
-            this.Leoan_Payments_Button.Name = "Leoan_Payments_Button";
-            this.Leoan_Payments_Button.Size = new System.Drawing.Size(155, 49);
-            this.Leoan_Payments_Button.TabIndex = 5;
-            this.Leoan_Payments_Button.Text = "دفعات قرض";
-            this.Leoan_Payments_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Leoan_Payments_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Leoan_Payments_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Leoan_Payments_Button.UseSelectable = true;
-            this.Leoan_Payments_Button.Click += new System.EventHandler(this.Leoan_Payments_Button_Click);
             // 
             // metroTabPage8
             // 
@@ -1069,11 +1069,12 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "هيئة المالية";
+            this.Load += new System.EventHandler(this.Finance_Authority_Load);
             this.Tab_Main.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage5.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage5.ResumeLayout(false);
             this.metroTabPage8.ResumeLayout(false);
             this.metroTabPage6.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);

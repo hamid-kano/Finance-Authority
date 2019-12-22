@@ -310,5 +310,10 @@ namespace Finance_Authority.PL
             Budget_Now_FORM FRM = new Budget_Now_FORM();
             FRM.ShowDialog();
         }
+
+        private void Finance_Authority_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

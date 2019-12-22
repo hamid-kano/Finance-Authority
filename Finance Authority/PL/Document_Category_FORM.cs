@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Document_Category_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Document_Category Doc = new BL.CLS_Document_Category();
+        string tempName = "";
         public Document_Category_FORM()
         {
             InitializeComponent();
@@ -92,6 +93,7 @@ namespace Finance_Authority.PL
             {
                 Program.Category_id_id = Convert.ToInt32(this.Document_Category_Gridview.CurrentRow.Cells[0].Value.ToString());
                 Document_Category_Name.Text = this.Document_Category_Gridview.CurrentRow.Cells[1].Value.ToString();
+                tempName= this.Document_Category_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Document_Category_update.Enabled = true;
                 Document_Category_delete.Enabled = true;
                 Document_Category_add.Enabled = false;
@@ -100,7 +102,11 @@ namespace Finance_Authority.PL
 
         private void Document_Category_delete_Click(object sender, EventArgs e)
         {
-
+            if (tempName=="فاتورة" || tempName == "دفعة قرض" || tempName == "رواتب")
+            {
+                Program.Special_Message("لايمكن حذف هذا الصنف");
+                return;
+            }
             if (MessageBox.Show("هل تريد حذف صفة السند .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Doc.Document_Category_Delete(Program.Category_id_id);

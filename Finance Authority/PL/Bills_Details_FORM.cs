@@ -17,6 +17,8 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
         BL.CLS_Budget budget = new BL.CLS_Budget();
+        BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
         int _Bill_ID=-1; // update Status ;
         bool StatePaied;
         public Bills_Details_FORM(int Bills_ID)
@@ -144,11 +146,11 @@ namespace Finance_Authority.PL
 
             if (Bills_Paid.Checked)
             {
-                if (MessageBox.Show("هل تريد اضافة سند دفع لهذه الفاتورة بما أن قيمتها مدفوعة ؟؟","سند دفع",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
-                {
-                    Payment_Document_FORM FRM = new Payment_Document_FORM();
-                    FRM.ShowDialog();
-                } 
+               Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
+                    Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                   Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
+               ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), true);
+               Program.Special_Message("تم توليد سند دفع تلقائي لهذه الفاتورة"); 
             }
             Bills_add.Enabled = false;
             Bills_Brows_Docs.Enabled = false;
@@ -180,13 +182,20 @@ namespace Finance_Authority.PL
             Bills_FORM frm = Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
-            if (!StatePaied && Bills_Paid.Checked)
+            if (!StatePaied && Bills_Paid.Checked) // توليد سند دفع للفاتورة في حال اصبحت مدفوعة
             {
-                if (MessageBox.Show("هل تريد اضافة سند دفع لهذه الفاتورة بما أن قيمتها اصبحت مدفوعة ؟؟", "سند دفع", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    Payment_Document_FORM FRM = new Payment_Document_FORM();
-                    FRM.ShowDialog();
-                }
+                Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
+                     Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, true);
+                Program.Special_Message("بما انها اصبحت مدفوعة , تم توليد سند دفع تلقائي لهذه الفاتورة");
+            }
+            else   // تعديل قيمة سند الدفع للفاتورة
+            {
+                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID,true).Rows[0][0]);
+                Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
+                     Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005, Payement_id_for_this_Bill);
             }
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;

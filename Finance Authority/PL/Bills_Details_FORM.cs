@@ -399,19 +399,14 @@ namespace Finance_Authority.PL
                 double cellQty = Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value is DBNull ? 1 : Convert.ToDouble(Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[3].Value);
                 Bill_Objects_dataGrid.Rows[e.RowIndex].Cells[4].Value = cellQty * cellPrice;
             }
-            //if (e.ColumnIndex == 3)
-            //{
-            //    for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; i++)
-            //    {
-            //        Bill_Total.Text = (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp + Convert.ToDouble(Bill_Objects_dataGrid.Rows[i].Cells[4].Value)).ToString();
-            //    }
-            //}
             try
             {
-                double total = Bill_Objects_dataGrid.Rows.Cast<DataGridViewRow>().Sum(t => double.TryParse(t.Cells[3].Value.ToString(), out double temp1) ? 0 : temp1) +
-                                                                                     (double.TryParse(Bill_Total.Text, out double temp) ? 0 : temp);
-                Bill_Total.Text = total.ToString();
-
+                double sum = 0;
+                for (int i = 0; i < Bill_Objects_dataGrid.Rows.Count; ++i)
+                {
+                     sum += Convert.ToInt32(Bill_Objects_dataGrid.Rows[i].Cells[4].Value);
+                }
+                Bill_Total.Text = sum.ToString();
             }
             catch (Exception)
             {

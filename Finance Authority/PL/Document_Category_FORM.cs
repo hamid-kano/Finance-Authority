@@ -51,7 +51,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("اسم الصنف موجود مسبقاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 return;
             }

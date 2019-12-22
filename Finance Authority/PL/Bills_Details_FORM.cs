@@ -122,6 +122,19 @@ namespace Finance_Authority.PL
                 MessageBox.Show("لا يمكنك اضافة فاتورة دون مواد","تنبيه",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+            if (Bills_Paid.Checked)
+            {
+                if (Payment_Document_no.Text == "")
+                {
+                    MessageBox.Show("يجب ادخال رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if(Payment_Document_No_Order.Text == "")
+                {
+                    MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
             _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
@@ -144,13 +157,16 @@ namespace Finance_Authority.PL
             }
             Program.Add_Message();
 
-            if (Bills_Paid.Checked)
+            if (Bills_Paid.Checked)  //اضافة سند دفع لهذه الفاتورة
             {
                Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
-                    Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                    Bills_Exchange_rate.Text,Payment_Document_no.Text,Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), true);
-               Program.Special_Message("تم توليد سند دفع تلقائي لهذه الفاتورة"); 
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
+                                                                        Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
+                //
             }
             Bills_add.Enabled = false;
             Bills_Brows_Docs.Enabled = false;
@@ -170,6 +186,36 @@ namespace Finance_Authority.PL
                 MessageBox.Show("لا يمكنك حذف جميع مواد الفاتورة وتعديلها", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (Bills_NO_Bill.Text == "")
+            {
+                Program.Special_Message("يجب اضافة رقم الفاتورة"); return;
+            }
+            if (Bills_Buyer_Name.Text == "")
+            {
+                Program.Special_Message("يجب اضافة اسم البائع"); return;
+            }
+            if (Bills_Coin_Type.Text == "")
+            {
+                Program.Special_Message("يجب اختيار نوع العملة"); return;
+            }
+            if (Bills_Coin_Type.Text == "دولار" && Bills_Exchange_rate.Text == "")
+            {
+                Program.Special_Message("يجب اضافة قيمة التحويل"); return;
+            }
+            if (Bills_Paid.Checked)
+            {
+                if (Payment_Document_no.Text == "")
+                {
+                    MessageBox.Show("يجب ادخال رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (Payment_Document_No_Order.Text == "")
+                {
+                    MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
              obj.Bills_Object_Delete_ByBill_Id(_Bill_ID);
@@ -181,22 +227,33 @@ namespace Finance_Authority.PL
             }
             Bills_FORM frm = Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
-            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
+
             if (!StatePaied && Bills_Paid.Checked) // توليد سند دفع للفاتورة في حال اصبحت مدفوعة
             {
                 Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
-                     Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                     Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
                 ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, true);
-                Program.Special_Message("بما انها اصبحت مدفوعة , تم توليد سند دفع تلقائي لهذه الفاتورة");
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
+                                                                        Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
+                //
             }
-            else   // تعديل قيمة سند الدفع للفاتورة
+            else if(StatePaied && Bills_Paid.Checked)  // تعديل قيمة سند الدفع للفاتورة
             {
-                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID,true).Rows[0][0]);
+                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
+                double PrivSy =Convert.ToDouble(Pay.Payment_Document_Search(Payement_id_for_this_Bill.ToString()).Rows[0][1]);
+                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search(Payement_id_for_this_Bill.ToString()).Rows[0][2]);
+                // تحديث الميزانية بعد تعديل سند الدفع
+                double Sy_After_Updat = Convert.ToDouble(PrivSy - Convert.ToDouble(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text));
+                double Dollar_After_Updat = Convert.ToDouble(PrivDo - Convert.ToDouble(Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text));
+                Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+                ///
                 Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
-                     Bills_Exchange_rate.Text, "-1", "-1", "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                     Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005, Payement_id_for_this_Bill);
             }
+            this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;
             this.Bill_Objects_dataGrid.Columns[5].Visible = false;
             Program.Update_Message();
@@ -208,6 +265,8 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف تفاصيل الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Bill.Bills_Details_Delete(_Bill_ID);
+                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
+                Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;
@@ -327,6 +386,28 @@ namespace Finance_Authority.PL
         {
             Document_FORM FRM = new Document_FORM(_Bill_ID, "فاتورة");
             FRM.ShowDialog();
+        }
+
+        private void Bills_Paid_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bills_Paid.Checked)
+            {
+                groupBoxNumDoc_Order.Enabled = true;
+            }
+            else
+            {
+                groupBoxNumDoc_Order.Enabled = false;
+            }
+        }
+
+        private void Payment_Document_no_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Payment_Document_No_Order_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
         }
     }
 }

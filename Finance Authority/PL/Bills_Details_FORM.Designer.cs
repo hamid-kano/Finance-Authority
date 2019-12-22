@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Bill_Objects_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Bills_exit = new MetroFramework.Controls.MetroButton();
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
@@ -39,6 +39,11 @@
             this.Bills_new = new MetroFramework.Controls.MetroButton();
             this.Bills_Date = new MetroFramework.Controls.MetroDateTime();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxNumDoc_Order = new System.Windows.Forms.GroupBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.Payment_Document_No_Order = new MetroFramework.Controls.MetroTextBox();
+            this.Payment_Document_no = new MetroFramework.Controls.MetroTextBox();
             this.Bills_Not = new MetroFramework.Controls.MetroRadioButton();
             this.Bills_Paid = new MetroFramework.Controls.MetroRadioButton();
             this.Bills_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
@@ -62,8 +67,10 @@
             this.Bills_Details_Date_Budget = new MetroFramework.Controls.MetroLabel();
             this.Bills_Coin_Type = new MetroFramework.Controls.MetroComboBox();
             this.Bills_Brows_Docs = new MetroFramework.Controls.MetroButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBoxNumDoc_Order.SuspendLayout();
             this.SuspendLayout();
             // 
             // Bill_Objects_dataGrid
@@ -75,40 +82,40 @@
             this.Bill_Objects_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Bill_Objects_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Bill_Objects_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bill_Objects_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bill_Objects_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Bill_Objects_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Bill_Objects_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Bill_Objects_dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.Bill_Objects_dataGrid.EnableHeadersVisualStyles = false;
             this.Bill_Objects_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Bill_Objects_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Bill_Objects_dataGrid.Location = new System.Drawing.Point(304, 77);
             this.Bill_Objects_dataGrid.Name = "Bill_Objects_dataGrid";
             this.Bill_Objects_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Bill_Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Bill_Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Bill_Objects_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Bill_Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 434);
+            this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 504);
             this.Bill_Objects_dataGrid.TabIndex = 47;
             this.Bill_Objects_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Bill_Objects_dataGrid_CellValueChanged);
             this.Bill_Objects_dataGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.Bill_Objects_dataGrid_CurrentCellDirtyStateChanged);
@@ -117,7 +124,7 @@
             // Bills_exit
             // 
             this.Bills_exit.Highlight = true;
-            this.Bills_exit.Location = new System.Drawing.Point(855, 534);
+            this.Bills_exit.Location = new System.Drawing.Point(865, 596);
             this.Bills_exit.Name = "Bills_exit";
             this.Bills_exit.Size = new System.Drawing.Size(87, 37);
             this.Bills_exit.TabIndex = 17;
@@ -128,7 +135,7 @@
             // Bills_delete
             // 
             this.Bills_delete.Highlight = true;
-            this.Bills_delete.Location = new System.Drawing.Point(669, 534);
+            this.Bills_delete.Location = new System.Drawing.Point(679, 596);
             this.Bills_delete.Name = "Bills_delete";
             this.Bills_delete.Size = new System.Drawing.Size(87, 37);
             this.Bills_delete.TabIndex = 15;
@@ -139,7 +146,7 @@
             // Bills_update
             // 
             this.Bills_update.Highlight = true;
-            this.Bills_update.Location = new System.Drawing.Point(576, 534);
+            this.Bills_update.Location = new System.Drawing.Point(586, 596);
             this.Bills_update.Name = "Bills_update";
             this.Bills_update.Size = new System.Drawing.Size(87, 37);
             this.Bills_update.TabIndex = 14;
@@ -151,7 +158,7 @@
             // 
             this.Bills_add.Enabled = false;
             this.Bills_add.Highlight = true;
-            this.Bills_add.Location = new System.Drawing.Point(483, 534);
+            this.Bills_add.Location = new System.Drawing.Point(493, 596);
             this.Bills_add.Name = "Bills_add";
             this.Bills_add.Size = new System.Drawing.Size(87, 37);
             this.Bills_add.TabIndex = 13;
@@ -162,7 +169,7 @@
             // Bills_new
             // 
             this.Bills_new.Highlight = true;
-            this.Bills_new.Location = new System.Drawing.Point(390, 534);
+            this.Bills_new.Location = new System.Drawing.Point(400, 596);
             this.Bills_new.Name = "Bills_new";
             this.Bills_new.Size = new System.Drawing.Size(87, 37);
             this.Bills_new.TabIndex = 12;
@@ -181,15 +188,108 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBoxNumDoc_Order);
             this.groupBox1.Controls.Add(this.Bills_Not);
             this.groupBox1.Controls.Add(this.Bills_Paid);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(29, 321);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 55);
+            this.groupBox1.Size = new System.Drawing.Size(259, 143);
             this.groupBox1.TabIndex = 199;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "حالة الفاتورة:";
+            // 
+            // groupBoxNumDoc_Order
+            // 
+            this.groupBoxNumDoc_Order.Controls.Add(this.metroLabel9);
+            this.groupBoxNumDoc_Order.Controls.Add(this.metroLabel5);
+            this.groupBoxNumDoc_Order.Controls.Add(this.Payment_Document_No_Order);
+            this.groupBoxNumDoc_Order.Controls.Add(this.Payment_Document_no);
+            this.groupBoxNumDoc_Order.Location = new System.Drawing.Point(9, 48);
+            this.groupBoxNumDoc_Order.Name = "groupBoxNumDoc_Order";
+            this.groupBoxNumDoc_Order.Size = new System.Drawing.Size(244, 89);
+            this.groupBoxNumDoc_Order.TabIndex = 223;
+            this.groupBoxNumDoc_Order.TabStop = false;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(173, 22);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel9.TabIndex = 244;
+            this.metroLabel9.Text = "رقم السند";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(148, 55);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel5.TabIndex = 243;
+            this.metroLabel5.Text = "رقم امر الصرف";
+            // 
+            // Payment_Document_No_Order
+            // 
+            // 
+            // 
+            // 
+            this.Payment_Document_No_Order.CustomButton.Image = null;
+            this.Payment_Document_No_Order.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.Payment_Document_No_Order.CustomButton.Name = "";
+            this.Payment_Document_No_Order.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Payment_Document_No_Order.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Payment_Document_No_Order.CustomButton.TabIndex = 1;
+            this.Payment_Document_No_Order.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Payment_Document_No_Order.CustomButton.UseSelectable = true;
+            this.Payment_Document_No_Order.CustomButton.Visible = false;
+            this.Payment_Document_No_Order.Lines = new string[0];
+            this.Payment_Document_No_Order.Location = new System.Drawing.Point(9, 53);
+            this.Payment_Document_No_Order.MaxLength = 32767;
+            this.Payment_Document_No_Order.Name = "Payment_Document_No_Order";
+            this.Payment_Document_No_Order.PasswordChar = '\0';
+            this.Payment_Document_No_Order.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Payment_Document_No_Order.SelectedText = "";
+            this.Payment_Document_No_Order.SelectionLength = 0;
+            this.Payment_Document_No_Order.SelectionStart = 0;
+            this.Payment_Document_No_Order.ShortcutsEnabled = true;
+            this.Payment_Document_No_Order.Size = new System.Drawing.Size(134, 23);
+            this.Payment_Document_No_Order.TabIndex = 242;
+            this.Payment_Document_No_Order.UseSelectable = true;
+            this.Payment_Document_No_Order.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Payment_Document_No_Order.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Payment_Document_No_Order.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_No_Order_KeyPress);
+            // 
+            // Payment_Document_no
+            // 
+            // 
+            // 
+            // 
+            this.Payment_Document_no.CustomButton.Image = null;
+            this.Payment_Document_no.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.Payment_Document_no.CustomButton.Name = "";
+            this.Payment_Document_no.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Payment_Document_no.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Payment_Document_no.CustomButton.TabIndex = 1;
+            this.Payment_Document_no.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Payment_Document_no.CustomButton.UseSelectable = true;
+            this.Payment_Document_no.CustomButton.Visible = false;
+            this.Payment_Document_no.Lines = new string[0];
+            this.Payment_Document_no.Location = new System.Drawing.Point(9, 20);
+            this.Payment_Document_no.MaxLength = 32767;
+            this.Payment_Document_no.Name = "Payment_Document_no";
+            this.Payment_Document_no.PasswordChar = '\0';
+            this.Payment_Document_no.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Payment_Document_no.SelectedText = "";
+            this.Payment_Document_no.SelectionLength = 0;
+            this.Payment_Document_no.SelectionStart = 0;
+            this.Payment_Document_no.ShortcutsEnabled = true;
+            this.Payment_Document_no.Size = new System.Drawing.Size(134, 23);
+            this.Payment_Document_no.TabIndex = 241;
+            this.Payment_Document_no.UseSelectable = true;
+            this.Payment_Document_no.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Payment_Document_no.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Payment_Document_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_no_KeyPress);
             // 
             // Bills_Not
             // 
@@ -212,12 +312,13 @@
             this.Bills_Paid.TabStop = true;
             this.Bills_Paid.Text = "مدفوعة";
             this.Bills_Paid.UseSelectable = true;
+            this.Bills_Paid.CheckedChanged += new System.EventHandler(this.Bills_Paid_CheckedChanged);
             // 
             // Bills_Comb_Budget
             // 
             this.Bills_Comb_Budget.FormattingEnabled = true;
             this.Bills_Comb_Budget.ItemHeight = 23;
-            this.Bills_Comb_Budget.Location = new System.Drawing.Point(148, 422);
+            this.Bills_Comb_Budget.Location = new System.Drawing.Point(139, 505);
             this.Bills_Comb_Budget.Name = "Bills_Comb_Budget";
             this.Bills_Comb_Budget.Size = new System.Drawing.Size(140, 29);
             this.Bills_Comb_Budget.TabIndex = 10;
@@ -227,7 +328,7 @@
             // 
             this.Bills_Comb_Department.FormattingEnabled = true;
             this.Bills_Comb_Department.ItemHeight = 23;
-            this.Bills_Comb_Department.Location = new System.Drawing.Point(148, 459);
+            this.Bills_Comb_Department.Location = new System.Drawing.Point(139, 547);
             this.Bills_Comb_Department.Name = "Bills_Comb_Department";
             this.Bills_Comb_Department.Size = new System.Drawing.Size(140, 29);
             this.Bills_Comb_Department.TabIndex = 11;
@@ -236,7 +337,7 @@
             // Bills_Details_Print
             // 
             this.Bills_Details_Print.Highlight = true;
-            this.Bills_Details_Print.Location = new System.Drawing.Point(762, 534);
+            this.Bills_Details_Print.Location = new System.Drawing.Point(772, 596);
             this.Bills_Details_Print.Name = "Bills_Details_Print";
             this.Bills_Details_Print.Size = new System.Drawing.Size(87, 37);
             this.Bills_Details_Print.TabIndex = 16;
@@ -420,7 +521,7 @@
             this.Bills_Notes.CustomButton.Visible = false;
             this.Bills_Notes.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Bills_Notes.Lines = new string[0];
-            this.Bills_Notes.Location = new System.Drawing.Point(145, 387);
+            this.Bills_Notes.Location = new System.Drawing.Point(136, 470);
             this.Bills_Notes.MaxLength = 32767;
             this.Bills_Notes.Name = "Bills_Notes";
             this.Bills_Notes.PasswordChar = '\0';
@@ -501,7 +602,7 @@
             // Bills_Details_Name_Department
             // 
             this.Bills_Details_Name_Department.AutoSize = true;
-            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(29, 464);
+            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(20, 547);
             this.Bills_Details_Name_Department.Name = "Bills_Details_Name_Department";
             this.Bills_Details_Name_Department.Size = new System.Drawing.Size(68, 19);
             this.Bills_Details_Name_Department.TabIndex = 218;
@@ -510,7 +611,7 @@
             // Bills_Details_Note
             // 
             this.Bills_Details_Note.AutoSize = true;
-            this.Bills_Details_Note.Location = new System.Drawing.Point(29, 389);
+            this.Bills_Details_Note.Location = new System.Drawing.Point(20, 472);
             this.Bills_Details_Note.Name = "Bills_Details_Note";
             this.Bills_Details_Note.Size = new System.Drawing.Size(66, 19);
             this.Bills_Details_Note.TabIndex = 219;
@@ -519,7 +620,7 @@
             // Bills_Details_Date_Budget
             // 
             this.Bills_Details_Date_Budget.AutoSize = true;
-            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(29, 427);
+            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(20, 510);
             this.Bills_Details_Date_Budget.Name = "Bills_Details_Date_Budget";
             this.Bills_Details_Date_Budget.Size = new System.Drawing.Size(78, 19);
             this.Bills_Details_Date_Budget.TabIndex = 220;
@@ -542,7 +643,7 @@
             // 
             this.Bills_Brows_Docs.Enabled = false;
             this.Bills_Brows_Docs.Highlight = true;
-            this.Bills_Brows_Docs.Location = new System.Drawing.Point(139, 534);
+            this.Bills_Brows_Docs.Location = new System.Drawing.Point(148, 596);
             this.Bills_Brows_Docs.Name = "Bills_Brows_Docs";
             this.Bills_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Bills_Brows_Docs.TabIndex = 223;
@@ -555,7 +656,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1019, 610);
+            this.ClientSize = new System.Drawing.Size(1019, 666);
             this.Controls.Add(this.Bills_Brows_Docs);
             this.Controls.Add(this.Bills_Coin_Type);
             this.Controls.Add(this.Bills_Details_Date_Budget);
@@ -595,6 +696,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBoxNumDoc_Order.ResumeLayout(false);
+            this.groupBoxNumDoc_Order.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,5 +736,11 @@
         private MetroFramework.Controls.MetroRadioButton Bills_Paid;
         private MetroFramework.Controls.MetroComboBox Bills_Coin_Type;
         private MetroFramework.Controls.MetroButton Bills_Brows_Docs;
+        private System.Windows.Forms.GroupBox groupBoxNumDoc_Order;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox Payment_Document_No_Order;
+        private MetroFramework.Controls.MetroTextBox Payment_Document_no;
     }
 }

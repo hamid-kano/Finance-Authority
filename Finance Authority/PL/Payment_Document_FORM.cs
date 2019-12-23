@@ -18,6 +18,8 @@ namespace Finance_Authority.PL
         Finance_Authority frm = Finance_Authority.getMainForm;
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         DataTable Dt = new DataTable();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
+        BL.CLS_Bills_Details bill_details = new BL.CLS_Bills_Details();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -241,6 +243,24 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد حذف سند الدفع .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+
+                if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString()=="فاتورة")
+                {
+
+                    // حذف الفاتورة التابعة لهذا السند في حال كانت من نوع فاتورة
+                    if (MessageBox.Show("هذا السند مرتبط بفاتورة اذا تم حذفه سيتم حذف الفاتورة المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        int bill_id =Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id,true).Rows[0][0]);
+                        bill_details.Bills_Details_Delete(bill_id);
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, bill_id, true);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    //
+
+                }
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete", "p", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();

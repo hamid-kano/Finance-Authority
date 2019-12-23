@@ -10,6 +10,7 @@ namespace Finance_Authority.BL
 {
     class CLS_Operations
     {
+        // نعطيه ايدي الفاتورة وحالة السند دفع 1 يرجع ايدي السند
         public DataTable Operations_Bill_Salary_LoanPay_Viewby_towID( int id_Bill_Salary_LoanPay, bool statue_TPay_FRec)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -24,6 +25,22 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        // نعطيه ايدي السند وحالة السند دفع 1 يرجع ايدي الفاتورة
+        public DataTable Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(int id_Doc_Pay_Rec, bool statue_TPay_FRec)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@id_Doc_Pay_Rec", SqlDbType.Int);
+            param[0].Value = id_Doc_Pay_Rec;
+            param[1] = new SqlParameter("@statue_TPay_FRec", SqlDbType.Bit);
+            param[1].Value = statue_TPay_FRec;
+            Dt = DAL.selectdata("Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue", param);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable Operations_Bill_Salary_LoanPay_add(int id_Doc_Pay_Rec, int id_Bill_Salary_LoanPay, bool statue_TPay_FRec)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

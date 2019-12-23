@@ -65,7 +65,6 @@ namespace Finance_Authority.PL
                 //
                 Bills_Brows_Docs.Enabled = true;
                 Bills_update.Enabled = true;
-
             }
             else 
             {
@@ -141,9 +140,11 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
+            // اضافة الفاتورة
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
             _Bill_ID = Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]);
+            // اضافة المواد
             for (int i = 0; i < Bill_Objects_dataGrid.RowCount-1; i++)
             {
                 obj.Bills_Object_add(Bill_Objects_dataGrid.Rows[i].Cells[1].Value.ToString(), Bill_Objects_dataGrid.Rows[i].Cells[2].Value.ToString(),
@@ -162,7 +163,7 @@ namespace Finance_Authority.PL
                 FRM.ShowDialog();
             }
             Program.Add_Message();
-
+            // اضافة فاتورة مدفوعة
             if (Bills_Paid.Checked)  //اضافة سند دفع لهذه الفاتورة
             {
                Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
@@ -248,6 +249,7 @@ namespace Finance_Authority.PL
                 Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
                 //
+                StatePaied = true;
             }
             // مدفوعة وبقيت مدفوعة
             else if(StatePaied && Bills_Paid.Checked)  // تعديل قيمة سند الدفع للفاتورة
@@ -276,6 +278,7 @@ namespace Finance_Authority.PL
                     Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
                 }
+                StatePaied = false;
             }
             this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
             this.Bill_Objects_dataGrid.Columns[0].Visible = false;

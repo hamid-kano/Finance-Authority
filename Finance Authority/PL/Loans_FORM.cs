@@ -97,6 +97,7 @@ namespace Finance_Authority.PL
                 }
                 ////
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة قرض جديد", DateTime.Now);
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
@@ -148,6 +149,7 @@ namespace Finance_Authority.PL
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل قرض", DateTime.Now);
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
@@ -170,6 +172,7 @@ namespace Finance_Authority.PL
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
                 Loans_update.Enabled = false;
@@ -222,6 +225,7 @@ namespace Finance_Authority.PL
 
 
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة قروض المعروضة", DateTime.Now);
             // TAXI.ADD_LOG(Program.USER_ID, "Capkirin", "Capkirina lîsteyekê bi otombîlên", DateTime.Now);
             //REPT.Crystal_Loans Art = new REPT.Crystal_Loans();
 

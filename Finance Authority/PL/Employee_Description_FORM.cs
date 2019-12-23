@@ -42,6 +42,7 @@ namespace Finance_Authority.PL
                 Employee_Description_dataGrid.Columns[0].Visible = false;
                 Employee_Description_dataGrid.Columns[10].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف وصف وظيفي للعاملين", DateTime.Now);
                 Employee_Description_delete.Enabled = false;
             }
         }
@@ -101,6 +102,7 @@ namespace Finance_Authority.PL
             report.SetDataSource(DS);
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة الوصف وظيفي المعروض", DateTime.Now);
         }
 
         private void Employee_Description_N0_Book_KeyPress(object sender, KeyPressEventArgs e)

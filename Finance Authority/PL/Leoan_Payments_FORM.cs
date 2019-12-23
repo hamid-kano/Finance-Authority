@@ -87,7 +87,8 @@ namespace Finance_Authority.PL
                 ////
 
             Program.Add_Message();
-                Leoan_Payments_Amont.Text = "";
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة دفعة قرض جديدة", DateTime.Now);
+            Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
@@ -121,7 +122,8 @@ namespace Finance_Authority.PL
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
-                Leoan_Payments_Amont.Text = "";
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل دفعة قرض", DateTime.Now);
+            Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
@@ -153,6 +155,7 @@ namespace Finance_Authority.PL
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف دفعة قرض", DateTime.Now);
                 Leoan_Payments_Amont.Text = "";
                 Leoan_Payments_Notes.Text = "";
                 Leoan_Payments_update.Enabled = false;
@@ -205,7 +208,7 @@ namespace Finance_Authority.PL
             report.SetDataSource(DS);
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
-
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة دفعات القروض المعروضة", DateTime.Now);
         }
 
         private void Leoan_Payments_Amont_KeyPress(object sender, KeyPressEventArgs e)

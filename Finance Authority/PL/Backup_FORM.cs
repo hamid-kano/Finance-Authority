@@ -16,6 +16,7 @@ namespace Finance_Authority.PL
     {
         SqlConnection cn = new SqlConnection(@"Server =192.168.50.50 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
         SqlCommand cmd;
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
 
         public Backup_FORM()
         {
@@ -60,6 +61,7 @@ namespace Finance_Authority.PL
              //   MEM.ADD_LOG(Program.APP_IDEN, Program.USER_IDEN, "نسخ احتياطي", "إنشاء نسخة احتياطية", DateTime.Now);
 
                 MessageBox.Show("تم إنشاء نسخة احتياطية بنجاح ", "نسخة احتياطية ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "نسخ احتياطي", "تم انشاء نسخة احتياطية للبرنامج", DateTime.Now);
                 this.Cursor = Cursors.Default;
             }
             else

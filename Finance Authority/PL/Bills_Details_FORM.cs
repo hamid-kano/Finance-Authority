@@ -24,6 +24,7 @@ namespace Finance_Authority.PL
         BL.CLS_Operations ope = new BL.CLS_Operations();
         int _Bill_ID=-1; // update Status ;
         bool StatePaied;
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
@@ -165,6 +166,7 @@ namespace Finance_Authority.PL
                 FRM.ShowDialog();
             }
             Program.Add_Message();
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة فاتورة جديدة", DateTime.Now);
 
             if (Bills_Paid.Checked)  //اضافة سند دفع لهذه الفاتورة
             {
@@ -175,6 +177,7 @@ namespace Finance_Authority.PL
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة مواد فاتورة", DateTime.Now);
                 //
             }
             Bills_add.Enabled = false;
@@ -306,6 +309,7 @@ namespace Finance_Authority.PL
                 Bills_FORM frm = Bills_FORM.getMainForm;
                 frm.Bills_dataGrid.DataSource = obj.Bills_View();
                 Program.Delete_Message();
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف تفاصيل الفاتورة", DateTime.Now);
                 if (_Bill_ID==-1)
                 {
                     Bills_update.Enabled = false;
@@ -344,7 +348,7 @@ namespace Finance_Authority.PL
 
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
-
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة فاتورة مع محتوياتها", DateTime.Now);
             //ITEM.ADD_LOG(Program.USER_ID, "طباعة", "طباعة تفاصيل عمليات الإخراج بين تاريخين", DateTime.Now);
             //REPT.Crystal_Bills_Details Report = new REPT.Crystal_Bills_Details();
             //REPT.FRM_Report myfprm = new REPT.FRM_Report();

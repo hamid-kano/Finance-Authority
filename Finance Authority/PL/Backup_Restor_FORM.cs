@@ -16,7 +16,7 @@ namespace Finance_Authority.PL
     {
         SqlConnection cn = new SqlConnection(@"Server =192.168.50.50; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
         SqlCommand cmd;
-
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Backup_Restor_FORM()
         {
             InitializeComponent();
@@ -67,6 +67,7 @@ namespace Finance_Authority.PL
 
 
                     MessageBox.Show("تم استعادة نسخة احتياطية بنجاح ", "نسخة احتياطية", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LOG.LOGS_add(Program.USER_ID, "استعادة نسخة احتياطية", "تم استعادة نسخة احتياطية", DateTime.Now);
                     this.Cursor = Cursors.Default;
                 }
                 else

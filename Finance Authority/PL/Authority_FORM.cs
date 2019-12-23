@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Authority_FORM : MetroFramework.Forms.MetroForm
     {
         BL.Authority Auth = new BL.Authority();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Authority_FORM()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Finance_Authority.PL
                 this.Authority_Gridview.DataSource = Auth.Authority_view();
                 Authority_Gridview.Columns[0].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID , "اضافة","اضافة هيئة جديدة", DateTime.Now);
                 Authority_Name.Text = "";
                 Authority_Notes.Text = "";
                 Authority_add.Enabled = false;
@@ -93,6 +95,7 @@ namespace Finance_Authority.PL
                 this.Authority_Gridview.DataSource = Auth.Authority_view();
                 Authority_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل هيئة", DateTime.Now);
                 Authority_Name.Text = "";
                 Authority_Notes.Text = "";
                 Authority_update.Enabled = false;
@@ -115,6 +118,7 @@ namespace Finance_Authority.PL
                 this.Authority_Gridview.DataSource = Auth.Authority_view();
                 Authority_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف هيئة", DateTime.Now);
                 Authority_Name.Text = "";
                 Authority_Notes.Text = "";
                 Authority_update.Enabled = false;

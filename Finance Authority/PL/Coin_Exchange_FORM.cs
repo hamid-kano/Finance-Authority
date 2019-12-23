@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Coin_Exchange Coin = new BL.CLS_Coin_Exchange();
         BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Coin_Exchange_FORM()
         {
             InitializeComponent();
@@ -88,6 +89,7 @@ namespace Finance_Authority.PL
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Program.Add_Message();
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة تحويل عملة جديدة", DateTime.Now);
             Coin_Exchange_Sy.Text = "";
             Coin_Exchange_Dollar.Text = "";
             Coin_Exchange_rate.Text = "";
@@ -119,6 +121,7 @@ namespace Finance_Authority.PL
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Program.Update_Message();
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل تحويل عملة", DateTime.Now);
             Coin_Exchange_Sy.Text = "";
             Coin_Exchange_Dollar.Text = "";
             Coin_Exchange_rate.Text = "";
@@ -135,6 +138,7 @@ namespace Finance_Authority.PL
                 this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
                 Coin_Exchange_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف تحويل عملة", DateTime.Now);
                 Coin_Exchange_Sy.Text = "";
                 Coin_Exchange_Dollar.Text = "";
                 Coin_Exchange_rate.Text = "";

@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.Department Dep = new BL.Department();
         BL.Authority Auth = new BL.Authority();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Department_FORM()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace Finance_Authority.PL
                 this.Department_Gridview.Columns[0].Visible = false;
                 this.Department_Gridview.Columns[4].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة قسم جديد", DateTime.Now);
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
                 Department_add.Enabled = false;
@@ -87,6 +89,7 @@ namespace Finance_Authority.PL
                 this.Department_Gridview.Columns[0].Visible = false;
                 this.Department_Gridview.Columns[4].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل قسم", DateTime.Now);
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
                 Department_update.Enabled = false;
@@ -125,6 +128,7 @@ namespace Finance_Authority.PL
                 this.Department_Gridview.Columns[0].Visible = false;
                 this.Department_Gridview.Columns[4].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قسم", DateTime.Now);
                 Department_Name.Text = "";
                 Department_Notes.Text = "";
                 Department_update.Enabled = false;

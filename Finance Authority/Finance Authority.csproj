@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Authority.cs" />
+    <Compile Include="BL\CLS_LOGS.cs" />
     <Compile Include="BL\CLS_Operations.cs" />
     <Compile Include="BL\CLS_Bills_Details.cs" />
     <Compile Include="BL\CLS_Budget.cs" />

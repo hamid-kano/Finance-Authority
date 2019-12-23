@@ -81,6 +81,7 @@ namespace Finance_Authority.PL
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
             Program.Add_Message();
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة اصدار راتب", DateTime.Now);
             Emission_Salaries_add.Enabled = false;
         }
 
@@ -90,6 +91,7 @@ namespace Finance_Authority.PL
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
             Program.Update_Message();
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل اصدار راتب", DateTime.Now);
             Emission_Salaries_update.Enabled = false;
             Emission_Salaries_delete.Enabled = false;
             Emission_Salaries_Brows_Docs.Enabled = false;
@@ -118,6 +120,7 @@ namespace Finance_Authority.PL
                 this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
                 Emission_Salaries_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف اصدار راتب", DateTime.Now);
                 Emission_Salaries_update.Enabled = false;
                 Emission_Salaries_delete.Enabled = false;
                 Emission_Salaries_Brows_Docs.Enabled = false;

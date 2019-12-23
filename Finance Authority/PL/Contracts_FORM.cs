@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         int _Contract_id;
         public Contracts_FORM()
         {
@@ -97,6 +98,7 @@ namespace Finance_Authority.PL
 
 
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة العقود", DateTime.Now);
             //REPT.Crystal_Contracts Art = new REPT.Crystal_Contracts();
 
             //REPT.FRM_Report FRPT = new REPT.FRM_Report();

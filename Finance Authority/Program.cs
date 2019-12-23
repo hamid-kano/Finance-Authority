@@ -33,6 +33,7 @@ namespace Finance_Authority
         public static int Document_id;
         public static int Bill_Id;
         public static String RPT_SERVER_NAME;
+        public static int USER_ID;
         /// </summary>
         /// 
         public static int theme=1;

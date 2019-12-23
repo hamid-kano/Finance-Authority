@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Document_Category Doc = new BL.CLS_Document_Category();
         string tempName = "";
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Document_Category_FORM()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Finance_Authority.PL
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
                 this.Document_Category_Gridview.Columns[0].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة صنف السند", DateTime.Now);
                 Document_Category_add.Enabled = false;
                 Document_Category_Name.Text = "";
             }
@@ -74,6 +76,7 @@ namespace Finance_Authority.PL
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
                 this.Document_Category_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل صنف للسند", DateTime.Now);
                 Document_Category_Name.Text = "";
                 Document_Category_update.Enabled = false;
                 Document_Category_delete.Enabled = false;
@@ -113,6 +116,7 @@ namespace Finance_Authority.PL
                 this.Document_Category_Gridview.DataSource = Doc.Document_Category_View();
                 this.Document_Category_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف صنف للسند", DateTime.Now);
                 Document_Category_Name.Text = "";
                 Document_Category_update.Enabled = false;
                 Document_Category_delete.Enabled = false;

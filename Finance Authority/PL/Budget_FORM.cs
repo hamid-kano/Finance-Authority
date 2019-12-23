@@ -12,6 +12,7 @@ namespace Finance_Authority.PL
 {
     public partial class Budget_FORM : MetroFramework.Forms.MetroForm
     { BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Budget_FORM()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace Finance_Authority.PL
                     this.Budget_dataGrid.DataSource = Bud.Budget_view();
                     this.Budget_dataGrid.Columns[0].Visible = false;
                     MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LOG.LOGS_add(Program.USER_ID, "حذف", "حذف ميزانية", DateTime.Now);
                     Budget_amount_sy.Text = "";
                     Budget_amount_Dollar.Text = "";
                     Budget_import_sy.Text = "";

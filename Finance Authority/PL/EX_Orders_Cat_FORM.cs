@@ -55,6 +55,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
                 EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الأضافة بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة صنف طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_Cat_text.Text = "";
                 EX_Orders_Cat_add.Enabled = false;
             }
@@ -83,6 +84,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
                 EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل صنف طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_Cat_text.Text = "";
                 EX_Orders_Cat_update.Enabled = false;
                 EX_Orders_Cat_delete.Enabled = false;
@@ -103,6 +105,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_Cat_dataGrid.DataSource = cat.EX_Orders_Cat_view();
                 EX_Orders_Cat_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف صنف طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_Cat_text.Text = "";
                 EX_Orders_Cat_update.Enabled = false;
                 EX_Orders_Cat_delete.Enabled = false;

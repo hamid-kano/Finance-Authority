@@ -63,6 +63,7 @@ namespace Finance_Authority.PL
                 this.Office_Gridview.DataSource = Offic.Office_View();
                 this.Office_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل مكتب", DateTime.Now);
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
                 Office_Name.Text = "";
@@ -85,6 +86,7 @@ namespace Finance_Authority.PL
                 this.Office_Gridview.DataSource = Offic.Office_View();
                 this.Office_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف مكتب", DateTime.Now);
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
                 Office_Name.Text = "";
@@ -108,6 +110,7 @@ namespace Finance_Authority.PL
                 this.Office_Gridview.DataSource = Offic.Office_View();
                 this.Office_Gridview.Columns[0].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة مكتب جديد", DateTime.Now);
                 Office_update.Enabled = false;
                 Office_delete.Enabled = false;
                 Office_add.Enabled = false;

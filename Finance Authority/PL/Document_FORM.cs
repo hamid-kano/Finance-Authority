@@ -75,6 +75,7 @@ namespace Finance_Authority.PL
             this.Document_Gridview.Columns[0].Visible = false;
             this.Document_Gridview.Columns[7].Visible = false;
             Program.Add_Message();
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة وثيقة جديدة", DateTime.Now);
             Document_add.Enabled = false;
             Document_Name.Text = "";
             Document_URL.Text = "";
@@ -103,6 +104,7 @@ namespace Finance_Authority.PL
             this.Document_Gridview.Columns[0].Visible = false;
             this.Document_Gridview.Columns[7].Visible = false;
             Program.Update_Message();
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل وثيقة", DateTime.Now);
             Document_update.Enabled = false;
             Document_delete.Enabled = false;
             Document_Brows_File.Enabled = false;
@@ -142,6 +144,7 @@ namespace Finance_Authority.PL
                 this.Document_Gridview.Columns[0].Visible = false;
                 this.Document_Gridview.Columns[7].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف وثيقة", DateTime.Now);
                 Document_update.Enabled = false;
                 Document_delete.Enabled = false;
                 Document_Brows_File.Enabled = false;

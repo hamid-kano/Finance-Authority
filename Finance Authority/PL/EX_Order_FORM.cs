@@ -55,6 +55,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_order.Text = "";
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";
@@ -131,6 +132,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_order.Text = "";
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";
@@ -159,6 +161,7 @@ namespace Finance_Authority.PL
                 this.EX_Orders_dataGrid.DataSource = order.Exchange_Order_view();
                 this.EX_Orders_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف طلب صرف مبلغ", DateTime.Now);
                 EX_Orders_order.Text = "";
                 EX_Orders_tosorce.Text = "";
                 EX_Orders_Body_order.Text = "";
@@ -214,6 +217,7 @@ namespace Finance_Authority.PL
 
 
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة طبات صرف مبلغ المعروضة", DateTime.Now);
             //REPT.Crystal_EX_Orderrpt Art = new REPT.Crystal_EX_Orderrpt();
 
             //REPT.FRM_Report FRPT = new REPT.FRM_Report();

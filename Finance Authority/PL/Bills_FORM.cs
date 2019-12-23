@@ -17,7 +17,7 @@ namespace Finance_Authority.PL
         BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
         BL.CLS_Operations ope = new BL.CLS_Operations();
         private static Bills_FORM frm;
-
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         static void frm_formclosed(object sender, FormClosedEventArgs e)
         {
             frm = null;
@@ -91,6 +91,8 @@ namespace Finance_Authority.PL
                         Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
                         ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, true);
                     }
+                    Program.Delete_Message();
+                    LOG.LOGS_add(Program.USER_ID, "حذف", "حذف فاتورة مع محتوياتها", DateTime.Now);
                     Bills_dataGrid.DataSource = bill.Bills_View();
                 this.Bills_dataGrid.Columns[0].Visible = false;
 
@@ -147,6 +149,7 @@ namespace Finance_Authority.PL
             report.SetDataSource(DS);
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة فواتير", DateTime.Now);
         }
 
         private void update_Click(object sender, EventArgs e)

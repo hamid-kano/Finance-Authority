@@ -78,7 +78,7 @@
             this.Reciver_Document_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Reciver_Document_DateTime.Name = "Reciver_Document_DateTime";
             this.Reciver_Document_DateTime.RightToLeftLayout = true;
-            this.Reciver_Document_DateTime.Size = new System.Drawing.Size(188, 29);
+            this.Reciver_Document_DateTime.Size = new System.Drawing.Size(145, 29);
             this.Reciver_Document_DateTime.TabIndex = 6;
             // 
             // Reciver_Document_dataGrid
@@ -111,7 +111,7 @@
             this.Reciver_Document_dataGrid.EnableHeadersVisualStyles = false;
             this.Reciver_Document_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Reciver_Document_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Reciver_Document_dataGrid.Location = new System.Drawing.Point(364, 120);
+            this.Reciver_Document_dataGrid.Location = new System.Drawing.Point(308, 120);
             this.Reciver_Document_dataGrid.Name = "Reciver_Document_dataGrid";
             this.Reciver_Document_dataGrid.ReadOnly = true;
             this.Reciver_Document_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -125,14 +125,14 @@
             this.Reciver_Document_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Reciver_Document_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Reciver_Document_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Reciver_Document_dataGrid.Size = new System.Drawing.Size(751, 431);
+            this.Reciver_Document_dataGrid.Size = new System.Drawing.Size(807, 431);
             this.Reciver_Document_dataGrid.TabIndex = 116;
             this.Reciver_Document_dataGrid.Click += new System.EventHandler(this.Reciver_Document_dataGrid_Click);
             // 
             // Reciver_Document_xit
             // 
             this.Reciver_Document_xit.Highlight = true;
-            this.Reciver_Document_xit.Location = new System.Drawing.Point(986, 571);
+            this.Reciver_Document_xit.Location = new System.Drawing.Point(901, 571);
             this.Reciver_Document_xit.Name = "Reciver_Document_xit";
             this.Reciver_Document_xit.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_xit.TabIndex = 15;
@@ -144,7 +144,7 @@
             // 
             this.Reciver_Document_delete.Enabled = false;
             this.Reciver_Document_delete.Highlight = true;
-            this.Reciver_Document_delete.Location = new System.Drawing.Point(797, 571);
+            this.Reciver_Document_delete.Location = new System.Drawing.Point(712, 571);
             this.Reciver_Document_delete.Name = "Reciver_Document_delete";
             this.Reciver_Document_delete.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_delete.TabIndex = 13;
@@ -156,7 +156,7 @@
             // 
             this.Reciver_Document_update.Enabled = false;
             this.Reciver_Document_update.Highlight = true;
-            this.Reciver_Document_update.Location = new System.Drawing.Point(704, 571);
+            this.Reciver_Document_update.Location = new System.Drawing.Point(619, 571);
             this.Reciver_Document_update.Name = "Reciver_Document_update";
             this.Reciver_Document_update.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_update.TabIndex = 12;
@@ -167,7 +167,7 @@
             // Reciver_Document_add
             // 
             this.Reciver_Document_add.Highlight = true;
-            this.Reciver_Document_add.Location = new System.Drawing.Point(611, 571);
+            this.Reciver_Document_add.Location = new System.Drawing.Point(526, 571);
             this.Reciver_Document_add.Name = "Reciver_Document_add";
             this.Reciver_Document_add.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_add.TabIndex = 11;
@@ -178,7 +178,7 @@
             // Reciver_Document_new
             // 
             this.Reciver_Document_new.Highlight = true;
-            this.Reciver_Document_new.Location = new System.Drawing.Point(516, 571);
+            this.Reciver_Document_new.Location = new System.Drawing.Point(431, 571);
             this.Reciver_Document_new.Name = "Reciver_Document_new";
             this.Reciver_Document_new.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_new.TabIndex = 10;
@@ -192,7 +192,7 @@
             this.Reciver_Document_Comb_Date.ItemHeight = 23;
             this.Reciver_Document_Comb_Date.Location = new System.Drawing.Point(157, 468);
             this.Reciver_Document_Comb_Date.Name = "Reciver_Document_Comb_Date";
-            this.Reciver_Document_Comb_Date.Size = new System.Drawing.Size(188, 29);
+            this.Reciver_Document_Comb_Date.Size = new System.Drawing.Size(145, 29);
             this.Reciver_Document_Comb_Date.TabIndex = 8;
             this.Reciver_Document_Comb_Date.UseSelectable = true;
             // 
@@ -202,7 +202,7 @@
             this.Reciver_Document_Comb_Cate.ItemHeight = 23;
             this.Reciver_Document_Comb_Cate.Location = new System.Drawing.Point(157, 518);
             this.Reciver_Document_Comb_Cate.Name = "Reciver_Document_Comb_Cate";
-            this.Reciver_Document_Comb_Cate.Size = new System.Drawing.Size(188, 29);
+            this.Reciver_Document_Comb_Cate.Size = new System.Drawing.Size(145, 29);
             this.Reciver_Document_Comb_Cate.TabIndex = 9;
             this.Reciver_Document_Comb_Cate.UseSelectable = true;
             // 
@@ -232,7 +232,7 @@
             // Reciver_Document_Print
             // 
             this.Reciver_Document_Print.Highlight = true;
-            this.Reciver_Document_Print.Location = new System.Drawing.Point(890, 571);
+            this.Reciver_Document_Print.Location = new System.Drawing.Point(805, 571);
             this.Reciver_Document_Print.Name = "Reciver_Document_Print";
             this.Reciver_Document_Print.Size = new System.Drawing.Size(87, 37);
             this.Reciver_Document_Print.TabIndex = 14;
@@ -263,9 +263,9 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(54, 207);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(76, 19);
             this.metroLabel4.TabIndex = 243;
-            this.metroLabel4.Text = "سعر الصرف";
+            this.metroLabel4.Text = "قيمة التحويل";
             // 
             // metroLabel1
             // 
@@ -394,7 +394,7 @@
             // 
             // 
             this.Reciver_Document_sy.CustomButton.Image = null;
-            this.Reciver_Document_sy.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_sy.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_sy.CustomButton.Name = "";
             this.Reciver_Document_sy.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_sy.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -412,7 +412,7 @@
             this.Reciver_Document_sy.SelectionLength = 0;
             this.Reciver_Document_sy.SelectionStart = 0;
             this.Reciver_Document_sy.ShortcutsEnabled = true;
-            this.Reciver_Document_sy.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_sy.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_sy.TabIndex = 0;
             this.Reciver_Document_sy.UseSelectable = true;
             this.Reciver_Document_sy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -425,7 +425,7 @@
             // 
             // 
             this.Reciver_Document_Dollar.CustomButton.Image = null;
-            this.Reciver_Document_Dollar.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_Dollar.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_Dollar.CustomButton.Name = "";
             this.Reciver_Document_Dollar.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_Dollar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -443,7 +443,7 @@
             this.Reciver_Document_Dollar.SelectionLength = 0;
             this.Reciver_Document_Dollar.SelectionStart = 0;
             this.Reciver_Document_Dollar.ShortcutsEnabled = true;
-            this.Reciver_Document_Dollar.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_Dollar.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_Dollar.TabIndex = 1;
             this.Reciver_Document_Dollar.UseSelectable = true;
             this.Reciver_Document_Dollar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -456,7 +456,7 @@
             // 
             // 
             this.Reciver_Document_Notes.CustomButton.Image = null;
-            this.Reciver_Document_Notes.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_Notes.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_Notes.CustomButton.Name = "";
             this.Reciver_Document_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -474,7 +474,7 @@
             this.Reciver_Document_Notes.SelectionLength = 0;
             this.Reciver_Document_Notes.SelectionStart = 0;
             this.Reciver_Document_Notes.ShortcutsEnabled = true;
-            this.Reciver_Document_Notes.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_Notes.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_Notes.TabIndex = 6;
             this.Reciver_Document_Notes.UseSelectable = true;
             this.Reciver_Document_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -486,7 +486,7 @@
             // 
             // 
             this.Reciver_Document_rate.CustomButton.Image = null;
-            this.Reciver_Document_rate.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_rate.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_rate.CustomButton.Name = "";
             this.Reciver_Document_rate.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_rate.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -504,7 +504,7 @@
             this.Reciver_Document_rate.SelectionLength = 0;
             this.Reciver_Document_rate.SelectionStart = 0;
             this.Reciver_Document_rate.ShortcutsEnabled = true;
-            this.Reciver_Document_rate.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_rate.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_rate.TabIndex = 2;
             this.Reciver_Document_rate.UseSelectable = true;
             this.Reciver_Document_rate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -517,7 +517,7 @@
             // 
             // 
             this.Reciver_Document_no.CustomButton.Image = null;
-            this.Reciver_Document_no.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_no.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_no.CustomButton.Name = "";
             this.Reciver_Document_no.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_no.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -535,7 +535,7 @@
             this.Reciver_Document_no.SelectionLength = 0;
             this.Reciver_Document_no.SelectionStart = 0;
             this.Reciver_Document_no.ShortcutsEnabled = true;
-            this.Reciver_Document_no.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_no.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_no.TabIndex = 3;
             this.Reciver_Document_no.UseSelectable = true;
             this.Reciver_Document_no.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -548,7 +548,7 @@
             // 
             // 
             this.Reciver_Document_Reason.CustomButton.Image = null;
-            this.Reciver_Document_Reason.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_Reason.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_Reason.CustomButton.Name = "";
             this.Reciver_Document_Reason.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_Reason.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -566,7 +566,7 @@
             this.Reciver_Document_Reason.SelectionLength = 0;
             this.Reciver_Document_Reason.SelectionStart = 0;
             this.Reciver_Document_Reason.ShortcutsEnabled = true;
-            this.Reciver_Document_Reason.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_Reason.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_Reason.TabIndex = 4;
             this.Reciver_Document_Reason.UseSelectable = true;
             this.Reciver_Document_Reason.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -578,7 +578,7 @@
             // 
             // 
             this.Reciver_Document_Receve.CustomButton.Image = null;
-            this.Reciver_Document_Receve.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Reciver_Document_Receve.CustomButton.Location = new System.Drawing.Point(123, 1);
             this.Reciver_Document_Receve.CustomButton.Name = "";
             this.Reciver_Document_Receve.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Reciver_Document_Receve.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -596,7 +596,7 @@
             this.Reciver_Document_Receve.SelectionLength = 0;
             this.Reciver_Document_Receve.SelectionStart = 0;
             this.Reciver_Document_Receve.ShortcutsEnabled = true;
-            this.Reciver_Document_Receve.Size = new System.Drawing.Size(188, 23);
+            this.Reciver_Document_Receve.Size = new System.Drawing.Size(145, 23);
             this.Reciver_Document_Receve.TabIndex = 5;
             this.Reciver_Document_Receve.UseSelectable = true;
             this.Reciver_Document_Receve.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));

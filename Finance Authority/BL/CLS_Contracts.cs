@@ -114,6 +114,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Contracts_Cheack(String No_Book)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@No_Book", SqlDbType.NVarChar);
+            param[0].Value = No_Book;
+            Dt = DAL.selectdata("Contracts_Cheack", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Contracts_Search_Between_Date(DateTime Contracts_Date_first, DateTime Contracts_Date_last)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

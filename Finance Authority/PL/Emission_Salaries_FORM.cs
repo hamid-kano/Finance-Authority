@@ -19,6 +19,8 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Employee emp = new BL.CLS_Employee();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
+        BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
         public Emission_Salaries_FORM()
         {
             InitializeComponent();
@@ -117,6 +119,18 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد حذف اصدار الراتب .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows.Count != 0)
+                {
+                    int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Program.Emission_Salaries_id), true).Rows[0][0]);
+                    double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][1]);
+                    double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][2]);
+                    // تحديث الميزانية
+                    Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                    // حذف التسجيلة من جدول العمليات 
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id,true);
+                    // حذف سند الدفع
+                    Pay.Payment_Document_Delete(Payement_id_for_this_Emp_Salaries);
+                }
                 Emiss.Emission_Salaries_Delete(Program.Emission_Salaries_id);
                 this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
                 Emission_Salaries_dataGrid.Columns[0].Visible = false;

@@ -35,7 +35,6 @@
             this.Bills_exit = new MetroFramework.Controls.MetroButton();
             this.Bills_delete = new MetroFramework.Controls.MetroButton();
             this.Bills_update = new MetroFramework.Controls.MetroButton();
-            this.Bills_add = new MetroFramework.Controls.MetroButton();
             this.Bills_new = new MetroFramework.Controls.MetroButton();
             this.Bills_Date = new MetroFramework.Controls.MetroDateTime();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,6 +66,7 @@
             this.Bills_Details_Date_Budget = new MetroFramework.Controls.MetroLabel();
             this.Bills_Coin_Type = new MetroFramework.Controls.MetroComboBox();
             this.Bills_Brows_Docs = new MetroFramework.Controls.MetroButton();
+            this.Bills_add = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBoxNumDoc_Order.SuspendLayout();
@@ -151,18 +151,6 @@
             this.Bills_update.Text = "تعديل";
             this.Bills_update.UseSelectable = true;
             this.Bills_update.Click += new System.EventHandler(this.Bills_update_Click);
-            // 
-            // Bills_add
-            // 
-            this.Bills_add.Enabled = false;
-            this.Bills_add.Highlight = true;
-            this.Bills_add.Location = new System.Drawing.Point(493, 596);
-            this.Bills_add.Name = "Bills_add";
-            this.Bills_add.Size = new System.Drawing.Size(87, 37);
-            this.Bills_add.TabIndex = 13;
-            this.Bills_add.Text = "اضافة";
-            this.Bills_add.UseSelectable = true;
-            this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
             // 
             // Bills_new
             // 
@@ -648,6 +636,18 @@
             this.Bills_Brows_Docs.UseSelectable = true;
             this.Bills_Brows_Docs.Click += new System.EventHandler(this.Bills_Brows_Docs_Click);
             // 
+            // Bills_add
+            // 
+            this.Bills_add.Enabled = false;
+            this.Bills_add.Highlight = true;
+            this.Bills_add.Location = new System.Drawing.Point(493, 596);
+            this.Bills_add.Name = "Bills_add";
+            this.Bills_add.Size = new System.Drawing.Size(87, 37);
+            this.Bills_add.TabIndex = 13;
+            this.Bills_add.Text = "اضافة";
+            this.Bills_add.UseSelectable = true;
+            this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
+            // 
             // Bills_Details_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -706,7 +706,6 @@
         private MetroFramework.Controls.MetroButton Bills_exit;
         private MetroFramework.Controls.MetroButton Bills_delete;
         private MetroFramework.Controls.MetroButton Bills_update;
-        private MetroFramework.Controls.MetroButton Bills_add;
         private MetroFramework.Controls.MetroButton Bills_new;
         private MetroFramework.Controls.MetroDateTime Bills_Date;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -738,5 +737,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTextBox Payment_Document_No_Order;
         private MetroFramework.Controls.MetroTextBox Payment_Document_no;
+        private MetroFramework.Controls.MetroButton Bills_add;
     }
 }

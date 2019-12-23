@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.Office Offic = new BL.Office();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Employee_Description_FORM()
         {
             InitializeComponent();

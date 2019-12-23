@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class EX_Order_FORM : MetroFramework.Forms.MetroForm
     { BL.CLS_Exchange_Order order = new BL.CLS_Exchange_Order();
         CLS_Exchange_Orders_Category cat = new CLS_Exchange_Orders_Category();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public EX_Order_FORM()
         {
             InitializeComponent();

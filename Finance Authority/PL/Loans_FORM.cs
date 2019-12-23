@@ -19,6 +19,7 @@ namespace Finance_Authority.PL
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         BL.Authority Auth = new BL.Authority();
         BL.Department Dep = new BL.Department();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Loans_FORM()
         {
             InitializeComponent();

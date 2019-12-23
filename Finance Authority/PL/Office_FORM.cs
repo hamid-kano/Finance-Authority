@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Office_FORM : MetroFramework.Forms.MetroForm
     {
         BL.Office Offic = new BL.Office();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Office_FORM()
         {
             InitializeComponent();

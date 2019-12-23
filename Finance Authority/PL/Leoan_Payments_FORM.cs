@@ -23,6 +23,7 @@ namespace Finance_Authority.PL
         DataTable Dt = new DataTable();
         double sum;
         double sumtotal;
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Leoan_Payments_FORM()
         {
             InitializeComponent();

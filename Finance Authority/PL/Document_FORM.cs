@@ -15,6 +15,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Document Doc = new BL.CLS_Document();
         OpenFileDialog dlg = new OpenFileDialog();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         int _Doc_id ;
         string _Document_Type;
         public Document_FORM(int Doc_id,string Document_Type)

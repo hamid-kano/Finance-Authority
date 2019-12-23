@@ -18,6 +18,7 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Employee emp = new BL.CLS_Employee();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Emission_Salaries_FORM()
         {
             InitializeComponent();

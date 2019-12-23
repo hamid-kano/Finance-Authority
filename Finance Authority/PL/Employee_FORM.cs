@@ -25,6 +25,7 @@ namespace Finance_Authority.PL
         int contract_id;
         int Employee_id;
         bool StatusContractNewOrOld = false;
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Employee_FORM(int Empolyee_Description_ID)
         {
             InitializeComponent();
@@ -342,7 +343,7 @@ namespace Finance_Authority.PL
                         ///
                     }
                     Program.Add_Message();
-             
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة موظف جديد", DateTime.Now);
 
             }
             else
@@ -450,7 +451,8 @@ namespace Finance_Authority.PL
                     }
 
                     Program.Update_Message();
-                    Employee_Description_N0_Book.Text = "";
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل معلومات موظف", DateTime.Now);
+                Employee_Description_N0_Book.Text = "";
                     Employee_Description_Salery.Text = "";
                     Employee_First_Name.Text = "";
                     Employee_Father_Name.Text = "";
@@ -476,7 +478,8 @@ namespace Finance_Authority.PL
                 {
                     Empl_Des.Employee_Description_Delete(_Empolyee_Description_ID);
                     MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Employee_First_Name.Text = "";
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف موظف", DateTime.Now);
+                Employee_First_Name.Text = "";
                     Employee_Father_Name.Text = "";
                     Employee_Last_Name.Text = "";
                     Employee_Mother_Name.Text = "";

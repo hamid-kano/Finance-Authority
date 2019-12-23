@@ -17,6 +17,7 @@ namespace Finance_Authority.PL
         Finance_Authority frm = Finance_Authority.getMainForm;
         int indexRowDeleted_or_Updated;
         BL.CLS_Budget Bud = new BL.CLS_Budget();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Reciver_Document_FORM()
         {
             InitializeComponent();
@@ -100,6 +101,7 @@ namespace Finance_Authority.PL
                 }
                 ////
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة سند استلام", DateTime.Now);
                 Reciver_Document_sy.Text = "";
                 Reciver_Document_Dollar.Text = "";
                 Reciver_Document_rate.Text = "";
@@ -161,6 +163,7 @@ namespace Finance_Authority.PL
                 frm.Update_label_finance_Box();
                 //
                 Program.Update_Message();
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل سند استلام", DateTime.Now);
                 Reciver_Document_sy.Text = "";
                 Reciver_Document_Dollar.Text = "";
                 Reciver_Document_rate.Text = "";
@@ -216,6 +219,7 @@ namespace Finance_Authority.PL
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف سند استلام", DateTime.Now);
                 Reciver_Document_sy.Text = "";
                 Reciver_Document_Dollar.Text = "";
                 Reciver_Document_rate.Text = "";

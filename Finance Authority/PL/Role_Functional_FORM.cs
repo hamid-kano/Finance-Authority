@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
     public partial class Role_Functional_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Role_Functional Role = new BL.CLS_Role_Functional();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Role_Functional_FORM()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Finance_Authority.PL
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
                 Role_Functional_Gridview.Columns[0].Visible = false;
                 Program.Add_Message();
+                LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة دور وظيفي", DateTime.Now);
                 Role_Functional_Name.Text = "";
                 Role_Functional_Notes.Text = "";
                 Role_Functional_add.Enabled = false;
@@ -93,6 +95,7 @@ namespace Finance_Authority.PL
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
                 Role_Functional_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم التعديل بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل دور وظيفي", DateTime.Now);
                 Role_Functional_Name.Text = "";
                 Role_Functional_Notes.Text = "";
                 Role_Functional_update.Enabled = false;
@@ -115,6 +118,7 @@ namespace Finance_Authority.PL
                 this.Role_Functional_Gridview.DataSource = Role.Role_Functional_View();
                 Role_Functional_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف دور وظيفي", DateTime.Now);
                 Role_Functional_Name.Text = "";
                 Role_Functional_Notes.Text = "";
                 Role_Functional_update.Enabled = false;

@@ -14,7 +14,8 @@ namespace Finance_Authority.PL
     { 
         BL.CLS_Bills bill = new BL.CLS_Bills();
         BL.CLS_Bills_Details bill_details = new BL.CLS_Bills_Details();
-
+        BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
         private static Bills_FORM frm;
 
         static void frm_formclosed(object sender, FormClosedEventArgs e)
@@ -80,7 +81,17 @@ namespace Finance_Authority.PL
                 if (MessageBox.Show("هل تريد حذف الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                 bill_details.Bills_Details_Delete(Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value));
-                Bills_dataGrid.DataSource = bill.Bills_View();
+                    // حذف سند الدفع المرتبط بهذه الفاتورة
+                    if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true).Rows.Count != 0)
+                    {
+                        int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true).Rows[0][0]);
+                        // تحديث الميزانية
+                        Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
+                        //
+                        Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, true);
+                    }
+                    Bills_dataGrid.DataSource = bill.Bills_View();
                 this.Bills_dataGrid.Columns[0].Visible = false;
 
                 }

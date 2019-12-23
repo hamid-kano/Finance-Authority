@@ -121,6 +121,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Payment_Document_Search_by_id(int id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@id", SqlDbType.Int);
+            param[0].Value = id;
+            Dt = DAL.selectdata("Payment_Document_Search_by_id", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Payment_Document_Date_between(DateTime Payment_Document_Date_first, DateTime Payment_Document_Date_last)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

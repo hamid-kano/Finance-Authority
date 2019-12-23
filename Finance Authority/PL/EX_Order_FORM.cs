@@ -261,5 +261,10 @@ namespace Finance_Authority.PL
             Document_FORM FRM = new Document_FORM(Program.Exchange_Order_id, "طلب صرف مبلغ");
             FRM.ShowDialog();
         }
+
+        private void EX_Orders_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

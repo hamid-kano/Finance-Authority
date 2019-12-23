@@ -144,9 +144,9 @@ namespace Finance_Authority.PL
         {
             try
             {
-                int idDepartment = Convert.ToInt32(Department_CombAuthority.SelectedValue);
+                int idAuthority = Convert.ToInt32(Department_CombAuthority.SelectedValue);
                 //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
-                Department_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idDepartment);
+                Department_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idAuthority);
                 Department_CombOffice.DisplayMember = "Office_Name";
                 Department_CombOffice.ValueMember = "Office_ID";
 

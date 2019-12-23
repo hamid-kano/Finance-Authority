@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,8 +7,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
-
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.CrystalReports;
 namespace Finance_Authority.PL
 {
     public partial class Bills_Details_FORM : MetroFramework.Forms.MetroForm
@@ -233,12 +236,32 @@ namespace Finance_Authority.PL
 
         private void Bills_Details_Print_Click(object sender, EventArgs e)
         {
-            REPT.Crystal_Bills_Details Report = new REPT.Crystal_Bills_Details();
-            REPT.FRM_Report myfprm = new REPT.FRM_Report();
-            Report.SetParameterValue("@Bill_iid", Program.Bill_Id);
-            // Report.Refresh();
-            myfprm.crystalReportViewer1.ReportSource = Report;
-            myfprm.ShowDialog();
+            REPT.Crystal_Bills_Details report = new REPT.Crystal_Bills_Details();
+
+            TableLogOnInfo log = new TableLogOnInfo();
+            foreach (CrystalDecisions.CrystalReports.Engine.Table t in report.Database.Tables)
+            {
+                log = t.LogOnInfo;
+                log.ConnectionInfo.ServerName = Program.RPT_SERVER_NAME;
+                log.ConnectionInfo.DatabaseName = "FinanceAuthorityDB";
+                t.ApplyLogOnInfo(log);
+            }
+
+            REPT.FRM_Report frm = new REPT.FRM_Report();
+
+            report.SetParameterValue("@Bill_iid", Program.Bill_Id);
+
+
+            frm.crystalReportViewer1.ReportSource = report;
+            frm.ShowDialog();
+
+            //ITEM.ADD_LOG(Program.USER_ID, "طباعة", "طباعة تفاصيل عمليات الإخراج بين تاريخين", DateTime.Now);
+            //REPT.Crystal_Bills_Details Report = new REPT.Crystal_Bills_Details();
+            //REPT.FRM_Report myfprm = new REPT.FRM_Report();
+            //Report.SetParameterValue("@Bill_iid", Program.Bill_Id);
+            //// Report.Refresh();
+            //myfprm.crystalReportViewer1.ReportSource = Report;
+            //myfprm.ShowDialog();
         }
 
         private void Bills_NO_Bill_KeyPress(object sender, KeyPressEventArgs e)

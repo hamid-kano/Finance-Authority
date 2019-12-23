@@ -171,7 +171,7 @@ namespace Finance_Authority.PL
             {
                Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                     Bills_Exchange_rate.Text,Payment_Document_no.Text,Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
-                   Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
+                   Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), true);
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
@@ -246,7 +246,7 @@ namespace Finance_Authority.PL
             {
                 Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                      Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
-                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005);
+                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
                 ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, true);
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
@@ -267,7 +267,7 @@ namespace Finance_Authority.PL
                 ///
                 Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                      Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
-                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1005, Payement_id_for_this_Bill);
+                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009, Payement_id_for_this_Bill);
             }
             // مدفوعة واصبحت غير مدفوعة
             else if (StatePaied && !Bills_Paid.Checked)

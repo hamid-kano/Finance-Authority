@@ -241,6 +241,7 @@ namespace Finance_Authority.PL
         {
             Payment_Document_FORM FRM = new Payment_Document_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         private void Reciver_Document_Button_Click(object sender, EventArgs e)
@@ -277,6 +278,7 @@ namespace Finance_Authority.PL
         {
             Bills_FORM FRM = new Bills_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         private void Coin_Exchange_Button_MAIN_Click(object sender, EventArgs e)

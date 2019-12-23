@@ -73,6 +73,8 @@ namespace Finance_Authority.PL
                 int Bill_Id =Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value);
                 PL.Bills_Details_FORM FRM = new Bills_Details_FORM(Bill_Id);
                 FRM.ShowDialog();
+                Bills_dataGrid.DataSource = bill.Bills_View();
+                this.Bills_dataGrid.Columns[0].Visible = false;
             }
         }
         private void Bills_delete_Click(object sender, EventArgs e)
@@ -94,7 +96,7 @@ namespace Finance_Authority.PL
                     Program.Delete_Message();
                     LOG.LOGS_add(Program.USER_ID, "حذف", "حذف فاتورة مع محتوياتها", DateTime.Now);
                     Bills_dataGrid.DataSource = bill.Bills_View();
-                this.Bills_dataGrid.Columns[0].Visible = false;
+                     this.Bills_dataGrid.Columns[0].Visible = false;
 
                 }
         }

@@ -20,6 +20,9 @@ namespace Finance_Authority.PL
         BL.Authority Auth = new BL.Authority();
         BL.Department Dep = new BL.Department();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
+        BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
+        BL.CLS_Budget budget = new BL.CLS_Budget();
         public Loans_FORM()
         {
             InitializeComponent();
@@ -77,6 +80,16 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Payment_Document_no.Text == "")
+            {
+                MessageBox.Show("يجب ادخال رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (Payment_Document_No_Order.Text == "")
+            {
+                MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
@@ -96,6 +109,14 @@ namespace Finance_Authority.PL
                     Document_FORM FRM = new Document_FORM(Max_loan_id, "قرض");
                     FRM.ShowDialog();
                 }
+                ////
+                //// اضافة سند دفع لهذا القرض وتسجيل العملية في جدول العمليات و تحديث الميزانية
+                Pay.Payment_Document_add(Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
+                            Payment_Document_No_Order.Text, "قرض", "العاملين", DateTime.Now
+                            , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1012);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Max_loan_id, true);
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "p", Loans_Amont.Text, "0");
                 ////
                 Program.Add_Message();
                 LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة قرض جديد", DateTime.Now);
@@ -137,6 +158,39 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count == 0)
+            {
+                // اضافة
+                DataTable Dt = Pay.Payment_Document_View();
+                int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0]);
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    if ((int)Dt.Rows[i][0] != id_Pay)
+                    {
+                        if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                        {
+                            MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                        {
+                            MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                    }
+                }
+                //
+                double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(id_Pay).Rows[0][1]);
+                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(id_Pay).Rows[0][2]);
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                Program.Budget_update_after_Payment_Reciver("add", "p", Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0");
+                //
+                Pay.Payment_Document_update(Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
+                     Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
+                   , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1011, id_Pay);
+            }
+            ///////
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
@@ -170,6 +224,15 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Loa.Loans_Delete(Program.Loan_id);
+                //delete Payment Doc -- Delete row Operation -- update Budget
+                // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
+                int Payement_id_for_this_Loan = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0]);
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan).Rows[0][2].ToString());
+                //
+                Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
+                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, true);
+                //
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);

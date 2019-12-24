@@ -31,23 +31,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Salaries_FORM));
             this.label14 = new System.Windows.Forms.Label();
             this.Employee_Salaries_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Salaries_exit = new MetroFramework.Controls.MetroButton();
-            this.Employee_Salaries_update = new MetroFramework.Controls.MetroButton();
-            this.Employee_Salaries_new = new MetroFramework.Controls.MetroButton();
+            this.Employee_Salaries_commit = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_Office = new MetroFramework.Controls.MetroComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.Employee_Salaries_Employment = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Salaries_Saliery = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Salaries_Print = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.update = new MetroFramework.Controls.MetroButton();
-            this.Bills_Details_Total = new MetroFramework.Controls.MetroLabel();
-            this.Bill_Total = new MetroFramework.Controls.MetroTextBox();
+            this.Salary_Total_lbl = new MetroFramework.Controls.MetroLabel();
+            this.Salary_Total = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.Payment_Document_No_Order = new MetroFramework.Controls.MetroTextBox();
+            this.Payment_Document_no = new MetroFramework.Controls.MetroTextBox();
+            this.Employee_Salaries_Office_txt = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,7 @@
             // 
             // Employee_Salaries_dataGrid
             // 
+            this.Employee_Salaries_dataGrid.AllowUserToAddRows = false;
             this.Employee_Salaries_dataGrid.AllowUserToOrderColumns = true;
             this.Employee_Salaries_dataGrid.AllowUserToResizeRows = false;
             this.Employee_Salaries_dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -105,16 +106,16 @@
             this.Employee_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1237, 502);
+            this.Employee_Salaries_dataGrid.Size = new System.Drawing.Size(1237, 445);
             this.Employee_Salaries_dataGrid.TabIndex = 196;
-            this.Employee_Salaries_dataGrid.CurrentCellChanged += new System.EventHandler(this.Employee_Salaries_dataGrid_CurrentCellChanged);
+            this.Employee_Salaries_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Employee_Salaries_dataGrid_CellValueChanged);
             this.Employee_Salaries_dataGrid.Click += new System.EventHandler(this.Employee_Salaries_dataGrid_Click);
             // 
             // Employee_Salaries_exit
             // 
             this.Employee_Salaries_exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Employee_Salaries_exit.Highlight = true;
-            this.Employee_Salaries_exit.Location = new System.Drawing.Point(733, 665);
+            this.Employee_Salaries_exit.Location = new System.Drawing.Point(690, 653);
             this.Employee_Salaries_exit.Name = "Employee_Salaries_exit";
             this.Employee_Salaries_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Salaries_exit.TabIndex = 24;
@@ -122,36 +123,24 @@
             this.Employee_Salaries_exit.UseSelectable = true;
             this.Employee_Salaries_exit.Click += new System.EventHandler(this.Employee_Salaries_exit_Click);
             // 
-            // Employee_Salaries_update
+            // Employee_Salaries_commit
             // 
-            this.Employee_Salaries_update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Employee_Salaries_update.Enabled = false;
-            this.Employee_Salaries_update.Highlight = true;
-            this.Employee_Salaries_update.Location = new System.Drawing.Point(547, 665);
-            this.Employee_Salaries_update.Name = "Employee_Salaries_update";
-            this.Employee_Salaries_update.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_update.TabIndex = 21;
-            this.Employee_Salaries_update.Text = "تعديل";
-            this.Employee_Salaries_update.UseSelectable = true;
-            this.Employee_Salaries_update.Click += new System.EventHandler(this.Employee_Salaries_update_Click);
-            // 
-            // Employee_Salaries_new
-            // 
-            this.Employee_Salaries_new.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Employee_Salaries_new.Highlight = true;
-            this.Employee_Salaries_new.Location = new System.Drawing.Point(454, 665);
-            this.Employee_Salaries_new.Name = "Employee_Salaries_new";
-            this.Employee_Salaries_new.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Salaries_new.TabIndex = 19;
-            this.Employee_Salaries_new.Text = "جديد";
-            this.Employee_Salaries_new.UseSelectable = true;
-            this.Employee_Salaries_new.Click += new System.EventHandler(this.Employee_Salaries_new_Click);
+            this.Employee_Salaries_commit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Employee_Salaries_commit.Highlight = true;
+            this.Employee_Salaries_commit.Location = new System.Drawing.Point(504, 653);
+            this.Employee_Salaries_commit.Name = "Employee_Salaries_commit";
+            this.Employee_Salaries_commit.Size = new System.Drawing.Size(87, 37);
+            this.Employee_Salaries_commit.TabIndex = 21;
+            this.Employee_Salaries_commit.Text = "تثبيت التسليم";
+            this.Employee_Salaries_commit.UseSelectable = true;
+            this.Employee_Salaries_commit.Click += new System.EventHandler(this.Employee_Salaries_commit_Click);
             // 
             // Employee_Salaries_Office
             // 
+            this.Employee_Salaries_Office.Enabled = false;
             this.Employee_Salaries_Office.FormattingEnabled = true;
             this.Employee_Salaries_Office.ItemHeight = 23;
-            this.Employee_Salaries_Office.Location = new System.Drawing.Point(623, 77);
+            this.Employee_Salaries_Office.Location = new System.Drawing.Point(900, 77);
             this.Employee_Salaries_Office.Name = "Employee_Salaries_Office";
             this.Employee_Salaries_Office.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Office.TabIndex = 26;
@@ -162,27 +151,16 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(389, 83);
+            this.label21.Location = new System.Drawing.Point(465, 83);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(0, 16);
             this.label21.TabIndex = 240;
-            // 
-            // Employee_Salaries_Employment
-            // 
-            this.Employee_Salaries_Employment.FormattingEnabled = true;
-            this.Employee_Salaries_Employment.ItemHeight = 23;
-            this.Employee_Salaries_Employment.Location = new System.Drawing.Point(884, 77);
-            this.Employee_Salaries_Employment.Name = "Employee_Salaries_Employment";
-            this.Employee_Salaries_Employment.Size = new System.Drawing.Size(163, 29);
-            this.Employee_Salaries_Employment.TabIndex = 27;
-            this.Employee_Salaries_Employment.UseSelectable = true;
-            this.Employee_Salaries_Employment.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Employment_SelectedValueChanged);
             // 
             // Employee_Salaries_Saliery
             // 
             this.Employee_Salaries_Saliery.FormattingEnabled = true;
             this.Employee_Salaries_Saliery.ItemHeight = 23;
-            this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(395, 77);
+            this.Employee_Salaries_Saliery.Location = new System.Drawing.Point(471, 77);
             this.Employee_Salaries_Saliery.Name = "Employee_Salaries_Saliery";
             this.Employee_Salaries_Saliery.Size = new System.Drawing.Size(163, 29);
             this.Employee_Salaries_Saliery.TabIndex = 25;
@@ -193,7 +171,7 @@
             // 
             this.Employee_Salaries_Print.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Employee_Salaries_Print.Highlight = true;
-            this.Employee_Salaries_Print.Location = new System.Drawing.Point(640, 665);
+            this.Employee_Salaries_Print.Location = new System.Drawing.Point(597, 653);
             this.Employee_Salaries_Print.Name = "Employee_Salaries_Print";
             this.Employee_Salaries_Print.Size = new System.Drawing.Size(87, 37);
             this.Employee_Salaries_Print.TabIndex = 23;
@@ -201,19 +179,10 @@
             this.Employee_Salaries_Print.UseSelectable = true;
             this.Employee_Salaries_Print.Click += new System.EventHandler(this.Employee_Salaries_Print_Click);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(818, 82);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(60, 19);
-            this.metroLabel1.TabIndex = 245;
-            this.metroLabel1.Text = "الموظفين";
-            // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(575, 82);
+            this.metroLabel2.Location = new System.Drawing.Point(649, 82);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(48, 19);
             this.metroLabel2.TabIndex = 246;
@@ -222,86 +191,188 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(314, 82);
+            this.metroLabel3.Location = new System.Drawing.Point(390, 82);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(75, 19);
             this.metroLabel3.TabIndex = 247;
             this.metroLabel3.Text = "اصدار الراتب";
             // 
-            // update
+            // Salary_Total_lbl
             // 
-            this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
-            this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(1062, 77);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(33, 31);
-            this.update.TabIndex = 292;
-            this.update.UseSelectable = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
+            this.Salary_Total_lbl.AutoSize = true;
+            this.Salary_Total_lbl.Location = new System.Drawing.Point(996, 595);
+            this.Salary_Total_lbl.Name = "Salary_Total_lbl";
+            this.Salary_Total_lbl.Size = new System.Drawing.Size(88, 19);
+            this.Salary_Total_lbl.TabIndex = 294;
+            this.Salary_Total_lbl.Text = "المجموع الكلي";
             // 
-            // Bills_Details_Total
-            // 
-            this.Bills_Details_Total.AutoSize = true;
-            this.Bills_Details_Total.Location = new System.Drawing.Point(981, 642);
-            this.Bills_Details_Total.Name = "Bills_Details_Total";
-            this.Bills_Details_Total.Size = new System.Drawing.Size(88, 19);
-            this.Bills_Details_Total.TabIndex = 294;
-            this.Bills_Details_Total.Text = "المجموع الكلي";
-            // 
-            // Bill_Total
+            // Salary_Total
             // 
             // 
             // 
             // 
-            this.Bill_Total.CustomButton.Image = null;
-            this.Bill_Total.CustomButton.Location = new System.Drawing.Point(121, 1);
-            this.Bill_Total.CustomButton.Name = "";
-            this.Bill_Total.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Bill_Total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Bill_Total.CustomButton.TabIndex = 1;
-            this.Bill_Total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Bill_Total.CustomButton.UseSelectable = true;
-            this.Bill_Total.CustomButton.Visible = false;
-            this.Bill_Total.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.Bill_Total.Lines = new string[0];
-            this.Bill_Total.Location = new System.Drawing.Point(1074, 640);
-            this.Bill_Total.MaxLength = 32767;
-            this.Bill_Total.Name = "Bill_Total";
-            this.Bill_Total.PasswordChar = '\0';
-            this.Bill_Total.ReadOnly = true;
-            this.Bill_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Bill_Total.SelectedText = "";
-            this.Bill_Total.SelectionLength = 0;
-            this.Bill_Total.SelectionStart = 0;
-            this.Bill_Total.ShortcutsEnabled = true;
-            this.Bill_Total.Size = new System.Drawing.Size(143, 23);
-            this.Bill_Total.TabIndex = 293;
-            this.Bill_Total.UseSelectable = true;
-            this.Bill_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Bill_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Salary_Total.CustomButton.Image = null;
+            this.Salary_Total.CustomButton.Location = new System.Drawing.Point(121, 1);
+            this.Salary_Total.CustomButton.Name = "";
+            this.Salary_Total.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Salary_Total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Salary_Total.CustomButton.TabIndex = 1;
+            this.Salary_Total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Salary_Total.CustomButton.UseSelectable = true;
+            this.Salary_Total.CustomButton.Visible = false;
+            this.Salary_Total.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.Salary_Total.Lines = new string[0];
+            this.Salary_Total.Location = new System.Drawing.Point(1089, 593);
+            this.Salary_Total.MaxLength = 32767;
+            this.Salary_Total.Name = "Salary_Total";
+            this.Salary_Total.PasswordChar = '\0';
+            this.Salary_Total.ReadOnly = true;
+            this.Salary_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Salary_Total.SelectedText = "";
+            this.Salary_Total.SelectionLength = 0;
+            this.Salary_Total.SelectionStart = 0;
+            this.Salary_Total.ShortcutsEnabled = true;
+            this.Salary_Total.Size = new System.Drawing.Size(143, 23);
+            this.Salary_Total.TabIndex = 293;
+            this.Salary_Total.UseSelectable = true;
+            this.Salary_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Salary_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(347, 595);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel9.TabIndex = 298;
+            this.metroLabel9.Text = "رقم السند";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(612, 595);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel5.TabIndex = 297;
+            this.metroLabel5.Text = "رقم امر الصرف";
+            // 
+            // Payment_Document_No_Order
+            // 
+            // 
+            // 
+            // 
+            this.Payment_Document_No_Order.CustomButton.Image = null;
+            this.Payment_Document_No_Order.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.Payment_Document_No_Order.CustomButton.Name = "";
+            this.Payment_Document_No_Order.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Payment_Document_No_Order.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Payment_Document_No_Order.CustomButton.TabIndex = 1;
+            this.Payment_Document_No_Order.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Payment_Document_No_Order.CustomButton.UseSelectable = true;
+            this.Payment_Document_No_Order.CustomButton.Visible = false;
+            this.Payment_Document_No_Order.Lines = new string[0];
+            this.Payment_Document_No_Order.Location = new System.Drawing.Point(704, 593);
+            this.Payment_Document_No_Order.MaxLength = 32767;
+            this.Payment_Document_No_Order.Name = "Payment_Document_No_Order";
+            this.Payment_Document_No_Order.PasswordChar = '\0';
+            this.Payment_Document_No_Order.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Payment_Document_No_Order.SelectedText = "";
+            this.Payment_Document_No_Order.SelectionLength = 0;
+            this.Payment_Document_No_Order.SelectionStart = 0;
+            this.Payment_Document_No_Order.ShortcutsEnabled = true;
+            this.Payment_Document_No_Order.Size = new System.Drawing.Size(134, 23);
+            this.Payment_Document_No_Order.TabIndex = 296;
+            this.Payment_Document_No_Order.UseSelectable = true;
+            this.Payment_Document_No_Order.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Payment_Document_No_Order.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Payment_Document_No_Order.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_No_Order_KeyPress);
+            // 
+            // Payment_Document_no
+            // 
+            // 
+            // 
+            // 
+            this.Payment_Document_no.CustomButton.Image = null;
+            this.Payment_Document_no.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.Payment_Document_no.CustomButton.Name = "";
+            this.Payment_Document_no.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Payment_Document_no.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Payment_Document_no.CustomButton.TabIndex = 1;
+            this.Payment_Document_no.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Payment_Document_no.CustomButton.UseSelectable = true;
+            this.Payment_Document_no.CustomButton.Visible = false;
+            this.Payment_Document_no.Lines = new string[0];
+            this.Payment_Document_no.Location = new System.Drawing.Point(446, 593);
+            this.Payment_Document_no.MaxLength = 32767;
+            this.Payment_Document_no.Name = "Payment_Document_no";
+            this.Payment_Document_no.PasswordChar = '\0';
+            this.Payment_Document_no.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Payment_Document_no.SelectedText = "";
+            this.Payment_Document_no.SelectionLength = 0;
+            this.Payment_Document_no.SelectionStart = 0;
+            this.Payment_Document_no.ShortcutsEnabled = true;
+            this.Payment_Document_no.Size = new System.Drawing.Size(134, 23);
+            this.Payment_Document_no.TabIndex = 295;
+            this.Payment_Document_no.UseSelectable = true;
+            this.Payment_Document_no.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Payment_Document_no.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Payment_Document_no.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Payment_Document_no_KeyPress);
+            // 
+            // Employee_Salaries_Office_txt
+            // 
+            // 
+            // 
+            // 
+            this.Employee_Salaries_Office_txt.CustomButton.Image = null;
+            this.Employee_Salaries_Office_txt.CustomButton.Location = new System.Drawing.Point(121, 1);
+            this.Employee_Salaries_Office_txt.CustomButton.Name = "";
+            this.Employee_Salaries_Office_txt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Employee_Salaries_Office_txt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Employee_Salaries_Office_txt.CustomButton.TabIndex = 1;
+            this.Employee_Salaries_Office_txt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Employee_Salaries_Office_txt.CustomButton.UseSelectable = true;
+            this.Employee_Salaries_Office_txt.CustomButton.Visible = false;
+            this.Employee_Salaries_Office_txt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.Employee_Salaries_Office_txt.Lines = new string[0];
+            this.Employee_Salaries_Office_txt.Location = new System.Drawing.Point(724, 78);
+            this.Employee_Salaries_Office_txt.MaxLength = 32767;
+            this.Employee_Salaries_Office_txt.Name = "Employee_Salaries_Office_txt";
+            this.Employee_Salaries_Office_txt.PasswordChar = '\0';
+            this.Employee_Salaries_Office_txt.ReadOnly = true;
+            this.Employee_Salaries_Office_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Employee_Salaries_Office_txt.SelectedText = "";
+            this.Employee_Salaries_Office_txt.SelectionLength = 0;
+            this.Employee_Salaries_Office_txt.SelectionStart = 0;
+            this.Employee_Salaries_Office_txt.ShortcutsEnabled = true;
+            this.Employee_Salaries_Office_txt.Size = new System.Drawing.Size(143, 23);
+            this.Employee_Salaries_Office_txt.TabIndex = 299;
+            this.Employee_Salaries_Office_txt.UseSelectable = true;
+            this.Employee_Salaries_Office_txt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Employee_Salaries_Office_txt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Employee_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1255, 736);
-            this.Controls.Add(this.Bills_Details_Total);
-            this.Controls.Add(this.Bill_Total);
-            this.Controls.Add(this.update);
+            this.ClientSize = new System.Drawing.Size(1255, 713);
+            this.Controls.Add(this.Employee_Salaries_Office_txt);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.Payment_Document_No_Order);
+            this.Controls.Add(this.Payment_Document_no);
+            this.Controls.Add(this.Salary_Total_lbl);
+            this.Controls.Add(this.Salary_Total);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Employee_Salaries_Print);
             this.Controls.Add(this.Employee_Salaries_Saliery);
-            this.Controls.Add(this.Employee_Salaries_Employment);
             this.Controls.Add(this.Employee_Salaries_Office);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Employee_Salaries_dataGrid);
             this.Controls.Add(this.Employee_Salaries_exit);
-            this.Controls.Add(this.Employee_Salaries_update);
-            this.Controls.Add(this.Employee_Salaries_new);
+            this.Controls.Add(this.Employee_Salaries_commit);
             this.MaximizeBox = false;
             this.Name = "Employee_Salaries_FORM";
             this.Resizable = false;
@@ -318,18 +389,19 @@
         private System.Windows.Forms.Label label14;
         private MetroFramework.Controls.MetroGrid Employee_Salaries_dataGrid;
         private MetroFramework.Controls.MetroButton Employee_Salaries_exit;
-        private MetroFramework.Controls.MetroButton Employee_Salaries_update;
-        private MetroFramework.Controls.MetroButton Employee_Salaries_new;
+        private MetroFramework.Controls.MetroButton Employee_Salaries_commit;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Office;
         private System.Windows.Forms.Label label21;
-        private MetroFramework.Controls.MetroComboBox Employee_Salaries_Employment;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Saliery;
         private MetroFramework.Controls.MetroButton Employee_Salaries_Print;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroButton update;
-        private MetroFramework.Controls.MetroLabel Bills_Details_Total;
-        private MetroFramework.Controls.MetroTextBox Bill_Total;
+        private MetroFramework.Controls.MetroLabel Salary_Total_lbl;
+        private MetroFramework.Controls.MetroTextBox Salary_Total;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox Payment_Document_No_Order;
+        private MetroFramework.Controls.MetroTextBox Payment_Document_no;
+        private MetroFramework.Controls.MetroTextBox Employee_Salaries_Office_txt;
     }
 }

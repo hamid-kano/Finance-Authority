@@ -144,6 +144,21 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
+            DataTable Dt = Pay.Payment_Document_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                {
+                    MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                {
+                    MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
             // اضافة الفاتورة
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
@@ -232,6 +247,23 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
+
+            DataTable Dt = Pay.Payment_Document_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                {
+                    MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                {
+                    MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+
             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
              obj.Bills_Object_Delete_ByBill_Id(_Bill_ID);

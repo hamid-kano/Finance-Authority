@@ -136,8 +136,20 @@ namespace Finance_Authority.BL
             param[0].Value = id;
             DAL.excutecommand("Employee_Salaries_Delete", param);
             DAL.close();
+        }
+        public void Employee_Salaries_Delete_by_Emission_ID(int Emission_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Emission_ID", SqlDbType.Int);
+            param[0].Value = Emission_ID;
+            DAL.excutecommand("Employee_Salaries_Delete_by_Emission_ID", param);
+            DAL.close();
 
         }
+
         public DataTable Employee_Salaries_Search_Office(int office_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

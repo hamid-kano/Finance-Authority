@@ -87,10 +87,10 @@ namespace Finance_Authority.PL
         private void Emission_Salaries_update_Click(object sender, EventArgs e)
         {
             Emiss.Emission_Salaries_update(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue), Program.Emission_Salaries_id);
-            /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
+            /////// اذا تم اجراء تغيير باسم المكتب يتم حذف الموظفين التابعين للمكتب السابق واضافة 
             if (this.Emission_Salaries_dataGrid.CurrentRow.Cells[1].Value.ToString()!= Emission_Salaries_Name_office.SelectedText)
             {
-                //  حذف  رواتب العاملين التابعين لهذا الاصدار الذي يتبع المكتب القديم
+                //  حذف  رواتب العاملين التابعين لهذا الاصدار الذي يتبع المكتب القديمة واضافة اصدار الراتب للعاملين للمكتب الجدبد
                 emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Program.Emission_Salaries_id);
                 ///
                 // اضافة الموظفين التابعين للمكتب الجديد على نفس ايدي الاصدار للمكتب القديم

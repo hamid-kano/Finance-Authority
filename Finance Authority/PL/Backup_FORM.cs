@@ -14,7 +14,7 @@ namespace Finance_Authority.PL
 {
     public partial class Backup_FORM : MetroFramework.Forms.MetroForm
     {
-        SqlConnection cn = new SqlConnection(@"Server =192.168.50.50 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =esa;PASSWORD =123");
+        SqlConnection cn = new SqlConnection(@"Server =192.168.137.1 ; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =qwer;PASSWORD =1234");
         SqlCommand cmd;
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
 
@@ -52,16 +52,13 @@ namespace Finance_Authority.PL
                 this.Cursor = Cursors.WaitCursor;
                 string filename = Backup_Path_TextBox.Text + "\\FinanceAuthorityDB" + DateTime.Now.ToShortDateString().Replace('/', '-') + "---" +
                 DateTime.Now.ToLongTimeString().Replace(':', '-');
-                string strQury = "Backup  DataBase FinanceAuthorityDB to Disk ='" + filename + ".bak'";
+                string strQury = "Backup  DataBase FinanceAuthorityDB to Disk ='" + filename + ".bak";
                 cmd = new SqlCommand(strQury, cn);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 cn.Close();
-
-             //   MEM.ADD_LOG(Program.APP_IDEN, Program.USER_IDEN, "نسخ احتياطي", "إنشاء نسخة احتياطية", DateTime.Now);
-
                 MessageBox.Show("تم إنشاء نسخة احتياطية بنجاح ", "نسخة احتياطية ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LOG.LOGS_add(Program.USER_ID, "نسخ احتياطي", "تم انشاء نسخة احتياطية للبرنامج", DateTime.Now);
+                LOG.LOGS_add(Program.USER_ID, "نسخ احتياطي", " انشاء نسخة احتياطية", DateTime.Now);
                 this.Cursor = Cursors.Default;
             }
             else

@@ -67,7 +67,7 @@ namespace Finance_Authority.PL
 
 
                     MessageBox.Show("تم استعادة نسخة احتياطية بنجاح ", "نسخة احتياطية", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LOG.LOGS_add(Program.USER_ID, "استعادة نسخة احتياطية", "تم استعادة نسخة احتياطية", DateTime.Now);
+                    LOG.LOGS_add(Program.USER_ID, "استعادة نسخة احتياطية", " استعادة نسخة احتياطية", DateTime.Now);
                     this.Cursor = Cursors.Default;
                 }
                 else

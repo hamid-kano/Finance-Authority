@@ -181,9 +181,10 @@ namespace Finance_Authority.PL
         {
             Loans_FORM FRM = new Loans_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
-        private void Leoan_Payments_Button_Click(object sender, EventArgs e)
+            private void Leoan_Payments_Button_Click(object sender, EventArgs e)
         {
             Leoan_Payments_FORM FRM = new Leoan_Payments_FORM();
             FRM.ShowDialog();
@@ -248,12 +249,14 @@ namespace Finance_Authority.PL
         {
             Reciver_Document_FORM FRM = new Reciver_Document_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         private void Employee_Salaries_Button_Click(object sender, EventArgs e)
         {
             Employee_Salaries_FORM FRM = new Employee_Salaries_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         private void Payment_Document_Button_MAIN_Click(object sender, EventArgs e)
@@ -272,6 +275,7 @@ namespace Finance_Authority.PL
         {
             Employee_FORM FRM = new Employee_FORM(-1);
             FRM.ShowDialog();
+
         }
 
         private void Bill_Button_MAIN_Click(object sender, EventArgs e)

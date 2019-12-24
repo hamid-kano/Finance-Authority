@@ -25,7 +25,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        // نعطيه ايدي السند وحالة السند دفع 1 يرجع ايدي الفاتورة
+        //  نعطيه ايدي السند وحالة السند دفع 1 يرجع ايدي الفاتورة او الاصدار او السلفة
         public DataTable Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(int id_Doc_Pay_Rec, bool statue_TPay_FRec)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

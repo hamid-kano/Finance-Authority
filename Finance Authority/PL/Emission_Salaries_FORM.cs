@@ -88,13 +88,25 @@ namespace Finance_Authority.PL
         {
             Emiss.Emission_Salaries_update(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue), Program.Emission_Salaries_id);
             /////// اذا تم اجراء تغيير باسم المكتب يتم حذف الموظفين التابعين للمكتب السابق واضافة 
-            if (this.Emission_Salaries_dataGrid.CurrentRow.Cells[1].Value.ToString()!= Emission_Salaries_Name_office.SelectedText)
+            if (this.Emission_Salaries_dataGrid.CurrentRow.Cells[1].Value.ToString()!= Emission_Salaries_Name_office.Text)
             {
                 //  حذف  رواتب العاملين التابعين لهذا الاصدار الذي يتبع المكتب القديمة واضافة اصدار الراتب للعاملين للمكتب الجدبد
                 emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Program.Emission_Salaries_id);
-                ///
+                //  ايدي السند المرتبط بهذا الاصدار ليتم حذفه في حال كان مرتبط وحذف التسجيلة الخاصة به من جدول العمليات
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows.Count != 0)
+                {
+                    int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Program.Emission_Salaries_id), true).Rows[0][0]);
+                    double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][1]);
+                    double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][2]);
+                    // تحديث الميزانية
+                    Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                    // حذف التسجيلة من جدول العمليات 
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id, true);
+                    // حذف سند الدفع
+                    Pay.Payment_Document_Delete(Payement_id_for_this_Emp_Salaries);
+                }
                 // اضافة الموظفين التابعين للمكتب الجديد على نفس ايدي الاصدار للمكتب القديم
-                DataTable dt_new_Office = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.SelectedText);
+                DataTable dt_new_Office = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.Text);
                 //  الحصول على الايام المتبقية للعقد الخاص بالموظف حلقة الادخال
                 foreach (DataRow item in dt_new_Office.Rows)
                 {
@@ -141,10 +153,14 @@ namespace Finance_Authority.PL
                 if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows.Count != 0)
                 {
                     int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Program.Emission_Salaries_id), true).Rows[0][0]);
-                    double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][1]);
-                    double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][2]);
-                    // تحديث الميزانية
-                    Program.Budget_update_after_Payment_Reciver("delete","p", PrivSy.ToString(), PrivDo.ToString());
+                    DataTable dt = new DataTable();
+                    if (( dt = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries)).Rows.Count!=0)
+                    {
+                        double PrivSy = Convert.ToDouble(dt.Rows[0][1]);
+                        double PrivDo = Convert.ToDouble(dt.Rows[0][2]);
+                        // تحديث الميزانية
+                        Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                    }
                     // حذف التسجيلة من جدول العمليات 
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id,true);
                     // حذف سند الدفع

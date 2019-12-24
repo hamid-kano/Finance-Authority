@@ -87,6 +87,25 @@ namespace Finance_Authority.PL
                 this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
                 Employee_Salaries_dataGrid.Columns[20].Visible = false;
+
+                ///// عرض رقم السند وامر الصرف و المجموع الكلي في حال كان مثبت من قبل 
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows.Count != 0)
+                {
+                    int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Program.Emission_Salaries_id), true).Rows[0][0]);
+                    DataTable dt = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries);
+                    Salary_Total.Text = dt.Rows[0][1].ToString();
+                    Payment_Document_no.Text= dt.Rows[0][4].ToString();
+                    Payment_Document_No_Order.Text = dt.Rows[0][5].ToString();
+                    Employee_Salaries_commit.Text = "اعادة تثبيت التسليم";
+                }
+                else
+                {
+                    Salary_Total.Text = "";
+                    Payment_Document_no.Text = "";
+                    Payment_Document_No_Order.Text = "";
+                    Employee_Salaries_commit.Text = "تثبيت التسليم";
+                }
+                ///
             }
             catch (Exception)
             {
@@ -365,6 +384,15 @@ namespace Finance_Authority.PL
                    dt_DS.Rows[i][16].ToString(), dt_DS.Rows[i][17].ToString(), dt_DS.Rows[i][18].ToString(),
                    Program.Emission_Salaries_id, Convert.ToInt32(dt_DS.Rows[i][20]), Convert.ToInt32(dt_DS.Rows[i][0]));
             }
+            Program.Special_Message("تم التثبيت بنجاح");
+            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(-1);
+            Employee_Salaries_dataGrid.Columns[0].Visible = false;
+            this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
+            this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
+            this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
+            this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
+            Employee_Salaries_dataGrid.Columns[20].Visible = false;
+
         }
 
         private void Payment_Document_no_KeyPress(object sender, KeyPressEventArgs e)

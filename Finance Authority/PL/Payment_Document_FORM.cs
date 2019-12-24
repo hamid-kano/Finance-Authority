@@ -21,6 +21,8 @@ namespace Finance_Authority.PL
         BL.CLS_Operations ope = new BL.CLS_Operations();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         BL.CLS_Bills_Details bill_details = new BL.CLS_Bills_Details();
+        BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
+        BL.CLS_Emission_Salaries emission = new BL.CLS_Emission_Salaries();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -85,6 +87,16 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_add_Click(object sender, EventArgs e)
         {
+            if (Payment_Document_Comb_Cate.Text == "رواتب")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع رواتب عليك تثبيت الرواتب ليتم توليد سند بشكل تلقائي");
+                return;
+            }
+            if (Payment_Document_Comb_Cate.Text == "فاتورة")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع فاتورة عليك اضافة فاتورة ليتم توليد سند بشكل تلقائي");
+                return;
+            }
             if (Payment_Document_sy.Text == String.Empty && Payment_Document_Dollar.Text == String.Empty)
             {
 
@@ -166,6 +178,17 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
         {
+            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "رواتب")
+            {
+                Program.Special_Message("لا يمكن تعديل سند من نوع رواتب عليك تعديل الرواتب المرتبطة به");
+                return;
+            }
+            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "فاتورة")
+            {
+                Program.Special_Message("لا يمكن تعديل سند من نوع فاتورة عليك تعديل الفاتورة المرتبطة به");
+                return;
+            }
+
             if (Payment_Document_sy.Text == String.Empty && Payment_Document_Dollar.Text == String.Empty)
             {
 
@@ -264,6 +287,25 @@ namespace Finance_Authority.PL
                     //
 
                 }
+                if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "رواتب")
+                {
+
+                    // حذف الاصدار التابعة لهذا السند في حال كانت من نوع فاتورة
+                    if (MessageBox.Show("هذا السند مرتبط برواتب العاملين اذا تم حذفه سيتم حذف الرواتب المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        int Emission_ID = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true).Rows[0][0]);
+                        emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Emission_ID); // delete salaries for this emission
+                        emission.Emission_Salaries_Delete(Emission_ID); // delete emission
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, Emission_ID, true);// delete operations
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    //
+
+                }
+
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete", "p", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();

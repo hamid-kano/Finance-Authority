@@ -249,17 +249,21 @@ namespace Finance_Authority.PL
             }
 
             DataTable Dt = Pay.Payment_Document_View();
+            int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
             for (int i = 0; i < Dt.Rows.Count; i++)
             {
-                if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                if ((int)Dt.Rows[i][0] != id_Pay)
                 {
-                    MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
-                {
-                    MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                    {
+                        MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                    {
+                        MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
                 }
             }
 

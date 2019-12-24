@@ -68,6 +68,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف نوع السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (tempName == "فاتورة" || tempName == "دفعة قرض" || tempName == "رواتب" || tempName == "قرض")
+            {
+                Program.Special_Message("لايمكن تعديل هذا الصنف");
+                return;
+            }
+
             DataTable Dt = new DataTable();
             Dt = Doc.Document_Category_Cheack(Document_Category_Name.Text);
             if (Dt.Rows.Count == 0 || Document_Category_Name.Text == this.Document_Category_Gridview.CurrentRow.Cells[1].Value.ToString())
@@ -105,7 +111,7 @@ namespace Finance_Authority.PL
 
         private void Document_Category_delete_Click(object sender, EventArgs e)
         {
-            if (tempName=="فاتورة" || tempName == "دفعة قرض" || tempName == "رواتب")
+            if (tempName=="فاتورة" || tempName == "دفعة قرض" || tempName == "رواتب" || tempName == "قرض")
             {
                 Program.Special_Message("لايمكن حذف هذا الصنف");
                 return;

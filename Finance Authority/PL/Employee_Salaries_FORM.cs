@@ -19,7 +19,9 @@ namespace Finance_Authority.PL
         BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
         BL.CLS_Operations ope = new BL.CLS_Operations();
         BL.CLS_Budget budget = new BL.CLS_Budget();
-
+        BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
+        BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
+        BL.CLS_Employee emp = new BL.CLS_Employee();
         public Employee_Salaries_FORM()
         {
             InitializeComponent();
@@ -76,13 +78,15 @@ namespace Finance_Authority.PL
         {
             try
             {
-                int idDepartment = Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue);
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(idDepartment);
+                Program.Emission_Salaries_id = Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue);
+                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(Program.Emission_Salaries_id);
                 Employee_Salaries_dataGrid.Columns[0].Visible = false;
                 this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
+                Employee_Salaries_Office_txt.Text= Empl_Sala.Employee_Salaries_Search_Emission_Salaries(Program.Emission_Salaries_id).Rows[0][2].ToString();
                 this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
+                Employee_Salaries_dataGrid.Columns[20].Visible = false;
             }
             catch (Exception)
             {
@@ -152,6 +156,7 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
+            this.Employee_Salaries_dataGrid.Columns[20].Visible = false;
 
         }
 
@@ -226,7 +231,7 @@ namespace Finance_Authority.PL
                 this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
-
+                Employee_Salaries_dataGrid.Columns[20].Visible = false;
             }
             catch (Exception)
             {
@@ -272,6 +277,11 @@ namespace Finance_Authority.PL
 
         private void Employee_Salaries_commit_Click(object sender, EventArgs e)
         {
+            if (!(Employee_Salaries_dataGrid.RowCount>0))
+            {
+                Program.Special_Message("ليس هناك عاملين لتثبيت بيانات الراتب");
+                return;
+            }
             if (Payment_Document_no.Text == "")
             {
                 MessageBox.Show("يجب ادخال رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -282,41 +292,78 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           DataTable Dt = Pay.Payment_Document_View();
-            for (int i = 0; i < Dt.Rows.Count; i++)
+          
+            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id,true).Rows.Count==0)
             {
-                if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                // اضافة
+                DataTable Dt = Pay.Payment_Document_View();
+                for (int i = 0; i < Dt.Rows.Count; i++)
                 {
-                    MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                    {
+                        MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                    {
+                        MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
                 }
-                if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
-                {
-                    MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-            }
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue),true).Rows.Count==0)
-            {
-                Pay.Payment_Document_add(Salary_Total.Text,"0","0", Payment_Document_no.Text,
+                ///////
+                Pay.Payment_Document_add(Salary_Total.Text==string.Empty?"0": Salary_Total.Text, "0","0", Payment_Document_no.Text,
                             Payment_Document_No_Order.Text,"رواتب","العاملين",DateTime.Now
                             ,"لايوجد",Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]),1011);
-                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue), true);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Program.Emission_Salaries_id, true);
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("add", "p", Salary_Total.Text, "0" );
             }
             else
             {
-                int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(Employee_Salaries_Saliery.SelectedValue), true).Rows[0][0]);
+                // تعديل
+                int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows[0][0]);
+                //
+                DataTable Dt = Pay.Payment_Document_View();
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    if (Convert.ToInt32(Dt.Rows[i][0])!= Payement_id_for_this_Emp_Salaries)
+                    {
+
+                        if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                        {
+                            MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                        {
+                            MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+
+                    } 
+                }
+                //
                 double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][1]);
                 double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][2]);
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
                 Program.Budget_update_after_Payment_Reciver("add", "p", Salary_Total.Text, "0");
                 //
-                Pay.Payment_Document_update(Salary_Total.Text, "0", "0", Payment_Document_no.Text,
+                Pay.Payment_Document_update(Salary_Total.Text == string.Empty ? "0" : Salary_Total.Text, "0", "0", Payment_Document_no.Text,
                      Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
                    , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1011, Payement_id_for_this_Emp_Salaries);
+            }
+            // تعديل بيانات العاملين ----- في كلا الحالتين اول مرة تثبيت او في التثبيت اكثر من مرة
+            DataTable dt_DS =(DataTable)Employee_Salaries_dataGrid.DataSource;
+            for (int i = 0; i < Employee_Salaries_dataGrid.RowCount; i++)
+            {
+               emp_Sal.Employee_Salaries_update(dt_DS.Rows[i][3].ToString() 
+                   , dt_DS.Rows[i][4].ToString(), dt_DS.Rows[i][5].ToString(), dt_DS.Rows[i][6].ToString(),
+                   dt_DS.Rows[i][7].ToString(), dt_DS.Rows[i][8].ToString(), dt_DS.Rows[i][9].ToString(),
+                   dt_DS.Rows[i][10].ToString(), dt_DS.Rows[i][11].ToString(), dt_DS.Rows[i][12].ToString(),
+                   dt_DS.Rows[i][13].ToString(), dt_DS.Rows[i][14].ToString(), dt_DS.Rows[i][15].ToString(),
+                   dt_DS.Rows[i][16].ToString(), dt_DS.Rows[i][17].ToString(), dt_DS.Rows[i][18].ToString(),
+                   Program.Emission_Salaries_id, Convert.ToInt32(dt_DS.Rows[i][20]), Convert.ToInt32(dt_DS.Rows[i][0]));
             }
         }
 

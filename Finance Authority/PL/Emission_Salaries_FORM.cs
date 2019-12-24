@@ -67,12 +67,9 @@ namespace Finance_Authority.PL
                 else
                 {
                     emp_Sal.Employee_Salaries_add("", "مثبت", "", "", "", "", "", "", "", "", "", "", "", "", "", "", id_last_emission, Convert.ToInt32(item[0]));
-
                 }
             }
-
             ////////
-
             /// اضافة ملحقات لهذا لاصدار الرواتب
             if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الاصدار؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
@@ -87,10 +84,32 @@ namespace Finance_Authority.PL
             LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة اصدار راتب", DateTime.Now);
             Emission_Salaries_add.Enabled = false;
         }
-
         private void Emission_Salaries_update_Click(object sender, EventArgs e)
         {
             Emiss.Emission_Salaries_update(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue), Program.Emission_Salaries_id);
+            /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
+            if (this.Emission_Salaries_dataGrid.CurrentRow.Cells[1].Value.ToString()!= Emission_Salaries_Name_office.SelectedText)
+            {
+                //  حذف  رواتب العاملين التابعين لهذا الاصدار الذي يتبع المكتب القديم
+                emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Program.Emission_Salaries_id);
+                ///
+                // اضافة الموظفين التابعين للمكتب الجديد على نفس ايدي الاصدار للمكتب القديم
+                DataTable dt_new_Office = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.SelectedText);
+                //  الحصول على الايام المتبقية للعقد الخاص بالموظف حلقة الادخال
+                foreach (DataRow item in dt_new_Office.Rows)
+                {
+                    if (item[1].ToString() == "عقد")
+                    {
+                        int TotalDays_Remind = Convert.ToInt32((Convert.ToDateTime(emp.Contracts_View_id((int)item[0]).Rows[0][3]) - DateTime.Now.Date).TotalDays);
+                        emp_Sal.Employee_Salaries_add("", TotalDays_Remind.ToString(), "", "", "", "", "", "", "", "", "", "", "", "", "", "", Program.Emission_Salaries_id, Convert.ToInt32(item[0]));
+                    }
+                    else
+                    {
+                        emp_Sal.Employee_Salaries_add("", "مثبت", "", "", "", "", "", "", "", "", "", "", "", "", "", "", Program.Emission_Salaries_id, Convert.ToInt32(item[0]));
+
+                    }
+                }
+            }
             this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
             Emission_Salaries_dataGrid.Columns[0].Visible = false;
             Program.Update_Message();
@@ -125,12 +144,16 @@ namespace Finance_Authority.PL
                     double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][1]);
                     double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries).Rows[0][2]);
                     // تحديث الميزانية
-                    Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                    Program.Budget_update_after_Payment_Reciver("delete","p", PrivSy.ToString(), PrivDo.ToString());
                     // حذف التسجيلة من جدول العمليات 
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id,true);
                     // حذف سند الدفع
                     Pay.Payment_Document_Delete(Payement_id_for_this_Emp_Salaries);
                 }
+
+                // حذف  رواتب العاملين التابعين لهذا الاصدار
+                 emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Program.Emission_Salaries_id);
+                ///
                 Emiss.Emission_Salaries_Delete(Program.Emission_Salaries_id);
                 this.Emission_Salaries_dataGrid.DataSource = Emiss.Emission_Salaries_View();
                 Emission_Salaries_dataGrid.Columns[0].Visible = false;

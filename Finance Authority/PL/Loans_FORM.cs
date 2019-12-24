@@ -90,6 +90,22 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            DataTable Dt = Pay.Payment_Document_View();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                    if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                    {
+                        MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                    {
+                        MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+            }
+
+
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);

@@ -312,15 +312,13 @@ namespace Finance_Authority.PL
                 return;
             }
           
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id,true).Rows.Count==0)
+            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id,true).Rows.Count ==0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();
-                int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows[0][0]);
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
-                    if ((int)Dt.Rows[i][0] != id_Pay)
-                    {
+                   
                         if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
                         {
                             MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -331,7 +329,7 @@ namespace Finance_Authority.PL
                             MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return;
                         }
-                    }
+                  
                 }
                 ///////
                 Pay.Payment_Document_add(Salary_Total.Text==string.Empty?"0": Salary_Total.Text, "0","0", Payment_Document_no.Text,
@@ -345,7 +343,6 @@ namespace Finance_Authority.PL
             {
                 // تعديل
                 int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true).Rows[0][0]);
-                //
                 DataTable Dt = Pay.Payment_Document_View();
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {

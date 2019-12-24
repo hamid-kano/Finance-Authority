@@ -22,6 +22,7 @@ namespace Finance_Authority.PL
         BL.CLS_Budget budget = new BL.CLS_Budget();
         BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
         BL.CLS_Operations ope = new BL.CLS_Operations();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         int _Bill_ID=-1; // update Status ;
         bool StatePaied;
         public Bills_Details_FORM(int Bills_ID)
@@ -166,6 +167,7 @@ namespace Finance_Authority.PL
                 FRM.ShowDialog();
             }
             Program.Add_Message();
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة مادة فاتورة جديدة", DateTime.Now);
             // اضافة فاتورة مدفوعة
             if (Bills_Paid.Checked)  //اضافة سند دفع لهذه الفاتورة
             {
@@ -241,6 +243,7 @@ namespace Finance_Authority.PL
             }
             Bills_FORM frm = Bills_FORM.getMainForm;
             frm.Bills_dataGrid.DataSource = obj.Bills_View();
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل مواد فاتورة", DateTime.Now);
             // لم تكن مدفوعة واصبحت مدفوعة
             if (!StatePaied && Bills_Paid.Checked) // توليد سند دفع للفاتورة في حال اصبحت مدفوعة
             {
@@ -309,6 +312,7 @@ namespace Finance_Authority.PL
                 Bills_FORM frm = Bills_FORM.getMainForm;
                 frm.Bills_dataGrid.DataSource = obj.Bills_View();
                 Program.Delete_Message();
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف مادة من الفاتورة", DateTime.Now);
                 if (_Bill_ID==-1)
                 {
                     Bills_update.Enabled = false;

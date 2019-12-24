@@ -19,6 +19,7 @@ namespace Finance_Authority.PL
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         DataTable Dt = new DataTable();
         BL.CLS_Operations ope = new BL.CLS_Operations();
+        BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         BL.CLS_Bills_Details bill_details = new BL.CLS_Bills_Details();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
@@ -151,7 +152,8 @@ namespace Finance_Authority.PL
             }
             ////
             Program.Add_Message();
-                Payment_Document_sy.Text = "";
+            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة سند دفع", DateTime.Now);
+            Payment_Document_sy.Text = "";
                 Payment_Document_Dollar.Text = "";
                 Payment_Document_rate.Text = "";
                 Payment_Document_no.Text = "";
@@ -224,7 +226,8 @@ namespace Finance_Authority.PL
                 this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
                 this.Payment_Document_dataGrid.Columns[0].Visible = false;
                 Program.Update_Message();
-                Payment_Document_sy.Text = "";
+            LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل سند دفع", DateTime.Now);
+            Payment_Document_sy.Text = "";
                 Payment_Document_Dollar.Text = "";
                 Payment_Document_rate.Text = "";
                 Payment_Document_no.Text = "";
@@ -269,6 +272,7 @@ namespace Finance_Authority.PL
                 this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
                 this.Payment_Document_dataGrid.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف سند دفع", DateTime.Now);
                 Payment_Document_sy.Text = "";
                 Payment_Document_Dollar.Text = "";
                 Payment_Document_rate.Text = "";
@@ -328,6 +332,7 @@ namespace Finance_Authority.PL
             report.SetDataSource(DS);
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
+            LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة سند دفع", DateTime.Now);
         }
 
         private void Payment_Document_Search_TextChanged(object sender, EventArgs e)

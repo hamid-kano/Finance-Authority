@@ -20,6 +20,9 @@ namespace Finance_Authority.PL
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         BL.Authority Auth = new BL.Authority();
         BL.Department Dep = new BL.Department();
+        BL.CLS_Reciver_Document reciver_Document = new BL.CLS_Reciver_Document();
+        BL.CLS_Budget budget = new BL.CLS_Budget();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
         DataTable Dt = new DataTable();
         double sum;
         double sumtotal;
@@ -67,15 +70,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //int idDepartment = Convert.ToInt32(Leoan_Payments_Comb_Department.SelectedValue);
-            //int idemployee = Convert.ToInt32(Leoan_Payments_Comb_Employ.SelectedValue);
-            //int idDatelaon = Convert.ToInt32(Leoan_Payments_Comb_Dateloean.SelectedValue);
-            //DataTable DT = pay_Leo.Payments_Leoan_by_Departmentid_Employeeid_Loean(idDepartment, idemployee, idDatelaon);
-            //if (DT.Rows.Count > 0)
-            //{
-            //    DataRow row = DT.Rows[0];
-            //    int idLoans_ID = Convert.ToInt32(row["Loans_ID"]);
-                pay_Leo.Leoan_Payments_add(Program.Loan_id,Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text , Leoan_Payments_Date.Value , Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue));
+
+            if (Reciver_Document_no.Text == String.Empty)
+            {
+                MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            pay_Leo.Leoan_Payments_add(Program.Loan_id,Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text , Leoan_Payments_Date.Value , Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue));
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 int Max_loan_Payment_id =Convert.ToInt32(pay_Leo.Leoan_Payments_MAX_id().Rows[0][0]);
@@ -85,8 +86,15 @@ namespace Finance_Authority.PL
                     Document_FORM FRM = new Document_FORM(Max_loan_Payment_id, "دفعة قرض");
                     FRM.ShowDialog();
                 }
-                ////
-
+            ////
+            //// اضافة سند استلام وضع العملية في جدول العمليات وتحيث الميزانية
+            int Loan_MAX_ID =Convert.ToInt16(pay_Leo.Leoan_Payments_MAX_id().Rows[0][0]);
+            reciver_Document.Reciver_Document_add(Leoan_Payments_Amont.Text, "0", "0", Reciver_Document_no.Text,
+                             "دفعة قرض", "العاملين", DateTime.Now, "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010);
+            ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(reciver_Document.Reciver_Document_Max_ID().Rows[0][0]), Loan_MAX_ID, false);
+            // تحديث الميزانية
+            Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text, "0");
+            //
             Program.Add_Message();
             LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة دفعة قرض جديدة", DateTime.Now);
             Leoan_Payments_Amont.Text = "";
@@ -111,16 +119,32 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //int idDepartment = Convert.ToInt32(Leoan_Payments_Comb_Department.SelectedValue);
-            //int idemployee = Convert.ToInt32(Leoan_Payments_Comb_Employ.SelectedValue);
-            //int idDatelaon = Convert.ToInt32(Leoan_Payments_Comb_Dateloean.SelectedValue);
-            //DataTable DT = pay_Leo.Payments_Leoan_by_Departmentid_Employeeid_Loean(idDepartment, idemployee, idDatelaon);
-            //if (DT.Rows.Count > 0)
-            //{
-            //    DataRow row = DT.Rows[0];
-            //    int idLoans_ID = Convert.ToInt32(row["Loans_ID"]);
-                pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
-                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
+            if (Reciver_Document_no.Text == String.Empty)
+            {
+                MessageBox.Show("اضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            DataTable Dt = new DataTable();
+            Dt = reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text);
+            if (Dt.Rows.Count!=0)
+            {
+                MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
+            ////  
+            int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false).Rows[0][0]);
+            double PrivSy = Convert.ToDouble(reciver_Document.Reciver_Document_Search_by_id(id_Pay).Rows[0][1]);
+            double PrivDo = Convert.ToDouble(reciver_Document.Reciver_Document_Search_by_id(id_Pay).Rows[0][2]);
+            // تحديث الميزانية
+            Program.Budget_update_after_Payment_Reciver("delete", "r", PrivSy.ToString(), PrivDo.ToString());
+            Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text == string.Empty ? "0" : Leoan_Payments_Amont.Text, "0");
+            //
+            reciver_Document.Reciver_Document_update(Leoan_Payments_Amont.Text, "0", "0", Reciver_Document_no.Text
+                , "دفعة قرض", "العاملين", DateTime.Now , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010, id_Pay);
+
+            ///
+            this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
             LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل دفعة قرض", DateTime.Now);
@@ -153,6 +177,15 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف دفعة القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 pay_Leo.Leoan_Payments_Delete(Program.Leoan_Payments_id);
+                //delete Payment Doc -- Delete row Operation -- update Budget
+                // يحذف سند القبض الخاص بها اذا كان لها سند قبض
+                int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, true).Rows[0][0]);
+                // تحديث الميزانية
+                Program.Budget_update_after_Payment_Reciver("delete", "r", reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments).Rows[0][1].ToString(), reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments).Rows[0][2].ToString());
+                //
+                reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
+                ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Program.Leoan_Payments_id, false);
+                //
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);

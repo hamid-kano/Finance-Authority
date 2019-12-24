@@ -18,6 +18,8 @@ namespace Finance_Authority.PL
         int indexRowDeleted_or_Updated;
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
+        BL.CLS_Leoan_Payments leoan_Payments = new BL.CLS_Leoan_Payments();
+        BL.CLS_Operations ope = new BL.CLS_Operations();
         public Reciver_Document_FORM()
         {
             InitializeComponent();
@@ -52,6 +54,11 @@ namespace Finance_Authority.PL
         }
         private void Reciver_Document_add_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_Comb_Cate.Text == "دفعة قرض")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع دفعة قرض عليك اضافة دفعة قرض  ليتم توليد سند بشكل تلقائي");
+                return;
+            }
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
             {
 
@@ -121,6 +128,11 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
         {
+            if (Reciver_Document_Comb_Cate.Text == "دفعة قرض")
+            {
+                Program.Special_Message("لا يمكن تعديل سند من نوع دفعة قرض عليك تعديل دفعة القرض  ليتم تعديل السند بشكل تلقائي");
+                return;
+            }
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
             {
 
@@ -178,7 +190,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("رقم سند الاستعلام موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 return;
             } 
@@ -209,8 +221,27 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_delete_Click(object sender, EventArgs e)
         {
+           
             if (MessageBox.Show("هل تريد حذف سند الاستلام .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (this.Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString() == "دفعة قرض")
+                {
+
+                    // حذف الفاتورة التابعة لهذا السند في حال كانت من نوع فاتورة
+                    if (MessageBox.Show("هذا السند مرتبط بدفعة قرض اذا تم حذفه سيتم حذف دفعة قرض المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        int Loan_Pay_ID = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true).Rows[0][0]);
+                        leoan_Payments.Leoan_Payments_Delete(Loan_Pay_ID);
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Program.Reciver_Document_id, Loan_Pay_ID, false);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    //
+
+                }
+
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete","r", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();

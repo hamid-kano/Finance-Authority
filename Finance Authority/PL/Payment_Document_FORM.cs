@@ -23,6 +23,7 @@ namespace Finance_Authority.PL
         BL.CLS_Bills_Details bill_details = new BL.CLS_Bills_Details();
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Emission_Salaries emission = new BL.CLS_Emission_Salaries();
+        BL.CLS_Loan loan = new BL.CLS_Loan();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -97,6 +98,12 @@ namespace Finance_Authority.PL
                 Program.Special_Message("لا يمكن اضافة سند من نوع فاتورة عليك اضافة فاتورة ليتم توليد سند بشكل تلقائي");
                 return;
             }
+            if (Payment_Document_Comb_Cate.Text == "قرض")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع قرض عليك اضافة قرض ليتم توليد سند بشكل تلقائي");
+                return;
+            }
+
             if (Payment_Document_sy.Text == String.Empty && Payment_Document_Dollar.Text == String.Empty)
             {
 
@@ -186,6 +193,11 @@ namespace Finance_Authority.PL
             if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "فاتورة")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع فاتورة عليك تعديل الفاتورة المرتبطة به");
+                return;
+            }
+            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "قرض")
+            {
+                Program.Special_Message("لا يمكن تعديل سند من نوع قرض عليك تعديل القرض المرتبطة به");
                 return;
             }
 
@@ -297,6 +309,23 @@ namespace Finance_Authority.PL
                         emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Emission_ID); // delete salaries for this emission
                         emission.Emission_Salaries_Delete(Emission_ID); // delete emission
                         ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, Emission_ID, true);// delete operations
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    //
+
+                }
+                if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "قرض")
+                {
+
+                    // حذف الاصدار التابعة لهذا السند في حال كانت من نوع فاتورة
+                    if (MessageBox.Show("هذا السند مرتبط بقرض اذا تم حذفه سيتم حذف قرض المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        int ID_Loan = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true).Rows[0][0]);
+                        loan.Loans_Delete(ID_Loan); // delete Loan
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, ID_Loan, true);// delete operations
                     }
                     else
                     {

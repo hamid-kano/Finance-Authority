@@ -369,5 +369,15 @@ namespace Finance_Authority.PL
             Document_FORM FRM = new Document_FORM(Program.Loan_id, "قرض");
             FRM.ShowDialog();
         }
+
+        private void Payment_Document_no_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
+
+        private void Payment_Document_No_Order_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

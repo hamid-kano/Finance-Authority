@@ -158,7 +158,7 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count == 0)
+            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count != 0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();

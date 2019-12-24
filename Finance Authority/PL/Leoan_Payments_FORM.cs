@@ -236,5 +236,10 @@ namespace Finance_Authority.PL
             Document_FORM FRM = new Document_FORM(Program.Leoan_Payments_id, "دفعة قرض");
             FRM.ShowDialog();
         }
+
+        private void Reciver_Document_no_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Program.DenyChar(e);
+        }
     }
 }

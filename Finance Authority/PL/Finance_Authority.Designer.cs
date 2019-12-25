@@ -35,6 +35,9 @@
             this.Authority_Button = new MetroFramework.Controls.MetroTile();
             this.Department_Button = new MetroFramework.Controls.MetroTile();
             this.Office_Button = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
+            this.Backup_Button = new MetroFramework.Controls.MetroTile();
+            this.Backup_Restor_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.Loans_Button = new MetroFramework.Controls.MetroTile();
             this.Leoan_Payments_Button = new MetroFramework.Controls.MetroTile();
@@ -49,9 +52,6 @@
             this.Document_Category_Button = new MetroFramework.Controls.MetroTile();
             this.Reciver_Document_Button = new MetroFramework.Controls.MetroTile();
             this.Payment_Document_Button = new MetroFramework.Controls.MetroTile();
-            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
-            this.Backup_Button = new MetroFramework.Controls.MetroTile();
-            this.Backup_Restor_Button = new MetroFramework.Controls.MetroTile();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.metroTile23 = new MetroFramework.Controls.MetroTile();
             this.metroTile24 = new MetroFramework.Controls.MetroTile();
@@ -96,10 +96,10 @@
             this.update_budget = new System.Windows.Forms.Timer(this.components);
             this.Tab_Main.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            this.metroTabPage8.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
-            this.metroTabPage8.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
@@ -115,10 +115,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
+            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
             this.Tab_Main.Controls.Add(this.metroTabPage4);
-            this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage6);
             this.Tab_Main.Controls.Add(this.metroTabPage2);
             this.Tab_Main.Controls.Add(this.metroTabPage7);
@@ -127,7 +127,7 @@
             this.Tab_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Tab_Main.Name = "Tab_Main";
             this.Tab_Main.RightToLeftLayout = true;
-            this.Tab_Main.SelectedIndex = 4;
+            this.Tab_Main.SelectedIndex = 2;
             this.Tab_Main.Size = new System.Drawing.Size(1105, 134);
             this.Tab_Main.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.Tab_Main.TabIndex = 0;
@@ -195,6 +195,54 @@
             this.Office_Button.UseSelectable = true;
             this.Office_Button.Click += new System.EventHandler(this.Office_Button_Click);
             // 
+            // metroTabPage8
+            // 
+            this.metroTabPage8.Controls.Add(this.Backup_Button);
+            this.metroTabPage8.Controls.Add(this.Backup_Restor_Button);
+            this.metroTabPage8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.metroTabPage8.HorizontalScrollbarBarColor = true;
+            this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage8.HorizontalScrollbarSize = 15;
+            this.metroTabPage8.Location = new System.Drawing.Point(4, 47);
+            this.metroTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage8.Name = "metroTabPage8";
+            this.metroTabPage8.Size = new System.Drawing.Size(1097, 83);
+            this.metroTabPage8.TabIndex = 7;
+            this.metroTabPage8.Text = "النسخ الاحتياطي";
+            this.metroTabPage8.VerticalScrollbarBarColor = true;
+            this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage8.VerticalScrollbarSize = 12;
+            // 
+            // Backup_Button
+            // 
+            this.Backup_Button.ActiveControl = null;
+            this.Backup_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Backup_Button.Location = new System.Drawing.Point(915, 19);
+            this.Backup_Button.Name = "Backup_Button";
+            this.Backup_Button.Size = new System.Drawing.Size(155, 49);
+            this.Backup_Button.TabIndex = 4;
+            this.Backup_Button.Text = "النسخ الاحتياطي";
+            this.Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Backup_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Backup_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Backup_Button.UseSelectable = true;
+            this.Backup_Button.Click += new System.EventHandler(this.Backup_Button_Click);
+            // 
+            // Backup_Restor_Button
+            // 
+            this.Backup_Restor_Button.ActiveControl = null;
+            this.Backup_Restor_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Backup_Restor_Button.Location = new System.Drawing.Point(683, 19);
+            this.Backup_Restor_Button.Name = "Backup_Restor_Button";
+            this.Backup_Restor_Button.Size = new System.Drawing.Size(226, 49);
+            this.Backup_Restor_Button.TabIndex = 5;
+            this.Backup_Restor_Button.Text = "استعادة النسخ الاحتياطي";
+            this.Backup_Restor_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Backup_Restor_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.Backup_Restor_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Backup_Restor_Button.UseSelectable = true;
+            this.Backup_Restor_Button.Click += new System.EventHandler(this.Backup_Restor_Button_Click);
+            // 
             // metroTabPage5
             // 
             this.metroTabPage5.Controls.Add(this.Loans_Button);
@@ -230,7 +278,6 @@
             // Leoan_Payments_Button
             // 
             this.Leoan_Payments_Button.ActiveControl = null;
-            this.Leoan_Payments_Button.Enabled = false;
             this.Leoan_Payments_Button.Location = new System.Drawing.Point(733, 19);
             this.Leoan_Payments_Button.Name = "Leoan_Payments_Button";
             this.Leoan_Payments_Button.Size = new System.Drawing.Size(155, 49);
@@ -408,54 +455,6 @@
             this.Payment_Document_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.Payment_Document_Button.UseSelectable = true;
             this.Payment_Document_Button.Click += new System.EventHandler(this.Payment_Document_Button_Click);
-            // 
-            // metroTabPage8
-            // 
-            this.metroTabPage8.Controls.Add(this.Backup_Button);
-            this.metroTabPage8.Controls.Add(this.Backup_Restor_Button);
-            this.metroTabPage8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.metroTabPage8.HorizontalScrollbarBarColor = true;
-            this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.HorizontalScrollbarSize = 15;
-            this.metroTabPage8.Location = new System.Drawing.Point(4, 47);
-            this.metroTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage8.Name = "metroTabPage8";
-            this.metroTabPage8.Size = new System.Drawing.Size(1097, 83);
-            this.metroTabPage8.TabIndex = 7;
-            this.metroTabPage8.Text = "النسخ الاحتياطي";
-            this.metroTabPage8.VerticalScrollbarBarColor = true;
-            this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.VerticalScrollbarSize = 12;
-            // 
-            // Backup_Button
-            // 
-            this.Backup_Button.ActiveControl = null;
-            this.Backup_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Backup_Button.Location = new System.Drawing.Point(915, 19);
-            this.Backup_Button.Name = "Backup_Button";
-            this.Backup_Button.Size = new System.Drawing.Size(155, 49);
-            this.Backup_Button.TabIndex = 4;
-            this.Backup_Button.Text = "النسخ الاحتياطي";
-            this.Backup_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Backup_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Backup_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Backup_Button.UseSelectable = true;
-            this.Backup_Button.Click += new System.EventHandler(this.Backup_Button_Click);
-            // 
-            // Backup_Restor_Button
-            // 
-            this.Backup_Restor_Button.ActiveControl = null;
-            this.Backup_Restor_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Backup_Restor_Button.Location = new System.Drawing.Point(683, 19);
-            this.Backup_Restor_Button.Name = "Backup_Restor_Button";
-            this.Backup_Restor_Button.Size = new System.Drawing.Size(226, 49);
-            this.Backup_Restor_Button.TabIndex = 5;
-            this.Backup_Restor_Button.Text = "استعادة النسخ الاحتياطي";
-            this.Backup_Restor_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Backup_Restor_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Backup_Restor_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.Backup_Restor_Button.UseSelectable = true;
-            this.Backup_Restor_Button.Click += new System.EventHandler(this.Backup_Restor_Button_Click);
             // 
             // metroTabPage6
             // 
@@ -1072,10 +1071,10 @@
             this.Load += new System.EventHandler(this.Finance_Authority_Load);
             this.Tab_Main.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage8.ResumeLayout(false);
             this.metroTabPage5.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage8.ResumeLayout(false);
             this.metroTabPage6.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();

@@ -59,6 +59,21 @@ namespace Finance_Authority.PL
                 Program.Special_Message("لا يمكن اضافة سند من نوع دفعة قرض عليك اضافة دفعة قرض  ليتم توليد سند بشكل تلقائي");
                 return;
             }
+            if (Reciver_Document_Comb_Cate.Text == "رواتب")
+            {
+                Program.Special_Message("لا يمكن اضافة سند استلام من نوع رواتب لانه من انواع سندات الدفع");
+                return;
+            }
+            if (Reciver_Document_Comb_Cate.Text == "فاتورة")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع فاتورة لانه من انواع سندات الدفع");
+                return;
+            }
+            if (Reciver_Document_Comb_Cate.Text == "قرض")
+            {
+                Program.Special_Message("لا يمكن اضافة سند من نوع قرض لانه من انواع سندات الدفع");
+                return;
+            }
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
             {
 
@@ -128,11 +143,27 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
         {
-            if (Reciver_Document_Comb_Cate.Text == "دفعة قرض")
+            if (Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString() == "دفعة قرض")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع دفعة قرض عليك تعديل دفعة القرض  ليتم تعديل السند بشكل تلقائي");
                 return;
             }
+            if (Reciver_Document_Comb_Cate.Text == "رواتب")
+            {
+                Program.Special_Message("لا يمكن تعديل سند استلام الى انواع سندات الدفع");
+                return;
+            }
+            if (Reciver_Document_Comb_Cate.Text == "فاتورة")
+            {
+                Program.Special_Message("لا يمكن تعديل سند استلام الى انواع سندات الدفع");
+                return;
+            }
+            if (Reciver_Document_Comb_Cate.Text == "قرض")
+            {
+                Program.Special_Message("لا يمكن تعديل سند استلام الى انواع سندات الدفع");
+                return;
+            }
+
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)
             {
 

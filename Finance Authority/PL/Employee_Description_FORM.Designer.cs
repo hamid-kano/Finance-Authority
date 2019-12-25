@@ -90,14 +90,14 @@
             this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Employee_Description_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Description_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(818, 399);
+            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(954, 451);
             this.Employee_Description_dataGrid.TabIndex = 153;
             this.Employee_Description_dataGrid.Click += new System.EventHandler(this.Employee_Description_dataGrid_Click);
             // 
             // Employee_Description_exit
             // 
             this.Employee_Description_exit.Highlight = true;
-            this.Employee_Description_exit.Location = new System.Drawing.Point(606, 540);
+            this.Employee_Description_exit.Location = new System.Drawing.Point(606, 595);
             this.Employee_Description_exit.Name = "Employee_Description_exit";
             this.Employee_Description_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_exit.TabIndex = 14;
@@ -109,7 +109,7 @@
             // 
             this.Employee_Description_delete.Enabled = false;
             this.Employee_Description_delete.Highlight = true;
-            this.Employee_Description_delete.Location = new System.Drawing.Point(420, 539);
+            this.Employee_Description_delete.Location = new System.Drawing.Point(420, 594);
             this.Employee_Description_delete.Name = "Employee_Description_delete";
             this.Employee_Description_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_delete.TabIndex = 12;
@@ -162,7 +162,7 @@
             // Employee_Description_Print
             // 
             this.Employee_Description_Print.Highlight = true;
-            this.Employee_Description_Print.Location = new System.Drawing.Point(513, 539);
+            this.Employee_Description_Print.Location = new System.Drawing.Point(513, 594);
             this.Employee_Description_Print.Name = "Employee_Description_Print";
             this.Employee_Description_Print.Size = new System.Drawing.Size(87, 38);
             this.Employee_Description_Print.TabIndex = 13;
@@ -203,7 +203,7 @@
             // 
             this.Employee_Description_Details.Enabled = false;
             this.Employee_Description_Details.Highlight = true;
-            this.Employee_Description_Details.Location = new System.Drawing.Point(234, 541);
+            this.Employee_Description_Details.Location = new System.Drawing.Point(234, 596);
             this.Employee_Description_Details.Name = "Employee_Description_Details";
             this.Employee_Description_Details.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_Details.TabIndex = 294;
@@ -214,7 +214,7 @@
             // Employee_Description_view_all
             // 
             this.Employee_Description_view_all.Highlight = true;
-            this.Employee_Description_view_all.Location = new System.Drawing.Point(327, 540);
+            this.Employee_Description_view_all.Location = new System.Drawing.Point(327, 595);
             this.Employee_Description_view_all.Name = "Employee_Description_view_all";
             this.Employee_Description_view_all.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_view_all.TabIndex = 295;
@@ -227,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(845, 594);
+            this.ClientSize = new System.Drawing.Size(979, 657);
             this.Controls.Add(this.Employee_Description_view_all);
             this.Controls.Add(this.Employee_Description_Details);
             this.Controls.Add(this.update);

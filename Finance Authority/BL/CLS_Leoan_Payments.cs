@@ -30,7 +30,15 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-
+        public DataTable Leoan_Payments_View_all()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            Dt = DAL.selectdata("Leoan_Payments_View_all", null);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Leoan_Payments_Comb_Employee_Department(int Department_ID, int Employee_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

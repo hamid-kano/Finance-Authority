@@ -26,6 +26,7 @@ namespace Finance_Authority.PL
             {
                 this.Document_Gridview.DataSource = Doc.Document_View();
                 Document_new.Enabled = false;
+                Document_add.Enabled = false;
             }
             else
             {
@@ -129,10 +130,14 @@ namespace Finance_Authority.PL
                 Document_Extend.Text = this.Document_Gridview.CurrentRow.Cells[5].Value.ToString();
                 Document_Notes.Text = this.Document_Gridview.CurrentRow.Cells[6].Value.ToString();
                 _Doc_id= Convert.ToInt32(this.Document_Gridview.CurrentRow.Cells[7].Value);
-                Document_update.Enabled = true;
-                Document_delete.Enabled = true;
+
+                if (Document_new.Enabled)
+                {
+                    Document_update.Enabled = true;
+                    Document_delete.Enabled = true;
+                    Document_add.Enabled = false;
+                }
                 Document_Brows_File.Enabled = true;
-                Document_add.Enabled = false;
             }
         }
 

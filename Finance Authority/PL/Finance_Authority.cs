@@ -183,7 +183,7 @@ namespace Finance_Authority.PL
 
             private void Leoan_Payments_Button_Click(object sender, EventArgs e)
         {
-            Leoan_Payments_FORM FRM = new Leoan_Payments_FORM();
+            Leoan_Payments_FORM FRM = new Leoan_Payments_FORM(-1);
             FRM.ShowDialog();
         }
 

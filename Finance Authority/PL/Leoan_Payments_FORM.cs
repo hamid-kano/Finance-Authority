@@ -27,22 +27,34 @@ namespace Finance_Authority.PL
         double sum;
         double sumtotal;
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
-        public Leoan_Payments_FORM()
+        int _Loan_id;
+        public Leoan_Payments_FORM(int Loan_id)
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
             Leoan_Payments_CombSerach.DataSource = Coin.Coin_Exchange_CombBudg();
             Leoan_Payments_CombSerach.DisplayMember = "Date";
             Leoan_Payments_CombSerach.ValueMember = "Budget_Id";
-            this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
-            Leoan_Payments_Gridview.Columns[0].Visible = false;
             Leoan_Payments_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Leoan_Payments_Comb_Budget.DisplayMember = "Date";
             Leoan_Payments_Comb_Budget.ValueMember = "Budget_Id";
-            Dt= pay_Leo.Leoan_Payments_View(Program.Loan_id);
-            for(int i=0;i< Dt.Rows.Count;i++)
+            _Loan_id = Loan_id;
+            if (_Loan_id == -1)
             {
-                 sum =sum + Convert.ToDouble( Dt.Rows[i][1]);
+                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View_all();
+                Leoan_Payments_Gridview.Columns[0].Visible = false;
+                Leoan_Payments_add.Enabled = false;
+                Leoan_Payments_new.Enabled = false;
+            }
+            else
+            {
+                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
+                Leoan_Payments_Gridview.Columns[0].Visible = false;
+                Dt = pay_Leo.Leoan_Payments_View(Program.Loan_id);
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    sum = sum + Convert.ToDouble(Dt.Rows[i][1]);
+                }
             }
         }
        private void Leoan_Payments_exit_Click(object sender, EventArgs e)
@@ -193,10 +205,14 @@ namespace Finance_Authority.PL
                 Leoan_Payments_Notes.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Leoan_Payments_Date.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[3].Value.ToString();
                 Leoan_Payments_Comb_Budget.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[4].Value.ToString();
-                Leoan_Payments_update.Enabled = true;
-                Leoan_Payments_delete.Enabled = true;
+
+                if (Leoan_Payments_new.Enabled)
+                {
+                    Leoan_Payments_update.Enabled = true;
+                    Leoan_Payments_delete.Enabled = true;
+                    Leoan_Payments_add.Enabled = false;
+                }
                 Loans_Payments_Brows_Docs.Enabled = true;
-                Leoan_Payments_add.Enabled = false;
             }
         }
 
@@ -294,10 +310,13 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_FORM_Load(object sender, EventArgs e)
         {
-            Leoan_Payments_Total_Payment_Amount.Text = sum.ToString();
-            sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
-            sumtotal = sumtotal - sum;
-            Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
+            if (_Loan_id!=-1)
+            {
+                Leoan_Payments_Total_Payment_Amount.Text = sum.ToString();
+                sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
+                sumtotal = sumtotal - sum;
+                Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
+            }   
         }
 
         private void Loans_Payments_Brows_Docs_Click(object sender, EventArgs e)

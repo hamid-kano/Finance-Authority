@@ -103,7 +103,7 @@ namespace Finance_Authority.PL
                         double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
                         double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
                         // تحديث الميزانية
-                        Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                        Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                     }  
                     // حذف التسجيلة من جدول العمليات 
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id, true);
@@ -165,7 +165,7 @@ namespace Finance_Authority.PL
                         double PrivSy = Convert.ToDouble(dt.Rows[0][1]);
                         double PrivDo = Convert.ToDouble(dt.Rows[0][2]);
                         // تحديث الميزانية
-                        Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                        Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                     }
                     // حذف التسجيلة من جدول العمليات 
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id,true);

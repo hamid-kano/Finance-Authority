@@ -215,51 +215,28 @@ namespace Finance_Authority
             }
         }
 
-        // تحديث الميزانية بعد عمليات الدفع
-        // statue add ;update ;delete
-        public static void Budget_update_after_Payment_Reciver(string statue,string statusPR,string SY ,string Dollar)
+        //  تحديث الميزانية بعد عمليات الدفع و الاستلام
+        public static void Budget_update_after_Payment_Reciver(string TypeDoc,string SY ,string Dollar)
         {
-            try
-            {
-
+           
             DataRow dt_Budget_NOW = Budget_NOW();
-            int sy_now =Convert.ToInt32(dt_Budget_NOW[1]);
-            int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
-            int sy = SY != string.Empty? Convert.ToInt32(SY) : 0;
-            int dollar = Dollar != string.Empty ? Convert.ToInt32(Dollar) : 0; 
-            if (statue == "add")
+
+            if (dt_Budget_NOW!=null)
             {
-                if (statusPR=="p")
+                int sy_now = Convert.ToInt32(dt_Budget_NOW[1]);
+                int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
+                int sy = SY != string.Empty ? Convert.ToInt32(SY) : 0;
+                int dollar = Dollar != string.Empty ? Convert.ToInt32(Dollar) : 0;
+
+                if (TypeDoc == "R")
                 {
-                    budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
+                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
                 }
                 else
                 {
-                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
-                }
-            }
-            else if (statue == "update")
-            {
-                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
-            }
-            else if (statue == "delete")
-            {
-                if (statusPR == "p")
-                {
-                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
-                }
-                else 
-                {
                     budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
                 }
-            }
-            }
-            catch (Exception)
-            {
-
-              //  throw;
-            }
-
+            }     
         }
     }
 }

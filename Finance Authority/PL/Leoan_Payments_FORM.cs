@@ -98,7 +98,7 @@ namespace Finance_Authority.PL
                              "دفعة قرض", "العاملين", DateTime.Now, "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010);
             ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(reciver_Document.Reciver_Document_Max_ID().Rows[0][0]), Loan_MAX_ID, false);
             // تحديث الميزانية
-            Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text, "0");
+            Program.Budget_update_after_Payment_Reciver("R", Leoan_Payments_Amont.Text, "0");
             //
             Program.Add_Message();
             LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة دفعة قرض جديدة", DateTime.Now);
@@ -150,9 +150,9 @@ namespace Finance_Authority.PL
                     double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
                     double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
                     // تحديث الميزانية
-                    Program.Budget_update_after_Payment_Reciver("delete", "r", PrivSy.ToString(), PrivDo.ToString());
+                    Program.Budget_update_after_Payment_Reciver("P", PrivSy.ToString(), PrivDo.ToString());
                 }   
-                Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text == string.Empty ? "0" : Leoan_Payments_Amont.Text, "0");
+                Program.Budget_update_after_Payment_Reciver("R", Leoan_Payments_Amont.Text == string.Empty ? "0" : Leoan_Payments_Amont.Text, "0");
                 //
                 reciver_Document.Reciver_Document_update(Leoan_Payments_Amont.Text, "0", "0", Reciver_Document_no.Text
                     , "دفعة قرض", "العاملين", DateTime.Now, "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010, id_Pay);
@@ -215,7 +215,7 @@ namespace Finance_Authority.PL
                     DataTable Dt2;
                     if ((Dt2= reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count!=0)
                     {
-                        Program.Budget_update_after_Payment_Reciver("delete", "r", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
+                        Program.Budget_update_after_Payment_Reciver("P", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                         //
                     }
                     reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);

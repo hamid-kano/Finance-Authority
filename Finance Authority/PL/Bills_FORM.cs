@@ -92,7 +92,7 @@ namespace Finance_Authority.PL
                                 // تحديث الميزانية
                                 if ((dt3= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
                                 {
-                                    Program.Budget_update_after_Payment_Reciver("delete", "p", dt3.Rows[0][1].ToString(), dt3.Rows[0][2].ToString());
+                                    Program.Budget_update_after_Payment_Reciver("R", dt3.Rows[0][1].ToString(), dt3.Rows[0][2].ToString());
                                 }  
                                 //
                           Pay.Payment_Document_Delete(Payement_id_for_this_Bill);

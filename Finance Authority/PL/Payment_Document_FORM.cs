@@ -158,7 +158,7 @@ namespace Finance_Authority.PL
                 this.Payment_Document_dataGrid.DataSource = pay.Payment_Document_View();
                 this.Payment_Document_dataGrid.Columns[0].Visible = false;
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "p", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
+                Program.Budget_update_after_Payment_Reciver("P", Payment_Document_sy.Text, Payment_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
             //
 
@@ -247,10 +247,10 @@ namespace Finance_Authority.PL
                     } 
                 }
             }
-            int Sy_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value) - Convert.ToInt32(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text);
-            int Dollar_After_Updat = Convert.ToInt32(this.Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value) - Convert.ToInt32(Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text);
-                Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-                frm.Update_label_finance_Box();
+            Program.Budget_update_after_Payment_Reciver("R", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(),
+                                                                    Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+            Program.Budget_update_after_Payment_Reciver("P", Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text,
+                                                                    Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text);
                 //
                 pay.Payment_Document_update(Payment_Document_sy.Text == string.Empty ? "0" : Payment_Document_sy.Text,
                                          Payment_Document_Dollar.Text == string.Empty ? "0" : Payment_Document_Dollar.Text,
@@ -349,7 +349,7 @@ namespace Finance_Authority.PL
                 }
 
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete", "p", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+                Program.Budget_update_after_Payment_Reciver("R", Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Payment_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();
                 //
                 pay.Payment_Document_Delete(Program.Payment_Document_id);

@@ -342,7 +342,7 @@ namespace Finance_Authority.PL
                             ,"لايوجد",Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]),1011);
                 ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Program.Emission_Salaries_id, true);
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "p", Salary_Total.Text, "0" );
+                Program.Budget_update_after_Payment_Reciver("P", Salary_Total.Text, "0" );
             }
             else
             {
@@ -377,9 +377,9 @@ namespace Finance_Authority.PL
                         double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
                         double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
                         // تحديث الميزانية
-                        Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                        Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                     }
-                    Program.Budget_update_after_Payment_Reciver("add", "p", Salary_Total.Text, "0");
+                    Program.Budget_update_after_Payment_Reciver("P", Salary_Total.Text, "0");
                     //
                     Pay.Payment_Document_update(Salary_Total.Text == string.Empty ? "0" : Salary_Total.Text, "0", "0", Payment_Document_no.Text,
                          Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now

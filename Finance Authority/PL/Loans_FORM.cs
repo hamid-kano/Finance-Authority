@@ -132,7 +132,7 @@ namespace Finance_Authority.PL
                             , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1012);
                 ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Max_loan_id, true);
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "p", Loans_Amont.Text, "0");
+                Program.Budget_update_after_Payment_Reciver("P", Loans_Amont.Text, "0");
                 ////
                 Program.Add_Message();
                 LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة قرض جديد", DateTime.Now);
@@ -224,9 +224,9 @@ namespace Finance_Authority.PL
                     double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
                     double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
                     // تحديث الميزانية
-                    Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                    Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                 }  
-                Program.Budget_update_after_Payment_Reciver("add", "p", Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0");
+                Program.Budget_update_after_Payment_Reciver("P", Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0");
                 //
                 Pay.Payment_Document_update(Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
                      Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
@@ -278,7 +278,7 @@ namespace Finance_Authority.PL
                     {
 
                     }
-                Program.Budget_update_after_Payment_Reciver("delete", "p", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
+                Program.Budget_update_after_Payment_Reciver("R", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                 //
                 Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
                 ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, true);

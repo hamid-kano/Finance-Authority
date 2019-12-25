@@ -196,7 +196,7 @@ namespace Finance_Authority.PL
                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), true);
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
+                Program.Budget_update_after_Payment_Reciver("P", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
                 //
             }
@@ -297,7 +297,7 @@ namespace Finance_Authority.PL
                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
                 ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, true);
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "p", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
+                Program.Budget_update_after_Payment_Reciver("P", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
                 //
                 StatePaied = true;
@@ -315,9 +315,9 @@ namespace Finance_Authority.PL
                         double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
                         double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
                         // تحديث الميزانية بعد تعديل سند الدفع
-                        double Sy_After_Updat = Convert.ToDouble(PrivSy - Convert.ToDouble(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text));
-                        double Dollar_After_Updat = Convert.ToDouble(PrivDo - Convert.ToDouble(Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text));
-                        Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+                        Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
+                        Program.Budget_update_after_Payment_Reciver("P", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
+                                                                                Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
                         ///
                         Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                              Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
@@ -338,7 +338,7 @@ namespace Finance_Authority.PL
                         DataTable dt2;
                         if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
                         {
-                            Program.Budget_update_after_Payment_Reciver("delete", "p", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
+                            Program.Budget_update_after_Payment_Reciver("R", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
                         }   
                         //
                         Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
@@ -368,7 +368,7 @@ namespace Finance_Authority.PL
                     DataTable dt2;
                     if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
                     {
-                        Program.Budget_update_after_Payment_Reciver("delete", "p", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
+                        Program.Budget_update_after_Payment_Reciver("R", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
                     }                    //
                     Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);

@@ -96,7 +96,7 @@ namespace Finance_Authority.PL
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("add", "r", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
+                Program.Budget_update_after_Payment_Reciver("R", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
                 //
                 /// اضافة ملحقات لسند القبض
@@ -169,10 +169,10 @@ namespace Finance_Authority.PL
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 // تحديث الميزانية
-                int Sy_After_Updat = Convert.ToInt32(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value);
-                int Dollar_After_Updat = Convert.ToInt32(Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text) - Convert.ToInt32(this.Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value);
-                Program.Budget_update_after_Payment_Reciver("update", "r", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-                frm.Update_label_finance_Box();
+                Program.Budget_update_after_Payment_Reciver("P", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(),
+                                                                        Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+                Program.Budget_update_after_Payment_Reciver("R", Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
+                                                                        Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text);
                 //
                 Program.Update_Message();
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل سند استلام", DateTime.Now);
@@ -245,7 +245,7 @@ namespace Finance_Authority.PL
                     //
                 }
                 // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete","r", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
+                Program.Budget_update_after_Payment_Reciver("P", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();
                 //
                 Reciv.Reciver_Document_Delete(Program.Reciver_Document_id);

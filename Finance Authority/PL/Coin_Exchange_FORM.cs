@@ -59,6 +59,8 @@ namespace Finance_Authority.PL
                 Coin_Exchange_Date.Text = this.Coin_Exchange_Gridview.CurrentRow.Cells[4].Value.ToString();
                 Coin_Exchange_Notes.Text = this.Coin_Exchange_Gridview.CurrentRow.Cells[5].Value.ToString();
                 Coin_Exchange_CombBudge.Text = this.Coin_Exchange_Gridview.CurrentRow.Cells[6].Value.ToString();
+                Coin_EX_RB_DtoS.Checked = Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) ? true : false;
+                Coin_EX_RB_StoD.Checked = Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) ? false : true;
                 Coin_Exchange_update.Enabled = true;
                 Coin_Exchange_delete.Enabled = true;
                 Coin_Exchange_add.Enabled = false;
@@ -85,7 +87,21 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue));
+            Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue),Coin_EX_RB_DtoS.Checked);
+            //// تحديث الميزانية
+            if (Coin_EX_RB_StoD.Checked)
+            {
+                // اذا كان التحويل من سوري الى دولار يتم انقاص المبلغ السوري من الميزانية وزيادة مبلغ الدولار
+                Program.Budget_update_after_Payment_Reciver("add", "p", Coin_Exchange_Sy.Text, "0");
+                Program.Budget_update_after_Payment_Reciver("add", "r", "0", Coin_Exchange_Dollar.Text);
+            }
+            else
+            {
+                // اذا كان التحويل من دولار الى سوري يتم انقاص المبلغ بالدولار من الميزانية وزيادة مبلغ السوري
+                Program.Budget_update_after_Payment_Reciver("add", "p","0", Coin_Exchange_Dollar.Text);
+                Program.Budget_update_after_Payment_Reciver("add", "r", Coin_Exchange_Sy.Text, "0");
+            }
+            ///            
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Program.Add_Message();
@@ -117,7 +133,34 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Coin.Coin_Exchange_update(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue), Program.Coin_Exchange_id);
+            // كانت من دولار الى سوري واصبحت من سوري الى دولار
+            if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value)&& Coin_EX_RB_StoD.Checked)
+            {
+                // ارجاع مبلغ الدولار الى الميزانية ومن ثم انقاص المبلغ السوري من الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "r", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+                Program.Budget_update_after_Payment_Reciver("add", "p", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+            }
+            // كانت من سوري الى دولار واصبحت من دولار الى سوري
+            else if(!Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) && Coin_EX_RB_DtoS.Checked)
+            {
+                // يتم ارجاع مبلغ السوري الى الميزانية ويتم انقاص مبلغ الدولار من الميزانية
+                Program.Budget_update_after_Payment_Reciver("add", "r", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(),"0");
+                Program.Budget_update_after_Payment_Reciver("add", "p", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+            }
+            /// معالجة التحديث في حال بقيت دون عكس التحويل
+            if (Coin_EX_RB_StoD.Checked)
+            {
+                // اذا كان التحويل من سوري الى دولار يتم انقاص المبلغ السوري من الميزانية وزيادة مبلغ الدولار
+                Program.Budget_update_after_Payment_Reciver("add", "p", Coin_Exchange_Sy.Text, "0");
+                Program.Budget_update_after_Payment_Reciver("add", "r", "0", Coin_Exchange_Dollar.Text);
+            }
+            else
+            {
+                // اذا كان التحويل من دولار الى سوري يتم انقاص المبلغ بالدولار من الميزانية وزيادة مبلغ السوري
+                Program.Budget_update_after_Payment_Reciver("add", "p", "0", Coin_Exchange_Dollar.Text);
+                Program.Budget_update_after_Payment_Reciver("add", "r", Coin_Exchange_Sy.Text, "0");
+            }
+            Coin.Coin_Exchange_update(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue), Coin_EX_RB_DtoS.Checked, Program.Coin_Exchange_id);
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
             Program.Update_Message();
@@ -134,6 +177,20 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد حذف تحويل العملة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                /// معالجة الحذف 
+                if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value))
+                {
+                    // اذا كان التحويل من دولار الى سوري يتم يتم ارجاع مبلغ الدولار وانقاص مبلغ السوري
+                    Program.Budget_update_after_Payment_Reciver("add", "r", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+                    Program.Budget_update_after_Payment_Reciver("add", "p", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+                }
+                else
+                {
+                    // اذا كان التحويل من سوري الى دولار يتم ارجاع المبلغ السوري الى الميزانية وانقاص مبلغ الدولار
+                    Program.Budget_update_after_Payment_Reciver("add", "r", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+                    Program.Budget_update_after_Payment_Reciver("add", "p", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+                }
+                /////
                 Coin.Coin_Exchange_Delete(Program.Coin_Exchange_id);
                 this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
                 Coin_Exchange_Gridview.Columns[0].Visible = false;
@@ -179,6 +236,52 @@ namespace Finance_Authority.PL
         {
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;
+        }
+
+        private void Coin_EX_RB_DtoS_CheckedChanged(object sender, EventArgs e)
+        {
+            //Coin_Exchange_Sy.ReadOnly = true;
+            //Coin_Exchange_Dollar.ReadOnly = false;
+        }
+
+        private void Coin_EX_RB_StoD_CheckedChanged(object sender, EventArgs e)
+        {
+            //Coin_Exchange_Dollar.ReadOnly = true;
+            //Coin_Exchange_Sy.ReadOnly = false;
+        }
+
+        private void Coin_Exchange_Sy_TextChanged(object sender, EventArgs e)
+        {
+            if (Coin_EX_RB_StoD.Checked)
+            {
+                Coin_Exchange_Dollar.Text = (double.TryParse(Coin_Exchange_Sy.Text, out double temp) ? temp * (double.TryParse(Coin_Exchange_rate.Text, out double rate) ? rate : 1)
+                                             : 1 * (double.TryParse(Coin_Exchange_rate.Text, out double rate2) ? rate2 : 1)).ToString();
+            }
+        }
+
+        private void Coin_Exchange_Dollar_TextChanged(object sender, EventArgs e)
+        {
+            if (Coin_EX_RB_DtoS.Checked)
+            {
+                Coin_Exchange_Sy.Text = (double.TryParse(Coin_Exchange_Dollar.Text, out double temp) ? temp * (double.TryParse(Coin_Exchange_rate.Text, out double rate) ? rate : 1)
+                                                : 1 * (double.TryParse(Coin_Exchange_rate.Text, out double rate2) ? rate2 : 1)).ToString();
+
+            }
+        }
+
+        private void Coin_Exchange_rate_TextChanged(object sender, EventArgs e)
+        {
+            if (Coin_EX_RB_DtoS.Checked)
+            {
+                Coin_Exchange_Sy.Text = (double.TryParse(Coin_Exchange_Dollar.Text, out double temp) ? temp * (double.TryParse(Coin_Exchange_rate.Text, out double rate) ? rate : 1)
+                                                    : 1 * (double.TryParse(Coin_Exchange_rate.Text, out double rate2) ? rate2 : 1)).ToString();
+
+            }
+            else
+            {
+                Coin_Exchange_Dollar.Text = (double.TryParse(Coin_Exchange_Sy.Text, out double temp) ? temp * (double.TryParse(Coin_Exchange_rate.Text, out double rate) ? rate : 1)
+                                             : 1 * (double.TryParse(Coin_Exchange_rate.Text, out double rate2) ? rate2 : 1)).ToString();
+            }
         }
     }
 }

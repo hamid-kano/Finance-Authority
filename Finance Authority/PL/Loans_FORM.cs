@@ -174,6 +174,16 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Payment_Document_no.Text == "")
+            {
+                MessageBox.Show("يجب ادخال رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (Payment_Document_No_Order.Text == "")
+            {
+                MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count != 0)
             {
                 // اضافة

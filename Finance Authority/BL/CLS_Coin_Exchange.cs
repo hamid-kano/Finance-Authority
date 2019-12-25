@@ -19,29 +19,7 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Coin_Exchange_add(string Amount_SY ,string Amount_Dollar ,string Exchange_rate ,DateTime Date, string Notes , int Budget_Id)
-        {
-            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
-            DAL.open();
-            DataTable Dt = new DataTable();
-            SqlParameter[] param = new SqlParameter[6];
-            param[0] = new SqlParameter("@Amount_SY", SqlDbType.NVarChar);
-            param[0].Value = Amount_SY;
-            param[1] = new SqlParameter("@Amount_Dollar", SqlDbType.NVarChar);
-            param[1].Value = Amount_Dollar;
-            param[2] = new SqlParameter("@Exchange_rate", SqlDbType.NVarChar);
-            param[2].Value = Exchange_rate;
-            param[3] = new SqlParameter("@Date", SqlDbType.DateTime);
-            param[3].Value = Date;
-            param[4] = new SqlParameter("@Notes", SqlDbType.NVarChar);
-            param[4].Value = Notes;
-            param[5] = new SqlParameter("@Budget_Id", SqlDbType.Int);
-            param[5].Value = Budget_Id;
-            Dt = DAL.selectdata("Coin_Exchange_add", param);
-            DAL.close();
-            return Dt;
-        }
-        public DataTable Coin_Exchange_update(string Amount_SY, string Amount_Dollar, string Exchange_rate, DateTime Date, string Notes, int Budget_Id , int id)
+        public DataTable Coin_Exchange_add(string Amount_SY ,string Amount_Dollar ,string Exchange_rate ,DateTime Date, string Notes , int Budget_Id,bool StatusCoin_EX)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
@@ -59,8 +37,34 @@ namespace Finance_Authority.BL
             param[4].Value = Notes;
             param[5] = new SqlParameter("@Budget_Id", SqlDbType.Int);
             param[5].Value = Budget_Id;
-            param[6] = new SqlParameter("@id", SqlDbType.Int);
-            param[6].Value = id;
+            param[6] = new SqlParameter("@StatusCoin_EX", SqlDbType.Bit);
+            param[6].Value = StatusCoin_EX;
+            Dt = DAL.selectdata("Coin_Exchange_add", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Coin_Exchange_update(string Amount_SY, string Amount_Dollar, string Exchange_rate, DateTime Date, string Notes, int Budget_Id,bool StatusCoin_EX , int id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[8];
+            param[0] = new SqlParameter("@Amount_SY", SqlDbType.NVarChar);
+            param[0].Value = Amount_SY;
+            param[1] = new SqlParameter("@Amount_Dollar", SqlDbType.NVarChar);
+            param[1].Value = Amount_Dollar;
+            param[2] = new SqlParameter("@Exchange_rate", SqlDbType.NVarChar);
+            param[2].Value = Exchange_rate;
+            param[3] = new SqlParameter("@Date", SqlDbType.DateTime);
+            param[3].Value = Date;
+            param[4] = new SqlParameter("@Notes", SqlDbType.NVarChar);
+            param[4].Value = Notes;
+            param[5] = new SqlParameter("@Budget_Id", SqlDbType.Int);
+            param[5].Value = Budget_Id;
+            param[6] = new SqlParameter("@StatusCoin_EX", SqlDbType.Bit);
+            param[6].Value = StatusCoin_EX;
+            param[7] = new SqlParameter("@id", SqlDbType.Int);
+            param[7].Value = id;
             Dt = DAL.selectdata("Coin_Exchange_update", param);
             DAL.close();
             return Dt;

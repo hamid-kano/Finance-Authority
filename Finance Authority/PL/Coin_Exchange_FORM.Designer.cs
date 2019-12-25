@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Coin_Exchange_FORM));
             this.Coin_Exchange_exit = new MetroFramework.Controls.MetroButton();
             this.Coin_Exchange_delete = new MetroFramework.Controls.MetroButton();
@@ -53,13 +53,29 @@
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.Coin_Exc_Notes = new MetroFramework.Controls.MetroLabel();
             this.update = new MetroFramework.Controls.MetroButton();
+            this.Coin_EX_RB_StoD = new MetroFramework.Controls.MetroRadioButton();
+            this.Coin_EX_RB_DtoS = new MetroFramework.Controls.MetroRadioButton();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.Coin_Exchange_Gridview)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Coin_Exchange_exit
             // 
             this.Coin_Exchange_exit.Highlight = true;
-            this.Coin_Exchange_exit.Location = new System.Drawing.Point(673, 389);
+            this.Coin_Exchange_exit.Location = new System.Drawing.Point(692, 428);
             this.Coin_Exchange_exit.Name = "Coin_Exchange_exit";
             this.Coin_Exchange_exit.Size = new System.Drawing.Size(87, 37);
             this.Coin_Exchange_exit.TabIndex = 10;
@@ -71,7 +87,7 @@
             // 
             this.Coin_Exchange_delete.Enabled = false;
             this.Coin_Exchange_delete.Highlight = true;
-            this.Coin_Exchange_delete.Location = new System.Drawing.Point(580, 389);
+            this.Coin_Exchange_delete.Location = new System.Drawing.Point(599, 428);
             this.Coin_Exchange_delete.Name = "Coin_Exchange_delete";
             this.Coin_Exchange_delete.Size = new System.Drawing.Size(87, 37);
             this.Coin_Exchange_delete.TabIndex = 9;
@@ -83,7 +99,7 @@
             // 
             this.Coin_Exchange_update.Enabled = false;
             this.Coin_Exchange_update.Highlight = true;
-            this.Coin_Exchange_update.Location = new System.Drawing.Point(487, 389);
+            this.Coin_Exchange_update.Location = new System.Drawing.Point(506, 428);
             this.Coin_Exchange_update.Name = "Coin_Exchange_update";
             this.Coin_Exchange_update.Size = new System.Drawing.Size(87, 37);
             this.Coin_Exchange_update.TabIndex = 8;
@@ -94,7 +110,7 @@
             // Coin_Exchange_add
             // 
             this.Coin_Exchange_add.Highlight = true;
-            this.Coin_Exchange_add.Location = new System.Drawing.Point(394, 389);
+            this.Coin_Exchange_add.Location = new System.Drawing.Point(413, 428);
             this.Coin_Exchange_add.Name = "Coin_Exchange_add";
             this.Coin_Exchange_add.Size = new System.Drawing.Size(87, 37);
             this.Coin_Exchange_add.TabIndex = 7;
@@ -105,7 +121,7 @@
             // Coin_Exchange_new
             // 
             this.Coin_Exchange_new.Highlight = true;
-            this.Coin_Exchange_new.Location = new System.Drawing.Point(301, 389);
+            this.Coin_Exchange_new.Location = new System.Drawing.Point(320, 428);
             this.Coin_Exchange_new.Name = "Coin_Exchange_new";
             this.Coin_Exchange_new.Size = new System.Drawing.Size(87, 37);
             this.Coin_Exchange_new.TabIndex = 6;
@@ -123,48 +139,48 @@
             this.Coin_Exchange_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Coin_Exchange_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Coin_Exchange_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coin_Exchange_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coin_Exchange_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.Coin_Exchange_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Coin_Exchange_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Coin_Exchange_Gridview.DefaultCellStyle = dataGridViewCellStyle14;
             this.Coin_Exchange_Gridview.EnableHeadersVisualStyles = false;
             this.Coin_Exchange_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Coin_Exchange_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Coin_Exchange_Gridview.Location = new System.Drawing.Point(272, 79);
+            this.Coin_Exchange_Gridview.Location = new System.Drawing.Point(299, 79);
             this.Coin_Exchange_Gridview.Name = "Coin_Exchange_Gridview";
             this.Coin_Exchange_Gridview.ReadOnly = true;
             this.Coin_Exchange_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coin_Exchange_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coin_Exchange_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.Coin_Exchange_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Coin_Exchange_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Coin_Exchange_Gridview.Size = new System.Drawing.Size(514, 294);
+            this.Coin_Exchange_Gridview.Size = new System.Drawing.Size(505, 343);
             this.Coin_Exchange_Gridview.TabIndex = 66;
             this.Coin_Exchange_Gridview.Click += new System.EventHandler(this.Coin_Exchange_Gridview_Click);
             // 
             // Coin_Exchange_Date
             // 
             this.Coin_Exchange_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Coin_Exchange_Date.Location = new System.Drawing.Point(103, 197);
+            this.Coin_Exchange_Date.Location = new System.Drawing.Point(8, 154);
             this.Coin_Exchange_Date.MinimumSize = new System.Drawing.Size(0, 29);
             this.Coin_Exchange_Date.Name = "Coin_Exchange_Date";
             this.Coin_Exchange_Date.RightToLeftLayout = true;
@@ -175,7 +191,7 @@
             // 
             this.Coin_Exchange_CombBudge.FormattingEnabled = true;
             this.Coin_Exchange_CombBudge.ItemHeight = 23;
-            this.Coin_Exchange_CombBudge.Location = new System.Drawing.Point(103, 239);
+            this.Coin_Exchange_CombBudge.Location = new System.Drawing.Point(8, 195);
             this.Coin_Exchange_CombBudge.Name = "Coin_Exchange_CombBudge";
             this.Coin_Exchange_CombBudge.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Coin_Exchange_CombBudge.Size = new System.Drawing.Size(163, 29);
@@ -186,7 +202,7 @@
             // 
             this.Coin_Exchange_CombSerach.FormattingEnabled = true;
             this.Coin_Exchange_CombSerach.ItemHeight = 23;
-            this.Coin_Exchange_CombSerach.Location = new System.Drawing.Point(475, 38);
+            this.Coin_Exchange_CombSerach.Location = new System.Drawing.Point(493, 38);
             this.Coin_Exchange_CombSerach.Name = "Coin_Exchange_CombSerach";
             this.Coin_Exchange_CombSerach.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Coin_Exchange_CombSerach.Size = new System.Drawing.Size(195, 29);
@@ -200,16 +216,16 @@
             // 
             // 
             this.Coin_Exchange_Notes.CustomButton.Image = null;
-            this.Coin_Exchange_Notes.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.Coin_Exchange_Notes.CustomButton.Location = new System.Drawing.Point(71, 1);
             this.Coin_Exchange_Notes.CustomButton.Name = "";
-            this.Coin_Exchange_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Coin_Exchange_Notes.CustomButton.Size = new System.Drawing.Size(91, 91);
             this.Coin_Exchange_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Coin_Exchange_Notes.CustomButton.TabIndex = 1;
             this.Coin_Exchange_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Coin_Exchange_Notes.CustomButton.UseSelectable = true;
             this.Coin_Exchange_Notes.CustomButton.Visible = false;
             this.Coin_Exchange_Notes.Lines = new string[0];
-            this.Coin_Exchange_Notes.Location = new System.Drawing.Point(103, 280);
+            this.Coin_Exchange_Notes.Location = new System.Drawing.Point(8, 242);
             this.Coin_Exchange_Notes.MaxLength = 32767;
             this.Coin_Exchange_Notes.Multiline = true;
             this.Coin_Exchange_Notes.Name = "Coin_Exchange_Notes";
@@ -240,7 +256,7 @@
             this.Coin_Exchange_Sy.CustomButton.UseSelectable = true;
             this.Coin_Exchange_Sy.CustomButton.Visible = false;
             this.Coin_Exchange_Sy.Lines = new string[0];
-            this.Coin_Exchange_Sy.Location = new System.Drawing.Point(103, 87);
+            this.Coin_Exchange_Sy.Location = new System.Drawing.Point(8, 49);
             this.Coin_Exchange_Sy.MaxLength = 32767;
             this.Coin_Exchange_Sy.Name = "Coin_Exchange_Sy";
             this.Coin_Exchange_Sy.PasswordChar = '\0';
@@ -254,6 +270,7 @@
             this.Coin_Exchange_Sy.UseSelectable = true;
             this.Coin_Exchange_Sy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_Sy.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Coin_Exchange_Sy.TextChanged += new System.EventHandler(this.Coin_Exchange_Sy_TextChanged);
             this.Coin_Exchange_Sy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Sy_KeyPress);
             // 
             // Coin_Exchange_Dollar
@@ -271,7 +288,7 @@
             this.Coin_Exchange_Dollar.CustomButton.UseSelectable = true;
             this.Coin_Exchange_Dollar.CustomButton.Visible = false;
             this.Coin_Exchange_Dollar.Lines = new string[0];
-            this.Coin_Exchange_Dollar.Location = new System.Drawing.Point(103, 121);
+            this.Coin_Exchange_Dollar.Location = new System.Drawing.Point(8, 83);
             this.Coin_Exchange_Dollar.MaxLength = 32767;
             this.Coin_Exchange_Dollar.Name = "Coin_Exchange_Dollar";
             this.Coin_Exchange_Dollar.PasswordChar = '\0';
@@ -285,6 +302,7 @@
             this.Coin_Exchange_Dollar.UseSelectable = true;
             this.Coin_Exchange_Dollar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_Dollar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Coin_Exchange_Dollar.TextChanged += new System.EventHandler(this.Coin_Exchange_Dollar_TextChanged);
             this.Coin_Exchange_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Dollar_KeyPress);
             // 
             // Coin_Exchange_rate
@@ -302,7 +320,7 @@
             this.Coin_Exchange_rate.CustomButton.UseSelectable = true;
             this.Coin_Exchange_rate.CustomButton.Visible = false;
             this.Coin_Exchange_rate.Lines = new string[0];
-            this.Coin_Exchange_rate.Location = new System.Drawing.Point(104, 160);
+            this.Coin_Exchange_rate.Location = new System.Drawing.Point(9, 119);
             this.Coin_Exchange_rate.MaxLength = 32767;
             this.Coin_Exchange_rate.Name = "Coin_Exchange_rate";
             this.Coin_Exchange_rate.PasswordChar = '\0';
@@ -316,12 +334,13 @@
             this.Coin_Exchange_rate.UseSelectable = true;
             this.Coin_Exchange_rate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Coin_Exchange_rate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Coin_Exchange_rate.TextChanged += new System.EventHandler(this.Coin_Exchange_rate_TextChanged);
             this.Coin_Exchange_rate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_rate_KeyPress);
             // 
             // Coin_Exc_Date
             // 
             this.Coin_Exc_Date.AutoSize = true;
-            this.Coin_Exc_Date.Location = new System.Drawing.Point(8, 202);
+            this.Coin_Exc_Date.Location = new System.Drawing.Point(220, 159);
             this.Coin_Exc_Date.Name = "Coin_Exc_Date";
             this.Coin_Exc_Date.Size = new System.Drawing.Size(41, 19);
             this.Coin_Exc_Date.TabIndex = 213;
@@ -330,7 +349,7 @@
             // Coin_Exc_rate
             // 
             this.Coin_Exc_rate.AutoSize = true;
-            this.Coin_Exc_rate.Location = new System.Drawing.Point(9, 162);
+            this.Coin_Exc_rate.Location = new System.Drawing.Point(185, 121);
             this.Coin_Exc_rate.Name = "Coin_Exc_rate";
             this.Coin_Exc_rate.Size = new System.Drawing.Size(76, 19);
             this.Coin_Exc_rate.TabIndex = 214;
@@ -339,7 +358,7 @@
             // Coin_Exc_CombBudge
             // 
             this.Coin_Exc_CombBudge.AutoSize = true;
-            this.Coin_Exc_CombBudge.Location = new System.Drawing.Point(8, 244);
+            this.Coin_Exc_CombBudge.Location = new System.Drawing.Point(212, 200);
             this.Coin_Exc_CombBudge.Name = "Coin_Exc_CombBudge";
             this.Coin_Exc_CombBudge.Size = new System.Drawing.Size(49, 19);
             this.Coin_Exc_CombBudge.TabIndex = 215;
@@ -348,7 +367,7 @@
             // Coin_Exc_Dollar
             // 
             this.Coin_Exc_Dollar.AutoSize = true;
-            this.Coin_Exc_Dollar.Location = new System.Drawing.Point(8, 123);
+            this.Coin_Exc_Dollar.Location = new System.Drawing.Point(181, 85);
             this.Coin_Exc_Dollar.Name = "Coin_Exc_Dollar";
             this.Coin_Exc_Dollar.Size = new System.Drawing.Size(80, 19);
             this.Coin_Exc_Dollar.TabIndex = 216;
@@ -357,7 +376,7 @@
             // Coin_Exc_CombSerach
             // 
             this.Coin_Exc_CombSerach.AutoSize = true;
-            this.Coin_Exc_CombSerach.Location = new System.Drawing.Point(333, 43);
+            this.Coin_Exc_CombSerach.Location = new System.Drawing.Point(351, 43);
             this.Coin_Exc_CombSerach.Name = "Coin_Exc_CombSerach";
             this.Coin_Exc_CombSerach.Size = new System.Drawing.Size(122, 19);
             this.Coin_Exc_CombSerach.TabIndex = 217;
@@ -366,7 +385,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(8, 89);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(175, 51);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(86, 19);
             this.Coin_Exc_Sy.TabIndex = 218;
@@ -375,7 +394,7 @@
             // Coin_Exc_Notes
             // 
             this.Coin_Exc_Notes.AutoSize = true;
-            this.Coin_Exc_Notes.Location = new System.Drawing.Point(8, 282);
+            this.Coin_Exc_Notes.Location = new System.Drawing.Point(195, 244);
             this.Coin_Exc_Notes.Name = "Coin_Exc_Notes";
             this.Coin_Exc_Notes.Size = new System.Drawing.Size(66, 19);
             this.Coin_Exc_Notes.TabIndex = 219;
@@ -385,34 +404,282 @@
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(697, 37);
+            this.update.Location = new System.Drawing.Point(715, 37);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 264;
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // Coin_EX_RB_StoD
+            // 
+            this.Coin_EX_RB_StoD.AutoSize = true;
+            this.Coin_EX_RB_StoD.Location = new System.Drawing.Point(16, 19);
+            this.Coin_EX_RB_StoD.Name = "Coin_EX_RB_StoD";
+            this.Coin_EX_RB_StoD.Size = new System.Drawing.Size(117, 15);
+            this.Coin_EX_RB_StoD.TabIndex = 265;
+            this.Coin_EX_RB_StoD.Text = "من سوري الى دولار";
+            this.Coin_EX_RB_StoD.UseSelectable = true;
+            this.Coin_EX_RB_StoD.CheckedChanged += new System.EventHandler(this.Coin_EX_RB_StoD_CheckedChanged);
+            // 
+            // Coin_EX_RB_DtoS
+            // 
+            this.Coin_EX_RB_DtoS.AutoSize = true;
+            this.Coin_EX_RB_DtoS.Checked = true;
+            this.Coin_EX_RB_DtoS.Location = new System.Drawing.Point(139, 19);
+            this.Coin_EX_RB_DtoS.Name = "Coin_EX_RB_DtoS";
+            this.Coin_EX_RB_DtoS.Size = new System.Drawing.Size(117, 15);
+            this.Coin_EX_RB_DtoS.TabIndex = 266;
+            this.Coin_EX_RB_DtoS.TabStop = true;
+            this.Coin_EX_RB_DtoS.Text = "من دولار الى سوري";
+            this.Coin_EX_RB_DtoS.UseSelectable = true;
+            this.Coin_EX_RB_DtoS.CheckedChanged += new System.EventHandler(this.Coin_EX_RB_DtoS_CheckedChanged);
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.metroDateTime1.Location = new System.Drawing.Point(8, 154);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.RightToLeftLayout = true;
+            this.metroDateTime1.Size = new System.Drawing.Size(163, 29);
+            this.metroDateTime1.TabIndex = 3;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(8, 195);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.metroComboBox1.Size = new System.Drawing.Size(163, 29);
+            this.metroComboBox1.TabIndex = 5;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(71, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(91, 91);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(8, 242);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Multiline = true;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(163, 93);
+            this.metroTextBox1.TabIndex = 82;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroTextBox2
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox2.CustomButton.Image = null;
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.metroTextBox2.CustomButton.Name = "";
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox2.CustomButton.TabIndex = 1;
+            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox2.CustomButton.UseSelectable = true;
+            this.metroTextBox2.CustomButton.Visible = false;
+            this.metroTextBox2.Lines = new string[0];
+            this.metroTextBox2.Location = new System.Drawing.Point(8, 49);
+            this.metroTextBox2.MaxLength = 32767;
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.PasswordChar = '\0';
+            this.metroTextBox2.ReadOnly = true;
+            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox2.SelectedText = "";
+            this.metroTextBox2.SelectionLength = 0;
+            this.metroTextBox2.SelectionStart = 0;
+            this.metroTextBox2.ShortcutsEnabled = true;
+            this.metroTextBox2.Size = new System.Drawing.Size(163, 23);
+            this.metroTextBox2.TabIndex = 83;
+            this.metroTextBox2.UseSelectable = true;
+            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Sy_KeyPress);
+            // 
+            // metroTextBox3
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(8, 83);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(163, 23);
+            this.metroTextBox3.TabIndex = 84;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_Dollar_KeyPress);
+            // 
+            // metroTextBox4
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox4.CustomButton.Image = null;
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.metroTextBox4.CustomButton.Name = "";
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox4.CustomButton.TabIndex = 1;
+            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox4.CustomButton.UseSelectable = true;
+            this.metroTextBox4.CustomButton.Visible = false;
+            this.metroTextBox4.Lines = new string[0];
+            this.metroTextBox4.Location = new System.Drawing.Point(9, 119);
+            this.metroTextBox4.MaxLength = 32767;
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '\0';
+            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox4.SelectedText = "";
+            this.metroTextBox4.SelectionLength = 0;
+            this.metroTextBox4.SelectionStart = 0;
+            this.metroTextBox4.ShortcutsEnabled = true;
+            this.metroTextBox4.Size = new System.Drawing.Size(163, 23);
+            this.metroTextBox4.TabIndex = 85;
+            this.metroTextBox4.UseSelectable = true;
+            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Coin_Exchange_rate_KeyPress);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(220, 159);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel1.TabIndex = 213;
+            this.metroLabel1.Text = "التاريخ";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(185, 121);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel2.TabIndex = 214;
+            this.metroLabel2.Text = "قيمة التحويل";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(212, 200);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel3.TabIndex = 215;
+            this.metroLabel3.Text = "الميزانية";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(181, 85);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel4.TabIndex = 216;
+            this.metroLabel4.Text = "المبلغ بالدولار";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(175, 51);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel5.TabIndex = 218;
+            this.metroLabel5.Text = "المبلغ بالسوري";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(195, 245);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel6.TabIndex = 219;
+            this.metroLabel6.Text = "الملاحظات";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Coin_Exchange_Date);
+            this.groupBox2.Controls.Add(this.Coin_Exchange_CombBudge);
+            this.groupBox2.Controls.Add(this.Coin_EX_RB_DtoS);
+            this.groupBox2.Controls.Add(this.metroDateTime1);
+            this.groupBox2.Controls.Add(this.Coin_EX_RB_StoD);
+            this.groupBox2.Controls.Add(this.metroComboBox1);
+            this.groupBox2.Controls.Add(this.metroLabel6);
+            this.groupBox2.Controls.Add(this.Coin_Exchange_Notes);
+            this.groupBox2.Controls.Add(this.Coin_Exchange_Sy);
+            this.groupBox2.Controls.Add(this.metroLabel5);
+            this.groupBox2.Controls.Add(this.metroTextBox1);
+            this.groupBox2.Controls.Add(this.Coin_Exc_Notes);
+            this.groupBox2.Controls.Add(this.Coin_Exchange_Dollar);
+            this.groupBox2.Controls.Add(this.Coin_Exc_Sy);
+            this.groupBox2.Controls.Add(this.metroTextBox2);
+            this.groupBox2.Controls.Add(this.metroLabel4);
+            this.groupBox2.Controls.Add(this.Coin_Exchange_rate);
+            this.groupBox2.Controls.Add(this.metroTextBox3);
+            this.groupBox2.Controls.Add(this.metroLabel3);
+            this.groupBox2.Controls.Add(this.Coin_Exc_Date);
+            this.groupBox2.Controls.Add(this.Coin_Exc_Dollar);
+            this.groupBox2.Controls.Add(this.metroTextBox4);
+            this.groupBox2.Controls.Add(this.metroLabel2);
+            this.groupBox2.Controls.Add(this.Coin_Exc_rate);
+            this.groupBox2.Controls.Add(this.Coin_Exc_CombBudge);
+            this.groupBox2.Controls.Add(this.metroLabel1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox2.Size = new System.Drawing.Size(281, 349);
+            this.groupBox2.TabIndex = 267;
+            this.groupBox2.TabStop = false;
+            // 
             // Coin_Exchange_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(815, 502);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.update);
-            this.Controls.Add(this.Coin_Exc_Notes);
-            this.Controls.Add(this.Coin_Exc_Sy);
             this.Controls.Add(this.Coin_Exc_CombSerach);
-            this.Controls.Add(this.Coin_Exc_Dollar);
-            this.Controls.Add(this.Coin_Exc_CombBudge);
-            this.Controls.Add(this.Coin_Exc_rate);
-            this.Controls.Add(this.Coin_Exc_Date);
-            this.Controls.Add(this.Coin_Exchange_rate);
-            this.Controls.Add(this.Coin_Exchange_Dollar);
-            this.Controls.Add(this.Coin_Exchange_Sy);
-            this.Controls.Add(this.Coin_Exchange_Notes);
             this.Controls.Add(this.Coin_Exchange_CombSerach);
-            this.Controls.Add(this.Coin_Exchange_CombBudge);
-            this.Controls.Add(this.Coin_Exchange_Date);
             this.Controls.Add(this.Coin_Exchange_exit);
             this.Controls.Add(this.Coin_Exchange_delete);
             this.Controls.Add(this.Coin_Exchange_update);
@@ -426,6 +693,8 @@
             this.RightToLeftLayout = true;
             this.Text = "التحويل المالي";
             ((System.ComponentModel.ISupportInitialize)(this.Coin_Exchange_Gridview)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,5 +722,20 @@
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
         private MetroFramework.Controls.MetroLabel Coin_Exc_Notes;
         private MetroFramework.Controls.MetroButton update;
+        private MetroFramework.Controls.MetroRadioButton Coin_EX_RB_StoD;
+        private MetroFramework.Controls.MetroRadioButton Coin_EX_RB_DtoS;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -142,19 +142,20 @@ namespace Finance_Authority.PL
             DT_REPORT.Columns.Add("حقل2", typeof(string));
             DT_REPORT.Columns.Add("التاريخ", typeof(string));
             DT_REPORT.Columns.Add("الموظف", typeof(string));
-            DT_REPORT.Columns.Add("القسم", typeof(string));
+            DT_REPORT.Columns.Add("المكتب", typeof(string));
+
             foreach (DataGridViewRow dgv in Employee_Salaries_dataGrid.Rows)
             {
-                DT_REPORT.Rows.Add(dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value
-                   , dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value
-                  , dgv.Cells[9].Value, dgv.Cells[10].Value, dgv.Cells[11].Value, dgv.Cells[12].Value
-                  , dgv.Cells[13].Value, dgv.Cells[14].Value, dgv.Cells[15].Value, dgv.Cells[16].Value, Convert.ToDateTime(dgv.Cells[17].Value).ToShortDateString()
-                  , dgv.Cells[18].Value, dgv.Cells[19].Value);
+                DT_REPORT.Rows.Add(dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[5].Value
+                   , dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value, dgv.Cells[9].Value, dgv.Cells[10].Value
+                  , dgv.Cells[11].Value, dgv.Cells[12].Value, dgv.Cells[13].Value, dgv.Cells[14].Value
+                  , dgv.Cells[15].Value, dgv.Cells[16].Value, dgv.Cells[17].Value, dgv.Cells[18].Value, Convert.ToDateTime(dgv.Cells[19].Value).ToShortDateString()
+                  , dgv.Cells[1].Value, dgv.Cells[2].Value);
             }
             DS.Tables.Add(DT_REPORT);
             DS.WriteXmlSchema("C:\\AraratProgramFiles\\Employee_Salaries.xml");
             REPT.FRM_Report frm = new REPT.FRM_Report();
-            REPT.Crystal_Employee_Salaries report = new REPT.Crystal_Employee_Salaries();
+            REPT.Employee_Salarie report = new REPT.Employee_Salarie();
             report.Refresh();
             report.SetDataSource(DS);
             frm.crystalReportViewer1.ReportSource = report;

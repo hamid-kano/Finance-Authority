@@ -16,14 +16,14 @@ namespace Finance_Authority.REPT {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Crystal_Employee_Salaries : ReportClass {
+    public class Employee_Salarie : ReportClass {
         
-        public Crystal_Employee_Salaries() {
+        public Employee_Salarie() {
         }
         
         public override string ResourceName {
             get {
-                return "Crystal_Employee_Salaries.rpt";
+                return "Employee_Salarie.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Finance_Authority.REPT {
         
         public override string FullResourceName {
             get {
-                return "Finance_Authority.REPT.Crystal_Employee_Salaries.rpt";
+                return "Finance_Authority.REPT.Employee_Salarie.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Finance_Authority.REPT {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystal_Employee_Salaries : Component, ICachedReport {
+    public class CachedEmployee_Salarie : Component, ICachedReport {
         
-        public CachedCrystal_Employee_Salaries() {
+        public CachedEmployee_Salarie() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Finance_Authority.REPT {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Crystal_Employee_Salaries rpt = new Crystal_Employee_Salaries();
+            Employee_Salarie rpt = new Employee_Salarie();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -265,12 +265,6 @@
       <DependentUpon>Crystal_Employee_Description.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPT\Crystal_Employee_Salaries.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Crystal_Employee_Salaries.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="REPT\Crystal_EX_Order.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -305,6 +299,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Crystal_Reciver_Documents.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPT\Employee_Salarie.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee_Salarie.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="REPT\FRM_Report.cs">
@@ -413,10 +413,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystal_Employee_Description.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPT\Crystal_Employee_Salaries.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Crystal_Employee_Salaries.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_EX_Order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystal_EX_Order.cs</LastGenOutput>
@@ -440,6 +436,10 @@
     <EmbeddedResource Include="REPT\Crystal_Reciver_Documents.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystal_Reciver_Documents.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPT\Employee_Salarie.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Employee_Salarie.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\FRM_Report.resx">
       <DependentUpon>FRM_Report.cs</DependentUpon>

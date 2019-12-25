@@ -18,10 +18,7 @@ namespace Finance_Authority.PL
             InitializeComponent();
             this.StyleManager = metroStyleManager1;
             Update_label_finance_Box();
-            Month_imports_ProgressSpinner.Value =  Program.Month_Imports_rate() > 100 ? 100 : Program.Month_Imports_rate();
-            Month_imports_Label.Text = Program.Month_Imports_rate() > 100? "%"+ Program.Month_Imports_rate(): "%" + Program.Month_Imports_rate();
-            Month_export_ProgressSpinner.Value =  Program.Month_Exmports_rate() > 100? 100: Program.Month_Exmports_rate();
-            Month_exmports_Label.Text = Program.Month_Exmports_rate() > 100 ? "%" + Program.Month_Exmports_rate() : "%" + Program.Month_Exmports_rate();
+           
         }
 
         private static Finance_Authority frm;
@@ -304,6 +301,10 @@ namespace Finance_Authority.PL
                 this.SY_Now_Label.Text = "";
                 this.Dollar_Now_Label.Text = "";
             }
+            Month_imports_ProgressSpinner.Value = Program.Month_Imports_rate() > 100 ? 100 : Program.Month_Imports_rate();
+            Month_imports_Label.Text = Program.Month_Imports_rate() > 100 ? "%" + Program.Month_Imports_rate() : "%" + Program.Month_Imports_rate();
+            Month_export_ProgressSpinner.Value = Program.Month_Exmports_rate() > 100 ? 100 : Program.Month_Exmports_rate();
+            Month_exmports_Label.Text = Program.Month_Exmports_rate() > 100 ? "%" + Program.Month_Exmports_rate() : "%" + Program.Month_Exmports_rate();
         }
 
         private void metroTile32_Click(object sender, EventArgs e)

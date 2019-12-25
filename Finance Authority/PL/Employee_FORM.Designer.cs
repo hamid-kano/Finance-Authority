@@ -452,6 +452,7 @@
             // 
             // Employee_Description_DateTime
             // 
+            this.Employee_Description_DateTime.CustomFormat = "dd/MM/yyyy";
             this.Employee_Description_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Employee_Description_DateTime.Location = new System.Drawing.Point(13, 190);
             this.Employee_Description_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
@@ -607,6 +608,7 @@
             // 
             // Contracts_Date_end
             // 
+            this.Contracts_Date_end.CustomFormat = "dd/MM/yyyy";
             this.Contracts_Date_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Contracts_Date_end.Location = new System.Drawing.Point(20, 133);
             this.Contracts_Date_end.MinimumSize = new System.Drawing.Size(0, 29);
@@ -617,6 +619,7 @@
             // 
             // Contracts_Date_Start
             // 
+            this.Contracts_Date_Start.CustomFormat = "dd/MM/yyyy";
             this.Contracts_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Contracts_Date_Start.Location = new System.Drawing.Point(21, 85);
             this.Contracts_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
@@ -1020,6 +1023,7 @@
             // 
             // Employee_Brith_Date
             // 
+            this.Employee_Brith_Date.CustomFormat = "dd/MM/yyyy";
             this.Employee_Brith_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Employee_Brith_Date.Location = new System.Drawing.Point(300, 232);
             this.Employee_Brith_Date.MinimumSize = new System.Drawing.Size(0, 29);

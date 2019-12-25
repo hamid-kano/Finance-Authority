@@ -175,6 +175,7 @@
             // 
             // Bills_Date_last
             // 
+            this.Bills_Date_last.CustomFormat = "dd/MM/yyyy";
             this.Bills_Date_last.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Bills_Date_last.Location = new System.Drawing.Point(644, 58);
             this.Bills_Date_last.MinimumSize = new System.Drawing.Size(0, 29);
@@ -186,6 +187,7 @@
             // 
             // Bills_Date_first
             // 
+            this.Bills_Date_first.CustomFormat = "dd/MM/yyyy";
             this.Bills_Date_first.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Bills_Date_first.Location = new System.Drawing.Point(431, 58);
             this.Bills_Date_first.MinimumSize = new System.Drawing.Size(0, 29);

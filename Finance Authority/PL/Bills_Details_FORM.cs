@@ -59,12 +59,17 @@ namespace Finance_Authority.PL
                 // امر الصرف و رقم السند في حال كانت الفاتورة مدفوعة
                 if (Bills_Paid.Checked)
                 {
-                    int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-                    if (Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows.Count!=0)
+                    DataTable dt3;
+                    if ((dt3= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
                     {
-                        Payment_Document_no.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][4].ToString();
-                        Payment_Document_No_Order.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][5].ToString();
-                    }
+                        int Payement_id_for_this_Bill = Convert.ToInt32(dt3.Rows[0][0]);
+                        if (Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows.Count != 0)
+                        {
+                            Payment_Document_no.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][4].ToString();
+                            Payment_Document_No_Order.Text = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][5].ToString();
+                        }
+
+                    }        
                 }
                 //
                 Bills_Brows_Docs.Enabled = true;
@@ -249,24 +254,28 @@ namespace Finance_Authority.PL
             }
 
             DataTable Dt = Pay.Payment_Document_View();
-            int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-            for (int i = 0; i < Dt.Rows.Count; i++)
+            DataTable dt4;
+            if ((dt4= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
             {
-                if ((int)Dt.Rows[i][0] != id_Pay)
+                int id_Pay = Convert.ToInt32(dt4.Rows[0][0]);
+                for (int i = 0; i < Dt.Rows.Count; i++)
                 {
-                    if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                    if ((int)Dt.Rows[i][0] != id_Pay)
                     {
-                        MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        return;
-                    }
-                    if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
-                    {
-                        MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        return;
+                        if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
+                        {
+                            MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
+                        {
+                            MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
                     }
                 }
-            }
 
+            }
 
             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
@@ -296,29 +305,45 @@ namespace Finance_Authority.PL
             // مدفوعة وبقيت مدفوعة
             else if(StatePaied && Bills_Paid.Checked)  // تعديل قيمة سند الدفع للفاتورة
             {
-                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-                double PrivSy =Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1]);
-                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2]);
-                // تحديث الميزانية بعد تعديل سند الدفع
-                double Sy_After_Updat = Convert.ToDouble(PrivSy - Convert.ToDouble(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text));
-                double Dollar_After_Updat = Convert.ToDouble(PrivDo - Convert.ToDouble(Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text));
-                Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
-                ///
-                Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
-                     Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
-                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009, Payement_id_for_this_Bill);
+                DataTable dt;
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                {
+                    int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
+                    DataTable dt2;
+                    if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
+                    {
+                        double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
+                        double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
+                        // تحديث الميزانية بعد تعديل سند الدفع
+                        double Sy_After_Updat = Convert.ToDouble(PrivSy - Convert.ToDouble(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text));
+                        double Dollar_After_Updat = Convert.ToDouble(PrivDo - Convert.ToDouble(Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text));
+                        Program.Budget_update_after_Payment_Reciver("update", "p", Sy_After_Updat.ToString(), Dollar_After_Updat.ToString());
+                        ///
+                        Pay.Payment_Document_update(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
+                             Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
+                             Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009, Payement_id_for_this_Bill);
+                    }   
+                }    
             }
             // مدفوعة واصبحت غير مدفوعة
             else if (StatePaied && !Bills_Paid.Checked)
             {
                 if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows.Count!=0)
                 {
-                    int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-                    // تحديث الميزانية
-                    Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
-                    //
-                    Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                    DataTable dt;
+                    if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                    {
+                        int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
+                        // تحديث الميزانية
+                        DataTable dt2;
+                        if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
+                        {
+                            Program.Budget_update_after_Payment_Reciver("delete", "p", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
+                        }   
+                        //
+                        Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                    }   
                 }
                 StatePaied = false;
             }
@@ -334,13 +359,21 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف تفاصيل الفاتورة .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Bill.Bills_Details_Delete(_Bill_ID);
-                // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
-                int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows[0][0]);
-                // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
-                //
-                Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                DataTable dt;
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                {
+                    // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
+                    int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
+                    // تحديث الميزانية
+                    DataTable dt2;
+                    if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
+                    {
+                        Program.Budget_update_after_Payment_Reciver("delete", "p", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
+                    }                    //
+                    Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+
+                }   
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);
                 this.Bill_Objects_dataGrid.Columns[0].Visible = false;
                 this.Bill_Objects_dataGrid.Columns[5].Visible = false;

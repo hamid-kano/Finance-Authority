@@ -236,7 +236,6 @@ namespace Finance_Authority.PL
                             int Loan_Pay_ID = Convert.ToInt32(dt.Rows[0][0]);
                             leoan_Payments.Leoan_Payments_Delete(Loan_Pay_ID);
                             ope.Operations_Bill_Salary_LoanPay_Delete(Program.Reciver_Document_id, Loan_Pay_ID, false);
-
                         }   
                     }
                     else
@@ -244,9 +243,7 @@ namespace Finance_Authority.PL
                         return;
                     }
                     //
-
                 }
-
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("delete","r", Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[1].Value.ToString(), Reciver_Document_dataGrid.Rows[indexRowDeleted_or_Updated].Cells[2].Value.ToString());
                 frm.Update_label_finance_Box();

@@ -84,20 +84,25 @@ namespace Finance_Authority.PL
                 {
                 bill_details.Bills_Details_Delete(Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value));
                     // حذف سند الدفع المرتبط بهذه الفاتورة
-                    if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true).Rows.Count != 0)
-                    {
-                        int Payement_id_for_this_Bill = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true).Rows[0][0]);
-                        // تحديث الميزانية
-                        Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows[0][2].ToString());
-                        //
-                        Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                        ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, true);
-                    }
-                    Program.Delete_Message();
-                    LOG.LOGS_add(Program.USER_ID, "حذف", "حذف فاتورة مع محتوياتها", DateTime.Now);
-                    Bills_dataGrid.DataSource = bill.Bills_View();
-                     this.Bills_dataGrid.Columns[0].Visible = false;
-
+                     DataTable dt2;
+                     if ((dt2= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true)).Rows.Count!=0)
+                     {
+                                int Payement_id_for_this_Bill = Convert.ToInt32(dt2.Rows[0][0]);
+                                DataTable dt3;
+                                // تحديث الميزانية
+                                if ((dt3= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill)).Rows.Count!=0)
+                                {
+                                    Program.Budget_update_after_Payment_Reciver("delete", "p", dt3.Rows[0][1].ToString(), dt3.Rows[0][2].ToString());
+                                }  
+                                //
+                          Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
+                          ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, true);
+                     }
+                   
+                Program.Delete_Message();
+                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف فاتورة مع محتوياتها", DateTime.Now);
+                Bills_dataGrid.DataSource = bill.Bills_View();
+                this.Bills_dataGrid.Columns[0].Visible = false;
                 }
         }
 

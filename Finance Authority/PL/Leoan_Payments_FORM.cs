@@ -129,9 +129,7 @@ namespace Finance_Authority.PL
                 MessageBox.Show("اضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            DataTable Dt = new DataTable();
-            Dt = reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text);
-            if (Dt.Rows.Count!=0)
+            if (reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text).Rows.Count!=0)
             {
                 MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -166,6 +164,19 @@ namespace Finance_Authority.PL
             if (Leoan_Payments_Gridview.CurrentRow != null)
             {
                 Program.Leoan_Payments_id = Convert.ToInt32(this.Leoan_Payments_Gridview.CurrentRow.Cells[0].Value.ToString());
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false).Rows.Count != 0)
+                {
+                    DataTable Dt2;
+                    if ((Dt2 = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false)).Rows.Count!=0)
+                    {
+                        int id_Rec_Doc = (int)Dt2.Rows[0][0];
+                        DataTable Dt = new DataTable();
+                        if ((Dt = reciver_Document.Reciver_Document_Search_by_id(id_Rec_Doc)).Rows.Count != 0)
+                        {
+                            Reciver_Document_no.Text = Dt.Rows[0][4].ToString();
+                        }
+
+                    }                }
                 Leoan_Payments_Amont.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Leoan_Payments_Notes.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Leoan_Payments_Date.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[3].Value.ToString();
@@ -184,13 +195,21 @@ namespace Finance_Authority.PL
                 pay_Leo.Leoan_Payments_Delete(Program.Leoan_Payments_id);
                 //delete Payment Doc -- Delete row Operation -- update Budget
                 // يحذف سند القبض الخاص بها اذا كان لها سند قبض
-                int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, true).Rows[0][0]);
-                // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete", "r", reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments).Rows[0][1].ToString(), reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments).Rows[0][2].ToString());
-                //
-                reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
-                ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Program.Leoan_Payments_id, false);
-                //
+                DataTable dt;
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false)).Rows.Count!=0)
+                {
+                    int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(dt.Rows[0][0]);
+                    // تحديث الميزانية
+                    DataTable Dt2;
+                    if ((Dt2= reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count!=0)
+                    {
+                        Program.Budget_update_after_Payment_Reciver("delete", "r", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
+                        //
+                    }
+                    reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Program.Leoan_Payments_id, false);
+                        //
+                }
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);

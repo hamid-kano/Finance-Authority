@@ -151,6 +151,16 @@ namespace Finance_Authority.PL
             if (Loans_Gridview.CurrentRow != null)
             {
                 Program.Loan_id = Convert.ToInt32(this.Loans_Gridview.CurrentRow.Cells[0].Value.ToString());
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count != 0)
+                {
+                    int id_Pay_Doc =(int)ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0];
+                    DataTable Dt=new DataTable();
+                    if ((Dt=Pay.Payment_Document_Search_by_id(id_Pay_Doc)).Rows.Count!=0)
+                    {
+                        Payment_Document_no.Text = Dt.Rows[0][4].ToString();
+                        Payment_Document_No_Order.Text = Dt.Rows[0][5].ToString();
+                    }
+                }
                 Loans_Amont.Text = this.Loans_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Loans_Notes.Text = this.Loans_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Loans_Date.Text = this.Loans_Gridview.CurrentRow.Cells[3].Value.ToString();

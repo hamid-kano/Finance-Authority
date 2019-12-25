@@ -129,10 +129,14 @@ namespace Finance_Authority.PL
                 MessageBox.Show("اضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text).Rows.Count!=0)
+            DataTable dt3;
+            if ((dt3=reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text)).Rows.Count!=0)
             {
-                MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                if (Convert.ToInt32(dt3.Rows[0][0])!= Program.Reciver_Document_id)
+                {
+                    MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
             pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
             DataTable dt;
@@ -176,7 +180,8 @@ namespace Finance_Authority.PL
                     if ((Dt2 = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false)).Rows.Count!=0)
                     {
                         int id_Rec_Doc = (int)Dt2.Rows[0][0];
-                        DataTable Dt = new DataTable();
+                       Program.Reciver_Document_id = id_Rec_Doc;
+                       DataTable Dt = new DataTable();
                         if ((Dt = reciver_Document.Reciver_Document_Search_by_id(id_Rec_Doc)).Rows.Count != 0)
                         {
                             Reciver_Document_no.Text = Dt.Rows[0][4].ToString();

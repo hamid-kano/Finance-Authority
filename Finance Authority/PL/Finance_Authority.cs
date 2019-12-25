@@ -266,6 +266,7 @@ namespace Finance_Authority.PL
         {
             Reciver_Document_FORM FRM = new Reciver_Document_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         private void Employee_Button_MAIN_Click(object sender, EventArgs e)
@@ -286,6 +287,7 @@ namespace Finance_Authority.PL
         {
             Coin_Exchange_FORM FRM = new Coin_Exchange_FORM();
             FRM.ShowDialog();
+            Update_label_finance_Box();
         }
 
         public void Update_label_finance_Box()

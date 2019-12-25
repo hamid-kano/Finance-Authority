@@ -240,14 +240,14 @@ namespace Finance_Authority.PL
 
         private void Coin_EX_RB_DtoS_CheckedChanged(object sender, EventArgs e)
         {
-            //Coin_Exchange_Sy.ReadOnly = true;
-            //Coin_Exchange_Dollar.ReadOnly = false;
+            Coin_Exchange_Sy.ReadOnly = true;
+            Coin_Exchange_Dollar.ReadOnly = false;
         }
 
         private void Coin_EX_RB_StoD_CheckedChanged(object sender, EventArgs e)
         {
-            //Coin_Exchange_Dollar.ReadOnly = true;
-            //Coin_Exchange_Sy.ReadOnly = false;
+            Coin_Exchange_Dollar.ReadOnly = true;
+            Coin_Exchange_Sy.ReadOnly = false;
         }
 
         private void Coin_Exchange_Sy_TextChanged(object sender, EventArgs e)

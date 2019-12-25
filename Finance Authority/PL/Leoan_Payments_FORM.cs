@@ -76,6 +76,11 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if(Convert.ToInt32( Leoan_Payments_Amont.Text )> Convert.ToInt32(Leoan_Payments_Total.Text))
+            {
+                MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             pay_Leo.Leoan_Payments_add(Program.Loan_id,Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text , Leoan_Payments_Date.Value , Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue));
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;

@@ -165,6 +165,7 @@
             // 
             // Bills_Date
             // 
+            this.Bills_Date.CustomFormat = "dd/MM/yyyy";
             this.Bills_Date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Bills_Date.Location = new System.Drawing.Point(148, 281);
             this.Bills_Date.MinimumSize = new System.Drawing.Size(0, 29);

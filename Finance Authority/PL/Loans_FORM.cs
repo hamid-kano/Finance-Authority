@@ -151,9 +151,10 @@ namespace Finance_Authority.PL
             if (Loans_Gridview.CurrentRow != null)
             {
                 Program.Loan_id = Convert.ToInt32(this.Loans_Gridview.CurrentRow.Cells[0].Value.ToString());
-                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count != 0)
+                DataTable dt2;
+                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count != 0)
                 {
-                    int id_Pay_Doc =(int)ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0];
+                    int id_Pay_Doc =(int)dt2.Rows[0][0];
                     DataTable Dt=new DataTable();
                     if ((Dt=Pay.Payment_Document_Search_by_id(id_Pay_Doc)).Rows.Count!=0)
                     {
@@ -194,11 +195,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows.Count != 0)
+            DataTable dt;
+            if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count != 0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();
-                int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0]);
+                int id_Pay = Convert.ToInt32(dt.Rows[0][0]);
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
                     if ((int)Dt.Rows[i][0] != id_Pay)
@@ -215,11 +217,15 @@ namespace Finance_Authority.PL
                         }
                     }
                 }
-                //
-                double PrivSy = Convert.ToDouble(Pay.Payment_Document_Search_by_id(id_Pay).Rows[0][1]);
-                double PrivDo = Convert.ToDouble(Pay.Payment_Document_Search_by_id(id_Pay).Rows[0][2]);
-                // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                DataTable dt2;
+                if ((dt2= Pay.Payment_Document_Search_by_id(id_Pay)).Rows.Count!=0)
+                {
+                    //
+                    double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
+                    double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
+                    // تحديث الميزانية
+                    Program.Budget_update_after_Payment_Reciver("delete", "p", PrivSy.ToString(), PrivDo.ToString());
+                }  
                 Program.Budget_update_after_Payment_Reciver("add", "p", Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0");
                 //
                 Pay.Payment_Document_update(Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
@@ -262,12 +268,21 @@ namespace Finance_Authority.PL
                 Loa.Loans_Delete(Program.Loan_id);
                 //delete Payment Doc -- Delete row Operation -- update Budget
                 // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
-                int Payement_id_for_this_Loan = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true).Rows[0][0]);
-                // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("delete", "p", Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan).Rows[0][1].ToString(), Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan).Rows[0][2].ToString());
+                DataTable dt;
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count!=0)
+                {
+                int Payement_id_for_this_Loan = Convert.ToInt32(dt.Rows[0][0]);
+                    // تحديث الميزانية
+                    DataTable Dt2;
+                    if ((Dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan)).Rows.Count!=0)
+                    {
+
+                    }
+                Program.Budget_update_after_Payment_Reciver("delete", "p", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                 //
                 Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
                 ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, true);
+                }
                 //
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;

@@ -135,18 +135,25 @@ namespace Finance_Authority.PL
                 return;
             }
             pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
-            ////  
-            int id_Pay = Convert.ToInt32(ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false).Rows[0][0]);
-            double PrivSy = Convert.ToDouble(reciver_Document.Reciver_Document_Search_by_id(id_Pay).Rows[0][1]);
-            double PrivDo = Convert.ToDouble(reciver_Document.Reciver_Document_Search_by_id(id_Pay).Rows[0][2]);
-            // تحديث الميزانية
-            Program.Budget_update_after_Payment_Reciver("delete", "r", PrivSy.ToString(), PrivDo.ToString());
-            Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text == string.Empty ? "0" : Leoan_Payments_Amont.Text, "0");
-            //
-            reciver_Document.Reciver_Document_update(Leoan_Payments_Amont.Text, "0", "0", Reciver_Document_no.Text
-                , "دفعة قرض", "العاملين", DateTime.Now , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010, id_Pay);
-
-            ///
+            DataTable dt;
+            if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false)).Rows.Count!=0)
+            {
+                ////  
+                int id_Pay = Convert.ToInt32(dt.Rows[0][0]);
+                DataTable dt2;
+                if ((dt2= reciver_Document.Reciver_Document_Search_by_id(id_Pay)).Rows.Count!=0)
+                {
+                    double PrivSy = Convert.ToDouble(dt2.Rows[0][1]);
+                    double PrivDo = Convert.ToDouble(dt2.Rows[0][2]);
+                    // تحديث الميزانية
+                    Program.Budget_update_after_Payment_Reciver("delete", "r", PrivSy.ToString(), PrivDo.ToString());
+                }   
+                Program.Budget_update_after_Payment_Reciver("add", "r", Leoan_Payments_Amont.Text == string.Empty ? "0" : Leoan_Payments_Amont.Text, "0");
+                //
+                reciver_Document.Reciver_Document_update(Leoan_Payments_Amont.Text, "0", "0", Reciver_Document_no.Text
+                    , "دفعة قرض", "العاملين", DateTime.Now, "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1010, id_Pay);
+                ///
+            }     
             this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 Program.Update_Message();
@@ -156,7 +163,7 @@ namespace Finance_Authority.PL
                 Leoan_Payments_update.Enabled = false;
                 Leoan_Payments_delete.Enabled = false;
                 Loans_Payments_Brows_Docs.Enabled = false;
-            //}
+            
         }
 
         private void Leoan_Payments_Gridview_Click(object sender, EventArgs e)
@@ -164,8 +171,7 @@ namespace Finance_Authority.PL
             if (Leoan_Payments_Gridview.CurrentRow != null)
             {
                 Program.Leoan_Payments_id = Convert.ToInt32(this.Leoan_Payments_Gridview.CurrentRow.Cells[0].Value.ToString());
-                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false).Rows.Count != 0)
-                {
+               
                     DataTable Dt2;
                     if ((Dt2 = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, false)).Rows.Count!=0)
                     {
@@ -176,7 +182,8 @@ namespace Finance_Authority.PL
                             Reciver_Document_no.Text = Dt.Rows[0][4].ToString();
                         }
 
-                    }                }
+                    }      
+            
                 Leoan_Payments_Amont.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[1].Value.ToString();
                 Leoan_Payments_Notes.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[2].Value.ToString();
                 Leoan_Payments_Date.Text = this.Leoan_Payments_Gridview.CurrentRow.Cells[3].Value.ToString();

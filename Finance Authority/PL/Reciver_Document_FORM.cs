@@ -231,7 +231,7 @@ namespace Finance_Authority.PL
                     if (MessageBox.Show("هذا السند مرتبط بدفعة قرض اذا تم حذفه سيتم حذف دفعة قرض المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         DataTable dt;
-                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, false)).Rows.Count!=0)
+                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Reciver_Document_id, false)).Rows.Count!=0)
                         {
                             int Loan_Pay_ID = Convert.ToInt32(dt.Rows[0][0]);
                             leoan_Payments.Leoan_Payments_Delete(Loan_Pay_ID);

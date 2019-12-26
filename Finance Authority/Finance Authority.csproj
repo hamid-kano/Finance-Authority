@@ -411,7 +411,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_Employee_Description.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Crystal_Employee_Description.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_EX_Order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

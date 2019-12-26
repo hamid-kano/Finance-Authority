@@ -21,6 +21,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Leoan_Payments_View_Loans_ID(int Loans_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Loans_ID ", SqlDbType.Int);
+            param[0].Value = Loans_ID;
+            Dt = DAL.selectdata("Leoan_Payments_View_Loans_ID", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Leoan_Payments_MAX_id()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -147,15 +159,29 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
-        public DataTable Leoan_Payments_Budget_Date(int Budget_Id)
+        public DataTable Leoan_Payments_Budget_Date(int Budget_Id,int Loan_ID )
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@Budget_Id", SqlDbType.Int);
+            param[0].Value = Budget_Id;
+            param[1] = new SqlParameter("@Loan_ID", SqlDbType.Int);
+            param[1].Value = Loan_ID;
+            Dt = DAL.selectdata("Leoan_Payments_Budget_Date", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable Leoan_Payments_Budget_Date_All_Loans(int Budget_Id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DataTable Dt = new DataTable();
             DAL.open();
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@Budget_Id", SqlDbType.Int);
-            param[0].Value = Budget_Id; 
-            Dt = DAL.selectdata("Leoan_Payments_Budget_Date", param);
+            param[0].Value = Budget_Id;
+            Dt = DAL.selectdata("Leoan_Payments_Budget_Date_All_Loans", param);
             DAL.close();
             return Dt;
         }

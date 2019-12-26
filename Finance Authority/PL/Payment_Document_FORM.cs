@@ -298,11 +298,11 @@ namespace Finance_Authority.PL
                     if (MessageBox.Show("هذا السند مرتبط بفاتورة اذا تم حذفه سيتم حذف الفاتورة المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         DataTable dt;
-                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true)).Rows.Count!=0)
+                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, "فاتورة")).Rows.Count!=0)
                         {
                             int bill_id = Convert.ToInt32(dt.Rows[0][0]);
                             bill_details.Bills_Details_Delete(bill_id);
-                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, bill_id, true);
+                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, bill_id, "فاتورة");
                         }
                     }
                     else
@@ -319,12 +319,12 @@ namespace Finance_Authority.PL
                     if (MessageBox.Show("هذا السند مرتبط برواتب العاملين اذا تم حذفه سيتم حذف الرواتب المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         DataTable dt;
-                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true)).Rows.Count!=0)
+                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, "رواتب")).Rows.Count!=0)
                         {
                             int Emission_ID = Convert.ToInt32(dt.Rows[0][0]);
                             emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Emission_ID); // delete salaries for this emission
                             emission.Emission_Salaries_Delete(Emission_ID); // delete emission
-                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, Emission_ID, true);// delete operations
+                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, Emission_ID, "رواتب");// delete operations
 
                         }   
                     }
@@ -338,15 +338,15 @@ namespace Finance_Authority.PL
                 if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "قرض")
                 {
 
-                    // حذف الاصدار التابعة لهذا السند في حال كانت من نوع فاتورة
+                    // حذف القرض التابعة لهذا السند في حال كانت من نوع قرض
                     if (MessageBox.Show("هذا السند مرتبط بقرض اذا تم حذفه سيتم حذف قرض المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         DataTable dt;
-                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, true)).Rows.Count!=0)
+                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, "قرض")).Rows.Count!=0)
                         {
                             int ID_Loan = Convert.ToInt32(dt.Rows[0][0]);
                             loan.Loans_Delete(ID_Loan); // delete Loan
-                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, ID_Loan, true);// delete operations
+                            ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, ID_Loan, "قرض");// delete operations
                         }   
                     }
                     else

@@ -88,7 +88,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if(Convert.ToInt32( Leoan_Payments_Amont.Text )> Convert.ToInt32(Leoan_Payments_Total.Text))
+            DataTable dt3;
+            if ((dt3 = reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text)).Rows.Count != 0)
+            {
+                    MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+            }
+            if (Convert.ToInt32( Leoan_Payments_Amont.Text )> Convert.ToInt32(Leoan_Payments_Total.Text))
             {
                 MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;

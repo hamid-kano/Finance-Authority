@@ -268,58 +268,59 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Loa.Loans_Delete(Program.Loan_id);
-                // حذف الدفعات الخاصة به
-                leoan_Payments.Leoan_Payments_Delete_ByLoanID(Program.Loan_id);
                 //delete Payment Doc -- Delete row Operation -- update Budget
                 // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
                 DataTable dt;
-                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count!=0)
+                if ((dt = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
                 {
-                int Payement_id_for_this_Loan = Convert.ToInt32(dt.Rows[0][0]);
+                    int Payement_id_for_this_Loan = Convert.ToInt32(dt.Rows[0][0]);
                     // تحديث الميزانية
                     DataTable Dt2;
-                    if ((Dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan)).Rows.Count!=0)
+                    if ((Dt2 = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan)).Rows.Count != 0)
                     {
                         Program.Budget_update_after_Payment_Reciver("R", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                     }
                     //
-                Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
-                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, "قرض");
-                }
-                // يحذف سندات الاستلام الخاصة بدفعات القروض اذا كان لها سندات استلام
-                DataTable dt_Payments_Loan;
-                if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id)).Rows.Count != 0)
-                {
-                    DataTable one_Loan_Payment;
-                    foreach (DataRow item in dt_Payments_Loan.Rows)
+                    Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, "قرض");
+                    // يحذف سندات الاستلام الخاصة بدفعات القروض الخاصة بهذا القرض اذا كان لها سندات استلام
+                    DataTable dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id);
+                    int cpunt = dt_Payments_Loan.Rows.Count;
+                    if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id)).Rows.Count != 0)
                     {
-                        if ((one_Loan_Payment = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(item[0]), "دفعة قرض")).Rows.Count != 0)
+                        DataTable one_Loan_Payment;
+                        foreach (DataRow item in dt_Payments_Loan.Rows)
                         {
-                            int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(one_Loan_Payment.Rows[0][0]);
-                            // تحديث الميزانية
-                            DataTable Reciver_ID;
-                            if ((Reciver_ID = reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count != 0)
+                            if ((one_Loan_Payment = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(item[0]), "دفعة قرض")).Rows.Count != 0)
                             {
-                                Program.Budget_update_after_Payment_Reciver("P", Reciver_ID.Rows[0][1].ToString(), Reciver_ID.Rows[0][2].ToString());
+                                int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(one_Loan_Payment.Rows[0][0]);
+                                // تحديث الميزانية
+                                DataTable Reciver_ID;
+                                if ((Reciver_ID = reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count != 0)
+                                {
+                                    Program.Budget_update_after_Payment_Reciver("P", Reciver_ID.Rows[0][1].ToString(), Reciver_ID.Rows[0][2].ToString());
+                                    //
+                                }
+                                leoan_Payments.Leoan_Payments_Delete(Convert.ToInt32(item[0]));
+                                reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
+                                ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Convert.ToInt32(item[0]), "دفعة قرض");
                                 //
                             }
-                            reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
-                            ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Program.Leoan_Payments_id, "دفعة قرض");
-                            //
                         }
-                    }   
+                    }
+
+                    //
+                    this.Loans_Gridview.DataSource = Loa.Loans_View();
+                    Loans_Gridview.Columns[0].Visible = false;
+                    MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
+                    Loans_Amont.Text = "";
+                    Loans_Notes.Text = "";
+                    Loans_update.Enabled = false;
+                    Loans_delete.Enabled = false;
+                    Loans_Brows_Docs.Enabled = false;
+                    Loans_Dail.Enabled = false;
                 }
-                //
-                this.Loans_Gridview.DataSource = Loa.Loans_View();
-                Loans_Gridview.Columns[0].Visible = false;
-                MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
-                Loans_Amont.Text = "";
-                Loans_Notes.Text = "";
-                Loans_update.Enabled = false;
-                Loans_delete.Enabled = false;
-                Loans_Brows_Docs.Enabled = false;
-                Loans_Dail.Enabled = false;
             }
         }
 

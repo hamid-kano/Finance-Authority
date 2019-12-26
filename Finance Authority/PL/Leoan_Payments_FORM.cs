@@ -266,8 +266,16 @@ namespace Finance_Authority.PL
         {
             try
             {
-                this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_Budget_Date(Convert.ToInt32(Leoan_Payments_CombSerach.SelectedValue));
-                Leoan_Payments_Gridview.Columns[0].Visible = false;
+                if (_Loan_id!=-1)
+                {
+                    this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_Budget_Date(Convert.ToInt32(Leoan_Payments_CombSerach.SelectedValue), _Loan_id);
+                    Leoan_Payments_Gridview.Columns[0].Visible = false;
+                }
+                else
+                {
+                    this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_Budget_Date_All_Loans(Convert.ToInt32(Leoan_Payments_CombSerach.SelectedValue));
+                    Leoan_Payments_Gridview.Columns[0].Visible = false;
+                }
             }
             catch { return; }
         }

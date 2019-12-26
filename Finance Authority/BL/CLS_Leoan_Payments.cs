@@ -123,6 +123,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Leoan_Payments_Delete_ByLoanID(int Loans_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Loans_ID", SqlDbType.Int);
+            param[0].Value = Loans_ID;
+            Dt = DAL.selectdata("Leoan_Payments_Delete_ByLoanID", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Leoan_Payments_Search_All(String textchange)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

@@ -23,6 +23,8 @@ namespace Finance_Authority.PL
         BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
         BL.CLS_Operations ope = new BL.CLS_Operations();
         BL.CLS_Budget budget = new BL.CLS_Budget();
+        BL.CLS_Leoan_Payments leoan_Payments = new BL.CLS_Leoan_Payments();
+        BL.CLS_Reciver_Document reciver_Document = new BL.CLS_Reciver_Document();
         public Loans_FORM()
         {
             InitializeComponent();
@@ -195,12 +197,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            DataTable dt;
-            if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
+            DataTable dt_PaymentID;
+            if ((dt_PaymentID = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();
-                int id_Pay = Convert.ToInt32(dt.Rows[0][0]);
+                int id_Pay = Convert.ToInt32(dt_PaymentID.Rows[0][0]);
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
                     if ((int)Dt.Rows[i][0] != id_Pay)
@@ -266,6 +268,8 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف القرض .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Loa.Loans_Delete(Program.Loan_id);
+                // حذف الدفعات الخاصة به
+                leoan_Payments.Leoan_Payments_Delete_ByLoanID(Program.Loan_id);
                 //delete Payment Doc -- Delete row Operation -- update Budget
                 // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
                 DataTable dt;
@@ -276,12 +280,34 @@ namespace Finance_Authority.PL
                     DataTable Dt2;
                     if ((Dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Loan)).Rows.Count!=0)
                     {
-
+                        Program.Budget_update_after_Payment_Reciver("R", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                     }
-                Program.Budget_update_after_Payment_Reciver("R", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
-                //
+                    //
                 Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
                 ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, "قرض");
+                }
+                // يحذف سندات الاستلام الخاصة بدفعات القروض اذا كان لها سندات استلام
+                DataTable dt_Payments_Loan;
+                if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id)).Rows.Count != 0)
+                {
+                    DataTable one_Loan_Payment;
+                    foreach (DataRow item in dt_Payments_Loan.Rows)
+                    {
+                        if ((one_Loan_Payment = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(item[0]), "دفعة قرض")).Rows.Count != 0)
+                        {
+                            int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(one_Loan_Payment.Rows[0][0]);
+                            // تحديث الميزانية
+                            DataTable Reciver_ID;
+                            if ((Reciver_ID = reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count != 0)
+                            {
+                                Program.Budget_update_after_Payment_Reciver("P", Reciver_ID.Rows[0][1].ToString(), Reciver_ID.Rows[0][2].ToString());
+                                //
+                            }
+                            reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
+                            ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Program.Leoan_Payments_id, "دفعة قرض");
+                            //
+                        }
+                    }   
                 }
                 //
                 this.Loans_Gridview.DataSource = Loa.Loans_View();

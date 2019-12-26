@@ -24,6 +24,8 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Emission_Salaries emission = new BL.CLS_Emission_Salaries();
         BL.CLS_Loan loan = new BL.CLS_Loan();
+        BL.CLS_Leoan_Payments leoan_Payments = new BL.CLS_Leoan_Payments();
+        BL.CLS_Reciver_Document reciver_Document = new BL.CLS_Reciver_Document();
         int indexRowDeleted_or_Updated;
         public Payment_Document_FORM()
         {
@@ -341,13 +343,39 @@ namespace Finance_Authority.PL
                     // حذف القرض التابعة لهذا السند في حال كانت من نوع قرض
                     if (MessageBox.Show("هذا السند مرتبط بقرض اذا تم حذفه سيتم حذف قرض المرتبطه به .. هل تريد الحذف بالتاكيد ؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
+                        // حذف القرض وتحديث الميزانية
                         DataTable dt;
-                        if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, "قرض")).Rows.Count!=0)
+                        if ((dt = ope.Operations_Bill_Salary_LoanPay_Viewby_IdPayRec_Statue(Program.Payment_Document_id, "قرض")).Rows.Count != 0)
                         {
                             int ID_Loan = Convert.ToInt32(dt.Rows[0][0]);
                             loan.Loans_Delete(ID_Loan); // delete Loan
                             ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, ID_Loan, "قرض");// delete operations
-                        }   
+
+                            // يحذف سندات الاستلام الخاصة بدفعات القروض الخاصة بهذا القرض اذا كان لها سندات استلام
+                            DataTable dt_Payments_Loan;
+                            if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(ID_Loan)).Rows.Count != 0)
+                            {
+                                DataTable one_Loan_Payment;
+                                foreach (DataRow item in dt_Payments_Loan.Rows)
+                                {
+                                    if ((one_Loan_Payment = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Convert.ToInt32(item[0]), "دفعة قرض")).Rows.Count != 0)
+                                    {
+                                        int Reciver_id_for_this_Leoan_Payments = Convert.ToInt32(one_Loan_Payment.Rows[0][0]);
+                                        // تحديث الميزانية
+                                        DataTable Reciver_ID;
+                                        if ((Reciver_ID = reciver_Document.Reciver_Document_Search_by_id(Reciver_id_for_this_Leoan_Payments)).Rows.Count != 0)
+                                        {
+                                            Program.Budget_update_after_Payment_Reciver("P", Reciver_ID.Rows[0][1].ToString(), Reciver_ID.Rows[0][2].ToString());
+                                            //
+                                        }
+                                        leoan_Payments.Leoan_Payments_Delete(Convert.ToInt32(item[0]));
+                                        reciver_Document.Reciver_Document_Delete(Reciver_id_for_this_Leoan_Payments);
+                                        ope.Operations_Bill_Salary_LoanPay_Delete(Reciver_id_for_this_Leoan_Payments, Convert.ToInt32(item[0]), "دفعة قرض");
+                                        //
+                                    }
+                                }
+                            }
+                        }
                     }
                     else
                     {

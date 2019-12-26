@@ -85,7 +85,7 @@ namespace Finance_Authority.PL
                 bill_details.Bills_Details_Delete(Convert.ToInt32(Bills_dataGrid.CurrentRow.Cells[0].Value));
                     // حذف سند الدفع المرتبط بهذه الفاتورة
                      DataTable dt2;
-                     if ((dt2= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, true)).Rows.Count!=0)
+                     if ((dt2= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Bill_Id, "فاتورة")).Rows.Count!=0)
                      {
                                 int Payement_id_for_this_Bill = Convert.ToInt32(dt2.Rows[0][0]);
                                 DataTable dt3;
@@ -96,7 +96,7 @@ namespace Finance_Authority.PL
                                 }  
                                 //
                           Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                          ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, true);
+                          ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, Program.Bill_Id, "فاتورة");
                      }
                    
                 Program.Delete_Message();

@@ -60,7 +60,7 @@ namespace Finance_Authority.PL
                 if (Bills_Paid.Checked)
                 {
                     DataTable dt3;
-                    if ((dt3= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                    if ((dt3= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
                     {
                         int Payement_id_for_this_Bill = Convert.ToInt32(dt3.Rows[0][0]);
                         if (Pay.Payment_Document_Search_by_id(Payement_id_for_this_Bill).Rows.Count != 0)
@@ -194,7 +194,7 @@ namespace Finance_Authority.PL
                Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                     Bills_Exchange_rate.Text,Payment_Document_no.Text,Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
                    Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
-               ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), true);
+               ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Convert.ToInt32(obj.Bill_Max_ID().Rows[0][0]), "فاتورة");
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("P", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
@@ -255,7 +255,7 @@ namespace Finance_Authority.PL
 
             DataTable Dt = Pay.Payment_Document_View();
             DataTable dt4;
-            if ((dt4= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+            if ((dt4= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
             {
                 int id_Pay = Convert.ToInt32(dt4.Rows[0][0]);
                 for (int i = 0; i < Dt.Rows.Count; i++)
@@ -295,7 +295,7 @@ namespace Finance_Authority.PL
                 Pay.Payment_Document_add(Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text, Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text,
                      Bills_Exchange_rate.Text, Payment_Document_no.Text, Payment_Document_No_Order.Text, "فاتورة", Bills_Buyer_Name.Text, DateTime.Now, "لايوجد",
                     Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1009);
-                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, true);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), _Bill_ID, "فاتورة");
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("P", Bills_Coin_Type.Text == "دولار" ? "0" : Bill_Total.Text,
                                                                         Bills_Coin_Type.Text == "سوري" ? "0" : Bill_Total.Text);
@@ -306,7 +306,7 @@ namespace Finance_Authority.PL
             else if(StatePaied && Bills_Paid.Checked)  // تعديل قيمة سند الدفع للفاتورة
             {
                 DataTable dt;
-                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
                 {
                     int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
                     DataTable dt2;
@@ -328,10 +328,10 @@ namespace Finance_Authority.PL
             // مدفوعة واصبحت غير مدفوعة
             else if (StatePaied && !Bills_Paid.Checked)
             {
-                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true).Rows.Count!=0)
+                if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة").Rows.Count!=0)
                 {
                     DataTable dt;
-                    if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                    if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
                     {
                         int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
                         // تحديث الميزانية
@@ -342,7 +342,7 @@ namespace Finance_Authority.PL
                         }   
                         //
                         Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                        ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                        ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, "فاتورة");
                     }   
                 }
                 StatePaied = false;
@@ -360,7 +360,7 @@ namespace Finance_Authority.PL
             {
                 Bill.Bills_Details_Delete(_Bill_ID);
                 DataTable dt;
-                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, true)).Rows.Count!=0)
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
                 {
                     // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
                     int Payement_id_for_this_Bill = Convert.ToInt32(dt.Rows[0][0]);
@@ -371,7 +371,7 @@ namespace Finance_Authority.PL
                         Program.Budget_update_after_Payment_Reciver("R", dt2.Rows[0][1].ToString(), dt2.Rows[0][2].ToString());
                     }                    //
                     Pay.Payment_Document_Delete(Payement_id_for_this_Bill);
-                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, true);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Bill, _Bill_ID, "فاتورة");
 
                 }   
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(_Bill_ID);

@@ -130,7 +130,7 @@ namespace Finance_Authority.PL
                 Pay.Payment_Document_add(Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
                             Payment_Document_No_Order.Text, "قرض", "العاملين", DateTime.Now
                             , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1012);
-                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Max_loan_id, true);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Max_loan_id, "قرض");
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("P", Loans_Amont.Text, "0");
                 ////
@@ -152,7 +152,7 @@ namespace Finance_Authority.PL
             {
                 Program.Loan_id = Convert.ToInt32(this.Loans_Gridview.CurrentRow.Cells[0].Value.ToString());
                 DataTable dt2;
-                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count != 0)
+                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
                 {
                     int id_Pay_Doc =(int)dt2.Rows[0][0];
                     DataTable Dt=new DataTable();
@@ -196,7 +196,7 @@ namespace Finance_Authority.PL
                 return;
             }
             DataTable dt;
-            if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count != 0)
+            if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();
@@ -269,7 +269,7 @@ namespace Finance_Authority.PL
                 //delete Payment Doc -- Delete row Operation -- update Budget
                 // يحذف سند الدفع الخاص بها اذا كان لها سند دفع
                 DataTable dt;
-                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, true)).Rows.Count!=0)
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count!=0)
                 {
                 int Payement_id_for_this_Loan = Convert.ToInt32(dt.Rows[0][0]);
                     // تحديث الميزانية
@@ -281,7 +281,7 @@ namespace Finance_Authority.PL
                 Program.Budget_update_after_Payment_Reciver("R", Dt2.Rows[0][1].ToString(), Dt2.Rows[0][2].ToString());
                 //
                 Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
-                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, true);
+                ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, "قرض");
                 }
                 //
                 this.Loans_Gridview.DataSource = Loa.Loans_View();

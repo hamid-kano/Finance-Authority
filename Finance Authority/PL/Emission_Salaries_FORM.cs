@@ -94,7 +94,7 @@ namespace Finance_Authority.PL
                 emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Program.Emission_Salaries_id);
                 //  ايدي السند المرتبط بهذا الاصدار ليتم حذفه في حال كان مرتبط وحذف التسجيلة الخاصة به من جدول العمليات
                 DataTable dt;
-                if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true)).Rows.Count != 0)
+                if ((dt=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب")).Rows.Count != 0)
                 {
                     int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(dt.Rows[0][0]);
                     DataTable dt2;
@@ -106,7 +106,7 @@ namespace Finance_Authority.PL
                         Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                     }  
                     // حذف التسجيلة من جدول العمليات 
-                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id, true);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id, "رواتب");
                     // حذف سند الدفع
                     Pay.Payment_Document_Delete(Payement_id_for_this_Emp_Salaries);
                 }
@@ -156,7 +156,7 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف اصدار الراتب .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DataTable dt2;
-                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true)).Rows.Count != 0)
+                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب")).Rows.Count != 0)
                 {
                     int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(dt2.Rows[0][0]);
                     DataTable dt = new DataTable();
@@ -168,7 +168,7 @@ namespace Finance_Authority.PL
                         Program.Budget_update_after_Payment_Reciver("R", PrivSy.ToString(), PrivDo.ToString());
                     }
                     // حذف التسجيلة من جدول العمليات 
-                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id,true);
+                    ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Emp_Salaries, Program.Emission_Salaries_id, "رواتب");
                     // حذف سند الدفع
                     Pay.Payment_Document_Delete(Payement_id_for_this_Emp_Salaries);
                 }

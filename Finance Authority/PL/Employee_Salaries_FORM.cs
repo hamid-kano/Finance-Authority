@@ -90,7 +90,7 @@ namespace Finance_Authority.PL
 
                 ///// عرض رقم السند وامر الصرف و المجموع الكلي في حال كان مثبت من قبل 
                 DataTable dt2;
-                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true)).Rows.Count != 0)
+                if ((dt2=ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب")).Rows.Count != 0)
                 {
                     int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(dt2.Rows[0][0]);
                     DataTable dt;
@@ -317,7 +317,7 @@ namespace Finance_Authority.PL
                 return;
             }
           
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id,true).Rows.Count ==0)
+            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب").Rows.Count ==0)
             {
                 // اضافة
                 DataTable Dt = Pay.Payment_Document_View();
@@ -340,14 +340,14 @@ namespace Finance_Authority.PL
                 Pay.Payment_Document_add(Salary_Total.Text==string.Empty?"0": Salary_Total.Text, "0","0", Payment_Document_no.Text,
                             Payment_Document_No_Order.Text,"رواتب","العاملين",DateTime.Now
                             ,"لايوجد",Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]),1011);
-                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Program.Emission_Salaries_id, true);
+                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Program.Emission_Salaries_id, "رواتب");
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("P", Salary_Total.Text, "0" );
             }
             else
             {
                 DataTable dt;
-                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, true)).Rows.Count!=0)
+                if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب")).Rows.Count!=0)
                 {
                     // تعديل
                     int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(dt.Rows[0][0]);

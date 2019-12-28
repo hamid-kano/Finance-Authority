@@ -33,6 +33,22 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Document_View_By_Type_Id_Doc_SearchAll(string Document_Type, int Doc_id, string query)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@Document_Type", SqlDbType.NVarChar);
+            param[0].Value = Document_Type;
+            param[1] = new SqlParameter("@Doc_id", SqlDbType.NVarChar);
+            param[1].Value = Doc_id;
+            param[2] = new SqlParameter("@query", SqlDbType.NVarChar);
+            param[2].Value = query;
+            Dt = DAL.selectdata("Document_View_By_Type_Id_Doc_SearchAll", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Document_add(string Type_Doc, string Doc_Name, string Doc_URL , string Location, string Extends, string Notes, int Doc_id)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

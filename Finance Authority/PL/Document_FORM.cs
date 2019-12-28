@@ -173,13 +173,22 @@ namespace Finance_Authority.PL
 
         private void Document_Search_All_TextChanged(object sender, EventArgs e)
         {
-            this.Document_Gridview.DataSource = Doc.Document_Search_All(Document_Search_All.Text);
-            this.Document_Gridview.Columns[0].Visible = false;
-            this.Document_Gridview.Columns[7].Visible = false;
-            Document_View.Enabled = false;
-            Document_add.Enabled = false;
-            Document_update.Enabled = false;
-            Document_new.Enabled = false;
+            if (Document_new.Enabled)
+            {
+                this.Document_Gridview.DataSource = Doc.Document_View_By_Type_Id_Doc_SearchAll(_Document_Type, _Doc_id,Document_Search_All.Text);
+                this.Document_Gridview.Columns[0].Visible = false;
+                this.Document_Gridview.Columns[7].Visible = false;
+            }
+            else
+            {
+                this.Document_Gridview.DataSource = Doc.Document_Search_All(Document_Search_All.Text);
+                this.Document_Gridview.Columns[0].Visible = false;
+                this.Document_Gridview.Columns[7].Visible = false;
+                Document_View.Enabled = false;
+                Document_add.Enabled = false;
+                Document_update.Enabled = false;
+                Document_new.Enabled = false;
+            }
         }
 
         private void Document_Brows_File_Click(object sender, EventArgs e)

@@ -292,6 +292,7 @@ namespace Finance_Authority.PL
         {
             if (MessageBox.Show("هل تريد حذف سند الدفع .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                string type_Doc = this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString();
 
                 if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString()=="فاتورة")
                 {

@@ -232,7 +232,7 @@ namespace Finance_Authority.PL
                 //
                 Pay.Payment_Document_update(Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
                      Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
-                   , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1011, id_Pay);
+                   , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1012, id_Pay);
             }
             ///////
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);

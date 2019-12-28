@@ -159,6 +159,11 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
+            if (Convert.ToInt32(Leoan_Payments_Amont.Text) > Convert.ToInt32(Leoan_Payments_Total.Text))
+            {
+                MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);
             DataTable dt;
             if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Leoan_Payments_id, "دفعة قرض")).Rows.Count!=0)

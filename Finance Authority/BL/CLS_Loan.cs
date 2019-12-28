@@ -124,5 +124,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Loans_Search_By_desc_ID(int Employee_Des_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_Des_ID", SqlDbType.Int);
+            param[0].Value = Employee_Des_ID;
+            Dt = DAL.selectdata("Loans_Search_By_desc_ID", param);
+            DAL.close();
+            return Dt;
+        }
+       
     }
 }

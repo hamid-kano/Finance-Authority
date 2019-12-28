@@ -284,9 +284,8 @@ namespace Finance_Authority.PL
                     Pay.Payment_Document_Delete(Payement_id_for_this_Loan);
                     ope.Operations_Bill_Salary_LoanPay_Delete(Payement_id_for_this_Loan, Program.Loan_id, "قرض");
                     // يحذف سندات الاستلام الخاصة بدفعات القروض الخاصة بهذا القرض اذا كان لها سندات استلام
-                    DataTable dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id);
-                    int cpunt = dt_Payments_Loan.Rows.Count;
-                    if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(Program.Loan_id)).Rows.Count != 0)
+                    DataTable dt_Payments_Loan ;
+                    if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View_Loans_ID(Program.Loan_id)).Rows.Count != 0)
                     {
                         DataTable one_Loan_Payment;
                         foreach (DataRow item in dt_Payments_Loan.Rows)
@@ -308,7 +307,6 @@ namespace Finance_Authority.PL
                             }
                         }
                     }
-
                     //
                     this.Loans_Gridview.DataSource = Loa.Loans_View();
                     Loans_Gridview.Columns[0].Visible = false;

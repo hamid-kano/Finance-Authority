@@ -353,7 +353,7 @@ namespace Finance_Authority.PL
 
                             // يحذف سندات الاستلام الخاصة بدفعات القروض الخاصة بهذا القرض اذا كان لها سندات استلام
                             DataTable dt_Payments_Loan;
-                            if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View(ID_Loan)).Rows.Count != 0)
+                            if ((dt_Payments_Loan = leoan_Payments.Leoan_Payments_View_Loans_ID(ID_Loan)).Rows.Count != 0)
                             {
                                 DataTable one_Loan_Payment;
                                 foreach (DataRow item in dt_Payments_Loan.Rows)

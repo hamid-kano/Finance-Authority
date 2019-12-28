@@ -68,6 +68,8 @@ namespace Finance_Authority.PL
             Loans_add.Enabled = true;
             Loans_Amont.Text = "";
             Loans_Notes.Text = "";
+            Payment_Document_no.Text = "";
+            Payment_Document_No_Order.Text = "";
             Loans_update.Enabled = false;
             Loans_delete.Enabled = false;
             Loans_Brows_Docs.Enabled = false;
@@ -140,6 +142,8 @@ namespace Finance_Authority.PL
                 LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة قرض جديد", DateTime.Now);
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
                 Loans_update.Enabled = false;
                 Loans_delete.Enabled = false;
                 Loans_Brows_Docs.Enabled = false;
@@ -251,6 +255,8 @@ namespace Finance_Authority.PL
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل قرض", DateTime.Now);
                 Loans_Amont.Text = "";
                 Loans_Notes.Text = "";
+                Payment_Document_no.Text = "";
+                Payment_Document_No_Order.Text = "";
                 Loans_update.Enabled = false;
                 Loans_delete.Enabled = false;
                 Loans_Brows_Docs.Enabled = false;
@@ -314,6 +320,8 @@ namespace Finance_Authority.PL
                     LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
                     Loans_Amont.Text = "";
                     Loans_Notes.Text = "";
+                    Payment_Document_no.Text = "";
+                    Payment_Document_No_Order.Text = "";
                     Loans_update.Enabled = false;
                     Loans_delete.Enabled = false;
                     Loans_Brows_Docs.Enabled = false;

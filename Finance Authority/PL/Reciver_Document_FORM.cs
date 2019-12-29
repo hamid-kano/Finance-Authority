@@ -110,6 +110,24 @@ namespace Finance_Authority.PL
                     Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
+                ////
+                /// اذا كان النسد من نوع ميزانية يتم اضافة ميزانية جديدة وتدوير المبالغ في الميزانية السابقة حيث يتم اضافة المبالغ عن طريق سند الاستلام
+                double Spe_SY = Reciver_Document_sy.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_sy.Text);
+                double Spe_Dollar = Reciver_Document_Dollar.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_Dollar.Text);
+                DataTable dt_Preiv_Budget;
+                //اذا كان هناك ميزانية سابقة
+                if ((dt_Preiv_Budget = Bud.Budget_Last_Budget()).Rows.Count > 0)
+                {
+                    Bud.Budget_add(dt_Preiv_Budget.Rows[0][1].ToString(), dt_Preiv_Budget.Rows[0][2].ToString(), "0", "0", dt_Preiv_Budget.Rows[0][1].ToString(),
+                                   dt_Preiv_Budget.Rows[0][2].ToString(), Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
+                }
+                else // اذا هذه الميزانية اول ميزانية تدخل البرنامج
+                {
+                    Bud.Budget_add("0", "0", "0", "0", "0",
+                   "0", Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
+                }
+                ///
+
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("R", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
@@ -121,7 +139,6 @@ namespace Finance_Authority.PL
                     Document_FORM FRM = new Document_FORM(id_Reciver_Doc_new_add, "سند قبض");
                     FRM.ShowDialog();
                 }
-                ////
                 Program.Add_Message();
                 LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة سند استلام", DateTime.Now);
                 Reciver_Document_sy.Text = "";
@@ -252,7 +269,11 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_delete_Click(object sender, EventArgs e)
         {
-           
+            if (Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString() == "ميزانية")
+            {
+                Program.Special_Message("لا يمكن حذف سند من نوع ميزانية عليك عليك حذف الميزانية من نافذة الميزانيات");
+                return;
+            }
             if (MessageBox.Show("هل تريد حذف سند الاستلام .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (this.Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString() == "دفعة قرض")

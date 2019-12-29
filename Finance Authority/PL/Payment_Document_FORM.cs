@@ -110,6 +110,11 @@ namespace Finance_Authority.PL
                 Program.Special_Message("لا يمكن اضافة سند دفع من نوع دفعة قرض لانه من انواع سندات الاستلام");
                 return;
             }
+            if (Payment_Document_Comb_Cate.Text == "ميزانية")
+            {
+                Program.Special_Message("لا يمكن اضافة سند دفع من نوع ميزانية لانه من انواع سندات الاستلام");
+                return;
+            }
 
             if (Payment_Document_sy.Text == String.Empty && Payment_Document_Dollar.Text == String.Empty)
             {

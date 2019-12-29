@@ -14,6 +14,7 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Budget Bud = new BL.CLS_Budget();
         DataTable dt = new DataTable();
+        BL.CLS_Budget budget = new BL.CLS_Budget();
         public Budget_Now_FORM()
         {
             InitializeComponent();
@@ -21,6 +22,9 @@ namespace Finance_Authority.PL
             dt = Bud.Budget_Last_Budget();
             if (dt.Rows.Count!=0)
             {
+                DataRow dt_Sum_export = budget.Budget_Last_Sum_Payment().Rows[0];
+                Budget_Now_Export_sy.Text = dt_Sum_export[0].ToString();
+                Budget_Now_Export_Dollar.Text= dt_Sum_export[1].ToString();
                 Budget_Now_amount_sy.Text = dt.Rows[0][1].ToString();
                 Budget_Now_amount_Dollar.Text = dt.Rows[0][2].ToString();
                 Budget_Now_import_sy.Text = dt.Rows[0][3].ToString();

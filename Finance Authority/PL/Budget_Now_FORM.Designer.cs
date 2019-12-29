@@ -48,12 +48,16 @@
             this.Budget_Now_amount_sy = new MetroFramework.Controls.MetroTextBox();
             this.Budget_Now_Notes = new MetroFramework.Controls.MetroTextBox();
             this.Budget_Now_DateTime = new MetroFramework.Controls.MetroDateTime();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.Budget_Now_Export_sy = new MetroFramework.Controls.MetroTextBox();
+            this.Budget_Now_Export_Dollar = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(376, 277);
+            this.metroLabel9.Location = new System.Drawing.Point(23, 235);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(66, 19);
             this.metroLabel9.TabIndex = 129;
@@ -62,7 +66,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(20, 274);
+            this.metroLabel8.Location = new System.Drawing.Point(373, 310);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(41, 19);
             this.metroLabel8.TabIndex = 128;
@@ -71,7 +75,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(376, 227);
+            this.metroLabel7.Location = new System.Drawing.Point(376, 270);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(114, 19);
             this.metroLabel7.TabIndex = 127;
@@ -80,7 +84,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(376, 184);
+            this.metroLabel6.Location = new System.Drawing.Point(376, 230);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(120, 19);
             this.metroLabel6.TabIndex = 126;
@@ -89,7 +93,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(20, 219);
+            this.metroLabel5.Location = new System.Drawing.Point(20, 187);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(83, 19);
             this.metroLabel5.TabIndex = 125;
@@ -98,7 +102,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(20, 177);
+            this.metroLabel4.Location = new System.Drawing.Point(20, 149);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(89, 19);
             this.metroLabel4.TabIndex = 124;
@@ -107,7 +111,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(376, 132);
+            this.metroLabel3.Location = new System.Drawing.Point(378, 111);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(91, 19);
             this.metroLabel3.TabIndex = 123;
@@ -116,7 +120,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(376, 81);
+            this.metroLabel2.Location = new System.Drawing.Point(378, 75);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(97, 19);
             this.metroLabel2.TabIndex = 122;
@@ -125,7 +129,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(20, 82);
+            this.metroLabel1.Location = new System.Drawing.Point(20, 75);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(124, 19);
             this.metroLabel1.TabIndex = 121;
@@ -134,7 +138,7 @@
             // Authority_Search
             // 
             this.Authority_Search.AutoSize = true;
-            this.Authority_Search.Location = new System.Drawing.Point(20, 129);
+            this.Authority_Search.Location = new System.Drawing.Point(20, 111);
             this.Authority_Search.Name = "Authority_Search";
             this.Authority_Search.Size = new System.Drawing.Size(118, 19);
             this.Authority_Search.TabIndex = 120;
@@ -155,7 +159,7 @@
             this.Budget_Now_spicified_Sy.CustomButton.UseSelectable = true;
             this.Budget_Now_spicified_Sy.CustomButton.Visible = false;
             this.Budget_Now_spicified_Sy.Lines = new string[0];
-            this.Budget_Now_spicified_Sy.Location = new System.Drawing.Point(512, 180);
+            this.Budget_Now_spicified_Sy.Location = new System.Drawing.Point(512, 228);
             this.Budget_Now_spicified_Sy.MaxLength = 32767;
             this.Budget_Now_spicified_Sy.Name = "Budget_Now_spicified_Sy";
             this.Budget_Now_spicified_Sy.PasswordChar = '\0';
@@ -186,7 +190,7 @@
             this.Budget_Now_spicified_Dollar.CustomButton.UseSelectable = true;
             this.Budget_Now_spicified_Dollar.CustomButton.Visible = false;
             this.Budget_Now_spicified_Dollar.Lines = new string[0];
-            this.Budget_Now_spicified_Dollar.Location = new System.Drawing.Point(512, 227);
+            this.Budget_Now_spicified_Dollar.Location = new System.Drawing.Point(512, 268);
             this.Budget_Now_spicified_Dollar.MaxLength = 32767;
             this.Budget_Now_spicified_Dollar.Name = "Budget_Now_spicified_Dollar";
             this.Budget_Now_spicified_Dollar.PasswordChar = '\0';
@@ -217,7 +221,7 @@
             this.Budget_Now_import_sy.CustomButton.UseSelectable = true;
             this.Budget_Now_import_sy.CustomButton.Visible = false;
             this.Budget_Now_import_sy.Lines = new string[0];
-            this.Budget_Now_import_sy.Location = new System.Drawing.Point(512, 86);
+            this.Budget_Now_import_sy.Location = new System.Drawing.Point(512, 73);
             this.Budget_Now_import_sy.MaxLength = 32767;
             this.Budget_Now_import_sy.Name = "Budget_Now_import_sy";
             this.Budget_Now_import_sy.PasswordChar = '\0';
@@ -248,7 +252,7 @@
             this.Budget_Now_import_Dollar.CustomButton.UseSelectable = true;
             this.Budget_Now_import_Dollar.CustomButton.Visible = false;
             this.Budget_Now_import_Dollar.Lines = new string[0];
-            this.Budget_Now_import_Dollar.Location = new System.Drawing.Point(512, 133);
+            this.Budget_Now_import_Dollar.Location = new System.Drawing.Point(512, 109);
             this.Budget_Now_import_Dollar.MaxLength = 32767;
             this.Budget_Now_import_Dollar.Name = "Budget_Now_import_Dollar";
             this.Budget_Now_import_Dollar.PasswordChar = '\0';
@@ -279,7 +283,7 @@
             this.Budget_Now_Recycle_Sy.CustomButton.UseSelectable = true;
             this.Budget_Now_Recycle_Sy.CustomButton.Visible = false;
             this.Budget_Now_Recycle_Sy.Lines = new string[0];
-            this.Budget_Now_Recycle_Sy.Location = new System.Drawing.Point(159, 175);
+            this.Budget_Now_Recycle_Sy.Location = new System.Drawing.Point(159, 147);
             this.Budget_Now_Recycle_Sy.MaxLength = 32767;
             this.Budget_Now_Recycle_Sy.Name = "Budget_Now_Recycle_Sy";
             this.Budget_Now_Recycle_Sy.PasswordChar = '\0';
@@ -310,7 +314,7 @@
             this.Budget_Now_Recycle_Dollar.CustomButton.UseSelectable = true;
             this.Budget_Now_Recycle_Dollar.CustomButton.Visible = false;
             this.Budget_Now_Recycle_Dollar.Lines = new string[0];
-            this.Budget_Now_Recycle_Dollar.Location = new System.Drawing.Point(159, 222);
+            this.Budget_Now_Recycle_Dollar.Location = new System.Drawing.Point(159, 185);
             this.Budget_Now_Recycle_Dollar.MaxLength = 32767;
             this.Budget_Now_Recycle_Dollar.Name = "Budget_Now_Recycle_Dollar";
             this.Budget_Now_Recycle_Dollar.PasswordChar = '\0';
@@ -341,7 +345,7 @@
             this.Budget_Now_amount_Dollar.CustomButton.UseSelectable = true;
             this.Budget_Now_amount_Dollar.CustomButton.Visible = false;
             this.Budget_Now_amount_Dollar.Lines = new string[0];
-            this.Budget_Now_amount_Dollar.Location = new System.Drawing.Point(159, 128);
+            this.Budget_Now_amount_Dollar.Location = new System.Drawing.Point(159, 109);
             this.Budget_Now_amount_Dollar.MaxLength = 32767;
             this.Budget_Now_amount_Dollar.Name = "Budget_Now_amount_Dollar";
             this.Budget_Now_amount_Dollar.PasswordChar = '\0';
@@ -372,7 +376,7 @@
             this.Budget_Now_amount_sy.CustomButton.UseSelectable = true;
             this.Budget_Now_amount_sy.CustomButton.Visible = false;
             this.Budget_Now_amount_sy.Lines = new string[0];
-            this.Budget_Now_amount_sy.Location = new System.Drawing.Point(159, 81);
+            this.Budget_Now_amount_sy.Location = new System.Drawing.Point(159, 73);
             this.Budget_Now_amount_sy.MaxLength = 32767;
             this.Budget_Now_amount_sy.Name = "Budget_Now_amount_sy";
             this.Budget_Now_amount_sy.PasswordChar = '\0';
@@ -394,17 +398,18 @@
             // 
             // 
             this.Budget_Now_Notes.CustomButton.Image = null;
-            this.Budget_Now_Notes.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Budget_Now_Notes.CustomButton.Location = new System.Drawing.Point(90, 2);
             this.Budget_Now_Notes.CustomButton.Name = "";
-            this.Budget_Now_Notes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Budget_Now_Notes.CustomButton.Size = new System.Drawing.Size(95, 95);
             this.Budget_Now_Notes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Budget_Now_Notes.CustomButton.TabIndex = 1;
             this.Budget_Now_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Budget_Now_Notes.CustomButton.UseSelectable = true;
             this.Budget_Now_Notes.CustomButton.Visible = false;
             this.Budget_Now_Notes.Lines = new string[0];
-            this.Budget_Now_Notes.Location = new System.Drawing.Point(512, 274);
+            this.Budget_Now_Notes.Location = new System.Drawing.Point(159, 234);
             this.Budget_Now_Notes.MaxLength = 32767;
+            this.Budget_Now_Notes.Multiline = true;
             this.Budget_Now_Notes.Name = "Budget_Now_Notes";
             this.Budget_Now_Notes.PasswordChar = '\0';
             this.Budget_Now_Notes.ReadOnly = true;
@@ -413,7 +418,7 @@
             this.Budget_Now_Notes.SelectionLength = 0;
             this.Budget_Now_Notes.SelectionStart = 0;
             this.Budget_Now_Notes.ShortcutsEnabled = true;
-            this.Budget_Now_Notes.Size = new System.Drawing.Size(188, 23);
+            this.Budget_Now_Notes.Size = new System.Drawing.Size(188, 100);
             this.Budget_Now_Notes.TabIndex = 111;
             this.Budget_Now_Notes.UseSelectable = true;
             this.Budget_Now_Notes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -423,19 +428,103 @@
             // 
             this.Budget_Now_DateTime.Enabled = false;
             this.Budget_Now_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Budget_Now_DateTime.Location = new System.Drawing.Point(159, 269);
+            this.Budget_Now_DateTime.Location = new System.Drawing.Point(512, 305);
             this.Budget_Now_DateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.Budget_Now_DateTime.Name = "Budget_Now_DateTime";
             this.Budget_Now_DateTime.RightToLeftLayout = true;
             this.Budget_Now_DateTime.Size = new System.Drawing.Size(188, 29);
             this.Budget_Now_DateTime.TabIndex = 110;
             // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(378, 187);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(98, 19);
+            this.metroLabel10.TabIndex = 133;
+            this.metroLabel10.Text = "الصادرات بالدولار";
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(378, 149);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel11.TabIndex = 132;
+            this.metroLabel11.Text = "الصادرات بالسوري";
+            // 
+            // Budget_Now_Export_sy
+            // 
+            // 
+            // 
+            // 
+            this.Budget_Now_Export_sy.CustomButton.Image = null;
+            this.Budget_Now_Export_sy.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Budget_Now_Export_sy.CustomButton.Name = "";
+            this.Budget_Now_Export_sy.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Budget_Now_Export_sy.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Budget_Now_Export_sy.CustomButton.TabIndex = 1;
+            this.Budget_Now_Export_sy.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Budget_Now_Export_sy.CustomButton.UseSelectable = true;
+            this.Budget_Now_Export_sy.CustomButton.Visible = false;
+            this.Budget_Now_Export_sy.Lines = new string[0];
+            this.Budget_Now_Export_sy.Location = new System.Drawing.Point(512, 147);
+            this.Budget_Now_Export_sy.MaxLength = 32767;
+            this.Budget_Now_Export_sy.Name = "Budget_Now_Export_sy";
+            this.Budget_Now_Export_sy.PasswordChar = '\0';
+            this.Budget_Now_Export_sy.ReadOnly = true;
+            this.Budget_Now_Export_sy.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Budget_Now_Export_sy.SelectedText = "";
+            this.Budget_Now_Export_sy.SelectionLength = 0;
+            this.Budget_Now_Export_sy.SelectionStart = 0;
+            this.Budget_Now_Export_sy.ShortcutsEnabled = true;
+            this.Budget_Now_Export_sy.Size = new System.Drawing.Size(188, 23);
+            this.Budget_Now_Export_sy.TabIndex = 131;
+            this.Budget_Now_Export_sy.UseSelectable = true;
+            this.Budget_Now_Export_sy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Budget_Now_Export_sy.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Budget_Now_Export_Dollar
+            // 
+            // 
+            // 
+            // 
+            this.Budget_Now_Export_Dollar.CustomButton.Image = null;
+            this.Budget_Now_Export_Dollar.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.Budget_Now_Export_Dollar.CustomButton.Name = "";
+            this.Budget_Now_Export_Dollar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Budget_Now_Export_Dollar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Budget_Now_Export_Dollar.CustomButton.TabIndex = 1;
+            this.Budget_Now_Export_Dollar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Budget_Now_Export_Dollar.CustomButton.UseSelectable = true;
+            this.Budget_Now_Export_Dollar.CustomButton.Visible = false;
+            this.Budget_Now_Export_Dollar.Lines = new string[0];
+            this.Budget_Now_Export_Dollar.Location = new System.Drawing.Point(512, 185);
+            this.Budget_Now_Export_Dollar.MaxLength = 32767;
+            this.Budget_Now_Export_Dollar.Name = "Budget_Now_Export_Dollar";
+            this.Budget_Now_Export_Dollar.PasswordChar = '\0';
+            this.Budget_Now_Export_Dollar.ReadOnly = true;
+            this.Budget_Now_Export_Dollar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Budget_Now_Export_Dollar.SelectedText = "";
+            this.Budget_Now_Export_Dollar.SelectionLength = 0;
+            this.Budget_Now_Export_Dollar.SelectionStart = 0;
+            this.Budget_Now_Export_Dollar.ShortcutsEnabled = true;
+            this.Budget_Now_Export_Dollar.Size = new System.Drawing.Size(188, 23);
+            this.Budget_Now_Export_Dollar.TabIndex = 130;
+            this.Budget_Now_Export_Dollar.UseSelectable = true;
+            this.Budget_Now_Export_Dollar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Budget_Now_Export_Dollar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Budget_Now_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(719, 325);
+            this.ClientSize = new System.Drawing.Size(719, 357);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.Budget_Now_Export_sy);
+            this.Controls.Add(this.Budget_Now_Export_Dollar);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel7);
@@ -489,5 +578,9 @@
         private MetroFramework.Controls.MetroTextBox Budget_Now_amount_sy;
         private MetroFramework.Controls.MetroTextBox Budget_Now_Notes;
         private MetroFramework.Controls.MetroDateTime Budget_Now_DateTime;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroTextBox Budget_Now_Export_sy;
+        private MetroFramework.Controls.MetroTextBox Budget_Now_Export_Dollar;
     }
 }

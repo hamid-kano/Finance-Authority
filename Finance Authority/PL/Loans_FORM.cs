@@ -117,8 +117,31 @@ namespace Finance_Authority.PL
             {
                 DataRow row = DT.Rows[0];
                 int id_EmployeeDEsS = Convert.ToInt32(row["Employee_Des_ID"]);
-                //MessageBox.Show(id_EmployeeDES.ToString());
-                //   bool Functunal_status = Contracts_end.Checked ? true : false;
+                //اختبار اذا كان هناك قرض سابق غير مدفوع بشكل كامل
+                DataTable dt_Loan;
+                if((dt_Loan=Loa.Loans_Search_By_desc_ID(id_EmployeeDEsS)).Rows.Count>0)
+                {
+                    int id_loean_Payment = Convert.ToInt32(dt_Loan.Rows[0][0]);
+                    DataTable dtPay_Lo = leoan_Payments.Leoan_Payments_View_Loans_ID(id_loean_Payment);
+                    if (dtPay_Lo.Rows.Count == 0)
+                    {
+                        MessageBox.Show("هناك قرض سابق لم يستوفى دفعه بشكل كامل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else if(dtPay_Lo.Rows.Count>0)
+                    {
+                        double sumPayments_Loan = 0;
+                        foreach (DataRow item in dtPay_Lo.Rows)
+                        {
+                            sumPayments_Loan += Convert.ToDouble(item[2]);
+                        }
+                        if (sumPayments_Loan<Convert.ToDouble(dt_Loan.Rows[0][1]))
+                        {
+                            MessageBox.Show("هناك قرض سابق لم يستوفى دفعه بشكل كامل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
                 Loa.Loans_add(Loans_Amont.Text , Loans_Notes.Text , Loans_Date.Value , Loans_Date_Start.Value , Convert.ToInt32(Loans_Comb_Budget.SelectedValue) , id_EmployeeDEsS);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;

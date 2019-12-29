@@ -115,8 +115,16 @@ namespace Finance_Authority.PL
 
         private void Contracts_Details_Click(object sender, EventArgs e)
         {
-            Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
-            FRM.ShowDialog();
+            if (Contracts_Gridview.CurrentRow == null)
+            {
+                Contracts_Details.Enabled = false;
+            }
+            else
+            {
+                Employee_FORM FRM = new Employee_FORM(Program.Employee_Description_id);
+                FRM.ShowDialog();
+            }
+               
         }
 
         private void Contracts_Brows_Docs_Click(object sender, EventArgs e)

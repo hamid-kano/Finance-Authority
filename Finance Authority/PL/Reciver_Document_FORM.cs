@@ -100,38 +100,56 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Reciver_Document_Comb_Date.SelectedIndex ==-1 && Reciver_Document_Comb_Cate.Text != "ميزانية")
+            {
+
+                MessageBox.Show("يجب اولا اضافة سند استلام من نوع ميزانية ليتم اضافة ميزانية الى البرنامج", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
             if (Dt.Rows.Count == 0)
             {
-                Reciv.Reciver_Document_add(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
+                // اذا كان نوع السند من نوع ميزانية
+                if (Reciver_Document_Comb_Cate.Text=="ميزانية")
+                {
+                    /// اذا كان النسد من نوع ميزانية يتم اضافة ميزانية جديدة وتدوير المبالغ في الميزانية السابقة حيث يتم اضافة المبالغ عن طريق سند الاستلام
+                    double Spe_SY = Reciver_Document_sy.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_sy.Text);
+                    double Spe_Dollar = Reciver_Document_Dollar.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_Dollar.Text);
+                    DataTable dt_Preiv_Budget;
+                    //اذا كان هناك ميزانية سابقة
+                    if ((dt_Preiv_Budget = Bud.Budget_Last_Budget()).Rows.Count > 0)
+                    {
+                        Bud.Budget_add(dt_Preiv_Budget.Rows[0][1].ToString(), dt_Preiv_Budget.Rows[0][2].ToString(), "0", "0", dt_Preiv_Budget.Rows[0][1].ToString(),
+                                       dt_Preiv_Budget.Rows[0][2].ToString(), Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
+                    }
+                    else // اذا هذه الميزانية اول ميزانية تدخل البرنامج
+                    {
+                        Bud.Budget_add("0", "0", "0", "0", "0",
+                       "0", Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
+                    }
+                    ///
+
+                   // يضاف سند الاستلام الى الميزانية الجديدة
+                    Reciv.Reciver_Document_add(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
                                          Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text,
                                          Reciver_Document_rate.Text == string.Empty ? "1" : Reciver_Document_rate.Text,
-                    Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
+                    Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text,Convert.ToInt32(Bud.Budget_combo_Last_Budget().Rows[0][0]), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
+                }
+                else
+                {
+                    Reciv.Reciver_Document_add(Reciver_Document_sy.Text == string.Empty ? "0" : Reciver_Document_sy.Text,
+                             Reciver_Document_Dollar.Text == string.Empty ? "0" : Reciver_Document_Dollar.Text,
+                             Reciver_Document_rate.Text == string.Empty ? "1" : Reciver_Document_rate.Text,
+                     Reciver_Document_no.Text, Reciver_Document_Reason.Text, Reciver_Document_Receve.Text, Reciver_Document_DateTime.Value, Reciver_Document_Notes.Text, Convert.ToInt32(Reciver_Document_Comb_Date.SelectedValue), Convert.ToInt32(Reciver_Document_Comb_Cate.SelectedValue));
+
+                }
                 this.Reciver_Document_dataGrid.DataSource = Reciv.Reciver_Document_View();
                 this.Reciver_Document_dataGrid.Columns[0].Visible = false;
                 ////
-                /// اذا كان النسد من نوع ميزانية يتم اضافة ميزانية جديدة وتدوير المبالغ في الميزانية السابقة حيث يتم اضافة المبالغ عن طريق سند الاستلام
-                double Spe_SY = Reciver_Document_sy.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_sy.Text);
-                double Spe_Dollar = Reciver_Document_Dollar.Text == string.Empty ? 0 : Convert.ToDouble(Reciver_Document_Dollar.Text);
-                DataTable dt_Preiv_Budget;
-                //اذا كان هناك ميزانية سابقة
-                if ((dt_Preiv_Budget = Bud.Budget_Last_Budget()).Rows.Count > 0)
-                {
-                    Bud.Budget_add(dt_Preiv_Budget.Rows[0][1].ToString(), dt_Preiv_Budget.Rows[0][2].ToString(), "0", "0", dt_Preiv_Budget.Rows[0][1].ToString(),
-                                   dt_Preiv_Budget.Rows[0][2].ToString(), Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
-                }
-                else // اذا هذه الميزانية اول ميزانية تدخل البرنامج
-                {
-                    Bud.Budget_add("0", "0", "0", "0", "0",
-                   "0", Spe_SY.ToString(), Spe_Dollar.ToString(), "ميزانية", DateTime.Now);
-                }
-                ///
-
                 // تحديث الميزانية
                 Program.Budget_update_after_Payment_Reciver("R", Reciver_Document_sy.Text, Reciver_Document_Dollar.Text);
                 frm.Update_label_finance_Box();
-                //
                 /// اضافة ملحقات لسند القبض
                 int id_Reciver_Doc_new_add = Convert.ToInt32(Reciv.Reciver_Document_Max_ID().Rows[0][0]);
                 if (MessageBox.Show("هل تريد اضافة ملحقات لهذا السند؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -152,8 +170,7 @@ namespace Finance_Authority.PL
             }
             else
             {
-                MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                MessageBox.Show("رقم سند الاستلام موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             } 
         }
@@ -401,6 +418,14 @@ namespace Finance_Authority.PL
         {
             Document_FORM FRM = new Document_FORM(Program.Payment_Document_id, "سند قبض");
             FRM.ShowDialog();
+        }
+
+        private void Reciver_Document_Comb_Cate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Reciver_Document_Comb_Cate.Text=="ميزانية")
+            {
+                Reciver_Document_Comb_Date.Enabled = false;
+            }
         }
     }
 }

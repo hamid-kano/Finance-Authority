@@ -205,6 +205,7 @@
             this.Reciver_Document_Comb_Cate.Size = new System.Drawing.Size(145, 29);
             this.Reciver_Document_Comb_Cate.TabIndex = 9;
             this.Reciver_Document_Comb_Cate.UseSelectable = true;
+            this.Reciver_Document_Comb_Cate.SelectedIndexChanged += new System.EventHandler(this.Reciver_Document_Comb_Cate_SelectedIndexChanged);
             // 
             // Reciver_Document_Date_first
             // 

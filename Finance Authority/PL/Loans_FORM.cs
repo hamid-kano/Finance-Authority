@@ -34,7 +34,8 @@ namespace Finance_Authority.PL
             this.StyleManager = Program.theme_style(this);
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
-            
+            Loans_Gridview.Columns[8].Visible = false;
+            Loans_Gridview.Columns[9].Visible = false;
             Loans_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Loans_Comb_Budget.DisplayMember = "Date";
             Loans_Comb_Budget.ValueMember = "Budget_Id";
@@ -145,6 +146,8 @@ namespace Finance_Authority.PL
                 Loa.Loans_add(Loans_Amont.Text , Loans_Notes.Text , Loans_Date.Value , Loans_Date_Start.Value , Convert.ToInt32(Loans_Comb_Budget.SelectedValue) , id_EmployeeDEsS);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
+                Loans_Gridview.Columns[8].Visible = false;
+                Loans_Gridview.Columns[9].Visible = false;
                 int Max_loan_id =Convert.ToInt32(Loa.Leoan_Max_ID().Rows[0][0]);
                 /// اضافة ملحقات للقرض
                 if (MessageBox.Show("هل تريد اضافة ملحقات لهذا القرض؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -196,6 +199,8 @@ namespace Finance_Authority.PL
                 Loans_Date.Text = this.Loans_Gridview.CurrentRow.Cells[3].Value.ToString();
                 Loans_Date_Start.Text = this.Loans_Gridview.CurrentRow.Cells[4].Value.ToString();
                 Loans_Comb_Department.Text = this.Loans_Gridview.CurrentRow.Cells[7].Value.ToString();
+                Loans_CombAthuontic.Text = this.Loans_Gridview.CurrentRow.Cells[8].Value.ToString();
+                Loans_CombOffice.Text = this.Loans_Gridview.CurrentRow.Cells[9].Value.ToString();
                 Loans_Comb_Employ.Text = this.Loans_Gridview.CurrentRow.Cells[6].Value.ToString();
                 Loans_update.Enabled = true;
                 Loans_delete.Enabled = true;
@@ -274,6 +279,8 @@ namespace Finance_Authority.PL
                 Loa.Loans_update(Loans_Amont.Text, Loans_Notes.Text, Loans_Date.Value, Loans_Date_Start.Value, Convert.ToInt32(Loans_Comb_Budget.SelectedValue), id_EmployeeDEsS , Program.Loan_id);
                 this.Loans_Gridview.DataSource = Loa.Loans_View();
                 Loans_Gridview.Columns[0].Visible = false;
+                Loans_Gridview.Columns[8].Visible = false;
+                Loans_Gridview.Columns[9].Visible = false;
                 Program.Update_Message();
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل قرض", DateTime.Now);
                 Loans_Amont.Text = "";
@@ -339,6 +346,8 @@ namespace Finance_Authority.PL
                     //
                     this.Loans_Gridview.DataSource = Loa.Loans_View();
                     Loans_Gridview.Columns[0].Visible = false;
+                    Loans_Gridview.Columns[8].Visible = false;
+                    Loans_Gridview.Columns[9].Visible = false;
                     MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
                     Loans_Amont.Text = "";
@@ -360,6 +369,8 @@ namespace Finance_Authority.PL
             {
                 this.Loans_Gridview.DataSource = Loa.Loans_Search_Budget_Date(Convert.ToInt32(Loans_Search_Budget.SelectedValue));
                 Loans_Gridview.Columns[0].Visible = false;
+                Loans_Gridview.Columns[8].Visible = false;
+                Loans_Gridview.Columns[9].Visible = false;
             }
             catch { return; }
         }
@@ -416,6 +427,8 @@ namespace Finance_Authority.PL
         {
             this.Loans_Gridview.DataSource = Loa.Loans_Search_All(Loans_Search_All.Text);
             Loans_Gridview.Columns[0].Visible = false;
+            Loans_Gridview.Columns[8].Visible = false;
+            Loans_Gridview.Columns[9].Visible = false;
         }
 
         private void Loans_Amont_KeyPress(object sender, KeyPressEventArgs e)
@@ -427,6 +440,8 @@ namespace Finance_Authority.PL
         {
             this.Loans_Gridview.DataSource = Loa.Loans_View();
             Loans_Gridview.Columns[0].Visible = false;
+            Loans_Gridview.Columns[8].Visible = false;
+            Loans_Gridview.Columns[9].Visible = false;
         }
         private void Loans_CombAthuontic_SelectedValueChanged(object sender, EventArgs e)
         {

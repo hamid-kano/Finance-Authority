@@ -23,8 +23,7 @@ namespace Finance_Authority.PL
         BL.CLS_Reciver_Document reciver_Document = new BL.CLS_Reciver_Document();
         BL.CLS_Budget budget = new BL.CLS_Budget();
         BL.CLS_Operations ope = new BL.CLS_Operations();
-        DataTable Dt = new DataTable();
-        double sum;
+        DataTable Dt = new DataTable();    
         double sumtotal;
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         int _Loan_id;
@@ -51,6 +50,7 @@ namespace Finance_Authority.PL
                 this.Leoan_Payments_Gridview.DataSource = pay_Leo.Leoan_Payments_View(Program.Loan_id);
                 Leoan_Payments_Gridview.Columns[0].Visible = false;
                 Dt = pay_Leo.Leoan_Payments_View(Program.Loan_id);
+                double sum = 0;
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
                     sum = sum + Convert.ToDouble(Dt.Rows[i][1]);
@@ -95,7 +95,7 @@ namespace Finance_Authority.PL
                     MessageBox.Show("رقم سند القبض موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
             }
-            if (Convert.ToInt32( Leoan_Payments_Amont.Text )> Convert.ToInt32(Leoan_Payments_Total.Text))
+            if (Convert.ToInt32( Leoan_Payments_Amont.Text )> Convert.ToInt32(Leoan_Payments_Remind_Amont.Text))
             {
                 MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -159,7 +159,7 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
-            if (Convert.ToInt32(Leoan_Payments_Amont.Text) > Convert.ToInt32(Leoan_Payments_Total.Text))
+            if (Convert.ToInt32(Leoan_Payments_Amont.Text) > Convert.ToInt32(Leoan_Payments_Remind_Amont.Text))
             {
                 MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -335,13 +335,20 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_FORM_Load(object sender, EventArgs e)
         {
+            double sum = 0;
             if (_Loan_id!=-1)
             {
+                Dt = pay_Leo.Leoan_Payments_View(Program.Loan_id);
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    sum = sum + Convert.ToDouble(Dt.Rows[i][1]);
+                }
                 Leoan_Payments_Total_Payment_Amount.Text = sum.ToString();
                 sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
                 sumtotal = sumtotal - sum;
                 Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
-            }   
+            }
+            sum = 0;
         }
 
         private void Loans_Payments_Brows_Docs_Click(object sender, EventArgs e)
@@ -356,7 +363,7 @@ namespace Finance_Authority.PL
         }
         private void update_loean_pay()
         {
-
+            double sum = 0;
             if (_Loan_id != -1)
             {
                 Dt = pay_Leo.Leoan_Payments_View(Program.Loan_id);
@@ -368,7 +375,10 @@ namespace Finance_Authority.PL
                 sumtotal = Convert.ToDouble(Leoan_Payments_Total.Text);
                 sumtotal = sumtotal - sum;
                 Leoan_Payments_Remind_Amont.Text = sumtotal.ToString();
+                 sum = 0;
+
             }
+
         }
     }
 }

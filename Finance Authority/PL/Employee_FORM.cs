@@ -112,6 +112,8 @@ namespace Finance_Authority.PL
                 Statues_Change.Enabled = false;
                 Contracts_Brows_Docs.Enabled = false;
                 Employees_Brows_Docs.Enabled = false;
+                Contracts_Comb_Contract_statue.SelectedIndex = 1;
+                Contracts_Comb_Contract_statue.Enabled = false;
             }
 
         }
@@ -227,12 +229,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف الوضع العائلي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (Employee_Pr_Service_Years.Text == String.Empty)
-            {
+            //if (Employee_Pr_Service_Years.Text == String.Empty)
+            //{
 
-                MessageBox.Show("أضف عدد سنوات الخدمة السابقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //    MessageBox.Show("أضف عدد سنوات الخدمة السابقة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
             //// التحقق من معلومات الوصف الوظيفي
             if (Employee_Description_N0_Book.Text == String.Empty)
             {
@@ -348,6 +350,22 @@ namespace Finance_Authority.PL
                 }
                 Program.Add_Message();
                 LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة موظف جديد", DateTime.Now);
+                Employee_Description_N0_Book.Text = "";
+                Employee_Description_Salery.Text = "";
+                Employee_First_Name.Text = "";
+                Employee_Father_Name.Text = "";
+                Employee_Last_Name.Text = "";
+                Employee_Mother_Name.Text = "";
+                Employee_Mobail.Text = "";
+                Employee_Scie_Level.Text = "";
+                Employee_Scie_Specialization.Text = "";
+                Employee_No_Financial.Text = "";
+                Employee_No_Affairs.Text = "";
+                Employee_No_File.Text = "";
+                Employee_No_Card.Text = "";
+                Employee_Gender.Text = "";
+                Employee_Marital_status.Text = "";
+                Employee_Pr_Service_Years.Text = "";
 
             }
             else
@@ -456,22 +474,22 @@ namespace Finance_Authority.PL
 
                 Program.Update_Message();
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل معلومات موظف", DateTime.Now);
-                Employee_Description_N0_Book.Text = "";
-                Employee_Description_Salery.Text = "";
-                Employee_First_Name.Text = "";
-                Employee_Father_Name.Text = "";
-                Employee_Last_Name.Text = "";
-                Employee_Mother_Name.Text = "";
-                Employee_Mobail.Text = "";
-                Employee_Scie_Level.Text = "";
-                Employee_Scie_Specialization.Text = "";
-                Employee_No_Financial.Text = "";
-                Employee_No_Affairs.Text = "";
-                Employee_No_File.Text = "";
-                Employee_No_Card.Text = "";
-                Employee_Gender.Text = "";
-                Employee_Marital_status.Text = "";
-                Employee_Pr_Service_Years.Text = "";
+                //Employee_Description_N0_Book.Text = "";
+                //Employee_Description_Salery.Text = "";
+                //Employee_First_Name.Text = "";
+                //Employee_Father_Name.Text = "";
+                //Employee_Last_Name.Text = "";
+                //Employee_Mother_Name.Text = "";
+                //Employee_Mobail.Text = "";
+                //Employee_Scie_Level.Text = "";
+                //Employee_Scie_Specialization.Text = "";
+                //Employee_No_Financial.Text = "";
+                //Employee_No_Affairs.Text = "";
+                //Employee_No_File.Text = "";
+                //Employee_No_Card.Text = "";
+                //Employee_Gender.Text = "";
+                //Employee_Marital_status.Text = "";
+                //Employee_Pr_Service_Years.Text = "";
                 Employee_add.Enabled = false;
 
             }

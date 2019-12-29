@@ -220,7 +220,7 @@ namespace Finance_Authority
         {
            
             DataRow dt_Budget_NOW = Budget_NOW();
-
+            DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0]; // جلب الواردات الشهرية سوري ودولار
             if (dt_Budget_NOW!=null)
             {
                 int sy_now = Convert.ToInt32(dt_Budget_NOW[1]);
@@ -230,11 +230,13 @@ namespace Finance_Authority
 
                 if (TypeDoc == "R")
                 {
-                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString());
+                    budget.Budget_update_after_Payment_Reciver((sy_now + sy).ToString(), (dollar_now + dollar).ToString()
+                        ,dt_Sum_import[0].ToString(),dt_Sum_import[1].ToString());
                 }
                 else
                 {
-                    budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString());
+                    budget.Budget_update_after_Payment_Reciver((sy_now - sy).ToString(), (dollar_now - dollar).ToString()
+                        , dt_Sum_import[0].ToString(),dt_Sum_import[1].ToString());
                 }
             }     
         }

@@ -59,16 +59,21 @@ namespace Finance_Authority.BL
             return Dt;
         }
         // تحديث الميزانية بعد عمليات الاستلام والدفع
-        public DataTable Budget_update_after_Payment_Reciver(string Amount_Now_SY, string Amount_Now_Dollar)
+        public DataTable Budget_update_after_Payment_Reciver(string Amount_Now_SY, string Amount_Now_Dollar,string Imposts_SY,string Imposts_Dollar)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
             DAL.open();
             DataTable Dt = new DataTable();
-            SqlParameter[] param = new SqlParameter[2];
+            SqlParameter[] param = new SqlParameter[4];
             param[0] = new SqlParameter("@Amount_Now_SY", SqlDbType.NVarChar);
             param[0].Value = Amount_Now_SY;
             param[1] = new SqlParameter("@Amount_Now_Dollar", SqlDbType.NVarChar);
             param[1].Value = Amount_Now_Dollar;
+            param[2] = new SqlParameter("@Imposts_SY", SqlDbType.NVarChar);
+            param[2].Value = Imposts_SY;
+            param[3] = new SqlParameter("@Imposts_Dollar", SqlDbType.NVarChar);
+            param[3].Value = Imposts_Dollar;
+
             Dt = DAL.selectdata("Budget_update_after_Payment_Reciver", param);
             DAL.close();
             return Dt;

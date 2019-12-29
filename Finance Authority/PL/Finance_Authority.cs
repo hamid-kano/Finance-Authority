@@ -13,6 +13,7 @@ namespace Finance_Authority.PL
 {
     public partial class Finance_Authority : MetroFramework.Forms.MetroForm
     {
+        BL.CLS_Budget budget = new BL.CLS_Budget();
         public Finance_Authority()
         {
             InitializeComponent();

@@ -197,17 +197,18 @@ namespace Finance_Authority.PL
 
         private void Payment_Document_update_Click(object sender, EventArgs e)
         {
-            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "رواتب")
+            string Type_Doc_Befor = this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString();
+            if (Type_Doc_Befor == "رواتب")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع رواتب عليك تعديل الرواتب المرتبطة به");
                 return;
             }
-            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "فاتورة")
+            if (Type_Doc_Befor == "فاتورة")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع فاتورة عليك تعديل الفاتورة المرتبطة به");
                 return;
             }
-            if (this.Payment_Document_dataGrid.CurrentRow.Cells[11].Value.ToString() == "قرض")
+            if (Type_Doc_Befor == "قرض")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع قرض عليك تعديل القرض المرتبطة به");
                 return;
@@ -216,6 +217,16 @@ namespace Finance_Authority.PL
             {
                 Program.Special_Message("لا يمكن تعديل سند دفع الى انواع سندات الاستلام");
                 return;
+            }
+            // التحقق من عدم التلاعب بتغيير انواع السندات
+            if (Type_Doc_Befor!= "رواتب"|| Type_Doc_Befor != "فاتورة" || Type_Doc_Befor != "قرض")
+            {
+                if (Payment_Document_Comb_Cate.Text== "قرض"|| Payment_Document_Comb_Cate.Text == "فاتورة" ||
+                    Payment_Document_Comb_Cate.Text == "رواتب" || Payment_Document_Comb_Cate.Text == "دفعة قرض" || Payment_Document_Comb_Cate.Text == "ميزانية")
+                {
+                    MessageBox.Show("لا يمكن تغيير نوع السند الى الانواع قرض او فاتورة او رواتب او ميزانية او دفعة قرض", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
             if (Payment_Document_sy.Text == String.Empty && Payment_Document_Dollar.Text == String.Empty)
             {

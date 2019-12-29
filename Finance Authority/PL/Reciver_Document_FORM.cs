@@ -177,6 +177,7 @@ namespace Finance_Authority.PL
 
         private void Reciver_Document_update_Click(object sender, EventArgs e)
         {
+            string Type_Doc_Befor = this.Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString();
             if (Reciver_Document_dataGrid.CurrentRow.Cells[10].Value.ToString() == "دفعة قرض")
             {
                 Program.Special_Message("لا يمكن تعديل سند من نوع دفعة قرض عليك تعديل دفعة القرض  ليتم تعديل السند بشكل تلقائي");
@@ -196,6 +197,16 @@ namespace Finance_Authority.PL
             {
                 Program.Special_Message("لا يمكن تعديل سند استلام الى انواع سندات الدفع");
                 return;
+            }
+            // التحقق من عدم التلاعب بتغيير انواع السندات
+            if (Type_Doc_Befor != "دفعة قرض" || Type_Doc_Befor != "ميزانية")
+            {
+                if (Reciver_Document_Comb_Cate.Text == "قرض" || Reciver_Document_Comb_Cate.Text == "فاتورة" ||
+                    Reciver_Document_Comb_Cate.Text == "رواتب" || Reciver_Document_Comb_Cate.Text == "دفعة قرض" || Reciver_Document_Comb_Cate.Text == "ميزانية")
+                {
+                    MessageBox.Show("لا يمكن تغيير نوع السند الى الانواع قرض او فاتورة او رواتب او ميزانية او دفعة قرض", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
 
             if (Reciver_Document_sy.Text == String.Empty && Reciver_Document_Dollar.Text == String.Empty)

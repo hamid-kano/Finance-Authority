@@ -23,15 +23,21 @@ namespace Finance_Authority.PL
         BL.CLS_Payment_Document Pay = new BL.CLS_Payment_Document();
         BL.CLS_Operations ope = new BL.CLS_Operations();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
-        int _Bill_ID=-1; // update Status ;
+        BL.Department Dep = new BL.Department();
+        BL.Authority Auth = new BL.Authority();
+
+        int _Bill_ID =-1; // update Status ;
         bool StatePaied;
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
             this.StyleManager = Program.theme_style(this);
-            Bills_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
-            Bills_Comb_Department.DisplayMember = "Department_Name";
-            Bills_Comb_Department.ValueMember = "Department_ID";
+            Bills_CombAthuontic.DataSource = Auth.Authority_view();
+            Bills_CombAthuontic.DisplayMember = "اسم الهيئة";
+            Bills_CombAthuontic.ValueMember = "Authority_ID";
+            //Bills_Comb_Department.DataSource = Empl_Des.Employee_Description_Comb_Department();
+            //Bills_Comb_Department.DisplayMember = "Department_Name";
+            //Bills_Comb_Department.ValueMember = "Department_ID";
             Bills_Comb_Budget.DataSource =budget.Budget_combo_Last_Budget();
             Bills_Comb_Budget.DisplayMember = "Date";
             Bills_Comb_Budget.ValueMember = "Budget_Id";
@@ -51,6 +57,8 @@ namespace Finance_Authority.PL
                 Bills_Paid.Checked = Convert.ToBoolean(dt.Rows[0][8]) ? true : false;
                 StatePaied = Bills_Paid.Checked;// الاحتفاظ بحالة الدفع قبل التحديث من في حال اصبحت مدفوعة يعرض رسالة لاضافة سند دفع 
                 Bills_Not.Checked = Convert.ToBoolean(dt.Rows[0][8]) ? false : true;
+                Bills_CombAthuontic.Text = dt.Rows[0][12].ToString(); 
+                Bills_CombOffice.Text = dt.Rows[0][13].ToString();
                 Bills_Comb_Department.Text = dt.Rows[0][11].ToString();
                 Bills_Comb_Budget.Text = dt.Rows[0][10].ToString();
                 this.Bill_Objects_dataGrid.DataSource = Bill.Objects_View_By_Bill_ID(Bills_ID);
@@ -148,6 +156,38 @@ namespace Finance_Authority.PL
                     MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+            }
+            if (Bills_Coin_Type.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار نوع العملة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Bills_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Bills_CombAthuontic.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Bills_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Bills_Comb_Department.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
             DataTable Dt = Pay.Payment_Document_View();
             for (int i = 0; i < Dt.Rows.Count; i++)
@@ -252,7 +292,26 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
+            if (Bills_CombAthuontic.SelectedIndex == -1)
+            {
 
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Bills_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (Bills_Comb_Department.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = Pay.Payment_Document_View();
             DataTable dt4;
             if ((dt4= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Bill_ID, "فاتورة")).Rows.Count!=0)
@@ -540,6 +599,42 @@ namespace Finance_Authority.PL
         private void Payment_Document_No_Order_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Bills_CombAthuontic_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idAthuontic = Convert.ToInt32(Bills_CombAthuontic.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Bills_CombOffice.DataSource = Dep.Department_CombAuthority_Office(idAthuontic);
+                Bills_CombOffice.DisplayMember = "Office_Name";
+                Bills_CombOffice.ValueMember = "Office_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+
+        }
+
+        private void Bills_CombOffice_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idOffice = Convert.ToInt32(Bills_CombOffice.SelectedValue);
+                Bills_Comb_Department.DataSource = Dep.Loans_Comb_Department(idOffice);
+                Bills_Comb_Department.DisplayMember = "Department_Name";
+                Bills_Comb_Department.ValueMember = "Department_ID";
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+
         }
     }
 }

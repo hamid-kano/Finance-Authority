@@ -229,6 +229,30 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف الوضع العائلي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Employee_CombAthuontic.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Employee_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Employee_Description_Comb_Department.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Employee_Description_Comb_Role.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الدور", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             //if (Employee_Pr_Service_Years.Text == String.Empty)
             //{
 

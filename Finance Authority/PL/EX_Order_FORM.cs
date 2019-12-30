@@ -40,6 +40,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف الجهة المسستلمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (EX_Orders_CombCategorise.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار صنف الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             DataTable Dt = new DataTable();
             Dt = order.Exchange_Order_Cheack(EX_Orders_order.Text);
             if (Dt.Rows.Count == 0)
@@ -121,6 +128,12 @@ namespace Finance_Authority.PL
             {
 
                 MessageBox.Show("أضف الجهة المسستلمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (EX_Orders_CombCategorise.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار صنف الطلب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();

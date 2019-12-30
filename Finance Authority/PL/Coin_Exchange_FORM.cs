@@ -87,6 +87,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Coin_Exchange_CombBudge.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue),Coin_EX_RB_DtoS.Checked);
             //// تحديث الميزانية
             if (Coin_EX_RB_StoD.Checked)

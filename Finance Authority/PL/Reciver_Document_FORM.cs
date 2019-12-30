@@ -106,6 +106,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب اولا اضافة سند استلام من نوع ميزانية ليتم اضافة ميزانية الى البرنامج", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Reciver_Document_Comb_Cate.SelectedIndex == -1 )
+            {
+
+                MessageBox.Show("يجب اختيار نوع صنف السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             DataTable Dt = new DataTable();
             Dt = Reciv.Reciver_Document_Cheack(Reciver_Document_no.Text);
             if (Dt.Rows.Count == 0)
@@ -232,6 +239,12 @@ namespace Finance_Authority.PL
             {
 
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Reciver_Document_Comb_Cate.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار نوع صنف السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();

@@ -50,6 +50,18 @@ namespace Finance_Authority.PL
 
         private void Emission_Salaries_add_Click(object sender, EventArgs e)
         {
+            if (Emission_Salaries_Name_office.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Emission_Salaries_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Emiss.Emission_Salaries_add(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue) , Emission_Salaries_Date.Value , Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue));
             /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
             DataTable dt = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.Text);
@@ -86,6 +98,18 @@ namespace Finance_Authority.PL
         }
         private void Emission_Salaries_update_Click(object sender, EventArgs e)
         {
+            if (Emission_Salaries_Name_office.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Emission_Salaries_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Emiss.Emission_Salaries_update(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue), Program.Emission_Salaries_id);
             /////// اذا تم اجراء تغيير باسم المكتب يتم حذف الموظفين التابعين للمكتب السابق واضافة 
             if (this.Emission_Salaries_dataGrid.CurrentRow.Cells[1].Value.ToString()!= Emission_Salaries_Name_office.Text)

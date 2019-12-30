@@ -38,10 +38,23 @@ namespace Finance_Authority.PL
 
         private void Department_add_Click(object sender, EventArgs e)
         {
+            if (Department_CombAuthority.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Department_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (Department_Name.Text == String.Empty)
             {
 
-                MessageBox.Show("أضف أسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("أضف اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();
@@ -74,6 +87,18 @@ namespace Finance_Authority.PL
 
         private void Department_update_Click(object sender, EventArgs e)
         {
+            if (Department_CombAuthority.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Department_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Department_Name.Text == String.Empty)
             {
 

@@ -89,6 +89,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Leoan_Payments_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             DataTable dt3;
             if ((dt3 = reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text)).Rows.Count != 0)
             {
@@ -150,6 +157,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("اضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Leoan_Payments_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             DataTable dt3;
             if ((dt3=reciver_Document.Reciver_Document_Cheack(Reciver_Document_no.Text)).Rows.Count!=0)
             {

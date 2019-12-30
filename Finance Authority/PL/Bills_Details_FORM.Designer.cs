@@ -67,6 +67,10 @@
             this.Bills_Coin_Type = new MetroFramework.Controls.MetroComboBox();
             this.Bills_Brows_Docs = new MetroFramework.Controls.MetroButton();
             this.Bills_add = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Bills_CombAthuontic = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.Bills_CombOffice = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Bill_Objects_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBoxNumDoc_Order.SuspendLayout();
@@ -114,7 +118,7 @@
             this.Bill_Objects_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Bill_Objects_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Bill_Objects_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 504);
+            this.Bill_Objects_dataGrid.Size = new System.Drawing.Size(700, 545);
             this.Bill_Objects_dataGrid.TabIndex = 47;
             this.Bill_Objects_dataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Bill_Objects_dataGrid_CellValueChanged);
             this.Bill_Objects_dataGrid.CurrentCellDirtyStateChanged += new System.EventHandler(this.Bill_Objects_dataGrid_CurrentCellDirtyStateChanged);
@@ -122,7 +126,7 @@
             // Bills_exit
             // 
             this.Bills_exit.Highlight = true;
-            this.Bills_exit.Location = new System.Drawing.Point(865, 596);
+            this.Bills_exit.Location = new System.Drawing.Point(865, 649);
             this.Bills_exit.Name = "Bills_exit";
             this.Bills_exit.Size = new System.Drawing.Size(87, 37);
             this.Bills_exit.TabIndex = 17;
@@ -133,7 +137,7 @@
             // Bills_delete
             // 
             this.Bills_delete.Highlight = true;
-            this.Bills_delete.Location = new System.Drawing.Point(679, 596);
+            this.Bills_delete.Location = new System.Drawing.Point(679, 649);
             this.Bills_delete.Name = "Bills_delete";
             this.Bills_delete.Size = new System.Drawing.Size(87, 37);
             this.Bills_delete.TabIndex = 15;
@@ -144,7 +148,7 @@
             // Bills_update
             // 
             this.Bills_update.Highlight = true;
-            this.Bills_update.Location = new System.Drawing.Point(586, 596);
+            this.Bills_update.Location = new System.Drawing.Point(586, 649);
             this.Bills_update.Name = "Bills_update";
             this.Bills_update.Size = new System.Drawing.Size(87, 37);
             this.Bills_update.TabIndex = 14;
@@ -155,7 +159,7 @@
             // Bills_new
             // 
             this.Bills_new.Highlight = true;
-            this.Bills_new.Location = new System.Drawing.Point(400, 596);
+            this.Bills_new.Location = new System.Drawing.Point(400, 649);
             this.Bills_new.Name = "Bills_new";
             this.Bills_new.Size = new System.Drawing.Size(87, 37);
             this.Bills_new.TabIndex = 12;
@@ -305,7 +309,7 @@
             // 
             this.Bills_Comb_Budget.FormattingEnabled = true;
             this.Bills_Comb_Budget.ItemHeight = 23;
-            this.Bills_Comb_Budget.Location = new System.Drawing.Point(139, 505);
+            this.Bills_Comb_Budget.Location = new System.Drawing.Point(139, 499);
             this.Bills_Comb_Budget.Name = "Bills_Comb_Budget";
             this.Bills_Comb_Budget.Size = new System.Drawing.Size(140, 29);
             this.Bills_Comb_Budget.TabIndex = 10;
@@ -315,16 +319,16 @@
             // 
             this.Bills_Comb_Department.FormattingEnabled = true;
             this.Bills_Comb_Department.ItemHeight = 23;
-            this.Bills_Comb_Department.Location = new System.Drawing.Point(139, 547);
+            this.Bills_Comb_Department.Location = new System.Drawing.Point(136, 603);
             this.Bills_Comb_Department.Name = "Bills_Comb_Department";
-            this.Bills_Comb_Department.Size = new System.Drawing.Size(140, 29);
+            this.Bills_Comb_Department.Size = new System.Drawing.Size(143, 29);
             this.Bills_Comb_Department.TabIndex = 11;
             this.Bills_Comb_Department.UseSelectable = true;
             // 
             // Bills_Details_Print
             // 
             this.Bills_Details_Print.Highlight = true;
-            this.Bills_Details_Print.Location = new System.Drawing.Point(772, 596);
+            this.Bills_Details_Print.Location = new System.Drawing.Point(772, 649);
             this.Bills_Details_Print.Name = "Bills_Details_Print";
             this.Bills_Details_Print.Size = new System.Drawing.Size(87, 37);
             this.Bills_Details_Print.TabIndex = 16;
@@ -588,7 +592,7 @@
             // Bills_Details_Name_Department
             // 
             this.Bills_Details_Name_Department.AutoSize = true;
-            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(20, 547);
+            this.Bills_Details_Name_Department.Location = new System.Drawing.Point(17, 608);
             this.Bills_Details_Name_Department.Name = "Bills_Details_Name_Department";
             this.Bills_Details_Name_Department.Size = new System.Drawing.Size(68, 19);
             this.Bills_Details_Name_Department.TabIndex = 218;
@@ -606,7 +610,7 @@
             // Bills_Details_Date_Budget
             // 
             this.Bills_Details_Date_Budget.AutoSize = true;
-            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(20, 510);
+            this.Bills_Details_Date_Budget.Location = new System.Drawing.Point(20, 504);
             this.Bills_Details_Date_Budget.Name = "Bills_Details_Date_Budget";
             this.Bills_Details_Date_Budget.Size = new System.Drawing.Size(78, 19);
             this.Bills_Details_Date_Budget.TabIndex = 220;
@@ -629,7 +633,7 @@
             // 
             this.Bills_Brows_Docs.Enabled = false;
             this.Bills_Brows_Docs.Highlight = true;
-            this.Bills_Brows_Docs.Location = new System.Drawing.Point(148, 596);
+            this.Bills_Brows_Docs.Location = new System.Drawing.Point(146, 649);
             this.Bills_Brows_Docs.Name = "Bills_Brows_Docs";
             this.Bills_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Bills_Brows_Docs.TabIndex = 223;
@@ -641,7 +645,7 @@
             // 
             this.Bills_add.Enabled = false;
             this.Bills_add.Highlight = true;
-            this.Bills_add.Location = new System.Drawing.Point(493, 596);
+            this.Bills_add.Location = new System.Drawing.Point(493, 649);
             this.Bills_add.Name = "Bills_add";
             this.Bills_add.Size = new System.Drawing.Size(87, 37);
             this.Bills_add.TabIndex = 13;
@@ -649,12 +653,58 @@
             this.Bills_add.UseSelectable = true;
             this.Bills_add.Click += new System.EventHandler(this.Bills_add_Click);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(20, 574);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel1.TabIndex = 273;
+            this.metroLabel1.Text = "المكتب";
+            // 
+            // Bills_CombAthuontic
+            // 
+            this.Bills_CombAthuontic.FormattingEnabled = true;
+            this.Bills_CombAthuontic.ItemHeight = 23;
+            this.Bills_CombAthuontic.Location = new System.Drawing.Point(136, 535);
+            this.Bills_CombAthuontic.Name = "Bills_CombAthuontic";
+            this.Bills_CombAthuontic.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Bills_CombAthuontic.Size = new System.Drawing.Size(143, 29);
+            this.Bills_CombAthuontic.TabIndex = 272;
+            this.Bills_CombAthuontic.UseSelectable = true;
+            this.Bills_CombAthuontic.SelectedValueChanged += new System.EventHandler(this.Bills_CombAthuontic_SelectedValueChanged);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(20, 540);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel10.TabIndex = 271;
+            this.metroLabel10.Text = "الهيئات";
+            // 
+            // Bills_CombOffice
+            // 
+            this.Bills_CombOffice.FormattingEnabled = true;
+            this.Bills_CombOffice.ItemHeight = 23;
+            this.Bills_CombOffice.Location = new System.Drawing.Point(136, 569);
+            this.Bills_CombOffice.Name = "Bills_CombOffice";
+            this.Bills_CombOffice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Bills_CombOffice.Size = new System.Drawing.Size(143, 29);
+            this.Bills_CombOffice.TabIndex = 270;
+            this.Bills_CombOffice.UseSelectable = true;
+            this.Bills_CombOffice.SelectedValueChanged += new System.EventHandler(this.Bills_CombOffice_SelectedValueChanged);
+            // 
             // Bills_Details_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1019, 666);
+            this.ClientSize = new System.Drawing.Size(1019, 701);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Bills_CombAthuontic);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.Bills_CombOffice);
             this.Controls.Add(this.Bills_Brows_Docs);
             this.Controls.Add(this.Bills_Coin_Type);
             this.Controls.Add(this.Bills_Details_Date_Budget);
@@ -739,5 +789,9 @@
         private MetroFramework.Controls.MetroTextBox Payment_Document_No_Order;
         private MetroFramework.Controls.MetroTextBox Payment_Document_no;
         private MetroFramework.Controls.MetroButton Bills_add;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroComboBox Bills_CombAthuontic;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroComboBox Bills_CombOffice;
     }
 }

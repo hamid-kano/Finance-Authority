@@ -147,6 +147,19 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Payment_Document_Comb_Cate.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار نوع صنف السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Payment_Document_Comb_Date.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             Dt = pay.Payment_Document_View();
             for (int i = 0; i < Dt.Rows.Count; i++)
             {
@@ -256,6 +269,19 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Payment_Document_Comb_Cate.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار نوع صنف السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Payment_Document_Comb_Date.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             // تحديث الميزانية
             Dt = pay.Payment_Document_View();
             for (int i = 0; i < Dt.Rows.Count; i++)

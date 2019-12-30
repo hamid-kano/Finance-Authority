@@ -56,6 +56,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("أضف أسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Office_CombAuthontic.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             DataTable Dt = new DataTable();
             Dt = Offic.Office_Cheack(Office_Name.Text , Convert.ToInt32(Office_CombAuthontic.SelectedValue));
             if (Dt.Rows.Count == 0 || Office_Name.Text== this.Office_Gridview.CurrentRow.Cells[1].Value.ToString())
@@ -101,6 +107,12 @@ namespace Finance_Authority.PL
             {
 
                 MessageBox.Show("أضف أسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Office_CombAuthontic.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataTable Dt = new DataTable();

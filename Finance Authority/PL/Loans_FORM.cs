@@ -109,8 +109,36 @@ namespace Finance_Authority.PL
                         return;
                     }
             }
+            if (Loans_Comb_Budget.SelectedIndex == -1)
+            {
 
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_CombAthuontic.SelectedIndex == -1)
+            {
 
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_Comb_Department.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_Comb_Employ.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
@@ -229,6 +257,37 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (Loans_Comb_Budget.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_CombAthuontic.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الهيئة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_CombOffice.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_Comb_Department.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم القسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Loans_Comb_Employ.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("يجب اختيار اسم الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             DataTable dt_PaymentID;
             if ((dt_PaymentID = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
             {

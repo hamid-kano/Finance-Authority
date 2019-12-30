@@ -28,9 +28,6 @@ namespace Finance_Authority.PL
             Employee_Salaries_Saliery.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
             Employee_Salaries_Saliery.DisplayMember = "Date";
             Employee_Salaries_Saliery.ValueMember = "Emission_Salaries_id";
-            Employee_Salaries_Office.DataSource = Dep.Department_CombOffice();
-            Employee_Salaries_Office.DisplayMember = "Office_Name";
-            Employee_Salaries_Office.ValueMember = "Office_ID";
             this.StyleManager = Program.theme_style(this);
             //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             //Employee_Salaries_dataGrid.Columns[0].Visible = false;
@@ -244,25 +241,6 @@ namespace Finance_Authority.PL
             e.Handled = Program.DenyChar(e);
         }
 
-        private void Employee_Salaries_Office_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int Office = Convert.ToInt32(Employee_Salaries_Office.SelectedValue);
-                this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Office(Office);
-                Employee_Salaries_dataGrid.Columns[0].Visible = false;
-                this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
-                this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
-                this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
-                this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
-                Employee_Salaries_dataGrid.Columns[20].Visible = false;
-            }
-            catch (Exception)
-            {
-
-                //throw;
-            }
-        }
         private void Employee_Salaries_dataGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var cell = Employee_Salaries_dataGrid.CurrentCell;

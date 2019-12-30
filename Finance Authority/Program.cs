@@ -178,36 +178,36 @@ namespace Finance_Authority
 
         //الميزانية الفعلية = المبلغ الحالي -الوارد +الصادر
         //نسبة الواردات = مجموع الواردات / الميزانية الفعلية
-        public static int Month_Imports_rate()
+        public static double Month_Imports_rate()
         {
             try
             {
                 DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0];
                 DataRow dt_Sum_export = budget.Budget_Last_Sum_Payment().Rows[0]; 
                  DataRow dt_Budget_NOW = Budget_NOW();
-                int sumimport = Convert.ToInt32(dt_Sum_import[0]);
-                int sumexport = Convert.ToInt32(dt_Sum_export[0]);
-                int budgetNow = Convert.ToInt32(dt_Budget_NOW[0]);
-                int actual_Budget = Convert.ToInt32(dt_Budget_NOW[0]) + Convert.ToInt32(dt_Sum_export[0]) - Convert.ToInt32(dt_Sum_import[0]);
-                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100)) <0? 0: Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100));
+                double sumimport = Convert.ToDouble(dt_Sum_import[0]);
+                double sumexport = Convert.ToDouble(dt_Sum_export[0]);
+                double budgetNow = Convert.ToDouble(dt_Budget_NOW[0]);
+                double actual_Budget = Convert.ToDouble(dt_Budget_NOW[0]) + Convert.ToDouble(dt_Sum_export[0]) - Convert.ToDouble(dt_Sum_import[0]);
+                return Convert.ToDouble(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100)) <0? 0: Convert.ToDouble(Math.Round((Convert.ToDouble(dt_Sum_import[0]) / actual_Budget) * 100));
             }
             catch
             {
                 return 0;
             }
         }
-        public static int Month_Exmports_rate()
+        public static double Month_Exmports_rate()
         {
             try
             {
                 DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0];
                 DataRow dt_Sum_export = budget.Budget_Last_Sum_Payment().Rows[0];
                 DataRow dt_Budget_NOW = Budget_NOW();
-                int sumimport = Convert.ToInt32(dt_Sum_import[0]);
-                int sumexport = Convert.ToInt32(dt_Sum_export[0]);
-                int budgetNow = Convert.ToInt32(dt_Budget_NOW[0]);
-                int actual_Budget = Convert.ToInt32(dt_Budget_NOW[0]) + Convert.ToInt32(dt_Sum_export[0]) - Convert.ToInt32(dt_Sum_import[0]);
-                return Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100))<0 ? 0: Convert.ToInt32(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100));
+                double sumimport = Convert.ToDouble(dt_Sum_import[0]);
+                double sumexport = Convert.ToDouble(dt_Sum_export[0]);
+                double budgetNow = Convert.ToDouble(dt_Budget_NOW[0]);
+                double actual_Budget = Convert.ToDouble(dt_Budget_NOW[0]) + Convert.ToDouble(dt_Sum_export[0]) - Convert.ToDouble(dt_Sum_import[0]);
+                return Convert.ToDouble(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100))<0 ? 0: Convert.ToDouble(Math.Round((Convert.ToDouble(dt_Sum_export[0]) / actual_Budget) * 100));
             }
             catch
             {
@@ -223,10 +223,10 @@ namespace Finance_Authority
             DataRow dt_Sum_import = budget.Budget_Last_Sum_Reciver().Rows[0]; // جلب الواردات الشهرية سوري ودولار
             if (dt_Budget_NOW!=null)
             {
-                int sy_now = Convert.ToInt32(dt_Budget_NOW[1]);
-                int dollar_now = Convert.ToInt32(dt_Budget_NOW[2]);
-                int sy = SY != string.Empty ? Convert.ToInt32(SY) : 0;
-                int dollar = Dollar != string.Empty ? Convert.ToInt32(Dollar) : 0;
+                double sy_now = Convert.ToDouble(dt_Budget_NOW[1]);
+                double dollar_now = Convert.ToDouble(dt_Budget_NOW[2]);
+                double sy = SY != string.Empty ? Convert.ToDouble(SY) : 0;
+                double dollar = Dollar != string.Empty ? Convert.ToDouble(Dollar) : 0;
 
                 if (TypeDoc == "R")
                 {

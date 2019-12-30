@@ -35,7 +35,6 @@
             this.Employee_Salaries_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Salaries_exit = new MetroFramework.Controls.MetroButton();
             this.Employee_Salaries_commit = new MetroFramework.Controls.MetroButton();
-            this.Employee_Salaries_Office = new MetroFramework.Controls.MetroComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Employee_Salaries_Saliery = new MetroFramework.Controls.MetroComboBox();
             this.Employee_Salaries_Print = new MetroFramework.Controls.MetroButton();
@@ -134,18 +133,6 @@
             this.Employee_Salaries_commit.Text = "تثبيت التسليم";
             this.Employee_Salaries_commit.UseSelectable = true;
             this.Employee_Salaries_commit.Click += new System.EventHandler(this.Employee_Salaries_commit_Click);
-            // 
-            // Employee_Salaries_Office
-            // 
-            this.Employee_Salaries_Office.Enabled = false;
-            this.Employee_Salaries_Office.FormattingEnabled = true;
-            this.Employee_Salaries_Office.ItemHeight = 23;
-            this.Employee_Salaries_Office.Location = new System.Drawing.Point(900, 77);
-            this.Employee_Salaries_Office.Name = "Employee_Salaries_Office";
-            this.Employee_Salaries_Office.Size = new System.Drawing.Size(163, 29);
-            this.Employee_Salaries_Office.TabIndex = 26;
-            this.Employee_Salaries_Office.UseSelectable = true;
-            this.Employee_Salaries_Office.SelectedValueChanged += new System.EventHandler(this.Employee_Salaries_Office_SelectedValueChanged);
             // 
             // label21
             // 
@@ -367,7 +354,6 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Employee_Salaries_Print);
             this.Controls.Add(this.Employee_Salaries_Saliery);
-            this.Controls.Add(this.Employee_Salaries_Office);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Employee_Salaries_dataGrid);
@@ -390,7 +376,6 @@
         private MetroFramework.Controls.MetroGrid Employee_Salaries_dataGrid;
         private MetroFramework.Controls.MetroButton Employee_Salaries_exit;
         private MetroFramework.Controls.MetroButton Employee_Salaries_commit;
-        private MetroFramework.Controls.MetroComboBox Employee_Salaries_Office;
         private System.Windows.Forms.Label label21;
         private MetroFramework.Controls.MetroComboBox Employee_Salaries_Saliery;
         private MetroFramework.Controls.MetroButton Employee_Salaries_Print;

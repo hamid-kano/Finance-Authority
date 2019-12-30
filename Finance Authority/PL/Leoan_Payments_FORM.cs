@@ -77,10 +77,16 @@ namespace Finance_Authority.PL
 
         private void Leoan_Payments_add_Click(object sender, EventArgs e)
         {
+
             if (Leoan_Payments_Amont.Text == String.Empty)
             {
 
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Convert.ToDouble(Leoan_Payments_Amont.Text) == 0)
+            {
+                MessageBox.Show("لايمكن اضافة دفعة قرض بدون قيمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -152,6 +158,11 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Convert.ToDouble(Leoan_Payments_Amont.Text) == 0)
+            {
+                MessageBox.Show("لايمكن تعديل قيمة دفعة قرض الى صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Reciver_Document_no.Text == String.Empty)
             {
                 MessageBox.Show("اضف رقم السند", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -173,9 +184,11 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
-            if (Convert.ToInt32(Leoan_Payments_Amont.Text) > Convert.ToInt32(Leoan_Payments_Remind_Amont.Text))
+            // في حال زيادة مبلغ الدفعة يحسب الفرق بين الدفعة الجديدة والقديمة بالنسبة للمتبقي 
+            double befor_Amount= Convert.ToDouble(Leoan_Payments_Gridview.CurrentRow.Cells[1].Value);
+            if ((Convert.ToInt32(Leoan_Payments_Amont.Text) - befor_Amount) > Convert.ToInt32(Leoan_Payments_Remind_Amont.Text))
             {
-                MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("مبلغ الدفعة هو اكبر من مبلغ القرض المتبقي","تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             pay_Leo.Leoan_Payments_update(Program.Loan_id, Leoan_Payments_Amont.Text, Leoan_Payments_Notes.Text, Leoan_Payments_Date.Value, Convert.ToInt32(Leoan_Payments_Comb_Budget.SelectedValue), Program.Leoan_Payments_id);

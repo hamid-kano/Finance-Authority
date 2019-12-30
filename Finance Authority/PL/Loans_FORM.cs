@@ -247,6 +247,12 @@ namespace Finance_Authority.PL
 
         private void Loans_update_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDouble(Loans_Amont.Text) == 0)
+            {
+
+                MessageBox.Show("لايمكن تعديل قيمة القرض الى صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Loans_Amont.Text == String.Empty)
             {
 

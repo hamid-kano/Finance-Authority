@@ -36,6 +36,7 @@ namespace Finance_Authority.PL
             Loans_Gridview.Columns[0].Visible = false;
             Loans_Gridview.Columns[8].Visible = false;
             Loans_Gridview.Columns[9].Visible = false;
+            Loans_Gridview.Columns[10].Visible = false;
             Loans_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
             Loans_Comb_Budget.DisplayMember = "Date";
             Loans_Comb_Budget.ValueMember = "Budget_Id";
@@ -182,6 +183,7 @@ namespace Finance_Authority.PL
                 Loans_Gridview.Columns[0].Visible = false;
                 Loans_Gridview.Columns[8].Visible = false;
                 Loans_Gridview.Columns[9].Visible = false;
+                Loans_Gridview.Columns[10].Visible = false;
                 int Max_loan_id =Convert.ToInt32(Loa.Leoan_Max_ID().Rows[0][0]);
                 /// اضافة ملحقات للقرض
                 if (MessageBox.Show("هل تريد اضافة ملحقات لهذا القرض؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -295,11 +297,17 @@ namespace Finance_Authority.PL
             }
             if (Loans_Comb_Employ.SelectedIndex == -1)
             {
-
                 MessageBox.Show("يجب اختيار اسم الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
+            // لايمكن تعديل قيمة القرض وهو مرتبط بدفعات قرض له
+            if (leoan_Payments.Leoan_Payments_View_Loans_ID(Program.Loan_id).Rows.Count>0
+                && Convert.ToDouble(Loans_Amont.Text)!=Convert.ToDouble(this.Loans_Gridview.CurrentRow.Cells[1].Value))
+            {
+                MessageBox.Show("لايمكن تعديل قيمة قرض وهناك دفعات مرتبطة به", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            //////
             DataTable dt_PaymentID;
             if ((dt_PaymentID = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
             {
@@ -334,7 +342,7 @@ namespace Finance_Authority.PL
                 Program.Budget_update_after_Payment_Reciver("P", Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0");
                 //
                 Pay.Payment_Document_update(Loans_Amont.Text == string.Empty ? "0" : Loans_Amont.Text, "0", "0", Payment_Document_no.Text,
-                     Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
+                     Payment_Document_No_Order.Text, "قرض", "الميزانبة", DateTime.Now
                    , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1012, id_Pay);
             }
             ///////
@@ -345,6 +353,22 @@ namespace Finance_Authority.PL
             {
                 DataRow row = DT.Rows[0];
                 int id_EmployeeDEsS = Convert.ToInt32(row["Employee_Des_ID"]);
+                //للموظف الجديد اختبار اذا كان هناك قرض سابق غير مدفوع بشكل كامل
+                if (id_EmployeeDEsS!=Convert.ToInt32(this.Loans_Gridview.CurrentRow.Cells[10].Value))
+                {
+                    DataTable dt_Loan;
+                    if ((dt_Loan = Loa.Loans_Search_By_desc_ID(id_EmployeeDEsS)).Rows.Count > 0)
+                    {
+                        int id_loean_Payment = Convert.ToInt32(dt_Loan.Rows[0][0]);
+                        DataTable dtPay_Lo = leoan_Payments.Leoan_Payments_View_Loans_ID(id_loean_Payment);
+                        if (dtPay_Lo.Rows.Count == 0)
+                        {
+                            MessageBox.Show(" هناك قرض سابق لم يستوفى دفعه بشكل كامل للموظف الجديد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+                } 
                 //MessageBox.Show(id_EmployeeDES.ToString());
                 //   bool Functunal_status = Contracts_end.Checked ? true : false;
                 Loa.Loans_update(Loans_Amont.Text, Loans_Notes.Text, Loans_Date.Value, Loans_Date_Start.Value, Convert.ToInt32(Loans_Comb_Budget.SelectedValue), id_EmployeeDEsS , Program.Loan_id);
@@ -352,6 +376,7 @@ namespace Finance_Authority.PL
                 Loans_Gridview.Columns[0].Visible = false;
                 Loans_Gridview.Columns[8].Visible = false;
                 Loans_Gridview.Columns[9].Visible = false;
+                Loans_Gridview.Columns[10].Visible = false;
                 Program.Update_Message();
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل قرض", DateTime.Now);
                 Loans_Amont.Text = "";
@@ -419,6 +444,7 @@ namespace Finance_Authority.PL
                     Loans_Gridview.Columns[0].Visible = false;
                     Loans_Gridview.Columns[8].Visible = false;
                     Loans_Gridview.Columns[9].Visible = false;
+                    Loans_Gridview.Columns[10].Visible = false;
                     MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LOG.LOGS_add(Program.USER_ID, "حذف", "حذف قرض", DateTime.Now);
                     Loans_Amont.Text = "";
@@ -442,6 +468,7 @@ namespace Finance_Authority.PL
                 Loans_Gridview.Columns[0].Visible = false;
                 Loans_Gridview.Columns[8].Visible = false;
                 Loans_Gridview.Columns[9].Visible = false;
+                Loans_Gridview.Columns[10].Visible = false;
             }
             catch { return; }
         }
@@ -500,6 +527,8 @@ namespace Finance_Authority.PL
             Loans_Gridview.Columns[0].Visible = false;
             Loans_Gridview.Columns[8].Visible = false;
             Loans_Gridview.Columns[9].Visible = false;
+            Loans_Gridview.Columns[10].Visible = false;
+
         }
 
         private void Loans_Amont_KeyPress(object sender, KeyPressEventArgs e)
@@ -513,6 +542,8 @@ namespace Finance_Authority.PL
             Loans_Gridview.Columns[0].Visible = false;
             Loans_Gridview.Columns[8].Visible = false;
             Loans_Gridview.Columns[9].Visible = false;
+            Loans_Gridview.Columns[10].Visible = false;
+
         }
         private void Loans_CombAthuontic_SelectedValueChanged(object sender, EventArgs e)
         {

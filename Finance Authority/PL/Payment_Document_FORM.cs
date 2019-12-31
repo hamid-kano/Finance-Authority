@@ -159,7 +159,26 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            /// التحقق من ان المبلغ موجود في الميزانية
+            if (Payment_Document_sy.Text != string.Empty)
+            {
+                if (Convert.ToDouble(Payment_Document_sy.Text)>Convert.ToDouble(Program.Budget_NOW()[1]))
+                {
+                    MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
 
+                }
+            }
+            if (Payment_Document_Dollar.Text != string.Empty)
+            {
+                if (Convert.ToDouble(Payment_Document_Dollar.Text) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                {
+                    MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            ///
             Dt = pay.Payment_Document_View();
             for (int i = 0; i < Dt.Rows.Count; i++)
             {
@@ -281,6 +300,26 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            /// التحقق من ان المبلغ موجود في الميزانية
+            if (Payment_Document_sy.Text != string.Empty)
+            {
+                if ((Convert.ToDouble(Payment_Document_sy.Text)-Convert.ToDouble(this.Payment_Document_dataGrid.CurrentRow.Cells[1].Value)) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                {
+                    MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            if (Payment_Document_Dollar.Text != string.Empty)
+            {
+                if ((Convert.ToDouble(Payment_Document_Dollar.Text) - Convert.ToDouble(this.Payment_Document_dataGrid.CurrentRow.Cells[1].Value)) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                {
+                    MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+            }
+            ///
 
             // تحديث الميزانية
             Dt = pay.Payment_Document_View();

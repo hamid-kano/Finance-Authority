@@ -80,16 +80,16 @@ namespace Finance_Authority.PL
 
         private void Loans_add_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(Loans_Amont.Text) ==0)
-            {
-
-                MessageBox.Show("لايمكن سحب قرض بدون قيمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
             if (Loans_Amont.Text == String.Empty)
             {
 
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Convert.ToDouble(Loans_Amont.Text) == 0)
+            {
+
+                MessageBox.Show("لايمكن سحب قرض بدون قيمة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (Payment_Document_no.Text == "")
@@ -146,6 +146,16 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب اختيار اسم الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            /// التحقق من ان المبلغ موجود في الميزانية
+            if (Loans_Amont.Text != string.Empty)
+            {
+                if (Convert.ToDouble(Loans_Amont.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                {
+                    MessageBox.Show("مبلغ القرض غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            ///
             int idDepartment = Convert.ToInt32(Loans_Comb_Department.SelectedValue);
             int idemployee = Convert.ToInt32(Loans_Comb_Employ.SelectedValue);
             DataTable DT = cont.Contracts_by_Departmentid_Employeeid(idDepartment, idemployee);
@@ -249,17 +259,19 @@ namespace Finance_Authority.PL
 
         private void Loans_update_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(Loans_Amont.Text) == 0)
-            {
-
-                MessageBox.Show("لايمكن تعديل قيمة القرض الى صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
             if (Loans_Amont.Text == String.Empty)
             {
 
                 MessageBox.Show("ادخل المبلغ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
+            }
+
+            if (Convert.ToDouble(Loans_Amont.Text) == 0)
+            {
+
+                MessageBox.Show("لايمكن تعديل قيمة القرض الى صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
             }
             if (Payment_Document_no.Text == "")
             {
@@ -308,6 +320,17 @@ namespace Finance_Authority.PL
                 return;
             }
             //////
+            /// التحقق من ان المبلغ موجود في الميزانية
+            if (Loans_Amont.Text != string.Empty)
+            {
+                if ((Convert.ToDouble(Loans_Amont.Text)-Convert.ToDouble(this.Loans_Gridview.CurrentRow.Cells[1].Value)) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                {
+                    MessageBox.Show("مبلغ القرض غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            ///
+
             DataTable dt_PaymentID;
             if ((dt_PaymentID = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Loan_id, "قرض")).Rows.Count != 0)
             {

@@ -114,7 +114,7 @@
             // 
             this.Employee_Salaries_exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Employee_Salaries_exit.Highlight = true;
-            this.Employee_Salaries_exit.Location = new System.Drawing.Point(690, 653);
+            this.Employee_Salaries_exit.Location = new System.Drawing.Point(720, 653);
             this.Employee_Salaries_exit.Name = "Employee_Salaries_exit";
             this.Employee_Salaries_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Salaries_exit.TabIndex = 24;
@@ -126,9 +126,9 @@
             // 
             this.Employee_Salaries_commit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Employee_Salaries_commit.Highlight = true;
-            this.Employee_Salaries_commit.Location = new System.Drawing.Point(504, 653);
+            this.Employee_Salaries_commit.Location = new System.Drawing.Point(498, 653);
             this.Employee_Salaries_commit.Name = "Employee_Salaries_commit";
-            this.Employee_Salaries_commit.Size = new System.Drawing.Size(87, 37);
+            this.Employee_Salaries_commit.Size = new System.Drawing.Size(123, 37);
             this.Employee_Salaries_commit.TabIndex = 21;
             this.Employee_Salaries_commit.Text = "تثبيت التسليم";
             this.Employee_Salaries_commit.UseSelectable = true;
@@ -158,7 +158,7 @@
             // 
             this.Employee_Salaries_Print.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Employee_Salaries_Print.Highlight = true;
-            this.Employee_Salaries_Print.Location = new System.Drawing.Point(597, 653);
+            this.Employee_Salaries_Print.Location = new System.Drawing.Point(627, 653);
             this.Employee_Salaries_Print.Name = "Employee_Salaries_Print";
             this.Employee_Salaries_Print.Size = new System.Drawing.Size(87, 37);
             this.Employee_Salaries_Print.TabIndex = 23;

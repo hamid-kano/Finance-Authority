@@ -93,6 +93,36 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            /// التحقق من ان المبلغ موجود في الميزانية
+           // التحويل من سوري الى دولار
+            if (Coin_EX_RB_StoD.Checked)
+            {
+                if (Coin_Exchange_Sy.Text != string.Empty)
+                {
+                    if (Convert.ToDouble(Coin_Exchange_Sy.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                    {
+                        MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }
+
+            }
+            // التحويل من دولار الى سوري
+            else 
+            {
+                if (Coin_Exchange_Dollar.Text != string.Empty)
+                {
+                    if (Convert.ToDouble(Coin_Exchange_Dollar.Text) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                    {
+                        MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }
+
+            }  
+            ///
             Coin.Coin_Exchange_add(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue),Coin_EX_RB_DtoS.Checked);
             //// تحديث الميزانية
             if (Coin_EX_RB_StoD.Checked)
@@ -139,33 +169,70 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            // كانت من دولار الى سوري واصبحت من سوري الى دولار
-            if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value)&& Coin_EX_RB_StoD.Checked)
-            {
-                // ارجاع مبلغ الدولار الى الميزانية ومن ثم انقاص المبلغ السوري من الميزانية
-                Program.Budget_update_after_Payment_Reciver("R", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
-                Program.Budget_update_after_Payment_Reciver("P", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
-            }
-            // كانت من سوري الى دولار واصبحت من دولار الى سوري
-            else if(!Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) && Coin_EX_RB_DtoS.Checked)
-            {
-                // يتم ارجاع مبلغ السوري الى الميزانية ويتم انقاص مبلغ الدولار من الميزانية
-                Program.Budget_update_after_Payment_Reciver("R", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(),"0");
-                Program.Budget_update_after_Payment_Reciver("P", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
-            }
-            /// معالجة التحديث في حال بقيت دون عكس التحويل
+            //// كانت من دولار الى سوري واصبحت من سوري الى دولار
+            //if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value)&& Coin_EX_RB_StoD.Checked)
+            //{
+            //    // ارجاع مبلغ الدولار الى الميزانية ومن ثم انقاص المبلغ السوري من الميزانية
+            //    Program.Budget_update_after_Payment_Reciver("R", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+            //    Program.Budget_update_after_Payment_Reciver("P", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+            //}
+            //// كانت من سوري الى دولار واصبحت من دولار الى سوري
+            //else if(!Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) && Coin_EX_RB_DtoS.Checked)
+            //{
+            //    // يتم ارجاع مبلغ السوري الى الميزانية ويتم انقاص مبلغ الدولار من الميزانية
+            //    Program.Budget_update_after_Payment_Reciver("R", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(),"0");
+            //    Program.Budget_update_after_Payment_Reciver("P", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+            //}
+            // التراجع عن العمليات السابقة
+            //كان من دولار الى سوري
+             if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value))
+             {
+                    // التراجع عن العملية السابقة من اجل الاضافة والنقصان او ابقاء المبلغ نفسه
+                    Program.Budget_update_after_Payment_Reciver("P", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+                    Program.Budget_update_after_Payment_Reciver("R", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+
+             }
+                // كان من سوري الى دولار
+             else
+             {
+                    // التراجع عن العملية السابقة من اجل الاضافة والنقصان او ابقاء المبلغ نفسه
+                    Program.Budget_update_after_Payment_Reciver("P", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
+                    Program.Budget_update_after_Payment_Reciver("R", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
+             }
+            /// التحقق من ان المبلغ موجود في الميزانية
+            // التحويل من سوري الى دولار
             if (Coin_EX_RB_StoD.Checked)
             {
+                if (Coin_Exchange_Sy.Text != string.Empty)
+                {
+                    if (Convert.ToDouble(Coin_Exchange_Sy.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                    {
+                        MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }
                 // اذا كان التحويل من سوري الى دولار يتم انقاص المبلغ السوري من الميزانية وزيادة مبلغ الدولار
                 Program.Budget_update_after_Payment_Reciver("P", Coin_Exchange_Sy.Text, "0");
                 Program.Budget_update_after_Payment_Reciver("R", "0", Coin_Exchange_Dollar.Text);
             }
+            // التحويل من دولار الى سوري
             else
             {
+                if (Coin_Exchange_Dollar.Text != string.Empty)
+                {
+                    if (Convert.ToDouble(Coin_Exchange_Dollar.Text) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                    {
+                        MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }
                 // اذا كان التحويل من دولار الى سوري يتم انقاص المبلغ بالدولار من الميزانية وزيادة مبلغ السوري
                 Program.Budget_update_after_Payment_Reciver("P", "0", Coin_Exchange_Dollar.Text);
                 Program.Budget_update_after_Payment_Reciver("R", Coin_Exchange_Sy.Text, "0");
             }
+            ///
             Coin.Coin_Exchange_update(Coin_Exchange_Sy.Text, Coin_Exchange_Dollar.Text, Coin_Exchange_rate.Text, Coin_Exchange_Date.Value, Coin_Exchange_Notes.Text, Convert.ToInt32(Coin_Exchange_CombBudge.SelectedValue), Coin_EX_RB_DtoS.Checked, Program.Coin_Exchange_id);
             this.Coin_Exchange_Gridview.DataSource = Coin.Coin_Exchange_View();
             Coin_Exchange_Gridview.Columns[0].Visible = false;

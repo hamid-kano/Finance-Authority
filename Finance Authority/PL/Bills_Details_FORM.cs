@@ -28,6 +28,7 @@ namespace Finance_Authority.PL
 
         int _Bill_ID =-1; // update Status ;
         bool StatePaied;
+        double amount_Bill_Befor_Paied;
         public Bills_Details_FORM(int Bills_ID)
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace Finance_Authority.PL
                 Bills_Exchange_rate.Text = dt.Rows[0][4].ToString();
                 Bill_Type.Text = dt.Rows[0][5].ToString();
                 Bill_Total.Text = dt.Rows[0][6].ToString();
+                amount_Bill_Befor_Paied = Convert.ToDouble(dt.Rows[0][6]);
                 Bills_Date.Text = dt.Rows[0][7].ToString();
                 Bills_Notes.Text = dt.Rows[0][9].ToString();
                 Bills_Paid.Checked = Convert.ToBoolean(dt.Rows[0][8]) ? true : false;
@@ -90,7 +92,7 @@ namespace Finance_Authority.PL
                this.Bill_Objects_dataGrid.Columns[5].Visible = false;
                Bills_add.Enabled = true;
                Bills_update.Enabled = false;
-
+               Bills_delete.Enabled = false;
             }
             this.Bill_Objects_dataGrid.Columns[4].ReadOnly = true;
         }
@@ -203,7 +205,34 @@ namespace Finance_Authority.PL
                     return;
                 }
             }
-
+            //   اذا كانت الفاتورة من نوع مدفوعة التحقق من توفر المبلغ موجود في الميزانية
+            if (Bills_Paid.Checked)
+            {
+                /// التحقق من ان المبلغ موجود في الميزانية
+                if (Bills_Coin_Type.Text =="سوري")
+                {
+                    if (Bill_Total.Text!=string.Empty)
+                    {
+                        if (Convert.ToDouble(Bill_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                        {
+                            MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }  
+                }
+               else if (Bills_Coin_Type.Text == "دولار")
+                {
+                    if (Bill_Total.Text != string.Empty)
+                    {
+                        if (Convert.ToDouble(Bill_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                        {
+                            MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                ///
+            }      
             // اضافة الفاتورة
             Bill.Bills_Details_add(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
             Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue));
@@ -335,7 +364,63 @@ namespace Finance_Authority.PL
                 }
 
             }
-
+            // التحقق من المبلغ لم تكن مدفوعة واصبحت مدفوعة
+            if (!StatePaied && Bills_Paid.Checked) // توليد سند دفع للفاتورة في حال اصبحت مدفوعة
+            {
+                /// التحقق من ان المبلغ موجود في الميزانية
+                if (Bills_Coin_Type.Text == "سوري")
+                {
+                    if (Bill_Total.Text != string.Empty)
+                    {
+                        if (Convert.ToDouble(Bill_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                        {
+                            MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                else if (Bills_Coin_Type.Text == "دولار")
+                {
+                    if (Bill_Total.Text != string.Empty)
+                    {
+                        if (Convert.ToDouble(Bill_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                        {
+                            MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                ///
+            }
+            //  مدفوعة وبقيت مدفوعة التحقق من توفر المبلغ بعد تعديل قيمة الفاتورة
+            else if (StatePaied && Bills_Paid.Checked) 
+            {
+                /// التحقق من ان المبلغ موجود في الميزانية
+                if (Bills_Coin_Type.Text == "سوري")
+                {
+                    if (Bill_Total.Text != string.Empty)
+                    {
+                        if ((Convert.ToDouble(Bill_Total.Text)- amount_Bill_Befor_Paied) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                        {
+                            MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                else if (Bills_Coin_Type.Text == "دولار")
+                {
+                    if (Bill_Total.Text != string.Empty)
+                    {
+                        if ((Convert.ToDouble(Bill_Total.Text) - amount_Bill_Befor_Paied) > Convert.ToDouble(Program.Budget_NOW()[2]))
+                        {
+                            MessageBox.Show("المبلغ بالدولار غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+            }
+            //
+            ///
             Bill.Bills_Details_update(Convert.ToInt32(Bills_NO_Bill.Text), Bills_Buyer_Name.Text, Bills_Coin_Type.Text, Bills_Exchange_rate.Text, Bill_Type.Text,
              Bill_Total.Text, Bills_Date.Value, Bills_Paid.Checked, Bills_Notes.Text, Convert.ToInt32(Bills_Comb_Budget.SelectedValue), Convert.ToInt32(Bills_Comb_Department.SelectedValue) , _Bill_ID);
              obj.Bills_Object_Delete_ByBill_Id(_Bill_ID);

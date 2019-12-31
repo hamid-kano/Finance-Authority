@@ -22,6 +22,7 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Employee emp = new BL.CLS_Employee();
+        double salary_Total;
         public Employee_Salaries_FORM()
         {
             InitializeComponent();
@@ -95,6 +96,7 @@ namespace Finance_Authority.PL
                     if ((dt=Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries)).Rows.Count!=0)
                     {
                         Salary_Total.Text = dt.Rows[0][1].ToString();
+                        salary_Total = Salary_Total.Text == string.Empty ? 0 : Convert.ToDouble(Salary_Total.Text);
                         Payment_Document_no.Text = dt.Rows[0][4].ToString();
                         Payment_Document_No_Order.Text = dt.Rows[0][5].ToString();
                     } 
@@ -315,6 +317,16 @@ namespace Finance_Authority.PL
                         }
                   
                 }
+                /// التحقق من ان المبلغ موجود في الميزانية
+                if (Salary_Total.Text != string.Empty)
+                {
+                    if (Convert.ToDouble(Salary_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
+                    {
+                        MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }
                 ///////
                 Pay.Payment_Document_add(Salary_Total.Text==string.Empty?"0": Salary_Total.Text, "0","0", Payment_Document_no.Text,
                             Payment_Document_No_Order.Text,"رواتب","العاملين",DateTime.Now
@@ -349,6 +361,16 @@ namespace Finance_Authority.PL
 
                         }
                     }
+                    /// التحقق من ان المبلغ موجود في الميزانية
+                    if (Salary_Total.Text != string.Empty)
+                    {
+                        if ((Convert.ToDouble(Salary_Total.Text)-salary_Total)> Convert.ToDouble(Program.Budget_NOW()[1]))
+                        {
+                            MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     //
                     DataTable dt2;
                     if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries)).Rows.Count!=0)

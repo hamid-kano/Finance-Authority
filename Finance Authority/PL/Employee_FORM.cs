@@ -541,7 +541,7 @@ namespace Finance_Authority.PL
                 Employee_Pr_Service_Years.Text = "";
                 Employee_delete.Enabled = false;
                 Employees_Brows_Docs.Enabled = false;
-
+                Employee_add.Enabled= false;
             }
         }
         private void Employee_Mobail_KeyPress(object sender, KeyPressEventArgs e)

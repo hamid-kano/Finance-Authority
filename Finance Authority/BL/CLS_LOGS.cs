@@ -28,5 +28,25 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public void LOGS_Delete_By_ID(int ID_LOGS)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID_LOGS", SqlDbType.Int);
+            param[0].Value = ID_LOGS;
+            DAL.excutecommand("LOGS_Delete_By_ID", param);
+            DAL.close();
+        }
+        public DataTable LOGS_View()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("LOGS_View", null);
+            DAL.close();
+            return Dt;
+        }
     }
 }

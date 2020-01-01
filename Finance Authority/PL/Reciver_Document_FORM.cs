@@ -206,7 +206,7 @@ namespace Finance_Authority.PL
                 return;
             }
             // التحقق من عدم التلاعب بتغيير انواع السندات
-            if (Type_Doc_Befor != "دفعة قرض" || Type_Doc_Befor != "ميزانية")
+            if (Type_Doc_Befor != "دفعة قرض" && Type_Doc_Befor != "ميزانية")
             {
                 if (Reciver_Document_Comb_Cate.Text == "قرض" || Reciver_Document_Comb_Cate.Text == "فاتورة" ||
                     Reciver_Document_Comb_Cate.Text == "رواتب" || Reciver_Document_Comb_Cate.Text == "دفعة قرض" || Reciver_Document_Comb_Cate.Text == "ميزانية")

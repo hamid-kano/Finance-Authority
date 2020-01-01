@@ -265,7 +265,7 @@ namespace Finance_Authority.PL
                 double tempSum;
                 for (int i = 0; i < Employee_Salaries_dataGrid.Rows.Count; ++i)
                 {
-                    tempSum=  double.TryParse(Convert.ToDouble(Employee_Salaries_dataGrid.Rows[i].Cells[14].Value).ToString(), out double temp)? temp:0;
+                    tempSum =  double.TryParse(Employee_Salaries_dataGrid.Rows[i].Cells[14].Value.ToString(), out double temp)? temp:0;
                     sum += tempSum;// Convert.ToDouble(Employee_Salaries_dataGrid.Rows[i].Cells[14].Value);
                     Salary_Total.Text = sum.ToString();
                 }
@@ -408,6 +408,9 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
+            Payment_Document_no.Text = "";
+            Payment_Document_No_Order.Text = "";
+            Salary_Total.Text = "";
 
         }
 

@@ -196,7 +196,7 @@
             this.groupBoxNumDoc_Order.Controls.Add(this.metroLabel5);
             this.groupBoxNumDoc_Order.Controls.Add(this.Payment_Document_No_Order);
             this.groupBoxNumDoc_Order.Controls.Add(this.Payment_Document_no);
-            this.groupBoxNumDoc_Order.Location = new System.Drawing.Point(9, 48);
+            this.groupBoxNumDoc_Order.Location = new System.Drawing.Point(8, 47);
             this.groupBoxNumDoc_Order.Name = "groupBoxNumDoc_Order";
             this.groupBoxNumDoc_Order.Size = new System.Drawing.Size(244, 89);
             this.groupBoxNumDoc_Order.TabIndex = 223;

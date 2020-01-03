@@ -472,7 +472,7 @@
             this.Users_Confirm_password.Location = new System.Drawing.Point(191, 201);
             this.Users_Confirm_password.MaxLength = 32767;
             this.Users_Confirm_password.Name = "Users_Confirm_password";
-            this.Users_Confirm_password.PasswordChar = '\0';
+            this.Users_Confirm_password.PasswordChar = '●';
             this.Users_Confirm_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Users_Confirm_password.SelectedText = "";
             this.Users_Confirm_password.SelectionLength = 0;
@@ -481,6 +481,7 @@
             this.Users_Confirm_password.Size = new System.Drawing.Size(146, 23);
             this.Users_Confirm_password.TabIndex = 28;
             this.Users_Confirm_password.UseSelectable = true;
+            this.Users_Confirm_password.UseSystemPasswordChar = true;
             this.Users_Confirm_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Users_Confirm_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -502,7 +503,7 @@
             this.Users_password.Location = new System.Drawing.Point(191, 162);
             this.Users_password.MaxLength = 32767;
             this.Users_password.Name = "Users_password";
-            this.Users_password.PasswordChar = '\0';
+            this.Users_password.PasswordChar = '●';
             this.Users_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Users_password.SelectedText = "";
             this.Users_password.SelectionLength = 0;
@@ -511,6 +512,7 @@
             this.Users_password.Size = new System.Drawing.Size(146, 23);
             this.Users_password.TabIndex = 27;
             this.Users_password.UseSelectable = true;
+            this.Users_password.UseSystemPasswordChar = true;
             this.Users_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Users_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -624,7 +626,7 @@
             // 
             // 
             this.Users_Search_ByName.CustomButton.Image = null;
-            this.Users_Search_ByName.CustomButton.Location = new System.Drawing.Point(124, 1);
+            this.Users_Search_ByName.CustomButton.Location = new System.Drawing.Point(148, 1);
             this.Users_Search_ByName.CustomButton.Name = "";
             this.Users_Search_ByName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.Users_Search_ByName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -642,11 +644,12 @@
             this.Users_Search_ByName.SelectionLength = 0;
             this.Users_Search_ByName.SelectionStart = 0;
             this.Users_Search_ByName.ShortcutsEnabled = true;
-            this.Users_Search_ByName.Size = new System.Drawing.Size(146, 23);
+            this.Users_Search_ByName.Size = new System.Drawing.Size(170, 23);
             this.Users_Search_ByName.TabIndex = 30;
             this.Users_Search_ByName.UseSelectable = true;
             this.Users_Search_ByName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Users_Search_ByName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Users_Search_ByName.TextChanged += new System.EventHandler(this.Users_Search_ByName_TextChanged);
             // 
             // metroLabel4
             // 

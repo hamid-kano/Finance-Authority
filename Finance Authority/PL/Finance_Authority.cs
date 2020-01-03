@@ -332,5 +332,11 @@ namespace Finance_Authority.PL
             Users_FORM FRM = new Users_FORM();
             FRM.ShowDialog();
         }
+
+        private void metroTile24_Click(object sender, EventArgs e)
+        {
+            Users_Logs_FORM users_Logs = new Users_Logs_FORM();
+            users_Logs.ShowDialog();
+        }
     }
 }

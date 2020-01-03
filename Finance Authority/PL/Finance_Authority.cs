@@ -326,5 +326,11 @@ namespace Finance_Authority.PL
         {
 
         }
+
+        private void metroTile23_Click(object sender, EventArgs e)
+        {
+            Users_FORM FRM = new Users_FORM();
+            FRM.ShowDialog();
+        }
     }
 }

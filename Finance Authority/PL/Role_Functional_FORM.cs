@@ -60,7 +60,6 @@ namespace Finance_Authority.PL
             else
             {
                 MessageBox.Show("موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
                 return;
             }
            

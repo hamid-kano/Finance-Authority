@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Finance_Authority.PL
+namespace Finance_Authority.BL
 {
-    public partial class Users_FORM : MetroFramework.Forms.MetroForm
+    public partial class User_Account_FORM  : MetroFramework.Forms.MetroForm
     {
-        public Users_FORM()
+        public User_Account_FORM()
         {
             InitializeComponent();
         }

@@ -43,6 +43,20 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable User_Cheack_Athuntication(String user_Name, String password)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@user_Name", SqlDbType.NVarChar);
+            param[0].Value = user_Name;
+            param[1] = new SqlParameter("@password", SqlDbType.NVarChar);
+            param[1].Value = password;
+            Dt = DAL.selectdata("User_Cheack_Athuntication", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable User_Check_UserName(String user_Name)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -195,6 +209,22 @@ namespace Finance_Authority.BL
             param[28] = new SqlParameter("@user_id", SqlDbType.Int);
             param[28].Value = user_id;
             Dt = DAL.selectdata("User_update", param);
+            DAL.close();
+            return Dt;
+        }
+        public DataTable User_update_Username_Password(string fullName, string password, int user_id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@fullName", SqlDbType.NVarChar);
+            param[0].Value = fullName;
+            param[1] = new SqlParameter("@password", SqlDbType.NVarChar);
+            param[1].Value = password;
+            param[2] = new SqlParameter("@user_id", SqlDbType.Int);
+            param[2].Value = user_id;
+            Dt = DAL.selectdata("User_update_Username_Password", param);
             DAL.close();
             return Dt;
         }

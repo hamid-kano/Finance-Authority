@@ -1,4 +1,4 @@
-﻿namespace Finance_Authority.BL
+﻿namespace Finance_Authority.PL
 {
     partial class User_Account_FORM
     {
@@ -55,10 +55,10 @@
             this.User_Account_old_password.CustomButton.UseSelectable = true;
             this.User_Account_old_password.CustomButton.Visible = false;
             this.User_Account_old_password.Lines = new string[0];
-            this.User_Account_old_password.Location = new System.Drawing.Point(215, 148);
+            this.User_Account_old_password.Location = new System.Drawing.Point(175, 132);
             this.User_Account_old_password.MaxLength = 32767;
             this.User_Account_old_password.Name = "User_Account_old_password";
-            this.User_Account_old_password.PasswordChar = '\0';
+            this.User_Account_old_password.PasswordChar = '●';
             this.User_Account_old_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.User_Account_old_password.SelectedText = "";
             this.User_Account_old_password.SelectionLength = 0;
@@ -67,13 +67,14 @@
             this.User_Account_old_password.Size = new System.Drawing.Size(146, 23);
             this.User_Account_old_password.TabIndex = 26;
             this.User_Account_old_password.UseSelectable = true;
+            this.User_Account_old_password.UseSystemPasswordChar = true;
             this.User_Account_old_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.User_Account_old_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(32, 148);
+            this.metroLabel4.Location = new System.Drawing.Point(24, 132);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(109, 19);
             this.metroLabel4.TabIndex = 25;
@@ -82,22 +83,24 @@
             // User_Account_Fexit
             // 
             this.User_Account_Fexit.Highlight = true;
-            this.User_Account_Fexit.Location = new System.Drawing.Point(227, 310);
+            this.User_Account_Fexit.Location = new System.Drawing.Point(193, 272);
             this.User_Account_Fexit.Name = "User_Account_Fexit";
             this.User_Account_Fexit.Size = new System.Drawing.Size(87, 37);
             this.User_Account_Fexit.TabIndex = 24;
             this.User_Account_Fexit.Text = "خروج";
             this.User_Account_Fexit.UseSelectable = true;
+            this.User_Account_Fexit.Click += new System.EventHandler(this.User_Account_Fexit_Click);
             // 
             // User_Account_update
             // 
             this.User_Account_update.Highlight = true;
-            this.User_Account_update.Location = new System.Drawing.Point(102, 310);
+            this.User_Account_update.Location = new System.Drawing.Point(68, 272);
             this.User_Account_update.Name = "User_Account_update";
             this.User_Account_update.Size = new System.Drawing.Size(108, 37);
             this.User_Account_update.TabIndex = 23;
             this.User_Account_update.Text = "تغيير كلمة المرور";
             this.User_Account_update.UseSelectable = true;
+            this.User_Account_update.Click += new System.EventHandler(this.User_Account_update_Click);
             // 
             // User_Account_Confirm_new_password
             // 
@@ -114,10 +117,10 @@
             this.User_Account_Confirm_new_password.CustomButton.UseSelectable = true;
             this.User_Account_Confirm_new_password.CustomButton.Visible = false;
             this.User_Account_Confirm_new_password.Lines = new string[0];
-            this.User_Account_Confirm_new_password.Location = new System.Drawing.Point(215, 249);
+            this.User_Account_Confirm_new_password.Location = new System.Drawing.Point(175, 216);
             this.User_Account_Confirm_new_password.MaxLength = 32767;
             this.User_Account_Confirm_new_password.Name = "User_Account_Confirm_new_password";
-            this.User_Account_Confirm_new_password.PasswordChar = '\0';
+            this.User_Account_Confirm_new_password.PasswordChar = '●';
             this.User_Account_Confirm_new_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.User_Account_Confirm_new_password.SelectedText = "";
             this.User_Account_Confirm_new_password.SelectionLength = 0;
@@ -126,6 +129,7 @@
             this.User_Account_Confirm_new_password.Size = new System.Drawing.Size(146, 23);
             this.User_Account_Confirm_new_password.TabIndex = 22;
             this.User_Account_Confirm_new_password.UseSelectable = true;
+            this.User_Account_Confirm_new_password.UseSystemPasswordChar = true;
             this.User_Account_Confirm_new_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.User_Account_Confirm_new_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -144,10 +148,10 @@
             this.User_Account_new_password.CustomButton.UseSelectable = true;
             this.User_Account_new_password.CustomButton.Visible = false;
             this.User_Account_new_password.Lines = new string[0];
-            this.User_Account_new_password.Location = new System.Drawing.Point(215, 197);
+            this.User_Account_new_password.Location = new System.Drawing.Point(175, 174);
             this.User_Account_new_password.MaxLength = 32767;
             this.User_Account_new_password.Name = "User_Account_new_password";
-            this.User_Account_new_password.PasswordChar = '\0';
+            this.User_Account_new_password.PasswordChar = '●';
             this.User_Account_new_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.User_Account_new_password.SelectedText = "";
             this.User_Account_new_password.SelectionLength = 0;
@@ -156,6 +160,7 @@
             this.User_Account_new_password.Size = new System.Drawing.Size(146, 23);
             this.User_Account_new_password.TabIndex = 21;
             this.User_Account_new_password.UseSelectable = true;
+            this.User_Account_new_password.UseSystemPasswordChar = true;
             this.User_Account_new_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.User_Account_new_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -174,7 +179,7 @@
             this.User_Account_userName.CustomButton.UseSelectable = true;
             this.User_Account_userName.CustomButton.Visible = false;
             this.User_Account_userName.Lines = new string[0];
-            this.User_Account_userName.Location = new System.Drawing.Point(215, 98);
+            this.User_Account_userName.Location = new System.Drawing.Point(175, 90);
             this.User_Account_userName.MaxLength = 32767;
             this.User_Account_userName.Name = "User_Account_userName";
             this.User_Account_userName.PasswordChar = '\0';
@@ -192,7 +197,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(32, 249);
+            this.metroLabel3.Location = new System.Drawing.Point(24, 216);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(139, 19);
             this.metroLabel3.TabIndex = 19;
@@ -201,7 +206,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(32, 197);
+            this.metroLabel2.Location = new System.Drawing.Point(24, 174);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(111, 19);
             this.metroLabel2.TabIndex = 18;
@@ -210,7 +215,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(32, 98);
+            this.metroLabel1.Location = new System.Drawing.Point(24, 90);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(88, 19);
             this.metroLabel1.TabIndex = 17;
@@ -221,7 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(387, 395);
+            this.ClientSize = new System.Drawing.Size(345, 349);
             this.Controls.Add(this.User_Account_old_password);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.User_Account_Fexit);

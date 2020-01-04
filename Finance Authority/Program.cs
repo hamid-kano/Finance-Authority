@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
-
+using System.Data.SqlClient;
 
 namespace Finance_Authority
 {
@@ -33,7 +33,13 @@ namespace Finance_Authority
         public static int Document_id;
         public static int Bill_Id;
         public static String RPT_SERVER_NAME;
-        public static int USER_ID;
+        public static int USER_ID=-1;
+        public static string USER_NAME;
+        public static string USER_PASSWORD;
+        public static string Server_UserName;
+        public static string Server_Password;
+        public static string Server_Name;
+
         /// </summary>
         /// 
         public static int theme=1;
@@ -239,6 +245,48 @@ namespace Finance_Authority
                         , dt_Sum_import[0].ToString(),dt_Sum_import[1].ToString());
                 }
             }     
+        }
+        public static int IsServerConnected()
+        {
+            string connectionString1= @"Server = " + Program.Server_Name + "; DataBase=FinanceAuthorityDB; Integrated Security= false; USER ID =" + Program.Server_UserName + ";PASSWORD =" + Program.Server_Password + "";
+            string connectionString2 = @"Server = " + Program.Server_Name + "; DataBase=FinanceAuthorityDB; Integrated Security= true;";
+            string connectionString3 = @"Server = .; DataBase=FinanceAuthorityDB; Integrated Security= true;";
+            using (SqlConnection connection = new SqlConnection(connectionString1))
+            {
+                try
+                {
+                    connection.Open();
+                    return 1;
+                }
+                catch (SqlException)
+                {
+                    //return 0;
+                }
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString2))
+            {
+                try
+                {
+                    connection.Open();
+                    return 2;
+                }
+                catch (SqlException)
+                {
+                    //return 0;
+                }
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString3))
+            {
+                try
+                {
+                    connection.Open();
+                    return 3;
+                }
+                catch (SqlException)
+                {
+                    return 0;
+                }
+            }
         }
     }
 }

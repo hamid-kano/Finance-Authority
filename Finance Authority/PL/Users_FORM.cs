@@ -133,6 +133,11 @@ namespace Finance_Authority.PL
 
         private void Users_delete_Click(object sender, EventArgs e)
         {
+            if (Program.USER_ID== _user_id)
+            {
+                MessageBox.Show("لايمكن حذف الحساب وهو قيد تسجيل الدخول حالياً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Users_update.Enabled = false;
             Users_delete.Enabled = false;
             Users_add.Enabled = false;
@@ -193,6 +198,8 @@ namespace Finance_Authority.PL
     Reciver_Document_FORM.Checked, Role_Functional_FORM.Checked, Users_CB_FORM.Checked, Users_LOGS_FORM.Checked,_user_id);
 
             Program.Special_Message("تمت التعديل بنجاح");
+            Program.USER_NAME = Users_userName.Text;
+            Program.USER_PASSWORD = Users_Confirm_password.Text;
             Users_DataGrid.DataSource = user.User_View();
             Users_DataGrid.Columns[0].Visible = false;
             Users_userName.Text = "";

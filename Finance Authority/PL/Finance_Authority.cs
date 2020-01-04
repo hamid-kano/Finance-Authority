@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Configuration;
 
 namespace Finance_Authority.PL
 {
     public partial class Finance_Authority : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Budget budget = new BL.CLS_Budget();
+        Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         public Finance_Authority()
         {
             InitializeComponent();
@@ -324,16 +326,23 @@ namespace Finance_Authority.PL
 
         private void Finance_Authority_Load(object sender, EventArgs e)
         {
-
+            Login_FORM FRM = new Login_FORM();
+            FRM.ShowDialog();
         }
 
-        private void metroTile23_Click(object sender, EventArgs e)
+        private void Users_Click(object sender, EventArgs e)
         {
             Users_FORM FRM = new Users_FORM();
             FRM.ShowDialog();
         }
 
-        private void metroTile24_Click(object sender, EventArgs e)
+        private void Users_Account_Click(object sender, EventArgs e)
+        {
+            User_Account_FORM FRM = new User_Account_FORM();
+            FRM.ShowDialog();
+        }
+
+        private void Users_Logs_Click(object sender, EventArgs e)
         {
             Users_Logs_FORM users_Logs = new Users_Logs_FORM();
             users_Logs.ShowDialog();

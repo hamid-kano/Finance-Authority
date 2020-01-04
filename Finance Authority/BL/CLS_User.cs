@@ -43,6 +43,19 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable User_Check_UserName(String user_Name)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@user_Name", SqlDbType.NVarChar);
+            param[0].Value = user_Name;
+            Dt = DAL.selectdata("User_Check_UserName", param);
+            DAL.close();
+            return Dt;
+        }
+
         public DataTable User_Add(string fullName, string password ,bool Authority_FORM , bool Backup_FORM , bool Backup_Restor_FORM , bool Bills_Details_FORM ,
            bool Bills_FORM , bool Budget_FORM , bool Budget_Now_FORM , bool Coin_Exchange_FORM , bool Contracts_FORM , bool Department_FORM , bool Document_Category_FORM
            , bool Document_FORM , bool Emission_Salaries_FORM , bool Employee_Description_FORM  , bool Employee_FORM , bool Employee_Salaries_FORM 

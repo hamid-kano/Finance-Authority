@@ -58,12 +58,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("كلمة المرور وتأكيدها غير متطابقتين", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (user.User_View_By_Name(Users_userName.Text).Rows.Count>0)
+            if (user.User_Check_UserName(Users_userName.Text).Rows.Count>0)
             {
                 MessageBox.Show("هناك مستخدم آخر بنفس الاسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            user.User_Add(Users_userName.Text.Trim(), Users_password.Text.Trim(), Authority_FORM.Checked, Backup_FORM.Checked, Backup_Restor_FORM.Checked, Bills_Details_FORM.Checked, Bills_FORM.Checked,
+            user.User_Add(Users_userName.Text, Users_password.Text, Authority_FORM.Checked, Backup_FORM.Checked, Backup_Restor_FORM.Checked, Bills_Details_FORM.Checked, Bills_FORM.Checked,
                 Budget_FORM.Checked, Budget_Now_FORM.Checked, Coin_Exchange_FORM.Checked, Contracts_FORM.Checked, Department_FORM.Checked, Document_Category_FORM.Checked,
                 Document_FORM.Checked, Emission_Salaries_FORM.Checked, Employee_Description_FORM.Checked, Employee_FORM.Checked, Employee_Salaries_FORM.Checked,
                 EX_Order_FORM.Checked, EX_Orders_Cat_FORM.Checked, Leoan_Payments_FORM.Checked, Loans_FORM.Checked, Office_FORM.Checked, Payment_Document_FORM.Checked,
@@ -99,8 +99,8 @@ namespace Finance_Authority.PL
                 Users_add.Enabled = false;
                 _user_id=Convert.ToInt32(Users_DataGrid.CurrentRow.Cells[0].Value.ToString());
                 DataGridViewRow dr = this.Users_DataGrid.CurrentRow;
-                Users_userName.Text = dr.Cells[1].Value.ToString().Trim();
-                Users_password.Text = dr.Cells[2].Value.ToString().Trim();
+                Users_userName.Text = dr.Cells[1].Value.ToString();
+                Users_password.Text = dr.Cells[2].Value.ToString();
                 Users_Confirm_password.Text = Users_password.Text;
                 Authority_FORM.Checked = Convert.ToBoolean(dr.Cells[3].Value);
                 Backup_FORM.Checked = Convert.ToBoolean(dr.Cells[4].Value);
@@ -172,13 +172,21 @@ namespace Finance_Authority.PL
                 MessageBox.Show("كلمة المرور وتأكيدها غير متطابقتين", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (user.User_View_By_Name(Users_userName.Text.Trim()).Rows.Count>0)
+            if (Users_userName.Text.Length>50 || Users_password.Text.Length>50)
             {
-                MessageBox.Show("هناك مستخدم آخر بنفس الاسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("يجب ألا يتجاوز اسم المستخدم وكلمة المرور اكثر من 50 محرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Users_DataGrid.CurrentRow.Cells[1].Value.ToString()!=Users_userName.Text)
+            {
+                if (user.User_Check_UserName(Users_userName.Text).Rows.Count>0)
+                {
+                    MessageBox.Show("هناك مستخدم آخر بنفس الاسم", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
 
-            user.User_update(Users_userName.Text.Trim(), Users_password.Text.Trim(), Authority_FORM.Checked, Backup_FORM.Checked, Backup_Restor_FORM.Checked, Bills_Details_FORM.Checked, Bills_FORM.Checked,
+            user.User_update(Users_userName.Text, Users_password.Text, Authority_FORM.Checked, Backup_FORM.Checked, Backup_Restor_FORM.Checked, Bills_Details_FORM.Checked, Bills_FORM.Checked,
     Budget_FORM.Checked, Budget_Now_FORM.Checked, Coin_Exchange_FORM.Checked, Contracts_FORM.Checked, Department_FORM.Checked, Document_Category_FORM.Checked,
     Document_FORM.Checked, Emission_Salaries_FORM.Checked, Employee_Description_FORM.Checked, Employee_FORM.Checked, Employee_Salaries_FORM.Checked,
     EX_Order_FORM.Checked, EX_Orders_Cat_FORM.Checked, Leoan_Payments_FORM.Checked, Loans_FORM.Checked, Office_FORM.Checked, Payment_Document_FORM.Checked,

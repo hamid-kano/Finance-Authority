@@ -87,6 +87,12 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (Convert.ToDouble(Coin_Exchange_rate.Text) == 0)
+            {
+
+                MessageBox.Show("لا يجب ان تكون قيمة التحويل صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Coin_Exchange_CombBudge.SelectedIndex == -1)
             {
 
@@ -169,23 +175,13 @@ namespace Finance_Authority.PL
                 MessageBox.Show("ادخل قيمة التحويل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //// كانت من دولار الى سوري واصبحت من سوري الى دولار
-            //if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value)&& Coin_EX_RB_StoD.Checked)
-            //{
-            //    // ارجاع مبلغ الدولار الى الميزانية ومن ثم انقاص المبلغ السوري من الميزانية
-            //    Program.Budget_update_after_Payment_Reciver("R", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
-            //    Program.Budget_update_after_Payment_Reciver("P", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");
-            //}
-            //// كانت من سوري الى دولار واصبحت من دولار الى سوري
-            //else if(!Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value) && Coin_EX_RB_DtoS.Checked)
-            //{
-            //    // يتم ارجاع مبلغ السوري الى الميزانية ويتم انقاص مبلغ الدولار من الميزانية
-            //    Program.Budget_update_after_Payment_Reciver("R", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(),"0");
-            //    Program.Budget_update_after_Payment_Reciver("P", "0", this.Coin_Exchange_Gridview.CurrentRow.Cells[2].Value.ToString());
-            //}
-            // التراجع عن العمليات السابقة
-            //كان من دولار الى سوري
-             if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value))
+            if (Convert.ToDouble(Coin_Exchange_rate.Text) == 0)
+            {
+
+                MessageBox.Show("لا يجب ان تكون قيمة التحويل صفر", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Convert.ToBoolean(this.Coin_Exchange_Gridview.CurrentRow.Cells[7].Value))
              {
                     // التراجع عن العملية السابقة من اجل الاضافة والنقصان او ابقاء المبلغ نفسه
                     Program.Budget_update_after_Payment_Reciver("P", this.Coin_Exchange_Gridview.CurrentRow.Cells[1].Value.ToString(), "0");

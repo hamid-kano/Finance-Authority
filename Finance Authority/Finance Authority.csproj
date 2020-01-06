@@ -89,6 +89,24 @@
     <Compile Include="BL\CLS_Role_Functional.cs" />
     <Compile Include="BL\CLS_User.cs" />
     <Compile Include="BL\Department.cs" />
+    <Compile Include="PL\Employee_Edit_Pers_Info_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Edit_Pers_Info_FORM.Designer.cs">
+      <DependentUpon>Employee_Edit_Pers_Info_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_History_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_History_FORM.Designer.cs">
+      <DependentUpon>Employee_History_FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Employee_Last_Desc_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Last_Desc_FORM.Designer.cs">
+      <DependentUpon>Employee_Last_Desc_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Users_Account_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +303,12 @@
       <DependentUpon>Crystal_Employee_Description.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPT\Crystal_Employee_History.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal_Employee_History.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="REPT\Crystal_EX_Order.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -333,6 +357,15 @@
     <Compile Include="REPT\FRM_Report.Designer.cs">
       <DependentUpon>FRM_Report.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PL\Employee_Edit_Pers_Info_FORM.resx">
+      <DependentUpon>Employee_Edit_Pers_Info_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_History_FORM.resx">
+      <DependentUpon>Employee_History_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_Last_Desc_FORM.resx">
+      <DependentUpon>Employee_Last_Desc_FORM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Users_Account_FORM.resx">
       <DependentUpon>Users_Account_FORM.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,6 +473,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_Employee_Description.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Employee_Description.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPT\Crystal_Employee_History.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_Employee_History.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPT\Crystal_EX_Order.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

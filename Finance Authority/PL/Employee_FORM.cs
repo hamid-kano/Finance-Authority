@@ -53,6 +53,7 @@ namespace Finance_Authority.PL
             {
                 Statues_Change.Enabled = true;
                 Employee_add.Text = "تعديل";
+                this.Text = "تعديل موظف";
                 Dt = Emp.Employee_Description_View_id(_Empolyee_Description_ID);
                 Dt_emp = Emp.Employee_View_id((int)Dt.Rows[0][8]);
                 Employee_id = (int)Dt_emp.Rows[0][0];
@@ -78,12 +79,23 @@ namespace Finance_Authority.PL
                 Employee_Description_Salery.Text = Dt.Rows[0][5].ToString(); ;
                 Employee_Description_Comb_Department.Text = Dt.Rows[0][6].ToString();
                 Employee_Description_Comb_Role.Text = Dt.Rows[0][7].ToString();
-                Employee_Description_Comb_Satutes.Text = Dt.Rows[0][1].ToString();
+                if (Dt.Rows[0][1].ToString() == "عقد" || Dt.Rows[0][1].ToString() == "مثبت" || Dt.Rows[0][1].ToString() == "مندوب")
+                {
+                    CB_in_work.Checked = true;
+                    CB_out_work.Checked = false;
+                    Employee_Description_Comb_Satutes.Text = Dt.Rows[0][1].ToString();
+                }
+                else
+                {
+                    CB_out_work.Checked = true;
+                    CB_in_work.Checked = false;
+                    Employee_Description_Comb_out_work_Statues.Text = Dt.Rows[0][1].ToString();
+                }
                 Employee_Description_Now.Checked = Convert.ToBoolean(Dt.Rows[0][2].ToString()) ? true : false;
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
                 Contracts_Brows_Docs.Enabled = true;
                 Employees_Brows_Docs.Enabled = true;
-                Employee_delete.Enabled = true;
+                Employee_new.Visible = false;
 
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
                 {
@@ -135,7 +147,6 @@ namespace Finance_Authority.PL
             Employee_Gender.Text = "";
             Employee_Marital_status.Text = "";
             Employee_Pr_Service_Years.Text = "";
-            Employee_delete.Enabled = false;
             Employee_Description_N0_Book.Text = "";
             Employee_Description_Salery.Text = "";
             Contracts_Type.Text = "";
@@ -271,6 +282,24 @@ namespace Finance_Authority.PL
 
                 MessageBox.Show("أضف راتب الموظف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
+            }
+            if (CB_in_work.Checked)
+            {
+                if (Employee_Description_Comb_Satutes.SelectedIndex == -1)
+                {
+
+                    MessageBox.Show("يجب اختيار حالة قيد العمل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+            if (CB_out_work.Checked)
+            {
+                if (Employee_Description_Comb_out_work_Statues.SelectedIndex == -1)
+                {
+
+                    MessageBox.Show("يجب اختيار حالة خارج العمل", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
             if (groupBox_Contract.Enabled)
             {
@@ -447,7 +476,7 @@ namespace Finance_Authority.PL
                 //
                 if (Employee_Description_Update.Checked)
                 {
-                    Empl_Des.Employee_Description_update(Employee_Description_Comb_Satutes.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue),
+                    Empl_Des.Employee_Description_update(CB_in_work.Checked ? Employee_Description_Comb_Satutes.Text : Employee_Description_Comb_out_work_Statues.Text, Employee_Description_Now.Checked, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text, Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue),
                         Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue),
                           Employee_id, _Empolyee_Description_ID);
                 }
@@ -455,7 +484,7 @@ namespace Finance_Authority.PL
                 {
 
                     Empl_Des.Employee_Description_update_Role_status_Empl_ID(Employee_id);// جعل الحالات الوظيفية السابقة سابقة
-                    Empl_Des.Employee_Description_add(Employee_Description_Comb_Satutes.Text, true, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text,
+                    Empl_Des.Employee_Description_add(CB_in_work.Checked ? Employee_Description_Comb_Satutes.Text : Employee_Description_Comb_out_work_Statues.Text, true, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text,
                         Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Employee_id);
                 }
                 //
@@ -539,7 +568,6 @@ namespace Finance_Authority.PL
                 Employee_Gender.Text = "";
                 Employee_Marital_status.Text = "";
                 Employee_Pr_Service_Years.Text = "";
-                Employee_delete.Enabled = false;
                 Employees_Brows_Docs.Enabled = false;
                 Employee_add.Enabled= false;
             }

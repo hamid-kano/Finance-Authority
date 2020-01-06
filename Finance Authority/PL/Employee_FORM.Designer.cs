@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Employee_exit = new MetroFramework.Controls.MetroButton();
-            this.Employee_delete = new MetroFramework.Controls.MetroButton();
             this.Employee_add = new MetroFramework.Controls.MetroButton();
             this.Employee_new = new MetroFramework.Controls.MetroButton();
             this.groupBox_Employee_Des = new System.Windows.Forms.GroupBox();
@@ -113,7 +112,7 @@
             // Employee_exit
             // 
             this.Employee_exit.Highlight = true;
-            this.Employee_exit.Location = new System.Drawing.Point(743, 571);
+            this.Employee_exit.Location = new System.Drawing.Point(610, 568);
             this.Employee_exit.Name = "Employee_exit";
             this.Employee_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_exit.TabIndex = 20;
@@ -121,22 +120,10 @@
             this.Employee_exit.UseSelectable = true;
             this.Employee_exit.Click += new System.EventHandler(this.Employee_exit_Click);
             // 
-            // Employee_delete
-            // 
-            this.Employee_delete.Enabled = false;
-            this.Employee_delete.Highlight = true;
-            this.Employee_delete.Location = new System.Drawing.Point(650, 571);
-            this.Employee_delete.Name = "Employee_delete";
-            this.Employee_delete.Size = new System.Drawing.Size(87, 37);
-            this.Employee_delete.TabIndex = 18;
-            this.Employee_delete.Text = "حذف";
-            this.Employee_delete.UseSelectable = true;
-            this.Employee_delete.Click += new System.EventHandler(this.Employee_delete_Click);
-            // 
             // Employee_add
             // 
             this.Employee_add.Highlight = true;
-            this.Employee_add.Location = new System.Drawing.Point(557, 571);
+            this.Employee_add.Location = new System.Drawing.Point(517, 568);
             this.Employee_add.Name = "Employee_add";
             this.Employee_add.Size = new System.Drawing.Size(87, 37);
             this.Employee_add.TabIndex = 16;
@@ -147,7 +134,7 @@
             // Employee_new
             // 
             this.Employee_new.Highlight = true;
-            this.Employee_new.Location = new System.Drawing.Point(464, 571);
+            this.Employee_new.Location = new System.Drawing.Point(424, 568);
             this.Employee_new.Name = "Employee_new";
             this.Employee_new.Size = new System.Drawing.Size(87, 37);
             this.Employee_new.TabIndex = 15;
@@ -1279,7 +1266,6 @@
             this.Controls.Add(this.groupBox_Contract);
             this.Controls.Add(this.groupBox_Employee_Des);
             this.Controls.Add(this.Employee_exit);
-            this.Controls.Add(this.Employee_delete);
             this.Controls.Add(this.Employee_add);
             this.Controls.Add(this.Employee_new);
             this.MaximizeBox = false;
@@ -1288,7 +1274,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "العاملين";
+            this.Text = "إضافة موظف";
             this.groupBox_Employee_Des.ResumeLayout(false);
             this.groupBox_Employee_Des.PerformLayout();
             this.Statues_Change.ResumeLayout(false);
@@ -1305,7 +1291,6 @@
 
         #endregion
         private MetroFramework.Controls.MetroButton Employee_exit;
-        private MetroFramework.Controls.MetroButton Employee_delete;
         private MetroFramework.Controls.MetroButton Employee_add;
         private MetroFramework.Controls.MetroButton Employee_new;
         private System.Windows.Forms.GroupBox groupBox_Employee_Des;

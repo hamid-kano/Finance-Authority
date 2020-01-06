@@ -90,14 +90,12 @@ namespace Finance_Authority.PL
             frm.ShowDialog();
             LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة العقود", DateTime.Now);
             //REPT.Crystal_Contracts Art = new REPT.Crystal_Contracts();
-
             //REPT.FRM_Report FRPT = new REPT.FRM_Report();
 
             //if (Contracts_Gridview.Rows.Count != 0)
             //{
             //    // DataTable dt = dataGrid_Ringall.DataSource;
             //    Art.SetDataSource(Contracts_Gridview.DataSource);
-
             //    FRPT.crystalReportViewer1.ReportSource = Art;
             //    FRPT.ShowDialog();
             //}

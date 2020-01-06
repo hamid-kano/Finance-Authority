@@ -115,8 +115,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tab_Main.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.Tab_Main.Controls.Add(this.metroTabPage1);
-            this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage6);
+            this.Tab_Main.Controls.Add(this.metroTabPage4);
             this.Tab_Main.Controls.Add(this.metroTabPage8);
             this.Tab_Main.Controls.Add(this.metroTabPage3);
             this.Tab_Main.Controls.Add(this.metroTabPage5);
@@ -127,7 +127,7 @@
             this.Tab_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Tab_Main.Name = "Tab_Main";
             this.Tab_Main.RightToLeftLayout = true;
-            this.Tab_Main.SelectedIndex = 2;
+            this.Tab_Main.SelectedIndex = 6;
             this.Tab_Main.Size = new System.Drawing.Size(1105, 134);
             this.Tab_Main.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.Tab_Main.TabIndex = 0;
@@ -573,7 +573,7 @@
             this.Employee_Button.Name = "Employee_Button";
             this.Employee_Button.Size = new System.Drawing.Size(130, 49);
             this.Employee_Button.TabIndex = 11;
-            this.Employee_Button.Text = "العاملين";
+            this.Employee_Button.Text = "اضافة عامل";
             this.Employee_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Employee_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.Employee_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
@@ -601,7 +601,7 @@
             this.Employee_Description_Button.Name = "Employee_Description_Button";
             this.Employee_Description_Button.Size = new System.Drawing.Size(163, 49);
             this.Employee_Description_Button.TabIndex = 9;
-            this.Employee_Description_Button.Text = "الصفات الوظيفية";
+            this.Employee_Description_Button.Text = "ادارة العاملين";
             this.Employee_Description_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Employee_Description_Button.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.Employee_Description_Button.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;

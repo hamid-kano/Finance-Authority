@@ -10,15 +10,7 @@ namespace Finance_Authority.BL
 {
     class CLS_Employee_Description
     {
-        public DataTable Employee_Description_View()
-        {
-            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
-            DAL.open();
-            DataTable Dt = new DataTable();
-            Dt = DAL.selectdata("Employee_Description_View", null);
-            DAL.close();
-            return Dt;
-        }
+      
         public DataTable Employee_Description_Comb_employ()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -160,6 +152,30 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        // يعرض جميع العاملين
+        public DataTable Employee_Description_View()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Employee_Description_View", null);
+            DAL.close();
+            return Dt;
+        }
+        // يعرض جميع حالات الموظف
+        public DataTable Employee_Description_View_History_Emp(int Employee_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_ID", SqlDbType.Int);
+            param[0].Value = Employee_ID;
+            Dt = DAL.selectdata("Employee_Description_View_History_Emp", param);
+            DAL.close();
+            return Dt;
+        }
+        // يعرض العاملين قيد العمل
         public DataTable Employee_Description_View_Spical_three()
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
@@ -169,5 +185,16 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        // يعرض العاملين خارج العمل
+        public DataTable Employee_Description_View_without_Spical_three()
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DAL.open();
+            DataTable Dt = new DataTable();
+            Dt = DAL.selectdata("Employee_Description_View_without_Spical_three", null);
+            DAL.close();
+            return Dt;
+        }
+
     }
 }

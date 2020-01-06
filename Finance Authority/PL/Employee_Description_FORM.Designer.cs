@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Description_FORM));
             this.Employee_Description_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Employee_Description_exit = new MetroFramework.Controls.MetroButton();
@@ -40,9 +40,13 @@
             this.Employee_Description_Print = new MetroFramework.Controls.MetroButton();
             this.Coin_Exc_Sy = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Employee_Description_Edit = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.Employee_Description_Comb_Employee = new MetroFramework.Controls.MetroComboBox();
             this.update = new MetroFramework.Controls.MetroButton();
-            this.Employee_Description_Details = new MetroFramework.Controls.MetroButton();
-            this.Employee_Description_view_all = new MetroFramework.Controls.MetroButton();
+            this.Employee_Edit_Pers_Info = new MetroFramework.Controls.MetroButton();
+            this.Employee_add = new MetroFramework.Controls.MetroButton();
+            this.Employee_Description_History = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Description_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,48 +60,48 @@
             this.Employee_Description_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Employee_Description_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Employee_Description_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Employee_Description_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Employee_Description_dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.Employee_Description_dataGrid.EnableHeadersVisualStyles = false;
             this.Employee_Description_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Employee_Description_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Employee_Description_dataGrid.Location = new System.Drawing.Point(14, 126);
+            this.Employee_Description_dataGrid.Location = new System.Drawing.Point(23, 121);
             this.Employee_Description_dataGrid.Name = "Employee_Description_dataGrid";
             this.Employee_Description_dataGrid.ReadOnly = true;
             this.Employee_Description_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Employee_Description_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Employee_Description_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Employee_Description_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(954, 451);
+            this.Employee_Description_dataGrid.Size = new System.Drawing.Size(985, 451);
             this.Employee_Description_dataGrid.TabIndex = 153;
             this.Employee_Description_dataGrid.Click += new System.EventHandler(this.Employee_Description_dataGrid_Click);
             // 
             // Employee_Description_exit
             // 
             this.Employee_Description_exit.Highlight = true;
-            this.Employee_Description_exit.Location = new System.Drawing.Point(606, 595);
+            this.Employee_Description_exit.Location = new System.Drawing.Point(860, 596);
             this.Employee_Description_exit.Name = "Employee_Description_exit";
             this.Employee_Description_exit.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_exit.TabIndex = 14;
@@ -109,7 +113,7 @@
             // 
             this.Employee_Description_delete.Enabled = false;
             this.Employee_Description_delete.Highlight = true;
-            this.Employee_Description_delete.Location = new System.Drawing.Point(420, 594);
+            this.Employee_Description_delete.Location = new System.Drawing.Point(674, 597);
             this.Employee_Description_delete.Name = "Employee_Description_delete";
             this.Employee_Description_delete.Size = new System.Drawing.Size(87, 37);
             this.Employee_Description_delete.TabIndex = 12;
@@ -121,7 +125,7 @@
             // 
             this.Employee_Description_Comb_Search.FormattingEnabled = true;
             this.Employee_Description_Comb_Search.ItemHeight = 23;
-            this.Employee_Description_Comb_Search.Location = new System.Drawing.Point(523, 84);
+            this.Employee_Description_Comb_Search.Location = new System.Drawing.Point(412, 77);
             this.Employee_Description_Comb_Search.Name = "Employee_Description_Comb_Search";
             this.Employee_Description_Comb_Search.Size = new System.Drawing.Size(188, 29);
             this.Employee_Description_Comb_Search.TabIndex = 15;
@@ -143,7 +147,7 @@
             this.Employee_Description_Search_all.CustomButton.UseSelectable = true;
             this.Employee_Description_Search_all.CustomButton.Visible = false;
             this.Employee_Description_Search_all.Lines = new string[0];
-            this.Employee_Description_Search_all.Location = new System.Drawing.Point(212, 87);
+            this.Employee_Description_Search_all.Location = new System.Drawing.Point(129, 80);
             this.Employee_Description_Search_all.MaxLength = 32767;
             this.Employee_Description_Search_all.Name = "Employee_Description_Search_all";
             this.Employee_Description_Search_all.PasswordChar = '\0';
@@ -162,7 +166,7 @@
             // Employee_Description_Print
             // 
             this.Employee_Description_Print.Highlight = true;
-            this.Employee_Description_Print.Location = new System.Drawing.Point(513, 594);
+            this.Employee_Description_Print.Location = new System.Drawing.Point(767, 596);
             this.Employee_Description_Print.Name = "Employee_Description_Print";
             this.Employee_Description_Print.Size = new System.Drawing.Size(87, 38);
             this.Employee_Description_Print.TabIndex = 13;
@@ -173,7 +177,7 @@
             // Coin_Exc_Sy
             // 
             this.Coin_Exc_Sy.AutoSize = true;
-            this.Coin_Exc_Sy.Location = new System.Drawing.Point(140, 89);
+            this.Coin_Exc_Sy.Location = new System.Drawing.Point(57, 82);
             this.Coin_Exc_Sy.Name = "Coin_Exc_Sy";
             this.Coin_Exc_Sy.Size = new System.Drawing.Size(56, 19);
             this.Coin_Exc_Sy.TabIndex = 222;
@@ -182,54 +186,106 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(432, 89);
+            this.metroLabel1.Location = new System.Drawing.Point(321, 82);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(85, 19);
             this.metroLabel1.TabIndex = 224;
             this.metroLabel1.Text = "حسب المكتب";
             // 
+            // Employee_Description_Edit
+            // 
+            this.Employee_Description_Edit.Enabled = false;
+            this.Employee_Description_Edit.Highlight = true;
+            this.Employee_Description_Edit.Location = new System.Drawing.Point(299, 596);
+            this.Employee_Description_Edit.Name = "Employee_Description_Edit";
+            this.Employee_Description_Edit.Size = new System.Drawing.Size(66, 37);
+            this.Employee_Description_Edit.TabIndex = 294;
+            this.Employee_Description_Edit.Text = "تعديل";
+            this.Employee_Description_Edit.UseSelectable = true;
+            this.Employee_Description_Edit.Click += new System.EventHandler(this.Employee_Description_Edit_Click);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(674, 82);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel2.TabIndex = 297;
+            this.metroLabel2.Text = "العاملين";
+            // 
+            // Employee_Description_Comb_Employee
+            // 
+            this.Employee_Description_Comb_Employee.FormattingEnabled = true;
+            this.Employee_Description_Comb_Employee.ItemHeight = 23;
+            this.Employee_Description_Comb_Employee.Items.AddRange(new object[] {
+            "الكل",
+            "قيد العمل",
+            "خارج العمل"});
+            this.Employee_Description_Comb_Employee.Location = new System.Drawing.Point(730, 77);
+            this.Employee_Description_Comb_Employee.Name = "Employee_Description_Comb_Employee";
+            this.Employee_Description_Comb_Employee.Size = new System.Drawing.Size(134, 29);
+            this.Employee_Description_Comb_Employee.TabIndex = 296;
+            this.Employee_Description_Comb_Employee.UseSelectable = true;
+            this.Employee_Description_Comb_Employee.SelectedValueChanged += new System.EventHandler(this.Employee_Description_Comb_Employee_SelectedValueChanged);
+            // 
             // update
             // 
             this.update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update.BackgroundImage")));
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.update.Location = new System.Drawing.Point(738, 82);
+            this.update.Location = new System.Drawing.Point(923, 84);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(33, 31);
             this.update.TabIndex = 293;
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // Employee_Description_Details
+            // Employee_Edit_Pers_Info
             // 
-            this.Employee_Description_Details.Enabled = false;
-            this.Employee_Description_Details.Highlight = true;
-            this.Employee_Description_Details.Location = new System.Drawing.Point(234, 596);
-            this.Employee_Description_Details.Name = "Employee_Description_Details";
-            this.Employee_Description_Details.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_Details.TabIndex = 294;
-            this.Employee_Description_Details.Text = "تفاصيل";
-            this.Employee_Description_Details.UseSelectable = true;
-            this.Employee_Description_Details.Click += new System.EventHandler(this.Employee_Description_Details_Click);
+            this.Employee_Edit_Pers_Info.Enabled = false;
+            this.Employee_Edit_Pers_Info.Highlight = true;
+            this.Employee_Edit_Pers_Info.Location = new System.Drawing.Point(144, 596);
+            this.Employee_Edit_Pers_Info.Name = "Employee_Edit_Pers_Info";
+            this.Employee_Edit_Pers_Info.Size = new System.Drawing.Size(149, 37);
+            this.Employee_Edit_Pers_Info.TabIndex = 298;
+            this.Employee_Edit_Pers_Info.Text = "تعديل المعلومات الشخصية";
+            this.Employee_Edit_Pers_Info.UseSelectable = true;
+            this.Employee_Edit_Pers_Info.Click += new System.EventHandler(this.Employee_Edit_Pers_Info_Click);
             // 
-            // Employee_Description_view_all
+            // Employee_add
             // 
-            this.Employee_Description_view_all.Highlight = true;
-            this.Employee_Description_view_all.Location = new System.Drawing.Point(327, 595);
-            this.Employee_Description_view_all.Name = "Employee_Description_view_all";
-            this.Employee_Description_view_all.Size = new System.Drawing.Size(87, 37);
-            this.Employee_Description_view_all.TabIndex = 295;
-            this.Employee_Description_view_all.Text = "عرض الكل";
-            this.Employee_Description_view_all.UseSelectable = true;
-            this.Employee_Description_view_all.Click += new System.EventHandler(this.Employee_Description_view_all_Click);
+            this.Employee_add.Highlight = true;
+            this.Employee_add.Location = new System.Drawing.Point(48, 596);
+            this.Employee_add.Name = "Employee_add";
+            this.Employee_add.Size = new System.Drawing.Size(90, 37);
+            this.Employee_add.TabIndex = 299;
+            this.Employee_add.Text = "اضافة موظف";
+            this.Employee_add.UseSelectable = true;
+            this.Employee_add.Click += new System.EventHandler(this.Employee_add_Click);
+            // 
+            // Employee_Description_History
+            // 
+            this.Employee_Description_History.Enabled = false;
+            this.Employee_Description_History.Highlight = true;
+            this.Employee_Description_History.Location = new System.Drawing.Point(371, 597);
+            this.Employee_Description_History.Name = "Employee_Description_History";
+            this.Employee_Description_History.Size = new System.Drawing.Size(92, 37);
+            this.Employee_Description_History.TabIndex = 300;
+            this.Employee_Description_History.Text = "الحركة الوظيفية";
+            this.Employee_Description_History.UseSelectable = true;
+            this.Employee_Description_History.Click += new System.EventHandler(this.Employee_Description_History_Click);
             // 
             // Employee_Description_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(979, 657);
-            this.Controls.Add(this.Employee_Description_view_all);
-            this.Controls.Add(this.Employee_Description_Details);
+            this.ClientSize = new System.Drawing.Size(1022, 657);
+            this.Controls.Add(this.Employee_Description_History);
+            this.Controls.Add(this.Employee_add);
+            this.Controls.Add(this.Employee_Edit_Pers_Info);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.Employee_Description_Comb_Employee);
+            this.Controls.Add(this.Employee_Description_Edit);
             this.Controls.Add(this.update);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Coin_Exc_Sy);
@@ -263,7 +319,11 @@
         private MetroFramework.Controls.MetroLabel Coin_Exc_Sy;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton update;
-        private MetroFramework.Controls.MetroButton Employee_Description_Details;
-        private MetroFramework.Controls.MetroButton Employee_Description_view_all;
+        private MetroFramework.Controls.MetroButton Employee_Description_Edit;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroComboBox Employee_Description_Comb_Employee;
+        private MetroFramework.Controls.MetroButton Employee_Edit_Pers_Info;
+        private MetroFramework.Controls.MetroButton Employee_add;
+        private MetroFramework.Controls.MetroButton Employee_Description_History;
     }
 }

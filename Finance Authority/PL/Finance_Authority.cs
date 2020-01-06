@@ -326,8 +326,8 @@ namespace Finance_Authority.PL
 
         private void Finance_Authority_Load(object sender, EventArgs e)
         {
-            Login_FORM FRM = new Login_FORM();
-            FRM.ShowDialog();
+            //Login_FORM FRM = new Login_FORM();
+            //FRM.ShowDialog();
         }
 
         private void Users_Click(object sender, EventArgs e)

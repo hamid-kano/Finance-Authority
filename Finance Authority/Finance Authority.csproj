@@ -107,6 +107,12 @@
     <Compile Include="PL\Employee_Last_Desc_FORM.Designer.cs">
       <DependentUpon>Employee_Last_Desc_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Employee_Return_Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Return_Job.Designer.cs">
+      <DependentUpon>Employee_Return_Job.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Users_Account_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Employee_Last_Desc_FORM.resx">
       <DependentUpon>Employee_Last_Desc_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_Return_Job.resx">
+      <DependentUpon>Employee_Return_Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Users_Account_FORM.resx">
       <DependentUpon>Users_Account_FORM.cs</DependentUpon>

@@ -42,6 +42,10 @@ namespace Finance_Authority.PL
                 MessageBox.Show("تم الحذف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LOG.LOGS_add(Program.USER_ID, "حذف", "حذف وصف وظيفي للعاملين", DateTime.Now);
                 Employee_Description_delete.Enabled = false;
+                Employee_Description_Edit.Enabled = false;
+                Employee_Edit_Pers_Info.Enabled = false;
+                Employee_Description_History.Enabled = false;
+                Employee_Description_Return.Enabled = false;
             }
         }
 
@@ -55,6 +59,12 @@ namespace Finance_Authority.PL
                 Employee_Description_Edit.Enabled = true;
                 Employee_Edit_Pers_Info.Enabled = true;
                 Employee_Description_History.Enabled = true;
+
+                string Role = Employee_Description_dataGrid.CurrentRow.Cells[10].Value.ToString();
+                if (Role != "عقد" && Role != "مثبت" && Role != "مندوب" && (bool)Employee_Description_dataGrid.CurrentRow.Cells[7].Value == true)
+                { // يتفعل في حال كان اخر تسجيلة للعامل خارج العمل
+                    Employee_Description_Return.Enabled = true;
+                }else {Employee_Description_Return.Enabled = false; }
             }
         }
 
@@ -71,6 +81,7 @@ namespace Finance_Authority.PL
             Employee_Description_dataGrid.Columns[0].Visible = false;
             Employee_Description_dataGrid.Columns[12].Visible = false;
         }
+
 
         private void Employee_Description_Print_Click(object sender, EventArgs e)
         {
@@ -164,6 +175,12 @@ namespace Finance_Authority.PL
         private void Employee_Description_History_Click(object sender, EventArgs e)
         {
             Employee_History_FORM FRM = new Employee_History_FORM(Program.Employee_id);
+            FRM.ShowDialog();
+        }
+
+        private void Employee_Description_Return_Click(object sender, EventArgs e)
+        {
+            Employee_Return_Job FRM = new Employee_Return_Job(Program.Employee_Description_id);
             FRM.ShowDialog();
         }
     }

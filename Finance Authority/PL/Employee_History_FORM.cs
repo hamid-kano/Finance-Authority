@@ -70,5 +70,25 @@ namespace Finance_Authority.PL
             frm.ShowDialog();
             LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة الحركة الوظيفية لعامل", DateTime.Now);
         }
+
+        private void Employee_Description_Return_Click(object sender, EventArgs e)
+        {
+            Employee_Return_Job FRM = new Employee_Return_Job(Program.Employee_Description_id);
+            FRM.ShowDialog();
+        }
+
+        private void Employee_History_DGV_Click(object sender, EventArgs e)
+        {
+            if (Employee_History_DGV.CurrentRow != null)
+            {
+                string Role = Employee_History_DGV.CurrentRow.Cells[10].Value.ToString();
+                if (Role != "عقد" && Role != "مثبت" && Role != "مندوب" && (bool)Employee_History_DGV.CurrentRow.Cells[7].Value == true)
+                { // يتفعل في حال كان اخر تسجيلة للعامل خارج العمل
+                    Program.Employee_Description_id = Convert.ToInt32(this.Employee_History_DGV.CurrentRow.Cells[0].Value.ToString());
+                    Employee_Description_Return.Enabled = true;
+                }
+                else { Employee_Description_Return.Enabled = false; }
+            }
+        }
     }
 }

@@ -36,6 +36,14 @@ namespace Finance_Authority.PL
             if (MessageBox.Show("هل تريد حذف صفة الموظف .اذا تم الحذف فسيتم حذف كافة تفاصيلها من البرنامج؟؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Empl_Des.Employee_Description_Delete(Program.Employee_Description_id);
+                // عند حذف اخر تسجيلة للعامل يجعل التسجيلة السابقة حالية
+                DataTable dt = Empl_Des.Employee_Description_View_History_Emp(Program.Employee_id);
+                if (dt.Rows.Count>0)
+                {
+                    // يمرر له اخر وصف وظيفي له
+                    Empl_Des.Employee_Description_set_Last_Desc_NOW(Convert.ToInt32(dt.Rows[0][0]));
+                }
+                //
                 this.Employee_Description_dataGrid.DataSource = Empl_Des.Employee_Description_View_Spical_three();
                 Employee_Description_dataGrid.Columns[0].Visible = false;
                 Employee_Description_dataGrid.Columns[12].Visible = false;
@@ -46,6 +54,7 @@ namespace Finance_Authority.PL
                 Employee_Edit_Pers_Info.Enabled = false;
                 Employee_Description_History.Enabled = false;
                 Employee_Description_Return.Enabled = false;
+                Employee_Description_Contracts_Emp.Enabled = false;
             }
         }
 
@@ -55,11 +64,25 @@ namespace Finance_Authority.PL
             {
                 Program.Employee_Description_id = Convert.ToInt32(this.Employee_Description_dataGrid.CurrentRow.Cells[0].Value.ToString());
                 Program.Employee_id= Convert.ToInt32(this.Employee_Description_dataGrid.CurrentRow.Cells[12].Value.ToString());
-                Employee_Description_delete.Enabled = true;
-                Employee_Description_Edit.Enabled = true;
                 Employee_Edit_Pers_Info.Enabled = true;
                 Employee_Description_History.Enabled = true;
+                //  اذا كانت اخر تسجيلة للعامل يسمح بتعديلها او حذفها
+                DataTable dt = Empl_Des.Employee_Description_View_History_Emp(Program.Employee_id);
+                if (Program.Employee_Description_id == Convert.ToInt32(dt.Rows[0][0]))
+                {
+                    Employee_Description_Edit.Enabled = true;
+                    Employee_Description_delete.Enabled = true;
+                }
+                else 
+                { 
+                    Employee_Description_Edit.Enabled = false;
+                    Employee_Description_delete.Enabled = false;
 
+                }
+                //
+                // يتفعل زر عقود الموظف في حال كان لديه عقود سابقة
+
+                //
                 string Role = Employee_Description_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 if (Role != "عقد" && Role != "مثبت" && Role != "مندوب" && (bool)Employee_Description_dataGrid.CurrentRow.Cells[7].Value == true)
                 { // يتفعل في حال كان اخر تسجيلة للعامل خارج العمل
@@ -182,6 +205,16 @@ namespace Finance_Authority.PL
         {
             Employee_Return_Job FRM = new Employee_Return_Job(Program.Employee_Description_id);
             FRM.ShowDialog();
+        }
+
+        private void metroPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Employee_Description_FORM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

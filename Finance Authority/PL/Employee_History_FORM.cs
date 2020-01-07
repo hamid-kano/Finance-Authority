@@ -14,7 +14,6 @@ namespace Finance_Authority.PL
     {
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
-
         int _Employee_ID;
         int _Last_Description;
         public Employee_History_FORM(int Employee_ID)
@@ -28,7 +27,6 @@ namespace Finance_Authority.PL
             Employee_History_DGV.Columns[12].Visible = false;
             _Last_Description =Convert.ToInt32(dt.Rows[0][0]);
         }
-
         private void Employee_Edit_Last_Description_Click(object sender, EventArgs e)
         {
             Employee_Last_Desc_FORM FRM = new Employee_Last_Desc_FORM(_Last_Description);
@@ -37,7 +35,6 @@ namespace Finance_Authority.PL
             Employee_History_DGV.Columns[0].Visible = false;
             Employee_History_DGV.Columns[12].Visible = false;
         }
-
         private void Employee_History_Print_Click(object sender, EventArgs e)
         {
             DataSet DS = new DataSet();
@@ -70,13 +67,11 @@ namespace Finance_Authority.PL
             frm.ShowDialog();
             LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة الحركة الوظيفية لعامل", DateTime.Now);
         }
-
         private void Employee_Description_Return_Click(object sender, EventArgs e)
         {
             Employee_Return_Job FRM = new Employee_Return_Job(Program.Employee_Description_id);
             FRM.ShowDialog();
         }
-
         private void Employee_History_DGV_Click(object sender, EventArgs e)
         {
             if (Employee_History_DGV.CurrentRow != null)

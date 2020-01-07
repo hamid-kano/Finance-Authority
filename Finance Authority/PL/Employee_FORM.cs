@@ -100,15 +100,17 @@ namespace Finance_Authority.PL
                 if (Employee_Description_Comb_Satutes.Text == "عقد")
                 {
                     StatusContractNewOrOld = true;
-                    Dt_cons = Emp.Contracts_View_id((int)Dt.Rows[0][0]);
-                    contract_id = (int)Dt_cons.Rows[0][0];
-                    Contracts_Type.Text = Dt_cons.Rows[0][1].ToString();
-                    Contracts_Date_Start.Text = Dt_cons.Rows[0][2].ToString();
-                    Contracts_Date_end.Text = Dt_cons.Rows[0][3].ToString();
-                    Contracts_Notes.Text = Dt_cons.Rows[0][5].ToString();
-                    Contracts_Comb_Contract_statue.Text = Dt_cons.Rows[0][4].ToString();
-                    groupBox_Contract.Enabled = true;
-
+                    if ((Dt_cons = Emp.Contracts_View_id((int)Dt.Rows[0][0])).Rows.Count>0)
+                    {
+                        //Dt_cons = Emp.Contracts_View_id((int)Dt.Rows[0][0]);
+                        contract_id = (int)Dt_cons.Rows[0][0];
+                        Contracts_Type.Text = Dt_cons.Rows[0][1].ToString();
+                        Contracts_Date_Start.Text = Dt_cons.Rows[0][2].ToString();
+                        Contracts_Date_end.Text = Dt_cons.Rows[0][3].ToString();
+                        Contracts_Notes.Text = Dt_cons.Rows[0][5].ToString();
+                        Contracts_Comb_Contract_statue.Text = Dt_cons.Rows[0][4].ToString();
+                        groupBox_Contract.Enabled = true;
+                    }
                 }
                 else
                 {

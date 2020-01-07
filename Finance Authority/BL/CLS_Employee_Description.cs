@@ -152,6 +152,19 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        // يجعل اخر تسجيلة للعامل حاليا (في حال كانت له تسجيله سابقة): وهي تستخدم بعد حذف اخر تسجيلة له
+        public DataTable Employee_Description_set_Last_Desc_NOW(int Employee_Des_ID)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_Des_ID", SqlDbType.NVarChar);
+            param[0].Value = Employee_Des_ID;
+            Dt = DAL.selectdata("Employee_Description_set_Last_Desc_NOW", param);
+            DAL.close();
+            return Dt;
+        }
         // يعرض جميع العاملين
         public DataTable Employee_Description_View()
         {

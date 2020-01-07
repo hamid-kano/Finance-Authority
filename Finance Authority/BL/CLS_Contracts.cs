@@ -18,6 +18,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Contracts_View_Employee_ID(int Employee_id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_id", SqlDbType.Int);
+            param[0].Value = Employee_id;
+            Dt = DAL.selectdata("Contracts_View_Employee_ID", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Contracts_Comb_Employee(int idDepartment)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

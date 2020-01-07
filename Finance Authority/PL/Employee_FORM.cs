@@ -24,6 +24,7 @@ namespace Finance_Authority.PL
         int _Empolyee_Description_ID;
         int contract_id;
         int Employee_id;
+        string Preivious_State_Job;
         bool StatusContractNewOrOld = false;
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         public Employee_FORM(int Empolyee_Description_ID)
@@ -84,6 +85,9 @@ namespace Finance_Authority.PL
                     CB_in_work.Checked = true;
                     CB_out_work.Checked = false;
                     Employee_Description_Comb_Satutes.Text = Dt.Rows[0][1].ToString();
+                    // الحالة السابقة للموظف قبل التعديل في حال كان قيد العمل
+                    Preivious_State_Job = Employee_Description_Comb_Satutes.Text;
+                    //
                 }
                 else
                 {
@@ -91,6 +95,7 @@ namespace Finance_Authority.PL
                     CB_in_work.Checked = false;
                     Employee_Description_Comb_out_work_Statues.Text = Dt.Rows[0][1].ToString();
                 }
+              
                 Employee_Description_Now.Checked = Convert.ToBoolean(Dt.Rows[0][2].ToString()) ? true : false;
                 Employee_Description_lift.Checked = Employee_Description_Now.Checked ? false : true;
                 Contracts_Brows_Docs.Enabled = true;
@@ -471,6 +476,18 @@ namespace Finance_Authority.PL
                         }
                     }
                 }
+                // لايسمح بتغيير حالة الموظف من مثبت الى عقد
+                if (Preivious_State_Job == "مثبت" && Employee_Description_Comb_Satutes.Text=="عقد"&& Employee_Description_Change.Checked)
+                {
+                    MessageBox.Show("لا يمكن تغيير حالة الموظف من مثبت الى عقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (Preivious_State_Job != "مثبت" && Employee_Description_Comb_Satutes.Text == "عقد" 
+                    && Contracts_Comb_Contract_statue.Text=="منتهي" && Employee_Description_Update.Checked)
+                {
+                    MessageBox.Show("لا يمكن تغيير حالة الموظف الى حالة عقد منتهي", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 Emp.Employee_update(Employee_First_Name.Text, Employee_Father_Name.Text, Employee_Last_Name.Text, Employee_Mother_Name.Text
                    , Employee_Mobail.Text, Employee_Scie_Level.Text, Employee_Scie_Specialization.Text, Employee_Brith_Date.Value
                     , Employee_No_Financial.Text, Employee_No_Affairs.Text, Employee_No_File.Text, Employee_No_Card.Text, Employee_Gender.Text
@@ -484,7 +501,6 @@ namespace Finance_Authority.PL
                 }
                 else
                 {
-
                     Empl_Des.Employee_Description_update_Role_status_Empl_ID(Employee_id);// جعل الحالات الوظيفية السابقة سابقة
                     Empl_Des.Employee_Description_add(CB_in_work.Checked ? Employee_Description_Comb_Satutes.Text : Employee_Description_Comb_out_work_Statues.Text, true, Employee_Description_DateTime.Value, Employee_Description_N0_Book.Text, Employee_Description_Salery.Text,
                         Convert.ToInt32(Employee_Description_Comb_Department.SelectedValue), Convert.ToInt32(Employee_Description_Comb_Role.SelectedValue), Employee_id);
@@ -501,7 +517,6 @@ namespace Finance_Authority.PL
                          , Contracts_Notes.Text, _Empolyee_Description_ID);
                     Contracts_Type.Text = "";
                     Contracts_Notes.Text = "";
-
                 }
                 // كان عقد واصبح غير ملتحق بعقد
                 else if (StatusContractNewOrOld && Employee_Description_Comb_Satutes.Text != "عقد")
@@ -524,9 +539,7 @@ namespace Finance_Authority.PL
                       , Contracts_Notes.Text, _Empolyee_Description_ID, contract_id);
 
                     }
-
                 }
-
                 Program.Update_Message();
                 LOG.LOGS_add(Program.USER_ID, "تعديل", "تعديل معلومات موظف", DateTime.Now);
                 //Employee_Description_N0_Book.Text = "";
@@ -546,7 +559,6 @@ namespace Finance_Authority.PL
                 //Employee_Marital_status.Text = "";
                 //Employee_Pr_Service_Years.Text = "";
                 Employee_add.Enabled = false;
-
             }
         }
         private void Employee_delete_Click(object sender, EventArgs e)

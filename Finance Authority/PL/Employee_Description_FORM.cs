@@ -81,7 +81,16 @@ namespace Finance_Authority.PL
                 }
                 //
                 // يتفعل زر عقود الموظف في حال كان لديه عقود سابقة
-
+                bool Exist_Contract = false;
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (row[10].ToString()=="عقد")
+                    {
+                        Exist_Contract = true;
+                        break;
+                    }
+                }
+                Employee_Description_Contracts_Emp.Enabled = Exist_Contract;
                 //
                 string Role = Employee_Description_dataGrid.CurrentRow.Cells[10].Value.ToString();
                 if (Role != "عقد" && Role != "مثبت" && Role != "مندوب" && (bool)Employee_Description_dataGrid.CurrentRow.Cells[7].Value == true)
@@ -215,6 +224,12 @@ namespace Finance_Authority.PL
         private void Employee_Description_FORM_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Employee_Description_Contracts_Emp_Click(object sender, EventArgs e)
+        {
+            Employee_Contracts_FORM FRM = new Employee_Contracts_FORM(Program.Employee_id);
+            FRM.ShowDialog();
         }
     }
 }

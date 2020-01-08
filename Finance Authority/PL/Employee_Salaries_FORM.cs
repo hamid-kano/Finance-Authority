@@ -22,6 +22,7 @@ namespace Finance_Authority.PL
         BL.CLS_Employee_Description des = new BL.CLS_Employee_Description();
         BL.CLS_Employee_Salaries emp_Sal = new BL.CLS_Employee_Salaries();
         BL.CLS_Employee emp = new BL.CLS_Employee();
+        BL.Authority Auth = new BL.Authority();
         double salary_Total;
         public Employee_Salaries_FORM()
         {
@@ -29,6 +30,10 @@ namespace Finance_Authority.PL
             Employee_Salaries_Saliery.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
             Employee_Salaries_Saliery.DisplayMember = "Date";
             Employee_Salaries_Saliery.ValueMember = "Emission_Salaries_id";
+            Authority_Comb.DataSource = Auth.Authority_view();
+            Authority_Comb.DisplayMember = "اسم الهيئة";
+            Authority_Comb.ValueMember = "Authority_ID";
+
             this.StyleManager = Program.theme_style(this);
             //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             //Employee_Salaries_dataGrid.Columns[0].Visible = false;
@@ -82,7 +87,6 @@ namespace Finance_Authority.PL
                 Employee_Salaries_dataGrid.Columns[0].Visible = false;
                 this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
-                Employee_Salaries_Office_txt.Text= Empl_Sala.Employee_Salaries_Search_Emission_Salaries(Program.Emission_Salaries_id).Rows[0][2].ToString();
                 this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
                 this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
                 Employee_Salaries_dataGrid.Columns[20].Visible = false;
@@ -422,6 +426,49 @@ namespace Finance_Authority.PL
         private void Payment_Document_No_Order_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Program.DenyChar(e);
+        }
+
+        private void Employee_Salaries_dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Employee_Salaries_dataGrid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Department_CombAuthority_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Authority_Comb_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idAuthority = Convert.ToInt32(Authority_Comb.SelectedValue);
+                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
+                Emission_Salaries_Name_office.DataSource = Dep.Department_CombAuthority_Office(idAuthority);
+                Emission_Salaries_Name_office.DisplayMember = "Office_Name";
+                Emission_Salaries_Name_office.ValueMember = "Office_ID";
+
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
         }
     }
 }

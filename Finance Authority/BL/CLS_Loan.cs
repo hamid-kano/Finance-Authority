@@ -148,6 +148,22 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Loans_By_Employee_id_Between_Date(int Employee_id, DateTime Date_first, DateTime Date_last)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[3];
+            param[0] = new SqlParameter("@Employee_id", SqlDbType.Int);
+            param[0].Value = Employee_id;
+            param[1] = new SqlParameter("@Date_first", SqlDbType.DateTime);
+            param[1].Value = Date_first;
+            param[2] = new SqlParameter("@Date_last", SqlDbType.DateTime);
+            param[2].Value = Date_last;
+            Dt = DAL.selectdata("Loans_By_Employee_id_Between_Date", param);
+            DAL.close();
+            return Dt;
+        }
 
     }
 }

@@ -162,6 +162,18 @@ namespace Finance_Authority.BL
             DAL.close();
             return Dt;
         }
+        public DataTable Employee_Salaries_By_id(int Employee_id)
+        {
+            DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();
+            DataTable Dt = new DataTable();
+            DAL.open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Employee_id", SqlDbType.Int);
+            param[0].Value = Employee_id;
+            Dt = DAL.selectdata("Employee_Salaries_By_id", param);
+            DAL.close();
+            return Dt;
+        }
         public DataTable Employee_Salaries_Search_Emission_Salaries(int Emission_Salaries)
         {
             DAL.DATA_ACCESS_LAYER DAL = new DAL.DATA_ACCESS_LAYER();

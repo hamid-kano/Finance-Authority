@@ -101,6 +101,12 @@
     <Compile Include="PL\Employee_Edit_Pers_Info_FORM.Designer.cs">
       <DependentUpon>Employee_Edit_Pers_Info_FORM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Employee_Finance_History_FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Employee_Finance_History_FORM.Designer.cs">
+      <DependentUpon>Employee_Finance_History_FORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Employee_History_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Employee_Edit_Pers_Info_FORM.resx">
       <DependentUpon>Employee_Edit_Pers_Info_FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Employee_Finance_History_FORM.resx">
+      <DependentUpon>Employee_Finance_History_FORM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Employee_History_FORM.resx">
       <DependentUpon>Employee_History_FORM.cs</DependentUpon>

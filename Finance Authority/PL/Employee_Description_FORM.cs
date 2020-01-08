@@ -55,6 +55,7 @@ namespace Finance_Authority.PL
                 Employee_Description_History.Enabled = false;
                 Employee_Description_Return.Enabled = false;
                 Employee_Description_Contracts_Emp.Enabled = false;
+                Employee_Description_Financee_Doc_History.Enabled = false;
             }
         }
 
@@ -66,6 +67,7 @@ namespace Finance_Authority.PL
                 Program.Employee_id= Convert.ToInt32(this.Employee_Description_dataGrid.CurrentRow.Cells[12].Value.ToString());
                 Employee_Edit_Pers_Info.Enabled = true;
                 Employee_Description_History.Enabled = true;
+                Employee_Description_Financee_Doc_History.Enabled = true;
                 //  اذا كانت اخر تسجيلة للعامل يسمح بتعديلها او حذفها
                 DataTable dt = Empl_Des.Employee_Description_View_History_Emp(Program.Employee_id);
                 if (Program.Employee_Description_id == Convert.ToInt32(dt.Rows[0][0]))
@@ -230,6 +232,13 @@ namespace Finance_Authority.PL
         {
             Employee_Contracts_FORM FRM = new Employee_Contracts_FORM(Program.Employee_id);
             FRM.ShowDialog();
+        }
+
+        private void Employee_Description_Financee_Doc_History_Click(object sender, EventArgs e)
+        {
+            Employee_Finance_History_FORM FRM = new Employee_Finance_History_FORM(Program.Employee_id);
+            FRM.ShowDialog();
+
         }
     }
 }

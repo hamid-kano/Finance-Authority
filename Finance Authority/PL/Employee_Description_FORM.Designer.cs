@@ -50,6 +50,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.Employee_Description_Financee_Doc_History = new MetroFramework.Controls.MetroButton();
             this.Employee_Description_Contracts_Emp = new MetroFramework.Controls.MetroButton();
             this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Description_dataGrid)).BeginInit();
@@ -323,6 +324,7 @@
             // 
             // metroPanel3
             // 
+            this.metroPanel3.Controls.Add(this.Employee_Description_Financee_Doc_History);
             this.metroPanel3.Controls.Add(this.Employee_Description_Contracts_Emp);
             this.metroPanel3.Controls.Add(this.Employee_add);
             this.metroPanel3.Controls.Add(this.Employee_Description_exit);
@@ -343,6 +345,18 @@
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // Employee_Description_Financee_Doc_History
+            // 
+            this.Employee_Description_Financee_Doc_History.Enabled = false;
+            this.Employee_Description_Financee_Doc_History.Highlight = true;
+            this.Employee_Description_Financee_Doc_History.Location = new System.Drawing.Point(506, 21);
+            this.Employee_Description_Financee_Doc_History.Name = "Employee_Description_Financee_Doc_History";
+            this.Employee_Description_Financee_Doc_History.Size = new System.Drawing.Size(122, 37);
+            this.Employee_Description_Financee_Doc_History.TabIndex = 303;
+            this.Employee_Description_Financee_Doc_History.Text = "السجل المالي للموظف";
+            this.Employee_Description_Financee_Doc_History.UseSelectable = true;
+            this.Employee_Description_Financee_Doc_History.Click += new System.EventHandler(this.Employee_Description_Financee_Doc_History_Click);
             // 
             // Employee_Description_Contracts_Emp
             // 
@@ -382,7 +396,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "الوصف الوظيفي للعاملين";
+            this.Text = "إدارة العاملين";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Employee_Description_FORM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Employee_Description_dataGrid)).EndInit();
@@ -416,5 +430,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroFramework.Controls.MetroButton Employee_Description_Contracts_Emp;
+        private MetroFramework.Controls.MetroButton Employee_Description_Financee_Doc_History;
     }
 }

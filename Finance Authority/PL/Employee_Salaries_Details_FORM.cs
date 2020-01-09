@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Finance_Authority.PL
 {
-    public partial class Employee_Salaries_FORM :MetroFramework.Forms.MetroForm
+    public partial class Employee_Salaries_Details_FORM : MetroFramework.Forms.MetroForm
     {
         BL.CLS_Contracts cont = new BL.CLS_Contracts();
         BL.CLS_Employee_Description Empl_Des = new BL.CLS_Employee_Description();
@@ -27,29 +27,34 @@ namespace Finance_Authority.PL
         BL.CLS_LOGS LOG = new BL.CLS_LOGS();
         BL.CLS_Emission_Salaries Emiss = new BL.CLS_Emission_Salaries();
         double salary_Total;
-        public Employee_Salaries_FORM()
+        int _Emission_id;
+        public Employee_Salaries_Details_FORM(int Emission_id)
         {
             InitializeComponent();
-            //Employee_Salaries_Saliery.DataSource = Empl_Sala.Employee_Salaries_Comb_Date_Emiss();
-            //Employee_Salaries_Saliery.DisplayMember = "Date";
-            //Employee_Salaries_Saliery.ValueMember = "Emission_Salaries_id";
             this.StyleManager = Program.theme_style(this);
-            Authority_Comb.DataSource = Auth.Authority_view();
-            Authority_Comb.DisplayMember = "اسم الهيئة";
-            Authority_Comb.ValueMember = "Authority_ID";
-            Emission_Salaries_Comb_Budget.DataSource = Bud.Budget_combo_Last_Budget();
-            Emission_Salaries_Comb_Budget.DisplayMember = "Date";
-            Emission_Salaries_Comb_Budget.ValueMember = "Budget_Id";
-            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(-1);
+            _Emission_id = Emission_id;
+            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(_Emission_id);
             Employee_Salaries_dataGrid.Columns[0].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
-            //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
-            //Employee_Salaries_dataGrid.Columns[0].Visible = false;
-            //Employee_Salaries_dataGrid.Columns[20].Visible = false;
+
+            ///// عرض رقم السند وامر الصرف و المجموع الكلي في حال كان مثبت من قبل 
+            DataTable dt2;
+            if ((dt2 = ope.Operations_Bill_Salary_LoanPay_Viewby_towID(_Emission_id, "رواتب")).Rows.Count != 0)
+            {
+                int Payement_id_for_this_Emp_Salaries = Convert.ToInt32(dt2.Rows[0][0]);
+                DataTable dt;
+                if ((dt = Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries)).Rows.Count != 0)
+                {
+                    Salary_Total.Text = dt.Rows[0][1].ToString();
+                    salary_Total = Salary_Total.Text == string.Empty ? 0 : Convert.ToDouble(Salary_Total.Text);
+                    Payment_Document_no.Text = dt.Rows[0][4].ToString();
+                    Payment_Document_No_Order.Text = dt.Rows[0][5].ToString();
+                }
+            }
         }
 
         private void Employee_Salaries_dataGrid_Click(object sender, EventArgs e)
@@ -167,7 +172,7 @@ namespace Finance_Authority.PL
       
         private void Employee_Salaries_commit_Click(object sender, EventArgs e)
         {
-            if (!(Employee_Salaries_dataGrid.RowCount>0))
+            if (!(Employee_Salaries_dataGrid.RowCount > 0))
             {
                 Program.Special_Message("ليس هناك عاملين لتثبيت بيانات الراتب");
                 return;
@@ -182,47 +187,7 @@ namespace Finance_Authority.PL
                 MessageBox.Show("يجب ادخال رقم امر الصرف", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-          
-            if (ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب").Rows.Count ==0)
-            {
-                // اضافة
-                DataTable Dt = Pay.Payment_Document_View();
-                for (int i = 0; i < Dt.Rows.Count; i++)
-                {
-                   
-                        if (Payment_Document_no.Text == Dt.Rows[i][4].ToString())
-                        {
-                            MessageBox.Show("رقم السند موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                        if (Payment_Document_No_Order.Text == Dt.Rows[i][5].ToString())
-                        {
-                            MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            return;
-                        }
-                  
-                }
-                /// التحقق من ان المبلغ موجود في الميزانية
-                if (Salary_Total.Text != string.Empty)
-                {
-                    if (Convert.ToDouble(Salary_Total.Text) > Convert.ToDouble(Program.Budget_NOW()[1]))
-                    {
-                        MessageBox.Show("المبلغ السوري غير متوفر في الصندوق", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-
-                    }
-                }
-                ///////
-                Pay.Payment_Document_add(Salary_Total.Text==string.Empty?"0": Salary_Total.Text, "0","0", Payment_Document_no.Text,
-                            Payment_Document_No_Order.Text,"رواتب","العاملين",DateTime.Now
-                            ,"لايوجد",Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]),1011);
-                ope.Operations_Bill_Salary_LoanPay_add(Convert.ToInt32(Pay.Payment_Document_Max_ID().Rows[0][0]), Program.Emission_Salaries_id, "رواتب");
-                // تحديث الميزانية
-                Program.Budget_update_after_Payment_Reciver("P", Salary_Total.Text, "0" );
-            }
-            else
-            {
-                DataTable dt;
+            DataTable dt;
                 if ((dt= ope.Operations_Bill_Salary_LoanPay_Viewby_towID(Program.Emission_Salaries_id, "رواتب")).Rows.Count!=0)
                 {
                     // تعديل
@@ -243,7 +208,6 @@ namespace Finance_Authority.PL
                                 MessageBox.Show("رقم امر الصرف موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 return;
                             }
-
                         }
                     }
                     /// التحقق من ان المبلغ موجود في الميزانية
@@ -255,7 +219,6 @@ namespace Finance_Authority.PL
                             return;
                         }
                     }
-
                     //
                     DataTable dt2;
                     if ((dt2= Pay.Payment_Document_Search_by_id(Payement_id_for_this_Emp_Salaries)).Rows.Count!=0)
@@ -271,8 +234,7 @@ namespace Finance_Authority.PL
                          Payment_Document_No_Order.Text, "رواتب", "العاملين", DateTime.Now
                        , "لايوجد", Convert.ToInt32(budget.Budget_Last_Budget().Rows[0][0]), 1011, Payement_id_for_this_Emp_Salaries);
 
-                }      
-            }
+                }
             // تعديل بيانات العاملين ----- في كلا الحالتين اول مرة تثبيت او في التثبيت اكثر من مرة
             DataTable dt_DS =(DataTable)Employee_Salaries_dataGrid.DataSource;
             for (int i = 0; i < Employee_Salaries_dataGrid.RowCount; i++)
@@ -283,7 +245,7 @@ namespace Finance_Authority.PL
                    dt_DS.Rows[i][10].ToString(), dt_DS.Rows[i][11].ToString(), dt_DS.Rows[i][12].ToString(),
                    dt_DS.Rows[i][13].ToString(), dt_DS.Rows[i][14].ToString(), dt_DS.Rows[i][15].ToString(),
                    dt_DS.Rows[i][16].ToString(), dt_DS.Rows[i][17].ToString(), dt_DS.Rows[i][18].ToString(),
-                   Program.Emission_Salaries_id, Convert.ToInt32(dt_DS.Rows[i][20]), Convert.ToInt32(dt_DS.Rows[i][0]));
+                   _Emission_id, Convert.ToInt32(dt_DS.Rows[i][20]), Convert.ToInt32(dt_DS.Rows[i][0]));
             }
             Program.Special_Message("تم التثبيت بنجاح");
             this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(-1);
@@ -298,80 +260,6 @@ namespace Finance_Authority.PL
             Salary_Total.Text = "";
 
         }
-
-     
-        private void Authority_Comb_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int idAuthority = Convert.ToInt32(Authority_Comb.SelectedValue);
-                //MessageBox.Show(Contracts_Comb_Department.SelectedValue.GetType().ToString());
-                Emission_Salaries_Name_office.DataSource = Dep.Department_CombAuthority_Office(idAuthority);
-                Emission_Salaries_Name_office.DisplayMember = "Office_Name";
-                Emission_Salaries_Name_office.ValueMember = "Office_ID";
-
-            }
-            catch (Exception)
-            {
-
-                //throw;
-            }
-        }
-
-        private void Emission_Salaries_Click(object sender, EventArgs e)
-        {
-            if (Emission_Salaries_Name_office.SelectedIndex == -1)
-            {
-
-                MessageBox.Show("يجب اختيار اسم المكتب", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            if (Emission_Salaries_Comb_Budget.SelectedIndex == -1)
-            {
-
-                MessageBox.Show("يجب اختيار الميزانية", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            Emiss.Emission_Salaries_add(Convert.ToInt32(Emission_Salaries_Name_office.SelectedValue), Emission_Salaries_Date.Value, Convert.ToInt32(Emission_Salaries_Comb_Budget.SelectedValue));
-            /////// اضافة العاملين في هذا المكتب لاصدار رواتبهم لكي تظهر في نافذة رواتب العامليت وتعديل بياناتهم هناك
-            DataTable dt = des.Employee_Description_Search_Office(Emission_Salaries_Name_office.Text);
-            int id_last_emission = Convert.ToInt32(Emiss.Emission_Salaries_Max_ID().Rows[0][0]);
-            Program.Emission_Salaries_id = id_last_emission;
-            //  الحصول على الايام المتبقية للعقد الخاص بالموظف حلقة الادخال
-            foreach (DataRow item in dt.Rows)
-            {
-                if (item[1].ToString() == "عقد")
-                {
-                    int TotalDays_Remind = Convert.ToInt32((Convert.ToDateTime(emp.Contracts_View_id((int)item[0]).Rows[0][3]) - DateTime.Now.Date).TotalDays);
-                    emp_Sal.Employee_Salaries_add("", TotalDays_Remind.ToString(), "", "", "", "", "", "", "", "", "", "", "", "", "", "", id_last_emission, Convert.ToInt32(item[0]));
-                }
-                else
-                {
-                    emp_Sal.Employee_Salaries_add("", "مثبت", "", "", "", "", "", "", "", "", "", "", "", "", "", "", id_last_emission, Convert.ToInt32(item[0]));
-                }
-            }
-            ////////
-            /// اضافة ملحقات لهذا لاصدار الرواتب
-            if (MessageBox.Show("هل تريد اضافة ملحقات لهذا الاصدار؟", "ملحقات", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            {
-                int MAX_EEmission_Salaries_ID = Convert.ToInt32(Emiss.Emission_Salaries_Max_ID().Rows[0][0]);
-                Document_FORM FRM = new Document_FORM(MAX_EEmission_Salaries_ID, "اصدار الرواتب");
-                FRM.ShowDialog();
-            }
-            ////
-            Program.Add_Message();
-            LOG.LOGS_add(Program.USER_ID, "اضافة", "اضافة اصدار راتب", DateTime.Now);
-            Emission_Salaries.Enabled = false;
-            /// عرض معلومات العاملين للاصدار المضاف
-            this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_Search_Emission_Salaries(id_last_emission);
-            Employee_Salaries_dataGrid.Columns[0].Visible = false;
-            this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
-            this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
-            this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
-            this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
-            Employee_Salaries_dataGrid.Columns[20].Visible = false;
-        }
-
         private void Employee_Salaries_dataGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var cell = Employee_Salaries_dataGrid.CurrentCell;
@@ -385,7 +273,6 @@ namespace Finance_Authority.PL
                     cell.Value = 0;
                 }
             }
-
             try
             {
                 double sum = 0;
@@ -404,8 +291,6 @@ namespace Finance_Authority.PL
 
                 // throw;
             }
-
-
         }
     }
 }

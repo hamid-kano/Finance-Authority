@@ -409,7 +409,6 @@ namespace Finance_Authority.PL
                             emp_Sal.Employee_Salaries_Delete_by_Emission_ID(Emission_ID); // delete salaries for this emission
                             emission.Emission_Salaries_Delete(Emission_ID); // delete emission
                             ope.Operations_Bill_Salary_LoanPay_Delete(Program.Payment_Document_id, Emission_ID, "رواتب");// delete operations
-
                         }   
                     }
                     else

@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Emission_Salaries_dataGrid = new MetroFramework.Controls.MetroGrid();
             this.Emission_Salaries_exit = new MetroFramework.Controls.MetroButton();
             this.Emission_Salaries_delete = new MetroFramework.Controls.MetroButton();
             this.Emission_Salaries_update = new MetroFramework.Controls.MetroButton();
-            this.Emission_Salaries_add = new MetroFramework.Controls.MetroButton();
-            this.Emission_Salaries_new = new MetroFramework.Controls.MetroButton();
             this.Emission_Salaries_Date = new MetroFramework.Controls.MetroDateTime();
             this.Emission_Salaries_Comb_Budget = new MetroFramework.Controls.MetroComboBox();
             this.Emission_Salaries_Name_office = new MetroFramework.Controls.MetroComboBox();
@@ -44,6 +42,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Emission_Salaries_Brows_Docs = new MetroFramework.Controls.MetroButton();
+            this.Emission_Salaries_Details = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Emission_Salaries_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,23 +56,23 @@
             this.Emission_Salaries_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Emission_Salaries_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Emission_Salaries_dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Emission_Salaries_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Emission_Salaries_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.Emission_Salaries_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Emission_Salaries_dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Emission_Salaries_dataGrid.DefaultCellStyle = dataGridViewCellStyle11;
             this.Emission_Salaries_dataGrid.EnableHeadersVisualStyles = false;
             this.Emission_Salaries_dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Emission_Salaries_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -81,14 +80,14 @@
             this.Emission_Salaries_dataGrid.Name = "Emission_Salaries_dataGrid";
             this.Emission_Salaries_dataGrid.ReadOnly = true;
             this.Emission_Salaries_dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Emission_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Emission_Salaries_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.Emission_Salaries_dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Emission_Salaries_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Emission_Salaries_dataGrid.Size = new System.Drawing.Size(716, 377);
@@ -98,7 +97,7 @@
             // Emission_Salaries_exit
             // 
             this.Emission_Salaries_exit.Highlight = true;
-            this.Emission_Salaries_exit.Location = new System.Drawing.Point(586, 496);
+            this.Emission_Salaries_exit.Location = new System.Drawing.Point(554, 496);
             this.Emission_Salaries_exit.Name = "Emission_Salaries_exit";
             this.Emission_Salaries_exit.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_exit.TabIndex = 7;
@@ -110,7 +109,7 @@
             // 
             this.Emission_Salaries_delete.Enabled = false;
             this.Emission_Salaries_delete.Highlight = true;
-            this.Emission_Salaries_delete.Location = new System.Drawing.Point(493, 496);
+            this.Emission_Salaries_delete.Location = new System.Drawing.Point(461, 496);
             this.Emission_Salaries_delete.Name = "Emission_Salaries_delete";
             this.Emission_Salaries_delete.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_delete.TabIndex = 6;
@@ -122,35 +121,13 @@
             // 
             this.Emission_Salaries_update.Enabled = false;
             this.Emission_Salaries_update.Highlight = true;
-            this.Emission_Salaries_update.Location = new System.Drawing.Point(400, 496);
+            this.Emission_Salaries_update.Location = new System.Drawing.Point(368, 496);
             this.Emission_Salaries_update.Name = "Emission_Salaries_update";
             this.Emission_Salaries_update.Size = new System.Drawing.Size(87, 37);
             this.Emission_Salaries_update.TabIndex = 5;
             this.Emission_Salaries_update.Text = "تعديل";
             this.Emission_Salaries_update.UseSelectable = true;
             this.Emission_Salaries_update.Click += new System.EventHandler(this.Emission_Salaries_update_Click);
-            // 
-            // Emission_Salaries_add
-            // 
-            this.Emission_Salaries_add.Highlight = true;
-            this.Emission_Salaries_add.Location = new System.Drawing.Point(307, 496);
-            this.Emission_Salaries_add.Name = "Emission_Salaries_add";
-            this.Emission_Salaries_add.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_add.TabIndex = 4;
-            this.Emission_Salaries_add.Text = "اضافة";
-            this.Emission_Salaries_add.UseSelectable = true;
-            this.Emission_Salaries_add.Click += new System.EventHandler(this.Emission_Salaries_add_Click);
-            // 
-            // Emission_Salaries_new
-            // 
-            this.Emission_Salaries_new.Highlight = true;
-            this.Emission_Salaries_new.Location = new System.Drawing.Point(214, 496);
-            this.Emission_Salaries_new.Name = "Emission_Salaries_new";
-            this.Emission_Salaries_new.Size = new System.Drawing.Size(87, 37);
-            this.Emission_Salaries_new.TabIndex = 3;
-            this.Emission_Salaries_new.Text = "جديد";
-            this.Emission_Salaries_new.UseSelectable = true;
-            this.Emission_Salaries_new.Click += new System.EventHandler(this.Emission_Salaries_new_Click);
             // 
             // Emission_Salaries_Date
             // 
@@ -173,6 +150,7 @@
             // 
             // Emission_Salaries_Name_office
             // 
+            this.Emission_Salaries_Name_office.Enabled = false;
             this.Emission_Salaries_Name_office.FormattingEnabled = true;
             this.Emission_Salaries_Name_office.ItemHeight = 23;
             this.Emission_Salaries_Name_office.Location = new System.Drawing.Point(107, 455);
@@ -212,7 +190,7 @@
             // 
             this.Emission_Salaries_Brows_Docs.Enabled = false;
             this.Emission_Salaries_Brows_Docs.Highlight = true;
-            this.Emission_Salaries_Brows_Docs.Location = new System.Drawing.Point(90, 496);
+            this.Emission_Salaries_Brows_Docs.Location = new System.Drawing.Point(151, 496);
             this.Emission_Salaries_Brows_Docs.Name = "Emission_Salaries_Brows_Docs";
             this.Emission_Salaries_Brows_Docs.Size = new System.Drawing.Size(118, 37);
             this.Emission_Salaries_Brows_Docs.TabIndex = 288;
@@ -220,12 +198,25 @@
             this.Emission_Salaries_Brows_Docs.UseSelectable = true;
             this.Emission_Salaries_Brows_Docs.Click += new System.EventHandler(this.Emission_Salaries_Brows_Docs_Click);
             // 
+            // Emission_Salaries_Details
+            // 
+            this.Emission_Salaries_Details.Enabled = false;
+            this.Emission_Salaries_Details.Highlight = true;
+            this.Emission_Salaries_Details.Location = new System.Drawing.Point(275, 496);
+            this.Emission_Salaries_Details.Name = "Emission_Salaries_Details";
+            this.Emission_Salaries_Details.Size = new System.Drawing.Size(87, 37);
+            this.Emission_Salaries_Details.TabIndex = 289;
+            this.Emission_Salaries_Details.Text = "تفاصيل";
+            this.Emission_Salaries_Details.UseSelectable = true;
+            this.Emission_Salaries_Details.Click += new System.EventHandler(this.Emission_Salaries_Details_Click);
+            // 
             // Emission_Salaries_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(745, 556);
+            this.Controls.Add(this.Emission_Salaries_Details);
             this.Controls.Add(this.Emission_Salaries_Brows_Docs);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -237,8 +228,7 @@
             this.Controls.Add(this.Emission_Salaries_exit);
             this.Controls.Add(this.Emission_Salaries_delete);
             this.Controls.Add(this.Emission_Salaries_update);
-            this.Controls.Add(this.Emission_Salaries_add);
-            this.Controls.Add(this.Emission_Salaries_new);
+            this.MaximizeBox = false;
             this.Name = "Emission_Salaries_FORM";
             this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -256,8 +246,6 @@
         private MetroFramework.Controls.MetroButton Emission_Salaries_exit;
         private MetroFramework.Controls.MetroButton Emission_Salaries_delete;
         private MetroFramework.Controls.MetroButton Emission_Salaries_update;
-        private MetroFramework.Controls.MetroButton Emission_Salaries_add;
-        private MetroFramework.Controls.MetroButton Emission_Salaries_new;
         private MetroFramework.Controls.MetroDateTime Emission_Salaries_Date;
         private MetroFramework.Controls.MetroComboBox Emission_Salaries_Comb_Budget;
         private MetroFramework.Controls.MetroComboBox Emission_Salaries_Name_office;
@@ -265,5 +253,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton Emission_Salaries_Brows_Docs;
+        private MetroFramework.Controls.MetroButton Emission_Salaries_Details;
     }
 }

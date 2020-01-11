@@ -38,6 +38,8 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
+            Employee_Salaries_dataGrid.Columns[17].Visible = false;
+            Employee_Salaries_dataGrid.Columns[18].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
 
@@ -169,7 +171,6 @@ namespace Finance_Authority.PL
             frm.crystalReportViewer1.ReportSource = report;
             frm.ShowDialog();
         }
-      
         private void Employee_Salaries_commit_Click(object sender, EventArgs e)
         {
             if (!(Employee_Salaries_dataGrid.RowCount > 0))
@@ -252,6 +253,8 @@ namespace Finance_Authority.PL
             Employee_Salaries_dataGrid.Columns[0].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
+            Employee_Salaries_dataGrid.Columns[17].Visible = false;
+            Employee_Salaries_dataGrid.Columns[18].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;

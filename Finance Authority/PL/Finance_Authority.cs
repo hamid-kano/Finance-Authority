@@ -183,13 +183,6 @@ namespace Finance_Authority.PL
             FRM.ShowDialog();
             Update_label_finance_Box();
         }
-
-            private void Leoan_Payments_Button_Click(object sender, EventArgs e)
-        {
-            Leoan_Payments_FORM FRM = new Leoan_Payments_FORM(-1);
-            FRM.ShowDialog();
-        }
-
         private void Backup_Button_Click(object sender, EventArgs e)
         {
             Backup_FORM FRM = new Backup_FORM();

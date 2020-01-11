@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Contracts_FORM));
             this.Contracts_exit = new MetroFramework.Controls.MetroButton();
             this.Contracts_Details = new MetroFramework.Controls.MetroButton();
@@ -56,13 +56,14 @@
             this.Contracts_Comb_Contract_statue = new MetroFramework.Controls.MetroComboBox();
             this.Contracts_Employee = new MetroFramework.Controls.MetroTextBox();
             this.Contracts_Brows_Docs = new MetroFramework.Controls.MetroButton();
+            this.Contracts_update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.Contracts_Gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // Contracts_exit
             // 
             this.Contracts_exit.Highlight = true;
-            this.Contracts_exit.Location = new System.Drawing.Point(691, 501);
+            this.Contracts_exit.Location = new System.Drawing.Point(758, 501);
             this.Contracts_exit.Name = "Contracts_exit";
             this.Contracts_exit.Size = new System.Drawing.Size(87, 37);
             this.Contracts_exit.TabIndex = 12;
@@ -74,7 +75,7 @@
             // 
             this.Contracts_Details.Enabled = false;
             this.Contracts_Details.Highlight = true;
-            this.Contracts_Details.Location = new System.Drawing.Point(505, 501);
+            this.Contracts_Details.Location = new System.Drawing.Point(479, 501);
             this.Contracts_Details.Name = "Contracts_Details";
             this.Contracts_Details.Size = new System.Drawing.Size(87, 37);
             this.Contracts_Details.TabIndex = 7;
@@ -92,23 +93,23 @@
             this.Contracts_Gridview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Contracts_Gridview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Contracts_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Contracts_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Contracts_Gridview.DefaultCellStyle = dataGridViewCellStyle5;
             this.Contracts_Gridview.EnableHeadersVisualStyles = false;
             this.Contracts_Gridview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Contracts_Gridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -116,14 +117,14 @@
             this.Contracts_Gridview.Name = "Contracts_Gridview";
             this.Contracts_Gridview.ReadOnly = true;
             this.Contracts_Gridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contracts_Gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Contracts_Gridview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Contracts_Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Contracts_Gridview.Size = new System.Drawing.Size(735, 383);
@@ -133,7 +134,6 @@
             // Contracts_Date_Start
             // 
             this.Contracts_Date_Start.CustomFormat = "dd/MM/yyyy";
-            this.Contracts_Date_Start.Enabled = false;
             this.Contracts_Date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Contracts_Date_Start.Location = new System.Drawing.Point(94, 205);
             this.Contracts_Date_Start.MinimumSize = new System.Drawing.Size(0, 29);
@@ -145,7 +145,6 @@
             // Contracts_Date_end
             // 
             this.Contracts_Date_end.CustomFormat = "dd/MM/yyyy";
-            this.Contracts_Date_end.Enabled = false;
             this.Contracts_Date_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Contracts_Date_end.Location = new System.Drawing.Point(94, 256);
             this.Contracts_Date_end.MinimumSize = new System.Drawing.Size(0, 29);
@@ -212,7 +211,7 @@
             // Contracts_Print
             // 
             this.Contracts_Print.Highlight = true;
-            this.Contracts_Print.Location = new System.Drawing.Point(598, 501);
+            this.Contracts_Print.Location = new System.Drawing.Point(665, 501);
             this.Contracts_Print.Name = "Contracts_Print";
             this.Contracts_Print.Size = new System.Drawing.Size(87, 37);
             this.Contracts_Print.TabIndex = 11;
@@ -234,7 +233,6 @@
             this.Contracts_Notes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Contracts_Notes.CustomButton.UseSelectable = true;
             this.Contracts_Notes.CustomButton.Visible = false;
-            this.Contracts_Notes.Enabled = false;
             this.Contracts_Notes.Lines = new string[0];
             this.Contracts_Notes.Location = new System.Drawing.Point(94, 352);
             this.Contracts_Notes.MaxLength = 32767;
@@ -415,12 +413,25 @@
             this.Contracts_Brows_Docs.UseSelectable = true;
             this.Contracts_Brows_Docs.Click += new System.EventHandler(this.Contracts_Brows_Docs_Click);
             // 
+            // Contracts_update
+            // 
+            this.Contracts_update.Enabled = false;
+            this.Contracts_update.Highlight = true;
+            this.Contracts_update.Location = new System.Drawing.Point(572, 501);
+            this.Contracts_update.Name = "Contracts_update";
+            this.Contracts_update.Size = new System.Drawing.Size(87, 37);
+            this.Contracts_update.TabIndex = 270;
+            this.Contracts_update.Text = "تعديل";
+            this.Contracts_update.UseSelectable = true;
+            this.Contracts_update.Click += new System.EventHandler(this.Contracts_update_Click);
+            // 
             // Contracts_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1011, 556);
+            this.Controls.Add(this.Contracts_update);
             this.Controls.Add(this.Contracts_Brows_Docs);
             this.Controls.Add(this.Contracts_Employee);
             this.Controls.Add(this.Contracts_Comb_Contract_statue);
@@ -483,5 +494,6 @@
         private MetroFramework.Controls.MetroComboBox Contracts_Comb_Contract_statue;
         private MetroFramework.Controls.MetroTextBox Contracts_Employee;
         private MetroFramework.Controls.MetroButton Contracts_Brows_Docs;
+        private MetroFramework.Controls.MetroButton Contracts_update;
     }
 }

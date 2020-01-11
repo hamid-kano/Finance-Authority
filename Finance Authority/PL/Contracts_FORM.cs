@@ -91,7 +91,6 @@ namespace Finance_Authority.PL
             LOG.LOGS_add(Program.USER_ID, "طباعة", "طباعة العقود", DateTime.Now);
             //REPT.Crystal_Contracts Art = new REPT.Crystal_Contracts();
             //REPT.FRM_Report FRPT = new REPT.FRM_Report();
-
             //if (Contracts_Gridview.Rows.Count != 0)
             //{
             //    // DataTable dt = dataGrid_Ringall.DataSource;
@@ -116,6 +115,29 @@ namespace Finance_Authority.PL
         {
             Document_FORM FRM = new Document_FORM(Program.Employee_Description_id, "عقد");
             FRM.ShowDialog();
+        }
+
+        private void Contracts_update_Click(object sender, EventArgs e)
+        {
+            if (Contracts_Type.SelectedIndex==-1)
+            {
+                MessageBox.Show("يجب اختيار نوع العقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            // لاداعي له كون غير مسموح تغيير حالة العقد 
+            //if (Contracts_Type.SelectedIndex == -1)
+            //{
+            //    MessageBox.Show("يجب اختيار حالة العقد", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
+            cont.Contracts_update(Contracts_Type.Text, Contracts_Date_Start.Value, Contracts_Date_end.Value, Contracts_Comb_Contract_statue.Text
+                     , Contracts_Notes.Text, Program.Employee_Description_id, _Contract_id);
+                this.Contracts_Gridview.DataSource = cont.Contracts_View();
+                Contracts_Gridview.Columns[0].Visible = false;
+                Program.Update_Message();
+                Contracts_Type.Text = "";
+                Contracts_Notes.Text = "";
+           
         }
     }
 }

@@ -45,13 +45,14 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
+            Employee_Salaries_dataGrid.Columns[17].Visible = false;
+            Employee_Salaries_dataGrid.Columns[18].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
             //this.Employee_Salaries_dataGrid.DataSource = Empl_Sala.Employee_Salaries_View();
             //Employee_Salaries_dataGrid.Columns[0].Visible = false;
             //Employee_Salaries_dataGrid.Columns[20].Visible = false;
         }
-
         private void Employee_Salaries_dataGrid_Click(object sender, EventArgs e)
         {
             try
@@ -68,15 +69,11 @@ namespace Finance_Authority.PL
 
                // throw;
             }
-
         }
         private void Employee_Salaries_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-    
-
         private void Employee_Salaries_Saliery_SelectedValueChanged(object sender, EventArgs e)
         {
             //try
@@ -291,15 +288,14 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[1].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[2].ReadOnly = true;
             this.Employee_Salaries_dataGrid.Columns[4].ReadOnly = true;
+            Employee_Salaries_dataGrid.Columns[17].Visible = false;
+            Employee_Salaries_dataGrid.Columns[18].Visible = false;
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
             Payment_Document_no.Text = "";
             Payment_Document_No_Order.Text = "";
             Salary_Total.Text = "";
-
         }
-
-     
         private void Authority_Comb_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -371,7 +367,6 @@ namespace Finance_Authority.PL
             this.Employee_Salaries_dataGrid.Columns[19].ReadOnly = true;
             Employee_Salaries_dataGrid.Columns[20].Visible = false;
         }
-
         private void Employee_Salaries_dataGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             var cell = Employee_Salaries_dataGrid.CurrentCell;
@@ -385,7 +380,6 @@ namespace Finance_Authority.PL
                     cell.Value = 0;
                 }
             }
-
             try
             {
                 double sum = 0;
@@ -404,8 +398,6 @@ namespace Finance_Authority.PL
 
                 // throw;
             }
-
-
         }
     }
 }
